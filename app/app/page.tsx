@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import Footer from "@/components/Footer";
+import { currentUser } from "@/lib/session";
+
+export const dynamic = "force-dynamic";
 
 const steps = [
   { n: "01", t: "Connect once", d: "Add your Google review link, then turn on automatic asks and connect Jobber once — or use Quick ask on your phone after each job." },
@@ -53,22 +56,28 @@ function Pricing() {
   </div></section>;
 }
 
-export default function Home() {
+export default async function Home() {
+  const user = await currentUser();
   return <main className="bg-white">
     <header className="bg-navy-950 text-white">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6"><Logo />
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6"><Logo href={user ? "/dashboard" : "/"} />
         <nav className="flex items-center gap-6 text-sm text-white/70">
           <a href="#how" className="hidden hover:text-white sm:inline">How it works</a>
           <a href="#pricing" className="hidden hover:text-white sm:inline">Pricing</a>
           <a href="#faq" className="hidden hover:text-white sm:inline">FAQ</a>
-          <Link href="/login" className="hover:text-white">Log in</Link>
-          <Link href="/signup" className="btn bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Start free trial</Link></nav></div>
+          {user ? <>
+            <Link href="/quick" className="hover:text-white">Quick ask</Link>
+            <Link href="/dashboard" className="btn bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Dashboard</Link>
+            <form action="/api/auth/logout" method="post"><button type="submit" className="hover:text-white">Log out</button></form>
+          </> : <>
+            <Link href="/login" className="hover:text-white">Log in</Link>
+            <Link href="/signup" className="btn bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Start free trial</Link></>}</nav></div>
       <div className="mx-auto max-w-6xl px-6 pb-28 pt-20 sm:pt-28">
         <div className="max-w-3xl">
           <p className="eyebrow !text-lime-400">Built for local service businesses</p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every finished job gets a Google review request — automatically.</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/65">ReviewAsk sends the ask when a job closes, follows up once on day 3, and shows you exactly what went out. Upload past customers in bulk to catch up on your backlog.</p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row"><Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start 7-day free trial</Link><a href="#how" className="btn-ghost px-5 py-3">See how it works</a></div>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start 7-day free trial</Link>}<a href="#how" className="btn-ghost px-5 py-3">See how it works</a></div>
           <p className="mt-5 text-sm text-white/45">$39/month after trial · No contract · Cancel anytime</p>
         </div>
       </div>

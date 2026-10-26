@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { currentUser } from "@/lib/session";
 import Logo from "@/components/Logo";
 import AuthForm from "@/components/AuthForm";
 import { signup } from "../actions";
-export default function Page() {
+export const dynamic = "force-dynamic";
+export default async function Page() {
+  const u = await currentUser();
+  if (u) redirect(u.business_name && u.review_url ? "/dashboard" : "/onboarding");
   return <main className="flex min-h-screen flex-col items-center justify-center bg-slate-50 px-4 py-12"><div className="w-full max-w-sm">
     <div className="mb-8 flex justify-center"><Logo dark /></div>
     <div className="card p-8"><h1 className="text-xl font-semibold">Create your account</h1><p className="mb-6 mt-1.5 text-sm text-slate-500">7-day free trial, then $39/month. Cancel anytime.</p>

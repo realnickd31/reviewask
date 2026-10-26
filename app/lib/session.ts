@@ -9,7 +9,8 @@ const password = process.env.NEXTAUTH_SECRET && process.env.NEXTAUTH_SECRET.leng
 
 export const getSession = () => getIronSession<S>(cookies(), {
   password, cookieName: "reviewask_session",
-  cookieOptions: { secure: process.env.NODE_ENV === "production", httpOnly: true, sameSite: "lax" },
+  ttl: 60 * 60 * 24 * 30,
+  cookieOptions: { path: "/", secure: process.env.NODE_ENV === "production", httpOnly: true, sameSite: "lax", maxAge: 60 * 60 * 24 * 30 - 60 },
 });
 export async function currentUser() {
   const s = await getSession();
