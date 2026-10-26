@@ -1,0 +1,14 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+@layer base { body { font-feature-settings: "cv11", "ss01"; letter-spacing: -0.005em; } h1, h2, h3 { letter-spacing: -0.02em; } }
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-md px-4 py-2.5 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-lime { @apply btn bg-navy-900 text-white shadow-sm hover:bg-navy-800; }
+  .btn-accent { @apply btn bg-lime text-navy-950 hover:bg-lime-400; }
+  .btn-ghost { @apply btn border border-white/15 text-white/90 hover:bg-white/5; }
+  .btn-navy { @apply btn bg-navy-900 text-white shadow-sm hover:bg-navy-800; }
+  .btn-outline { @apply btn border border-slate-300 bg-white text-navy-900 hover:bg-slate-50; }
+  .input { @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-navy-900 shadow-sm outline-none placeholder:text-slate-400 focus:border-navy-700 focus:ring-2 focus:ring-navy-700/15; }
+  .label { @apply mb-1.5 block text-sm font-medium text-slate-700; }
+  .card { @apply rounded-lg border border-slate-200 bg-white p-6 shadow-[0_1px_2px_rgba(16,27,51,0.04)]; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-wider text-slate-500; }
+}

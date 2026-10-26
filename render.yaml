@@ -1,0 +1,73 @@
+# ReviewAsk on Render — always-on Starter (free tier sleeps; Jobber webhooks need awake)
+services:
+  - type: web
+    name: reviewask
+    runtime: node
+    plan: starter
+    region: oregon
+    rootDir: app
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    disk:
+      name: reviewask-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATABASE_URL
+        value: file:/var/data/reviewask.db
+      - key: NODE_ENV
+        value: production
+      - key: NEXTAUTH_SECRET
+        generateValue: true
+      - key: CRON_SECRET
+        generateValue: true
+      - key: APP_URL
+        sync: false
+      - key: NEXTAUTH_URL
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: STRIPE_PRICE_ID
+        sync: false
+      - key: STRIPE_PRICE_ID_ANNUAL
+        sync: false
+      - key: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM
+        sync: false
+      - key: JOBBER_CLIENT_ID
+        sync: false
+      - key: JOBBER_CLIENT_SECRET
+        sync: false
+      - key: JOBBER_REDIRECT_URI
+        sync: false
+
+  - type: cron
+    name: reviewask-reminders
+    runtime: node
+    plan: starter
+    region: oregon
+    rootDir: app
+    schedule: "0 14 * * *"
+    buildCommand: npm ci --omit=dev
+    startCommand: "node -e \"const s=process.env.CRON_SECRET;const u=process.env.APP_URL;if(!s||!u){console.error('missing CRON_SECRET or APP_URL');process.exit(1)}fetch(u.replace(/\\\\/$/,'')+'/api/cron/reminders',{headers:{authorization:'Bearer '+s}}).then(async r=>{const t=await r.text();console.log(r.status,t);if(!r.ok)process.exit(1)}).catch(e=>{console.error(e);process.exit(1)})\""
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: CRON_SECRET
+        fromService:
+          type: web
+          name: reviewask
+          envVarKey: CRON_SECRET
+      - key: APP_URL
+        fromService:
+          type: web
+          name: reviewask
+          envVarKey: APP_URL

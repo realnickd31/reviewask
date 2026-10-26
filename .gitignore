@@ -1,0 +1,8 @@
+node_modules/
+.next/
+app/data/*.db
+app/data/*.db-*
+app/data/outbox.json
+.env
+.env.local
+*.log
