@@ -6,4 +6,4 @@ export default function Page() { return <Legal title="Terms of Service">
   <h2>Billing</h2><p>Plans renew automatically ($39/month or $390/year) after any free trial. You can cancel anytime from Settings; you keep access until the end of the paid period. We don&apos;t offer partial refunds.</p>
   <h2>Limits</h2><p>Starter includes 200 requests per month. We may suspend accounts that send spam or abuse the service.</p>
   <h2>No guarantees</h2><p>We can&apos;t promise a specific number of reviews. The service is provided &quot;as is&quot; and our liability is limited to what you paid us in the last 3 months.</p>
-  <h2>Contact</h2><p>Questions? Email support@reviewask.local.</p></Legal>; }
+  <h2>Contact</h2><p>Questions? Email support@getreviewask.com.</p></Legal>; }

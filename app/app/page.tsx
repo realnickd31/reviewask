@@ -111,7 +111,7 @@ export default async function Home() {
 
     <section id="faq" className="border-t border-slate-200 py-24"><div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1fr_1.8fr]">
       <div><p className="eyebrow">FAQ</p><h2 className="mt-3 text-3xl font-semibold">Common questions</h2>
-        <p className="mt-4 text-sm text-slate-600">Something else? <a href="mailto:support@reviewask.local" className="font-medium text-navy-900 underline underline-offset-4">Contact support</a>.</p></div>
+        <p className="mt-4 text-sm text-slate-600">Something else? <a href="mailto:support@getreviewask.com" className="font-medium text-navy-900 underline underline-offset-4">Contact support</a>.</p></div>
       <div className="divide-y divide-slate-200 border-y border-slate-200">{faqs.map((f) => <details key={f.q} className="group py-5">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium [&::-webkit-details-marker]:hidden">{f.q}<span className="text-slate-400 transition group-open:rotate-45">+</span></summary>
         <p className="mt-3 pr-8 text-sm leading-relaxed text-slate-600">{f.a}</p></details>)}</div>

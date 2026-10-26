@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="grid gap-10 sm:grid-cols-4">
       <div className="sm:col-span-2"><Logo dark /><p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">Review requests for local service businesses. Simple, compliant, month-to-month.</p></div>
       <div><p className="eyebrow mb-3">Product</p><ul className={col}><li><Link href="/#how" className="hover:text-navy-900">How it works</Link></li><li><Link href="/pricing" className="hover:text-navy-900">Pricing</Link></li><li><Link href="/#faq" className="hover:text-navy-900">FAQ</Link></li><li><Link href="/login" className="hover:text-navy-900">Log in</Link></li></ul></div>
-      <div><p className="eyebrow mb-3">Company</p><ul className={col}><li><a href="mailto:support@reviewask.local" className="hover:text-navy-900">Contact support</a></li><li><Link href="/terms" className="hover:text-navy-900">Terms of Service</Link></li><li><Link href="/privacy" className="hover:text-navy-900">Privacy Policy</Link></li></ul></div>
+      <div><p className="eyebrow mb-3">Company</p><ul className={col}><li><a href="mailto:support@getreviewask.com" className="hover:text-navy-900">Contact support</a></li><li><Link href="/terms" className="hover:text-navy-900">Terms of Service</Link></li><li><Link href="/privacy" className="hover:text-navy-900">Privacy Policy</Link></li></ul></div>
     </div>
     <div className="mt-12 flex flex-col justify-between gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row">
       <p>© {new Date().getFullYear()} ReviewAsk. All rights reserved.</p>

@@ -55,6 +55,15 @@ if (!g._db) {
   addCol("users", "housecall_api_key TEXT");
   addCol("users", "housecall_company_id TEXT");
   addCol("users", "housecall_webhook_secret TEXT");
+  addCol("review_requests", "unsubscribe_token TEXT");
+  db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_rr_unsub ON review_requests(unsubscribe_token)");
+  db.exec(`CREATE TABLE IF NOT EXISTS suppressions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT NOT NULL,
+    user_id INTEGER NULL,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )`);
+  db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_supp_email ON suppressions(lower(email))");
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_api_token ON users(api_token)");
   db.exec("CREATE INDEX IF NOT EXISTS idx_rr_remind ON review_requests(remind_at, reminded_at)");
   g._db = db;
@@ -71,7 +80,7 @@ export type User = {
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;
   channel: string; status: string; provider_id: string | null; created_at: string;
-  remind_at: string | null; reminded_at: string | null; source: string;
+  remind_at: string | null; reminded_at: string | null; source: string; unsubscribe_token: string | null;
 };
 
 export const MONTHLY_QUOTA = 200;
@@ -83,3 +92,13 @@ export function usedThisMonth(userId: number) {
   return r.c;
 }
 export const getUserByToken = (t: string) => db.prepare("SELECT * FROM users WHERE api_token=?").get(t) as User | undefined;
+
+export const isSuppressed = (email: string) => !!db.prepare("SELECT 1 FROM suppressions WHERE lower(email)=lower(?)").get(email);
+export function suppressByToken(token: string): { email: string } | null {
+  const r = db.prepare("SELECT customer_email, user_id FROM review_requests WHERE unsubscribe_token=?").get(token) as { customer_email: string | null; user_id: number } | undefined;
+  if (!r?.customer_email) return null;
+  db.prepare("INSERT OR IGNORE INTO suppressions (email, user_id) VALUES (lower(?), ?)").run(r.customer_email, r.user_id);
+  return { email: r.customer_email };
+}
+export const appUrl = () => (process.env.APP_URL || "https://getreviewask.com").replace(/\/$/, "");
+export const unsubscribeUrl = (token: string) => `${appUrl()}/u/${token}`;
