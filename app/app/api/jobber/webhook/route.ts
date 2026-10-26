@@ -10,6 +10,10 @@ export async function POST(req: NextRequest) {
   if (!verifyWebhook(raw, req.headers.get("x-jobber-hmac-sha256"))) return NextResponse.json({ ok: true, ignored: "unverified" });
   let ev: { topic?: string; accountId?: string; itemId?: string } = {};
   try { ev = JSON.parse(raw)?.data?.webHookEvent || {}; } catch { /* ignore */ }
+  if (ev.topic === "APP_DISCONNECT" && ev.accountId) {
+    db.prepare(`UPDATE users SET jobber_connected=0, jobber_access_token=NULL, jobber_refresh_token=NULL, jobber_token_expires_at=NULL, jobber_account_id=NULL WHERE jobber_account_id=?`).run(ev.accountId);
+    return NextResponse.json({ ok: true });
+  }
   if (ev.topic !== "JOB_CLOSED" || !ev.accountId || !ev.itemId) return NextResponse.json({ ok: true });
   const u = db.prepare("SELECT * FROM users WHERE jobber_account_id=? AND jobber_connected=1 AND auto_enabled=1").get(ev.accountId) as User | undefined;
   if (!u) return NextResponse.json({ ok: true });
