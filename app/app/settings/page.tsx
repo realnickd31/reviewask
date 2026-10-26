@@ -16,6 +16,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
     <section className="card"><h1 className="mb-5 text-xl font-bold">Business</h1><BizForm action={saveSettings} label="Save changes" name={u.business_name} url={u.review_url} /></section>
     <section className="card" id="automatic"><h2 className="mb-4 text-xl font-bold">Ask after every job</h2>
       <AutoToggle enabled={!!u.auto_enabled} provider={u.auto_provider} jobberConnected={!!u.jobber_connected} jobberReady={jobberConfigured()}
+        housecallConnected={!!u.housecall_connected} housecallReady={!!u.housecall_connected && !!u.housecall_webhook_secret} housecallStarted={!!u.housecall_api_key}
         setupEmail={u.auto_setup_email} setupRequested={!!u.auto_setup_requested_at} quickUrl={`${base.replace(/\/$/, "")}/quick`} flash={searchParams.jobber} /></section>
     <section className="card"><h2 className="text-xl font-bold">Billing</h2><p className="mt-1 text-sm text-slate-600">Status: <b>{u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Free trial" : "Not active"}</b>. Update your card, switch plans, or cancel.</p>
       {searchParams.portal && <p className="mt-3 text-sm text-amber-700">Billing portal is available after you subscribe through Stripe.</p>}

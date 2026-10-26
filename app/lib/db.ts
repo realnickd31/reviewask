@@ -51,6 +51,10 @@ if (!g._db) {
   addCol("users", "jobber_refresh_token TEXT");
   addCol("users", "jobber_token_expires_at TEXT");
   addCol("users", "jobber_account_id TEXT");
+  addCol("users", "housecall_connected INTEGER NOT NULL DEFAULT 0");
+  addCol("users", "housecall_api_key TEXT");
+  addCol("users", "housecall_company_id TEXT");
+  addCol("users", "housecall_webhook_secret TEXT");
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_api_token ON users(api_token)");
   db.exec("CREATE INDEX IF NOT EXISTS idx_rr_remind ON review_requests(remind_at, reminded_at)");
   g._db = db;
@@ -62,6 +66,7 @@ export type User = {
   auto_enabled: number; auto_provider: string | null; auto_setup_email: string | null; auto_setup_requested_at: string | null;
   jobber_connected: number; jobber_access_token: string | null; jobber_refresh_token: string | null;
   jobber_token_expires_at: string | null; jobber_account_id: string | null;
+  housecall_connected: number; housecall_api_key: string | null; housecall_company_id: string | null; housecall_webhook_secret: string | null;
 };
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 type Props = { enabled: boolean; provider: string | null; jobberConnected: boolean; jobberReady: boolean;
+  housecallConnected?: boolean; housecallReady?: boolean; housecallStarted?: boolean;
   setupEmail: string | null; setupRequested: boolean; quickUrl: string; flash?: string };
 
 export default function AutoToggle(p: Props) {
@@ -21,6 +22,16 @@ export default function AutoToggle(p: Props) {
     const r = await post({ requestSetup: true, email, provider: svc });
     setBusy(false);
     if (r.ok) { setReqFor(svc); setOpen(null); } else setErr((await r.json().catch(() => ({}))).error || "Something went wrong.");
+  };
+  const [hc, setHc] = useState<"none" | "key" | "link" | "done">(p.housecallReady ? "done" : p.housecallStarted ? "link" : "none");
+  const [hcKey, setHcKey] = useState(""); const [hcSecret, setHcSecret] = useState(""); const [hcErr, setHcErr] = useState("");
+  const [hcBusy, setHcBusy] = useState(false); const [hcCopied, setHcCopied] = useState(false);
+  const hcLink = p.quickUrl.replace(/\/quick$/, "") + "/api/housecall/webhook";
+  const hcPost = async (url: string, body: object, next: typeof hc) => {
+    setHcBusy(true); setHcErr("");
+    const r = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+    setHcBusy(false);
+    if (r.ok) { setHc(next); if (next !== "none") setOn(true); } else setHcErr((await r.json().catch(() => ({}))).error || "Something went wrong.");
   };
   const disconnect = async () => { await fetch("/api/jobber/disconnect", { method: "POST" }); setConnected(false); };
 
@@ -44,9 +55,43 @@ export default function AutoToggle(p: Props) {
     : reqFor === "jobber" ? requestedNote("Jobber")
     : open === "jobber" ? requestPanel("jobber", "Jobber")
     : <button type="button" className="btn-navy" onClick={() => { setOpen("jobber"); setErr(""); }}>Connect Jobber</button>;
-  const housecall = reqFor === "housecall" ? requestedNote("Housecall Pro")
-    : open === "housecall" ? requestPanel("housecall", "Housecall Pro")
-    : <button type="button" className="btn-navy" onClick={() => { setOpen("housecall"); setErr(""); }}>Connect Housecall Pro</button>;
+  const help = <button type="button" className="text-sm text-slate-500 underline" onClick={() => { setOpen("housecall"); setErr(""); }}>Need help? We’ll connect it for you</button>;
+  const hcSteps = hc === "key" ? <div className="mt-3 space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
+      <p className="text-sm font-semibold text-navy-900">Step 1 of 2 — Your connection key</p>
+      <ol className="list-decimal space-y-1 pl-5 text-sm text-navy-900">
+        <li>In Housecall Pro, open <b>My Apps</b> → <b>App Store</b> → <b>API Key Management</b>.</li>
+        <li>Tap <b>Generate</b> (Read-only is fine) and copy the key.</li>
+        <li>Paste it below.</li></ol>
+      <input className="input" value={hcKey} onChange={e => setHcKey(e.target.value)} placeholder="Paste connection key" aria-label="Connection key" />
+      {hcErr && <p className="text-sm text-red-700">{hcErr}</p>}
+      <button type="button" className="btn-navy" disabled={hcBusy} onClick={() => hcPost("/api/housecall/connect", { apiKey: hcKey }, "link")}>{hcBusy ? "Checking…" : "Save & continue"}</button>
+    </div>
+    : <div className="mt-3 space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
+      <p className="text-sm font-semibold text-navy-900">Step 2 of 2 — Tell Housecall when a job is done</p>
+      <ol className="list-decimal space-y-1 pl-5 text-sm text-navy-900">
+        <li>Copy this link:</li></ol>
+      <div className="flex flex-wrap gap-2"><input className="input flex-1" readOnly value={hcLink} aria-label="Your ReviewAsk link" />
+        <button type="button" className="btn-outline" onClick={() => { navigator.clipboard?.writeText(hcLink); setHcCopied(true); }}>{hcCopied ? "Copied!" : "Copy"}</button></div>
+      <ol start={2} className="list-decimal space-y-1 pl-5 text-sm text-navy-900">
+        <li>In Housecall Pro, open <b>My Apps</b> → <b>Webhooks</b> and turn it on.</li>
+        <li>Paste the link, and check <b>Job completed</b>. Save.</li>
+        <li>Housecall shows a secret code — copy it and paste it here.</li></ol>
+      <input className="input" value={hcSecret} onChange={e => setHcSecret(e.target.value)} placeholder="Paste the secret from Housecall" aria-label="Secret from Housecall" />
+      {hcErr && <p className="text-sm text-red-700">{hcErr}</p>}
+      <button type="button" className="btn-navy" disabled={hcBusy} onClick={() => hcPost("/api/housecall/secret", { webhookSecret: hcSecret }, "done")}>{hcBusy ? "Saving…" : "Finish"}</button>
+    </div>;
+  const hcDisconnect = async () => { await fetch("/api/housecall/disconnect", { method: "POST" }); setHc("none"); setHcKey(""); setHcSecret(""); };
+  const housecall = hc === "done"
+    ? <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="font-semibold text-green-800">● Connected · Asking automatically</p>
+        <button type="button" className="btn-ghost" onClick={hcDisconnect}>Disconnect</button>
+      </div>
+    : hc !== "none" ? <div>{hcSteps}<div className="mt-2 flex gap-4">{hc === "link" && <button type="button" className="btn-ghost" onClick={hcDisconnect}>Start over</button>}</div></div>
+    : <div className="space-y-2">
+        <button type="button" className="btn-navy" onClick={() => { setHc("key"); setHcErr(""); }}>Connect Housecall Pro</button>
+        <p className="text-xs text-slate-500">Needs the Housecall Pro MAX plan.</p>
+        {reqFor === "housecall" ? requestedNote("Housecall Pro") : open === "housecall" ? requestPanel("housecall", "Housecall Pro") : help}
+      </div>;
 
   return <div className="space-y-5">
     <div className="flex items-start justify-between gap-4">
