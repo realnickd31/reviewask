@@ -14,8 +14,8 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   let u = await requireUser();
   if (!u.business_name || !u.review_url) redirect("/onboarding");
   const provName = u.auto_provider === "housecall" ? "Housecall Pro" : "Jobber";
-  const autoLabel = !u.auto_enabled ? "Turn on automatic asks" : u.jobber_connected ? `On · ${provName}` : u.auto_setup_requested_at ? "Setup requested" : "Finish connecting";
-  const autoSub = !u.auto_enabled ? "One switch. Every finished job gets asked." : u.jobber_connected ? "Asking automatically after every job." : u.auto_setup_requested_at ? `We’re connecting ${provName} for you.` : "Pick your job software in Settings.";
+  const autoLabel = !u.auto_enabled ? "Turn on automatic asks" : u.jobber_connected ? (u.auto_provider === "housecall" && u.auto_setup_requested_at ? "On · Jobber (Housecall Pro requested)" : "On · Jobber") : u.auto_setup_requested_at ? "Setup requested" : "Finish connecting";
+  const autoSub = !u.auto_enabled ? "One switch. Every finished job gets asked." : u.jobber_connected ? "Asking automatically after every job." : u.auto_setup_requested_at ? `We’re connecting ${provName} for you.` : "Connect your job software in Settings.";
   // Sync right after Checkout so it works even before the webhook arrives.
   if (searchParams.session_id && stripe && !isActive(u)) {
     try {

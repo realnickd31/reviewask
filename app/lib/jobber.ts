@@ -40,7 +40,7 @@ export function saveTokens(userId: number, t: Tok, accountId?: string | null, co
   if (!accountId) throw new Error("saveTokens: refusing to connect without a Jobber account id");
   const exp = t.expires_in ? new Date(Date.now() + t.expires_in * 1000).toISOString() : null;
   db.prepare(`UPDATE users SET jobber_access_token=?, jobber_refresh_token=COALESCE(?, jobber_refresh_token), jobber_token_expires_at=?,
-    jobber_account_id=?, jobber_connected=1, auto_provider='jobber', auto_enabled=1 WHERE id=?`)
+    jobber_account_id=?, jobber_connected=1, auto_provider=CASE WHEN auto_provider='housecall' THEN auto_provider ELSE 'jobber' END, auto_enabled=1 WHERE id=?`)
     .run(t.access_token, t.refresh_token ?? null, exp, accountId, userId);
 }
 /** Refresh if expired (Jobber rotates refresh tokens). */
