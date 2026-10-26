@@ -19,7 +19,10 @@ export default function AutoToggle(p: Props) {
   const toggle = async () => { const v = !on; setOn(v); await post({ enabled: v }); };
   const request = async (svc: string) => {
     setBusy(true); setErr("");
-    const r = await post({ requestSetup: true, email, provider: svc });
+    const domEmail = (document.getElementById(`setup-email-${svc}`) as HTMLInputElement | null)?.value.trim() || email;
+    if (domEmail !== email) setEmail(domEmail);
+    let r: Response;
+    try { r = await post({ requestSetup: true, email: domEmail, provider: svc }); } catch { setBusy(false); setErr("Network error. Try again."); return; }
     setBusy(false);
     if (r.ok) { setReqFor(svc); setOpen(null); } else setErr((await r.json().catch(() => ({}))).error || "Something went wrong.");
   };
@@ -29,7 +32,9 @@ export default function AutoToggle(p: Props) {
   const hcLink = p.quickUrl.replace(/\/quick$/, "") + "/api/housecall/webhook";
   const hcPost = async (url: string, body: object, next: typeof hc) => {
     setHcBusy(true); setHcErr("");
-    const r = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+    let r: Response;
+    try { r = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }); }
+    catch { setHcBusy(false); setHcErr("Network error. Try again."); return; }
     setHcBusy(false);
     if (r.ok) { setHc(next); if (next !== "none") setOn(true); } else setHcErr((await r.json().catch(() => ({}))).error || "Something went wrong.");
   };
@@ -62,9 +67,9 @@ export default function AutoToggle(p: Props) {
         <li>In Housecall Pro, open <b>My Apps</b> → <b>App Store</b> → <b>API Key Management</b>.</li>
         <li>Tap <b>Generate</b> (Read-only is fine) and copy the key.</li>
         <li>Paste it below.</li></ol>
-      <input className="input" value={hcKey} onChange={e => setHcKey(e.target.value)} placeholder="Paste connection key" aria-label="Connection key" />
+      <input id="hc-key" name="apiKey" className="input" value={hcKey} onChange={e => setHcKey(e.target.value)} placeholder="Paste connection key" aria-label="Connection key" />
       {hcErr && <p className="text-sm text-red-700">{hcErr}</p>}
-      <button type="button" className="btn-navy" disabled={hcBusy} onClick={() => hcPost("/api/housecall/connect", { apiKey: hcKey }, "link")}>{hcBusy ? "Checking…" : "Save & continue"}</button>
+      <button type="button" className="btn-navy" disabled={hcBusy} onClick={() => hcPost("/api/housecall/connect", { apiKey: ((document.getElementById("hc-key") as HTMLInputElement | null)?.value ?? hcKey).trim() }, "link")}>{hcBusy ? "Checking…" : "Save & continue"}</button>
     </div>
     : <div className="mt-3 space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
       <p className="text-sm font-semibold text-navy-900">Step 2 of 2 — Tell Housecall when a job is done</p>
@@ -76,9 +81,9 @@ export default function AutoToggle(p: Props) {
         <li>In Housecall Pro, open <b>My Apps</b> → <b>Webhooks</b> and turn it on.</li>
         <li>Paste the link, and check <b>Job completed</b>. Save.</li>
         <li>Housecall shows a secret code — copy it and paste it here.</li></ol>
-      <input className="input" value={hcSecret} onChange={e => setHcSecret(e.target.value)} placeholder="Paste the secret from Housecall" aria-label="Secret from Housecall" />
+      <input id="hc-secret" name="webhookSecret" className="input" value={hcSecret} onChange={e => setHcSecret(e.target.value)} placeholder="Paste the secret from Housecall" aria-label="Secret from Housecall" />
       {hcErr && <p className="text-sm text-red-700">{hcErr}</p>}
-      <button type="button" className="btn-navy" disabled={hcBusy} onClick={() => hcPost("/api/housecall/secret", { webhookSecret: hcSecret }, "done")}>{hcBusy ? "Saving…" : "Finish"}</button>
+      <button type="button" className="btn-navy" disabled={hcBusy} onClick={() => hcPost("/api/housecall/secret", { webhookSecret: ((document.getElementById("hc-secret") as HTMLInputElement | null)?.value ?? hcSecret).trim() }, "done")}>{hcBusy ? "Saving…" : "Finish"}</button>
     </div>;
   const hcDisconnect = async () => { await fetch("/api/housecall/disconnect", { method: "POST" }); setHc("none"); setHcKey(""); setHcSecret(""); };
   const housecall = hc === "done"

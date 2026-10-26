@@ -8,10 +8,12 @@ export default function SendForm({ disabled }: { disabled: boolean }) {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault(); setBusy(true); setMsg(null);
     const form = e.currentTarget; const fd = new FormData(form);
-    const res = await fetch("/api/requests", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(Object.fromEntries(fd)) });
-    const j = await res.json(); setBusy(false);
+    let res: Response; let j: any = {};
+    try { res = await fetch("/api/requests", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(Object.fromEntries(fd)) }); j = await res.json().catch(() => ({})); }
+    catch { setBusy(false); setMsg({ t: "err", m: "Network error — nothing was sent. Try again." }); return; }
+    setBusy(false);
     if (res.ok) { form.reset(); setMsg({ t: "ok", m: j.mode === "outbox" ? "Sent (dev mode: logged to data/outbox.json)." : "Review request sent!" }); router.refresh(); }
-    else setMsg({ t: "err", m: j.error || "Something went wrong." });
+    else setMsg({ t: "err", m: j.error || `Didn't send (error ${res.status}). Try again.` });
   }
   return <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2">
     <div className="sm:col-span-2"><label className="label">Customer name</label><input className="input" name="name" required placeholder="Jamie Rivera" /></div>
