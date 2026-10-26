@@ -2,7 +2,10 @@ import Database from "better-sqlite3";
 import fs from "fs";
 import path from "path";
 
-const url = process.env.DATABASE_URL || "file:./data/reviewask.db";
+// During `next build` the Render persistent disk is not mounted, so use a local
+// throwaway DB at build time and the configured DATABASE_URL at runtime.
+const isBuild = process.env.NEXT_PHASE === "phase-production-build";
+const url = (!isBuild && process.env.DATABASE_URL) || "file:./data/reviewask.db";
 const file = path.resolve(process.cwd(), url.replace(/^file:/, ""));
 fs.mkdirSync(path.dirname(file), { recursive: true });
 
