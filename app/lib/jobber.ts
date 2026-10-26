@@ -29,11 +29,19 @@ async function tokenReq(body: Record<string, string>): Promise<Tok> {
 export const exchangeCode = (code: string, base: string, verifier: string) =>
   tokenReq({ grant_type: "authorization_code", code, redirect_uri: redirectUri(base), code_verifier: verifier });
 
-export function saveTokens(userId: number, t: Tok, accountId?: string | null) {
+/** Pass connect=true (with a non-null accountId) only on initial connect; refreshes just update tokens. */
+export function saveTokens(userId: number, t: Tok, accountId?: string | null, connect = false) {
+  const exp0 = t.expires_in ? new Date(Date.now() + t.expires_in * 1000).toISOString() : null;
+  if (!connect) {
+    db.prepare(`UPDATE users SET jobber_access_token=?, jobber_refresh_token=COALESCE(?, jobber_refresh_token), jobber_token_expires_at=?,
+      jobber_account_id=COALESCE(?, jobber_account_id) WHERE id=?`).run(t.access_token, t.refresh_token ?? null, exp0, accountId ?? null, userId);
+    return;
+  }
+  if (!accountId) throw new Error("saveTokens: refusing to connect without a Jobber account id");
   const exp = t.expires_in ? new Date(Date.now() + t.expires_in * 1000).toISOString() : null;
   db.prepare(`UPDATE users SET jobber_access_token=?, jobber_refresh_token=COALESCE(?, jobber_refresh_token), jobber_token_expires_at=?,
-    jobber_account_id=COALESCE(?, jobber_account_id), jobber_connected=1, auto_provider='jobber', auto_enabled=1 WHERE id=?`)
-    .run(t.access_token, t.refresh_token ?? null, exp, accountId ?? null, userId);
+    jobber_account_id=?, jobber_connected=1, auto_provider='jobber', auto_enabled=1 WHERE id=?`)
+    .run(t.access_token, t.refresh_token ?? null, exp, accountId, userId);
 }
 /** Refresh if expired (Jobber rotates refresh tokens). */
 export async function accessToken(u: User): Promise<string | null> {
@@ -52,8 +60,18 @@ export async function gql<T = unknown>(token: string, query: string, variables: 
   if (j.errors?.length) throw new Error("Jobber GraphQL error: " + j.errors[0].message);
   return j.data as T;
 }
-export async function fetchAccountId(token: string) {
-  try { const d = await gql<{ account: { id: string } }>(token, "query { account { id } }"); return d.account.id; } catch { return null; }
+/** Returns the Jobber account id, or null (errors are logged without tokens). */
+export async function fetchAccountId(token: string): Promise<string | null> {
+  try {
+    const d = await gql<{ account: { id: string } | null }>(token, "query { account { id } }");
+    if (d?.account?.id) return d.account.id;
+    console.error("Jobber fetchAccountId: response had no account.id");
+  } catch (e) { console.error("Jobber fetchAccountId failed:", (e as Error).message); }
+  return null;
+}
+/** Store a freshly fetched account id for a user. */
+export function saveAccountId(userId: number, accountId: string) {
+  db.prepare("UPDATE users SET jobber_account_id=? WHERE id=?").run(accountId, userId);
 }
 /** Job → client contact. TODO: verify field names against current Jobber schema once the dev app exists. */
 export async function jobClient(token: string, jobId: string) {

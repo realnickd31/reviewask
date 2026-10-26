@@ -22,7 +22,8 @@ export async function POST(req: NextRequest) {
   if (ev.topic !== "JOB_CLOSED" || !ev.accountId || !ev.itemId) return NextResponse.json({ ok: true });
   const u = db.prepare("SELECT * FROM users WHERE jobber_account_id=? AND jobber_connected=1 AND auto_enabled=1").get(ev.accountId) as User | undefined;
   if (!u) {
-    console.warn("jobber webhook: no matching connected user for account");
+    const orphan = (db.prepare("SELECT COUNT(*) AS n FROM users WHERE jobber_connected=1 AND jobber_account_id IS NULL").get() as { n: number }).n;
+    console.warn("jobber webhook: no matching connected user for account; users connected with NULL account id:", orphan);
     return NextResponse.json({ ok: true });
   }
   const itemId = ev.itemId;

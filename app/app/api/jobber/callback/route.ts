@@ -14,7 +14,12 @@ export async function GET(req: NextRequest) {
   if (!code || !state || state !== st || !ver) return NextResponse.redirect(`${base}/settings?jobber=error#automatic`);
   try {
     const t = await exchangeCode(code, base, ver);
-    saveTokens(u.id, t, await fetchAccountId(t.access_token));
+    const accountId = await fetchAccountId(t.access_token);
+    if (!accountId) {
+      console.error("Jobber connect failed: could not fetch Jobber account id; not marking connected");
+      return NextResponse.redirect(`${base}/settings?jobber=error#automatic`);
+    }
+    saveTokens(u.id, t, accountId, true);
     return NextResponse.redirect(`${base}/settings?jobber=connected#automatic`);
   } catch (e) {
     console.error("Jobber connect failed:", (e as Error).message);
