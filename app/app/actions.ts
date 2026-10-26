@@ -1,6 +1,9 @@
 "use server";
 import bcrypt from "bcryptjs";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
+// A pending Jobber Marketplace connect (parked by /api/jobber/callback) resumes right after login/signup.
+const jobberResume = () => cookies().get("jb_mkt_code") ? "/api/jobber/callback?resume=1" : null;
 import { db, getUserByEmail } from "@/lib/db";
 import { getSession, requireUser } from "@/lib/session";
 
@@ -15,14 +18,14 @@ export async function signup(_: FormState, fd: FormData): Promise<FormState> {
   if (getUserByEmail(email)) return { error: "An account with that email already exists. Log in instead." };
   const r = db.prepare("INSERT INTO users (email, password_hash) VALUES (?, ?)").run(email, await bcrypt.hash(password, 10));
   const s = await getSession(); s.userId = Number(r.lastInsertRowid); await s.save();
-  redirect("/onboarding");
+  redirect(jobberResume() || "/onboarding");
 }
 
 export async function login(_: FormState, fd: FormData): Promise<FormState> {
   const u = getUserByEmail(String(fd.get("email") || "").trim());
   if (!u || !(await bcrypt.compare(String(fd.get("password") || ""), u.password_hash))) return { error: "Wrong email or password." };
   const s = await getSession(); s.userId = u.id; await s.save();
-  redirect(u.business_name ? "/dashboard" : "/onboarding");
+  redirect(jobberResume() || (u.business_name ? "/dashboard" : "/onboarding"));
 }
 
 export async function logout() {

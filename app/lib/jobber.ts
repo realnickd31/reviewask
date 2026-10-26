@@ -26,31 +26,64 @@ async function tokenReq(body: Record<string, string>): Promise<Tok> {
   if (!r.ok) throw new Error(`Jobber token error ${r.status}`); // never log the body (may contain tokens)
   return r.json();
 }
-export const exchangeCode = (code: string, base: string, verifier: string) =>
-  tokenReq({ grant_type: "authorization_code", code, redirect_uri: redirectUri(base), code_verifier: verifier });
+/** verifier is omitted when Jobber's App Marketplace starts the flow (no state/PKCE). */
+export const exchangeCode = (code: string, base: string, verifier?: string) =>
+  tokenReq({ grant_type: "authorization_code", code, redirect_uri: redirectUri(base), ...(verifier ? { code_verifier: verifier } : {}) });
+
+/** Access-token expiry: expires_in if given, else the JWT exp claim, else 60 min (Jobber default). */
+function expiryIso(t: Tok): string {
+  if (t.expires_in) return new Date(Date.now() + t.expires_in * 1000).toISOString();
+  try { const p = JSON.parse(Buffer.from(t.access_token.split(".")[1], "base64url").toString()); if (p.exp) return new Date(p.exp * 1000).toISOString(); } catch { /* not a JWT */ }
+  return new Date(Date.now() + 3600_000).toISOString();
+}
+/** Clear all Jobber tokens for a user (local side of a disconnect). */
+export function clearJobber(userId: number) {
+  db.prepare(`UPDATE users SET jobber_connected=0, jobber_access_token=NULL, jobber_refresh_token=NULL, jobber_token_expires_at=NULL, jobber_account_id=NULL WHERE id=?`).run(userId);
+}
 
 /** Pass connect=true (with a non-null accountId) only on initial connect; refreshes just update tokens. */
 export function saveTokens(userId: number, t: Tok, accountId?: string | null, connect = false) {
-  const exp0 = t.expires_in ? new Date(Date.now() + t.expires_in * 1000).toISOString() : null;
+  const exp0 = expiryIso(t);
   if (!connect) {
     db.prepare(`UPDATE users SET jobber_access_token=?, jobber_refresh_token=COALESCE(?, jobber_refresh_token), jobber_token_expires_at=?,
       jobber_account_id=COALESCE(?, jobber_account_id) WHERE id=?`).run(t.access_token, t.refresh_token ?? null, exp0, accountId ?? null, userId);
     return;
   }
   if (!accountId) throw new Error("saveTokens: refusing to connect without a Jobber account id");
-  const exp = t.expires_in ? new Date(Date.now() + t.expires_in * 1000).toISOString() : null;
+  const exp = expiryIso(t);
   db.prepare(`UPDATE users SET jobber_access_token=?, jobber_refresh_token=COALESCE(?, jobber_refresh_token), jobber_token_expires_at=?,
     jobber_account_id=?, jobber_connected=1, auto_provider=CASE WHEN auto_provider='housecall' THEN auto_provider ELSE 'jobber' END, auto_enabled=1 WHERE id=?`)
     .run(t.access_token, t.refresh_token ?? null, exp, accountId, userId);
 }
-/** Refresh if expired (Jobber rotates refresh tokens). */
-export async function accessToken(u: User): Promise<string | null> {
+/** Refresh if expired. With Refresh Token Rotation ON, Jobber returns a new refresh token each time; saveTokens persists it.
+ *  Always re-reads the row first so a concurrent refresh's rotated token is used. Unknown expiry => refresh (safe). */
+const inflight = new Map<number, Promise<string | null>>();
+export async function accessToken(u0: User): Promise<string | null> {
+  const u = (db.prepare("SELECT * FROM users WHERE id=?").get(u0.id) as User | undefined) || u0;
   if (!u.jobber_access_token) return null;
-  const exp = u.jobber_token_expires_at ? Date.parse(u.jobber_token_expires_at) : Infinity;
+  const exp = u.jobber_token_expires_at ? Date.parse(u.jobber_token_expires_at) : 0;
   if (exp - Date.now() > 60_000 || !u.jobber_refresh_token) return u.jobber_access_token;
-  const t = await tokenReq({ grant_type: "refresh_token", refresh_token: u.jobber_refresh_token });
-  saveTokens(u.id, t);
-  return t.access_token;
+  const running = inflight.get(u.id); if (running) return running;
+  const p = (async () => {
+    try {
+      const t = await tokenReq({ grant_type: "refresh_token", refresh_token: u.jobber_refresh_token! });
+      saveTokens(u.id, t);
+      return t.access_token;
+    } catch (e) {
+      // 400/401 = refresh token revoked (disconnected in Jobber, secret regenerated, etc.): mark disconnected so the user sees "Connect Jobber" again.
+      if (/ (400|401)$/.test((e as Error).message)) { console.warn("jobber: refresh token rejected; marking disconnected"); clearJobber(u.id); return null; }
+      throw e;
+    } finally { inflight.delete(u.id); }
+  })();
+  inflight.set(u.id, p); return p;
+}
+/** Tell Jobber the user disconnected from inside ReviewAsk (required for Marketplace apps). Best effort. */
+export async function appDisconnect(u: User): Promise<void> {
+  try {
+    const t = await accessToken(u); if (!t) return;
+    const d = await gql<{ appDisconnect: { userErrors: { message: string }[] } }>(t, "mutation { appDisconnect { app { name } userErrors { message } } }");
+    if (d.appDisconnect?.userErrors?.length) console.warn("jobber appDisconnect userErrors:", d.appDisconnect.userErrors[0].message);
+  } catch (e) { console.error("jobber appDisconnect failed:", (e as Error).message); }
 }
 export async function gql<T = unknown>(token: string, query: string, variables: Record<string, unknown> = {}): Promise<T> {
   const r = await fetch(GQL_URL, { method: "POST", headers: { authorization: `Bearer ${token}`, "content-type": "application/json", "X-JOBBER-GRAPHQL-VERSION": GQL_VERSION },

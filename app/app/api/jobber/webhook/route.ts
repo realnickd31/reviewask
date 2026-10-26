@@ -3,7 +3,7 @@ import { db, type User } from "@/lib/db";
 import { accessToken, jobClient, verifyWebhook } from "@/lib/jobber";
 import { sendReviewRequest } from "@/lib/send";
 export const dynamic = "force-dynamic";
-// Jobber webhook (subscribe to JOB_CLOSED in the Developer Center). Payload:
+// Jobber webhook (subscribe to JOB_CLOSED and APP_DISCONNECT in the Developer Center). Payload:
 // { data: { webHookEvent: { topic, appId, accountId, itemId, occurredAt } } }
 export async function POST(req: NextRequest) {
   const raw = await req.text();
