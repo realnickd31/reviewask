@@ -398,3 +398,54 @@ Jobber client-hub link on their Nextdoor page; review counts from web mirrors (s
 - Reviews: ~38 @ 5.0
 - Opener: Saw Call Chad LLC takes requests through Jobber and has about 38 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Call+Chad+LLC+Akron+OH
+
+## Newly Hot (≥85) — enrichment pass 2, Nextdoor non-Southeast (8)
+Review counts from web mirrors (source in CSV), not Maps-audited. Draft only.
+
+### S1. Champagne Valley — Steamboat Springs, CO (score 92)
+- Email: yampavalleycl@gmail.com
+- Reviews: ~8 @ 5.0
+- Opener: Saw Champagne Valley takes requests through Jobber and has about 8 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Champagne+Valley+Steamboat+Springs+CO
+
+### S2. Aqua Pros — Whittier, CA (score 92)
+- Email: cesar@aquaproslic.com; sales@aquaprosllc.com
+- Reviews: ~18 @ 4.3
+- Opener: Saw Aqua Pros takes requests through Jobber and has about 18 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Aqua+Pros+Whittier+CA
+
+### S3. BUGBUSTERS — Mount Morris, MI (score 92)
+- Email: bugbustersmichigan@gmail.com
+- Reviews: ~1 @ 5.0
+- Opener: Saw BUGBUSTERS takes requests through Jobber and has about 1 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=BUGBUSTERS+Mount+Morris+MI
+
+### S4. Albany Bed Bug Extermination — Albany, NY (score 92)
+- Email: eric@cnybedbugextermination.com
+- Reviews: ~21 @ 4.8
+- Opener: Saw Albany Bed Bug Extermination takes requests through Jobber and has about 21 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Albany+Bed+Bug+Extermination+Albany+NY
+
+### S5. Kearney's Heating and Air — Virginia Beach, VA (score 87)
+- Email: gerald.kearney@gmail.com; gerald.s.kearney@gmail.com
+- Reviews: ~28 @ 5.0
+- Opener: Saw Kearney's Heating and Air takes requests through Jobber and has about 28 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Kearney%27s+Heating+and+Air+Virginia+Beach+VA
+
+### S6. South Heat Landscaping — Tomball, TX (score 87)
+- Email: southheatlandscaping@gmail.com
+- Reviews: ~42 @ 4.6
+- Opener: Saw South Heat Landscaping takes requests through Jobber and has about 42 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=South+Heat+Landscaping+Tomball+TX
+
+### S7. Hercs Works LLC — Marana, AZ (score 87)
+- Email: hercsworks@outlook.com
+- Reviews: ~43 @ 5.0
+- Opener: Saw Hercs Works LLC takes requests through Jobber and has about 43 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Hercs+Works+LLC+Marana+AZ
+
+### S8. 901 cleaning solutions — Lakeland, TN (score 86)
+- Email: info@901cleqningsolutions.com
+- Reviews: ~70 @ 5.0
+- Opener: Saw 901 cleaning solutions takes requests through Jobber. Quick one: are you asking every customer for a Google review after each job, or only when you remember?
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=901+cleaning+solutions+Lakeland+TN
