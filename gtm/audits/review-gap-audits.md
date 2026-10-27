@@ -1180,3 +1180,100 @@ To close it in 6 months: ~13 new reviews/mo ≈ 87 asks/mo at a 15% response rat
 **Sources:** https://lupinettislawncare.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=7282fbb9562da5ec
 
 **Notes:** Volume leaders (Lawn Ace 1,884, Fairway 954, Augusta Lawn Care 555, all treatment and franchise companies) were left out. The comps are lawn-treatment shops, not mow-only.
+
+## Simply SoftWash Exterior Cleaning, LLC (Greenville, SC)
+```
+Google Review Gap — Simply SoftWash Exterior Cleaning, LLC (Greenville, "pressure washing Greenville")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         9  
+#1 Spruce Services & Solutions  291  4.8
+#2 EcoClean  132  5.0
+#3 Patriot  93  
+
+Gap to top-3 average: 163 reviews (gap to leader: 282)
+To close it in 6 months: ~47 new reviews/mo ≈ 314 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 9 Google reviews. EcoClean has 132 in Greenville and Patriot has 93. Every soft wash ends with a before-and-after the customer is happy about, which is the easiest moment to ask.
+
+**Sources:** https://simplysoftwashexteriorcleaningllc.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=e1224f1f864983e1 | https://theupstatelist.com/biz/spruce-services-and-solutions-greenville/
+
+**Notes:** Huskamp also has 93.
+
+## Green Thumbs Landscape Consulting and Services (Prosperity, SC)
+```
+Google Review Gap — Green Thumbs Landscape Consulting and Services (Prosperity, "landscaping Irmo / Lake Murray")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         8  5.0
+#1 Trifecta Landscaping  150  4.6
+#2 J&S Landscape  65  4.9
+
+Gap to top-2 average: 100 reviews (gap to leader: 142)
+To close it in 6 months: ~24 new reviews/mo ≈ 160 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 8 Google reviews (5.0). J&S Landscape has 65 around Lake Murray and Trifecta has 150. Your plant-consulting clients clearly love the work, and most of them just never got asked.
+
+**Sources:** https://greenthumbslandscaping.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=018949a5b3d58cb0 | https://exa.ai/library/place/9hlbhrfck09
+
+**Notes:** SpringGreen (304, a lawn-treatment franchise) was left out.
+
+## Still Creek Property Solutions LLC (Pensacola, FL)
+```
+Google Review Gap — Still Creek Property Solutions LLC (Pensacola, "lawn care Pensacola")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         8  
+#1 Bryan's Lawn Maintenance  326  4.5
+#2 Le Scape Turf & Landscaping  50  5.0
+
+Gap to top-2 average: 180 reviews (gap to leader: 318)
+To close it in 6 months: ~53 new reviews/mo ≈ 354 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 8 Google reviews. Le Scape has 50 in Pensacola. Weekly mowing customers are the easiest people to ask, and asking every one of them gets you past 50 in a season.
+
+**Sources:** https://stillcreek.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=957c28c0e84e3441 | https://www.contractorsranked.com/contractor/pensacola-fl/bryans-lawn-maintenance-inc
+
+**Notes:** LawnStarter (147, a booking platform) and Luckies Pinestraw (330, a supply business) were left out. Bryan's (326) is the volume leader, so the realistic target is Le Scape.
+
+## Palm Aire Professional Services (Fort Lauderdale, FL)
+```
+Google Review Gap — Palm Aire Professional Services (Fort Lauderdale, "house cleaning Fort Lauderdale")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         6  4.2
+#1 Spotless Clean by Peter  164  4.8
+#2 Maid For You  162  4.8
+#3 Elevated Cleaning  130  4.8
+
+Gap to top-3 average: 146 reviews (gap to leader: 158)
+To close it in 6 months: ~27 new reviews/mo ≈ 180 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 6 Google reviews (4.2). Owner-run Fort Lauderdale cleaners like Elevated Cleaning are at 130 or more, around 4.8. Asking every recurring client brings in volume, and the new reviews lift the average too.
+
+**Sources:** https://palmairecleaningservices.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=31f78a14f561e216 | https://exa.ai/library/places?q=61e116398256d2ed
+
+**Notes:** FLAG: 4.2 rating. Franchises (The Cleaning Authority 292, MaidPro 252) were left out.
+
+## Danner Exterior Services (Greenacres, FL)
+```
+Google Review Gap — Danner Exterior Services (Greenacres, "roof soft washing Greenacres / Lake Worth")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         10  
+#1 City Pressure Cleaning  126  4.9
+#2 Sunshine Pressure Washing  71  4.5
+
+Gap to top-2 average: 88 reviews (gap to leader: 116)
+To close it in 6 months: ~20 new reviews/mo ≈ 134 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 10 Google reviews. Sunshine Pressure Washing has 71 around Lake Worth and City Pressure Cleaning has 126. A clean roof is very visible to the neighbors, so it's the easiest time to ask.
+
+**Sources:** https://dannerexteriorservices.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=fd0d61a9c7e20106 | https://www.contractorsranked.com/contractor/boynton-beach-fl/city-pressure-cleaning-soft-wash-roof-cleaning
+
+**Notes:** Dan Ryan's (claims 800+) is a volume leader and was left out. The City Pressure Cleaning count comes from Contractors Ranked.

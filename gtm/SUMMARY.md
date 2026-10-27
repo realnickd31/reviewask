@@ -69,3 +69,9 @@
 - 13 are newly Hot. 12 of them have email (section Q). The 13th, Everett Landscaping (AL, 1 review), has a phone number only. Affordable Painting & Power Washing (338 reviews) is disqualified.
 - Totals: 613 rows · 185 Hot · 394 Warm · 463 with email · 61 audits.
 - The stretch goal (audits) was not done this pass. The channel is not exhausted: each search still returns mostly new subdomains.
+
+## Update 2026-10-27 ~5:30 AM ET: pass 6 enrichment + audits
+- Searched all 52 [BLOCKED] rows from pass 6. 15 got Google counts. 12 are newly Hot with email (section R). Smith Pressure Washing (SC) is also Hot but has no email.
+- Flags: Moxthe, Smith, Task Tacklers and EES have weak sources. Task Tacklers also has Nextdoor complaints about deposits. Ancient City Window has 317+ reviews (disqualified). Edge Services (MN) has 167.
+- +5 audits (section Q): Simply SoftWash, Green Thumbs, Still Creek, Palm Aire, Danner.
+- Totals: 613 rows · 198 Hot · 380 Warm · 463 with email · 66 audits.
