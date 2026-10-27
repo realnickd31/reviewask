@@ -1045,3 +1045,138 @@ To close it in 6 months: ~13 new reviews/mo ≈ 87 asks/mo at a 15% response rat
 **Sources:** https://snowlawn.net/tn/chattanooga/GreenLove | https://tajmahome.com/tn/chattanooga/lawn-care/ | https://ratingsnearme.com/chattanooga-tn/landscaper-near-me | https://www.gallowayslawnservice.com/reviews/
 
 **Notes:** Lawn Doctor (190, a franchise) was left out.
+
+## Harmony Cleaning ATL (Atlanta, GA)
+```
+Google Review Gap — Harmony Cleaning ATL (Atlanta, "house cleaning Atlanta")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         26  4.8
+#1 Quick Clean ATL  94  5.0
+
+Gap to top-1 average: 68 reviews (gap to leader: 68)
+To close it in 6 months: ~12 new reviews/mo ≈ 80 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 26 Google reviews (4.8). Quick Clean ATL has 94. Recurring cleans are the easiest place to ask, and you already see those clients every week or two.
+
+**Sources:** https://harmonycleaningatl.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=43d78373a0d2b415 | https://ratingsnearme.com/atlanta-ga/cleaners
+
+**Notes:** Volume leaders (Atlanta Green Maids, about 1,400 or more; Amazon Cleaning, about 1,000) were left out. I compared against the closest owner-run peer only.
+
+## AmeriGro Landscape Services (Charleston, SC)
+```
+Google Review Gap — AmeriGro Landscape Services (Charleston, "landscaping Charleston")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         8  
+#1 Bells Landscaping  75  4.9
+#2 Crescent Moon  47  4.9
+#3 Heroes Lawn Care  39  5.0
+
+Gap to top-3 average: 46 reviews (gap to leader: 67)
+To close it in 6 months: ~12 new reviews/mo ≈ 80 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 8 Google reviews. Bells Landscaping has 75 in Charleston and Crescent Moon has 47. Landscape management clients are recurring, so asking each one closes most of that in a season.
+
+**Sources:** https://amerigro.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=c434c9c01f114cdc | https://www.ratexyz.com/top/google/landscaping-lawn-care/in/united-states/charleston
+
+**Notes:** Southern Turf Co. (239, artificial turf) was left out. The Bells and Heroes counts come from RateXYZ.
+
+## Magic City Soft Wash (Birmingham, AL)
+```
+Google Review Gap — Magic City Soft Wash (Birmingham, "pressure washing Birmingham")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         9  
+#1 Alabama Pressure Washing  159  5.0
+#2 Xtreme Klean Pressure Washing  132  4.8
+#3 Door to Door Pressure Washing  22  4.8
+
+Gap to top-3 average: 95 reviews (gap to leader: 150)
+To close it in 6 months: ~25 new reviews/mo ≈ 167 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 9 Google reviews. Alabama Pressure Washing has 159 in Birmingham. Every soft-wash job is a before-and-after customers love to talk about, so they're the easiest ones to ask.
+
+**Sources:** https://magiccitysoftwash.jobbersites.com (own Google widget) | https://exa.ai/library/place/zn8vwqr9ght | https://www.angi.com/companylist/us/al/birmingham/xtreme-klean-pressure-washing-reviews-1.htm
+
+**Notes:** Weak: the Xtreme Klean (132) and Door to Door (22) counts come from Angi and HomeAdvisor, not Google. Only Alabama Pressure Washing's count comes from a Google mirror (Exa).
+
+## Knight and Day Pressure Washing (Fort Myers, FL)
+```
+Google Review Gap — Knight and Day Pressure Washing (Fort Myers, "pressure washing Naples / Fort Myers")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         30  
+#1 Naples Precision Pressure Washing  82  5.0
+#2 Good Worx Pressure Washing  68  4.9
+#3 Naples Pressure Washing Pros  33  4.9
+
+Gap to top-3 average: 31 reviews (gap to leader: 52)
+To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 30 Google reviews. Naples Precision has 82 and Good Worx has 68. You're a couple of months of asking every customer away from leading Naples.
+
+**Sources:** https://knightanddaypressurewashing.jobbersites.com (own Google widget) | https://exa.ai/library/place/h8mrg61ky0m | https://exa.ai/library/places?q=b3081047469ae365 | https://exa.ai/library/place/yrbk7nd5s78
+
+## Cape Fear Lawn Masters (Wilmington, NC)
+```
+Google Review Gap — Cape Fear Lawn Masters (Wilmington, "lawn care Wilmington")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         29  
+#1 Thorpe Landscapes  153  4.7
+#2 Turf Team LLC  146  5.0
+#3 SeaFoam-Greens  54  4.9
+
+Gap to top-3 average: 89 reviews (gap to leader: 124)
+To close it in 6 months: ~21 new reviews/mo ≈ 140 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 29 Google reviews. Turf Team has 146 in Wilmington and SeaFoam-Greens has 54. Weekly mows are the easiest place to ask every customer.
+
+**Sources:** https://ilmgrass.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=3b81799eb3534212 | https://tajmahome.com/nc/wilmington/lawn-care/
+
+**Notes:** Conserva Irrigation (597, an irrigation franchise) was left out.
+
+## Nancy’s General Cleaning LLC (Durham, NC)
+```
+Google Review Gap — Nancy’s General Cleaning LLC (Durham, "house cleaning Durham")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         36  4.9
+#1 Carrie's Cleaning  149  4.9
+#2 My Cleaning Lady  90  5.0
+#3 Legendary Cleaning  63  5.0
+
+Gap to top-3 average: 65 reviews (gap to leader: 113)
+To close it in 6 months: ~19 new reviews/mo ≈ 127 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 36 Google reviews (4.9). My Cleaning Lady has 90 in Durham and Carrie's has 149. Your recurring clients are the easiest ones to ask, and right now most of them never get asked.
+
+**Sources:** https://nancysgeneralcleaning.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=ac5a0f9595fa640b
+
+**Notes:** Franchises (The Maids, Merry Maids) and Natural Zen (249) were left out, to compare owner-run peers only.
+
+## Lupinetti’s Lawn Care (Augusta, GA)
+```
+Google Review Gap — Lupinetti’s Lawn Care (Augusta, "lawn care Augusta")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         45  
+#1 Kathleen's Lawn & Shrub  120  4.9
+#2 TurfMasters  115  4.7
+
+Gap to top-2 average: 73 reviews (gap to leader: 75)
+To close it in 6 months: ~13 new reviews/mo ≈ 87 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 45 Google reviews. Kathleen's has 120 and TurfMasters has 115 in Augusta. About 70 more puts you with the local leaders, and weekly mowing customers are easy to ask.
+
+**Sources:** https://lupinettislawncare.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=7282fbb9562da5ec
+
+**Notes:** Volume leaders (Lawn Ace 1,884, Fairway 954, Augusta Lawn Care 555, all treatment and franchise companies) were left out. The comps are lawn-treatment shops, not mow-only.

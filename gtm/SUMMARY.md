@@ -55,3 +55,10 @@
 - +44 Jobber Sites rows (FL 10, NC 9, GA 8, AL 7, SC 5, TN 1, IL 1, 3 with no state). Counts come from the Google widget on each site where present. 16 are newly Hot with email (section O).
 - Skipped audits until verified: Coastal Handymen (odd email), J&K's Precision, Tactical, Georgia Softwash (weak sources).
 - OVERNIGHT_HANDOFF.md has been rewritten as a morning brief.
+
+## Update 2026-10-27 ~4:30 AM ET: pass 5 enrichment + audits
+- Totals: 545 rows · 172 Hot · 340 Warm · 400 with email · 61 audits.
+- Enrichment: searched all 23 [BLOCKED] rows that had email. 10 got Google counts, and all 10 are newly Hot (section P): Eggea Cleaning, 615 Lawn, Hatcher (weak source), Bernard's Pro Lawn, Warrior Landscaping (weak), Instaclean, Revolutionary Repair, Creative Outdoor, APG Painting (weak, 4.0 rating), KMG Landscaping (sources conflict, 3.4 vs 5.0). The other 15 stay [BLOCKED], with only Yelp, Thumbtack, Angi or Growcycle counts or no listing.
+- Also fixed: a row name (Coastal Earthworks Co), the state for 615 Lawn (TN), and the category for Revolutionary Repair.
+- +7 audits (section O): Harmony Cleaning ATL, AmeriGro, Magic City Soft Wash, Knight and Day, Cape Fear Lawn Masters, Nancy's General Cleaning, Lupinetti's.
+- The stretch goal of +30–50 rows was not done this pass. Jobber Sites search queries are still finding new subdomains, so this channel is not exhausted.
