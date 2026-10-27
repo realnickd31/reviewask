@@ -927,3 +927,121 @@ To close it in 6 months: ~21 new reviews/mo ≈ 140 asks/mo at a 15% response ra
 **Sources:** https://carolinalawnservices.jobbersites.com (lead count). Rock Hill competitor counts come from the Ground Effects audit (same day, same sources).
 
 **Notes:** Reuses the Rock Hill comps from the Ground Effects audit.
+
+## Steve's Scapes (Knoxville, TN)
+```
+Google Review Gap — Steve's Scapes (Knoxville, "lawn care Knoxville")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         5  5.0
+#1 Grover Turf Care  48  4.8
+#2 LawnCrafters  35  5.0
+#3 Ulster Lawncare  23  5.0
+
+Gap to top-3 average: 30 reviews (gap to leader: 43)
+To close it in 6 months: ~8 new reviews/mo ≈ 54 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 5 Google reviews are all 5 stars, and you were a Nextdoor favorite this year. Grover Turf has 48 and LawnCrafters has 35 in Knoxville. Asking every weekly customer closes that in one season.
+
+**Sources:** https://exa.ai/library/place/mcdtk94q19k | https://exa.ai/library/places?q=3c5fbac72e3b2e05 | https://tajmahome.com/tn/knoxville/lawn-care/
+
+**Notes:** Big franchises (Emerald Island ~1,071, Lawn Doctor 303) were left out. I compared against owner-run shops only.
+
+## Thunder Services LLC (Orlando, FL)
+```
+Google Review Gap — Thunder Services LLC (Orlando, "handyman Orlando")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         17  5.0
+#1 Orlando Handyman  239  4.9
+#2 The Handyman Company  166  4.2
+#3 MY Best Handyman  31  5.0
+
+Gap to top-3 average: 128 reviews (gap to leader: 222)
+To close it in 6 months: ~37 new reviews/mo ≈ 247 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 17 Google reviews are all 5 stars. Orlando Handyman has 239, and The Handyman Company has 166 at 4.2. Your rating is better, so the gap is just how many customers get asked.
+
+**Sources:** https://exa.ai/library/place/jf21xzhpmzy | https://orlandogoeslocal.com/home-repair-and-maintenance/orlando-handyman | https://exa.ai/library/places?q=fa1185c044fe4007
+
+## Top Tier Lawn Care & Landscaping (Lithia Springs, GA)
+```
+Google Review Gap — Top Tier Lawn Care & Landscaping (Lithia Springs, "lawn care Douglasville / Lithia Springs")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         2  5.0
+#1 Lawn To The Max  42  5.0
+#2 5 Star Landscaping  20  5.0
+#3 Turf Men Inc.  3  5.0
+
+Gap to top-3 average: 20 reviews (gap to leader: 40)
+To close it in 6 months: ~7 new reviews/mo ≈ 47 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Joshua, Google shows 1 or 2 reviews for Top Tier. Lawn To The Max has 42 in Douglasville and 5 Star Landscaping has 20. A couple of months of asking every customer and you're in that group.
+
+**Sources:** https://reviews.birdeye.com/top-tier-lawn-care-170476037256231 | https://exa.ai/library/places?q=aa8021d02db373ca | https://lawntothemax.com/lithia-springs-lawn-care
+
+**Notes:** Exa shows 1 and Birdeye shows 2. The Lawn To The Max count comes from its own site.
+
+## Maid for America (Charlotte, NC)
+```
+Google Review Gap — Maid for America (Charlotte, "house cleaning Charlotte")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         37  4.9
+#1 Dust and Mop Charlotte  202  4.9
+#2 Bright Leaf Cleaning  106  5.0
+#3 Maid in the QC  33  5.0
+
+Gap to top-3 average: 77 reviews (gap to leader: 165)
+To close it in 6 months: ~28 new reviews/mo ≈ 187 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Jessica, you're at 37 Google reviews and nearly every one names you. Bright Leaf has 106 and Dust and Mop has 202 in Charlotte. Recurring cleans are the easiest place to ask every client.
+
+**Sources:** https://maidforamerica.com/testimonials/ | https://ratingsnearme.com/charlotte-nc/cleaners | https://exa.ai/library/place/7mpq3fkrvbm
+
+**Notes:** Franchise and volume leaders (Fiv5 Star 977, Amanda's Maid 876) were left out.
+
+## A Plus Exteriors (Lexington, SC)
+```
+Google Review Gap — A Plus Exteriors (Lexington, "window cleaning / exterior cleaning Lexington SC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         40  5.0
+#1 Southern Touch Cleaning  41  4.5
+#2 Accuclean  19  4.9
+#3 Dominion Clean  15  5.0
+
+Gap to top-3 average: 0 reviews (gap to leader: 1)
+To close it in 6 months: ~1 new reviews/mo ≈ 7 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Andrew, you're at 40+ Google reviews. Southern Touch has 41 at 4.5. Lexington window cleaning is yours to lead. A few more a month keeps you ahead of Window Genie.
+
+**Sources:** https://aplusexteriorssc.com/ | https://exa.ai/library/places?q=b383c240342c49a7 | https://exa.ai/library/places?q=ffad2ebf54776e29
+
+**Notes:** This is about defending the lead, not closing a gap. Their count ('40+') comes from their own site. Window Genie (a franchise, 1,142 reviews across all locations) was left out.
+
+## GreenLove Outdoor (Chattanooga, TN)
+```
+Google Review Gap — GreenLove Outdoor (Chattanooga, "lawn care Chattanooga")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         58  5.0
+#1 Green Grounds Solutions  131  4.9
+#2 Galloway's Lawn Service  130  4.9
+#3 Midtown Lawn Care  38  4.9
+
+Gap to top-3 average: 42 reviews (gap to leader: 73)
+To close it in 6 months: ~13 new reviews/mo ≈ 87 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 58 Google reviews, all 5 stars. Galloway's and Green Grounds both have about 130 in Chattanooga. That's roughly 70 reviews, which is very doable if every mow and gutter job gets an ask.
+
+**Sources:** https://snowlawn.net/tn/chattanooga/GreenLove | https://tajmahome.com/tn/chattanooga/lawn-care/ | https://ratingsnearme.com/chattanooga-tn/landscaper-near-me | https://www.gallowayslawnservice.com/reviews/
+
+**Notes:** Lawn Doctor (190, a franchise) was left out.

@@ -733,7 +733,7 @@ The counts come from web mirrors, not Google Maps directly. Re-check each one on
 - Email: toptierlawncare.landscaping@gmail.com · Phone: (678) 523-6326
 - Reviews: 2 (5.0) · source https://reviews.birdeye.com/top-tier-lawn-care-170476037256231
 - Maps re-check: https://www.google.com/maps/search/Top%20Tier%20Lawn%20Care%20%26%20Landscaping%20%20GA
-- Opener: Saw your Jobber site. You're at 2 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: Joshua, Google shows 1 or 2 reviews for Top Tier. Lawn To The Max has 42 in Douglasville and 5 Star Landscaping has 20. A couple of months of asking every customer and you're in that group. (from the review-gap audit)
 
 ### N2. J & K's Precision Lawn Care — Warner Robins, GA (score 97)
 - Email: precisionlawncarega@gmail.com · Phone: (478) 542-1887
@@ -745,7 +745,7 @@ The counts come from web mirrors, not Google Maps directly. Re-check each one on
 - Email: thunderservicesfl@gmail.com · Phone: (321) 215-5391
 - Reviews: 17 (5.0) · source https://exa.ai/library/place/jf21xzhpmzy
 - Maps re-check: https://www.google.com/maps/search/Thunder%20Services%20LLC%20Orlando%20FL
-- Opener: Saw your Jobber site. You're at 17 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: Your 17 Google reviews are all 5 stars. Orlando Handyman has 239, and The Handyman Company has 166 at 4.2. Your rating is better, so the gap is just how many customers get asked. (from the review-gap audit)
 
 ### N4. Coastal Handymen — Savannah, GA (score 97)
 - Email: carlos@stayheresav.org · Phone: (912) 650-3343
@@ -757,19 +757,19 @@ The counts come from web mirrors, not Google Maps directly. Re-check each one on
 - Email: steveslawnscapes@gmail.com · Phone: (865) 309-5359
 - Reviews: 5 (5.0) · source https://exa.ai/library/place/mcdtk94q19k
 - Maps re-check: https://www.google.com/maps/search/Steve%27s%20Scapes%20Knoxville%20TN
-- Opener: Saw your Jobber site. You're at 5 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: Your 5 Google reviews are all 5 stars, and you were a Nextdoor favorite this year. Grover Turf has 48 and LawnCrafters has 35 in Knoxville. Asking every weekly customer closes that in one season. (from the review-gap audit)
 
 ### N6. Maid for America — NC (score 92)
 - Email: contact@maidforamerica.com · Phone: (704) 904-8759
 - Reviews: 37 (4.9) · source https://maidforamerica.com/testimonials/
 - Maps re-check: https://www.google.com/maps/search/Maid%20for%20America%20%20NC
-- Opener: Saw your Jobber site. You're at 37 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: Jessica, you're at 37 Google reviews and nearly every one names you. Bright Leaf has 106 and Dust and Mop has 202 in Charlotte. Recurring cleans are the easiest place to ask every client. (from the review-gap audit)
 
 ### N7. A Plus Exteriors — Lexington, SC (score 92)
 - Email: aplusexteriors107@gmail.com · Phone: (803) 563-7745
 - Reviews: 40 (5.0) · source https://aplusexteriorssc.com/
 - Maps re-check: https://www.google.com/maps/search/A%20Plus%20Exteriors%20Lexington%20SC
-- Opener: Saw your Jobber site. You're at 40 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: Andrew, you're at 40+ Google reviews. Southern Touch has 41 at 4.5. Lexington window cleaning is yours to lead. A few more a month keeps you ahead of Window Genie. (from the review-gap audit)
 
 ### N8. Texas Finest Lawn Care — Crosby, TX (score 92)
 - Email: jaimeseddy10@yahoo.com · Phone: (832) 367-2763
@@ -793,4 +793,120 @@ The counts come from web mirrors, not Google Maps directly. Re-check each one on
 - Email: greenloveoutdoor@gmail.com · Phone: (423) 800-4090
 - Reviews: 58 (5.0) · source https://snowlawn.net/tn/chattanooga/GreenLove
 - Maps re-check: https://www.google.com/maps/search/GreenLove%20Outdoor%20Chattanooga%20TN
-- Opener: Saw your Jobber site. You're at 58 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 58 Google reviews, all 5 stars. Galloway's and Green Grounds both have about 130 in Chattanooga. That's roughly 70 reviews, which is very doable if every mow and gutter job gets an ask. (from the review-gap audit)
+
+
+## O. Jobber Sites pass 5 (2026-10-27): new Hot with public email
+The counts come from each site's embedded Google widget. Re-check on Maps before sending.
+
+### O1. AmeriGro Landscape Services — Charleston, SC (score 97)
+- Email: info@amerigrolandscape.com · Phone: (843) 556-4052
+- Site: https://amerigro.jobbersites.com/
+- Reviews: 8 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/AmeriGro%20Landscape%20Services%20Charleston%20SC
+- Opener: Saw your Jobber site. You're at 8 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O2. Rhodes Lawn Care & Landscaping — Lebanon, TN (score 97)
+- Email: rhodeslawncare01@gmail.com · Phone: (615) 417-7521
+- Site: https://rhodeslawncarelandscaping.jobbersites.com/
+- Reviews: 4 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Rhodes%20Lawn%20Care%20%26%20Landscaping%20Lebanon%20TN
+- Opener: Saw your Jobber site. You're at 4 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O3. Magic City Soft Wash — Birmingham, AL (score 97)
+- Email: brian@magiccitysoftwash.com · Phone: (205) 563-3198
+- Site: https://magiccitysoftwash.jobbersites.com/
+- Reviews: 9 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Magic%20City%20Soft%20Wash%20Birmingham%20AL
+- Opener: Saw your Jobber site. You're at 9 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O4. Supreme Greens of SWFL — Naples, FL (score 97)
+- Email: office@supremegreensofswfl.com · Phone: (239) 380-1817
+- Site: https://supremegreensofswfl.jobbersites.com/
+- Reviews: 8 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Artificial%20Turf%20Installation%20Naples%20FL
+- Opener: Saw your Jobber site. You're at 8 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O5. JP Modern Builds — Naples, FL (score 97)
+- Email: business@jpmodernbuilds.com · Phone: (239) 269-7490
+- Site: https://jpmodernbuilds.jobbersites.com/
+- Reviews: 2 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/JP%20Modern%20Builds%20Naples%20FL
+- Opener: Saw your Jobber site. You're at 2 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O6. Duplechain Heating and Air — Huntsville, AL (score 97)
+- Email: duplechainheatingandair@protonmail.com · Phone: (256) 795-4451
+- Site: https://duplechainheatingandair.jobbersites.com/
+- Reviews: 10 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Duplechain%20Heating%20and%20Air%20Huntsville%20AL
+- Opener: Saw your Jobber site. You're at 10 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O7. Gotcha Covered Lawn Care And More LLC — Greensboro, NC (score 97)
+- Email: gotchacoveredlawns@gmail.com · Phone: (336) 894-0062
+- Site: https://gotchacoveredlawncareandmorellc.jobbersites.com/
+- Reviews: 10 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Gotcha%20Covered%20Lawn%20Care%20And%20More%20LLC%20Greensboro%20NC
+- Opener: Saw your Jobber site. You're at 10 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O8. Harmony Cleaning ATL — GA (score 92)
+- Email: support@harmonycleaningatl.com · Phone: (404) 825-9055
+- Site: https://harmonycleaningatl.jobbersites.com/
+- Reviews: 26 (4.8), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Harmony%20Cleaning%20ATL%20%20GA
+- Opener: Saw your Jobber site. You're at 26 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O9. Knight and Day Pressure Washing — Fort Myers, FL (score 92)
+- Email: alec.stapleton4@gmail.com · Phone: (313) 212-5882
+- Site: https://knightanddaypressurewashing.jobbersites.com/
+- Reviews: 30 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Pressure%20Washing%20Naples%2C%20Bonita%20Springs%20%26%20Fort%20Myers%20Fort%20Myers%20FL
+- Opener: Saw your Jobber site. You're at 30 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O10. Cape Fear Lawn Masters — Wilmington, NC (score 92)
+- Email: manager@ilmgrass.com · Phone: (910) 442-8191
+- Site: https://ilmgrass.jobbersites.com/
+- Reviews: 29 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Cape%20Fear%20Lawn%20Masters%20Wilmington%20NC
+- Opener: Saw your Jobber site. You're at 29 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O11. Macon’s Lawn and Landscape — Columbia, SC (score 92)
+- Email: maconslawn@gmail.com · Phone: (803) 549-2505
+- Site: https://maconslawnandlandscape.jobbersites.com/
+- Reviews: 26 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Macon%E2%80%99s%20Lawn%20and%20Landscape%20Columbia%20SC
+- Opener: Saw your Jobber site. You're at 26 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O12. Sarasota Lawn Care Services — Sarasota, FL (score 92)
+- Email: sarasotalawncareservices@gmail.com · Phone: (941) 234-3000
+- Site: https://sarasotalawncareservices.jobbersites.com/
+- Reviews: 29 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Sarasota%20Lawn%20Care%20Services%20Sarasota%20FL
+- Opener: Saw your Jobber site. You're at 29 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O13. Gilileo's Landscaping Service — Lakeland, FL (score 92)
+- Email: gilileolandscapingservice@gmail.com · Phone: (863) 254-1147
+- Site: https://gilileoslandscapingservice.jobbersites.com/
+- Reviews: 47 (4.7), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Gilileo%27s%20Landscaping%20Service%20Lakeland%20FL
+- Opener: Saw your Jobber site. You're at 47 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O14. Lupinetti’s Lawn Care — Augusta, GA (score 92)
+- Email: lupinettislawncare@gmail.com · Phone: (803) 634-3299
+- Site: https://lupinettislawncare.jobbersites.com/
+- Reviews: 45 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Lupinetti%E2%80%99s%20Lawn%20Care%20Augusta%20GA
+- Opener: Saw your Jobber site. You're at 45 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O15. Nancy’s General Cleaning LLC — Durham, NC (score 92)
+- Email: admin@nancysgeneralcleaning.com · Phone: (984) 250-0091
+- Site: https://nancysgeneralcleaning.jobbersites.com/
+- Reviews: 36 (4.9), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Nancy%E2%80%99s%20General%20Cleaning%20LLC%20Durham%20NC
+- Opener: Saw your Jobber site. You're at 36 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### O16. Parsons Lawn Care — Tremont, IL (score 87)
+- Email: nolanparsons55@gmail.com · Phone: (309) 620-0369
+- Site: https://parsonslawncare.jobbersites.com/
+- Reviews: 47 (), from the site's Google widget
+- Maps re-check: https://www.google.com/maps/search/Parsons%20Lawn%20Care%20Tremont%20IL
+- Opener: Saw your Jobber site. You're at 47 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
