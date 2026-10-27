@@ -5,6 +5,7 @@ import Logo from "@/components/Logo";
 import AuthForm from "@/components/AuthForm";
 import { login } from "../actions";
 export const dynamic = "force-dynamic";
+export const metadata = { title: "Log in", alternates: { canonical: "/login" } };
 export default async function Page() {
   const u = await currentUser();
   if (u) redirect(u.business_name && u.review_url ? "/dashboard" : "/onboarding");
