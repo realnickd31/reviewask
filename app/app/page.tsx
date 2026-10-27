@@ -52,7 +52,7 @@ export default async function Home() {
           </> : <>
             <Link href="/login" className="hover:text-white">Log in</Link>
             <Link href="/signup" className="btn bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Start free trial</Link></>}</nav></div>
-      <div className="mx-auto max-w-6xl px-6 pb-28 pt-20 sm:pt-28">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-28 pt-20 sm:pt-28 lg:grid-cols-[1.4fr_1fr]">
         <div className="max-w-3xl">
           <p className="eyebrow !text-lime-400">For Jobber and field-service businesses</p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every finished job gets a Google review request — automatically.</h1>
@@ -61,6 +61,14 @@ export default async function Home() {
           <p className="mt-5 text-sm text-white/60">$39/month after the 7-day trial · No contract · Cancel anytime</p>
         </div>
       </div>
+        <div aria-label="Example review request" className="hidden lg:block"><div className="mx-auto max-w-sm rounded-2xl bg-white p-5 text-navy-900 shadow-2xl ring-1 ring-white/10">
+          <p className="text-xs font-medium uppercase tracking-wider text-slate-400">Example request</p>
+          <p className="mt-3 text-sm font-semibold">From: Your Business Name</p>
+          <p className="mt-2 text-sm leading-relaxed text-slate-700">Hi Sam — thanks for choosing us today! Would you mind leaving a quick Google review? It really helps a small business like ours.</p>
+          <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a review ★★★★★</span>
+          <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Job closed in Jobber → sent automatically</span><span className="text-lime-700">Day-3 reminder queued</span></div>
+        </div></div>
+      
     </header>
 
     <section className="border-b border-slate-200 bg-slate-50"><div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center">

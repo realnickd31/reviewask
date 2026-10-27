@@ -14,6 +14,6 @@ export default async function Page() {
     <div className="card p-8"><h1 className="text-xl font-semibold">Log in to ReviewAsk</h1><p className="mb-6 mt-1.5 text-sm text-slate-500">Enter your email and password.</p>
       <AuthForm action={login} label="Log in" /></div>
     <p className="mt-6 text-center text-sm text-slate-600">New to ReviewAsk? <Link href="/signup" className="font-medium text-navy-900 underline underline-offset-4">Start a free trial</Link></p>
-    <p className="mt-3 text-center text-xs text-slate-400"><Link href="/terms" className="hover:underline">Terms</Link> · <Link href="/privacy" className="hover:underline">Privacy</Link></p>
+    <p className="mt-3 text-center text-xs text-slate-600"><Link href="/terms" className="hover:underline">Terms</Link> · <Link href="/privacy" className="hover:underline">Privacy</Link></p>
   </div></main>;
 }
