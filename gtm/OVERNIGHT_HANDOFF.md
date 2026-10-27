@@ -113,3 +113,9 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Site: new /reviews-for-lawn-care guide (any-trade note, links to free tools), plus sitemap and footer. Commit 550c022, deploy dep-dbg5uh2vcj2c73b98d90 live, 200.
 - Discovery: +6 deduped (Rapha Plumbing Bertram TX 19 @5.0 Hot; Brayden's 63-84 conflict; Ecoscape low rating; A1Repairman unverified; Bob's Garage 379 and Ross HVAC 352-404 already leaders). Below the +15 target; Nextdoor/HCP angle is producing many dupes now.
 - Totals: 816 prospects, 258 Hot, 652 w/ email, 171 audits, 47 touch-1 + 47 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.
+
+## Batch AO (~5:02 AM ET)
+- Site: /reviews-for-cleaning live (mirrors lawn-care guide; any-trade note; cross-link). Footer + sitemap. Commit c934362, deploy dep-dbg605gm7kps73bgu8k0, 200.
+- Audit AN: Rapha Plumbing (Bertram TX) 19 @5.0; comps Tanker's 119, Complete Care 81 (Marble Falls), TNT 36 (Bertram); leader gap 100; ~67 asks/mo [SPEC]. Draft #48 touch 1+2 in batch3.
+- Discovery (jobbersites in OR/WA/NM/WI/IA/ME): +3 only (Brandon's All Around The House, Forest Grove OR, 27 @5.0 Hot, yahoo email; Thayer & Son's, Stuart IA, 22+ self-reported, Warm; C.J.'s Outdoor, Greenfield WI, unverified). NM/ME/WA searches gave no Jobber/HCP leads with email. Skipped Jam Mechanical, Wick's, Gray's (no Jobber/HCP signal).
+- Totals: 819 prospects, 259 Hot, 655 w/ email, 172 audits, 48 touch-1 + 48 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.

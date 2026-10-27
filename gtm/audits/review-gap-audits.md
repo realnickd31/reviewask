@@ -3397,3 +3397,11 @@ To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate
 - Notes: Own 27 from their site's Google summary; confirm on Maps. One clean local comp (Dano's); Thumbtack 19 excluded.
 - Opener: You're at 27 Google reviews after starting Sweep Techs recently. Dano's has 81 in Rochester at the same 4.8, so your rating already matches the established sweep.
 - Sources: https://sweeptechs.com/reviews (own Google summary) | https://exa.ai/library/place/xrhbp65z7v8 | https://nextdoor.com/pages/sweep-techs-rochester-mn/
+
+## AN — 2026-10-27 (~4:58 AM ET)
+### Rapha Plumbing (Bertram, TX)
+- Own: 19 Google @5.0 (twupro). Housecall Pro booking.
+- Comps (local independents): Tanker's Plumbing & Septics, Marble Falls, 119 @4.9; Complete Care Plumbing Electric & AC, Marble Falls, 81 @4.9; TNT Plumbing Services, Bertram, 36 @4.8. Excluded SERVPRO (franchise).
+- Gap to top-3 avg 60; leader gap 100; ~10 reviews/mo; ~67 asks/mo [SPEC].
+- Opener: Your 19 Google reviews are all 5 stars. TNT Plumbing has 36 in Bertram at 4.8, and Tanker's has 119 over in Marble Falls. Your rating already beats TNT's; it's the count that's behind.
+- Sources: https://texas.twupro.com/bertram/rapha-plumbing/ | https://texas.twupro.com/bertram/tnt-plumbing-services-llc/ | https://exa.ai/library/place/278c5ts1r51 | https://www.contractorsranked.com/contractor/marble-falls-tx/tankers-plumbing-and-septics

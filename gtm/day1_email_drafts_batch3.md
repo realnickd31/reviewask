@@ -1,4 +1,4 @@
-# Day-1 email drafts, batch 3 (4)
+# Day-1 email drafts, batch 3 (5)
 > **DRAFT ONLY. Do not send until Nick provides (1) the sending inbox/domain, (2) a physical mailing address, and (3) an explicit OK for each send.** Nothing here has been sent, and no mailbox drafts were created.
 
 ---
@@ -132,3 +132,36 @@ Nick
 ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIBE LINK]
 ```
 - **Notes:** Greeting "Austin" from their own site/Nextdoor; confirm before sending. Own 27 from their site's Google summary; confirm on Maps. One clean local comp (Dano's); Thumbtack 19 excluded. Sources: https://sweeptechs.com/reviews (own Google summary) | https://exa.ai/library/place/xrhbp65z7v8 | https://nextdoor.com/pages/sweep-techs-rochester-mn/
+
+---
+## 48. Rapha Plumbing (Bertram, TX), week 1
+- **To:** raphaplumbing@gmail.com
+- **Subject A:** Rapha Plumbing + Google reviews
+- **Subject B:** 19 Google reviews in Bertram?
+- **Body (touch 1):**
+```
+Hi there,
+
+Saw Rapha Plumbing books through Housecall Pro. Your 19 Google reviews are all 5 stars. TNT Plumbing has 36 in Bertram at 4.8, and Tanker's has 119 over in Marble Falls. Your rating already beats TNT's; it's the count that's behind.
+
+I built ReviewAsk to do one thing for $39/mo: when a job closes in Housecall Pro, your customer gets a one-tap link to your Google review page, with one reminder on day 3. Email today; SMS is rolling out.
+
+Worth trying on your next 20 jobs? 7-day free trial, no contract.
+
+Nick
+
+ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIBE LINK]
+```
+- **Touch 2 (Day 3, reply in thread, Subject "Re: Rapha Plumbing + Google reviews"):**
+```
+Hi there,
+
+One more idea for Rapha Plumbing: most shops have a backlog of happy Bertram customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes. Text messages are rolling out.
+
+Setup is here if you want to look: https://getreviewask.com
+
+Nick
+
+ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIBE LINK]
+```
+- **Notes:** Owner name unknown, so the greeting is "there". Maps re-check: https://www.google.com/maps/search/?api=1&query=Rapha+Plumbing+Bertram+TX · Sources: https://texas.twupro.com/bertram/rapha-plumbing/ | https://texas.twupro.com/bertram/tnt-plumbing-services-llc/ | https://exa.ai/library/place/278c5ts1r51 | https://www.contractorsranked.com/contractor/marble-falls-tx/tankers-plumbing-and-septics

@@ -1906,3 +1906,6 @@ Left out: Mikes Lawn (4.1 rating), Call The Cavalry (same comps as Iggys), Trans
 - **JHansen Cleaning (Orem, UT)**, jhansenwindowcleaning@gmail.com. 14 reviews; leader gap 176; ~114 asks/mo [SPEC]. Draft #45 in day1_email_drafts_batch3.md.
 - **Junk Heist (Goodyear, AZ)**, Edgarcazares981@gmail.com. 55 reviews; leader gap 917; ~547 asks/mo [SPEC] (soft pitch). Draft #46 in day1_email_drafts_batch3.md.
 - **Sweep Techs (Rochester, MN)**, austinsweeptechs@gmail.com. 27 reviews; leader gap 54; ~60 asks/mo [SPEC]. Draft #47 in day1_email_drafts_batch3.md.
+
+## AN — Hot audit, 2026-10-27 (~4:58 AM ET)
+- **Rapha Plumbing (Bertram, TX)**, raphaplumbing@gmail.com. 19 reviews; leader gap 100; ~67 asks/mo [SPEC]. Draft #48 in day1_email_drafts_batch3.md.
