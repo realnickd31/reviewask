@@ -53,8 +53,27 @@ export async function sendEmail(to: string, m: { subject: string; html: string; 
   return { id: null, mode: "outbox" as const };
 }
 
-export async function sendSms(to: string, body: string) {
-  // Twilio not wired in MVP: stub to outbox.
-  appendOutbox({ type: "sms", to, body });
-  return { id: null, mode: "outbox" as const };
+/** Normalize to E.164. 10 digits => US +1; 11 digits starting with 1 => +1. Returns null if unusable. */
+export function toE164(raw: string): string | null {
+  const t = String(raw || "").trim();
+  const d = t.replace(/\D/g, "");
+  if (t.startsWith("+") && d.length >= 8 && d.length <= 15) return "+" + d;
+  if (d.length === 10) return "+1" + d;
+  if (d.length === 11 && d.startsWith("1")) return "+" + d;
+  return null;
+}
+
+export async function sendSms(to: string, body: string): Promise<{ id: string | null; mode: "twilio" | "outbox" | "suppressed" }> {
+  const e164 = toE164(to);
+  if (!e164) throw new Error(`Invalid phone number: ${to}`);
+  const { isPhoneSuppressed } = await import("./db");
+  if (isPhoneSuppressed(e164)) return { id: null, mode: "suppressed" };
+  const sid = process.env.TWILIO_ACCOUNT_SID, token = process.env.TWILIO_AUTH_TOKEN, from = process.env.TWILIO_FROM_NUMBER;
+  if (sid && token && from) {
+    const twilio = (await import("twilio")).default;
+    const msg = await twilio(sid, token).messages.create({ to: e164, from, body: `${body}\nReply STOP to opt out.` });
+    return { id: msg.sid, mode: "twilio" };
+  }
+  appendOutbox({ type: "sms", to: e164, body });
+  return { id: null, mode: "outbox" };
 }

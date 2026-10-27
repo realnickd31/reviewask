@@ -64,6 +64,10 @@ if (!g._db) {
     created_at TEXT NOT NULL DEFAULT (datetime('now'))
   )`);
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_supp_email ON suppressions(lower(email))");
+  db.exec(`CREATE TABLE IF NOT EXISTS sms_suppressions (
+    phone TEXT PRIMARY KEY,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )`);
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_api_token ON users(api_token)");
   db.exec("CREATE INDEX IF NOT EXISTS idx_rr_remind ON review_requests(remind_at, reminded_at)");
   g._db = db;
@@ -94,6 +98,9 @@ export function usedThisMonth(userId: number) {
 export const getUserByToken = (t: string) => db.prepare("SELECT * FROM users WHERE api_token=?").get(t) as User | undefined;
 
 export const isSuppressed = (email: string) => !!db.prepare("SELECT 1 FROM suppressions WHERE lower(email)=lower(?)").get(email);
+export const isPhoneSuppressed = (e164: string) => !!db.prepare("SELECT 1 FROM sms_suppressions WHERE phone=?").get(e164);
+export const suppressPhone = (e164: string) => { db.prepare("INSERT OR IGNORE INTO sms_suppressions (phone) VALUES (?)").run(e164); };
+export const unsuppressPhone = (e164: string) => { db.prepare("DELETE FROM sms_suppressions WHERE phone=?").run(e164); };
 export function suppressByToken(token: string): { email: string } | null {
   const r = db.prepare("SELECT customer_email, user_id FROM review_requests WHERE unsubscribe_token=?").get(token) as { customer_email: string | null; user_id: number } | undefined;
   if (!r?.customer_email) return null;
