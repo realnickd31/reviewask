@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Logo from "@/components/Logo";
 import Footer from "@/components/Footer";
 import Pricing, { Check } from "@/components/Pricing";
@@ -84,6 +85,7 @@ export default async function Home() {
       <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-3">{steps.map((s) => <div key={s.n} className="bg-white p-8">
         <span className="font-mono text-xs text-slate-400">{s.n}</span>
         <h3 className="mt-4 text-base font-semibold">{s.t}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{s.d}</p></div>)}</div>
+      <figure className="mt-12"><Image src="/screens/customer-email.png" alt="What your customer sees: a short email from your business with a Leave a review button" width={1600} height={1000} className="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 shadow-sm" /><figcaption className="mt-3 text-center text-sm text-slate-500">What your customer gets: one short note from your business and one tap to your Google review form.</figcaption></figure>
     </div></section>
 
     <section className="border-t border-slate-200 py-24"><div className="mx-auto max-w-6xl px-6">
@@ -126,6 +128,7 @@ export default async function Home() {
       <div><h2 className="text-2xl font-semibold">Start asking for reviews this week.</h2><p className="mt-2 text-white/70">7-day free trial · $39/month after · Cancel anytime · Questions? support@getreviewask.com</p></div>
       <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start your free trial</Link></div></section>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
-    <Footer />
+    {!user && <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 p-3 backdrop-blur sm:hidden"><Link href="/signup" className="btn-navy w-full py-3">Start 7-day free trial · $39/mo after</Link></div>}
+    <div className="pb-20 sm:pb-0"><Footer /></div>
   </main>;
 }

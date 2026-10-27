@@ -22,6 +22,6 @@ export default function Page() { return <Legal title="ReviewAsk vs. Jobber Marke
   <h2>Choose ReviewAsk if…</h2><p>Reviews are the thing you care about. You want every finished job to trigger a polite ask automatically, without paying for marketing tools you won&apos;t use. ReviewAsk sends the same request to every customer — no gating, no incentives — in line with Google&apos;s review policies.</p>
   <h2>How setup works</h2><p>Create an account, paste your Google review link, connect Jobber once, and turn on &ldquo;Ask after every job.&rdquo; Have past customers? Upload a spreadsheet to catch up on your backlog.</p>
   <p>More on using ReviewAsk with Jobber: <Link href="/for-jobber">ReviewAsk for Jobber</Link> and <Link href="/jobber-google-reviews">how to get more Google reviews from Jobber jobs</Link>.</p>
-  <p className="pt-4"><Link href="/signup" className="btn-navy px-5 py-3 no-underline">Start your 7-day free trial</Link></p>
+  <p className="pt-4"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
   <p className="text-sm text-slate-500">Pricing for Jobber&apos;s Marketing Suite is as listed by Jobber and may change; check Jobber for current details. ReviewAsk is not affiliated with Jobber. Questions? <a href="mailto:support@getreviewask.com" className="underline">support@getreviewask.com</a>.</p>
 </Legal>; }
