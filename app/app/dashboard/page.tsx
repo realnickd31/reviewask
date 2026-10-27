@@ -49,7 +49,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Paste recent customers from a spreadsheet to ask them too. <a href="#bulk" className="font-medium text-navy-900 underline underline-offset-4">Paste a spreadsheet</a></p></div></li>
       </ol></section>}
     <section className="grid gap-3 sm:grid-cols-3">
-      <Link href="/quick" className="rounded-lg border border-navy-900 bg-navy-900 p-5 text-white hover:opacity-95"><p className="text-lg font-semibold">Quick ask →</p><p className="mt-1 text-sm text-slate-200">Name + phone, tap Send. Built for techs on the phone.</p></Link>
+      <Link href="/quick" className="rounded-lg border border-navy-900 bg-navy-900 p-5 text-white hover:opacity-95"><p className="text-lg font-semibold">Quick ask →</p><p className="mt-1 text-sm text-slate-200">Name + email (or phone), tap Send. Built for techs on the go.</p></Link>
       <a href="#bulk" className="rounded-lg border border-slate-200 bg-white p-5 hover:border-navy-900"><p className="text-lg font-semibold text-navy-900">Paste a spreadsheet</p><p className="mt-1 text-sm text-slate-500">Copy rows from Excel or Sheets, paste, send.</p></a>
       <Link href="/settings#automatic" className="rounded-lg border border-slate-200 bg-white p-5 hover:border-navy-900"><p className="text-lg font-semibold text-navy-900">{autoLabel}</p><p className="mt-1 text-sm text-slate-500">{autoSub}</p></Link>
     </section>

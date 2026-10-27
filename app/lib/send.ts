@@ -35,13 +35,15 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
   const err = validate(i);
   if (err) return { ok: false, error: err, code: 400 };
   const biz = u.business_name!, url = u.review_url!;
-  const channels: string[] = []; let status = "sent"; let providerId: string | null = null; let mode = "";
+  const channels: string[] = []; let status = "sent"; let providerId: string | null = null; let mode = ""; let smsMode = "";
   const token = i.email ? crypto.randomBytes(24).toString("base64url") : null;
   const suppressed = !!i.email && isSuppressed(i.email);
   try {
     if (i.email && !suppressed) { const r = await sendEmail(i.email, buildReviewEmail(biz, i.name, url, unsubscribeUrl(token!))); providerId = r.id; mode = r.mode; channels.push("email"); }
-    if (i.phone) { const r = await sendSms(i.phone, `Hi ${i.name.split(" ")[0]}, thanks for choosing ${biz}! Mind leaving a quick review? ${url}`); mode ||= r.mode; channels.push("sms"); }
+    if (i.phone) { const r = await sendSms(i.phone, `Hi ${i.name.split(" ")[0]}, thanks for choosing ${biz}! Mind leaving a quick review? ${url}`); smsMode = r.mode; mode ||= r.mode; channels.push("sms"); }
   } catch (e) { status = "failed"; console.error("send failed", e); }
+  // Texting is rolling out. In production without an SMS provider, a phone-only ask isn't delivered, so mark it queued instead of sent.
+  if (status === "sent" && smsMode === "outbox" && !channels.includes("email") && process.env.RESEND_API_KEY) { status = "queued"; mode = "sms_pending"; }
   if (suppressed && !i.phone && status === "sent") status = "suppressed";
   const r = db.prepare(`INSERT INTO review_requests (user_id, customer_name, customer_email, customer_phone, channel, status, provider_id, source, remind_at, unsubscribe_token)
     VALUES (?,?,?,?,?,?,?,?, ${status === "sent" ? "datetime('now','+3 days')" : "NULL"}, ?)`)
