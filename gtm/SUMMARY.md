@@ -219,3 +219,4 @@
 - Commit e24488e, deploy dep-dbg63ql9el5s73c12s6g; all new URLs 200; sitemap has 7 guide URLs.
 - GTM: gtm/PAID_DISCOVERY_OPTIONS.md, 5 sources with effort notes. No purchases, no prices quoted.
 - No audits or discovery. Totals unchanged: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49+49 drafts.
+- ~4:45 AM ET: SMS-honesty fix deployed (c7f20df); morning brief rewritten; QA 19/19 return 200. Nothing sent.

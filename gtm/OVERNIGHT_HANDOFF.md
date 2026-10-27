@@ -1,28 +1,53 @@
-# ReviewAsk: morning brief (updated ~5:18 AM ET, Tue Oct 27 2026)
+# ReviewAsk: 60-second morning brief (updated ~4:45 AM ET, Tue Oct 27 2026)
 
-**Nothing has been emailed, posted, DMed or submitted.** Everything below is a draft waiting for your approval.
+**Nothing has been emailed, posted, DMed, submitted or bought.** Every outreach item is a draft waiting for your OK.
 
 ## Metrics
 | | |
 |---|---|
-| Prospects (`gtm/prospects_overnight.csv`) | 819 (259 Hot / 655 with email) |
+| Prospects (`gtm/prospects_overnight.csv`) | 819 (259 Hot, 655 with email) |
 | Review-gap audits (`gtm/audits/`) | 173 |
-| Touch-1 email drafts | 49 total: `day1_email_drafts.md` #1–24, `day1_email_drafts_batch2.md` #25–43, `day1_email_drafts_batch3.md` #44–49 |
-| Touch-2 drafts (Day 3, same thread) | 49: `day1_email_drafts_touch2.md`, `day1_email_drafts_batch2_touch2.md`, and inline in batch3 |
-| Community posts (`gtm/community_posts_ready.md`) | Refreshed ~4:33 AM ET; you post them yourself |
-| Live SEO/trade pages | /guides index + 6 trade guides: lawn care, cleaning, pressure washing, HVAC, pool service, pest control (all 200) |
+| Touch-1 drafts | 49: `day1_email_drafts.md` #1–24 · `day1_email_drafts_batch2.md` #25–43 · `day1_email_drafts_batch3.md` #44–49 |
+| Touch-2 drafts (Day 3, same thread) | 49: `day1_email_drafts_touch2.md` · `day1_email_drafts_batch2_touch2.md` · inline in batch3 |
+| Community posts | `gtm/community_posts_ready.md` (refreshed ~4:33 AM ET; you post them yourself) |
+| SEO pages live | `/guides` + 6 trade guides (lawn care, cleaning, pressure washing, HVAC, pool service, pest control) |
 
-## Approvals needed from Nick (in order)
-1. **Sending inbox**: the domain or mailbox to send from (warm it up; max 30 sends a day).
-2. **Physical mailing address** for the footer ([PHYSICAL ADDRESS]) and an **unsubscribe mechanism** ([UNSUBSCRIBE LINK]).
-3. **OK for each send.** The morning of sending, re-check each lead's count on Maps (every draft has a Maps link in its notes) and confirm greetings marked "confirm" (Ben, Jaron, Edgar, Austin, Brandon).
+## Approvals needed (in order)
+1. **Sending inbox**: the domain or mailbox to send from. Max 30 sends a day.
+2. **Physical mailing address** for the footer ([PHYSICAL ADDRESS]) and an **unsubscribe link** ([UNSUBSCRIBE LINK]).
+3. **OK for each send**, after a same-morning Maps re-check (every draft's notes have its Maps link).
 4. **Community posts**: post them yourself, after reading each group's promotion rules.
 
-## Blockers and flags
-- Discovery is nearly exhausted; recent batches found 3–8 new leads each. Options to refill: `gtm/PAID_DISCOVERY_OPTIONS.md` (nothing bought).
-- Counts to verify on Maps: Sweep Techs (own-site 27), Brandon's (27 vs 33), Junk Heist (55), Thayer & Son's (self-reported).
-- Keep flagged/held: Task Tacklers, Stan's, Washburn Bros, 901 cleaning, Mclaughlin's, PoolFix, Honey Do, Battle Buddies, Grow Roots (2-star), JMAS.
-- Render auto-deploy doesn't fire on push. Deploy with the Render API `trigger_deploy` on service srv-dbfbc94s728c73epr4bg.
+## Top 10 to send first (Southeast, week 1, `day1_email_drafts.md`; touch 2 in `day1_email_drafts_touch2.md`)
+| Draft # | Business | City | Reviews → leader | Check first |
+|---|---|---|---|---|
+| 1 | Daystar Exterior Cleaning | Bradenton, FL | 19 → 153 | — |
+| 3 | TN Lawnsmiths, LLC | Murfreesboro, TN | 16 → 159 | Mirror count |
+| 4 | Bros Mow Landscape, LLC | Brentwood, TN | 17 → 67 | Mirror count |
+| 5 | Steve's Scapes | Knoxville, TN | 5 → 48 | — |
+| 10 | D&D Lawn Care of Cane Bay | Summerville, SC | 13 → 59 | — |
+| 11 | Carolina Lawn Services | Rock Hill, SC | 10 → 134 | — |
+| 13 | AmeriGro Landscape Services | Charleston, SC | 8 → 75 | Comp counts from RateXYZ |
+| 14 | Green Thumbs Landscape | Prosperity, SC | 8 → 150 | — |
+| 15 | Simply SoftWash Exterior Cleaning | Greenville, SC | 9 → 291 | — |
+| 2 | Thunder Services LLC | Orlando, FL | 17 → 239 | Count from Exa only |
+
+## Maps re-check warnings
+- Counts from a single or self-reported source: Sweep Techs #47, Brandon's #49 (27 vs 33), Junk Heist #46, Thunder #2, Grasshopper #8 (3 reviews), Top Tier #12.
+- Greetings to confirm: Ben #44, Jaron #45, Edgar #46 (guessed from the email address), Austin #47, Brandon #49.
+- On Hold: Task Tacklers, Stan's, Washburn Bros, 901 cleaning, Mclaughlin's, PoolFix, Honey Do, Battle Buddies, Grow Roots (2-star), JMAS.
+
+## Status (as recorded overnight, not re-checked this morning)
+- **Twilio toll-free (877) 629-9694**: verification resubmitted ~12:49 AM ET as Sole Proprietor (Nicholas DAntonio DBA ReviewAsk); status In Progress; account still Trial. Until it's approved, phone-only asks are marked **Queued**, not Sent.
+- **Jobber Marketplace app**: In Review since ~11:46 PM ET Oct 26. Next, Jobber emails to schedule a demo. Reviewer test account: jobber-review@getreviewask.com (in the vault).
+- **Discovery**: the free sources are used up. Options are in `gtm/PAID_DISCOVERY_OPTIONS.md` (nothing bought).
+- **Deploys**: Render auto-deploy doesn't fire on push. Use `trigger_deploy` on srv-dbfbc94s728c73epr4bg.
+
+## Live URL checklist (all 200 at ~4:45 AM ET; /quick and /dashboard redirect 307 to /login)
+`/` · `/pricing` · `/signup` · `/login` (and `/dashboard` sends you to it) · `/sms` · `/for-jobber` · `/for-housecall-pro` · `/guides` · `/tools/review-gap` · `/tools/review-link` · `/templates/review-request` · `/reviews-for-lawn-care` · `/reviews-for-cleaning` · `/reviews-for-pressure-washing` · `/reviews-for-hvac` · `/reviews-for-pool-service` · `/reviews-for-pest-control`
+
+---
+# Overnight log (oldest first)
 
 ## Live site QA (~3:27 AM ET): all 15 URLs return 200
 https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, `/tools/review-gap`, `/birdeye-alternative`, `/podium-alternative`, `/nicejob-alternative`, `/compare/jobber-marketing-suite`, `/sms`, `/terms`, `/privacy`, `/signup`, `/login`, `/sitemap.xml`
@@ -135,3 +160,8 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Commit e24488e, deploy dep-dbg63ql9el5s73c12s6g; all new URLs 200; sitemap has 7 guide URLs.
 - GTM: gtm/PAID_DISCOVERY_OPTIONS.md, 5 sources with effort notes. No purchases, no prices quoted.
 - No audits or discovery. Totals unchanged: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49+49 drafts.
+
+## Batch ~4:45 AM ET
+- Product (c7f20df, dep-dbg65oijnfac73fd3ifg, live 4:39 AM ET): while Twilio isn't sending, phone-only asks are marked Queued (sms_pending) instead of Sent, with an honest message in Quick ask and Send. Quick ask is now email-first: "Email sends right away. Text messages are rolling out."
+- Rewrote the brief at the top of this file. Twilio and Jobber statuses come from the overnight records.
+- QA: 19 URLs return 200. /quick and /dashboard redirect 307 to /login. Nothing sent.
