@@ -248,3 +248,90 @@ Lacking public email (14): Loxicom, North Atlanta Lawn and Hustle Services, The 
 - Gap: 98 reviews (5.0) vs leader Handyman Connection of Winter Park 255 - gap 157. (audited 2026-10-27)
 - Opener: Mike, your site still says 60+ reviews, but Google shows about 98 at 5.0. Handyman Connection has 255 at 4.6, so you're catching them.
 - ⚠ Re-check Google Maps (count, rating, competitors) before send: https://www.google.com/maps/search/?api=1&query=Meticulous+Mike's+Handyman+Services+Winter+Park+FL
+
+## New Hot (≥85) with public email — expansion pass, Oct 27 (12)
+All Jobber client-hub link confirmed on their site; review counts are directory estimates (not audited). Draft only — nothing sent.
+
+### N1. Chrispy Clean Bins & Power Washing Services — Rumford, RI (score 90)
+- Email: chrispycleanbins@gmail.com
+- Contact: Chris Aponte (Owner)
+- Reviews: 40 @ 5 (directory estimate, not audited)
+- Opener: Saw Chrispy Clean Bins & Power Washing Services runs on Jobber — and has about 40 Google reviews. Most cleaning services shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Chrispy+Clean+Bins+%26+Power+Washing+Services+Rumford+RI
+
+### N2. Cleanadora — Cambridge, MA (score 90)
+- Email: contact@cleanadora.com
+- Contact: Annis Gonzalez (Owner)
+- Reviews: 45 @ 5 (directory estimate, not audited)
+- Opener: Saw Cleanadora runs on Jobber — and has about 45 Google reviews. Most cleaning services shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Cleanadora+Cambridge+MA
+
+### N3. Electric Force GT — South San Francisco, CA (score 90)
+- Email: info@electricforcegt.com
+- Contact: Rudy Ottoniel (Electrician)
+- Reviews: 40 @ 5 (directory estimate, not audited)
+- Opener: Saw Electric Force GT runs on Jobber — and has about 40 Google reviews. Most electrical shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Electric+Force+GT+South+San+Francisco+CA
+
+### N4. Jessie Clean — Indianapolis, IN (score 90)
+- Email: jessiecleanservices@gmail.com
+- Contact: —
+- Reviews: 42 @ 5 (directory estimate, not audited)
+- Opener: Saw Jessie Clean runs on Jobber — and has about 42 Google reviews. Most cleaning services shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Jessie+Clean+Indianapolis+IN
+
+### N5. MaidMaxx — Visalia, CA (score 90)
+- Email: info@maidmaxx.com
+- Contact: —
+- Reviews: 44 @ 5 (directory estimate, not audited)
+- Opener: Saw MaidMaxx runs on Jobber — and has about 44 Google reviews. Most cleaning services shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=MaidMaxx+Visalia+CA
+
+### N6. Battle Buddies — Vernon, CT (score 90)
+- Email: frose14@gmail.com
+- Contact: Patrick Brothers (Owner)
+- Reviews: 42 @ 4.9 (directory estimate, not audited)
+- Opener: Saw Battle Buddies runs on Jobber — and has about 42 Google reviews. Most landscaping shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Battle+Buddies+Vernon+CT
+
+### N7. Ohan Painting — Holbrook, MA (score 90)
+- Email: mike@ohanpainting.com; ohanpainting@gmail.com
+- Contact: Mike Ohan (Owner)
+- Reviews: 41 @ 5 (directory estimate, not audited)
+- Opener: Saw Ohan Painting runs on Jobber — and has about 41 Google reviews. Most painting shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Ohan+Painting+Holbrook+MA
+
+### N8. Refresh Outdoor Services — Wentzville, MO (score 90)
+- Email: edward.roberts@refreshmyoutdoor.com
+- Contact: Edwards Roberts (Owner)
+- Reviews: 42 @ 5 (directory estimate, not audited)
+- Opener: Saw Refresh Outdoor Services runs on Jobber — and has about 42 Google reviews. Most lawn care shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Refresh+Outdoor+Services+Wentzville+MO
+
+### N9. Sierra Tree Company — Rohnert Park, CA (score 90)
+- Email: admin@sierratreecompany.com; emailadmin@sierratreecompany.com
+- Contact: Arnoldo Gonzalez (Business Owner)
+- Reviews: 48 @ 4.8 (directory estimate, not audited)
+- Opener: Saw Sierra Tree Company runs on Jobber — and has about 48 Google reviews. Most tree services shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Sierra+Tree+Company+Rohnert+Park+CA
+
+### N10. Addicott Roofing — Edmonds, WA (score 85)
+- Email: spencer@addicottroofing.com
+- Contact: Rod Addicott (Owner)
+- Reviews: 41 @ 4.5 (directory estimate, not audited)
+- Opener: Saw Addicott Roofing runs on Jobber — and has about 41 Google reviews. Most roofing shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Addicott+Roofing+Edmonds+WA
+
+### N11. TLC: Making It Easy — Marion, IN (score 85)
+- Email: info@tlceasy.com
+- Contact: Edward Ditmyer (President & Founder); Logan Ditmyer (President)
+- Reviews: 41 @ 4.9 (directory estimate, not audited)
+- Opener: Saw TLC: Making It Easy runs on Jobber — and has about 41 Google reviews. Most pressure washing shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=TLC%3A+Making+It+Easy+Marion+IN
+
+### N12. Poblano Cleaning & Restoration — Auburn, WA (score 85)
+- Email: info@xperiencepoblano.com
+- Contact: Adrián Hernández (Owner); Oscar Castillo (President)
+- Reviews: 41 @ 4.3 (directory estimate, not audited)
+- Opener: Saw Poblano Cleaning & Restoration runs on Jobber — and has about 41 Google reviews. Most home remodeling shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Poblano+Cleaning+%26+Restoration+Auburn+WA
