@@ -1556,3 +1556,22 @@ Every lead here is an audited, Southeast, Hot lead with a public email. For each
 | Genesis Lawns LLC | Melbourne, FL | 86 | neil@genesislawns.com | Same Melbourne market as Green Space, so send in a later week; 75 reviews means the gap pitch is weaker |
 
 Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of the queue.
+
+
+## Y. Audited 2026-10-27 ~3:35 AM ET (4 SE Hot)
+
+### Y. Carteret Lawn & Landscape (Morehead City, NC)
+- Opener: You're #2 of 23 landscapers in Morehead City at 32 Google reviews (4.7). ProGreen Turf in Newport is #1 with 129, and nobody else in town has more than about 20.
+- Gap to top-2 avg 51; leader gap 97. Notes: The CSV had 45 (directory figure); ContractorsRanked (Oct 22) shows 32 Google reviews, and I used 32. Seventy West's 36 is a Birdeye figure and it's a supply yard, so it's a weak comparison.
+
+### Y. Eco Home Solutions (Huntersville, NC)
+- Opener: You're at 58 Google reviews (4.9), the highest rating of any plumber in Huntersville, but All American has 161 and Roto-Rooter has 754.
+- Gap to top-3 avg 420; leader gap 696. Notes: Roto-Rooter is a franchise and CGC is a water-treatment company. North Mecklenburg Plumbing has 501 per Birdeye (330 per PlumberDirectories); counts conflict, so verify. The realistic target is All American (161).
+
+### Y. Aviles Brothers’ Landscaping, LLC (Decatur, AL)
+- Opener: You're at 46 Google reviews in Decatur. Tucker Lawn has 98 at 5.0, and the top three (Forrest's, Lawn Doctor, Superior) are all at 180+.
+- Gap to top-3 avg 142; leader gap 150. Notes: Rating not captured. Lawn Doctor is a franchise. One Stop Landscaping (178, ProsGrade) is another rival. Tucker (98, 5.0) is the nearer target.
+
+### Y. 901 cleaning solutions (Lakeland, TN)
+- Opener: You're at about 70 reviews (5.0) in Lakeland. The Window Guy, the only other cleaning company with a big local profile, has 699.
+- Gap to top-2 avg 305; leader gap 629. Notes: WEAK: their 70 comes from Nextdoor, not Google, so check Maps before using the number. The Window Guy does exterior and window cleaning, not house cleaning. Kennedy Lawns (Birdeye 51) isn't a cleaner. Consider dropping the comparison and sending a generic opener.

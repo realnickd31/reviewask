@@ -1891,3 +1891,85 @@ To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rat
 **Sources:** https://snowlawn.net/fl/north-fort-myers/Los (30 Google) | https://north-fort-myers-fl.treeopsusa.com/tree-service | https://loshernandezlandscapingllc.com/
 
 **Notes:** WEAK/CONFLICTING own count (23–30). Competitor counts are from TreeOps (Google-ranked).
+
+
+## Carteret Lawn & Landscape (Morehead City, NC)
+```
+Google Review Gap — Carteret Lawn & Landscape (Morehead City, "landscaping Morehead City NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         32  4.7
+#1 ProGreen Turf & Landscape (Newport)  129  4.8
+#2 Seventy West Landscape Supply  36  4.5
+
+Gap to top-2 average: 51 reviews (gap to leader: 97)
+To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're #2 of 23 landscapers in Morehead City at 32 Google reviews (4.7). ProGreen Turf in Newport is #1 with 129, and nobody else in town has more than about 20.
+
+**Sources:** https://www.contractorsranked.com/contractor/morehead-city-nc/carteret-lawn-and-landscape | https://www.contractorsranked.com/contractor/morehead-city-nc/progreen-turf-and-landscape | https://reviews.birdeye.com/d/landscaping/morehead-city-nc/
+
+**Notes:** The CSV had 45 (directory figure); ContractorsRanked (Oct 22) shows 32 Google reviews, and I used 32. Seventy West's 36 is a Birdeye figure and it's a supply yard, so it's a weak comparison.
+
+
+## Eco Home Solutions (Huntersville, NC)
+```
+Google Review Gap — Eco Home Solutions (Huntersville, "plumber Huntersville NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         58  4.9
+#1 Roto-Rooter Plumbing & Water Cleanup  754  4.8
+#2 CGC Home Services  518  4.8
+#3 All American Plumbing Inc.  161  4.7
+
+Gap to top-3 average: 420 reviews (gap to leader: 696)
+To close it in 6 months: ~70 new reviews/mo ≈ 467 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 58 Google reviews (4.9), the highest rating of any plumber in Huntersville, but All American has 161 and Roto-Rooter has 754.
+
+**Sources:** https://exa.ai/library/places?q=3dc02e77e94ee74a | https://plumberdirectories.com/north-carolina/huntersville
+
+**Notes:** Roto-Rooter is a franchise and CGC is a water-treatment company. North Mecklenburg Plumbing has 501 per Birdeye (330 per PlumberDirectories); counts conflict, so verify. The realistic target is All American (161).
+
+
+## Aviles Brothers’ Landscaping, LLC (Decatur, AL)
+```
+Google Review Gap — Aviles Brothers’ Landscaping, LLC (Decatur, "lawn care landscaping Decatur AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         46  n/a
+#1 Forrest’s Lawn and Landscaping  196  4.6
+#2 Lawn Doctor of Madison-Decatur-South Huntsville  185  4.7
+#3 Superior Services  182  4.5
+
+Gap to top-3 average: 142 reviews (gap to leader: 150)
+To close it in 6 months: ~24 new reviews/mo ≈ 160 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 46 Google reviews in Decatur. Tucker Lawn has 98 at 5.0, and the top three (Forrest's, Lawn Doctor, Superior) are all at 180+.
+
+**Sources:** https://avilesbrotherslandscapingllc.jobbersites.com/ (own Google widget) | https://exa.ai/library/places?q=b01f665f72df65d6 | https://prosgrade.com/landscapers/decatur-al/forrests-lawn-and-landscaping
+
+**Notes:** Rating not captured. Lawn Doctor is a franchise. One Stop Landscaping (178, ProsGrade) is another rival. Tucker (98, 5.0) is the nearer target.
+
+
+## 901 cleaning solutions (Lakeland, TN)
+```
+Google Review Gap — 901 cleaning solutions (Lakeland, "cleaning Lakeland TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         70  5.0
+#1 The Window Guy Window Cleaning and Pressure Washing  699  5.0
+#2 Kennedy Lawns LLC  51  4.8
+
+Gap to top-2 average: 305 reviews (gap to leader: 629)
+To close it in 6 months: ~51 new reviews/mo ≈ 340 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 70 reviews (5.0) in Lakeland. The Window Guy, the only other cleaning company with a big local profile, has 699.
+
+**Sources:** https://nextdoor.com/pages/901-commerical-and-residential-cl | https://exa.ai/library/places?q=148941ff8112239d | https://reviews.birdeye.com/d/home-services/lakeland-tn/
+
+**Notes:** WEAK: their 70 comes from Nextdoor, not Google, so check Maps before using the number. The Window Guy does exterior and window cleaning, not house cleaning. Kennedy Lawns (Birdeye 51) isn't a cleaner. Consider dropping the comparison and sending a generic opener.
