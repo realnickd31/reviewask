@@ -138,3 +138,7 @@
 ## Update 2026-10-27 ~3:29 AM ET
 - **`gtm/day1_email_drafts_touch2.md`:** 24 touch-2 follow-ups (Sequence A, Day 3, sent as a reply in the touch-1 thread), DRAFT ONLY. I dropped the template's unverified "beats a month of asking" line. Placeholders are kept.
 - **6 audits:** Georgia Softwash (GA), Bernard's Pro Lawn Care (AL), Eggea Cleaning (GA), PoolFix (FL, already #1, conflicting count), Gilileo's (FL), Mclaughlin's (NC, weak competitor sources). 106 audits total. Nothing sent.
+
+## Update 2026-10-27 ~3:33 AM ET
+- Spreadsheet/CSV bulk upload verified end-to-end in code (UI, validation, route, quota). Touch-2 copy tightened to "email" with a "paste or upload" wording.
+- Homepage hero polish: Jobber & Housecall Pro + $39 in the eyebrow, and a secondary link to the review-gap calculator. Nothing sent.

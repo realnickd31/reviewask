@@ -1,4 +1,4 @@
-# ReviewAsk: morning brief (updated ~3:29 AM ET, Tue Oct 27 2026)
+# ReviewAsk: morning brief (updated ~3:33 AM ET, Tue Oct 27 2026)
 
 **Nothing has been emailed, posted, DMed or submitted.** Everything below is a draft waiting for your approval.
 
@@ -26,3 +26,7 @@
 ## Live site QA (~3:27 AM ET): all 15 URLs return 200
 https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, `/tools/review-gap`, `/birdeye-alternative`, `/podium-alternative`, `/nicejob-alternative`, `/compare/jobber-marketing-suite`, `/sms`, `/terms`, `/privacy`, `/signup`, `/login`, `/sitemap.xml`
 - Pricing page shows $39/mo or $390/yr, a 7-day trial, and "card required at checkout". The SMS page says SMS is "rolling out". No copy bugs found.
+
+## ~3:33 AM ET updates
+- **Spreadsheet upload verified in code:** the dashboard BulkUpload component (paste from Excel/Sheets or CSV) posts to `/api/requests/bulk`. Rows are validated and the 200-a-month quota applies. The touch-2 copy now says "email them", because phone-only rows need SMS, which is still rolling out.
+- **Homepage hero:** the eyebrow now reads "For Jobber & Housecall Pro businesses · $39/mo", and there's a secondary link under the CTAs to the free /tools/review-gap calculator (experiment #1 plus a light version of #3 from conversion-experiments.md). Deployed.

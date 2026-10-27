@@ -3,7 +3,7 @@
 
 Template: Sequence A, Touch 2 (gtm/outreach-sequences.md). Send on **Day 3, as a reply in the touch-1 thread** (subject "Re: <touch-1 subject>"), and only if there was no reply and no opt-out. One link. I removed the template's unverified line "usually beats a month of asking by hand". The only personalization is the city and category; no new numbers.
 
-Product facts: bulk upload of past customers and Quick Ask are listed as product features in outreach-sequences.md. Confirm both work in the app before sending.
+Product facts: **spreadsheet upload verified in code** (2026-10-27 ~3:32 AM ET). The dashboard has a BulkUpload component: you can paste rows from Excel/Sheets or upload a CSV/TSV, header detection is flexible, rows are validated (a name plus an email or phone), and they post to `/api/requests/bulk` (up to 1,000 rows, subject to the 200-a-month quota). Rows with only a phone number depend on SMS, which is still rolling out, so the copy says 'email list'. A backlog bigger than 200 goes out over more than one month.
 
 ---
 ## 1. Daystar Exterior Cleaning (Bradenton, FL), week 1, touch 2 (Day 3)
@@ -13,7 +13,7 @@ Product facts: bulk upload of past customers and Quick Ask are listed as product
 ```
 Hi there,
 
-One more idea for Daystar Exterior Cleaning: most shops have a backlog of happy Bradenton customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Daystar Exterior Cleaning: most shops have a backlog of happy Bradenton customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -31,7 +31,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Thunder Services LLC: most shops have a backlog of happy Orlando customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Thunder Services LLC: most shops have a backlog of happy Orlando customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -49,7 +49,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for TN Lawnsmiths, LLC: most shops have a backlog of happy Murfreesboro customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for TN Lawnsmiths, LLC: most shops have a backlog of happy Murfreesboro customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -67,7 +67,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi Braden,
 
-One more idea for Bros Mow Landscape, LLC: most shops have a backlog of happy Brentwood customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Bros Mow Landscape, LLC: most shops have a backlog of happy Brentwood customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -85,7 +85,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Steve's Scapes: most shops have a backlog of happy Knoxville customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Steve's Scapes: most shops have a backlog of happy Knoxville customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -103,7 +103,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Zack Of All Trades: most shops have a backlog of happy Shelbyville customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Zack Of All Trades: most shops have a backlog of happy Shelbyville customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -121,7 +121,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Cleaning Services in South Florida: most shops have a backlog of happy West Palm Beach customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Cleaning Services in South Florida: most shops have a backlog of happy West Palm Beach customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -139,7 +139,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Grasshopper Home: most shops have a backlog of happy Raleigh customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Grasshopper Home: most shops have a backlog of happy Raleigh customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -157,7 +157,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for On Target Pressure Washing LLC: most shops have a backlog of happy Summerville customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for On Target Pressure Washing LLC: most shops have a backlog of happy Summerville customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -175,7 +175,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for D&D Lawn Care of Cane Bay, LLC: most shops have a backlog of happy Summerville customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for D&D Lawn Care of Cane Bay, LLC: most shops have a backlog of happy Summerville customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -193,7 +193,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Carolina Lawn Services: most shops have a backlog of happy Rock Hill customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Carolina Lawn Services: most shops have a backlog of happy Rock Hill customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -211,7 +211,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Top Tier Lawn Care & Landscaping: most shops have a backlog of happy  customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Top Tier Lawn Care & Landscaping: most shops have a backlog of happy  customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -229,7 +229,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for AmeriGro Landscape Services: most shops have a backlog of happy Charleston customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for AmeriGro Landscape Services: most shops have a backlog of happy Charleston customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -247,7 +247,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Green Thumbs Landscape Consulting and Services: most shops have a backlog of happy Prosperity customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Green Thumbs Landscape Consulting and Services: most shops have a backlog of happy Prosperity customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -265,7 +265,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Simply SoftWash Exterior Cleaning, LLC: most shops have a backlog of happy Greenville customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Simply SoftWash Exterior Cleaning, LLC: most shops have a backlog of happy Greenville customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -283,7 +283,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Danner Exterior Services: most shops have a backlog of happy Greenacres customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Danner Exterior Services: most shops have a backlog of happy Greenacres customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -301,7 +301,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi Brian,
 
-One more idea for Magic City Soft Wash: most shops have a backlog of happy Birmingham customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Magic City Soft Wash: most shops have a backlog of happy Birmingham customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -319,7 +319,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Harmony Cleaning ATL: most shops have a backlog of happy Atlanta customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Harmony Cleaning ATL: most shops have a backlog of happy Atlanta customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -337,7 +337,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Cape Fear Lawn Masters: most shops have a backlog of happy Wilmington customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Cape Fear Lawn Masters: most shops have a backlog of happy Wilmington customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -355,7 +355,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for TC Lawn Manicure, LLC: most shops have a backlog of happy Beaufort customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for TC Lawn Manicure, LLC: most shops have a backlog of happy Beaufort customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -373,7 +373,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Grindstone Trees and Landscaping: most shops have a backlog of happy Boone customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Grindstone Trees and Landscaping: most shops have a backlog of happy Boone customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -391,7 +391,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Nancy’s General Cleaning LLC: most shops have a backlog of happy Durham customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Nancy’s General Cleaning LLC: most shops have a backlog of happy Durham customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -409,7 +409,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Knight and Day Pressure Washing: most shops have a backlog of happy Fort Myers customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Knight and Day Pressure Washing: most shops have a backlog of happy Fort Myers customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
@@ -427,7 +427,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-One more idea for Solar Pro Wash: most shops have a backlog of happy Moncks Corner customers who were never asked for a review. ReviewAsk lets you upload last season's customer list (a spreadsheet) and ask them all once, then it asks automatically each time a job closes in Jobber.
+One more idea for Solar Pro Wash: most shops have a backlog of happy Moncks Corner customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber.
 
 Setup is here if you want to look: https://getreviewask.com
 
