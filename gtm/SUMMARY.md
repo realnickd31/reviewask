@@ -146,3 +146,7 @@
 ## Update 2026-10-27 ~3:37 AM ET
 - Pricing page: dated comparison table (Marketing Suite / NiceJob / Podium vs $39), deployed and verified 200. The HCP/Jobber review guides and the Marketing Suite alias were already live.
 - 7 audits: Rise n' Shine (NC), Atlanta Best Handyman (GA), Byrd's (FL), The PG Handyman (FL), Sarasota Lawn Care (FL), 615 Lawn (TN), Macon's (SC). 113 total. Nothing sent.
+
+## Update 2026-10-27 ~3:42 AM ET
+- Shipped /templates/review-request (10 SMS/email templates, no email gate), added to footer and sitemap, deployed and verified 200.
+- 8 audits: Willow Creek (TN), J & K's (GA), THE ART OF LAWN CARE (GA), Lawn Barber (AL), Southeast Mobile Wash (AL), Sunrise Air (FL), Applewood (SC), Ez Projects (FL). 121 total. Nothing sent.

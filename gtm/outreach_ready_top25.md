@@ -1633,3 +1633,38 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AA. Macon’s Lawn and Landscape (Columbia, SC)
 - Opener: You're at 26 Google reviews in Columbia. Southern Vistas has 45, which is within reach this season, and Sparta Lawn Care leads with 660.
 - Gap to top-2 avg 327; leader gap 634; ~367 asks/mo [SPEC]. Notes: I excluded Augusta Lawn Care (franchise) and LawnStarter (marketplace). Sparta's 660 comes from a ChamberofCommerce listing, a weaker source; the near target is Southern Vistas (45).
+
+
+## AB. Audited 2026-10-27 ~3:40 AM ET (8 SE Hot)
+
+### AB. Willow Creek Landscape Maintenance LLC (Murfreesboro, TN)
+- Opener: Your 22 Google reviews are all 5 stars. In Murfreesboro, Green Path has 26, Premier Turf 57 and Primm's 159, so you're one good season away from passing two of them.
+- Gap to top-3 average 59; leader gap 137; ~67 asks/mo [SPEC]. Notes: Goat Turf (288) is left out because it's an artificial-turf installer, and Lawn Doctor because it's a franchise. Premier Turf shows 57 on Exa vs 70 on Birdeye; I used 57.
+
+### AB. J & K's Precision Lawn Care (Warner Robins, GA)
+- Opener: You're at 22 Google reviews (4.6) in Warner Robins. Zacheries has 146 and Lilys Landscaping 196, both local shops that ask consistently.
+- Gap to top-3 average 116; leader gap 174; ~134 asks/mo [SPEC]. Notes: Weed Man is excluded (franchise). Same market as THE ART OF LAWN CARE, so don't send both the same week with the same comparison.
+
+### AB. THE ART OF LAWN CARE LLC (Warner Robins, GA)
+- Opener: You're at 18 Google reviews (4.8) in Warner Robins. A.P. Lawn Care has 37, Zacheries 146 and Lilys 196.
+- Gap to top-3 average 120; leader gap 178; ~134 asks/mo [SPEC]. Notes: Weed Man is excluded (franchise). Same comparison set as J & K's; stagger the sends.
+
+### AB. Lawn Barber (Foley, AL)
+- Opener: Your 17 Google reviews are all 5 stars. In Foley, Blue Heron has 59 (at 4.3) and DC Lawn has 73, so your rating already beats both.
+- Gap to top-2 average 49; leader gap 56; ~60 asks/mo [SPEC]. Notes: I excluded Dutchman's (hardware store), Pink Star (pest control) and Woerner/Riebeling (sod farms).
+
+### AB. Southeast Mobile Wash LLC (Montgomery, AL)
+- Opener: Your 16 Google reviews are all 5 stars. In Montgomery, Hoffs Exterior Cleaning has 119 and Clear Moment 91.
+- Gap to top-3 average 78; leader gap 103; ~87 asks/mo [SPEC]. Notes: I excluded Carlos (268, Wetumpka) and Clash (190, Alexander City) because they're outside Montgomery, and car washes.
+
+### AB. Sunrise Air Services (Lakeland, FL)
+- Opener: Your 18 Google reviews are all 5 stars. Lakeland HVAC is crowded, though: Pro Air has 465 at 5.0, and Lakeland Air Conditioning has 1,369.
+- Gap to top-3 average 757; leader gap 1351; ~847 asks/mo [SPEC]. Notes: I excluded One Hour (franchise) and Frank Gay (multi-region). Springer Bros' count conflicts (644 vs 1,559), so I left it out. The gap is very large; pitch saving time rather than catching up.
+
+### AB. Applewood Landscape Construction (Bluffton, SC)
+- Opener: Your 12 Google reviews are all 5 stars. Prestige Landscaping in Bluffton has 31, which is within reach this season.
+- Gap to next competitor 19; leader gap 19; ~27 asks/mo [SPEC]. Notes: Southern Crab (182) is excluded because it does stump grinding only. Only one comparable competitor was found.
+
+### AB. Ez Projects Done Right (Tampa, FL)
+- Opener: You're at 41 Google reviews in Tampa. Phil's Handy Service has 164 and Tampa Works Handyman 230, both local independents.
+- Gap to top-2 average 156; leader gap 189; ~174 asks/mo [SPEC]. Notes: I excluded Mr. Handyman, Ace Handyman and The Handyman Company (franchises). Counts vary by source (Tampa Works 230–236, Phil's 164–185); I used the lower. Category is handyman/cleaning. Rating not captured.

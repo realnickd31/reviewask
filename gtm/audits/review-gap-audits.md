@@ -2241,3 +2241,167 @@ To close it in 6 months: ~55 new reviews/mo ≈ 367 asks/mo at a 15% response ra
 **Sources:** CSV/own Jobber site (26) | https://www.chamberofcommerce.com/business-directory/south-carolina/columbia/lawn-care-service/2014171222-sparta-lawn-care | https://exa.ai/library/places?q=b728fd14144f742f
 
 **Notes:** I excluded Augusta Lawn Care (franchise) and LawnStarter (marketplace). Sparta's 660 comes from a ChamberofCommerce listing, a weaker source; the near target is Southern Vistas (45).
+
+
+## Willow Creek Landscape Maintenance LLC (Murfreesboro, TN)
+```
+Google Review Gap — Willow Creek Landscape Maintenance LLC (Murfreesboro, "lawn care Murfreesboro TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         22  5.0
+#1 Primm's Landscaping LLC  159  4.8
+#2 Premier Turf Management  57  4.5
+#3 Green Path Landscape Co.  26  4.8
+
+Gap to top-3 average: 59 reviews (gap to leader: 137)
+To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 22 Google reviews are all 5 stars. In Murfreesboro, Green Path has 26, Premier Turf 57 and Primm's 159, so you're one good season away from passing two of them.
+
+**Sources:** CSV/own Jobber site (22) | https://exa.ai/library/places?q=95cc6ef208e295b4
+
+**Notes:** Goat Turf (288) is left out because it's an artificial-turf installer, and Lawn Doctor because it's a franchise. Premier Turf shows 57 on Exa vs 70 on Birdeye; I used 57.
+
+
+## J & K's Precision Lawn Care (Warner Robins, GA)
+```
+Google Review Gap — J & K's Precision Lawn Care (Warner Robins, "lawn care Warner Robins GA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         22  4.6
+#1 Lilys Landscaping  196  4.9
+#2 Zacheries Lawn Care LLC  146  5.0
+#3 Blue Sky Maintenance Solutions  70  4.5
+
+Gap to top-3 average: 116 reviews (gap to leader: 174)
+To close it in 6 months: ~20 new reviews/mo ≈ 134 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 22 Google reviews (4.6) in Warner Robins. Zacheries has 146 and Lilys Landscaping 196, both local shops that ask consistently.
+
+**Sources:** CSV/own Jobber site (22) | https://snowlawn.net/ga/warner-robins/Lilys | https://landscapelookup.com/contractor/zacheries-lawn-care-llc/ | https://exa.ai/library/places?q=eab6e7d6aea928be
+
+**Notes:** Weed Man is excluded (franchise). Same market as THE ART OF LAWN CARE, so don't send both the same week with the same comparison.
+
+
+## THE ART OF LAWN CARE LLC (Warner Robins, GA)
+```
+Google Review Gap — THE ART OF LAWN CARE LLC (Warner Robins, "lawn care Warner Robins GA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         18  4.8
+#1 Lilys Landscaping  196  4.9
+#2 Zacheries Lawn Care LLC  146  5.0
+#3 Blue Sky Maintenance Solutions  70  4.5
+
+Gap to top-3 average: 120 reviews (gap to leader: 178)
+To close it in 6 months: ~20 new reviews/mo ≈ 134 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 18 Google reviews (4.8) in Warner Robins. A.P. Lawn Care has 37, Zacheries 146 and Lilys 196.
+
+**Sources:** CSV/own Jobber site (18) | https://snowlawn.net/ga/warner-robins/Lilys | https://landscapelookup.com/contractor/zacheries-lawn-care-llc/ | https://exa.ai/library/places?q=eab6e7d6aea928be
+
+**Notes:** Weed Man is excluded (franchise). Same comparison set as J & K's; stagger the sends.
+
+
+## Lawn Barber (Foley, AL)
+```
+Google Review Gap — Lawn Barber (Foley, "lawn care Foley AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         17  5.0
+#1 DC Lawn & Landscape  73  4.9
+#2 Blue Heron Landscape, LLC  59  4.3
+
+Gap to top-2 average: 49 reviews (gap to leader: 56)
+To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 17 Google reviews are all 5 stars. In Foley, Blue Heron has 59 (at 4.3) and DC Lawn has 73, so your rating already beats both.
+
+**Sources:** CSV/own Jobber site (17) | https://exa.ai/library/places?q=2a36845ee547adf2
+
+**Notes:** I excluded Dutchman's (hardware store), Pink Star (pest control) and Woerner/Riebeling (sod farms).
+
+
+## Southeast Mobile Wash LLC (Montgomery, AL)
+```
+Google Review Gap — Southeast Mobile Wash LLC (Montgomery, "pressure washing Montgomery AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         16  5.0
+#1 Hoffs Exterior Cleaning  119  5.0
+#2 Clear Moment Pressure Washing Service  91  4.8
+#3 Jay Pressure Washing  71  5.0
+
+Gap to top-3 average: 78 reviews (gap to leader: 103)
+To close it in 6 months: ~13 new reviews/mo ≈ 87 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 16 Google reviews are all 5 stars. In Montgomery, Hoffs Exterior Cleaning has 119 and Clear Moment 91.
+
+**Sources:** CSV/own Jobber site (16; LPRAudit also shows 16) | https://reports.lpraudit.com/alabama/montgomery/pressure-washing/ | https://findpowerwash.com/power-washers/alabama/montgomery/clear-moment-pressure-washing-service/
+
+**Notes:** I excluded Carlos (268, Wetumpka) and Clash (190, Alexander City) because they're outside Montgomery, and car washes.
+
+
+## Sunrise Air Services (Lakeland, FL)
+```
+Google Review Gap — Sunrise Air Services (Lakeland, "HVAC Lakeland FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         18  5.0
+#1 Lakeland Air Conditioning Company  1369  4.9
+#2 Payne Air Conditioning & Heating  490  4.5
+#3 Pro Air Heating and Cooling  465  5.0
+
+Gap to top-3 average: 757 reviews (gap to leader: 1351)
+To close it in 6 months: ~127 new reviews/mo ≈ 847 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 18 Google reviews are all 5 stars. Lakeland HVAC is crowded, though: Pro Air has 465 at 5.0, and Lakeland Air Conditioning has 1,369.
+
+**Sources:** CSV/own Jobber site (18) | https://exa.ai/library/places?q=9c2e8edac067b807
+
+**Notes:** I excluded One Hour (franchise) and Frank Gay (multi-region). Springer Bros' count conflicts (644 vs 1,559), so I left it out. The gap is very large; pitch saving time rather than catching up.
+
+
+## Applewood Landscape Construction (Bluffton, SC)
+```
+Google Review Gap — Applewood Landscape Construction (Bluffton, "landscaping Bluffton SC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         12  5.0
+#1 Prestige Landscaping Maintenance  31  5.0
+
+Gap to next competitor: 19 reviews (gap to leader: 19)
+To close it in 6 months: ~4 new reviews/mo ≈ 27 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 12 Google reviews are all 5 stars. Prestige Landscaping in Bluffton has 31, which is within reach this season.
+
+**Sources:** CSV/own Jobber site (12) | https://www.contractorsranked.com/contractor/bluffton-sc/prestige-landscaping-maintenance | https://exa.ai/library/places?q=97993945da9d64a8
+
+**Notes:** Southern Crab (182) is excluded because it does stump grinding only. Only one comparable competitor was found.
+
+
+## Ez Projects Done Right (Tampa, FL)
+```
+Google Review Gap — Ez Projects Done Right (Tampa, "handyman Tampa FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         41  n/a
+#1 Tampa Works Handyman  230  4.8
+#2 Phil's Handy Service  164  4.6
+
+Gap to top-2 average: 156 reviews (gap to leader: 189)
+To close it in 6 months: ~26 new reviews/mo ≈ 174 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 41 Google reviews in Tampa. Phil's Handy Service has 164 and Tampa Works Handyman 230, both local independents.
+
+**Sources:** CSV/own Jobber site (41) | https://prosource.app/best-handyman-tampa-fl/ | https://www.expertise.com/home-improvement/handyman/florida/tampa
+
+**Notes:** I excluded Mr. Handyman, Ace Handyman and The Handyman Company (franchises). Counts vary by source (Tampa Works 230–236, Phil's 164–185); I used the lower. Category is handyman/cleaning. Rating not captured.
