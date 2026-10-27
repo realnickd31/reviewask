@@ -12,7 +12,7 @@
 | Review-gap audits (`gtm/audits/`) | **54** |
 | Outreach-ready sections (`gtm/outreach_ready_top25.md`) | Top 25 + sections J–O |
 
-Overnight adds: +94 Jobber Sites rows (passes 4–5), 27 newly Hot with email (sections M, N, O) and 21 new audits. Product facts used everywhere: $39/mo or $390/yr, 7-day trial with card required, email live, SMS rolling out, works with any Jobber plan (Housecall Pro is in early access).
+Overnight adds: +94 Jobber Sites rows (passes 4–5), 34 newly Hot with email (sections M, N, O) and 21 new audits. Product facts used everywhere: $39/mo or $390/yr, 7-day trial with card required, email live, SMS rolling out, works with any Jobber plan (Housecall Pro is in early access).
 
 ## Day-1 approvals still needed
 1. **Sending inbox and domain for cold email.** support@getreviewask.com needs a mailbox; GoDaddy Email Essentials was the option under consideration. A separate sending subdomain or inbox is recommended.
