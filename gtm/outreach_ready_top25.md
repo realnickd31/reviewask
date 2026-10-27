@@ -335,3 +335,66 @@ All Jobber client-hub link confirmed on their site; review counts are directory 
 - Reviews: 41 @ 4.3 (directory estimate, not audited)
 - Opener: Saw Poblano Cleaning & Restoration runs on Jobber — and has about 41 Google reviews. Most home remodeling shops your size could double that just by asking every customer automatically after each job.
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Poblano+Cleaning+%26+Restoration+Auburn+WA
+
+## Newly Hot (≥85) after review-count enrichment — Nextdoor pass (10)
+Jobber client-hub link on their Nextdoor page; review counts from web mirrors (source in CSV), not Maps-audited. Draft only.
+
+### R1. Plumbing Pro SC LLC — Spartanburg, SC (score 92)
+- Email: info@plumbingprosc.com
+- Reviews: ~39 @ 5.0
+- Opener: Saw Plumbing Pro SC LLC takes requests through Jobber and has about 39 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Plumbing+Pro+SC+LLC+Spartanburg+SC
+
+### R2. 1 Stop Roofing & Exteriors — Madison, AL (score 92)
+- Email: 1stopqdc@gmail.com
+- Reviews: ~39 @ 4.7
+- Opener: Saw 1 Stop Roofing & Exteriors takes requests through Jobber and has about 39 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=1+Stop+Roofing+%26+Exteriors+Madison+AL
+
+### R3. Roof Ninja Gutter Cleaning, LLC — Canton, GA (score 92)
+- Email: roofninja01@gmail.com
+- Reviews: ~45 @ 4.9
+- Opener: Saw Roof Ninja Gutter Cleaning, LLC takes requests through Jobber and has about 45 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Roof+Ninja+Gutter+Cleaning%2C+LLC+Canton+GA
+
+### R4. The Scoop Lab — Greenville, NC (score 92)
+- Email: thescooplabnc@gmail.com
+- Reviews: ~40 @ 5.0
+- Opener: Saw The Scoop Lab takes requests through Jobber and has about 40 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=The+Scoop+Lab+Greenville+NC
+
+### R5. Higgins Home Repair Services — Destin, FL (score 92)
+- Email: jj@higginsrepair.com
+- Reviews: ~37 @ 5.0
+- Opener: Saw Higgins Home Repair Services takes requests through Jobber and has about 37 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Higgins+Home+Repair+Services+Destin+FL
+
+### R6. Pain In The Grass Lawn & Landscaping LLC — Huntertown, IN (score 92)
+- Email: paininthegrasslawnandlandscaping@outlook.com
+- Reviews: ~12 @ 4.8
+- Opener: Saw Pain In The Grass Lawn & Landscaping LLC takes requests through Jobber and has about 12 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Pain+In+The+Grass+Lawn+%26+Landscaping+LLC+Huntertown+IN
+
+### R7. Lawn Wolf LLC — Sioux Falls, SD (score 92)
+- Email: lawnwolfllc@gmail.com
+- Reviews: ~12 @ 5.0
+- Opener: Saw Lawn Wolf LLC takes requests through Jobber and has about 12 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Lawn+Wolf+LLC+Sioux+Falls+SD
+
+### R8. Honey Do Heroes — Castle Rock, CO (score 92)
+- Email: admin@honeydoheroes.co
+- Reviews: ~4 @ 5.0
+- Opener: Saw Honey Do Heroes takes requests through Jobber and has about 4 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Honey+Do+Heroes+Castle+Rock+CO
+
+### R9. Aristocrat Detailing — Lenexa, KS (score 87)
+- Email: info@aristocratdetailing.com
+- Reviews: ~48 @ 5.0
+- Opener: Saw Aristocrat Detailing takes requests through Jobber and has about 48 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Aristocrat+Detailing+Lenexa+KS
+
+### R10. Call Chad LLC — Akron, OH (score 87)
+- Email: chadl@callchad23.com
+- Reviews: ~38 @ 5.0
+- Opener: Saw Call Chad LLC takes requests through Jobber and has about 38 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Call+Chad+LLC+Akron+OH
