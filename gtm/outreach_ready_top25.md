@@ -1575,3 +1575,30 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### Y. 901 cleaning solutions (Lakeland, TN)
 - Opener: You're at about 70 reviews (5.0) in Lakeland. The Window Guy, the only other cleaning company with a big local profile, has 699.
 - Gap to top-2 avg 305; leader gap 629. Notes: WEAK: their 70 comes from Nextdoor, not Google, so check Maps before using the number. The Window Guy does exterior and window cleaning, not house cleaning. Kennedy Lawns (Birdeye 51) isn't a cleaner. Consider dropping the comparison and sending a generic opener.
+
+
+## Z. Audited 2026-10-27 ~3:29 AM ET (6 SE Hot)
+
+### Z. Georgia Softwash (Newnan, GA)
+- Opener: You're at 66 Google reviews (4.9) in Newnan. KSR Clean has 203, and nearly everyone else washing in town is under 25.
+- Gap to top-2 average 106; leader gap 137. Notes: KSR's count is from Birdeye. QWR says '140+' on its own site and is mainly a remodeler, so that comparison is weak. I ignored Thumbtack counts (not Google).
+
+### Z. Bernard’s Pro Lawn Care LLC. (Birmingham, AL)
+- Opener: Your 58 Google reviews are all 5 stars, ahead of Greenway Lawn Care (56) and close behind Mcnair (69). Unlimited Lawn Care leads Birmingham with 228, at 4.4.
+- Gap to top-3 average 100; leader gap 170. Notes: I excluded LawnStarter (a marketplace) and TruGreen (national). Greener Grounds' 177 comes from ProFindr, which may mix sources. Mighty Green (1,165) is in Trussville.
+
+### Z. Eggea Cleaning Services (Marietta, GA)
+- Opener: You're at 34 Google reviews (4.9) in Marietta. The Polished Bubble, an independent like you, has 209, and Executive Pro has 78. Most of the rest are franchises.
+- Gap to top-3 average 121; leader gap 175. Notes: Franchise leaders (Cleaning Authority 684, Two Maids 401) are left out on purpose. I didn't verify that Polished Bubble is independent; check before sending.
+
+### Z. PoolFix (Haines City, FL)
+- Opener: You're the clear #1 pool company in Haines City with about 150 Google reviews (4.9). The next one, Magic Florida, has 34.
+- Gap to next competitor 0; leader gap 0. Notes: Their count conflicts: 86 in the CSV vs 150 on FindPoolCleaner. Verify on Maps. They're already the leader, so the pitch is keeping the lead and saving time, not a gap. Lower priority.
+
+### Z. Gilileo's Landscaping Service (Lakeland, FL)
+- Opener: You're at 47 Google reviews (4.7), level with the #1-ranked landscaper on ContractorsRanked (Made In The Shade, 45). Franco's has 107, the most among Lakeland's independents.
+- Gap to top-3 average 23; leader gap 60. Notes: I excluded LawnStarter (marketplace) and Precision Tree (166, tree service). EBP's 57 comes from ProsGrade.
+
+### Z. Mclaughlin’s Landscaping LLC (Charlotte, NC)
+- Opener: Your 25 Google reviews are all 5 stars. In Charlotte, local independents like GreenWorx180 (272) and PGA Lawn Care (235) are ten times that.
+- Gap to top-2 average 229; leader gap 247. Notes: WEAK: competitor counts come from aggregator summaries; I didn't open their listing pages. I excluded ExperiGreen (~3,070) and Top Turf (~2,667), which are big lawn-treatment companies. Verify on Maps.

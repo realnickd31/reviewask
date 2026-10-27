@@ -1,4 +1,4 @@
-# ReviewAsk: morning brief (updated ~3:27 AM ET, Tue Oct 27 2026)
+# ReviewAsk: morning brief (updated ~3:29 AM ET, Tue Oct 27 2026)
 
 **Nothing has been emailed, posted, DMed or submitted.** Everything below is a draft waiting for your approval.
 
@@ -6,9 +6,10 @@
 | | |
 |---|---|
 | Prospects (`gtm/prospects_overnight.csv`) | 750 (249 Hot / 465 Warm / 586 with email) |
-| Review-gap audits (`gtm/audits/`) | 100 |
+| Review-gap audits (`gtm/audits/`) | 106 |
 | Day-1 queue (`gtm/outreach_ready_top25.md`, "Day-1 send queue") | 24 ready, 8 on hold |
-| Day-1 email drafts (`gtm/day1_email_drafts.md`) | 24, DRAFT ONLY |
+| Day-1 email drafts (`gtm/day1_email_drafts.md`) | 24 touch-1, DRAFT ONLY |
+| Day-1 touch-2 drafts (`gtm/day1_email_drafts_touch2.md`) | 24, DRAFT ONLY (Day 3, same thread) |
 | Community posts (`gtm/community_posts_ready.md`) | Refreshed to current product facts, plus 2 Jobber Community answers |
 
 ## Approvals needed from Nick
@@ -19,7 +20,7 @@
 
 ## Blockers and flags
 - Lead discovery channels are mostly used up; new leads now need paid or manual sources.
-- Keep flagged: Task Tacklers, Stan's (closed), Washburn Bros (category needs confirming), 901 cleaning (its count comes from Nextdoor, not Google).
+- Keep flagged: Task Tacklers, Stan's (closed), Washburn Bros (category needs confirming), 901 cleaning (Nextdoor count), Mclaughlin’s (aggregator-only competitor counts), PoolFix (conflicting count, already #1).
 - Render auto-deploy doesn't fire on push. Deploy with the Render API `trigger_deploy` on service srv-dbfbc94s728c73epr4bg.
 
 ## Live site QA (~3:27 AM ET): all 15 URLs return 200

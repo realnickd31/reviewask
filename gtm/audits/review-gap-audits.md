@@ -1973,3 +1973,125 @@ To close it in 6 months: ~51 new reviews/mo ≈ 340 asks/mo at a 15% response ra
 **Sources:** https://nextdoor.com/pages/901-commerical-and-residential-cl | https://exa.ai/library/places?q=148941ff8112239d | https://reviews.birdeye.com/d/home-services/lakeland-tn/
 
 **Notes:** WEAK: their 70 comes from Nextdoor, not Google, so check Maps before using the number. The Window Guy does exterior and window cleaning, not house cleaning. Kennedy Lawns (Birdeye 51) isn't a cleaner. Consider dropping the comparison and sending a generic opener.
+
+
+## Georgia Softwash (Newnan, GA)
+```
+Google Review Gap — Georgia Softwash (Newnan, "pressure washing Newnan GA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         66  4.9
+#1 KSR Clean  203  5.0
+#2 QWR Remodeling (pressure washing + remodel)  140  5.0
+
+Gap to top-2 average: 106 reviews (gap to leader: 137)
+To close it in 6 months: ~18 new reviews/mo ≈ 120 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 66 Google reviews (4.9) in Newnan. KSR Clean has 203, and nearly everyone else washing in town is under 25.
+
+**Sources:** CSV/own Jobber site (66) | https://reviews.birdeye.com/d/pressure-washers/newnan-ga/ | https://myqwr.com/our-services/pressure-washing/
+
+**Notes:** KSR's count is from Birdeye. QWR says '140+' on its own site and is mainly a remodeler, so that comparison is weak. I ignored Thumbtack counts (not Google).
+
+
+## Bernard’s Pro Lawn Care LLC. (Birmingham, AL)
+```
+Google Review Gap — Bernard’s Pro Lawn Care LLC. (Birmingham, "lawn care Birmingham AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         58  5.0
+#1 Unlimited Lawn Care  228  4.4
+#2 Greener Grounds Lawn & Tree  177  4.8
+#3 Mcnair Lawn Pros LLC  69  5.0
+
+Gap to top-3 average: 100 reviews (gap to leader: 170)
+To close it in 6 months: ~17 new reviews/mo ≈ 114 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 58 Google reviews are all 5 stars, ahead of Greenway Lawn Care (56) and close behind Mcnair (69). Unlimited Lawn Care leads Birmingham with 228, at 4.4.
+
+**Sources:** CSV/own Jobber site (58) | https://exa.ai/library/places?q=933d93bf4c1fc5e5 | https://profindr.com/top/lawn-care-birmingham-al
+
+**Notes:** I excluded LawnStarter (a marketplace) and TruGreen (national). Greener Grounds' 177 comes from ProFindr, which may mix sources. Mighty Green (1,165) is in Trussville.
+
+
+## Eggea Cleaning Services (Marietta, GA)
+```
+Google Review Gap — Eggea Cleaning Services (Marietta, "house cleaning Marietta GA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         34  4.9
+#1 The Polished Bubble Cleaning Services  209  5.0
+#2 MaidPro Marietta  177  4.9
+#3 Executive Pro Cleaning Services LLC  78  5.0
+
+Gap to top-3 average: 121 reviews (gap to leader: 175)
+To close it in 6 months: ~21 new reviews/mo ≈ 140 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 34 Google reviews (4.9) in Marietta. The Polished Bubble, an independent like you, has 209, and Executive Pro has 78. Most of the rest are franchises.
+
+**Sources:** CSV/own Jobber site (34) | https://exa.ai/library/places?q=b31af012dbf31e6d | https://reviews.birdeye.com/d/home-cleaning/marietta-ga/
+
+**Notes:** Franchise leaders (Cleaning Authority 684, Two Maids 401) are left out on purpose. I didn't verify that Polished Bubble is independent; check before sending.
+
+
+## PoolFix (Haines City, FL)
+```
+Google Review Gap — PoolFix (Haines City, "pool service Haines City FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         150  4.9
+#1 MAGIC FLORIDA POOL AND LAWN SERVICES  34  4.7
+
+Gap to next competitor: 0 reviews (gap to leader: 0)
+To close it in 6 months: ~0 new reviews/mo ≈ 0 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're the clear #1 pool company in Haines City with about 150 Google reviews (4.9). The next one, Magic Florida, has 34.
+
+**Sources:** https://findpoolcleaner.com/pool-cleaners/florida/haines-city/ (150 Google) | https://exa.ai/library/places?q=715ebdaaa1103c69
+
+**Notes:** Their count conflicts: 86 in the CSV vs 150 on FindPoolCleaner. Verify on Maps. They're already the leader, so the pitch is keeping the lead and saving time, not a gap. Lower priority.
+
+
+## Gilileo's Landscaping Service (Lakeland, FL)
+```
+Google Review Gap — Gilileo's Landscaping Service (Lakeland, "landscaping Lakeland FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         47  4.7
+#1 Franco's Lawn & Landscaping Service  107  4.9
+#2 EBP Landscaping  57  5.0
+#3 Made In The Shade Landscape Management  45  4.9
+
+Gap to top-3 average: 23 reviews (gap to leader: 60)
+To close it in 6 months: ~4 new reviews/mo ≈ 27 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 47 Google reviews (4.7), level with the #1-ranked landscaper on ContractorsRanked (Made In The Shade, 45). Franco's has 107, the most among Lakeland's independents.
+
+**Sources:** CSV/own Jobber site (47) | https://linktoreview.com/local/fl/lakeland/lawn-care | https://prosgrade.com/landscapers/lakeland | https://www.contractorsranked.com/contractor/lakeland-fl/made-in-the-shade-landscape-management-863-777-lawn
+
+**Notes:** I excluded LawnStarter (marketplace) and Precision Tree (166, tree service). EBP's 57 comes from ProsGrade.
+
+
+## Mclaughlin’s Landscaping LLC (Charlotte, NC)
+```
+Google Review Gap — Mclaughlin’s Landscaping LLC (Charlotte, "landscaping lawn care Charlotte NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         25  5.0
+#1 GreenWorx180  272  4.9
+#2 PGA Lawn Care  235  4.8
+
+Gap to top-2 average: 229 reviews (gap to leader: 247)
+To close it in 6 months: ~39 new reviews/mo ≈ 260 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 25 Google reviews are all 5 stars. In Charlotte, local independents like GreenWorx180 (272) and PGA Lawn Care (235) are ten times that.
+
+**Sources:** CSV/own Jobber site (25) | https://ratingsnearme.com/charlotte-nc/landscaper-reviews | https://www.ratexyz.com/top/google/landscaping-lawn-care/in/united-states/charlotte
+
+**Notes:** WEAK: competitor counts come from aggregator summaries; I didn't open their listing pages. I excluded ExperiGreen (~3,070) and Top Turf (~2,667), which are big lawn-treatment companies. Verify on Maps.
