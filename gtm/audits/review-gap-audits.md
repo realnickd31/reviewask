@@ -1686,3 +1686,105 @@ To close it in 6 months: ~16 new reviews/mo ≈ 107 asks/mo at a 15% response ra
 **Sources:** https://hilbunpestcontrol.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=3a21f47fe1feeaef
 
 **Notes:** Arrow is a regional chain. Beebe's (598) was left out because that count is Birdeye-only.
+
+
+## 1st Sergeant F.R.O.G.G.Y. Handyman Service (Hoover, AL)
+```
+Google Review Gap — 1st Sergeant F.R.O.G.G.Y. Handyman Service (Hoover, "handyman Hoover AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         41  5.0
+#1 Scout Home Services  139  4.8
+#2 Serve One Construction  13  4.4
+
+Gap to top-2 average: 35 reviews (gap to leader: 98)
+To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 41 Google reviews (5.0), already #2 for handyman in Hoover. Scout Home Services has 139 at 4.8. Asking after every Jobber job is how you close that and pass them at a higher rating.
+
+**Sources:** https://contractorsranked.com/contractor/Alabaster-AL/1st-sergeant-f-r-o-g-g-y-handyman-service (41 Google) | https://exa.ai/library/places?q=1c6714c8f43b9723
+
+**Notes:** Thin comparison set: A&M (8) is self-advertised, and Mr. Handyman's 19 is HomeAdvisor, not Google, so both are excluded. Top-2 average used.
+
+
+## Knock on Wood LLC (Etowah, NC)
+```
+Google Review Gap — Knock on Wood LLC (Etowah, "stump grinding Hendersonville NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         68  5.0
+#1 Epperson Tree Service  1009  4.9
+#2 Southwinds Landscape Company  55  4.9
+
+Gap to top-2 average: 464 reviews (gap to leader: 941)
+To close it in 6 months: ~78 new reviews/mo ≈ 520 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 68 Google reviews (5.0), likely the most of any stump-grinding specialist around Hendersonville. Full-service Epperson has 1,000+. Asking after every grind keeps you the obvious stump pick.
+
+**Sources:** https://www.contractorsranked.com/contractor/mills-river-nc/knock-on-wood-llc (68 Google) | https://exa.ai/library/places?q=146d918cf10f5f6d | https://www.contractorsranked.com/contractor/hendersonville-nc/epperson-tree-service
+
+**Notes:** Epperson is a full-service volume leader and an outlier, so the gap math is skewed. Pitch this as defending the stump-only niche. Hendo Tree (2) was left out.
+
+
+## Pure Paint Florida (Brooksville, FL)
+```
+Google Review Gap — Pure Paint Florida (Brooksville, "house painters Brooksville Spring Hill FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         51  4.6
+#1 Bulldog Painting  56  5.0
+#2 J. Alex Painting & Property Maintenance  56  5.0
+#3 True Colors Painting  50  4.9
+
+Gap to top-3 average: 3 reviews (gap to leader: 5)
+To close it in 6 months: ~1 new reviews/mo ≈ 7 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 51 Google reviews, neck and neck with Bulldog and J. Alex (56 each), but they're at 5.0 vs your 4.6. Asking every happy customer lifts both the count and the average.
+
+**Sources:** https://www.verygoodpainters.com/florida/pasco-county-fl/pure-paint-florida-pasco-county-fl (51 Google, 4.6) | https://exa.ai/library/places?q=713d2f04bc55e001 | https://www.contractorsranked.com/contractor/spring-hill-fl/true-colors-painting
+
+**Notes:** FLAG: there's a Networx complaint about a peeling driveway coating, and contractorsranked shows 32 (4.9) for the Brooksville listing. Lead with the rating, not the count, and keep the tone careful.
+
+
+## FOUNDATION X WORKS / BACKYARD BOYS CUSTOM CONSTRUCTION (Franklin, TN)
+```
+Google Review Gap — FOUNDATION X WORKS / BACKYARD BOYS CUSTOM CONSTRUCTION (Franklin, "remodeling contractor Franklin TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         6  5.0
+#1 Crosspoint Construction  71  4.9
+#2 Craftsman Tile and Stone  47  5.0
+
+Gap to top-2 average: 53 reviews (gap to leader: 65)
+To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 6 Google reviews (5.0). Crosspoint has 71 in Franklin. On big remodel and pool jobs, every finished project is worth a review ask, and you'll get there in a year.
+
+**Sources:** https://www.backyardboysconstruction.com/ (own site: 6 Google) | https://exa.ai/library/places?q=73a926a65224b64e | https://reviews.birdeye.com/craftsman-tile-and-stone-166090645307085
+
+**Notes:** Craftsman Tile's 47 is WEAK (Birdeye). Myhome Services (12) is Angi-only and was left out. These are low-volume, high-ticket jobs, so the asks/mo number is high relative to job count. [SPEC]
+
+
+## Coastal Pro Painting LLC (Vero Beach, FL)
+```
+Google Review Gap — Coastal Pro Painting LLC (Vero Beach, "house painters Vero Beach FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         3  5.0
+#1 Painted Frog  130  4.7
+#2 Ocean Blue Painting & Furniture Restoration  106  5.0
+#3 Purpose Painting  95  5.0
+
+Gap to top-3 average: 108 reviews (gap to leader: 127)
+To close it in 6 months: ~18 new reviews/mo ≈ 120 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 3 Google reviews (5.0). Vero's top painters have 95-130. Chuck Stone Painting is at 48, the realistic first target. A review ask after every job gets you there.
+
+**Sources:** https://verovine.com/business-directory/coastal-pro-painting-llc/ (3 Google) | https://exa.ai/library/places?q=ceaad2eef921c659 | https://www.contractorsranked.com/contractor/vero-beach-fl/painted-frog
+
+**Notes:** floridapros shows 2 for Coastal Pro and verovine shows 3. Very low volume, so verify on Maps.

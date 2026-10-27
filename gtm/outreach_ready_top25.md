@@ -1432,7 +1432,7 @@ Counts come from Google mirrors, and the source is recorded for each one. WEAK m
 - Email: coastalpropaint@outlook.com · Phone: (772) 321-6590
 - Google reviews: 3 (5.0). Source: verovine
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Coastal+Pro+Painting+LLC+Vero+Beach+FL
-- Opener: Saw your Jobber site. You're at 3 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 3 Google reviews (5.0). Vero's top painters have 95-130. Chuck Stone Painting is at 48, the realistic first target. A review ask after every job gets you there.
 
 ### V3. Robles Flooring & Painting Inc. — Wake Forest, NC (score 97)
 - Category: Painting
@@ -1446,7 +1446,7 @@ Counts come from Google mirrors, and the source is recorded for each one. WEAK m
 - Email: jasonbackyardboys@gmail.com · Phone: (615) 970-2226
 - Google reviews: 6 (5.0). Source: business's own site (backyardboysconstruction
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=FOUNDATION+X+WORKS+%2F+BACKYARD+BOYS+CUSTOM+CONSTRUCTION+Franklin+TN
-- Opener: Saw your Jobber site. You're at 6 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 6 Google reviews (5.0). Crosspoint has 71 in Franklin. On big remodel and pool jobs, every finished project is worth a review ask, and you'll get there in a year.
 
 ### V5. Rosebud Landscape & Design — Riverview, FL (score 97)
 - Category: Lawn Care / Landscaping
@@ -1474,21 +1474,21 @@ Counts come from Google mirrors, and the source is recorded for each one. WEAK m
 - Email: derrick@1stsergeantfroggyhandymanservice.com · Phone: (205) 931-5617
 - Google reviews: 41 (5.0). Source: contractorsranked
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=1st+Sergeant+F.R.O.G.G.Y.+Handyman+Service+Hoover+AL
-- Opener: Saw your Jobber site. You're at 41 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 41 Google reviews (5.0), already #2 for handyman in Hoover. Scout Home Services has 139 at 4.8. Asking after every Jobber job is how you close that and pass them at a higher rating.
 
 ### V9. Pure Paint Florida — Brooksville, FL (score 86)
 - Category: Painting
 - Email: info@purepaintflorida.com · Phone: (352) 933-5905
 - Google reviews: 51 (4.6). Source: verygoodpainters
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Pure+Paint+Florida+Brooksville+FL
-- Opener: Saw your Jobber site. You're at 51 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 51 Google reviews, neck and neck with Bulldog and J. Alex (56 each), but they're at 5.0 vs your 4.6. Asking every happy customer lifts both the count and the average.
 
 ### V10. Knock on Wood LLC — Etowah, NC (score 86)
 - Category: Tree Care
 - Email: nknockonwoodwnc@gmail.com · Phone: 
 - Google reviews: 68 (5.0). Source: contractorsranked
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Knock+on+Wood+LLC+Etowah+NC
-- Opener: Saw your Jobber site. You're at 68 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 68 Google reviews (5.0), likely the most of any stump-grinding specialist around Hendersonville. Full-service Epperson has 1,000+. Asking after every grind keeps you the obvious stump pick.
 
 
 ## W. Pass 9 discovery (2026-10-27): newly Hot with email
@@ -1499,6 +1499,18 @@ Counts come from Google mirrors, and the source is recorded for each one. WEAK m
 - Google reviews: 28 (4.6). Source: site widget, https://nkylawnprosllc.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Nky+Lawn+Pros+Walton+KY
 - Opener: Saw your Jobber site. You're at 28 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+## X. Pass 9 Client Hub enrichment (2026-10-27): newly Hot with email
+
+### X1. Los Hernandez Landscaping — North Fort Myers, FL (score 92)
+- Category: Lawn Care / Landscaping
+- Email: lhlandscaping03@gmail.com · Phone: (239) 738-9448
+- Google reviews: 30 (5.0). Source: SnowLawn 30; TreeOps 23; us-info 25. WEAK/CONFLICTING, so verify on Maps.
+- Jobber: Client Hub link on their FB-mirror listing (glonstruct)
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Los+Hernandez+Landscaping+North+Fort+Myers+FL
+- Opener: Saw you take requests through Jobber. You're at about 30 Google reviews (5.0). I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+Also newly Hot but **no email**: Brown Dog Landscaping, LLC (Moncks Corner SC, 32 Google per leadsmartinc; phone (843) 607-5448).
 
 ## Day-1 send queue (DRAFT, scrubbed 2026-10-27 ~3:05 AM ET; nothing sent, needs Nick's approval)
 Every lead here is an audited, Southeast, Hot lead with a public email. For each one I re-read the CSV row, the outreach note and the audit note, checking for: weak or conflicting sources, odd email domains, complaints, NiceJob or another review tool already in use, 100+ reviews, rescores, same-market conflicts, closed businesses, and ratings under 4.0. Task Tacklers and Stan's are excluded. Each opener is in the business's audit (gtm/audits/review-gap-audits.md).

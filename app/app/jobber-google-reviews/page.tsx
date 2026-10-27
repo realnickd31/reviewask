@@ -23,5 +23,6 @@ export default function Page() { return <Legal title="Jobber Google reviews: aut
   <Image src="/screens/connect-jobber.png" alt="ReviewAsk settings: Ask after every job toggle and Connect Jobber button" width={1600} height={1000} className="rounded-lg border border-slate-200" />
   <p>From then on, each completed job triggers a request, and your dashboard shows what was sent, reminded, or failed.</p>
   <p className="pt-4"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
+  <p className="text-sm text-slate-600">Not ready yet? <Link href="/tools/review-gap" className="font-medium text-navy-900 underline underline-offset-4">See how many Google reviews you are behind your top local competitors</Link>, free and with no signup.</p>
   <p className="text-sm text-slate-500">$39/month or $390/year after the trial · No contract · Cancel anytime. Marketing Suite pricing as listed by Jobber and may change. ReviewAsk is not affiliated with Jobber or Google.</p>
 </Legal>; }

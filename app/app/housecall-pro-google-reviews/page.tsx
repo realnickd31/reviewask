@@ -16,5 +16,6 @@ export default function Page() { return <Legal title="Housecall Pro Google revie
   <p>ReviewAsk connects to Housecall Pro and sends every customer, whatever email they use, a request with one link to your Google review form when the job is done, plus one follow-up on day 3. It&apos;s $39/month after a 7-day free trial, with no contract. <Link href="/for-housecall-pro">How ReviewAsk works with Housecall Pro</Link>.</p>
   <h2>Keep it policy-safe</h2><p>Ask every customer the same way. Don&apos;t offer incentives and don&apos;t screen out unhappy customers; Google&apos;s policies prohibit both.</p>
   <p className="pt-4"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
+  <p className="text-sm text-slate-600">Not ready yet? <Link href="/tools/review-gap" className="font-medium text-navy-900 underline underline-offset-4">See how many Google reviews you are behind your top local competitors</Link>, free and with no signup.</p>
   <p className="text-sm text-slate-500">ReviewAsk is not affiliated with Housecall Pro or Google.</p>
 </Legal>; }

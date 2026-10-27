@@ -22,5 +22,6 @@ export default function Page() { return <Legal title="A $39 NiceJob alternative 
   <h2>Choose ReviewAsk if…</h2><p>You mainly want every finished Jobber or Housecall Pro job to turn into a Google review request, without paying for extras you won&apos;t use. At $39/month it costs about half of NiceJob Starter.</p>
   <h2>Same rules either way</h2><p>Ask every customer, don&apos;t offer incentives, and don&apos;t filter out unhappy customers — that&apos;s what Google&apos;s review policies expect. ReviewAsk sends the same request to everyone.</p>
   <p className="pt-4"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
+  <p className="text-sm text-slate-600">Not ready yet? <Link href="/tools/review-gap" className="font-medium text-navy-900 underline underline-offset-4">See how many Google reviews you are behind your top local competitors</Link>, free and with no signup.</p>
   <p className="text-sm text-slate-500">NiceJob pricing and features from <a href="https://get.nicejob.com/pricing" rel="noopener" target="_blank">get.nicejob.com/pricing</a>, checked October 27, 2026; may change. ReviewAsk is not affiliated with NiceJob. Also see <Link href="/compare/jobber-marketing-suite">ReviewAsk vs. Jobber Marketing Suite</Link>.</p>
 </Legal>; }
