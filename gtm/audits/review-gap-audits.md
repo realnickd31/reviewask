@@ -1336,3 +1336,102 @@ To close it in 6 months: ~21 new reviews/mo ≈ 140 asks/mo at a 15% response ra
 **Sources:** https://prosource.app/best-pressure-washing-jacksonville-fl/ | https://exa.ai/library/places?q=30ce2655b8640e68
 
 **Notes:** Five Star Pressure Washing (644) is a volume leader and was left out.
+
+## True Landscape Designs LLC (Gainesville, FL)
+```
+Google Review Gap — True Landscape Designs LLC (Gainesville, "landscaping Gainesville")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         6  
+#1 Theos Lawn Maintenance  202  4.9
+#2 J.W. Lawncare  118  5.0
+#3 Sun Power Lawn Care  116  4.8
+
+Gap to top-3 average: 139 reviews (gap to leader: 196)
+To close it in 6 months: ~33 new reviews/mo ≈ 220 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 6 Google reviews. Owner-run Gainesville crews like J.W. Lawncare and Sun Power are past 115. Your maintenance clients already say great things on your site, and getting even half of them onto Google changes how you show up in search.
+
+**Sources:** https://truelandscapedesigns.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=9e391e2304f2bde4 | https://www.expertise.com/home-improvement/landscaping/florida/gainesville
+
+**Notes:** The Master's Lawn & Pest (789, a pest-control company and volume leader) was left out.
+
+## Aaron’s Lawn Company (Canton, GA)
+```
+Google Review Gap — Aaron’s Lawn Company (Canton, "lawn care Canton / Woodstock")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         17  
+#1 TurfXpert  90  4.7
+#2 Elite Landscape Services  66  4.6
+#3 Southern State Lawn Care  37  5.0
+
+Gap to top-3 average: 47 reviews (gap to leader: 73)
+To close it in 6 months: ~13 new reviews/mo ≈ 87 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 17 Google reviews. Southern State has 37 around Canton and TurfXpert has 90. Weekly mowing customers are the easiest to ask, and you could pass Southern State this season.
+
+**Sources:** https://aaronslawncompany.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=b875296321253978 | https://exa.ai/library/places?q=9278677b654efcdf
+
+**Notes:** Turf Masters (611) and O'Neill Landscape Group (253) are volume leaders and were left out.
+
+## Acosta Property Maintenance LLC (Florence, SC)
+```
+Google Review Gap — Acosta Property Maintenance LLC (Florence, "lawn care Florence SC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         7  
+#1 Elite Turf Services  168  4.9
+#2 Ward's Lawn Service  106  4.5
+#3 Linhale Landscaping  27  5.0
+
+Gap to top-3 average: 93 reviews (gap to leader: 161)
+To close it in 6 months: ~27 new reviews/mo ≈ 180 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 7 Google reviews. Linhale has 27 in Florence and Ward's has 106. Asking every mowing customer gets you past Linhale within a couple of months.
+
+**Sources:** https://acostapm.jobbersites.com (own Google widget) | https://allaboutlandscapingservices.com/sc/florence-county/elite-turf-services/ | https://exa.ai/library/places?q=8a88ef43246db6ae | https://snowlawn.net/sc/florence/Linhale
+
+**Notes:** Martin's (131, Birdeye; source unclear) was left out.
+
+## Millers Lawn LLC (Columbus, GA)
+```
+Google Review Gap — Millers Lawn LLC (Columbus, "lawn care Columbus GA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         47  4.9
+#1 Unlimited Lawn Care  245  4.1
+#2 Genesis  207  4.9
+
+Gap to top-2 average: 179 reviews (gap to leader: 198)
+To close it in 6 months: ~33 new reviews/mo ≈ 220 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 47 Google reviews (4.9). Genesis has 207 in Columbus at the same rating. Your quality already matches theirs; it's the number of reviews that's behind.
+
+**Sources:** https://millerslawn.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=9bd161e5f267e4d7 | https://reports.lpraudit.com/georgia/columbus/landscaper/
+
+**Notes:** TruGreen (614, a franchise), Mitchum (446) and A-1 (313) are volume leaders and were left out. This is a competitive market.
+
+## Hurst Landscapes, Inc. (Raleigh, NC)
+```
+Google Review Gap — Hurst Landscapes, Inc. (Raleigh, "landscape design-build Raleigh")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         31  4.5
+#1 DreamScapes  183  5.0
+#2 Walters Landscapes  170  5.0
+#3 Constructive Design Group  36  5.0
+
+Gap to top-3 average: 99 reviews (gap to leader: 152)
+To close it in 6 months: ~26 new reviews/mo ≈ 174 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 31 Google reviews (4.5). Design-build peers in Raleigh like DreamScapes have 183 at 5.0. Asking after each finished project adds reviews and lifts the average.
+
+**Sources:** https://hurstlandscapesinc.jobbersites.com (own Google widget) | https://www.trianglelandscapers.com/landscapers-in/raleigh-nc/dreamscapes-raleigh-nc | https://exa.ai/library/places?q=8cb3878a1ba8dfbc
+
+**Notes:** Left out: Southern Turf (artificial grass) and GreenVista (312+, a self-reported count).

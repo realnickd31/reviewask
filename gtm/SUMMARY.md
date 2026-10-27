@@ -82,3 +82,9 @@
 - Ground Xperts (section Q): Exa shows 120 Google reviews (4.7), not the 42 on its widget. Rescored to 80 (Warm) and flagged.
 - +3 audits: Youngs Pressure Washing, Coastal Cleaning, Joe Allen.
 - Totals: 671 rows · 209 Hot · 427 Warm · 516 with email · 69 audits. The channel is still yielding.
+
+## Update 2026-10-27 ~6:30 AM ET: pass 7 enrichment + audits
+- Searched all 45 [BLOCKED] rows from pass 7. 11 got Google counts. 10 are newly Hot with email (section T). Elite Irrigation (101 reviews) is Warm.
+- Flags: Pressure Wash Improvements (WV) and Travis Thurber have weak sources; Mikes Lawn (KY) has a 4.1 rating; Byrd's has reviews mentioning missed appointments; Nextdoor lists Stan's Lawn Care as closed.
+- +5 audits (section S): True Landscape, Aaron's Lawn, Acosta, Millers Lawn, Hurst.
+- Totals: 671 rows · 219 Hot · 417 Warm · 516 with email · 74 audits.

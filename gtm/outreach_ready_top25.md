@@ -1161,7 +1161,7 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: truelandscapedesigns@gmail.com · Phone: (352) 316-4410
 - Google reviews: 6. Source: site widget, https://truelandscapedesigns.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=True+Landscape+Designs+LLC+Gainesville+FL
-- Opener: Saw your Jobber site. You're at 6 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 6 Google reviews. Owner-run Gainesville crews like J.W. Lawncare and Sun Power are past 115. Your maintenance clients already say great things on your site, and getting even half of them onto Google changes how you show up in search. (from the review-gap audit)
 
 ### S2. JF HVAC Maintenance LLC — Winston-Salem, NC (score 97)
 - Category: HVAC
@@ -1175,7 +1175,7 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: aaronslawncompany@gmail.com · Phone: (678) 577-0158
 - Google reviews: 17. Source: site widget, https://aaronslawncompany.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Aaron%E2%80%99s+Lawn+Company+Canton+GA
-- Opener: Saw your Jobber site. You're at 17 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 17 Google reviews. Southern State has 37 around Canton and TurfXpert has 90. Weekly mowing customers are the easiest to ask, and you could pass Southern State this season. (from the review-gap audit)
 
 ### S4. A&C Fencing of TN LLC — Cookeville, TN (score 97)
 - Category: Fencing
@@ -1189,14 +1189,14 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: c.acosta@acostapropertymaintenance.com · Phone: (843) 472-7426
 - Google reviews: 7. Source: site widget, https://acostapm.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Acosta+Property+Maintenance+LLC+Florence+SC
-- Opener: Saw your Jobber site. You're at 7 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 7 Google reviews. Linhale has 27 in Florence and Ward's has 106. Asking every mowing customer gets you past Linhale within a couple of months. (from the review-gap audit)
 
 ### S6. Millers Lawn LLC — Columbus, GA (score 92)
 - Category: Lawn Care / Landscaping
 - Email: millerslawnllc@gmail.com · Phone: (706) 570-2563
 - Google reviews: 47 (4.9). Source: site widget, https://millerslawn.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Millers+Lawn+LLC+Columbus+GA
-- Opener: Saw your Jobber site. You're at 47 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 47 Google reviews (4.9). Genesis has 207 in Columbus at the same rating. Your quality already matches theirs; it's the number of reviews that's behind. (from the review-gap audit)
 
 ### S7. C&R Rubbish and Junk Removal LLC — Winston-Salem, NC (score 92)
 - Category: Junk Removal
@@ -1217,7 +1217,7 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: hurstlandscapesprojects@gmail.com · Phone: (919) 656-7374
 - Google reviews: 31 (4.5). Source: site widget, https://hurstlandscapesinc.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Hurst+Landscapes%2C+Inc.+Raleigh+NC
-- Opener: Saw your Jobber site. You're at 31 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 31 Google reviews (4.5). Design-build peers in Raleigh like DreamScapes have 183 at 5.0. Asking after each finished project adds reviews and lifts the average. (from the review-gap audit)
 
 ### S10. Genesis Lawns LLC — Melbourne, FL (score 86)
 - Category: Lawn Care / Landscaping
@@ -1232,3 +1232,77 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Google reviews: 9. Source: site widget, https://cooltechrefrigerationheatingandcoolingllc.jobbersites.com/. FLAG: the page says WA, but this was found in an Alabama search. Confirm the state.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=COOLTECH+Refrigeration+Heating+and+Cooling+LLC+Auburn+WA
 - Opener: Saw your Jobber site. You're at 9 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+
+## T. Pass 7 enrichment (2026-10-27): newly Hot with email
+Counts come from web mirrors. Re-check on Maps before sending, especially entries marked WEAK.
+
+### T1. Greener Concepts Landscaping LLC — Raleigh, NC (score 97)
+- Category: Lawn Care / Landscaping
+- Email: greenernc@outlook.com · Phone: (919) 235-5328
+- Google reviews: 5 (5.0). Source: https://exa.ai/library/place/815p22x93sj. 
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Greener+Concepts+Landscaping+LLC+Raleigh+NC
+- Opener: Saw your Jobber site. You're at 5 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T2. Travis T Thurber — Pittsboro, NC (score 97)
+- Category: Lawn Care / Landscaping
+- Email: travistthurber@gmail.com · Phone: (919) 816-6048
+- Google reviews: 4 (5.0). Source: https://reviews.birdeye.com/travis-thurber-landscaping-llc-172508946588041. WEAK SOURCE (Birdeye only).
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Travis+T+Thurber+Pittsboro+NC
+- Opener: Saw your Jobber site. You're at 4 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T3. Grissom's Grounds Services LLC — Elizabethton, TN (score 97)
+- Category: Lawn Care / Landscaping
+- Email: grissomsgrounds@gmail.com · Phone: (423) 213-8242
+- Google reviews: 4 (5.0). Source: https://snowlawn.net/tn/elizabethton/Grissom. 
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Grissom%27s+Grounds+Services+LLC+Elizabethton+TN
+- Opener: Saw your Jobber site. You're at 4 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T4. Washburn Bros. Landscaping LLC — Oakland Park, FL (score 97)
+- Category: Pressure Washing
+- Email: washburnbroslandscaping95@gmail.com · Phone: (561) 232-9734
+- Google reviews: 15 (5.0). Source: https://floridapros.org/pro/north-lauderdale/washburn-bros-landscaping-llc/. 
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Washburn+Bros.+Landscaping+LLC+Oakland+Park+FL
+- Opener: Saw your Jobber site. You're at 15 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T5. Total Maintenance (GoodBird Landscaping) — Lake Worth Beach, FL (score 97)
+- Category: Lawn Care / Landscaping
+- Email: hello@goodbird.com · Phone: (561) 921-0064
+- Google reviews: 13 (5.0). Source: https://snowlawn.net/fl/delray-beach/GoodBird. 
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Total+Maintenance+%28GoodBird+Landscaping%29+Lake+Worth+Beach+FL
+- Opener: Saw your Jobber site. You're at 13 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T6. GRANDSCAPE OUTDOOR MANAGEMENT LLC — Palm Bay, FL (score 97)
+- Category: Lawn Care / Landscaping
+- Email: caydenstrohminger@grandscapeoutdoormanagment.com · Phone: (321) 770-2284
+- Google reviews: 11 (4.6). Source: https://pavingfind.com/company/grandscape-outdoor-management-llc-32737/. 
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=GRANDSCAPE+OUTDOOR+MANAGEMENT+LLC+Palm+Bay+FL
+- Opener: Saw your Jobber site. You're at 11 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T7. Happy Cleans It — Oldsmar, FL (score 86)
+- Category: Pressure Washing
+- Email: michael@happyexteriorservices.com · Phone: (813) 528-2119
+- Google reviews: 83 (4.9). Source: https://www.trustindex.io/reviews/www.happycleansit.com. Thumbtack 20 was not counted.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Happy+Cleans+It+Oldsmar+FL
+- Opener: Saw your Jobber site. You're at 83 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T8. Byrd's Lawn and Landscape — Palm Bay, FL (score 86)
+- Category: Lawn Care / Landscaping
+- Email: byrdslawnandlandscape@gmail.com · Phone: (321) 412-3006
+- Google reviews: 99 (4.4). Source: https://exa.ai/library/place/g13w5ct6j1w. Other listings show up to 108. Some reviews mention missed appointments.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Byrd%27s+Lawn+and+Landscape+Palm+Bay+FL
+- Opener: Saw your Jobber site. You're at 99 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T9. Pressure Wash Improvements — Charleston, WV (score 92)
+- Category: Pressure Washing
+- Email: brad.rhodes@pressurewashimprovements.com · Phone: (304) 859-6867
+- Google reviews: 12 (5.0). Source: https://pressurewashingdir.com/west-virginia/greenbrier/pressure-wash-improvements. WEAK SOURCE (directory "verified reviews").
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Pressure+Wash+Improvements+Charleston+WV
+- Opener: Saw your Jobber site. You're at 12 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### T10. Mikes Lawn Care Service LLC — Louisville, KY (score 92)
+- Category: Lawn Care / Landscaping
+- Email: mikeslawn88@gmail.com · Phone: (502) 648-4733
+- Google reviews: 17 (4.1). Source: https://snowlawn.net/ky/louisville/Mikes. FLAG: 4.1 rating.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Mikes+Lawn+Care+Service+LLC+Louisville+KY
+- Opener: Saw your Jobber site. You're at 17 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
