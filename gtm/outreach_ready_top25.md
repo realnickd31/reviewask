@@ -550,13 +550,13 @@ Counts come from each business's own Jobber Sites Google widget or from web mirr
 ### L1. Daystar Exterior Cleaning — Bradenton, FL (score 97)
 - Email: daystarcleans@gmail.com · Phone: (941) 592-5990 · Site: https://daystarexteriorcleaning.jobbersites.com/
 - Reviews: ~19 @ 4.8 (Review count via their own Jobber Sites page (embedded Google review widget))
-- Opener: Saw Daystar Exterior Cleaning books through Jobber and shows 19 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You've been washing Bradenton for 25+ years, but your site shows 19 Google reviews. Paradise has 143 and 2 Bros & A Hose has 153. That gap is about asking, not about the work. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Daystar+Exterior+Cleaning+Bradenton+FL
 
 ### L2. Grasshopper Home — Raleigh, NC (score 97)
 - Email: sthatcher@grasshopperhomeservices.com · Phone: (919) 387-0777 · Site: https://grasshopperhome.jobbersites.com/
 - Reviews: ~3 @ 5.0 (Review count via MyTriangleServices (Google 5.0 from 3) (not Google Maps; verify))
-- Opener: Saw Grasshopper Home books through Jobber and shows 3 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You're at 3 Google reviews. Triangle Lawn Care has 429 and Augusta Lawn Care has 172. Every mow is a chance to ask, and right now almost none of them turn into reviews. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Grasshopper+Home+Raleigh+NC
 
 ### L3. Parra Outdoor Services — Youngsville, NC (score 97)
@@ -568,7 +568,7 @@ Counts come from each business's own Jobber Sites Google widget or from web mirr
 ### L4. On Target Pressure Washing LLC — Summerville, SC (score 97)
 - Email: ontarget843@gmail.com · Phone: (843) 531-0360 · Site: https://ontargetpressurewashingllc.jobbersites.com/
 - Reviews: ~8 (Review count via their own Jobber Sites page (embedded Google review widget))
-- Opener: Saw On Target Pressure Washing LLC books through Jobber and shows 8 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: Your 8 Google reviews are all 5 stars, but Jeff's Exterior Washing shows 498 in Summerville. Even ProForm has 40. HOA boards compare those numbers before they call. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=On+Target+Pressure+Washing+LLC+Summerville+SC
 
 ### L5. Solar Pro Wash — Moncks Corner, SC (score 97)
@@ -580,7 +580,7 @@ Counts come from each business's own Jobber Sites Google widget or from web mirr
 ### L6. A & L Lawncare — Cottondale, AL (score 97)
 - Email: aandllawncarellc@gmail.com · Phone: (205) 887-3010 · Site: https://aandllawncarellc.jobbersites.com/
 - Reviews: ~12 @ 5.0 (Review count via Exa Places/Yahoo Local 5.0 from 12 (not Google Maps; verify))
-- Opener: Saw A & L Lawncare books through Jobber and shows 12 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: Your 20 Google reviews are all 5 stars. Globetti's has 195 and Ray of Hope has 210 in Tuscaloosa. Same rating, about a tenth of the reviews. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=A+%26+L+Lawncare+Cottondale+AL
 
 ### L7. B Tops Landscaping INC. — Montgomery, AL (score 97)
@@ -598,13 +598,13 @@ Counts come from each business's own Jobber Sites Google widget or from web mirr
 ### L9. TN Lawnsmiths, LLC — Murfreesboro, TN (score 97)
 - Email: tnlawnsmiths@gmail.com · Phone: (615) 796-6475 · Site: https://tnlawnsmiths.jobbersites.com/
 - Reviews: ~16 @ 5.0 (Review count via Exa/gigopro 5.0 from 16 (not Google Maps; verify))
-- Opener: Saw TN Lawnsmiths, LLC books through Jobber and shows 16 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: Jimmy, your 16 Google reviews are all 5 stars. Primm's has 159 in Murfreesboro and Premier Turf has 57 at 4.5. You've got the better rating, so the gap is just volume. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=TN+Lawnsmiths%2C+LLC+Murfreesboro+TN
 
 ### L10. Bros Mow Landscape, LLC — Brentwood, TN (score 97)
 - Email: braden@brosmowlandscape.com · Phone: (615) 870-9543 · Site: https://brosmowlandscape.jobbersites.com/
 - Reviews: ~17 @ 4.8 (Review count via SnowLawn 4.8 from 17 Google (not Google Maps; verify))
-- Opener: Saw Bros Mow Landscape, LLC books through Jobber and shows 17 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You're at 17 Google reviews. Pineda Properties has 67 in Brentwood, and Diamond and Destined have about 40. That's a small enough gap to close in one season if every customer gets asked. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Bros+Mow+Landscape%2C+LLC+Brentwood+TN
 
 ### L11. Tri-Star Landscaping — Arrington, TN (score 97)
@@ -622,7 +622,7 @@ Counts come from each business's own Jobber Sites Google widget or from web mirr
 ### L13. Tolson Lawn Services LLC — Hartsville, SC (score 97)
 - Email: tolsonlawn@gmail.com · Phone: (843) 858-2038 · Site: https://tolsonlawnservicesllc.jobbersites.com/
 - Reviews: ~24 (Review count via their own Jobber Sites page (embedded Google review widget))
-- Opener: Saw Tolson Lawn Services LLC books through Jobber and shows 24 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You're at about 29 Google reviews and Evergreen Landscapes has 42. That's the only Hartsville lawn shop ahead of you. Roughly a dozen more and you're #1. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Tolson+Lawn+Services+LLC+Hartsville+SC
 
 ### L14. D&D Lawn Care of Cane Bay, LLC — Summerville, SC (score 97)
@@ -652,7 +652,7 @@ Counts come from each business's own Jobber Sites Google widget or from web mirr
 ### L18. Transparent Pool Service LLC — North Fort Myers, FL (score 92)
 - Email: transparentpoolservicefl@gmail.com · Phone: (239) 200-3672 · Site: https://transparentpoolservice.jobbersites.com/
 - Reviews: ~28 (Review count via their own Jobber Sites page (embedded Google review widget))
-- Opener: Saw Transparent Pool Service LLC books through Jobber and shows 28 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: Your 28 Google reviews are all 5.0, but Gulfstream Pool Care has 263 in North Fort Myers. Weekly pool routes are the easiest place to ask every customer. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Transparent+Pool+Service+LLC+North+Fort+Myers+FL
 
 ### L19. Spiffy Brothers Pressure Washing — Raleigh, NC (score 92)

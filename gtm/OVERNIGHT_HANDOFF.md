@@ -21,7 +21,7 @@ Latest site commits: `b507d0e` adds a separate Guides column to the footer (depl
   - Rows 258 onward came from Nextdoor (71 rows). 57 of those emails come from the business's own Nextdoor listing, not a website.
   - Review counts for the new rows come from web mirror sites, not Google Maps. Re-check Maps before every send.
 - **`outreach_ready_top25.md`**: the top 25 Hot leads with audited review gaps, plus three appended sections of newly Hot leads that have email (12 + 10 + 8). 10 of them now carry openers from the review-gap audits.
-- **`audits/review-gap-audits.md/.csv`: 33 audits** (15 earlier, then 10 and 8 more on 2026-10-27).
+- **`audits/review-gap-audits.md/.csv`: 41 audits** (15 earlier, then 10 and 8 more on 2026-10-27).
 - **New pages:** https://getreviewask.com/birdeye-alternative (Birdeye shows no list price), a review-gap callout on /for-jobber, and https://getreviewask.com/podium-alternative (Podium pricing is sales-quoted, so the page says that rather than quoting a number).
 - **`community_posts_ready.md`**: three ready-to-paste posts for the Jobber Community, Facebook groups, and Reddit, with no invented claims.
 - Also ready: `pitch-vs-jobber-marketing-suite.md`, `outreach-sequences.md`, `outreach_email.md`, `dm_scripts.md`, `growth-system.md`, `lead-sources-playbook.md`, `icp-and-scoring.md`.
@@ -38,3 +38,8 @@ Latest site commits: `b507d0e` adds a separate Guides column to the footer (depl
 - **Render auto-deploy.** Pushes to GitHub `main` don't seem to deploy on their own, so every deploy tonight was triggered through the API. To fix it, turn on Auto-Deploy in the Render dashboard for srv-dbfbc94s728c73epr4bg (one click).
 - **Legal entity.** Twilio was filed under your own name as a sole proprietor because there is no EIN. Decide whether ReviewAsk stays a sole proprietorship or moves to an LLC/EIN, then make Terms/Privacy, Stripe, and Twilio match.
 - **Cleanup:** a stray `TWILIO_AUTH_TOKEN_B64` env var may still be on Render; worth deleting.
+
+## Update 2026-10-27 ~2:45 AM ET
+- Review-gap audits: 41 total. New: Daystar Exterior Cleaning, On Target Pressure Washing, Grasshopper Home, A & L Lawncare, TN Lawnsmiths, Bros Mow Landscape, Tolson Lawn Services, Transparent Pool Service. Their openers are updated in outreach_ready_top25.md and the CSV.
+- New page: https://getreviewask.com/tools/review-gap, a review-gap calculator that runs in the browser with no data capture. The 15% rate is labeled as an assumption. Linked from the Footer Guides column and the sitemap.
+- Skipped: Solar Pro Wash, Parra, B Tops, PWS, PV Repair, Spiffy, PoolFix. Not reached this pass.

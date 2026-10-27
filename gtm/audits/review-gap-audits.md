@@ -636,3 +636,158 @@ To close it in 6 months: ~7 new reviews/mo ≈ 47 asks/mo at a 15% response rate
 **Sources:** https://wanderboat.ai (Zack count) | https://exa.ai/library/places?q=93e895ce65da02f6 | https://exa.ai/library/places?q=ee300229d252e29b
 
 **Notes:** Thin comparison set: no Google-counted handyman competitors were found (Thumbtack and HomeAdvisor handymen are excluded). A&J Electric is an adjacent trade. Treat this as an "extend your lead" pitch.
+
+## Daystar Exterior Cleaning (Bradenton, FL)
+```
+Google Review Gap — Daystar Exterior Cleaning (Bradenton, "pressure washing Bradenton")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         19  4.8
+#1 2 Bros & A Hose Pressure Washing  153  5.0
+#2 Paradise Pressure Washing  143  4.9
+#3 Precision Pressure Washing & Paver Sealing  96  5.0
+
+Gap to top-3 average: 112 reviews (gap to leader: 134)
+To close it in 6 months: ~23 new reviews/mo ≈ 154 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You've been washing Bradenton for 25+ years, but your site shows 19 Google reviews. Paradise has 143 and 2 Bros & A Hose has 153. That gap is about asking, not about the work.
+
+**Sources:** https://daystarexteriorcleaning.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=f2132a74ad46479f | https://exa.ai/library/place/7pfrmfq2n4c
+
+## On Target Pressure Washing LLC (Summerville, SC)
+```
+Google Review Gap — On Target Pressure Washing LLC (Summerville, "pressure washing Summerville")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         8  5.0
+#1 Pepper's Pressure Washing  600  5.0
+#2 Jeff's Exterior Washing  498  5.0
+#3 ProForm Pressure Washing  40  
+
+Gap to top-3 average: 371 reviews (gap to leader: 592)
+To close it in 6 months: ~99 new reviews/mo ≈ 660 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 8 Google reviews are all 5 stars, but Jeff's Exterior Washing shows 498 in Summerville. Even ProForm has 40. HOA boards compare those numbers before they call.
+
+**Sources:** https://ontargetpressurewashingllc.jobbersites.com (own Google widget) | https://jeffsexteriorwashing.com/testimonials/ | https://pepperspressurewashing.com/reviews | https://www.chamberofcommerce.com (ProForm 40)
+
+**Notes:** Jeff's (498) and Pepper's (600+) counts come from their own sites; Chamber shows 292 for Jeff's. Pepper's is Johns Island-based and serves Summerville.
+
+## Grasshopper Home (Raleigh, NC)
+```
+Google Review Gap — Grasshopper Home (Raleigh, "lawn care Raleigh")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         3  5.0
+#1 Triangle Lawn Care  429  4.9
+#2 Augusta Lawn Care of NW Raleigh  172  4.8
+#3 Agape Lawn Company  131  4.8
+
+Gap to top-3 average: 241 reviews (gap to leader: 426)
+To close it in 6 months: ~71 new reviews/mo ≈ 474 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 3 Google reviews. Triangle Lawn Care has 429 and Augusta Lawn Care has 172. Every mow is a chance to ask, and right now almost none of them turn into reviews.
+
+**Sources:** https://mytriangleservices.com/company/grasshopper-home-services | https://exa.ai/library/places?q=6e464c901fcf6254 | https://exa.ai/library/places?q=a49f4a421ee8a65b
+
+**Notes:** Grasshopper's count is low-volume (3), so verify on Maps.
+
+## A & L Lawncare (Cottondale, AL)
+```
+Google Review Gap — A & L Lawncare (Cottondale, "lawn care Tuscaloosa")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         20  5.0
+#1 Ray of Hope Properties  210  5.0
+#2 Globetti's Lawn Care  195  5.0
+#3 Keys Lawn Care  71  4.9
+
+Gap to top-3 average: 139 reviews (gap to leader: 190)
+To close it in 6 months: ~32 new reviews/mo ≈ 214 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 20 Google reviews are all 5 stars. Globetti's has 195 and Ray of Hope has 210 in Tuscaloosa. Same rating, about a tenth of the reviews.
+
+**Sources:** https://exa.ai/library/places?q=74137f0b6aae5074 | https://www.expertise.com/home-improvement/lawn-service/alabama/tuscaloosa | https://snowlawn.net/al/tuscaloosa/Keys
+
+**Notes:** Exa shows 20; the site widget and Exa's place page show 12. I used 20.
+
+## TN Lawnsmiths, LLC (Murfreesboro, TN)
+```
+Google Review Gap — TN Lawnsmiths, LLC (Murfreesboro, "lawn care Murfreesboro")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         16  5.0
+#1 Primm's Landscaping  159  4.8
+#2 Premier Turf Management  57  4.5
+#3 Green Path Landscape Co.  26  4.8
+
+Gap to top-3 average: 65 reviews (gap to leader: 143)
+To close it in 6 months: ~24 new reviews/mo ≈ 160 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Jimmy, your 16 Google reviews are all 5 stars. Primm's has 159 in Murfreesboro and Premier Turf has 57 at 4.5. You've got the better rating, so the gap is just volume.
+
+**Sources:** https://exa.ai/library/places?q=2f07f530b4baa139
+
+**Notes:** Goat Turf (288, artificial turf) was left out of the comparison.
+
+## Bros Mow Landscape, LLC (Brentwood, TN)
+```
+Google Review Gap — Bros Mow Landscape, LLC (Brentwood, "landscaping Brentwood TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         17  4.8
+#1 Pineda Properties  67  
+#2 Diamond Lawn Services  43  
+#3 Destined Landscapes  42  
+
+Gap to top-3 average: 34 reviews (gap to leader: 50)
+To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 17 Google reviews. Pineda Properties has 67 in Brentwood, and Diamond and Destined have about 40. That's a small enough gap to close in one season if every customer gets asked.
+
+**Sources:** https://snowlawn.net/tn/brentwood/BrosMow | https://exa.ai/library/places?q=4d5884fe52321992 | https://www.contractorsranked.com/contractor/brentwood-tn/diamond-lawn-services-llc
+
+**Notes:** Color Burst shows 40–71 across sources and was left out.
+
+## Tolson Lawn Services LLC (Hartsville, SC)
+```
+Google Review Gap — Tolson Lawn Services LLC (Hartsville, "lawn care Hartsville SC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         29  5.0
+#1 Evergreen Landscapes  42  5.0
+#2 Belin Superior Lawn Service  15  4.7
+
+Gap to top-3 average: 0 reviews (gap to leader: 13)
+To close it in 6 months: ~3 new reviews/mo ≈ 20 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 29 Google reviews and Evergreen Landscapes has 42. That's the only Hartsville lawn shop ahead of you. Roughly a dozen more and you're #1.
+
+**Sources:** https://snowlawn.net/sc/hartsville/Tolson | https://snowlawn.net/sc/hartsville/Evergreen | https://reviews.birdeye.com/d/lawn-services/hartsville-sc/
+
+**Notes:** Their own site widget shows 24 and SnowLawn shows 29; I used 29. Belin's count is from Birdeye.
+
+## Transparent Pool Service LLC (North Fort Myers, FL)
+```
+Google Review Gap — Transparent Pool Service LLC (North Fort Myers, "pool service North Fort Myers")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         28  5.0
+#1 Gulfstream Pool Care  263  4.8
+
+Gap to top-3 average: 235 reviews (gap to leader: 235)
+To close it in 6 months: ~40 new reviews/mo ≈ 267 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 28 Google reviews are all 5.0, but Gulfstream Pool Care has 263 in North Fort Myers. Weekly pool routes are the easiest place to ask every customer.
+
+**Sources:** https://transparentpoolservice.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=c33f304e21eadca6 | https://verifiedpoolpros.com/listing/gulfstream-pool-care-n-ft-myers-fl/
+
+**Notes:** Miromar Pools (about 220) is a pool builder and was left out. Exa shows 26 for Transparent; the widget shows 28.

@@ -29,3 +29,8 @@
 - Site: added https://getreviewask.com/birdeye-alternative (FAQ JSON-LD, footer, sitemap) and a "Check your review gap" callout on /for-jobber.
 
 - Jobber Sites pass 3 enrichment (2026-10-27, ~2:40 AM ET): all 51 rows (401–451) searched. 27 got counts. 15 came from the Google review widget embedded on their own Jobber Sites page; the rest came from mirrors. 22 became newly Hot with email (section L). 24 are [BLOCKED] with a reason. Paradise Pools (1.0) and Downtown Pools (3.9) score Hot but are held back. Woody's (227), High Tide (~201, aggregate) and Domino's (103) scored down.
+
+## Update 2026-10-27 ~2:45 AM ET
+- Review-gap audits: 41 total. New: Daystar Exterior Cleaning, On Target Pressure Washing, Grasshopper Home, A & L Lawncare, TN Lawnsmiths, Bros Mow Landscape, Tolson Lawn Services, Transparent Pool Service. Their openers are updated in outreach_ready_top25.md and the CSV.
+- New page: https://getreviewask.com/tools/review-gap, a review-gap calculator that runs in the browser with no data capture. The 15% rate is labeled as an assumption. Linked from the Footer Guides column and the sitemap.
+- Skipped: Solar Pro Wash, Parra, B Tops, PWS, PV Repair, Spiffy, PoolFix. Not reached this pass.
