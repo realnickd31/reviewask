@@ -18,7 +18,7 @@ const faqs = [
   { q: "Is there a contract?", a: "No. $39/month or $390/year after a 7-day free trial. Cancel anytime from Settings." },
 ];
 export default function Page() {
-  return <main className="bg-white">
+  return <main id="main" className="bg-white">
     <header className="bg-navy-950 text-white"><div className="mx-auto flex h-16 max-w-5xl items-center gap-4 px-6"><Logo /><Link href="/login" className="ml-auto text-sm text-white/80 hover:text-white">Log in</Link><Link href="/signup" className="btn bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Start free trial</Link></div>
       <div className="mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
         <p className="eyebrow !text-lime-400">For Jobber users</p>

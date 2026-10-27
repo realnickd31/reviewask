@@ -39,7 +39,7 @@ const faqs = [
 ];
 export default async function Home() {
   const user = await currentUser();
-  return <main className="bg-white">
+  return <main id="main" className="bg-white">
     <header className="bg-navy-950 text-white">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6"><Logo href={user ? "/dashboard" : "/"} />
         <nav aria-label="Main" className="flex items-center gap-4 text-sm text-white/80 sm:gap-6">

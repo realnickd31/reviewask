@@ -12,7 +12,7 @@ export default function ReviewGapCalc() {
   const perMo = months > 0 ? Math.ceil(gap / months) : 0;
   const asks = rate > 0 ? Math.ceil(perMo / (rate / 100)) : 0;
   const fromJobs = Math.round(jobs * (rate / 100));
-  const num = (v: number, set: (n: number) => void, label: string, min = 0) => <div><label className="label">{label}</label><input className="input" type="number" min={min} inputMode="numeric" value={v} onChange={(e) => set(Math.max(min, Number(e.target.value) || 0))} /></div>;
+  const num = (v: number, set: (n: number) => void, label: string, min = 0) => <div><label className="label" htmlFor={"rg-" + label.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}>{label}</label><input id={"rg-" + label.replace(/[^a-z0-9]+/gi, "-").toLowerCase()} className="input" type="number" min={min} inputMode="numeric" value={v} onChange={(e) => set(Math.max(min, Number(e.target.value) || 0))} /></div>;
   return <div className="space-y-6">
     <div className="grid gap-4 sm:grid-cols-2">{num(you, setYou, "Your Google reviews")}{num(jobs, setJobs, "Jobs you finish per month")}</div>
     <div className="grid gap-4 sm:grid-cols-3">{num(c1, setC1, "Competitor #1 reviews")}{num(c2, setC2, "Competitor #2 reviews")}{num(c3, setC3, "Competitor #3 reviews")}</div>

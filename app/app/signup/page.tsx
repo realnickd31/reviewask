@@ -9,7 +9,7 @@ export const metadata = { title: "Start your free trial", alternates: { canonica
 export default async function Page() {
   const u = await currentUser();
   if (u) redirect(u.business_name && u.review_url ? "/dashboard" : "/onboarding");
-  return <main className="flex min-h-screen flex-col items-center justify-center bg-slate-50 px-4 py-12"><div className="w-full max-w-sm">
+  return <main id="main" className="flex min-h-screen flex-col items-center justify-center bg-slate-50 px-4 py-12"><div className="w-full max-w-sm">
     <div className="mb-8 flex justify-center"><Logo dark /></div>
     <div className="card p-8"><h1 className="text-xl font-semibold">Create your account</h1><p className="mb-6 mt-1.5 text-sm text-slate-500">7-day free trial, then $39/month. Cancel anytime.</p>
       <ul className="mb-6 space-y-1.5 text-sm text-slate-700"><li>✓ Automatic review asks after every Jobber or Housecall Pro job</li><li>✓ One polite day-3 follow-up</li><li>✓ 200 requests/month, sent by email (SMS rolling out)</li><li>✓ No contract · cancel before day 7 and pay nothing</li></ul>

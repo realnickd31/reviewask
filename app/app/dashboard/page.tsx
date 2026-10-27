@@ -36,7 +36,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   const remaining = Math.max(0, MONTHLY_QUOTA - used);
   const rows = db.prepare("SELECT * FROM review_requests WHERE user_id=? ORDER BY id DESC LIMIT 100").all(u.id) as ReviewRequest[];
   const pct = Math.min(100, (used / MONTHLY_QUOTA) * 100);
-  return <div><AppNav /><main className="mx-auto max-w-5xl space-y-6 px-4 py-8">
+  return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-6 px-4 py-8">
     {searchParams.dev_unlocked && <p className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">Dev mode: Stripe isn&apos;t configured, so your account was unlocked as a trial.</p>}
     {!active && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>

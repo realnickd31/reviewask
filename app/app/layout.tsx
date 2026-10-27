@@ -18,7 +18,7 @@ export const viewport = { themeColor: "#0a1224", width: "device-width", initialS
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen bg-slate-50 text-navy-900 antialiased`}>{children}</body>
+      <body className={`${inter.className} min-h-screen bg-slate-50 text-navy-900 antialiased`}><a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-navy-900 focus:shadow">Skip to content</a>{children}</body>
     </html>
   );
 }

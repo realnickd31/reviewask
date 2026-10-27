@@ -9,7 +9,7 @@ export default async function Page({ searchParams }: { searchParams: { step?: st
   const u = await requireUser();
   const pay = searchParams.step === "pay" && u.business_name;
   if (pay && isActive(u)) redirect("/dashboard");
-  return <main className="min-h-screen bg-slate-50 px-4 py-12"><div className="mx-auto max-w-lg">
+  return <main id="main" className="min-h-screen bg-slate-50 px-4 py-12"><div className="mx-auto max-w-lg">
     <div className="mb-8 flex justify-center"><Logo dark /></div>
     <p className="mb-3 text-center text-sm text-slate-500">Step {pay ? 2 : 1} of 2</p>
     {!pay ? <div className="card"><h1 className="text-xl font-semibold">Tell us about your business</h1><p className="mb-6 mt-1 text-sm text-slate-600">This is what customers will see in the email.</p>

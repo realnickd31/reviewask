@@ -12,7 +12,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
   const h = headers();
   const base = process.env.APP_URL || `${h.get("x-forwarded-proto") || "http"}://${h.get("host")}`;
   const hookUrl = `${base.replace(/\/$/, "")}/api/hooks/job-complete`;
-  return <div><AppNav /><main className="mx-auto max-w-2xl space-y-6 px-4 py-8">
+  return <div><AppNav /><main id="main" className="mx-auto max-w-2xl space-y-6 px-4 py-8">
     <section className="card"><h1 className="mb-5 text-xl font-bold">Business</h1><BizForm action={saveSettings} label="Save changes" name={u.business_name} url={u.review_url} /></section>
     <section className="card" id="automatic"><h2 className="mb-4 text-xl font-bold">Ask after every job</h2>
       <AutoToggle enabled={!!u.auto_enabled} provider={u.auto_provider} jobberConnected={!!u.jobber_connected} jobberReady={jobberConfigured()}
