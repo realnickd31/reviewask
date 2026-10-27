@@ -74,9 +74,10 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <tbody>{rows.map((r) => { const ch = chip(r); return <tr key={r.id} className="border-t"><td className="py-3 font-medium">{r.customer_name}</td>
           <td className="text-slate-600">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")}</td><td>{r.channel.replace("+", " + ")}</td>
           <td className="text-slate-500">{({ manual: "Typed in", bulk: "Spreadsheet", webhook: "Job software", test: "Test" } as Record<string, string>)[r.source || "manual"] || "Typed in"}</td>
-          <td><span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${ch.cls}`}>{ch.label}</span></td>
+          <td><span title={r.status === "queued" ? "Saved, not sent yet. Text messages are rolling out; add an email to send now." : undefined} className={`rounded-full px-2 py-0.5 text-xs font-semibold ${ch.cls}`}>{ch.label}</span></td>
           <td className="text-slate-500">{fmt(r.created_at)}</td>
           <td className="text-slate-500">{r.reminded_at ? fmt(r.reminded_at) : r.remind_at && r.status === "sent" ? `Due ${fmt(r.remind_at)}` : "—"}</td></tr>; })}</tbody></table>}
+      {rows.some((r) => r.status === "queued") && <p className="mt-3 text-xs text-slate-500"><strong>Queued</strong> means saved but not sent yet. Text messages are still rolling out, so phone-only asks wait here. Add the customer&apos;s email to send now.</p>}
     </section>
   </main></div>;
 }
