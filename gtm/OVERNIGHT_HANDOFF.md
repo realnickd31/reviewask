@@ -14,7 +14,7 @@
 | Community posts | `gtm/community_posts_ready.md` (refreshed ~4:33 AM ET; you post them yourself) |
 | SEO pages live | `/guides` + 6 trade guides (lawn care, cleaning, pressure washing, HVAC, pool service, pest control) |
 
-## Approvals needed (in order)
+## Approvals needed (in order). Step-by-step: `gtm/SEND_DAY_RUNBOOK.md`
 1. **Sending inbox**: the domain or mailbox to send from. Max 30 sends a day.
 2. **Physical mailing address** for the footer ([PHYSICAL ADDRESS]) and an **unsubscribe link** ([UNSUBSCRIBE LINK]).
 3. **OK for each send**, after a same-morning Maps re-check (every draft's notes have its Maps link).
@@ -184,3 +184,8 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Referral: `gtm/innovation/referral-program-draft.md` is now an ops brief (offer, eligibility, manual Stripe-credit steps, abuse notes, DRAFT copy, 5 OKs needed). No code and no Stripe coupons or credits.
 - Site (c706c41, dep-dbg6cpom7kps73bi1kq0, live): a friendly 404 with links to home, pricing, /guides and the review-gap tool, plus noindex. Sitemap already lists all 25 public pages. Login and signup trial/SMS wording already matches.
 - QA: 28 of 28 return 200 on two clean rounds. There were brief 502s on 10 URLs right as the deploy switched over; they cleared within ~1 min. /dashboard, /quick and /settings redirect 307 to login. Nothing sent.
+
+## Batch ~5:05 AM ET
+- `gtm/SEND_DAY_RUNBOOK.md`: first-morning send checklist (prerequisites, 20–30/day cap, per-send checks, day-3 rule, log columns, file map). Linked from the brief.
+- Needs Nick's input: /terms names no legal entity. Not edited.
+- No code change and no deploy. The only TODO is a Jobber field-name check in `app/lib/jobber.ts`; it's not an overnight-safe change. QA: home, /guides and /sms return 200; unknown URLs return 404 with the friendly page. Nothing sent.
