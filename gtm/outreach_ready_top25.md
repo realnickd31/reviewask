@@ -1500,7 +1500,7 @@ Counts come from Google mirrors, and the source is recorded for each one. WEAK m
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Nky+Lawn+Pros+Walton+KY
 - Opener: Saw your Jobber site. You're at 28 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
 
-## Day-1 send queue (DRAFT, scrubbed 2026-10-27 ~3:10 AM ET; nothing sent, needs Nick's approval)
+## Day-1 send queue (DRAFT, scrubbed 2026-10-27 ~3:05 AM ET; nothing sent, needs Nick's approval)
 Every lead here is an audited, Southeast, Hot lead with a public email. For each one I re-read the CSV row, the outreach note and the audit note, checking for: weak or conflicting sources, odd email domains, complaints, NiceJob or another review tool already in use, 100+ reviews, rescores, same-market conflicts, closed businesses, and ratings under 4.0. Task Tacklers and Stan's are excluded. Each opener is in the business's audit (gtm/audits/review-gap-audits.md).
 
 ### Ready after Maps check (24)

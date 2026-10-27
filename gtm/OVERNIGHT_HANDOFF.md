@@ -1,4 +1,4 @@
-# ReviewAsk morning brief: Tue Oct 27, 2026 (updated ~3:20 AM ET)
+# ReviewAsk morning brief: Tue Oct 27, 2026 (updated ~3:05 AM ET)
 
 **Nothing was emailed, posted, DMed or submitted to any prospect or community overnight.** The review counts below come from web mirror sites and the Google widgets on Jobber Sites pages, not from Google Maps directly. Re-check Maps before every send.
 
