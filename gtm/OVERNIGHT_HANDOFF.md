@@ -91,3 +91,10 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Product: dashboard first-run 3-step guide (connect Jobber/HCP, send first ask to yourself, optional spreadsheet backlog; email now, SMS rolling out). Commit b4c3aff, deploy dep-dbg5pics728c73dffrvg live; public URLs 200, /dashboard 307 to login.
 - No audits: no clean-comp Hot leads remain. Totals: 789 prospects, 252 Hot, 625 w/ email, 167 audits, 43 Day-1 drafts.
 - Sending still needs Nick's inbox + physical address + per-send OK.
+
+## Batch AL (~4:27 AM ET)
+- Touch-2: 19 Day-3 reply-in-thread DRAFTS in gtm/day1_email_drafts_batch2_touch2.md (name+city only, no numbers, email-first backlog, SMS rolling out). Fixed Gilileo's touch-1 opener (now 'just ahead of Made In The Shade (45)').
+- Discovery (HCP booking pages + Nextdoor/Exa Jobber Client Hub angle): +13 deduped leads, +2 Hot (Landscaping And Moore, Wayne PA, 36 @5.0; Straight Line Seamless Gutter, Negaunee MI, 8 @5.0). Rest Warm/low: 9 have unverified/conflicting counts or Birdeye/Thumbtack-only, 2 low rating (Cannons 4.0, Floreks 3.8).
+- No audits: new Hot comps not checked yet.
+- Data-only, no deploy. QA: marketing URLs 200, /dashboard 307 to login.
+- Totals: 802 prospects, 254 Hot, 638 w/ email, 167 audits, 43 touch-1 + 43 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.
