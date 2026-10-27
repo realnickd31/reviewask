@@ -2550,3 +2550,171 @@ To close it in 6 months: ~15 new reviews/mo ≈ 100 asks/mo at a 15% response ra
 **Sources:** CSV/own Jobber site (7, 4.4) | https://exa.ai/library/places?q=8fde330883a50bd8 | https://www.contractorsranked.com/contractor/franklin-tn/creative-stone-landscaping-llc
 
 **Notes:** LOW RATING (4.4) on few reviews. I excluded Moon Valley and Hewitt (nurseries/garden centers). Creative Stone shows 46–50; I used 46.
+
+
+## GRANDSCAPE OUTDOOR MANAGEMENT LLC (Palm Bay, FL)
+```
+Google Review Gap — GRANDSCAPE OUTDOOR MANAGEMENT LLC (Palm Bay, "lawn care landscaping Palm Bay FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         11  4.6
+#1 Flawless Lawncare & Landscaping  102  4.3
+#2 Local Roots Property Maintenance  52  5.0
+#3 TruLawns  49  5.0
+
+Gap to top-3 average: 57 reviews (gap to leader: 91)
+To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 11 Google reviews (4.6) in Palm Bay. TruLawns has 49 and Local Roots 52, and Flawless leads with 102 at 4.3.
+
+**Sources:** CSV/own Jobber site (11) | https://exa.ai/library/places?q=d159b459e33f2bd5 | https://www.contractorsranked.com/contractor/palm-bay-fl/local-roots-property-maintenance-llc
+
+**Notes:** I excluded Vision 43 (garden center). Same market as Byrd's (flagged earlier), so don't send both the same week.
+
+
+## Rhodes Lawn Care & Landscaping (Lebanon, TN)
+```
+Google Review Gap — Rhodes Lawn Care & Landscaping (Lebanon, "lawn care Lebanon TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         4  n/a
+#1 Performance Lawns Inc.  210  4.9
+#2 Greenhand Landscaping  96  5.0
+#3 Fall River Landscape LLC  61  4.9
+
+Gap to top-3 average: 119 reviews (gap to leader: 206)
+To close it in 6 months: ~20 new reviews/mo ≈ 134 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 4 Google reviews in Lebanon. Holcomb Lawn Care has 23 and Emmanuel 33, which is a realistic first target, and Performance Lawns leads with 210.
+
+**Sources:** CSV/own Jobber site (4) | https://www.contractorsranked.com/contractor/lebanon-tn/performance-lawns-inc | https://exa.ai/library/places?q=4626820e9a3f16ba | https://exa.ai/library/place/fr9bvttp8gy
+
+**Notes:** Rating not captured. I excluded mower dealers (Jr Mowers, Cirrus).
+
+
+## Gotcha Covered Lawn Care And More LLC (Greensboro, NC)
+```
+Google Review Gap — Gotcha Covered Lawn Care And More LLC (Greensboro, "lawn care Greensboro NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         10  5.0
+#1 Tender Lawn Care  606  4.9
+#2 The Green Team  259  4.9
+#3 New Garden Landscaping  111  4.8
+
+Gap to top-3 average: 316 reviews (gap to leader: 596)
+To close it in 6 months: ~53 new reviews/mo ≈ 354 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 10 Google reviews are all 5 stars. In Greensboro, New Garden has 111, The Green Team 259 and Tender Lawn Care 606.
+
+**Sources:** CSV/own Jobber site (10; Exa also shows 10) | https://exa.ai/library/places?q=d776deb75b824504 | https://snowlawn.net/nc/greensboro/GreenTeam
+
+**Notes:** I excluded Nature's Select (franchise) and LawnStarter. The Green Team shows 259–279; I used 259. KMG Landscaping (same city) was not audited, to avoid a duplicate send.
+
+
+## Warrior Landscaping & Maintenance LLC (Wilmington, NC)
+```
+Google Review Gap — Warrior Landscaping & Maintenance LLC (Wilmington, "landscaping Wilmington NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         1  5.0
+#1 Vinedresser Lawn and Landscape Maintenance  592  4.9
+#2 Thorpe Landscapes  153  4.7
+#3 PolyLandscapes  125  5.0
+
+Gap to top-3 average: 289 reviews (gap to leader: 591)
+To close it in 6 months: ~49 new reviews/mo ≈ 327 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You have 1 Google review (5.0). In Wilmington, landscapers like PolyLandscapes (125) and Thorpe (153) show how quickly steady asking adds up.
+
+**Sources:** CSV/own Jobber site (1) | https://www.contractorsranked.com/contractor/wilmington-nc/vinedresser-lawn-and-landscape-maintenance | https://exa.ai/library/places?q=ef0e5df1ea2f239d | https://www.contractorsranked.com/contractor/wilmington-nc/polylandscapes
+
+**Notes:** Vinedresser shows 592–820; I used 592. Very new profile; the backlog upload is the hook.
+
+
+## Instaclean Exteriors (West Columbia, SC)
+```
+Google Review Gap — Instaclean Exteriors (West Columbia, "pressure washing Columbia SC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         2  5.0
+#1 Elevation Power Washing  284  5.0
+#2 Douglas Co. Power Washing  153  5.0
+#3 Soda City Pressure Wash  119  5.0
+
+Gap to top-3 average: 184 reviews (gap to leader: 282)
+To close it in 6 months: ~31 new reviews/mo ≈ 207 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 2 Google reviews (5.0). Soda City Pressure Wash, which also serves West Columbia, has 119, and Douglas Co. 153.
+
+**Sources:** CSV/own Jobber site (2) | https://reports.lpraudit.com/south-carolina/columbia/pressure-washing/ | https://columbiasccleaning.com/listing/soda-city-pressure-wash-186d07/
+
+**Notes:** Soda City shows 119–148 by source; I used 119. I excluded Squeegee Clean (720, window-focused) and Southeast Detail (auto detailing).
+
+
+## Rosebud Landscape & Design (Riverview, FL)
+```
+Google Review Gap — Rosebud Landscape & Design (Riverview, "landscaping Riverview FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         4  5.0
+#1 Top Lawn Pros  524  4.8
+#2 Florida Groundskeeper  129  4.8
+#3 Supreme Green Landscaping Plus  49  4.7
+
+Gap to top-3 average: 230 reviews (gap to leader: 520)
+To close it in 6 months: ~39 new reviews/mo ≈ 260 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 4 Google reviews are all 5 stars. In Riverview, Supreme Green has 49 and Florida Groundskeeper 129.
+
+**Sources:** CSV/own Jobber site (4) | https://www.contractorsranked.com/contractor/riverview-fl/top-lawn-pros | https://www.contractorsranked.com/contractor/riverview-fl/florida-groundskeeper | https://exa.ai/library/place/l8ndy6w43rs
+
+**Notes:** I excluded LawnStarter, Artificial Grass Empire, and LawnStarter-platform review counts. Top Lawn Pros shows 524–695; I used 524.
+
+
+## Robles Flooring & Painting Inc. (Wake Forest, NC)
+```
+Google Review Gap — Robles Flooring & Painting Inc. (Wake Forest, "painters Wake Forest NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         6  5.0
+#1 Dixie Paint Inc  80  5.0
+#2 Prolific Painting LLC  76  5.0
+#3 Graceful Touch Painting  44  5.0
+
+Gap to top-3 average: 61 reviews (gap to leader: 74)
+To close it in 6 months: ~11 new reviews/mo ≈ 74 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 6 Google reviews are all 5 stars. In Wake Forest, Graceful Touch has 44, Prolific 76 and Dixie Paint 80, all at 5.0.
+
+**Sources:** CSV/own Jobber site (6) | https://www.contractorsranked.com/contractor/wake-forest-nc/dixie-paint-inc-of-raleigh-nc | https://www.contractorsranked.com/contractor/wake-forest-nc/prolific-painting-llc | https://exa.ai/library/places?q=dd508946befdb7d4
+
+**Notes:** Graceful Touch's count comes from a search summary only. All-Pro Painting is a franchise (excluded).
+
+
+## Grissom's Grounds Services LLC (Elizabethton, TN)
+```
+Google Review Gap — Grissom's Grounds Services LLC (Elizabethton, "lawn care Elizabethton TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         4  5.0
+#1 Atta Boy Lawns & Christmas Lights  316  4.8
+#2 Green Man Lawn And Home LLC  54  5.0
+#3 TruEdge Lawn & Landscape  48  5.0
+
+Gap to top-3 average: 136 reviews (gap to leader: 312)
+To close it in 6 months: ~23 new reviews/mo ≈ 154 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 4 Google reviews are all 5 stars. In Elizabethton, TruEdge has 48 and Green Man 54, both reachable with a steady ask.
+
+**Sources:** CSV/own Jobber site (4) | https://exa.ai/library/places?q=9a66ad405720cd51 | https://www.contractorsranked.com/contractor/elizabethton-tn/truedge-lawn-and-landscape
+
+**Notes:** Atta Boy's count includes its Christmas-light business, which inflates the average; the realistic targets are TruEdge and Green Man.

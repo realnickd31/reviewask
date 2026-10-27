@@ -1,4 +1,4 @@
-# ReviewAsk: morning brief (updated ~3:46 AM ET, Tue Oct 27 2026)
+# ReviewAsk: morning brief (updated ~3:49 AM ET, Tue Oct 27 2026)
 
 **Nothing has been emailed, posted, DMed or submitted.** Everything below is a draft waiting for your approval.
 
@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | Prospects (`gtm/prospects_overnight.csv`) | 750 (249 Hot / 465 Warm / 586 with email) |
-| Review-gap audits (`gtm/audits/`) | 128 |
+| Review-gap audits (`gtm/audits/`) | 136 |
 | Day-1 queue (`gtm/outreach_ready_top25.md`, "Day-1 send queue") | 24 ready, 8 on hold |
 | Day-1 email drafts (`gtm/day1_email_drafts.md`) | 24 touch-1, DRAFT ONLY |
 | Day-1 touch-2 drafts (`gtm/day1_email_drafts_touch2.md`) | 24, DRAFT ONLY (Day 3, same thread) |
@@ -46,3 +46,8 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - **New tool live:** https://getreviewask.com/tools/review-link. It turns a Place ID into a direct Google review link in the browser, with no signup, and has a soft CTA. It's in the footer Guides and the sitemap.
 - **QA:** /tools/review-link, /for-jobber, /templates/review-request, /, /pricing and /housecall-pro-google-reviews all return 200. Both backlog boxes and the "See message templates" link show on the live pages.
 - **7 more audits (128 total):** section AC. Flags: Duplechain HVAC (huge Huntsville gap, pitch saving time), Tri-Star (4.4 rating), Johnson's Tree (own count 14 vs 17). I skipped Little Pickle HVAC because I only found weak competitor sources.
+
+## ~3:49 AM ET updates
+- **New page live:** https://getreviewask.com/google-review-software-home-services. It's a category page for any home or field-service business: what to look for, an honest dated comparison (Marketing Suite $99, NiceJob $75/$125, Podium and Birdeye quoted) with "best when" for each, how ReviewAsk works (email now, SMS rolling out), and links to the gap tool, link tool, templates, /for-jobber and /for-housecall-pro. It's in the footer and sitemap. Deployed 1e993e8 and checked 200.
+- **QA:** /tools/review-link, /templates/review-request and /for-jobber (backlog box present) all return 200.
+- **8 more audits (136 total):** section AD. Flags: GRANDSCAPE shares the Palm Bay market with Byrd's, so stagger. Most of this batch have very few reviews (1–11), so the backlog upload is the main pitch. Atta Boy's count (Elizabethton) includes its Christmas-light business. Graceful Touch (Wake Forest) comes from a search summary only.

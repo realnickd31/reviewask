@@ -1699,3 +1699,38 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AC. Tri-Star Landscaping (Arrington, TN)
 - Opener: You're at 7 Google reviews in the Franklin/Arrington area. Creative Stone has 46, and Conley Lawn has 125 at 5.0. A steady ask after every job also lifts a rating fast.
 - Gap to top-3 avg 90; leader gap 118; ~100 asks/mo [SPEC]. Notes: LOW RATING (4.4) on few reviews. I excluded Moon Valley and Hewitt (nurseries/garden centers). Creative Stone shows 46–50; I used 46.
+
+
+## AD. Audited 2026-10-27 ~3:48 AM ET (8 SE Hot)
+
+### AD. GRANDSCAPE OUTDOOR MANAGEMENT LLC (Palm Bay, FL)
+- Opener: You're at 11 Google reviews (4.6) in Palm Bay. TruLawns has 49 and Local Roots 52, and Flawless leads with 102 at 4.3.
+- Gap to top-3 avg 57; leader gap 91; ~67 asks/mo [SPEC]. Notes: I excluded Vision 43 (garden center). Same market as Byrd's (flagged earlier), so don't send both the same week.
+
+### AD. Rhodes Lawn Care & Landscaping (Lebanon, TN)
+- Opener: You're at 4 Google reviews in Lebanon. Holcomb Lawn Care has 23 and Emmanuel 33, which is a realistic first target, and Performance Lawns leads with 210.
+- Gap to top-3 avg 119; leader gap 206; ~134 asks/mo [SPEC]. Notes: Rating not captured. I excluded mower dealers (Jr Mowers, Cirrus).
+
+### AD. Gotcha Covered Lawn Care And More LLC (Greensboro, NC)
+- Opener: Your 10 Google reviews are all 5 stars. In Greensboro, New Garden has 111, The Green Team 259 and Tender Lawn Care 606.
+- Gap to top-3 avg 316; leader gap 596; ~354 asks/mo [SPEC]. Notes: I excluded Nature's Select (franchise) and LawnStarter. The Green Team shows 259–279; I used 259. KMG Landscaping (same city) was not audited, to avoid a duplicate send.
+
+### AD. Warrior Landscaping & Maintenance LLC (Wilmington, NC)
+- Opener: You have 1 Google review (5.0). In Wilmington, landscapers like PolyLandscapes (125) and Thorpe (153) show how quickly steady asking adds up.
+- Gap to top-3 avg 289; leader gap 591; ~327 asks/mo [SPEC]. Notes: Vinedresser shows 592–820; I used 592. Very new profile; the backlog upload is the hook.
+
+### AD. Instaclean Exteriors (West Columbia, SC)
+- Opener: You're at 2 Google reviews (5.0). Soda City Pressure Wash, which also serves West Columbia, has 119, and Douglas Co. 153.
+- Gap to top-3 avg 184; leader gap 282; ~207 asks/mo [SPEC]. Notes: Soda City shows 119–148 by source; I used 119. I excluded Squeegee Clean (720, window-focused) and Southeast Detail (auto detailing).
+
+### AD. Rosebud Landscape & Design (Riverview, FL)
+- Opener: Your 4 Google reviews are all 5 stars. In Riverview, Supreme Green has 49 and Florida Groundskeeper 129.
+- Gap to top-3 avg 230; leader gap 520; ~260 asks/mo [SPEC]. Notes: I excluded LawnStarter, Artificial Grass Empire, and LawnStarter-platform review counts. Top Lawn Pros shows 524–695; I used 524.
+
+### AD. Robles Flooring & Painting Inc. (Wake Forest, NC)
+- Opener: Your 6 Google reviews are all 5 stars. In Wake Forest, Graceful Touch has 44, Prolific 76 and Dixie Paint 80, all at 5.0.
+- Gap to top-3 avg 61; leader gap 74; ~74 asks/mo [SPEC]. Notes: Graceful Touch's count comes from a search summary only. All-Pro Painting is a franchise (excluded).
+
+### AD. Grissom's Grounds Services LLC (Elizabethton, TN)
+- Opener: Your 4 Google reviews are all 5 stars. In Elizabethton, TruEdge has 48 and Green Man 54, both reachable with a steady ask.
+- Gap to top-3 avg 136; leader gap 312; ~154 asks/mo [SPEC]. Notes: Atta Boy's count includes its Christmas-light business, which inflates the average; the realistic targets are TruEdge and Green Man.

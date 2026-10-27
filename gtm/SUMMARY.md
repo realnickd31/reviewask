@@ -154,3 +154,7 @@
 ## Update 2026-10-27 ~3:46 AM ET
 - /for-jobber backlog callout plus homepage backlog copy accuracy (email, SMS rolling out, 200 a month). Shipped the /tools/review-link generator (footer and sitemap). Deployed b3d0a50; new URLs verified 200.
 - 7 audits: All Season Lawncare (TN), Coastal Handymen (GA), Revolutionary Repair (AL), Duplechain HVAC (AL), Johnson's Tree (AL), Supreme Greens (FL), Tri-Star (TN). 128 total. Nothing sent.
+
+## Update 2026-10-27 ~3:49 AM ET
+- Shipped /google-review-software-home-services (category page, dated comparison, internal links), added to footer and sitemap, deployed 1e993e8 and verified 200.
+- 8 audits: GRANDSCAPE (FL), Rhodes (TN), Gotcha Covered (NC), Warrior Landscaping (NC), Instaclean (SC), Rosebud (FL), Robles Painting (NC), Grissom's (TN). 136 total. Nothing sent.
