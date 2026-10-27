@@ -1602,3 +1602,34 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### Z. Mclaughlin’s Landscaping LLC (Charlotte, NC)
 - Opener: Your 25 Google reviews are all 5 stars. In Charlotte, local independents like GreenWorx180 (272) and PGA Lawn Care (235) are ten times that.
 - Gap to top-2 average 229; leader gap 247. Notes: WEAK: competitor counts come from aggregator summaries; I didn't open their listing pages. I excluded ExperiGreen (~3,070) and Top Turf (~2,667), which are big lawn-treatment companies. Verify on Maps.
+
+
+## AA. Audited 2026-10-27 ~3:36 AM ET (7 SE Hot)
+
+### AA. Rise n' Shine House Cleaning (Charlotte, NC)
+- Opener: You're at 54 Google reviews in Charlotte. The top independent cleaners, Amanda's Maid (876) and Fiv5 Star (838), got there by asking after every clean.
+- Gap to top-3 avg 654; leader gap 822; ~727 asks/mo [SPEC]. Notes: I excluded franchises and nationals (Zerorez, Molly Maid, Two Maids, Merry Maids, Stanley Steemer). Rating not captured. Fiv5 shows 838 (RatingsNearMe, Aug) vs 981 (HouseCleaningReport, Oct); I used 838.
+
+### AA. Atlanta Best Handyman LLC (Atlanta, GA)
+- Opener: You're at 40 Google reviews (4.9) in Atlanta. Mr. Handy ATL has 93 at the same rating, and Finishing Touches leads the independents with 336.
+- Gap to top-3 avg 175; leader gap 296; ~200 asks/mo [SPEC]. Notes: I excluded Mr. Handyman (franchise) and Hux (marketplace-style). The Hands You Demand Google count is from Expertise.com.
+
+### AA. Byrd's Lawn and Landscape (Palm Bay, FL)
+- Opener: You're at 99 Google reviews in Palm Bay, about level with Flawless (102). Only Vision 43, a garden center, has more. More recent 5-star reviews are the fastest way to lift your 4.4.
+- Gap to top-3 avg 2; leader gap 49; ~7 asks/mo [SPEC]. Notes: LOW RATING (4.4): pitch rating recovery more than volume. Vision 43 is a garden center, so that comparison is weak. They're already near the top on count.
+
+### AA. The PG Handyman (Jacksonville, FL)
+- Opener: Your 28 Google reviews are all 5 stars. In Jacksonville, independents like WSJ Remodeling (131, 5.0) and Jose Artigas (173) show what steady asking adds up to.
+- Gap to top-3 avg 111; leader gap 145; ~127 asks/mo [SPEC]. Notes: I excluded franchises (Mr. Handyman, Honey Do, Ace Handyman, Handyman Connection).
+
+### AA. Sarasota Lawn Care Services (Sarasota, FL)
+- Opener: You're at 29 Google reviews in Sarasota. Castillo Tree & Lawn has 121 and G&G has 175, both local independents.
+- Gap to top-3 avg 101; leader gap 146; ~114 asks/mo [SPEC]. Notes: I excluded TruGreen and Massey (nationals). The All Seasons count comes from a search summary only. Rating not captured.
+
+### AA. 615 Lawn and Landscapes (Nashville, TN)
+- Opener: You're at 25 Google reviews (4.6) in Nashville. Park View Lawn Care has 160, and Pure Turf shows 523 on its own reviews page.
+- Gap to top-3 avg 415; leader gap 612; ~467 asks/mo [SPEC]. Notes: I excluded Weed Man and TruGreen (franchise/national). Pure Turf: 523 on its own site vs 437 in an earlier audit; I used 523 (own site, newer).
+
+### AA. Macon’s Lawn and Landscape (Columbia, SC)
+- Opener: You're at 26 Google reviews in Columbia. Southern Vistas has 45, which is within reach this season, and Sparta Lawn Care leads with 660.
+- Gap to top-2 avg 327; leader gap 634; ~367 asks/mo [SPEC]. Notes: I excluded Augusta Lawn Care (franchise) and LawnStarter (marketplace). Sparta's 660 comes from a ChamberofCommerce listing, a weaker source; the near target is Southern Vistas (45).

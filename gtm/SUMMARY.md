@@ -142,3 +142,7 @@
 ## Update 2026-10-27 ~3:33 AM ET
 - Spreadsheet/CSV bulk upload verified end-to-end in code (UI, validation, route, quota). Touch-2 copy tightened to "email" with a "paste or upload" wording.
 - Homepage hero polish: Jobber & Housecall Pro + $39 in the eyebrow, and a secondary link to the review-gap calculator. Nothing sent.
+
+## Update 2026-10-27 ~3:37 AM ET
+- Pricing page: dated comparison table (Marketing Suite / NiceJob / Podium vs $39), deployed and verified 200. The HCP/Jobber review guides and the Marketing Suite alias were already live.
+- 7 audits: Rise n' Shine (NC), Atlanta Best Handyman (GA), Byrd's (FL), The PG Handyman (FL), Sarasota Lawn Care (FL), 615 Lawn (TN), Macon's (SC). 113 total. Nothing sent.

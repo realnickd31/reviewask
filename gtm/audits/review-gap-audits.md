@@ -2095,3 +2095,149 @@ To close it in 6 months: ~39 new reviews/mo ≈ 260 asks/mo at a 15% response ra
 **Sources:** CSV/own Jobber site (25) | https://ratingsnearme.com/charlotte-nc/landscaper-reviews | https://www.ratexyz.com/top/google/landscaping-lawn-care/in/united-states/charlotte
 
 **Notes:** WEAK: competitor counts come from aggregator summaries; I didn't open their listing pages. I excluded ExperiGreen (~3,070) and Top Turf (~2,667), which are big lawn-treatment companies. Verify on Maps.
+
+
+## Rise n' Shine House Cleaning (Charlotte, NC)
+```
+Google Review Gap — Rise n' Shine House Cleaning (Charlotte, "house cleaning Charlotte NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         54  n/a
+#1 Amanda’s Maid Cleaning Services  876  5.0
+#2 Fiv5 Star Cleaning  838  4.9
+#3 Queen City Cleaners  408  4.8
+
+Gap to top-3 average: 654 reviews (gap to leader: 822)
+To close it in 6 months: ~109 new reviews/mo ≈ 727 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 54 Google reviews in Charlotte. The top independent cleaners, Amanda's Maid (876) and Fiv5 Star (838), got there by asking after every clean.
+
+**Sources:** CSV/own Jobber site (54) | https://ratingsnearme.com/charlotte-nc/cleaners | https://prosource.app/best-house-cleaning-charlotte-nc/
+
+**Notes:** I excluded franchises and nationals (Zerorez, Molly Maid, Two Maids, Merry Maids, Stanley Steemer). Rating not captured. Fiv5 shows 838 (RatingsNearMe, Aug) vs 981 (HouseCleaningReport, Oct); I used 838.
+
+
+## Atlanta Best Handyman LLC (Atlanta, GA)
+```
+Google Review Gap — Atlanta Best Handyman LLC (Atlanta, "handyman Atlanta GA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         40  4.9
+#1 Finishing Touches Handyman & Maintenance  336  4.9
+#2 Hands You Demand  216  4.8
+#3 Mr. Handy ATL  93  4.9
+
+Gap to top-3 average: 175 reviews (gap to leader: 296)
+To close it in 6 months: ~30 new reviews/mo ≈ 200 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 40 Google reviews (4.9) in Atlanta. Mr. Handy ATL has 93 at the same rating, and Finishing Touches leads the independents with 336.
+
+**Sources:** CSV/own Jobber site (40) | https://prosource.app/best-handyman-atlanta-ga/ | https://www.expertise.com/home-improvement/handyman/georgia/atlanta
+
+**Notes:** I excluded Mr. Handyman (franchise) and Hux (marketplace-style). The Hands You Demand Google count is from Expertise.com.
+
+
+## Byrd's Lawn and Landscape (Palm Bay, FL)
+```
+Google Review Gap — Byrd's Lawn and Landscape (Palm Bay, "lawn care landscaping Palm Bay FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         99  4.4
+#1 Vision 43 Garden Center & Landscaping  148  5.0
+#2 Flawless Lawncare & Landscaping  102  4.3
+#3 Local Roots Property Maintenance  52  5.0
+
+Gap to top-3 average: 2 reviews (gap to leader: 49)
+To close it in 6 months: ~1 new reviews/mo ≈ 7 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 99 Google reviews in Palm Bay, about level with Flawless (102). Only Vision 43, a garden center, has more. More recent 5-star reviews are the fastest way to lift your 4.4.
+
+**Sources:** CSV/own Jobber site (99, 4.4) | https://exa.ai/library/places?q=d159b459e33f2bd5 | https://www.contractorsranked.com/contractor/palm-bay-fl/local-roots-property-maintenance-llc
+
+**Notes:** LOW RATING (4.4): pitch rating recovery more than volume. Vision 43 is a garden center, so that comparison is weak. They're already near the top on count.
+
+
+## The PG Handyman (Jacksonville, FL)
+```
+Google Review Gap — The PG Handyman (Jacksonville, "handyman Jacksonville FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         28  5.0
+#1 Jose Artigas, Handyman Services INC  173  4.9
+#2 WSJ Remodeling & Handyman Services  131  5.0
+#3 The Great Handyman  113  4.8
+
+Gap to top-3 average: 111 reviews (gap to leader: 145)
+To close it in 6 months: ~19 new reviews/mo ≈ 127 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 28 Google reviews are all 5 stars. In Jacksonville, independents like WSJ Remodeling (131, 5.0) and Jose Artigas (173) show what steady asking adds up to.
+
+**Sources:** CSV/own Jobber site (28) | https://reports.lpraudit.com/florida/jacksonville/handyman/ | https://www.contractorsranked.com/contractor/jacksonville-fl/jose-artigas-handyman-services-inc
+
+**Notes:** I excluded franchises (Mr. Handyman, Honey Do, Ace Handyman, Handyman Connection).
+
+
+## Sarasota Lawn Care Services (Sarasota, FL)
+```
+Google Review Gap — Sarasota Lawn Care Services (Sarasota, "lawn care Sarasota FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         29  n/a
+#1 G&G Garden and Lawn Care  175  4.6
+#2 Castillo Tree & Lawn Service Inc  121  4.9
+#3 All Seasons Landscape  93  5.0
+
+Gap to top-3 average: 101 reviews (gap to leader: 146)
+To close it in 6 months: ~17 new reviews/mo ≈ 114 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 29 Google reviews in Sarasota. Castillo Tree & Lawn has 121 and G&G has 175, both local independents.
+
+**Sources:** CSV/own Jobber site (29) | https://www.contractorsranked.com/contractor/sarasota-fl/g-and-g-garden-and-lawn-care | https://www.contractorsranked.com/contractor/sarasota-fl/castillo-tree-and-lawn-service-inc | https://exa.ai/library/places?q=83a12a0982cd18ec
+
+**Notes:** I excluded TruGreen and Massey (nationals). The All Seasons count comes from a search summary only. Rating not captured.
+
+
+## 615 Lawn and Landscapes (Nashville, TN)
+```
+Google Review Gap — 615 Lawn and Landscapes (Nashville, "lawn care Nashville TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         25  4.6
+#1 Turf Masters Lawn Care of Nashville  637  4.7
+#2 Pure Turf  523  4.9
+#3 Park View Lawn Care and Landscape  160  4.8
+
+Gap to top-3 average: 415 reviews (gap to leader: 612)
+To close it in 6 months: ~70 new reviews/mo ≈ 467 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 25 Google reviews (4.6) in Nashville. Park View Lawn Care has 160, and Pure Turf shows 523 on its own reviews page.
+
+**Sources:** CSV/own Jobber site (25) | https://www.pureturfllc.com/reviews | https://serviceagent.ai/directory/tennessee/nashville/landscaping/park-view-lawn-care-and-landscape/ | https://exa.ai/library/places?q=b402511f85728466
+
+**Notes:** I excluded Weed Man and TruGreen (franchise/national). Pure Turf: 523 on its own site vs 437 in an earlier audit; I used 523 (own site, newer).
+
+
+## Macon’s Lawn and Landscape (Columbia, SC)
+```
+Google Review Gap — Macon’s Lawn and Landscape (Columbia, "lawn care landscaping Columbia SC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         26  n/a
+#1 Sparta Lawn Care  660  4.8
+#2 Southern Vistas  45  4.6
+
+Gap to top-2 average: 327 reviews (gap to leader: 634)
+To close it in 6 months: ~55 new reviews/mo ≈ 367 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 26 Google reviews in Columbia. Southern Vistas has 45, which is within reach this season, and Sparta Lawn Care leads with 660.
+
+**Sources:** CSV/own Jobber site (26) | https://www.chamberofcommerce.com/business-directory/south-carolina/columbia/lawn-care-service/2014171222-sparta-lawn-care | https://exa.ai/library/places?q=b728fd14144f742f
+
+**Notes:** I excluded Augusta Lawn Care (franchise) and LawnStarter (marketplace). Sparta's 660 comes from a ChamberofCommerce listing, a weaker source; the near target is Southern Vistas (45).
