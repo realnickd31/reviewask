@@ -190,5 +190,103 @@ To close it in 6 months: ~0 new reviews/mo ≈ 0 asks/mo at a 15% response rate
 
 **Sources:** https://treeremovalnear.com/indiana/warsaw/cosby-tree-service | https://exa.ai/library/place/ljmr7b474hd | https://onsitetreeservices.com/tree-service-warsaw-in/ | https://www.bbb.org/us/in/warsaw/profile/tree-service/cosby-tree-service-0352-90144930
 
-## Not audited
-Mister Sprinkler (Spring Hill FL), Elite Pressure Washing Pros FL, Meticulous Mike's Handyman FL, CleanPro Services FL, and Seal Florida South were not audited in this pass.
+
+# Florida batch — 2026-10-27 (same method)
+
+## Mister Sprinkler (Spring Hill, FL)
+```
+Google Review Gap — Mister Sprinkler (Spring Hill, "irrigation Spring Hill")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         36  4.9
+#1 Challenger Irrigation  143  3.8
+#2 All Stars Irrigation  97  5.0
+#3 Anytime Wells & Irrigation  54  5.0
+
+Gap to top-3 average: 62 reviews (gap to leader: 107)
+To close it in 6 months: ~10 new reviews/mo ≈ 69 asks/mo at a 15% response rate
+```
+**Opener:** You were a Nextdoor Neighborhood Favorite two years running, but on Google All Stars Irrigation has 97 reviews to your 36. That's the gap you can close.
+
+**Notes:** Challenger leads on count but is rated 3.8, so a 4.9 rating is the selling point. Exa's single-place pages show older counts for All Stars (69) and Anytime (45).
+
+**Sources:** https://www.contractorsranked.com/contractor/North_Weeki_Wachee-FL/mister-sprinkler | https://exa.ai/library/places?q=8db2e3ab2e8ef165 | https://exa.ai/library/places?q=7e11fe72a3aeabbb
+
+## Elite Pressure Washing Pros (Spring Hill, FL)
+```
+Google Review Gap — Elite Pressure Washing Pros (Spring Hill, "pressure washing Spring Hill")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         64  5.0
+#1 Dura Guard Paver Sealing  1134  4.9
+#2 Hernando House Wash  174  5.0
+#3 Imperial Pressure Washing & Paver Sealing  151  5.0
+
+Gap to top-3 average: 422 reviews (gap to leader: 1070)
+To close it in 6 months: ~70 new reviews/mo ≈ 469 asks/mo at a 15% response rate
+```
+**Opener:** Juan, your Nextdoor post says 75+ Google reviews, and the latest public count I found is 64. Hernando House Wash has 174.
+
+**Notes:** Juan's 75+ figure is self-reported. Dura Guard (1,134) is an outlier, so the opener uses Hernando House Wash.
+
+**Sources:** https://www.contractorsranked.com/contractor/shady-hills-fl/elite-pressure-washing-pros | https://nextdoor.com/pages/juan-hernandez-webster-fl/ | https://exa.ai/library/places?q=0a887269b1aa1950 | https://exa.ai/library/places?q=3996aa7dcf102af0
+
+## Meticulous Mike's Handyman Services (Winter Park, FL)
+```
+Google Review Gap — Meticulous Mike's Handyman Services (Winter Park, "handyman Winter Park")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         98  5.0
+#1 Handyman Connection of Winter Park  255  4.6
+#2 Orlando Handyman  192  4.8
+#3 HandymanChosen  86  5.0
+
+Gap to top-3 average: 80 reviews (gap to leader: 157)
+To close it in 6 months: ~13 new reviews/mo ≈ 89 asks/mo at a 15% response rate
+```
+**Opener:** Mike, your site still says 60+ reviews, but Google shows about 98 at 5.0. Handyman Connection has 255 at 4.6, so you're catching them.
+
+**Notes:** Sources disagree: 98 (contractorsranked, Oct 22), 127 and 140. The lowest dated figure is used, so verify on Maps. Orlando Handyman's count is from Birdeye.
+
+**Sources:** https://www.contractorsranked.com/contractor/goldenrod-fl/meticulous-mikes-handyman-services | https://orlandogoeslocal.com/home-repair-and-maintenance/meticulous-mikes-handyman-services | https://pros411.com/en/pro/orl-g-0xe15fede112c2fbbb | https://exa.ai/library/places?q=964aae1e6da4255a | https://reviews.birdeye.com/orlando-handyman-166945174357401
+
+## CleanPro Services LLC (Port St. Lucie, FL)
+```
+Google Review Gap — CleanPro Services LLC (Port St. Lucie, "commercial cleaning Port St. Lucie")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         45  4.9
+#1 Purpose Cleaning  87  5.0
+#2 Smart Cleaning Solutions  78  4.9
+#3 NearMe Cleaning  75  4.6
+
+Gap to top-3 average: 35 reviews (gap to leader: 42)
+To close it in 6 months: ~6 new reviews/mo ≈ 39 asks/mo at a 15% response rate
+```
+**Opener:** You're at 4.9 with 45 Google reviews. Purpose Cleaning has 87, and about 42 more would match them.
+
+**Notes:** Competitor counts come from portstlucietoprated.com, which cites Google. One negative review (reckless driving) already has an owner reply.
+
+**Sources:** https://exa.ai/library/place/rsj3nnjjdmk | https://promallu.com/toprated/united-states/cleanpro-services-llc-d6679m/ | https://portstlucietoprated.com/commercial-cleaning | https://exa.ai/library/places?q=ebf8c46d398e23bb
+
+## Seal Florida South (Plantation, FL)
+```
+Google Review Gap — Seal Florida South (Plantation, "paver sealing Plantation")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         [BLOCKED]  [BLOCKED]
+#1 Pure Cleaning Pressure Cleaning  169  5.0
+#2 The Clean Guys Paver Sealing  141  5.0
+
+Gap: [BLOCKED], Google count not verified
+```
+**Opener:** Brandyn, you have 34 reviews on Angi. Plantation homeowners checking Google see Pure Cleaning's 169.
+
+**Notes:** [BLOCKED] The Google count couldn't be verified (Maps blocked, no mirror found). Angi shows 4.9 from 34 and another listing shows 4.8 from 50, neither confirmed as Google. Competitor counts are self-reported on their own sites.
+
+**Sources:** https://nextdoor.com/pages/seal-florida-south-plantation-fl/ | https://purecleaningpressurecleaning.com/ | https://thecleanguyspaversealing.com/areas-served/paver-sealing-plantation-fl/
