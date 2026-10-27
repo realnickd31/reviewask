@@ -130,7 +130,7 @@
 - **5 new audits:** Happy Cleans It (Oldsmar FL), Greener Concepts (Raleigh NC), Washburn Bros (Oakland Park FL), GoodBird/Total Maintenance (Lake Worth Beach FL, already ahead of the top-3 average) and Los Hernandez (North Fort Myers FL). 96 audits total.
 - Totals: 750 rows / 249 Hot / 465 Warm / 586 with email / 96 audits. Nothing sent.
 
-## Update 2026-10-27 ~3:38 AM ET
+## Update 2026-10-27 ~3:27 AM ET
 - Community posts refreshed to current facts: $39/mo or $390/yr, 7-day trial with card required, email live, SMS rolling out, any Jobber plan. Added 2 value-first Jobber Community answers.
 - 4 audits: Carteret Lawn (NC), Eco Home Solutions (NC), Aviles Bros (AL), 901 cleaning (TN, weak source). 100 audits total.
 - Site QA: all 15 key URLs return 200 and the copy is correct, so no deploy. The handoff is rewritten as a short morning brief. Nothing sent.

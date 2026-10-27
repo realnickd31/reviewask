@@ -1558,7 +1558,7 @@ Every lead here is an audited, Southeast, Hot lead with a public email. For each
 Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of the queue.
 
 
-## Y. Audited 2026-10-27 ~3:35 AM ET (4 SE Hot)
+## Y. Audited 2026-10-27 ~3:27 AM ET (4 SE Hot)
 
 ### Y. Carteret Lawn & Landscape (Morehead City, NC)
 - Opener: You're #2 of 23 landscapers in Morehead City at 32 Google reviews (4.7). ProGreen Turf in Newport is #1 with 129, and nobody else in town has more than about 20.

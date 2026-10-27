@@ -1,4 +1,4 @@
-# ReviewAsk: morning brief (updated ~3:38 AM ET, Tue Oct 27 2026)
+# ReviewAsk: morning brief (updated ~3:27 AM ET, Tue Oct 27 2026)
 
 **Nothing has been emailed, posted, DMed or submitted.** Everything below is a draft waiting for your approval.
 
@@ -22,6 +22,6 @@
 - Keep flagged: Task Tacklers, Stan's (closed), Washburn Bros (category needs confirming), 901 cleaning (its count comes from Nextdoor, not Google).
 - Render auto-deploy doesn't fire on push. Deploy with the Render API `trigger_deploy` on service srv-dbfbc94s728c73epr4bg.
 
-## Live site QA (~3:30 AM ET): all 15 URLs return 200
+## Live site QA (~3:27 AM ET): all 15 URLs return 200
 https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, `/tools/review-gap`, `/birdeye-alternative`, `/podium-alternative`, `/nicejob-alternative`, `/compare/jobber-marketing-suite`, `/sms`, `/terms`, `/privacy`, `/signup`, `/login`, `/sitemap.xml`
 - Pricing page shows $39/mo or $390/yr, a 7-day trial, and "card required at checkout". The SMS page says SMS is "rolling out". No copy bugs found.

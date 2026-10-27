@@ -1,6 +1,6 @@
 # Community posts: drafts for Nick to post himself (nothing posted)
 
-**Refreshed 2026-10-27, ~3:30 AM ET.** Product facts checked against getreviewask.com/pricing and /sms:
+**Refreshed 2026-10-27, ~3:27 AM ET.** Product facts checked against getreviewask.com/pricing and /sms:
 - $39/month or $390/year (saves $78)
 - 200 review requests a month
 - 7-day free trial; a card is required at checkout but isn't charged until the trial ends; cancel anytime
