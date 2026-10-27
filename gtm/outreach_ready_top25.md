@@ -458,31 +458,31 @@ Review counts come from web mirrors, not Google Maps. Re-check Maps before any s
 ### J1. Zack Of All Trades — Shelbyville, TN (score 97)
 - Email: zackofalltrades2021@outlook.com · Phone: (931) 446-6705 · Site: https://zackofalltradesllc.jobbersites.com/
 - Reviews: ~17 @ 4.8 (Review count via wanderboat.ai (Google-derived) 4.8 from 17 (not Google Maps; verify))
-- Opener: Saw Zack Of All Trades books through Jobber and has about 17 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- Opener: You're at 17 Google reviews. No Shelbyville handyman shows more on Google that I could find, and A&J Electric has 59. Get ahead now while the local field is thin. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Zack+Of+All+Trades+Shelbyville+TN
 
 ### J2. Cleaning Services in South Florida — West Palm Beach, FL (score 97)
 - Email: hello@sbrcleaning.com · Phone: (561) 541-6442 · Site: https://sbrcleaning.jobbersites.com/
 - Reviews: ~14 @ 5.0 (Review count via wanderboat.ai (Google-derived) SBR Cleaning & Carpet Care 5.0 from 14 (not Google Maps; verify))
-- Opener: Saw Cleaning Services in South Florida books through Jobber and has about 14 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- Opener: Your 14 Google reviews are all 5 stars, but MaidThis has 661 in West Palm, and even Fantastic Maids has 106. A review from every clean is how an owner-run shop closes that gap. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Cleaning+Services+in+South+Florida+West+Palm+Beach+FL
 
 ### J3. Cleaned Pristine Home Services — Tampa, FL (score 97)
 - Email: admin@cleanedpristinesolutions.com · Phone: (813) 995-8875 · Site: https://cleanedpristinehome.jobbersites.com/
 - Reviews: ~17 @ 5.0 (Review count via Their own site: 5.0 Google from 17+ (not Google Maps; verify))
-- Opener: Saw Cleaned Pristine Home Services books through Jobber and has about 17 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- Opener: You're at about 17 Google reviews, all 5.0. General Facility Care has 153 and SEA SHINE has 60. In Tampa janitorial work, facility managers compare counts before they ever call. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Cleaned+Pristine+Home+Services+Tampa+FL
 
 ### J4. Boone Landscape Design — Bogart, GA (score 92)
 - Email: info@boonelandscapedesign.com · Phone: (706) 818-4855 · Site: https://boonelandscapedesign.jobbersites.com/
 - Reviews: ~48 @ 4.8 (Review count via allaboutlandscapingservices / gatreeserviceguys: 47–48 Google @ 4.8–4.9 (not Google Maps; verify))
-- Opener: Saw Boone Landscape Design books through Jobber and has about 48 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- Opener: You've got 48 Google reviews. Only Precision Landscape has more in Bogart, with 80, and their rating is lower at 4.6. About 30 more reviews and you're the most-reviewed landscaper in Oconee County. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Boone+Landscape+Design+Bogart+GA
 
 ### J5. R&B Sparkly Clean — Sarasota, FL (score 92)
 - Email: rbsparkly@gmail.com · Phone: (941) 356-2955 · Site: https://rbsparklyclean.jobbersites.com/
 - Reviews: ~47 @ 4.7 (Review count via Birdeye 47 @ 4.7 (not Google Maps; verify))
-- Opener: Saw R&B Sparkly Clean books through Jobber and has about 47 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- Opener: You're #2 on Birdeye's Sarasota cleaning list with 47 reviews, but Edla VIP has 447 and Green World has 85. Asking after every clean is the fastest way up. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=R%26B+Sparkly+Clean+Sarasota+FL
 
 ### J6. Precision Handyman LLC — Noblesville, IN (score 92)
@@ -512,13 +512,13 @@ Review counts come from web mirrors, not Google Maps. Re-check Maps before any s
 ### J10. Ground Effects Lawn Service — Rock Hill, SC (score 86)
 - Email: groundeffects.services@gmail.com · Phone: (803) 659-9542 · Site: https://groundeffects.jobbersites.com/
 - Reviews: ~50 @ 4.7 (Review count via Turf Install Pros (Google-derived) 4.7 from 50; site shows 4.7 (not Google Maps; verify))
-- Opener: Saw Ground Effects Lawn Service runs on Jobber and sits around 50 Google reviews. Asking every customer after each job is the cheapest way to pull away from the next shop down.
+- Opener: You're at about 50 Google reviews, and Hey Jude's has 134 in Rock Hill. Palmetto Lawn has 97. Asking every customer is how you get to 100. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Ground+Effects+Lawn+Service+Rock+Hill+SC
 
 ### J11. GreenLeaf Landscaping — Acworth, GA (score 86)
 - Email: info@greenleaf-landscaping.com · Phone: (770) 851-7454 · Site: https://greenleaflandscaping.jobbersites.com/
 - Reviews: ~50 @ 4.7 (Review count via ProsGrade 4.7 from 50 (Marietta listing) + contractorsranked (not Google Maps; verify))
-- Opener: Saw GreenLeaf Landscaping runs on Jobber and sits around 50 Google reviews. Asking every customer after each job is the cheapest way to pull away from the next shop down.
+- Opener: You've got about 50 Google reviews at 4.7. Unlimited Lawn Care has 91 at 4.1 and DreamScapes has 149. You already have the better rating, and volume is the gap. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=GreenLeaf+Landscaping+Acworth+GA
 
 
@@ -528,7 +528,7 @@ Review counts come from web mirrors, not Google Maps. Re-check Maps before any s
 ### K1. Here to help window cleaning — Chicago area, IL (score 92)
 - Email: hthcleaningservices@gmail.com · Phone: (773) 986-6610 · Site: https://here2help.jobbersites.com/
 - Reviews: ~8 @ 5.0 (Review count via Exa Places 5.0 from 8 (Birdeye shows 17) (not Google Maps; verify))
-- Opener: Saw Here to help window cleaning books through Jobber and has about 8 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- Opener: Alex, you're at 8 Google reviews, all 5 stars. Bubbles, also in the Avondale area, has 355. Your reviews say people's windows look brand new, so ask every one of them. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Here+to+help+window+cleaning+Chicago+area+IL
 
 ### K2. JMAS Texas Lawn Care Corp. — Katy, TX (score 92)

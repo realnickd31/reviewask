@@ -21,7 +21,8 @@ Latest site commits: `b507d0e` adds a separate Guides column to the footer (depl
   - Rows 258 onward came from Nextdoor (71 rows). 57 of those emails come from the business's own Nextdoor listing, not a website.
   - Review counts for the new rows come from web mirror sites, not Google Maps. Re-check Maps before every send.
 - **`outreach_ready_top25.md`**: the top 25 Hot leads with audited review gaps, plus three appended sections of newly Hot leads that have email (12 + 10 + 8). 10 of them now carry openers from the review-gap audits.
-- **`audits/review-gap-audits.md/.csv`: 25 audits** (15 earlier + 10 new on 2026-10-27).
+- **`audits/review-gap-audits.md/.csv`: 33 audits** (15 earlier, then 10 and 8 more on 2026-10-27).
+- **New page:** https://getreviewask.com/podium-alternative (Podium pricing is sales-quoted, so the page says that rather than quoting a number).
 - **`community_posts_ready.md`**: three ready-to-paste posts for the Jobber Community, Facebook groups, and Reddit, with no invented claims.
 - Also ready: `pitch-vs-jobber-marketing-suite.md`, `outreach-sequences.md`, `outreach_email.md`, `dm_scripts.md`, `growth-system.md`, `lead-sources-playbook.md`, `icp-and-scoring.md`.
 

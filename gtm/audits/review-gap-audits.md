@@ -480,3 +480,159 @@ To close it in 6 months: ~5 new reviews/mo ≈ 34 asks/mo at a 15% response rate
 **Sources:** https://exa.ai/library/places
 
 **Notes:** Only 2 competitors found.
+
+## Cleaning Services in South Florida (West Palm Beach, FL)
+```
+Google Review Gap — Cleaning Services in South Florida (West Palm Beach, "house cleaning West Palm Beach")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         14  5.0
+#1 MaidThis Cleaning West Palm Beach  661  4.9
+#2 The Faithful Cleaning Company  206  4.8
+#3 Mr Klean Cleaning Services  134  4.5
+
+Gap to top-3 average: 320 reviews (gap to leader: 647)
+To close it in 6 months: ~108 new reviews/mo ≈ 720 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 14 Google reviews are all 5 stars, but MaidThis has 661 in West Palm, and even Fantastic Maids has 106. A review from every clean is how an owner-run shop closes that gap.
+
+**Sources:** https://wanderboat.ai (SBR count) | https://exa.ai/library/places?q=17610d88f0a2584b
+
+**Notes:** SBR Cleaning & Carpet Care. The count comes from wanderboat (Google-derived). The top 3 are franchise or volume players; Fantastic Maids (106) and A Woman's Touch (53) are closer peers.
+
+## Cleaned Pristine Home Services (Tampa, FL)
+```
+Google Review Gap — Cleaned Pristine Home Services (Tampa, "commercial/janitorial cleaning Tampa")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         17  5.0
+#1 General Facility Care  153  5.0
+#2 Enviro-Master of Tampa  118  5.0
+#3 LUXE Cleaning Services  73  5.0
+
+Gap to top-3 average: 98 reviews (gap to leader: 136)
+To close it in 6 months: ~23 new reviews/mo ≈ 154 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 17 Google reviews, all 5.0. General Facility Care has 153 and SEA SHINE has 60. In Tampa janitorial work, facility managers compare counts before they ever call.
+
+**Sources:** https://cleanedpristinesolutions.com (own site, 17+) | https://bestin-tampa.com/best-commercial-cleanings-in-tampa/ | https://exa.ai/library/places?q=086f7c697e37aded
+
+**Notes:** Their count comes from their own site. JAN-PRO (312, a franchise) is left out of the top 3.
+
+## Boone Landscape Design (Bogart, GA)
+```
+Google Review Gap — Boone Landscape Design (Bogart, "landscaping Bogart / Oconee County")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         48  4.8
+#1 Precision Landscape Management  80  4.6
+#2 Green Wave Landscaping & Irrigation  42  5.0
+#3 Oconee Scapes  22  4.8
+
+Gap to top-3 average: 0 reviews (gap to leader: 32)
+To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You've got 48 Google reviews. Only Precision Landscape has more in Bogart, with 80, and their rating is lower at 4.6. About 30 more reviews and you're the most-reviewed landscaper in Oconee County.
+
+**Sources:** https://exa.ai/library/places?q=e4e409cb18be652b | https://allaboutlandscapingservices.com/ga/oconee-county/boone-landscape-design/ | https://snowlawn.net/ga/bogart/GreenWave
+
+## R&B Sparkly Clean (Sarasota, FL)
+```
+Google Review Gap — R&B Sparkly Clean (Sarasota, "house cleaning Sarasota")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         47  4.7
+#1 Edla Vip Cleaning  447  4.9
+#2 Dutchman Window & Cleaning  291  4.8
+#3 Green World Home Cleaning  85  4.9
+
+Gap to top-3 average: 227 reviews (gap to leader: 400)
+To close it in 6 months: ~67 new reviews/mo ≈ 447 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're #2 on Birdeye's Sarasota cleaning list with 47 reviews, but Edla VIP has 447 and Green World has 85. Asking after every clean is the fastest way up.
+
+**Sources:** https://reviews.birdeye.com/d/home-cleaning/sarasota-fl/ | https://exa.ai/library/places?q=8237504c48355582
+
+**Notes:** Birdeye counts (multi-source). Franchises are left out: Molly Maid 1,210, The Cleaning Authority 466, The Maids 374.
+
+## Ground Effects Lawn Service (Rock Hill, SC)
+```
+Google Review Gap — Ground Effects Lawn Service (Rock Hill, "lawn care Rock Hill")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         50  4.7
+#1 Hey Jude's Lawn Care  134  5.0
+#2 Palmetto Lawn Services  97  4.8
+#3 SarahCare Landscaping  33  5.0
+
+Gap to top-3 average: 38 reviews (gap to leader: 84)
+To close it in 6 months: ~14 new reviews/mo ≈ 94 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 50 Google reviews, and Hey Jude's has 134 in Rock Hill. Palmetto Lawn has 97. Asking every customer is how you get to 100.
+
+**Sources:** https://turfinstallpros.com/south-carolina/rock-hill | https://exa.ai/library/places?q=bfddfe564dd12cc9 | https://heyjudeslawncare.com
+
+**Notes:** Hey Jude's count (134+) comes from their own site.
+
+## GreenLeaf Landscaping (Acworth, GA)
+```
+Google Review Gap — GreenLeaf Landscaping (Acworth, "landscaping Acworth / Marietta")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         50  4.7
+#1 DreamScapes  149  4.7
+#2 Unlimited Lawn Care  91  4.1
+#3 Heroes Lawn Care  70  4.6
+
+Gap to top-3 average: 53 reviews (gap to leader: 99)
+To close it in 6 months: ~17 new reviews/mo ≈ 114 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You've got about 50 Google reviews at 4.7. Unlimited Lawn Care has 91 at 4.1 and DreamScapes has 149. You already have the better rating, and volume is the gap.
+
+**Sources:** https://prosgrade.com/landscapers/marietta/greenleaf-landscaping | https://exa.ai/library/places?q=efd70a952e35d721 | https://mawlawn.com/catalog/acworth/landscaper/
+
+**Notes:** GreenLeaf's 50 comes from ProsGrade (Marietta listing). DreamScapes is from mawlawn.
+
+## Here to help window cleaning (Chicago area, IL)
+```
+Google Review Gap — Here to help window cleaning (Chicago area, "window cleaning Chicago (Avondale)")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         8  5.0
+#1 Bubbles Window Washing & Gutter Cleaning  355  4.7
+#2 My Window Washing and Gutter Cleaning  257  4.9
+
+Gap to top-3 average: 298 reviews (gap to leader: 347)
+To close it in 6 months: ~58 new reviews/mo ≈ 387 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Alex, you're at 8 Google reviews, all 5 stars. Bubbles, also in the Avondale area, has 355. Your reviews say people's windows look brand new, so ask every one of them.
+
+**Sources:** https://exa.ai/library/place/x92jn9cg73t | https://www.bestinhood.com/chicago/specialized-home-services/best-window-cleaners-in-chicago/ | https://reviews.birdeye.com/my-window-washing-and-gutter-cleaning-156203597895853
+
+**Notes:** Birdeye shows 17 for them across all sources. Prime Time (1,637) is a citywide outlier and was left out.
+
+## Zack Of All Trades (Shelbyville, TN)
+```
+Google Review Gap — Zack Of All Trades (Shelbyville, "handyman / trades Shelbyville TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         17  4.8
+#1 A&J Electric  59  5.0
+#2 TT Baltazar Painting  10  5.0
+
+Gap to top-3 average: 17 reviews (gap to leader: 42)
+To close it in 6 months: ~7 new reviews/mo ≈ 47 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 17 Google reviews. No Shelbyville handyman shows more on Google that I could find, and A&J Electric has 59. Get ahead now while the local field is thin.
+
+**Sources:** https://wanderboat.ai (Zack count) | https://exa.ai/library/places?q=93e895ce65da02f6 | https://exa.ai/library/places?q=ee300229d252e29b
+
+**Notes:** Thin comparison set: no Google-counted handyman competitors were found (Thumbtack and HomeAdvisor handymen are excluded). A&J Electric is an adjacent trade. Treat this as an "extend your lead" pitch.
