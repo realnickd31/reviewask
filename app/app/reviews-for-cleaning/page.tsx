@@ -23,7 +23,8 @@ export default function Page() { return <Legal title="How to get more Google rev
   <h2>How many reviews do you need?</h2>
   <p>Compare your count with the top local competitors and work out how many asks a month closes the gap. The <Link href="/tools/review-gap">review gap calculator</Link> does the math for free.</p>
   <h2>Doing it automatically</h2>
-  <p>ReviewAsk connects to <Link href="/for-jobber">Jobber</Link> or <Link href="/for-housecall-pro">Housecall Pro</Link> and emails each client a one-tap Google review link when a job closes, with one reminder on day 3. SMS is rolling out. You can also paste past clients from a spreadsheet. It works the same way for lawn care, pressure washing, pest control, HVAC, handyman and any other field-service business. See also the <Link href="/reviews-for-lawn-care">lawn care review guide</Link>.</p>
+  <p>ReviewAsk connects to <Link href="/for-jobber">Jobber</Link> or <Link href="/for-housecall-pro">Housecall Pro</Link> and emails each client a one-tap Google review link when a job closes, with one reminder on day 3. SMS is rolling out. You can also paste past clients from a spreadsheet. It works the same way for lawn care, pressure washing, pest control, HVAC, handyman and any other field-service business.</p>
+  <p className="text-sm">More guides: <Link href="/reviews-for-lawn-care">Lawn care</Link> · <Link href="/reviews-for-pressure-washing">Pressure washing</Link> · <Link href="/reviews-for-hvac">HVAC</Link></p>
   <p className="pt-2"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
   <p className="text-sm text-slate-500">$39/month or $390/year after the trial · No contract · Cancel anytime from Settings.</p>
 </Legal>; }
