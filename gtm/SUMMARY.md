@@ -107,3 +107,10 @@
 - **Jobber Sites discovery is effectively exhausted.** 7 fresh site: searches (GA, TN, SC, FL, AL, KY, MS/LA) returned 37 slugs. 29 were already known, so only 8 were new after dedupe; I added those (1 Hot with email: Nky Lawn Pros, KY → section W). I stopped instead of padding. Next lead sources would be Jobber's "find a pro" directory, Nextdoor or Google Maps category scrapes.
 - Added a **Day-1 send queue** (draft) to outreach_ready_top25.md: the top 25 audited Hot leads with email, all Southeast. Nothing sent.
 - Totals: 737 rows / 247 Hot / 454 Warm / 578 with email / 86 audits.
+
+## Update 2026-10-27 ~3:20 AM ET (send-queue scrub + alternative discovery)
+- **Day-1 send queue scrubbed.** I re-read the CSV row, outreach note and audit note for all 25. **24 are ready after a Maps check**, each with a real Flags column and a send week. Solar Pro Wash is week 2 so it doesn't overlap On Target in the same market. 4 backfills came in from clean, site-widget-sourced audits (Harmony Cleaning ATL, Cape Fear Lawn Masters, Nancy's, Knight and Day) and 2 from section U (TC Lawn Manicure, Grindstone).
+- **8 moved to Hold / verify first:** Complete Lawn Care (unnamed source), Cleaned Pristine (self-reported count), Parra / A&L / B Tops / Tolson (conflicting counts), PWS Janitorial (email doesn't match the business), Genesis (same market as Green Space, 75 reviews).
+- No queue lead uses NiceJob, is closed, or is rated under 4.0. Task Tacklers and Stan's are excluded.
+- **Alternative discovery is thin.** Coldlytics: all 426 profiles were already read on night 1, so it's exhausted. Nextdoor and Facebook-mirror Client Hub searches (12 queries) turned up 40 candidates, but 27 (68%) were already known. **+13 new rows**, 5 with email. All counts are [BLOCKED] (no Google count found; Nextdoor recommendation counts were not used), so they're Warm or below and none are newly Hot. LinkedIn operator search returned no Southeast hits.
+- Totals: 750 rows / 247 Hot / 467 Warm / 583 with email / 86 audits. Nothing sent.
