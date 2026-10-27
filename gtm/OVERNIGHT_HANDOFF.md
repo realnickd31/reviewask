@@ -62,3 +62,9 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Homepage CTA (#5) is live: the primary button reads "Connect Jobber — free for 7 days" and the secondary reads "Using Housecall Pro? Start free trial". Both go to /signup. Deploy dep-dbg5hesipgvc73ej6r5g on commit dffa24d.
 - Audits: 149 total (+6, section AF: Visalia, Edmonds, Katy, Smithville OH, Linton Hall VA, Richmond VA). No discovery this round.
 - Flags: JMAS Texas (verify whether JMAS Landscaping is a related listing). Addicott is at 4.5 (pitch rating recovery). For Epps and Iggys, the own counts come from the CSV only. Battle Buddies is held for Nick's OK. Skipped: Cleanadora (1 clean comp), NKY Lawn Pros (conflicting counts), Electric Force (no Google comps), Parsons (own count is from its Jobber site, not Google), Chrispy Clean Bins and Albany Bed Bug (comps are franchise, national or non-Google only).
+
+## Update 4:00 AM ET
+- Discovery: +27 new Jobber Sites prospects with public email, from search-engine site:jobbersites.com queries (not the old scrape). 8 are scored Hot (85, provisional) and 19 Warm (80). Google counts are mostly unverified.
+- Totals: 777 prospects, 257 Hot, 613 with email, 155 audits.
+- Audits AG (+6): Pristine Lawn (Gadsden AL), Lawn Wolf (Sioux Falls), Precision Handyman (Noblesville), Handy Crow (Arlington TX), Pain In The Grass (Huntertown IN), Call The Cavalry (Richmond VA).
+- Flags: Under Pressure (Clermont) and Top to Bottom (Wilmington) were not audited because of conflicting or self-reported counts (both are already ~150–190). Don't send Call The Cavalry and Iggys on the same day (same comps). No site change this round.

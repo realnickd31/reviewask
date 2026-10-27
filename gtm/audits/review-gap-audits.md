@@ -2990,3 +2990,128 @@ To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate
 **Sources:** CSV (21) | https://lantern.llc/va/richmond/outdoor-lawn/landscaping | https://exa.ai/library/places?q=c5996a0be53214f3 | https://directory.coldlytics.com/companies/mlc21
 
 **Notes:** Its own count comes from our CSV only, so verify it. Greener Creations ('258+', self-reported) is excluded. EKG's count comes from Lantern.
+
+
+## Pristine Lawn (Gadsden, AL)
+```
+Google Review Gap — Pristine Lawn (Gadsden, "lawn care Gadsden Southside AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         7  4.4
+#1 WadeWorks Lawncare and Landscape LLC  31  4.9
+#2 Paradise Lawn & Landscaping  23  3.9
+
+Gap to top-2 average: 20 reviews (gap to leader: 24)
+To close it in 6 months: ~4 new reviews/mo ≈ 27 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 7 Google reviews (4.4). In Gadsden, WadeWorks has 31 at 4.9. Asking every happy customer lifts both your count and your rating.
+
+**Sources:** https://snowlawn.net/al/southside/Pristine | https://snowlawn.net/al/gadsden/WadeWorks | https://exa.ai/library/places?q=dec109b9758893ef
+
+**Notes:** NEW discovery (Jobber Sites). Own count shows 6–12 by source; I used Google's 7. The 4.4 rating means a rating-recovery pitch. Only 2 comps (top-2 average).
+
+
+## Lawn Wolf LLC (Sioux Falls, SD)
+```
+Google Review Gap — Lawn Wolf LLC (Sioux Falls, "lawn care Sioux Falls SD")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         12  5.0
+#1 Eagle Lawn and Landscape, Inc.  466  4.8
+#2 University Lawn Care  79  4.8
+#3 J&B Outdoor Solutions  66  5.0
+
+Gap to top-3 average: 192 reviews (gap to leader: 454)
+To close it in 6 months: ~32 new reviews/mo ≈ 214 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 12 Google reviews are all 5 stars. In Sioux Falls, Clean Cut has 38 and 605 Outdoor 54, both within reach with a steady ask.
+
+**Sources:** https://exa.ai/library/places?q=4db3f387eacd380a | https://www.contractorsranked.com/contractor/sioux-falls-sd/eagle-lawn-and-landscape-inc | https://www.contractorsranked.com/contractor/sioux-falls-sd/university-lawn-care
+
+**Notes:** TruGreen (national) is excluded. Eagle inflates the average; the realistic targets are Clean Cut (38) and 605 Outdoor (54).
+
+
+## Precision Handyman LLC (Noblesville, IN)
+```
+Google Review Gap — Precision Handyman LLC (Noblesville, "handyman Noblesville IN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         10  5.0
+#1 Nick's Handyman Service, LLC  81  4.9
+#2 Alder Avenue Home Handyman  34  5.0
+#3 Noblesville Handyman  28  4.0
+
+Gap to top-3 average: 38 reviews (gap to leader: 71)
+To close it in 6 months: ~7 new reviews/mo ≈ 47 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 10 Google reviews are all 5 stars. In Noblesville, Alder Avenue has 34, and Noblesville Handyman has 28 at a 4.0 rating.
+
+**Sources:** https://nhsindy.com/pages/areas/noblesville | https://reviews.birdeye.com/alder-avenue-home-handyman-167014807584883 | https://www.contractorsranked.com/contractor/carmel-in/noblesville-handyman
+
+**Notes:** Nick's count is self-reported. Noblesville Handyman shows 28–46 by source; I used 28.
+
+
+## Handy Crow (Arlington, TX)
+```
+Google Review Gap — Handy Crow (Arlington, "handyman Arlington TX")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         9  5.0
+#1 Jayco Handyman and Contracting Services  159  4.9
+#2 HometownHandymanJimBatchler.com  101  5.0
+#3 Darnell Green Remodeling  84  5.0
+
+Gap to top-3 average: 106 reviews (gap to leader: 150)
+To close it in 6 months: ~18 new reviews/mo ≈ 120 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 9 Google reviews are all 5 stars. Independent Arlington handymen like Jim Batchler sit at 101, and Jayco at 159.
+
+**Sources:** https://www.contractorsranked.com/contractor/arlington-tx/jayco-handyman-and-contracting-services | https://www.contractorsranked.com/contractor/arlington-tx/hometownhandymanjimbatchler-com
+
+**Notes:** Mr. Handyman (franchise) is excluded. Darnell Green's count comes from a search summary only.
+
+
+## Pain In The Grass Lawn & Landscaping LLC (Huntertown, IN)
+```
+Google Review Gap — Pain In The Grass Lawn & Landscaping LLC (Huntertown, "lawn care Huntertown IN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         12  4.8
+#1 Blades of Fury  48  4.1
+#2 LawnsPlus  22  4.3
+#3 MOWJOE Landscaping  18  4.8
+
+Gap to top-3 average: 17 reviews (gap to leader: 36)
+To close it in 6 months: ~3 new reviews/mo ≈ 20 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 12 Google reviews (4.8). In Huntertown, MOWJOE has 18 and LawnsPlus 22. A handful of asks a month makes you the top-rated choice.
+
+**Sources:** https://exa.ai/library/place/xvl1r0kjgx6 | https://exa.ai/library/places?q=bd335bfc2a257e3a | https://snowlawn.net/in/huntertown/Mowjoe
+
+**Notes:** Its rating went from 3.6 (7 reviews) to 4.8 (12) between sources, so recent asks are working. J&Z (Birdeye only) is excluded.
+
+
+## Call The Cavalry Lawn Care (Richmond, VA)
+```
+Google Review Gap — Call The Cavalry Lawn Care (Richmond, "lawn care Richmond VA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         13  5.0
+#1 EKG Lawn Services  124  5.0
+#2 Trinity Turf  23  4.7
+#3 Macias Lawn Care  19  4.6
+
+Gap to top-3 average: 42 reviews (gap to leader: 111)
+To close it in 6 months: ~7 new reviews/mo ≈ 47 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 13 Google reviews are all 5 stars. In Richmond, Macias has 19 and Trinity Turf 23, both close enough to pass this season.
+
+**Sources:** https://lantern.llc/va/richmond/outdoor-lawn/landscaping | https://exa.ai/library/places?q=c5996a0be53214f3 | https://directory.coldlytics.com/companies/mlc21
+
+**Notes:** Our CSV says 11; Lantern says 13. I used 13. Same comps as the Iggys AF audit, so don't send both on the same day with near-identical openers.

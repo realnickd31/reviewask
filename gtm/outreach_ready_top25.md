@@ -1790,3 +1790,29 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AF. Iggys Landscaping LLC (Richmond, VA)
 - Opener: You're at about 21 Google reviews. Trinity Turf has 23 and Macias 19, while EKG in Midlothian has pulled ahead to 124.
 - Gap to top-3 avg 34; leader gap 103; ~40 asks/mo [SPEC]. Notes: Its own count comes from our CSV only, so verify it. Greener Creations ('258+', self-reported) is excluded. EKG's count comes from Lantern.
+
+## AG — Hot audits (new Jobber Sites discovery + older lower-count leads), 2026-10-27
+
+### AG. Pristine Lawn (Gadsden, AL)
+- Opener: You're at 7 Google reviews (4.4). In Gadsden, WadeWorks has 31 at 4.9. Asking every happy customer lifts both your count and your rating.
+- Gap to top-2 avg 20; leader gap 24; ~27 asks/mo [SPEC]. Notes: NEW discovery (Jobber Sites). Own count shows 6–12 by source; I used Google's 7. The 4.4 rating means a rating-recovery pitch. Only 2 comps (top-2 average).
+
+### AG. Lawn Wolf LLC (Sioux Falls, SD)
+- Opener: Your 12 Google reviews are all 5 stars. In Sioux Falls, Clean Cut has 38 and 605 Outdoor 54, both within reach with a steady ask.
+- Gap to top-3 avg 192; leader gap 454; ~214 asks/mo [SPEC]. Notes: TruGreen (national) is excluded. Eagle inflates the average; the realistic targets are Clean Cut (38) and 605 Outdoor (54).
+
+### AG. Precision Handyman LLC (Noblesville, IN)
+- Opener: Your 10 Google reviews are all 5 stars. In Noblesville, Alder Avenue has 34, and Noblesville Handyman has 28 at a 4.0 rating.
+- Gap to top-3 avg 38; leader gap 71; ~47 asks/mo [SPEC]. Notes: Nick's count is self-reported. Noblesville Handyman shows 28–46 by source; I used 28.
+
+### AG. Handy Crow (Arlington, TX)
+- Opener: Your 9 Google reviews are all 5 stars. Independent Arlington handymen like Jim Batchler sit at 101, and Jayco at 159.
+- Gap to top-3 avg 106; leader gap 150; ~120 asks/mo [SPEC]. Notes: Mr. Handyman (franchise) is excluded. Darnell Green's count comes from a search summary only.
+
+### AG. Pain In The Grass Lawn & Landscaping LLC (Huntertown, IN)
+- Opener: You're at 12 Google reviews (4.8). In Huntertown, MOWJOE has 18 and LawnsPlus 22. A handful of asks a month makes you the top-rated choice.
+- Gap to top-3 avg 17; leader gap 36; ~20 asks/mo [SPEC]. Notes: Its rating went from 3.6 (7 reviews) to 4.8 (12) between sources, so recent asks are working. J&Z (Birdeye only) is excluded.
+
+### AG. Call The Cavalry Lawn Care (Richmond, VA)
+- Opener: Your 13 Google reviews are all 5 stars. In Richmond, Macias has 19 and Trinity Turf 23, both close enough to pass this season.
+- Gap to top-3 avg 42; leader gap 111; ~47 asks/mo [SPEC]. Notes: Our CSV says 11; Lantern says 13. I used 13. Same comps as the Iggys AF audit, so don't send both on the same day with near-identical openers.
