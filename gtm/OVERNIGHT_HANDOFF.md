@@ -73,3 +73,9 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Enrichment of the 27 new Jobber Sites leads: 3 are Hot after rescore (Green Thumb 10 reviews/4.9, WayUp 30/5.0, Pristine Lawn, already audited). Shinehaus and Lumen were moved down for conflicting counts, Under Pressure and Top to Bottom for already leading locally. Dunlap (3.9) and Legendary (1.0) are flagged for low ratings. Station 35 has 0 reviews (backlog pitch). Locations fixed: Primary Services is Roswell GA, AB Handyman is Glade Hill VA, Tri City Pool is Riverside CA, RPG is Orlando (conflicts with Winter Springs).
 - Audits AH (+5): Pressure Wash Improvements (Charleston WV), EES (Bush LA), Dogwood (Sherwood AR), Texas Finest (Crosby TX), Green Ranger (Hampton VA).
 - Totals: 777 prospects, 252 Hot, 613 with email, 160 audits. CTA QA passed.
+
+## Update 4:06 AM ET
+- Site (live, deploy dep-dbg5lpd9el5s73bvrmqg, commit 0d72a55): the signup bullets now say "200 requests/month, sent by email (SMS rolling out)" and "No contract · cancel before day 7 and pay nothing". The pricing card line adds the email-first, SMS-rolling-out note. The homepage hero links the review link generator and message templates as more free tools.
+- Discovery (new angle: business websites whose privacy/terms pages or quote portals mention Jobber, plus Nextdoor Client Hub links): +12 rows, all with email. None scored Hot. Riptide (188), Pearce's (125+) and Giant/Shiny (53–55) are already strong. The rest are unverified.
+- Audits AI (+4): My Service Heroes (Conroe), Perennial Lawn (Parker CO), Tactical Landscape (Virginia Beach), Mikes Lawn Care (Louisville, 4.1 rating flag).
+- Totals: 789 prospects, 252 Hot, 625 with email, 164 audits.

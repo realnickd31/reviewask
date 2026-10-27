@@ -1838,3 +1838,21 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AH. Green Ranger Lawn & Landscapes (Hampton, VA)
 - Opener: You're at 7 Google reviews. In Hampton, Best Buck has 26 and Hawks 74. A few asks a week gets you into that group.
 - Gap to top-3 avg 34; leader gap 67; ~40 asks/mo [SPEC]. Notes: VirginiaGreen (481, regional) and LawnFixed (platform) are excluded. Its own count comes from the CSV only. Darnell's full name wasn't given in the source.
+
+## AI — Hot audits, 2026-10-27 (~4:15 AM ET)
+
+### AI. My Service Heroes (Conroe, TX)
+- Opener: Your 49 Google reviews are all 5 stars. In Conroe, Mr. and Mrs. Handy has 111 and Handyman & Sam 121. A steady ask after every job closes that within a year.
+- Gap to top-3 avg 35; leader gap 72; ~40 asks/mo [SPEC]. Notes: Mr. Handyman (franchise) is excluded. Texas Contractor Services' count comes from a Birdeye summary.
+
+### AI. Perennial Lawn & Landscape (Parker, CO)
+- Opener: Your 3 Google reviews are all 5 stars. In Parker, Lawn Vibes has 35 and DSW 47. Uploading last season's customers is the fastest way to catch up.
+- Gap to top-3 avg 96; leader gap 124; ~107 asks/mo [SPEC]. Notes: BestYard.com (platform) and Matt's Maintenance (tree service, 554) are excluded. The realistic targets are Lawn Vibes (35) and DSW (47).
+
+### AI. Tactical Landscape Care (Virginia Beach, VA)
+- Opener: You're at 6 Google reviews (4.5). Independent Virginia Beach crews like McNulty have 33 and Greensward 68.
+- Gap to top-3 avg 56; leader gap 80; ~67 asks/mo [SPEC]. Notes: Edge To Edge (113, Birdeye, unclaimed), Augusta (franchise) and TruGreen (national) are excluded. Its 4.5 rating is below the 4.9–5.0 comps.
+
+### AI. Mikes Lawn Care Service LLC (Louisville, KY)
+- Opener: You're at 17 Google reviews (4.1). In Louisville, A&D has 20 at 5.0 and David's 22 at 4.8. Asking every happy customer lifts your rating fastest.
+- Gap to top-3 avg 35; leader gap 97; ~40 asks/mo [SPEC]. Notes: FLAG: its 4.1 rating calls for a rating-recovery pitch. Clean Air Lawn Care (franchise) is excluded, as are Turf Pro and Gator (self-reported counts). David's full name wasn't given in the source.

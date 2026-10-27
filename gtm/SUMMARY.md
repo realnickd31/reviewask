@@ -163,3 +163,4 @@
 - 3:56 AM ET: Homepage CTA is integration-first (#5). 6 AF audits bring the total to 149.
 - 4:00 AM ET: +27 Jobber Sites prospects (8 Hot). 6 AG audits bring the total to 155. CTA QA passed.
 - 4:02 AM ET: Enriched and rescored the new 27 (3 Hot). 5 AH audits bring the total to 160.
+- 4:06 AM ET: Signup/pricing microcopy and homepage free-tools links are live. +12 prospects (0 Hot). 4 AI audits bring the total to 164.

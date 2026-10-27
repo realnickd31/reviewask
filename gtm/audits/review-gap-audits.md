@@ -3218,3 +3218,87 @@ To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate
 **Sources:** https://www.contractorsranked.com/contractor/hampton-va/hawks-lawn-care-services-and-more-llc-2 | https://www.expertise.com/home-improvement/lawn-service/virginia/hampton | https://exa.ai/library/places?q=b6dca34597486f6b
 
 **Notes:** VirginiaGreen (481, regional) and LawnFixed (platform) are excluded. Its own count comes from the CSV only. Darnell's full name wasn't given in the source.
+
+
+## My Service Heroes (Conroe, TX)
+```
+Google Review Gap — My Service Heroes (Conroe, "handyman Conroe TX")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         49  5.0
+#1 Handyman & Sam: Repairs and Remodels  121  5.0
+#2 Mr. And Mrs. Handy  111  4.9
+#3 Texas Contractor Services  19  5.0
+
+Gap to top-3 average: 35 reviews (gap to leader: 72)
+To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 49 Google reviews are all 5 stars. In Conroe, Mr. and Mrs. Handy has 111 and Handyman & Sam 121. A steady ask after every job closes that within a year.
+
+**Sources:** https://www.contractorsranked.com/contractor/conroe-tx/handyman-and-sam-repairs-and-remodels | https://www.contractorsranked.com/contractor/conroe-tx/mr-and-mrs-handy | https://reviews.birdeye.com/d/handyman/conroe-tx/
+
+**Notes:** Mr. Handyman (franchise) is excluded. Texas Contractor Services' count comes from a Birdeye summary.
+
+
+## Perennial Lawn & Landscape (Parker, CO)
+```
+Google Review Gap — Perennial Lawn & Landscape (Parker, "lawn care Parker CO")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         3  5.0
+#1 Kaizen Irrigation and Landscaping  127  4.9
+#2 American Design & Landscape  122  4.8
+#3 DSW Landscape Services  47  5.0
+
+Gap to top-3 average: 96 reviews (gap to leader: 124)
+To close it in 6 months: ~16 new reviews/mo ≈ 107 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 3 Google reviews are all 5 stars. In Parker, Lawn Vibes has 35 and DSW 47. Uploading last season's customers is the fastest way to catch up.
+
+**Sources:** https://exa.ai/library/places?q=71ea1628124ecc86 | https://www.contractorsranked.com/contractor/Parker-CO/lawn-vibes | https://snowlawn.net/co/parker/KaizenIrrigation
+
+**Notes:** BestYard.com (platform) and Matt's Maintenance (tree service, 554) are excluded. The realistic targets are Lawn Vibes (35) and DSW (47).
+
+
+## Tactical Landscape Care (Virginia Beach, VA)
+```
+Google Review Gap — Tactical Landscape Care (Virginia Beach, "lawn care Virginia Beach VA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         6  4.5
+#1 Mows & Hoes  86  5.0
+#2 Greensward Solutions  68  4.9
+#3 McNulty Lawn Service  33  4.6
+
+Gap to top-3 average: 56 reviews (gap to leader: 80)
+To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 6 Google reviews (4.5). Independent Virginia Beach crews like McNulty have 33 and Greensward 68.
+
+**Sources:** https://exa.ai/library/places?q=f66577921c92e3bd
+
+**Notes:** Edge To Edge (113, Birdeye, unclaimed), Augusta (franchise) and TruGreen (national) are excluded. Its 4.5 rating is below the 4.9–5.0 comps.
+
+
+## Mikes Lawn Care Service LLC (Louisville, KY)
+```
+Google Review Gap — Mikes Lawn Care Service LLC (Louisville, "lawn care Louisville KY")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         17  4.1
+#1 Turf Tenders  114  4.9
+#2 David's  22  4.8
+#3 A&D Outdoor Solutions  20  5.0
+
+Gap to top-3 average: 35 reviews (gap to leader: 97)
+To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 17 Google reviews (4.1). In Louisville, A&D has 20 at 5.0 and David's 22 at 4.8. Asking every happy customer lifts your rating fastest.
+
+**Sources:** https://exa.ai/library/places?q=3a5531411f1d9392 | https://exa.ai/library/place/9xmbzp0qn1d
+
+**Notes:** FLAG: its 4.1 rating calls for a rating-recovery pitch. Clean Air Lawn Care (franchise) is excluded, as are Turf Pro and Gator (self-reported counts). David's full name wasn't given in the source.
