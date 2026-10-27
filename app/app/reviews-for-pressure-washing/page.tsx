@@ -3,6 +3,8 @@ import Legal from "@/components/Legal";
 export const metadata = {
   title: { absolute: "How to get more Google reviews for your pressure washing business | ReviewAsk" },
   description: "When to ask, what to say, and how to catch up on past customers. A simple Google review routine for pressure washing and soft washing companies, and every other field-service business.",
+  openGraph: { title: "How to get more Google reviews for your pressure washing business | ReviewAsk", description: "When to ask, what to say, and how to catch up on past customers. A simple Google review routine for pressure washing and soft washing companies, and every other field-service business.", url: "/reviews-for-pressure-washing" },
+  twitter: { title: "How to get more Google reviews for your pressure washing business | ReviewAsk", description: "When to ask, what to say, and how to catch up on past customers. A simple Google review routine for pressure washing and soft washing companies, and every other field-service business." },
   alternates: { canonical: "/reviews-for-pressure-washing" },
 };
 export default function Page() { return <Legal title="How to get more Google reviews for your pressure washing business">
@@ -24,7 +26,7 @@ export default function Page() { return <Legal title="How to get more Google rev
   <p>Compare your count with the top local competitors and work out how many asks a month closes the gap. The <Link href="/tools/review-gap">review gap calculator</Link> does the math for free.</p>
   <h2>Doing it automatically</h2>
   <p>ReviewAsk connects to <Link href="/for-jobber">Jobber</Link> or <Link href="/for-housecall-pro">Housecall Pro</Link> and emails each customer a one-tap Google review link when a job closes, with one reminder on day 3. SMS is rolling out. You can also paste past customers from a spreadsheet. It works the same way for any field-service business, not just pressure washing.</p>
-  <p className="text-sm">More guides: <Link href="/reviews-for-lawn-care">Lawn care</Link> · <Link href="/reviews-for-cleaning">Cleaning</Link> · <Link href="/reviews-for-hvac">HVAC</Link></p>
+  <p className="text-sm">More guides: <Link href="/reviews-for-lawn-care">Lawn care</Link> · <Link href="/reviews-for-cleaning">Cleaning</Link> · <Link href="/reviews-for-hvac">HVAC</Link> · <Link href="/reviews-for-pool-service">Pool service</Link> · <Link href="/reviews-for-pest-control">Pest control</Link> · <Link href="/guides">All guides</Link></p>
   <p className="pt-2"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
   <p className="text-sm text-slate-500">$39/month or $390/year after the trial · No contract · Cancel anytime from Settings.</p>
 </Legal>; }
