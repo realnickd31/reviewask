@@ -170,3 +170,9 @@
 - AJ audits: iMow Lawns (Houston), Grow Roots (Katy), PV Repair & Cleaning (Naples). 167 audits total.
 - No discovery. Totals: 789 prospects, 252 Hot, 625 w/ email.
 - Flags: Grow Roots has a 2-star review (don't mention); iMow gap inflated (big metro); PV own count varies by source. Hot-with-clean-comps pipeline nearly exhausted (45 Hot+email unaudited, mostly flagged/weak comps/<5 reviews).
+
+## Batch AK (~4:17 AM ET)
+- Day-1 expansion: 19 new touch-1 DRAFTS in gtm/day1_email_drafts_batch2.md (#25–43); table in outreach_ready_top25.md section AK. 4 soft-pitch (Johnson's Tree, Galloway, Iggys, Epps: conflicting own counts). Willow Creek = week 2 (Murfreesboro overlap). Nothing sent.
+- Product: dashboard first-run 3-step guide (connect Jobber/HCP, send first ask to yourself, optional spreadsheet backlog; email now, SMS rolling out). Commit b4c3aff, deploy dep-dbg5pics728c73dffrvg live; public URLs 200, /dashboard 307 to login.
+- No audits: no clean-comp Hot leads remain. Totals: 789 prospects, 252 Hot, 625 w/ email, 167 audits, 43 Day-1 drafts.
+- Sending still needs Nick's inbox + physical address + per-send OK.
