@@ -1909,3 +1909,6 @@ Left out: Mikes Lawn (4.1 rating), Call The Cavalry (same comps as Iggys), Trans
 
 ## AN — Hot audit, 2026-10-27 (~4:58 AM ET)
 - **Rapha Plumbing (Bertram, TX)**, raphaplumbing@gmail.com. 19 reviews; leader gap 100; ~67 asks/mo [SPEC]. Draft #48 in day1_email_drafts_batch3.md.
+
+## AO — 2026-10-27 (~5:08 AM ET)
+- **Brandon's All Around The House (Forest Grove, OR)**, brandonsallaroundthehouse@yahoo.com. 27 reviews; one comp (Aloha 138); soft pitch. Draft #49 in day1_email_drafts_batch3.md.

@@ -3405,3 +3405,11 @@ To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate
 - Gap to top-3 avg 60; leader gap 100; ~10 reviews/mo; ~67 asks/mo [SPEC].
 - Opener: Your 19 Google reviews are all 5 stars. TNT Plumbing has 36 in Bertram at 4.8, and Tanker's has 119 over in Marble Falls. Your rating already beats TNT's; it's the count that's behind.
 - Sources: https://texas.twupro.com/bertram/rapha-plumbing/ | https://texas.twupro.com/bertram/tnt-plumbing-services-llc/ | https://exa.ai/library/place/278c5ts1r51 | https://www.contractorsranked.com/contractor/marble-falls-tx/tankers-plumbing-and-septics
+
+## AO — 2026-10-27 (~5:08 AM ET)
+### Brandon's All Around The House LLC (Forest Grove, OR) — soft pitch
+- Own: 27 Google @5.0 (Exa; a roofing directory says 33, so I used the lower count). Jobber site.
+- Comp: Aloha Pressure Washing Inc. & Roofing Co, Hillsboro, 138 @4.9 (ContractorsRanked; RoofersRanked shows 151, so I used the lower). Other Forest Grove listings are roofers or painters, not exterior-cleaning peers; Thumbtack excluded.
+- Leader gap 111; ~19 reviews/mo; ~124 asks/mo [SPEC]. Single comp, so soft pitch; the email doesn't use the gap number.
+- Opener: Your 27 Google reviews are all 5 stars. Aloha Pressure Washing over in Hillsboro has 138.
+- Sources: https://exa.ai/library/place/qgn6bdwy9gk | https://www.contractorsranked.com/contractor/hillsboro-or/aloha-pressure-washing-inc-and-roofing-co | https://exa.ai/library/places?q=b551d12902e76e8a

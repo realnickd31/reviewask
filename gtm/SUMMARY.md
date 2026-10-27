@@ -204,3 +204,11 @@
 - Audit AN: Rapha Plumbing (Bertram TX) 19 @5.0; comps Tanker's 119, Complete Care 81 (Marble Falls), TNT 36 (Bertram); leader gap 100; ~67 asks/mo [SPEC]. Draft #48 touch 1+2 in batch3.
 - Discovery (jobbersites in OR/WA/NM/WI/IA/ME): +3 only (Brandon's All Around The House, Forest Grove OR, 27 @5.0 Hot, yahoo email; Thayer & Son's, Stuart IA, 22+ self-reported, Warm; C.J.'s Outdoor, Greenfield WI, unverified). NM/ME/WA searches gave no Jobber/HCP leads with email. Skipped Jam Mechanical, Wick's, Gray's (no Jobber/HCP signal).
 - Totals: 819 prospects, 259 Hot, 655 w/ email, 172 audits, 48 touch-1 + 48 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.
+
+## Batch AP (~5:12 AM ET)
+- Site: /reviews-for-pressure-washing and /reviews-for-hvac live (HVAC chosen over pool as broader). All 4 trade pages cross-link ('More guides'), and all are in the footer and sitemap. Commit 4ffe5d0, deploy dep-dbg61u142hec73dn7ee0, 200.
+- SMS copy check: /sms still says rolling out; no in-app copy claims SMS is live.
+- Audit AO: Brandon's (Forest Grove OR) 27 (lower of 27/33) vs Aloha Pressure Washing, Hillsboro, 138 (lower of 138/151). Single comp, soft pitch. Draft #49 touch 1+2 in batch3.
+- Discovery: skipped (no easy angle).
+- Morning brief header, metrics and approvals refreshed.
+- Totals: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49 touch-1 + 49 touch-2 drafts.

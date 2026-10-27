@@ -1,26 +1,27 @@
-# ReviewAsk: morning brief (updated ~3:49 AM ET, Tue Oct 27 2026)
+# ReviewAsk: morning brief (updated ~5:12 AM ET, Tue Oct 27 2026)
 
 **Nothing has been emailed, posted, DMed or submitted.** Everything below is a draft waiting for your approval.
 
 ## Metrics
 | | |
 |---|---|
-| Prospects (`gtm/prospects_overnight.csv`) | 750 (249 Hot / 465 Warm / 586 with email) |
-| Review-gap audits (`gtm/audits/`) | 136 |
-| Day-1 queue (`gtm/outreach_ready_top25.md`, "Day-1 send queue") | 24 ready, 8 on hold |
-| Day-1 email drafts (`gtm/day1_email_drafts.md`) | 24 touch-1, DRAFT ONLY |
-| Day-1 touch-2 drafts (`gtm/day1_email_drafts_touch2.md`) | 24, DRAFT ONLY (Day 3, same thread) |
-| Community posts (`gtm/community_posts_ready.md`) | Refreshed to current product facts, plus 2 Jobber Community answers |
+| Prospects (`gtm/prospects_overnight.csv`) | 819 (259 Hot / 655 with email) |
+| Review-gap audits (`gtm/audits/`) | 173 |
+| Touch-1 email drafts | 49 total: `day1_email_drafts.md` #1–24, `day1_email_drafts_batch2.md` #25–43, `day1_email_drafts_batch3.md` #44–49 |
+| Touch-2 drafts (Day 3, same thread) | 49: `day1_email_drafts_touch2.md`, `day1_email_drafts_batch2_touch2.md`, and inline in batch3 |
+| Community posts (`gtm/community_posts_ready.md`) | Refreshed ~4:33 AM ET; you post them yourself |
+| Live SEO/trade pages | /reviews-for-lawn-care, /reviews-for-cleaning, /reviews-for-pressure-washing, /reviews-for-hvac (all 200) |
 
-## Approvals needed from Nick
-1. **Sending inbox** (domain or mailbox to send from)
-2. **Physical address** for the CAN-SPAM footer (fills [PHYSICAL ADDRESS]) and an unsubscribe mechanism ([UNSUBSCRIBE LINK])
-3. **OK for each send**: re-check each lead on Maps first (the notes in each draft have the link)
-4. **Community posts**: you post them yourself, after reading each group's promotion rules
+## Approvals needed from Nick (in order)
+1. **Sending inbox**: the domain or mailbox to send from (warm it up; max 30 sends a day).
+2. **Physical mailing address** for the footer ([PHYSICAL ADDRESS]) and an **unsubscribe mechanism** ([UNSUBSCRIBE LINK]).
+3. **OK for each send.** The morning of sending, re-check each lead's count on Maps (every draft has a Maps link in its notes) and confirm greetings marked "confirm" (Ben, Jaron, Edgar, Austin, Brandon).
+4. **Community posts**: post them yourself, after reading each group's promotion rules.
 
 ## Blockers and flags
-- Lead discovery channels are mostly used up; new leads now need paid or manual sources.
-- Keep flagged: Task Tacklers, Stan's (closed), Washburn Bros (category needs confirming), 901 cleaning (Nextdoor count), Mclaughlin’s (aggregator-only competitor counts), PoolFix (conflicting count, already #1).
+- Discovery is nearly exhausted; recent batches found 3–8 new leads each. More volume needs paid or manual sources.
+- Counts to verify on Maps: Sweep Techs (own-site 27), Brandon's (27 vs 33), Junk Heist (55), Thayer & Son's (self-reported).
+- Keep flagged/held: Task Tacklers, Stan's, Washburn Bros, 901 cleaning, Mclaughlin's, PoolFix, Honey Do, Battle Buddies, Grow Roots (2-star), JMAS.
 - Render auto-deploy doesn't fire on push. Deploy with the Render API `trigger_deploy` on service srv-dbfbc94s728c73epr4bg.
 
 ## Live site QA (~3:27 AM ET): all 15 URLs return 200
@@ -119,3 +120,11 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Audit AN: Rapha Plumbing (Bertram TX) 19 @5.0; comps Tanker's 119, Complete Care 81 (Marble Falls), TNT 36 (Bertram); leader gap 100; ~67 asks/mo [SPEC]. Draft #48 touch 1+2 in batch3.
 - Discovery (jobbersites in OR/WA/NM/WI/IA/ME): +3 only (Brandon's All Around The House, Forest Grove OR, 27 @5.0 Hot, yahoo email; Thayer & Son's, Stuart IA, 22+ self-reported, Warm; C.J.'s Outdoor, Greenfield WI, unverified). NM/ME/WA searches gave no Jobber/HCP leads with email. Skipped Jam Mechanical, Wick's, Gray's (no Jobber/HCP signal).
 - Totals: 819 prospects, 259 Hot, 655 w/ email, 172 audits, 48 touch-1 + 48 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.
+
+## Batch AP (~5:12 AM ET)
+- Site: /reviews-for-pressure-washing and /reviews-for-hvac live (HVAC chosen over pool as broader). All 4 trade pages cross-link ('More guides'), and all are in the footer and sitemap. Commit 4ffe5d0, deploy dep-dbg61u142hec73dn7ee0, 200.
+- SMS copy check: /sms still says rolling out; no in-app copy claims SMS is live.
+- Audit AO: Brandon's (Forest Grove OR) 27 (lower of 27/33) vs Aloha Pressure Washing, Hillsboro, 138 (lower of 138/151). Single comp, soft pitch. Draft #49 touch 1+2 in batch3.
+- Discovery: skipped (no easy angle).
+- Morning brief header, metrics and approvals refreshed.
+- Totals: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49 touch-1 + 49 touch-2 drafts.

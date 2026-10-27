@@ -1,4 +1,4 @@
-# Day-1 email drafts, batch 3 (5)
+# Day-1 email drafts, batch 3 (6)
 > **DRAFT ONLY. Do not send until Nick provides (1) the sending inbox/domain, (2) a physical mailing address, and (3) an explicit OK for each send.** Nothing here has been sent, and no mailbox drafts were created.
 
 ---
@@ -165,3 +165,36 @@ Nick
 ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIBE LINK]
 ```
 - **Notes:** Owner name unknown, so the greeting is "there". Maps re-check: https://www.google.com/maps/search/?api=1&query=Rapha+Plumbing+Bertram+TX · Sources: https://texas.twupro.com/bertram/rapha-plumbing/ | https://texas.twupro.com/bertram/tnt-plumbing-services-llc/ | https://exa.ai/library/place/278c5ts1r51 | https://www.contractorsranked.com/contractor/marble-falls-tx/tankers-plumbing-and-septics
+
+---
+## 49. Brandon's All Around The House LLC (Forest Grove, OR), week 1
+- **To:** brandonsallaroundthehouse@yahoo.com
+- **Subject A:** Brandon's All Around The House + Jobber reviews
+- **Subject B:** Google reviews for Brandon's All Around The House
+- **Body (touch 1):**
+```
+Hi Brandon,
+
+Saw Brandon's All Around The House runs on Jobber. Your 27 Google reviews are all 5 stars. Aloha Pressure Washing over in Hillsboro has 138.
+
+Jobber's automatic review asks come with the $99/mo Marketing Suite. I built ReviewAsk to do only that part for $39/mo: when a job closes in Jobber, your customer gets a one-tap link to your Google review page, with one reminder on day 3. Email today; SMS is rolling out.
+
+Worth trying on your next 20 jobs? 7-day free trial, no contract.
+
+Nick
+
+ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIBE LINK]
+```
+- **Touch 2 (Day 3, reply in thread, Subject "Re: Brandon's All Around The House + Jobber reviews"):**
+```
+Hi Brandon,
+
+One more idea for Brandon's All Around The House: most shops have a backlog of happy Forest Grove customers who were never asked for a review. ReviewAsk lets you paste or upload last season's customer list from a spreadsheet and email them all a review ask in one go, then it asks automatically each time a job closes in Jobber. Text messages are rolling out.
+
+Setup is here if you want to look: https://getreviewask.com
+
+Nick
+
+ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIBE LINK]
+```
+- **Notes:** "Brandon" from the business name and site testimonials. Sources: https://exa.ai/library/place/qgn6bdwy9gk | https://www.contractorsranked.com/contractor/hillsboro-or/aloha-pressure-washing-inc-and-roofing-co | https://exa.ai/library/places?q=b551d12902e76e8a
