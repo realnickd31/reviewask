@@ -24,7 +24,7 @@ export default function Pricing() {
       <p className="mt-1 text-sm text-slate-500">{annual ? "Save $78 vs. monthly — two months free" : "Billed monthly · cancel anytime"}</p>
       <ul className="mt-8 space-y-3 text-sm text-slate-700">{features.map((f) => <li key={f} className="flex gap-2.5"><Check />{f}</li>)}</ul>
       <Link href="/signup" className="btn-navy mt-8 w-full py-3">Start 7-day free trial</Link>
-      <p className="mt-3 text-center text-xs text-slate-500">Card required at checkout · not charged until the trial ends</p>
+      <p className="mt-3 text-center text-xs text-slate-500">Card required at checkout · not charged until the trial ends · 200 requests/month, sent by email today (SMS rolling out)</p>
     </div>
     <p className="mt-6 text-sm text-slate-500">Cancel before the trial ends and you pay nothing. Prices in USD. Taxes may apply. Payments processed securely by Stripe.</p>
   </div></section>;

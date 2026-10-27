@@ -12,7 +12,7 @@ export default async function Page() {
   return <main className="flex min-h-screen flex-col items-center justify-center bg-slate-50 px-4 py-12"><div className="w-full max-w-sm">
     <div className="mb-8 flex justify-center"><Logo dark /></div>
     <div className="card p-8"><h1 className="text-xl font-semibold">Create your account</h1><p className="mb-6 mt-1.5 text-sm text-slate-500">7-day free trial, then $39/month. Cancel anytime.</p>
-      <ul className="mb-6 space-y-1.5 text-sm text-slate-700"><li>✓ Automatic review asks after every Jobber or Housecall Pro job</li><li>✓ One polite day-3 follow-up</li><li>✓ 200 requests/month · no contract</li></ul>
+      <ul className="mb-6 space-y-1.5 text-sm text-slate-700"><li>✓ Automatic review asks after every Jobber or Housecall Pro job</li><li>✓ One polite day-3 follow-up</li><li>✓ 200 requests/month, sent by email (SMS rolling out)</li><li>✓ No contract · cancel before day 7 and pay nothing</li></ul>
       <AuthForm action={signup} label="Create account" /><p className="mt-4 text-xs text-slate-600">Card required at checkout; you won’t be charged until the 7-day trial ends. Questions? support@getreviewask.com</p></div>
     <p className="mt-6 text-center text-sm text-slate-600">Already have an account? <Link href="/login" className="font-medium text-navy-900 underline underline-offset-4">Log in</Link></p>
     <p className="mt-3 text-center text-xs leading-relaxed text-slate-600">By creating an account you agree to the <Link href="/terms" className="underline underline-offset-2">Terms of Service</Link> and <Link href="/privacy" className="underline underline-offset-2">Privacy Policy</Link>.</p>
