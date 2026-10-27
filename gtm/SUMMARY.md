@@ -75,3 +75,10 @@
 - Flags: Moxthe, Smith, Task Tacklers and EES have weak sources. Task Tacklers also has Nextdoor complaints about deposits. Ancient City Window has 317+ reviews (disqualified). Edge Services (MN) has 167.
 - +5 audits (section Q): Simply SoftWash, Green Thumbs, Still Creek, Palm Aire, Danner.
 - Totals: 613 rows · 198 Hot · 380 Warm · 463 with email · 66 audits.
+
+## Update 2026-10-27 ~6:00 AM ET: pass 7 Jobber Sites discovery
+- Added 58 new Jobber-confirmed rows from 22 searches (Southeast, plus KY and a few others). 13 have site-widget counts; the other 45 are [BLOCKED].
+- 12 are newly Hot. 11 have email (section S). Summit Lawn (GA) has no email. Flags: JF HVAC has a 3.7 rating; COOLTECH's page says WA but it came up in an Alabama search.
+- Ground Xperts (section Q): Exa shows 120 Google reviews (4.7), not the 42 on its widget. Rescored to 80 (Warm) and flagged.
+- +3 audits: Youngs Pressure Washing, Coastal Cleaning, Joe Allen.
+- Totals: 671 rows · 209 Hot · 427 Warm · 516 with email · 69 audits. The channel is still yielding.

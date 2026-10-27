@@ -1022,6 +1022,7 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Opener: Saw your Jobber site. You're at 41 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
 
 ### Q7. Ground Xperts — LaFayette, GA (score 92)
+- **FLAG 10/27: Exa shows 120 Google reviews (4.7), not 42. The score drops to 80 (Warm), so deprioritize.**
 - Category: Lawn Care / Landscaping
 - Email: groundxperts@gmail.com · Phone: (423) 598-8016
 - Google reviews: 42 (4.9). Source: site widget, https://groundxperts.jobbersites.com/
@@ -1033,21 +1034,21 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: ypwservices@gmail.com · Phone: (864) 266-7691
 - Google reviews: 39 (4.9). Source: site widget, https://youngspressurewashingservicesllc.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Youngs+Pressure+Washing+Services+LLC+Spartanburg+SC
-- Opener: Saw your Jobber site. You're at 39 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 39 Google reviews (4.9). Pink's has 59 in Spartanburg, and Superior Clean and Cooke are past 100. Asking after every wash closes most of that within a season. (from the review-gap audit)
 
 ### Q9. Coastal Cleaning — Myrtle Beach, SC (score 92)
 - Category: Cleaning
 - Email: ccleaninglinen@gmail.com · Phone: (843) 400-0323
 - Google reviews: 44 (4.7). Source: site widget, https://coastalcleaning.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Coastal+Cleaning+Myrtle+Beach+SC
-- Opener: Saw your Jobber site. You're at 44 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 44 Google reviews (4.7). PrimeCare has 48, so a few more puts you at the top of the owner-run cleaners in Myrtle Beach. Asking every recurring client also lifts your 4.7. (from the review-gap audit)
 
 ### Q10. Joe Allen Pressure Washing LLC — Jacksonville, FL (score 86)
 - Category: Pressure Washing
 - Email: japwjax@gmail.com · Phone: (904) 707-4959
 - Google reviews: 96. Source: site widget, https://japwjax.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Joe+Allen+Pressure+Washing+LLC+Jacksonville+FL
-- Opener: Saw your Jobber site. You're at 96 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 96 Google reviews. Jax Pro has 221 and HouseBright has 190. You're halfway to the top, and asking every customer gets you there in about 6 months. (from the review-gap audit)
 
 ### Q11. Green Ranger Lawn & Landscapes — Hampton, VA (score 92)
 - Category: Lawn Care / Landscaping
@@ -1150,3 +1151,84 @@ Counts come from web mirrors. Re-check on Maps before sending, especially entrie
 - Google reviews: 61 (4.9). Source: https://exa.ai/library/place/qs0xddj33cd. 
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Warrior+Coverage+Lawrenceville+GA
 - Opener: Saw your Jobber site. You're at 61 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+
+## S. Pass 7 Jobber Sites discovery (2026-10-27): newly Hot with email
+All counts come from the Google widget on each business's own Jobber Sites page. Re-check on Maps before sending.
+
+### S1. True Landscape Designs LLC — Gainesville, FL (score 97)
+- Category: Lawn Care / Landscaping
+- Email: truelandscapedesigns@gmail.com · Phone: (352) 316-4410
+- Google reviews: 6. Source: site widget, https://truelandscapedesigns.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=True+Landscape+Designs+LLC+Gainesville+FL
+- Opener: Saw your Jobber site. You're at 6 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S2. JF HVAC Maintenance LLC — Winston-Salem, NC (score 97)
+- Category: HVAC
+- Email: jfmaint.llc@gmail.com · Phone: (336) 231-4075
+- Google reviews: 9 (3.7). Source: site widget, https://jfhvacmaintenancellc.jobbersites.com/. FLAG: 3.7 rating.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=JF+HVAC+Maintenance+LLC+Winston-Salem+NC
+- Opener: Saw your Jobber site. You're at 9 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S3. Aaron’s Lawn Company — Canton, GA (score 97)
+- Category: Lawn Care / Landscaping
+- Email: aaronslawncompany@gmail.com · Phone: (678) 577-0158
+- Google reviews: 17. Source: site widget, https://aaronslawncompany.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Aaron%E2%80%99s+Lawn+Company+Canton+GA
+- Opener: Saw your Jobber site. You're at 17 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S4. A&C Fencing of TN LLC — Cookeville, TN (score 97)
+- Category: Fencing
+- Email: ancfencing@yahoo.com · Phone: (931) 239-8028
+- Google reviews: 4. Source: site widget, https://ancfencingoftnllc.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=A%26C+Fencing+of+TN+LLC+Cookeville+TN
+- Opener: Saw your Jobber site. You're at 4 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S5. Acosta Property Maintenance LLC — Florence, SC (score 97)
+- Category: Lawn Care / Landscaping
+- Email: c.acosta@acostapropertymaintenance.com · Phone: (843) 472-7426
+- Google reviews: 7. Source: site widget, https://acostapm.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Acosta+Property+Maintenance+LLC+Florence+SC
+- Opener: Saw your Jobber site. You're at 7 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S6. Millers Lawn LLC — Columbus, GA (score 92)
+- Category: Lawn Care / Landscaping
+- Email: millerslawnllc@gmail.com · Phone: (706) 570-2563
+- Google reviews: 47 (4.9). Source: site widget, https://millerslawn.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Millers+Lawn+LLC+Columbus+GA
+- Opener: Saw your Jobber site. You're at 47 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S7. C&R Rubbish and Junk Removal LLC — Winston-Salem, NC (score 92)
+- Category: Junk Removal
+- Email: crjunkandrubbish@gmail.com · Phone: (336) 257-4473
+- Google reviews: 30. Source: site widget, https://crrubbishandjunkremoval.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=C%26R+Rubbish+and+Junk+Removal+LLC+Winston-Salem+NC
+- Opener: Saw your Jobber site. You're at 30 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S8. Green Space Landscaping & Lawn Care LLC — Melbourne, FL (score 92)
+- Category: Lawn Care / Landscaping
+- Email: aidan.greenspace@gmail.com · Phone: (321) 252-9574
+- Google reviews: 32. Source: site widget, https://greenspace.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Green+Space+Landscaping+%26+Lawn+Care+LLC+Melbourne+FL
+- Opener: Saw your Jobber site. You're at 32 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S9. Hurst Landscapes, Inc. — Raleigh, NC (score 92)
+- Category: Lawn Care / Landscaping
+- Email: hurstlandscapesprojects@gmail.com · Phone: (919) 656-7374
+- Google reviews: 31 (4.5). Source: site widget, https://hurstlandscapesinc.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Hurst+Landscapes%2C+Inc.+Raleigh+NC
+- Opener: Saw your Jobber site. You're at 31 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S10. Genesis Lawns LLC — Melbourne, FL (score 86)
+- Category: Lawn Care / Landscaping
+- Email: neil@genesislawns.com · Phone: (321) 414-9666
+- Google reviews: 75 (4.7). Source: site widget, https://genesislawnsllc.jobbersites.com/.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Genesis+Lawns+LLC+Melbourne+FL
+- Opener: Saw your Jobber site. You're at 75 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### S11. COOLTECH Refrigeration Heating and Cooling LLC — Auburn, WA (score 92)
+- Category: HVAC
+- Email: cooltech1225@gmail.com · Phone: (253) 499-3089
+- Google reviews: 9. Source: site widget, https://cooltechrefrigerationheatingandcoolingllc.jobbersites.com/. FLAG: the page says WA, but this was found in an Alabama search. Confirm the state.
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=COOLTECH+Refrigeration+Heating+and+Cooling+LLC+Auburn+WA
+- Opener: Saw your Jobber site. You're at 9 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.

@@ -1277,3 +1277,62 @@ To close it in 6 months: ~20 new reviews/mo ≈ 134 asks/mo at a 15% response ra
 **Sources:** https://dannerexteriorservices.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=fd0d61a9c7e20106 | https://www.contractorsranked.com/contractor/boynton-beach-fl/city-pressure-cleaning-soft-wash-roof-cleaning
 
 **Notes:** Dan Ryan's (claims 800+) is a volume leader and was left out. The City Pressure Cleaning count comes from Contractors Ranked.
+
+## Youngs Pressure Washing Services LLC (Spartanburg, SC)
+```
+Google Review Gap — Youngs Pressure Washing Services LLC (Spartanburg, "pressure washing Spartanburg")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         39  4.9
+#1 Superior Clean Power Washing  130  5.0
+#2 Cooke Pressure Washing  115  
+#3 Pink's Window Services  59  5.0
+
+Gap to top-3 average: 62 reviews (gap to leader: 91)
+To close it in 6 months: ~16 new reviews/mo ≈ 107 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 39 Google reviews (4.9). Pink's has 59 in Spartanburg, and Superior Clean and Cooke are past 100. Asking after every wash closes most of that within a season.
+
+**Sources:** https://pressurewashingdir.com/south-carolina/spartanburg/ | https://theupstatelist.com/biz/pinks-window-services-spartanburg-spartanburg/ | https://exa.ai/library/places?q=5d306df60ae5b123
+
+**Notes:** WEAK: the Superior and Cooke counts come from a directory's 'verified reviews'. Cooke advertises 75+ Google reviews.
+
+## Coastal Cleaning (Myrtle Beach, SC)
+```
+Google Review Gap — Coastal Cleaning (Myrtle Beach, "house cleaning Myrtle Beach")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         44  4.7
+#1 PrimeCare  48  5.0
+#2 Maven Cleaning  32  4.9
+
+Gap to top-2 average: 0 reviews (gap to leader: 4)
+To close it in 6 months: ~1 new reviews/mo ≈ 7 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 44 Google reviews (4.7). PrimeCare has 48, so a few more puts you at the top of the owner-run cleaners in Myrtle Beach. Asking every recurring client also lifts your 4.7.
+
+**Sources:** https://coastalcleaning.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=a1bc70d8cf22b63b | https://exa.ai/library/places?q=8123cd4d2732413b
+
+**Notes:** Left out: Merry Maids (268, a franchise), Elite Carpet (820, carpet cleaning) and A2Z Cleaning & Linen (309, a volume leader). You're nearly tied with the leading owner-run peer.
+
+## Joe Allen Pressure Washing LLC (Jacksonville, FL)
+```
+Google Review Gap — Joe Allen Pressure Washing LLC (Jacksonville, "pressure washing Jacksonville")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         96  
+#1 Jax Pro Pressure Washing  221  
+#2 HouseBright Exterior Cleaning  190  
+#3 Soft Wash 911  182  
+
+Gap to top-3 average: 102 reviews (gap to leader: 125)
+To close it in 6 months: ~21 new reviews/mo ≈ 140 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 96 Google reviews. Jax Pro has 221 and HouseBright has 190. You're halfway to the top, and asking every customer gets you there in about 6 months.
+
+**Sources:** https://prosource.app/best-pressure-washing-jacksonville-fl/ | https://exa.ai/library/places?q=30ce2655b8640e68
+
+**Notes:** Five Star Pressure Washing (644) is a volume leader and was left out.
