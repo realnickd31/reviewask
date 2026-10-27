@@ -542,3 +542,139 @@ Review counts come from web mirrors, not Google Maps. Re-check Maps before any s
 - Reviews: ~3 @ 5.0 (Review count via Exa Places 5.0 from 3 (not Google Maps; verify))
 - Opener: Saw Christmas Lights of Texas books through Jobber and has about 3 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Christmas+Lights+of+Texas+Brazoria+TX
+
+
+## Newly Hot — Jobber Sites pass 3 enrichment (22)
+Counts come from each business's own Jobber Sites Google widget or from web mirrors. Re-check Maps before any send. Paradise Pools (1.0 rating) and Downtown Pools (3.9) score Hot but are held out of this list.
+
+### L1. Daystar Exterior Cleaning — Bradenton, FL (score 97)
+- Email: daystarcleans@gmail.com · Phone: (941) 592-5990 · Site: https://daystarexteriorcleaning.jobbersites.com/
+- Reviews: ~19 @ 4.8 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw Daystar Exterior Cleaning books through Jobber and shows 19 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Daystar+Exterior+Cleaning+Bradenton+FL
+
+### L2. Grasshopper Home — Raleigh, NC (score 97)
+- Email: sthatcher@grasshopperhomeservices.com · Phone: (919) 387-0777 · Site: https://grasshopperhome.jobbersites.com/
+- Reviews: ~3 @ 5.0 (Review count via MyTriangleServices (Google 5.0 from 3) (not Google Maps; verify))
+- Opener: Saw Grasshopper Home books through Jobber and shows 3 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Grasshopper+Home+Raleigh+NC
+
+### L3. Parra Outdoor Services — Youngsville, NC (score 97)
+- Email: parraoutdoorservices@outlook.com · Phone: (919) 438-7870 · Site: https://parraoutdoorservices.jobbersites.com/
+- Reviews: ~9 @ 5.0 (Review count via SnowLawn (9 Google); Exa 6 (not Google Maps; verify))
+- Opener: Saw Parra Outdoor Services books through Jobber and shows 9 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Parra+Outdoor+Services+Youngsville+NC
+
+### L4. On Target Pressure Washing LLC — Summerville, SC (score 97)
+- Email: ontarget843@gmail.com · Phone: (843) 531-0360 · Site: https://ontargetpressurewashingllc.jobbersites.com/
+- Reviews: ~8 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw On Target Pressure Washing LLC books through Jobber and shows 8 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=On+Target+Pressure+Washing+LLC+Summerville+SC
+
+### L5. Solar Pro Wash — Moncks Corner, SC (score 97)
+- Email: solarprowashcarolina@gmail.com · Phone: (843) 209-0855 · Site: https://solarprowash.jobbersites.com/
+- Reviews: ~18 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw Solar Pro Wash books through Jobber and shows 18 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Solar+Pro+Wash+Moncks+Corner+SC
+
+### L6. A & L Lawncare — Cottondale, AL (score 97)
+- Email: aandllawncarellc@gmail.com · Phone: (205) 887-3010 · Site: https://aandllawncarellc.jobbersites.com/
+- Reviews: ~12 @ 5.0 (Review count via Exa Places/Yahoo Local 5.0 from 12 (not Google Maps; verify))
+- Opener: Saw A & L Lawncare books through Jobber and shows 12 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=A+%26+L+Lawncare+Cottondale+AL
+
+### L7. B Tops Landscaping INC. — Montgomery, AL (score 97)
+- Email: btopslandscaping@yahoo.com · Phone: (334) 834-2867 · Site: https://btopslandscapinginc.jobbersites.com/
+- Reviews: ~14 @ 4.2 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw B Tops Landscaping INC. books through Jobber and shows 14 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=B+Tops+Landscaping+INC.+Montgomery+AL
+
+### L8. Watson Outdoor Services — Pike County area, GA (score 97)
+- Email: landonjwatson1@gmail.com · Phone: (478) 800-5068 · Site: https://watsonoutdoorservices.jobbersites.com/
+- Reviews: ~13 @ 5.0 (Review count via allaboutlandscapingservices: Google 5.0 from 13 (not Google Maps; verify))
+- Opener: Saw Watson Outdoor Services books through Jobber and shows 13 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Watson+Outdoor+Services+Pike+County+area+GA
+
+### L9. TN Lawnsmiths, LLC — Murfreesboro, TN (score 97)
+- Email: tnlawnsmiths@gmail.com · Phone: (615) 796-6475 · Site: https://tnlawnsmiths.jobbersites.com/
+- Reviews: ~16 @ 5.0 (Review count via Exa/gigopro 5.0 from 16 (not Google Maps; verify))
+- Opener: Saw TN Lawnsmiths, LLC books through Jobber and shows 16 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=TN+Lawnsmiths%2C+LLC+Murfreesboro+TN
+
+### L10. Bros Mow Landscape, LLC — Brentwood, TN (score 97)
+- Email: braden@brosmowlandscape.com · Phone: (615) 870-9543 · Site: https://brosmowlandscape.jobbersites.com/
+- Reviews: ~17 @ 4.8 (Review count via SnowLawn 4.8 from 17 Google (not Google Maps; verify))
+- Opener: Saw Bros Mow Landscape, LLC books through Jobber and shows 17 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Bros+Mow+Landscape%2C+LLC+Brentwood+TN
+
+### L11. Tri-Star Landscaping — Arrington, TN (score 97)
+- Email: tristarlandscapingllc@gmail.com · Phone: (615) 803-3875 · Site: https://tristarlandscaping.jobbersites.com/
+- Reviews: ~7 @ 4.4 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw Tri-Star Landscaping books through Jobber and shows 7 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Tri-Star+Landscaping+Arrington+TN
+
+### L12. PWS Janitorial — Clearwater, FL (score 97)
+- Email: pinellaswindowsc.0804@gmail.com · Phone: (727) 370-1619 · Site: https://pwsjanitorial.jobbersites.com/
+- Reviews: ~12 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw PWS Janitorial books through Jobber and shows 12 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=PWS+Janitorial+Clearwater+FL
+
+### L13. Tolson Lawn Services LLC — Hartsville, SC (score 97)
+- Email: tolsonlawn@gmail.com · Phone: (843) 858-2038 · Site: https://tolsonlawnservicesllc.jobbersites.com/
+- Reviews: ~24 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw Tolson Lawn Services LLC books through Jobber and shows 24 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Tolson+Lawn+Services+LLC+Hartsville+SC
+
+### L14. D&D Lawn Care of Cane Bay, LLC — Summerville, SC (score 97)
+- Email: ddlawncb@gmail.com · Phone: (843) 252-6071 · Site: https://ddlawncareofcb.jobbersites.com/
+- Reviews: ~13 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw D&D Lawn Care of Cane Bay, LLC books through Jobber and shows 13 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=D%26D+Lawn+Care+of+Cane+Bay%2C+LLC+Summerville+SC
+
+### L15. Carolina Lawn Services — Rock Hill, SC (score 97)
+- Email: carolinalawnserv@gmail.com · Phone: (803) 616-8693 · Site: https://carolinalawnservices.jobbersites.com/
+- Reviews: ~10 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw Carolina Lawn Services books through Jobber and shows 10 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Carolina+Lawn+Services+Rock+Hill+SC
+
+### L16. PV Repair & Cleaning — Naples, FL (score 92)
+- Email: info@naplespremierpaversprotection.com · Phone: (239) 319-6500 · Site: https://pvrepaircleaning.jobbersites.com/
+- Reviews: ~27 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw PV Repair & Cleaning books through Jobber and shows 27 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=PV+Repair+%26+Cleaning+Naples+FL
+
+### L17. Aviles Brothers’ Landscaping, LLC — Decatur, AL (score 92)
+- Email: avilesbrothersllc16@gmail.com · Phone: (256) 330-5456 · Site: https://avilesbrotherslandscapingllc.jobbersites.com/
+- Reviews: ~46 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw Aviles Brothers’ Landscaping, LLC books through Jobber and shows 46 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Aviles+Brothers%E2%80%99+Landscaping%2C+LLC+Decatur+AL
+
+### L18. Transparent Pool Service LLC — North Fort Myers, FL (score 92)
+- Email: transparentpoolservicefl@gmail.com · Phone: (239) 200-3672 · Site: https://transparentpoolservice.jobbersites.com/
+- Reviews: ~28 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw Transparent Pool Service LLC books through Jobber and shows 28 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Transparent+Pool+Service+LLC+North+Fort+Myers+FL
+
+### L19. Spiffy Brothers Pressure Washing — Raleigh, NC (score 92)
+- Email: spiffybrothers2023@gmail.com · Phone: (919) 664-9942 · Site: https://spiffybrotherspressurewashing.jobbersites.com/
+- Reviews: ~49 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw Spiffy Brothers Pressure Washing books through Jobber and shows 49 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Spiffy+Brothers+Pressure+Washing+Raleigh+NC
+
+### L20. Handy Crow — Arlington, TX (score 92)
+- Email: c.crow@handycrow.com · Phone: (682) 450-5459 · Site: https://handycrow.jobbersites.com/
+- Reviews: ~9 @ 5.0 (Review count via twupro: 9 Google @ 5.0; contractorsranked 8 (not Google Maps; verify))
+- Opener: Saw Handy Crow books through Jobber and shows 9 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Handy+Crow+Arlington+TX
+
+### L21. My Service Heroes — Conroe, TX (score 87)
+- Email: info@callmyserviceheroes.com · Phone: (936) 600-5838 · Site: https://callmyserviceheroes.jobbersites.com/
+- Reviews: ~49 @ 5.0 (Review count via twupro: Google 5.0 from 49 (not Google Maps; verify))
+- Opener: Saw My Service Heroes books through Jobber and shows 49 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=My+Service+Heroes+Conroe+TX
+
+### L22. PoolFix — Haines City, FL (score 86)
+- Email: info@getpoolfixed.com · Phone: (863) 589-7743 · Site: https://poolfix.jobbersites.com/
+- Reviews: ~86 @ 4.8 (Review count via their own Jobber Sites page (embedded Google review widget))
+- Opener: Saw PoolFix books through Jobber and shows 86 Google reviews on its site. Most shops your size could double that by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=PoolFix+Haines+City+FL
