@@ -101,3 +101,9 @@
 - Flags: JADE Landscape is 1.0 from 2 reviews (score capped at 60). Water Works (AL) is rated ~3.7–3.9. Danny's Landscaping (TX) has Yelp complaints about paid work left unfinished. Pure Paint Florida has a Networx complaint.
 - Audited the 4 leftover section S Hot leads (Green Space, Genesis Lawns, C&R Rubbish, A&C Fencing) and updated their openers.
 - Totals: 729 rows / 245 Hot / 448 Warm / 571 with email / 78 audits. Nothing sent. Task C (more discovery) was skipped this pass.
+
+## Update 2026-10-27 ~3:40 AM ET (section U audits, discovery exhaustion, send queue)
+- 8 new review-gap audits from section U: Signature PW, TC Lawn Manicure, Galloway, Grindstone, LeClercq's, Compass Painting, Magic Broom and Hilbun Pest. Their openers are updated in outreach and the CSV. Audits total 86.
+- **Jobber Sites discovery is effectively exhausted.** 7 fresh site: searches (GA, TN, SC, FL, AL, KY, MS/LA) returned 37 slugs. 29 were already known, so only 8 were new after dedupe; I added those (1 Hot with email: Nky Lawn Pros, KY → section W). I stopped instead of padding. Next lead sources would be Jobber's "find a pro" directory, Nextdoor or Google Maps category scrapes.
+- Added a **Day-1 send queue** (draft) to outreach_ready_top25.md: the top 25 audited Hot leads with email, all Southeast. Nothing sent.
+- Totals: 737 rows / 247 Hot / 454 Warm / 578 with email / 86 audits.

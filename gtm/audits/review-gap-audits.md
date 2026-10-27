@@ -1518,3 +1518,171 @@ To close it in 6 months: ~4 new reviews/mo ≈ 27 asks/mo at a 15% response rate
 **Sources:** https://ancfencingoftnllc.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=eed1f1b19801f38f | https://www.contractorsranked.com/contractor/Cookeville-TN/putnam-county-fencing
 
 **Notes:** The site widget shows 4, but fenceanddeckguide shows 15 (5.0) and Growcycle shows 11 (4.7), so re-check on Maps. Competitor counts also vary across directories (Putnam 12–25, Security 14–24).
+
+
+## Signature Pressure Washing LLC (Port St. Lucie, FL)
+```
+Google Review Gap — Signature Pressure Washing LLC (Port St. Lucie, "pressure washing Port St. Lucie")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         7  5.0
+#1 A Buff & Beyond Pressure Washing  522  4.9
+#2 Clean Space Pressure Washing  256  5.0
+#3 R N R Pressure Cleaning  187  4.9
+
+Gap to top-3 average: 315 reviews (gap to leader: 515)
+To close it in 6 months: ~53 new reviews/mo ≈ 354 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 7 Google reviews (5.0). Port St. Lucie's top pressure washers have 187–522. Pressure Perfection is at 60, which is the first rung. A review ask after every Jobber job gets you there.
+
+**Sources:** https://signaturepressurewashingllc.jobbersites.com (own Google widget) | https://reports.lpraudit.com/florida/port-saint-lucie/pressure-washing/ | https://exa.ai/library/places?q=319cbd11bcd344a1
+
+**Notes:** The 5.0 rating comes from Exa Places. Cleanmaster (582) was left out because that count is Birdeye-only. This is a crowded market: the lpraudit report counts 25 operators.
+
+
+## TC Lawn Manicure, LLC (Beaufort, SC)
+```
+Google Review Gap — TC Lawn Manicure, LLC (Beaufort, "lawn care Beaufort SC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         11  4.6
+#1 Franco Bros LLC Landscaping  85  5.0
+#2 Harrelson Landscape LLC  38  4.9
+#3 Clarkscapes  38  4.6
+
+Gap to top-3 average: 43 reviews (gap to leader: 74)
+To close it in 6 months: ~8 new reviews/mo ≈ 54 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 11 Google reviews (4.6). Harrelson has 38 in Beaufort and Franco Bros has 85. This market is small enough that ~8 new reviews a month makes you a top-3 name by spring.
+
+**Sources:** https://tclawnmanicurellc.jobbersites.com (own Google widget) | https://snowlawn.net/sc/beaufort/Franco | https://lowcountrytrustedpros.com/pros/harrelson-landscape-llc/ | https://exa.ai/library/places?q=57a82f23afbe5e46
+
+**Notes:** Causey's (27) and Beaufort Lawn Care Co. (23) are the next tier. Clarkscapes is design-build.
+
+
+## Galloway Lawn and Landscape (Jacksonville, FL)
+```
+Google Review Gap — Galloway Lawn and Landscape (Jacksonville, "lawn care Jacksonville FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         17  —
+#1 Earth Works Jax Lawn Care and Landscaping  240  4.9
+#2 McDaniel's Lawncare & Landscaping  228  4.7
+#3 GPE Groundskeeping, Inc  70  4.9
+
+Gap to top-3 average: 163 reviews (gap to leader: 223)
+To close it in 6 months: ~28 new reviews/mo ≈ 187 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 17 Google reviews. Jacksonville's local leaders like Earth Works (240) and McDaniel's (228) built theirs one job at a time. Asking after every Jobber visit is how you catch up.
+
+**Sources:** https://gallowaylawnandlandscape.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=a4111fa263c27b74 | https://www.ratexyz.com/top/google/lawn-mowing-care/in/united-states/jacksonville
+
+**Notes:** Left out: Anthony's (1,107, an outlier), LawnStarter (a platform), Fairway Lawns (489, a franchise) and Pro Care/Total Spraying (pest-led). This is a competitive metro.
+
+
+## Grindstone Trees and Landscaping (Boone, NC)
+```
+Google Review Gap — Grindstone Trees and Landscaping (Boone, "tree service Boone NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         20  —
+#1 Boone Tree Experts  140  4.8
+#2 ArborCare Tree Service  55  3.9
+#3 WNC Cruz Tree Service  9  4.6
+
+Gap to top-3 average: 48 reviews (gap to leader: 120)
+To close it in 6 months: ~8 new reviews/mo ≈ 54 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 20 Google reviews. In Boone, only Boone Tree Experts (140) is clearly ahead. ArborCare has 55 at 3.9, so a steady ask after each job puts you #2 quickly.
+
+**Sources:** https://grindstonetreesandlandscaping.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=d1993aa46cdeb468 | https://www.contractorsranked.com/contractor/boone-nc/boone-tree-experts
+
+**Notes:** Boone Tree Experts shows 123–147 depending on the mirror; Exa's 140 is used here. This is a thin market with a big opportunity.
+
+
+## LeClercq's Landscaping & Pressure Washing (Wake Forest, NC)
+```
+Google Review Gap — LeClercq's Landscaping & Pressure Washing (Wake Forest, "landscaping Wake Forest NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         25  —
+#1 Crownover Green  233  5.0
+#2 FortSmith Landscaping  227  4.9
+#3 Parise Lawncare  38  5.0
+
+Gap to top-3 average: 141 reviews (gap to leader: 208)
+To close it in 6 months: ~24 new reviews/mo ≈ 160 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 25 Google reviews. Parise Lawncare has 38 in Wake Forest, so you could pass them in ~2 months. Crownover and FortSmith are at 230ish and show where steady asking leads.
+
+**Sources:** https://leclercqslandscapingllc.jobbersites.com (own Google widget) | https://www.trianglelandscapers.com/landscapers-in/wake-forest-nc/crownover-green-wake-forest-nc | https://www.trianglelandscapers.com/landscapers-in/wake-forest-nc/fortsmith-landscaping-wake-forest-nc | https://exa.ai/library/places?q=aa42c1188817af91
+
+**Notes:** 1.855.NC Stump Grinding (205) was left out because it's a different niche.
+
+
+## Compass Painting of SWFL (St. Petersburg, FL)
+```
+Google Review Gap — Compass Painting of SWFL (St. Petersburg, "house painters St. Petersburg FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         45  —
+#1 Presto Painting Services  388  4.9
+#2 360° Painting of St. Petersburg  290  5.0
+#3 Legacy Applications  102  5.0
+
+Gap to top-3 average: 215 reviews (gap to leader: 343)
+To close it in 6 months: ~36 new reviews/mo ≈ 240 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 45 Google reviews. Legacy Applications has 102 in St. Pete. A review ask after every finished paint job closes that in about 6 months.
+
+**Sources:** https://compasspaintingswfl.jobbersites.com (own Google widget) | https://prosgrade.com/painters/st-petersburg/360-painting-of-st-petersburg | https://exa.ai/library/places?q=23004f768115ffbb
+
+**Notes:** CertaPro (a franchise) was left out. The name says SWFL but the listing is in St. Pete, so confirm the market before sending. White Glove (45–62) is the closest peer.
+
+
+## Magic Broom Cleaning (Orlando, FL)
+```
+Google Review Gap — Magic Broom Cleaning (Orlando, "house cleaning Orlando FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         94  4.7
+#1 Ruby Red Cleaning  288  4.8
+#2 Wholesome House Cleaning  248  5.0
+#3 Dean of Clean  244  4.6
+
+Gap to top-3 average: 166 reviews (gap to leader: 194)
+To close it in 6 months: ~28 new reviews/mo ≈ 187 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 94 Google reviews (4.7), already ahead of most Orlando cleaners. Ruby Red is at 288. Recurring cleans give you the most chances to ask of any trade.
+
+**Sources:** https://magicbroomcleaning.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=2a4deeed7e0cbebc | https://tajmahome.com/fl/orlando/house-cleaning/
+
+**Notes:** Wholesome's count is WEAK (Tajmahome only). Left out: Merry Maids (622, a franchise) and Anelise (1,092, WEAK).
+
+
+## Hilbun Pest Control (Foley, AL)
+```
+Google Review Gap — Hilbun Pest Control (Foley, "pest control Foley AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         62  —
+#1 Arrow Exterminators  344  4.8
+#2 Rogue Pest Solutions - Gulf Coast  96  5.0
+#3 Pink Star Pest & Lawn  23  4.5
+
+Gap to top-3 average: 93 reviews (gap to leader: 282)
+To close it in 6 months: ~16 new reviews/mo ≈ 107 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 62 Google reviews. Rogue Pest has 96 in Foley. Quarterly pest visits give you a natural ask every service, so ~6 a month gets you past them before summer.
+
+**Sources:** https://hilbunpestcontrol.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=3a21f47fe1feeaef
+
+**Notes:** Arrow is a regional chain. Beebe's (598) was left out because that count is Birdeye-only.

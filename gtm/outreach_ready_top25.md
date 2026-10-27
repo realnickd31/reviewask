@@ -1316,49 +1316,49 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: signaturepressurewashingllc@gmail.com · Phone: (772) 834-4348
 - Google reviews: 7. Source: site widget, https://signaturepressurewashingllc.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Signature+Pressure+Washing+LLC+Port+St.+Lucie+FL
-- Opener: Saw your Jobber site. You're at 7 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 7 Google reviews (5.0). Port St. Lucie's top pressure washers have 187–522. Pressure Perfection is at 60, which is the first rung. A review ask after every Jobber job gets you there.
 
 ### U2. TC Lawn Manicure, LLC — Beaufort, SC (score 97)
 - Category: Lawn Care / Landscaping
 - Email: tony@tclawnmanicure.com · Phone: (910) 833-0476
 - Google reviews: 11 (4.6). Source: site widget, https://tclawnmanicurellc.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=TC+Lawn+Manicure%2C+LLC+Beaufort+SC
-- Opener: Saw your Jobber site. You're at 11 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 11 Google reviews (4.6). Harrelson has 38 in Beaufort and Franco Bros has 85. This market is small enough that ~8 new reviews a month makes you a top-3 name by spring.
 
 ### U3. Galloway Lawn and Landscape — Jacksonville, FL (score 97)
 - Category: Lawn Care / Landscaping
 - Email: gallowaylawnandlandscape@gmail.com · Phone: (904) 228-2660
 - Google reviews: 17. Source: site widget, https://gallowaylawnandlandscape.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Galloway+Lawn+and+Landscape+Jacksonville+FL
-- Opener: Saw your Jobber site. You're at 17 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 17 Google reviews. Jacksonville's local leaders like Earth Works (240) and McDaniel's (228) built theirs one job at a time. Asking after every Jobber visit is how you catch up.
 
 ### U4. Grindstone Trees and Landscaping — Boone, NC (score 97)
 - Category: Tree Care
 - Email: grindstonetreesandlandscaping@gmail.com · Phone: (828) 434-6943
 - Google reviews: 20. Source: site widget, https://grindstonetreesandlandscaping.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Grindstone+Trees+and+Landscaping+Boone+NC
-- Opener: Saw your Jobber site. You're at 20 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 20 Google reviews. In Boone, only Boone Tree Experts (140) is clearly ahead. ArborCare has 55 at 3.9, so a steady ask after each job puts you #2 quickly.
 
 ### U5. LeClercq's Landscaping & Pressure Washing — Wake Forest, NC (score 92)
 - Category: Pressure Washing
 - Email: leclercqslandscaping@gmail.com · Phone: (919) 819-2584
 - Google reviews: 25. Source: site widget, https://leclercqslandscapingllc.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=LeClercq%27s+Landscaping+%26+Pressure+Washing+Wake+Forest+NC
-- Opener: Saw your Jobber site. You're at 25 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 25 Google reviews. Parise Lawncare has 38 in Wake Forest, so you could pass them in ~2 months. Crownover and FortSmith are at 230ish and show where steady asking leads.
 
 ### U6. Compass Painting of SWFL — St. Petersburg, FL (score 92)
 - Category: Painting
 - Email: jp@compasspaintingswfl.com · Phone: (941) 318-0002
 - Google reviews: 45. Source: site widget, https://compasspaintingswfl.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Compass+Painting+of+SWFL+St.+Petersburg+FL
-- Opener: Saw your Jobber site. You're at 45 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 45 Google reviews. Legacy Applications has 102 in St. Pete. A review ask after every finished paint job closes that in about 6 months.
 
 ### U7. Magic Broom Cleaning — Orlando, FL (score 86)
 - Category: Cleaning
 - Email: magicbroomc@gmail.com · Phone: (321) 458-6111
 - Google reviews: 94 (4.7). Source: site widget, https://magicbroomcleaning.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Magic+Broom+Cleaning+Orlando+FL
-- Opener: Saw your Jobber site. You're at 94 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 94 Google reviews (4.7), already ahead of most Orlando cleaners. Ruby Red is at 288. Recurring cleans give you the most chances to ask of any trade.
 
 ### U8. Honey Do Service Inc. of Franklin, TN — Spring Hill, TN (score 86)
 - Category: Handyman
@@ -1379,7 +1379,7 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: steve.hilbun@hilbunpc.com · Phone: (251) 206-1245
 - Google reviews: 62. Source: site widget, https://hilbunpestcontrol.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Hilbun+Pest+Control+Foley+AL
-- Opener: Saw your Jobber site. You're at 62 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 62 Google reviews. Rogue Pest has 96 in Foley. Quarterly pest visits give you a natural ask every service, so ~6 a month gets you past them before summer.
 
 ### U11. Call The Cavalry Lawn Care — Richmond, VA (score 92)
 - Category: Lawn Care / Landscaping
@@ -1489,3 +1489,45 @@ Counts come from Google mirrors, and the source is recorded for each one. WEAK m
 - Google reviews: 68 (5.0). Source: contractorsranked
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Knock+on+Wood+LLC+Etowah+NC
 - Opener: Saw your Jobber site. You're at 68 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+
+## W. Pass 9 discovery (2026-10-27): newly Hot with email
+
+### W1. Nky Lawn Pros L.L.C. — Walton, KY (score 87)
+- Category: Lawn Care / Landscaping
+- Email: nkylawnpros@gmail.com · Phone: (859) 609-5356
+- Google reviews: 28 (4.6). Source: site widget, https://nkylawnprosllc.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Nky+Lawn+Pros+Walton+KY
+- Opener: Saw your Jobber site. You're at 28 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+
+## Day-1 send queue (DRAFT. Nothing sent; needs Nick's approval)
+These are the top 25 Hot leads with email that already have a review-gap audit, Southeast first, then by score. Each opener comes from its audit. Before sending, re-check the count on Maps. Task Tacklers and Stan's are excluded. Genesis Lawns and Green Space share a market, so send them in different weeks.
+
+| # | Business | City, ST | Score | Email | Their reviews | Leader (reviews) | Flags |
+|---|---|---|---|---|---|---|---|
+| 1 | Complete Lawn Care | Nashville, TN | 100 | thecompletelc@gmail.com | 5 | Weed Man Lawn Care (1117) | — |
+| 2 | Zack Of All Trades | Shelbyville, TN | 97 | zackofalltrades2021@outlook.com | 17 | A&J Electric (59) | — |
+| 3 | Cleaning Services in South Florida | West Palm Beach, FL | 97 | hello@sbrcleaning.com | 14 | MaidThis Cleaning West Palm Beach (661) | — |
+| 4 | Cleaned Pristine Home Services | Tampa, FL | 97 | admin@cleanedpristinesolutions.com | 17 | General Facility Care (153) | — |
+| 5 | Daystar Exterior Cleaning | Bradenton, FL | 97 | daystarcleans@gmail.com | 19 | 2 Bros & A Hose Pressure Washing (153) | — |
+| 6 | Grasshopper Home | Raleigh, NC | 97 | sthatcher@grasshopperhomeservices.com | 3 | Triangle Lawn Care (429) | — |
+| 7 | Parra Outdoor Services | Youngsville, NC | 97 | parraoutdoorservices@outlook.com | 9 | RC Lawn Care (68) | — |
+| 8 | On Target Pressure Washing LLC | Summerville, SC | 97 | ontarget843@gmail.com | 8 | Pepper's Pressure Washing (600) | — |
+| 9 | Solar Pro Wash | Moncks Corner, SC | 97 | solarprowashcarolina@gmail.com | 18 | Pepper's Pressure Washing (600) | — |
+| 10 | A & L Lawncare | Cottondale, AL | 97 | aandllawncarellc@gmail.com | 20 | Ray of Hope Properties (210) | — |
+| 11 | B Tops Landscaping INC. | Montgomery, AL | 97 | btopslandscaping@yahoo.com | 14 | Martinez Lawn Care (125) | — |
+| 12 | TN Lawnsmiths, LLC | Murfreesboro, TN | 97 | tnlawnsmiths@gmail.com | 16 | Primm's Landscaping (159) | — |
+| 13 | Bros Mow Landscape, LLC | Brentwood, TN | 97 | braden@brosmowlandscape.com | 17 | Pineda Properties (67) | — |
+| 14 | PWS Janitorial | Clearwater, FL | 97 | pinellaswindowsc.0804@gmail.com | 12 | Clearwater Soft Wash Pros (26) | — |
+| 15 | Tolson Lawn Services LLC | Hartsville, SC | 97 | tolsonlawn@gmail.com | 29 | Evergreen Landscapes (42) | — |
+| 16 | D&D Lawn Care of Cane Bay, LLC | Summerville, SC | 97 | ddlawncb@gmail.com | 13 | Greenecoast Lawn Management (59) | — |
+| 17 | Carolina Lawn Services | Rock Hill, SC | 97 | carolinalawnserv@gmail.com | 10 | Hey Jude's Lawn Care (134) | — |
+| 18 | Top Tier Lawn Care & Landscaping | , GA | 97 | toptierlawncare.landscaping@gmail.com | 2 | Lawn To The Max (42) | — |
+| 19 | Thunder Services LLC | Orlando, FL | 97 | thunderservicesfl@gmail.com | 17 | Orlando Handyman (239) | — |
+| 20 | Steve's Scapes | Knoxville, TN | 97 | steveslawnscapes@gmail.com | 5 | Grover Turf Care (48) | — |
+| 21 | AmeriGro Landscape Services | Charleston, SC | 97 | info@amerigrolandscape.com | 8 | Bells Landscaping (75) | — |
+| 22 | Magic City Soft Wash | Birmingham, AL | 97 | brian@magiccitysoftwash.com | 9 | Alabama Pressure Washing (159) | — |
+| 23 | Green Thumbs Landscape Consulting and Services | Prosperity, SC | 97 | greenthumbs1744@gmail.com | 8 | Trifecta Landscaping (150) | — |
+| 24 | Simply SoftWash Exterior Cleaning, LLC | Greenville, SC | 97 | mainoffice@simplysoftwash.org | 9 | Spruce Services & Solutions (291) | — |
+| 25 | Danner Exterior Services | Greenacres, FL | 97 | dannerexteriorservices@gmail.com | 10 | City Pressure Cleaning (126) | — |
