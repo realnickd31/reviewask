@@ -98,3 +98,11 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - No audits: new Hot comps not checked yet.
 - Data-only, no deploy. QA: marketing URLs 200, /dashboard 307 to login.
 - Totals: 802 prospects, 254 Hot, 638 w/ email, 167 audits, 43 touch-1 + 43 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.
+
+## Batch AM (~4:38 AM ET)
+- Audit AL: Landscaping And Moore (Wayne PA) 36 @5.0; comps Naturescapes (Paoli) 91, Suburban Lawn (Wayne) 28; leader gap 55; ~27 asks/mo [SPEC]. Straight Line Gutter SKIPPED (own count 8/11/17 conflicts; local comps 6–8). No other Hot with clean comps.
+- Draft: gtm/day1_email_drafts_batch3.md #44 (touch 1 + touch 2) for Landscaping And Moore; greeting 'Ben' from reviews, confirm before sending.
+- Discovery (Mountain West/Midwest/Northeast; chimney, junk, window, irrigation, HVAC, detailing): +8 deduped, +3 Hot (JHansen Cleaning Orem UT 14 @5.0; Junk Heist Goodyear AZ 55 @5.0; Sweep Techs Rochester MN 27 @4.8 from own reviews page). 5 Warm with unverified counts.
+- community_posts_ready.md refreshed: prices unchanged live; added HCP support, free tools URLs, founder note.
+- Data-only, no deploy. QA: 13 URLs 200, /dashboard 307 to login.
+- Totals: 810 prospects, 257 Hot, 646 w/ email, 168 audits, 44 touch-1 + 44 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.

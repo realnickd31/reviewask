@@ -1897,3 +1897,7 @@ DRAFT ONLY. Audited Hot leads with public email that weren't in the Day-1 queue.
 | 43 | Pain In The Grass Lawn & Landscaping LLC | Huntertown, IN | 12 | 36 | audit figures | week 1 |
 
 Left out: Mikes Lawn (4.1 rating), Call The Cavalry (same comps as Iggys), Transparent Pool (same city as Los Hernandez), Roof Ninja (same city as Aaron's), the Warner Robins pair, leads with gaps over 300 or that already lead locally, and all skip-list leads.
+
+## AL — Hot audits, 2026-10-27 (~4:32 AM ET)
+- **Landscaping And Moore LLC (Wayne, PA)**, landscapingandmoore24@gmail.com. 36 reviews; leader gap 55; ~27 asks/mo [SPEC]. Opener: You're at 36 Google reviews (5.0), already ahead of Suburban Lawn and Landscaping in Wayne (28). Naturescapes in Paoli has 91, so about 55 more puts you at the top of the Main Line. Touch-1 draft: gtm/day1_email_drafts_batch3.md #44.
+- Straight Line Seamless Gutter (Negaunee, MI): skipped, comps too thin and own count conflicts.

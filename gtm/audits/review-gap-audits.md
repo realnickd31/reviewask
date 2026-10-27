@@ -3364,3 +3364,13 @@ To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate
 **Sources:** https://exa.ai/library/places?q=74ce69881a175247 | https://pvrepaircleaning.jobbersites.com/ | https://exa.ai/library/place/zfpt23f99bn
 
 **Notes:** Own count shows 19–34 by source; I used its Jobber site's 27. Kingsway (426), Vargas (192), DuraSeal (450+) and N&T (130+) are excluded as self-reported. Pelican Pro is multi-service and also on Jobber.
+
+## AL — 2026-10-27 (~4:32 AM ET)
+### Landscaping And Moore LLC (Wayne/Chesterbrook, PA)
+- Own: 36 Google @5.0 (Exa Places + ContractorsRanked agree). Jobber Client Hub.
+- Comps (local independents): Naturescapes Landscape Specialists, Paoli, 91 @4.9; Suburban Lawn and Landscaping, Wayne, 28 @4.8.
+- Gap to top-2 avg 24; gap to leader 55; ~4 reviews/mo over 6 months; ~27 asks/mo [SPEC].
+- Opener: You're at 36 Google reviews (5.0), already ahead of Suburban Lawn and Landscaping in Wayne (28). Naturescapes in Paoli has 91, so about 55 more puts you at the top of the Main Line.
+- Sources: https://exa.ai/library/places?q=21dfbb738b529f95 | https://www.contractorsranked.com/contractor/phoenixville-pa/landscaping-and-moore | https://www.contractorsranked.com/contractor/paoli-pa/naturescapes-landscape-specialists | https://www.contractorsranked.com/contractor/Wayne-PA/suburban-lawn-and-landscaping
+### Straight Line Seamless Gutter Company (Negaunee, MI): SKIPPED
+- Own count conflicts (Exa 8 vs 11, Birdeye 17). Local gutter comps are tiny (Northwoods 6, ESB 8 at 4.5); Michigan Gutters (294) is not local. Comps too thin to audit honestly.

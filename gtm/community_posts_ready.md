@@ -1,10 +1,12 @@
 # Community posts: drafts for Nick to post himself (nothing posted)
 
-**Refreshed 2026-10-27, ~3:27 AM ET.** Product facts checked against getreviewask.com/pricing and /sms:
+**Refreshed 2026-10-27, ~4:33 AM ET** (facts re-checked live; no price drift). Product facts checked against getreviewask.com/pricing and /sms:
 - $39/month or $390/year (saves $78)
 - 200 review requests a month
 - 7-day free trial; a card is required at checkout but isn't charged until the trial ends; cancel anytime
-- Works with any Jobber plan
+- Works with any Jobber plan, and with Housecall Pro (see /for-housecall-pro)
+- Free tools, no signup needed: review gap checker https://getreviewask.com/tools/review-gap · review link generator https://getreviewask.com/tools/review-link · message templates https://getreviewask.com/templates/review-request
+- Founder note on the homepage (getreviewask.com/#founder) if anyone asks who's behind it
 - Email asks are live; SMS is **rolling out**, so don't say it's available yet
 
 Use only these facts. Make no claims about results.
@@ -97,3 +99,4 @@ Cleaned from `innovation/marketplace-and-communities.md`. There are no made-up r
 > - **Don't** offer discounts for reviews or only ask happy customers. Both break Google's policy.
 >
 > Free tool to see your gap to the top local competitors: https://getreviewask.com/tools/review-gap (only share the link where the rules allow; disclose that you're the founder.)
+> Also free: a Google review link generator (https://getreviewask.com/tools/review-link) and copy-paste request templates (https://getreviewask.com/templates/review-request). Same rules: only where links are allowed, and disclose that you're the founder.
