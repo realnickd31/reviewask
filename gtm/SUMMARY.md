@@ -114,3 +114,13 @@
 - No queue lead uses NiceJob, is closed, or is rated under 4.0. Task Tacklers and Stan's are excluded.
 - **Alternative discovery is thin.** Coldlytics: all 426 profiles were already read on night 1, so it's exhausted. Nextdoor and Facebook-mirror Client Hub searches (12 queries) turned up 40 candidates, but 27 (68%) were already known. **+13 new rows**, 5 with email. All counts are [BLOCKED] (no Google count found; Nextdoor recommendation counts were not used), so they're Warm or below and none are newly Hot. LinkedIn operator search returned no Southeast hits.
 - Totals: 750 rows / 247 Hot / 467 Warm / 583 with email / 86 audits. Nothing sent.
+
+## Update 2026-10-27 ~3:24 AM ET (Client Hub enrichment, audits, site polish)
+- **Searched all 13 newest Client Hub/Nextdoor rows for Google counts.** I found counts for 2:
+  - Los Hernandez Landscaping (North Fort Myers FL): about 30 (5.0), WEAK because mirrors show 23–30. I also found an email. Newly Hot → section X.
+  - Brown Dog Landscaping (Moncks Corner SC): 32 (5.0). Hot, but no email.
+- Found emails for Bernhardt and Whispering Pines. The 937 phone appears on Whispering Pines' own Nextdoor page, so it's the business line. Stress-Less is now set to Murphy NC. The other 11 stay [BLOCKED], each with a search note.
+- **5 new audits:** 1st Sgt F.R.O.G.G.Y. (Hoover AL), Knock on Wood (Etowah NC), Pure Paint Florida (Brooksville FL, complaint flag), Backyard Boys (Franklin TN) and Coastal Pro Painting (Vero Beach FL). 91 audits total.
+- **Site:** added a "Not ready yet? See how many Google reviews you are behind…" link to /tools/review-gap under the CTA on /birdeye-alternative, /podium-alternative, /nicejob-alternative, /compare/jobber-marketing-suite, /jobber-google-reviews and /housecall-pro-google-reviews. Deployed via the Render API (deploy dep-dbg523d9fdbs73cq4qkg) because auto-deploy did not fire. All 6 pages return 200 with the new link.
+- The Day-1 queue is unchanged (no hard disqualifiers found).
+- Totals: 750 rows / 249 Hot / 465 Warm / 586 with email / 91 audits. Nothing sent.
