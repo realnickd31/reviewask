@@ -4,7 +4,7 @@
 |---|---|
 | icp-and-scoring.md | ICP, intent signals, disqualifiers, 0–100 rubric |
 | lead-sources-playbook.md | Jobber-user discovery (Coldlytics tech-detect, search operators, Nextdoor, Marketplace, community, Reddit, LinkedIn), review-gap method, displacement; compliance |
-| prospects_overnight.csv | **328 rows** (US only, deduped vs day1). 283 Jobber-confirmed publicly, 45 "maybe" (directory-only). 193 with public email. 111 Southeast. 90 Hot (≥85), 215 Warm (70–84). Rows 165–257 = Coldlytics expansion (+93, Jobber client-hub link on own site). Rows 258+ = Nextdoor pass (+71, Jobber client-hub link on their Nextdoor business page; 24 Southeast; 65 with email, of which 57 come from their Nextdoor listing rather than a website; review counts enriched for 33 via web mirrors → 18 newly Hot; 32 [BLOCKED], 6 not checked (no email)) |
+| prospects_overnight.csv | **400 rows** (US only, deduped vs day1). 355 Jobber-confirmed publicly, 45 "maybe" (directory-only). 261 with public email. 149 Southeast. 89 Hot (≥85), 288 Warm (70–84). Rows 165–257 = Coldlytics expansion (+93, Jobber client-hub link on own site). Rows 258+ = Nextdoor pass (+71, Jobber client-hub link on their Nextdoor business page; 24 Southeast; 65 with email, of which 57 come from their Nextdoor listing rather than a website; review counts enriched for 33 via web mirrors → 18 newly Hot; 32 [BLOCKED], 6 not checked (no email)). Rows 329–400 are the Jobber Sites pass: +72 businesses whose website is a *.jobbersites.com site (38 Southeast, 68 with email from their own site). Review counts are unknown, so these score Warm at most (82 maximum) and none are Hot. Aristocrat Detailing was rescored to 81 Warm (141 reviews) and 1 Stop Roofing to 86 (51 reviews). |
 | community_posts_ready.md | 3 value-first posts (Jobber Community, Facebook, Reddit), placeholder claims removed |
 | pitch-vs-jobber-marketing-suite.md | One-pager, short email, DM, LinkedIn note, objections |
 | outreach-sequences.md | 3-touch email (Jobber / review-gap / displacement) + 2-touch DMs |
@@ -15,3 +15,5 @@
 - Review counts/ratings/owner names come from the Coldlytics public directory (profiles show "last updated" dates, some from early 2026) — **re-check the Google Maps count before each email**.
 - Competitor review gap was **not** checked per row tonight; column says so.
 - Emails are only mailto: addresses on the business's own site or public Nextdoor/LinkedIn pages. Nothing invented.
+
+- Review-gap audits: **25** (10 new on 2026-10-27: Higgins, Scoop Lab, Roof Ninja, 1 Stop, Plumbing Pro SC, Kearney's, Champagne Valley, Call Chad, South Heat, Hercs Works). Their openers were pushed into outreach_ready_top25.md.

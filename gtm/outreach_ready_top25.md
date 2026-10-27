@@ -342,31 +342,31 @@ Jobber client-hub link on their Nextdoor page; review counts from web mirrors (s
 ### R1. Plumbing Pro SC LLC — Spartanburg, SC (score 92)
 - Email: info@plumbingprosc.com
 - Reviews: ~39 @ 5.0
-- Opener: Saw Plumbing Pro SC LLC takes requests through Jobber and has about 39 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: Your 39 Google reviews are all 5 stars, but CB Smith shows 378 in Spartanburg. Citi Plumbing is about your size at 40. The shop that starts asking every customer pulls ahead. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Plumbing+Pro+SC+LLC+Spartanburg+SC
 
-### R2. 1 Stop Roofing & Exteriors — Madison, AL (score 92)
+### R2. 1 Stop Roofing & Exteriors — Madison, AL (score 86, 51 reviews per Birdeye)
 - Email: 1stopqdc@gmail.com
 - Reviews: ~39 @ 4.7
-- Opener: Saw 1 Stop Roofing & Exteriors takes requests through Jobber and has about 39 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You're at about 51 Google reviews. Revolution Roofing has 229 and Mighty Dog has 150. In roofing, that count is the first thing a homeowner compares. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=1+Stop+Roofing+%26+Exteriors+Madison+AL
 
 ### R3. Roof Ninja Gutter Cleaning, LLC — Canton, GA (score 92)
 - Email: roofninja01@gmail.com
 - Reviews: ~45 @ 4.9
-- Opener: Saw Roof Ninja Gutter Cleaning, LLC takes requests through Jobber and has about 45 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You've got 45 Google reviews, and Knight Roofing & Gutters has 76. About 30 more reviews would make you the most-reviewed gutter company in Canton. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Roof+Ninja+Gutter+Cleaning%2C+LLC+Canton+GA
 
 ### R4. The Scoop Lab — Greenville, NC (score 92)
 - Email: thescooplabnc@gmail.com
 - Reviews: ~40 @ 5.0
-- Opener: Saw The Scoop Lab takes requests through Jobber and has about 40 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You're already the most-reviewed scooper in Greenville at 40 Google reviews. Asking automatically after every visit is how you keep a newcomer from catching up. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=The+Scoop+Lab+Greenville+NC
 
 ### R5. Higgins Home Repair Services — Destin, FL (score 92)
 - Email: jj@higginsrepair.com
 - Reviews: ~37 @ 5.0
-- Opener: Saw Higgins Home Repair Services takes requests through Jobber and has about 37 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You've got 37 Google reviews, all 5.0. Ace Handyman in Niceville has 238, and that's mostly volume from asking every customer. Your rating's better already. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Higgins+Home+Repair+Services+Destin+FL
 
 ### R6. Pain In The Grass Lawn & Landscaping LLC — Huntertown, IN (score 92)
@@ -388,6 +388,7 @@ Jobber client-hub link on their Nextdoor page; review counts from web mirrors (s
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Honey+Do+Heroes+Castle+Rock+CO
 
 ### R9. Aristocrat Detailing — Lenexa, KS (score 87)
+- ⚠ RESCORED to 81 (Warm): Exa shows 141 reviews (5.0); the Coldlytics count of 48 was stale. Hold out of the Hot sends.
 - Email: info@aristocratdetailing.com
 - Reviews: ~48 @ 5.0
 - Opener: Saw Aristocrat Detailing takes requests through Jobber and has about 48 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
@@ -396,7 +397,7 @@ Jobber client-hub link on their Nextdoor page; review counts from web mirrors (s
 ### R10. Call Chad LLC — Akron, OH (score 87)
 - Email: chadl@callchad23.com
 - Reviews: ~38 @ 5.0
-- Opener: Saw Call Chad LLC takes requests through Jobber and has about 38 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: Chad, you're at 38 Google reviews, all 5.0. Reliable Odds & Ends has 186, and the franchises have 90–126. Same rating, about a fifth of the reviews. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Call+Chad+LLC+Akron+OH
 
 ## Newly Hot (≥85) — enrichment pass 2, Nextdoor non-Southeast (8)
@@ -405,7 +406,7 @@ Review counts from web mirrors (source in CSV), not Maps-audited. Draft only.
 ### S1. Champagne Valley — Steamboat Springs, CO (score 92)
 - Email: yampavalleycl@gmail.com
 - Reviews: ~8 @ 5.0
-- Opener: Saw Champagne Valley takes requests through Jobber and has about 8 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You have 8 Google reviews and Best Cleaning Company has 130. In a town the size of Steamboat, a review from every clean adds up fast. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Champagne+Valley+Steamboat+Springs+CO
 
 ### S2. Aqua Pros — Whittier, CA (score 92)
@@ -429,19 +430,19 @@ Review counts from web mirrors (source in CSV), not Maps-audited. Draft only.
 ### S5. Kearney's Heating and Air — Virginia Beach, VA (score 87)
 - Email: gerald.kearney@gmail.com; gerald.s.kearney@gmail.com
 - Reviews: ~28 @ 5.0
-- Opener: Saw Kearney's Heating and Air takes requests through Jobber and has about 28 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You're at 28 Google reviews, all 5.0. Expert Air has 80. Among the owner-run HVAC shops in Virginia Beach, you're about 50 reviews from the top. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Kearney%27s+Heating+and+Air+Virginia+Beach+VA
 
 ### S6. South Heat Landscaping — Tomball, TX (score 87)
 - Email: southheatlandscaping@gmail.com
 - Reviews: ~42 @ 4.6
-- Opener: Saw South Heat Landscaping takes requests through Jobber and has about 42 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You're at about 42 Google reviews at 4.6. Evergreen Outdoor has 408 at 4.9. More reviews also lift a 4.6 average fastest. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=South+Heat+Landscaping+Tomball+TX
 
 ### S7. Hercs Works LLC — Marana, AZ (score 87)
 - Email: hercsworks@outlook.com
 - Reviews: ~43 @ 5.0
-- Opener: Saw Hercs Works LLC takes requests through Jobber and has about 43 Google reviews. Most shops your size could double that by asking every customer automatically after each job.
+- Opener: You've got 43 Google reviews at 5.0. GT Skidsteers has 71. About 30 more and you're the most-reviewed in Marana. (from the review-gap audit)
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Hercs+Works+LLC+Marana+AZ
 
 ### S8. 901 cleaning solutions — Lakeland, TN (score 86)

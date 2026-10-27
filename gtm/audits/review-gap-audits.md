@@ -290,3 +290,193 @@ Gap: [BLOCKED], Google count not verified
 **Notes:** [BLOCKED] The Google count couldn't be verified (Maps blocked, no mirror found). Angi shows 4.9 from 34 and another listing shows 4.8 from 50, neither confirmed as Google. Competitor counts are self-reported on their own sites.
 
 **Sources:** https://nextdoor.com/pages/seal-florida-south-plantation-fl/ | https://purecleaningpressurecleaning.com/ | https://thecleanguyspaversealing.com/areas-served/paver-sealing-plantation-fl/
+
+## Higgins Home Repair Services (Destin, FL)
+```
+Google Review Gap — Higgins Home Repair Services (Destin, "handyman Destin")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         37  5.0
+#1 Ace Handyman Services Niceville  238  4.9
+#2 Mr. Handyman of the Emerald Coast  65  4.7
+#3 Redd's Express  48  5.0
+
+Gap to top-3 average: 80 reviews (gap to leader: 201)
+To close it in 6 months: ~34 new reviews/mo ≈ 227 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You've got 37 Google reviews, all 5.0. Ace Handyman in Niceville has 238, and that's mostly volume from asking every customer. Your rating's better already.
+
+**Sources:** https://contractorsranked.com | https://exa.ai/library/places
+
+**Notes:** Ace shows 238 on Exa and 213 on contractorsranked; Mr. Handyman shows 65 vs 42. Used the higher figures.
+
+## The Scoop Lab (Greenville, NC)
+```
+Google Review Gap — The Scoop Lab (Greenville, "pooper scooper Greenville NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         40  5.0
+#1 Clean It All Poop Scoopers  2  n/a
+
+They already lead locally. To add ~40 reviews in 6 months: ~7/mo ≈ 45 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're already the most-reviewed scooper in Greenville at 40 Google reviews. Asking automatically after every visit is how you keep a newcomer from catching up.
+
+**Sources:** https://getjobber.com (their site) | https://petworks.com
+
+**Notes:** The Scoop Lab's 40 comes from their own site. The competitor's 2 is a PetWorks count, not Google. They lead locally, so the pitch is about extending that lead and the gap math doesn't apply.
+
+## Roof Ninja Gutter Cleaning, LLC (Canton, GA)
+```
+Google Review Gap — Roof Ninja Gutter Cleaning, LLC (Canton, "gutter cleaning Canton GA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         45  4.9
+#1 Knight Roofing and Gutters  76  5.0
+#2 Gutter Done  29  3.8
+#3 Elite Gutter Services  26  5.0
+
+Gap to top-3 average: 0 reviews (gap to leader: 31)
+To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You've got 45 Google reviews, and Knight Roofing & Gutters has 76. About 30 more reviews would make you the most-reviewed gutter company in Canton.
+
+**Sources:** https://www.birdeye.com | https://exa.ai/library/places | https://contractorsranked.com
+
+## 1 Stop Roofing & Exteriors (Madison, AL)
+```
+Google Review Gap — 1 Stop Roofing & Exteriors (Madison, "roofing Madison AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         51  4.8
+#1 Revolution Roofing  229  5.0
+#2 Mighty Dog Roofing  150  4.9
+#3 QRE  69  4.8
+
+Gap to top-3 average: 98 reviews (gap to leader: 178)
+To close it in 6 months: ~30 new reviews/mo ≈ 200 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 51 Google reviews. Revolution Roofing has 229 and Mighty Dog has 150. In roofing, that count is the first thing a homeowner compares.
+
+**Sources:** https://www.birdeye.com | https://directory.coldlytics.com
+
+**Notes:** Coldlytics says 39 and Birdeye says 51 (4.8), so I used 51. Thompson Roofing (1,148) is a regional outlier and was left out of the top 3. Rescored with 51 reviews: score 86, still Hot.
+
+## Plumbing Pro SC LLC (Spartanburg, SC)
+```
+Google Review Gap — Plumbing Pro SC LLC (Spartanburg, "plumber Spartanburg")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         39  5.0
+#1 CB Smith  378  5.0
+#2 Sterling Craft  350  4.9
+#3 Dave's AC & Plumbing  147  4.9
+
+Gap to top-3 average: 253 reviews (gap to leader: 339)
+To close it in 6 months: ~57 new reviews/mo ≈ 380 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 39 Google reviews are all 5 stars, but CB Smith shows 378 in Spartanburg. Citi Plumbing is about your size at 40. The shop that starts asking every customer pulls ahead.
+
+**Sources:** https://www.chamberofcommerce.com | https://plumberdirectories.com | https://localitybiz.com
+
+## Kearney's Heating and Air (Virginia Beach, VA)
+```
+Google Review Gap — Kearney's Heating and Air (Virginia Beach, "HVAC Virginia Beach")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         28  5.0
+#1 Expert Air  80  
+#2 Cool Guys  46  
+#3 Tony's Quality Air Care  29  
+
+Gap to top-3 average: 24 reviews (gap to leader: 52)
+To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 28 Google reviews, all 5.0. Expert Air has 80. Among the owner-run HVAC shops in Virginia Beach, you're about 50 reviews from the top.
+
+**Sources:** https://exa.ai/library/places
+
+**Notes:** Large players Conner Services (553) and Absolute Comfort (677) are left out of the top 3 because they're a different size class. Competitor ratings weren't captured.
+
+## Champagne Valley (Steamboat Springs, CO)
+```
+Google Review Gap — Champagne Valley (Steamboat Springs, "house cleaning Steamboat Springs")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         8  5.0
+#1 Best Cleaning Company  130  4.9
+
+Gap to top-3 average: 122 reviews (gap to leader: 122)
+To close it in 6 months: ~21 new reviews/mo ≈ 140 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You have 8 Google reviews and Best Cleaning Company has 130. In a town the size of Steamboat, a review from every clean adds up fast.
+
+**Sources:** https://exa.ai/library/places | https://www.birdeye.com
+
+**Notes:** Only one competitor has a Google count. The Solution Cleaning Service has 4 on Angi, which isn't Google.
+
+## Call Chad LLC (Akron, OH)
+```
+Google Review Gap — Call Chad LLC (Akron, "handyman Akron")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         38  5.0
+#1 Reliable Odds & Ends  186  4.9
+#2 Ace Handyman Services Medina Summit  126  4.8
+#3 House Doctors of Akron  93  4.9
+
+Gap to top-3 average: 97 reviews (gap to leader: 148)
+To close it in 6 months: ~25 new reviews/mo ≈ 167 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Chad, you're at 38 Google reviews, all 5.0. Reliable Odds & Ends has 186, and the franchises have 90–126. Same rating, about a fifth of the reviews.
+
+**Sources:** https://exa.ai/library/places | https://contractorsranked.com
+
+**Notes:** House Doctors shows 93 or 70 depending on the source, so I used 93.
+
+## South Heat Landscaping (Tomball, TX)
+```
+Google Review Gap — South Heat Landscaping (Tomball, "landscaping Tomball")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         42  4.6
+#1 Evergreen Outdoor  408  4.9
+#2 Lawn Doctor Woodlands-Magnolia-Tomball  369  4.9
+#3 Aggieland Green  341  5.0
+
+Gap to top-3 average: 331 reviews (gap to leader: 366)
+To close it in 6 months: ~61 new reviews/mo ≈ 407 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 42 Google reviews at 4.6. Evergreen Outdoor has 408 at 4.9. More reviews also lift a 4.6 average fastest.
+
+**Sources:** https://exa.ai/library/places | https://contractorsranked.com
+
+**Notes:** Their count ranges from 34 to 42 depending on the source.
+
+## Hercs Works LLC (Marana, AZ)
+```
+Google Review Gap — Hercs Works LLC (Marana, "skid steer / excavation Marana")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         43  5.0
+#1 GT Skidsteers  71  5.0
+#2 JANC Excavation  4  4.3
+
+Gap to top-3 average: 0 reviews (gap to leader: 28)
+To close it in 6 months: ~5 new reviews/mo ≈ 34 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You've got 43 Google reviews at 5.0. GT Skidsteers has 71. About 30 more and you're the most-reviewed in Marana.
+
+**Sources:** https://exa.ai/library/places
+
+**Notes:** Only 2 competitors found.
