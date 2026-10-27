@@ -39,7 +39,7 @@
 
 ## Status (as recorded overnight, not re-checked this morning)
 - **Twilio toll-free (877) 629-9694**: verification resubmitted ~12:49 AM ET as Sole Proprietor (Nicholas DAntonio DBA ReviewAsk); status In Progress; account still Trial. Until it's approved, phone-only asks are marked **Queued**, not Sent.
-- **Jobber Marketplace app**: In Review since ~11:46 PM ET Oct 26. Next, Jobber emails to schedule a demo. Reviewer test account: jobber-review@getreviewask.com (in the vault).
+- **Jobber Marketplace app**: In Review since ~11:46 PM ET Oct 26. Next, Jobber emails to schedule a demo. Reviewer test account: jobber-review@getreviewask.com (in the vault). Demo prep: `gtm/jobber-listing/DEMO_DAY_CHECKLIST.md`.
 - **Discovery**: the free sources are used up. Options are in `gtm/PAID_DISCOVERY_OPTIONS.md` (nothing bought).
 - **Deploys**: Render auto-deploy doesn't fire on push. Use `trigger_deploy` on srv-dbfbc94s728c73epr4bg.
 
@@ -172,3 +172,8 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Grep found no leftover "SMS is live" copy.
 - Lead magnet: `gtm/innovation/lead-magnet-review-gap-audit.md` has a 5-minute fill-in template (DRAFT).
 - QA: 15 of 15 URLs return 200 (compare pages, /guides, /sms, 6 trade pages, home, pricing, review-gap). /dashboard redirects 307 to /login. Nothing sent.
+
+## Batch ~5:00 AM ET
+- Docs: `gtm/jobber-listing/DEMO_DAY_CHECKLIST.md`, the plan for the morning Jobber emails (prep, 10-min script, what works, what to say about SMS, limits, likely questions). No secrets in it. Nothing submitted, and Jobber not contacted.
+- Site (171dc83, dep-dbg6b129lscs73960fk0, live): added a "Skip to content" link and `id="main"` landmarks on every page. The 7 review-gap calculator inputs now have labels tied to them. Review-link input already labeled. No `<img>` tags to lazy-load. The trust lines on /pricing and /signup already name Jobber + HCP.
+- QA: 20 of 20 URLs return 200. Nothing sent.
