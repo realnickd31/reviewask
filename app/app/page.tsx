@@ -123,6 +123,12 @@ export default async function Home() {
 
     <Pricing />
 
+    <section id="founder" className="border-t border-slate-200 py-16"><div className="mx-auto max-w-3xl px-6"><div className="rounded-xl border border-slate-200 bg-white p-8">
+      <p className="eyebrow">A note from the founder</p>
+      <p className="mt-3 text-slate-700">I built ReviewAsk because the shops doing the best work often have the fewest reviews. Nobody has time to ask after every job. ReviewAsk does that one thing, for a flat $39 a month.</p>
+      <p className="mt-3 text-slate-700">Want help getting set up? Email <a href="mailto:support@getreviewask.com?subject=Setup%20help" className="font-medium text-navy-900 underline underline-offset-4">support@getreviewask.com</a> and I&apos;ll walk you through connecting Jobber or Housecall Pro and adding your review link. It usually takes about 10 minutes.</p>
+      <p className="mt-4 text-sm font-medium text-navy-900">Nick D&apos;Antonio, founder of ReviewAsk</p>
+    </div></div></section>
     <section id="faq" className="border-t border-slate-200 py-24"><div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1fr_1.8fr]">
       <div><p className="eyebrow">FAQ</p><h2 className="mt-3 text-3xl font-semibold">Common questions</h2>
         <p className="mt-4 text-sm text-slate-600">Something else? <a href="mailto:support@getreviewask.com" className="font-medium text-navy-900 underline underline-offset-4">Contact support</a>.</p></div>
