@@ -220,3 +220,4 @@
 - GTM: gtm/PAID_DISCOVERY_OPTIONS.md, 5 sources with effort notes. No purchases, no prices quoted.
 - No audits or discovery. Totals unchanged: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49+49 drafts.
 - ~4:45 AM ET: SMS-honesty fix deployed (c7f20df); morning brief rewritten; QA 19/19 return 200. Nothing sent.
+- ~4:50 AM ET: compare-page drift fixes plus /guides links, Queued helper deployed (ee3559f); 5-min audit template in gtm/innovation/lead-magnet-review-gap-audit.md; QA 15/15 return 200. Nothing sent.

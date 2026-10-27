@@ -165,3 +165,10 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Product (c7f20df, dep-dbg65oijnfac73fd3ifg, live 4:39 AM ET): while Twilio isn't sending, phone-only asks are marked Queued (sms_pending) instead of Sent, with an honest message in Quick ask and Send. Quick ask is now email-first: "Email sends right away. Text messages are rolling out."
 - Rewrote the brief at the top of this file. Twilio and Jobber statuses come from the overnight records.
 - QA: 19 URLs return 200. /quick and /dashboard redirect 307 to /login. Nothing sent.
+
+## Batch ~4:50 AM ET
+- Site (ee3559f, dep-dbg68uh42hec73dnr2fg, live): the 4 compare pages now link to /guides. The Jobber Marketing Suite page gets a "How asks go out" row (Email today; SMS rolling out) and dates the $99 price to October 2026. Everything else checked matched ($39, the review-gap link, "choose them if…" honesty), so no other changes.
+- Dashboard: the Queued chip has a tooltip and a note under History explaining phone-only asks.
+- Grep found no leftover "SMS is live" copy.
+- Lead magnet: `gtm/innovation/lead-magnet-review-gap-audit.md` has a 5-minute fill-in template (DRAFT).
+- QA: 15 of 15 URLs return 200 (compare pages, /guides, /sms, 6 trade pages, home, pricing, review-gap). /dashboard redirects 307 to /login. Nothing sent.
