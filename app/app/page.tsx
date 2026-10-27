@@ -94,6 +94,12 @@ export default async function Home() {
       <div className="mt-14 grid gap-8 sm:grid-cols-2">{pillars.map((p) => <div key={p.t} className="flex gap-4"><Check /><div><h3 className="font-semibold">{p.t}</h3><p className="mt-1 text-sm leading-relaxed text-slate-600">{p.d}</p></div></div>)}</div>
     </div></section>
 
+    <section id="backlog" className="border-t border-slate-200 py-16"><div className="mx-auto max-w-6xl px-6"><div className="flex flex-col gap-6 rounded-xl border border-lime-200 bg-lime-50/60 p-8 sm:flex-row sm:items-center sm:justify-between">
+      <div className="max-w-2xl"><p className="eyebrow !text-lime-700">Slower season?</p><h2 className="mt-2 text-2xl font-semibold">Ask last season’s customers this week.</h2>
+        <p className="mt-3 text-slate-700">Plenty of happy customers from the busy months never got asked. Export them from Jobber, Housecall Pro, or a spreadsheet, upload the file, and send every one of them a request with one confirm — plus one follow-up on day 3.</p></div>
+      <div className="flex flex-none flex-col gap-2 sm:items-end"><Link href="/signup" className="btn-navy px-5 py-3">Start free trial</Link><a href="#how" className="text-sm font-medium text-navy-900 underline underline-offset-4">See how it works</a></div>
+    </div></div></section>
+
     <section className="border-t border-slate-200 bg-slate-50 py-24"><div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1fr_1.4fr]">
       <div><p className="eyebrow">Trust & compliance</p><h2 className="mt-3 text-3xl font-semibold">Review requests done the right way.</h2>
         <p className="mt-4 text-slate-600">Reviews only help if they’re genuine. ReviewAsk is built around the practices Google expects.</p></div>
@@ -127,6 +133,7 @@ export default async function Home() {
     <section className="bg-navy-950 text-white"><div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-16 sm:flex-row sm:items-center">
       <div><h2 className="text-2xl font-semibold">Start asking for reviews this week.</h2><p className="mt-2 text-white/70">7-day free trial · $39/month after · Cancel anytime · Questions? support@getreviewask.com</p></div>
       <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start your free trial</Link></div></section>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", name: "ReviewAsk", url: "https://getreviewask.com", applicationCategory: "BusinessApplication", operatingSystem: "Web", description: "Automatic Google review requests after every job for Jobber and Housecall Pro businesses.", offers: [{ "@type": "Offer", price: "39", priceCurrency: "USD", name: "Starter (monthly)" }, { "@type": "Offer", price: "390", priceCurrency: "USD", name: "Starter (annual)" }] }) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
     {!user && <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 p-3 backdrop-blur sm:hidden"><Link href="/signup" className="btn-navy w-full py-3">Start 7-day free trial · $39/mo after</Link></div>}
     <div className="pb-20 sm:pb-0"><Footer /></div>
