@@ -53,14 +53,14 @@ export default async function Home() {
             <Link href="/login" className="hidden hover:text-white sm:inline">Log in</Link>
             <Link href="/signup" className="btn bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Start free trial</Link>
             <details className="relative sm:hidden"><summary aria-label="Open menu" className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-md ring-1 ring-white/20 [&::-webkit-details-marker]:hidden"><svg viewBox="0 0 20 20" className="h-5 w-5 fill-white" aria-hidden><path d="M3 5h14v2H3zm0 4h14v2H3zm0 4h14v2H3z" /></svg></summary>
-              <div className="absolute right-0 z-20 mt-2 w-56 rounded-lg bg-white p-2 text-navy-900 shadow-xl">{[["/#how", "How it works"], ["/pricing", "Pricing"], ["/for-jobber", "For Jobber users"], ["/#faq", "FAQ"], ["/login", "Log in"]].map(([h, l]) => <a key={h} href={h} className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">{l}</a>)}</div></details></>}</nav></div>
+              <div className="absolute right-0 z-20 mt-2 w-56 rounded-lg bg-white p-2 text-navy-900 shadow-xl">{[["/#how", "How it works"], ["/pricing", "Pricing"], ["/for-jobber", "For Jobber users"], ["/for-housecall-pro", "For Housecall Pro users"], ["/#faq", "FAQ"], ["/login", "Log in"]].map(([h, l]) => <a key={h} href={h} className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">{l}</a>)}</div></details></>}</nav></div>
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-28 pt-20 sm:pt-28 lg:grid-cols-[1.4fr_1fr]">
         <div className="max-w-3xl">
           <p className="eyebrow !text-lime-400">For Jobber and field-service businesses</p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every finished job gets a Google review request — automatically.</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">ReviewAsk sends the ask when a job closes in Jobber or Housecall Pro, follows up once on day 3, and shows you exactly what went out. No chasing customers by hand — and no $99/month add-on.</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start 7-day free trial</Link>}<a href="#how" className="btn-ghost px-5 py-3">See how it works</a></div>
-          <div className="mt-6 flex flex-wrap gap-2 text-xs text-white/80"><span className="rounded-full px-3 py-1 ring-1 ring-white/20">Works with Jobber</span><span className="rounded-full px-3 py-1 ring-1 ring-white/20">Works with Housecall Pro</span><span className="rounded-full px-3 py-1 ring-1 ring-white/20">Quick ask from any phone</span></div>
+          <div className="mt-6 flex flex-wrap gap-2 text-xs text-white/80"><Link href="/for-jobber" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Jobber</Link><Link href="/for-housecall-pro" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Housecall Pro</Link><span className="rounded-full px-3 py-1 ring-1 ring-white/20">Quick ask from any phone</span></div>
           <p className="mt-5 text-sm text-white/60"><strong className="font-semibold text-white">$39/month</strong> after the 7-day trial · No contract · Cancel anytime</p>
         </div>
       </div>
@@ -125,6 +125,7 @@ export default async function Home() {
     <section className="bg-navy-950 text-white"><div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-16 sm:flex-row sm:items-center">
       <div><h2 className="text-2xl font-semibold">Start asking for reviews this week.</h2><p className="mt-2 text-white/70">7-day free trial · $39/month after · Cancel anytime · Questions? support@getreviewask.com</p></div>
       <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start your free trial</Link></div></section>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
     <Footer />
   </main>;
 }
