@@ -520,3 +520,25 @@ Review counts come from web mirrors, not Google Maps. Re-check Maps before any s
 - Reviews: ~50 @ 4.7 (Review count via ProsGrade 4.7 from 50 (Marietta listing) + contractorsranked (not Google Maps; verify))
 - Opener: Saw GreenLeaf Landscaping runs on Jobber and sits around 50 Google reviews. Asking every customer after each job is the cheapest way to pull away from the next shop down.
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=GreenLeaf+Landscaping+Acworth+GA
+
+
+## Newly Hot — Jobber Sites enrichment pass 2 (3)
+Review counts come from web mirrors, not Google Maps. Re-check Maps before any send.
+
+### K1. Here to help window cleaning — Chicago area, IL (score 92)
+- Email: hthcleaningservices@gmail.com · Phone: (773) 986-6610 · Site: https://here2help.jobbersites.com/
+- Reviews: ~8 @ 5.0 (Review count via Exa Places 5.0 from 8 (Birdeye shows 17) (not Google Maps; verify))
+- Opener: Saw Here to help window cleaning books through Jobber and has about 8 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Here+to+help+window+cleaning+Chicago+area+IL
+
+### K2. JMAS Texas Lawn Care Corp. — Katy, TX (score 92)
+- Email: customerservice@texaslawncare.biz · Phone: (281) 392-1106 · Site: https://jmastexaslawncarecorp.jobbersites.com/
+- Reviews: ~19 @ 4.3 (Review count via Birdeye 19 / ProsGrade ~17 @ 4.3–4.4 (not Google Maps; verify))
+- Opener: Saw JMAS Texas Lawn Care Corp. books through Jobber and has about 19 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=JMAS+Texas+Lawn+Care+Corp.+Katy+TX
+
+### K3. Christmas Lights of Texas — Brazoria, TX (score 92)
+- Email: jeremyzcrain@gmail.com · Phone: (979) 557-3745 · Site: https://christmaslightsoftexas.jobbersites.com/
+- Reviews: ~3 @ 5.0 (Review count via Exa Places 5.0 from 3 (not Google Maps; verify))
+- Opener: Saw Christmas Lights of Texas books through Jobber and has about 3 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Christmas+Lights+of+Texas+Brazoria+TX
