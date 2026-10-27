@@ -1500,34 +1500,47 @@ Counts come from Google mirrors, and the source is recorded for each one. WEAK m
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Nky+Lawn+Pros+Walton+KY
 - Opener: Saw your Jobber site. You're at 28 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
 
+## Day-1 send queue (DRAFT, scrubbed 2026-10-27 ~3:10 AM ET; nothing sent, needs Nick's approval)
+Every lead here is an audited, Southeast, Hot lead with a public email. For each one I re-read the CSV row, the outreach note and the audit note, checking for: weak or conflicting sources, odd email domains, complaints, NiceJob or another review tool already in use, 100+ reviews, rescores, same-market conflicts, closed businesses, and ratings under 4.0. Task Tacklers and Stan's are excluded. Each opener is in the business's audit (gtm/audits/review-gap-audits.md).
 
-## Day-1 send queue (DRAFT. Nothing sent; needs Nick's approval)
-These are the top 25 Hot leads with email that already have a review-gap audit, Southeast first, then by score. Each opener comes from its audit. Before sending, re-check the count on Maps. Task Tacklers and Stan's are excluded. Genesis Lawns and Green Space share a market, so send them in different weeks.
+### Ready after Maps check (24)
+| # | Week | Business | City, ST | Score | Email | Their reviews | Leader (reviews) | Flags |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 1 | Daystar Exterior Cleaning | Bradenton, FL | 97 | daystarcleans@gmail.com | 19 | 2 Bros & A Hose Pressure Washing (153) | — |
+| 2 | 1 | Thunder Services LLC | Orlando, FL | 97 | thunderservicesfl@gmail.com | 17 | Orlando Handyman (239) | Count from Exa only; Maps check |
+| 3 | 1 | TN Lawnsmiths, LLC | Murfreesboro, TN | 97 | tnlawnsmiths@gmail.com | 16 | Primm's Landscaping (159) | Exa/gigopro mirror |
+| 4 | 1 | Bros Mow Landscape, LLC | Brentwood, TN | 97 | braden@brosmowlandscape.com | 17 | Pineda Properties (67) | SnowLawn mirror |
+| 5 | 1 | Steve's Scapes | Knoxville, TN | 97 | steveslawnscapes@gmail.com | 5 | Grover Turf Care (48) | — |
+| 6 | 1 | Zack Of All Trades | Shelbyville, TN | 97 | zackofalltrades2021@outlook.com | 17 | A&J Electric (59) | wanderboat mirror; thin comps, so pitch as extending the lead |
+| 7 | 1 | Cleaning Services in South Florida | West Palm Beach, FL | 97 | hello@sbrcleaning.com | 14 | MaidThis Cleaning West Palm Beach (661) | Listed on Google as 'SBR Cleaning & Carpet Care'; single mirror (wanderboat) |
+| 8 | 1 | Grasshopper Home | Raleigh, NC | 97 | sthatcher@grasshopperhomeservices.com | 3 | Triangle Lawn Care (429) | Only 3 reviews; confirm on Maps |
+| 9 | 1 | On Target Pressure Washing LLC | Summerville, SC | 97 | ontarget843@gmail.com | 8 | Pepper's Pressure Washing (600) | Audit comps self-reported; same Summerville/Charleston market as Solar Pro Wash, so send in a different week |
+| 10 | 1 | D&D Lawn Care of Cane Bay, LLC | Summerville, SC | 97 | ddlawncb@gmail.com | 13 | Greenecoast Lawn Management (59) | — |
+| 11 | 1 | Carolina Lawn Services | Rock Hill, SC | 97 | carolinalawnserv@gmail.com | 10 | Hey Jude's Lawn Care (134) | — |
+| 12 | 1 | Top Tier Lawn Care & Landscaping | , GA | 97 | toptierlawncare.landscaping@gmail.com | 2 | Lawn To The Max (42) | Only 1–2 reviews (Exa vs Birdeye); confirm on Maps |
+| 13 | 1 | AmeriGro Landscape Services | Charleston, SC | 97 | info@amerigrolandscape.com | 8 | Bells Landscaping (75) | Competitor counts from RateXYZ |
+| 14 | 1 | Green Thumbs Landscape Consulting and Services | Prosperity, SC | 97 | greenthumbs1744@gmail.com | 8 | Trifecta Landscaping (150) | — |
+| 15 | 1 | Simply SoftWash Exterior Cleaning, LLC | Greenville, SC | 97 | mainoffice@simplysoftwash.org | 9 | Spruce Services & Solutions (291) | — |
+| 16 | 1 | Danner Exterior Services | Greenacres, FL | 97 | dannerexteriorservices@gmail.com | 10 | City Pressure Cleaning (126) | — |
+| 17 | 1 | Magic City Soft Wash | Birmingham, AL | 97 | brian@magiccitysoftwash.com | 9 | Alabama Pressure Washing (159) | Audit comps WEAK (Angi/HomeAdvisor), so lead with the count, not the gap |
+| 18 | 1 | Harmony Cleaning ATL | Atlanta, GA | 92 | support@harmonycleaningatl.com | 26 | Quick Clean ATL (94) | — |
+| 19 | 1 | Cape Fear Lawn Masters | Wilmington, NC | 92 | manager@ilmgrass.com | 29 | Thorpe Landscapes (153) | — |
+| 20 | 1 | TC Lawn Manicure, LLC | Beaufort, SC | 97 | tony@tclawnmanicure.com | 11 | Franco Bros LLC Landscaping (85) | 4.6 rating |
+| 21 | 1 | Grindstone Trees and Landscaping | Boone, NC | 97 | grindstonetreesandlandscaping@gmail.com | 20 | Boone Tree Experts (140) | — |
+| 22 | 1 | Nancy’s General Cleaning LLC | Durham, NC | 92 | admin@nancysgeneralcleaning.com | 36 | Carrie's Cleaning (149) | — |
+| 23 | 1 | Knight and Day Pressure Washing | Fort Myers, FL | 92 | alec.stapleton4@gmail.com | 30 | Naples Precision Pressure Washing (82) | — |
+| 24 | 2 | Solar Pro Wash | Moncks Corner, SC | 97 | solarprowashcarolina@gmail.com | 18 | Pepper's Pressure Washing (600) | Same market as On Target, so send in week 2; audit comps self-reported |
 
-| # | Business | City, ST | Score | Email | Their reviews | Leader (reviews) | Flags |
-|---|---|---|---|---|---|---|---|
-| 1 | Complete Lawn Care | Nashville, TN | 100 | thecompletelc@gmail.com | 5 | Weed Man Lawn Care (1117) | — |
-| 2 | Zack Of All Trades | Shelbyville, TN | 97 | zackofalltrades2021@outlook.com | 17 | A&J Electric (59) | — |
-| 3 | Cleaning Services in South Florida | West Palm Beach, FL | 97 | hello@sbrcleaning.com | 14 | MaidThis Cleaning West Palm Beach (661) | — |
-| 4 | Cleaned Pristine Home Services | Tampa, FL | 97 | admin@cleanedpristinesolutions.com | 17 | General Facility Care (153) | — |
-| 5 | Daystar Exterior Cleaning | Bradenton, FL | 97 | daystarcleans@gmail.com | 19 | 2 Bros & A Hose Pressure Washing (153) | — |
-| 6 | Grasshopper Home | Raleigh, NC | 97 | sthatcher@grasshopperhomeservices.com | 3 | Triangle Lawn Care (429) | — |
-| 7 | Parra Outdoor Services | Youngsville, NC | 97 | parraoutdoorservices@outlook.com | 9 | RC Lawn Care (68) | — |
-| 8 | On Target Pressure Washing LLC | Summerville, SC | 97 | ontarget843@gmail.com | 8 | Pepper's Pressure Washing (600) | — |
-| 9 | Solar Pro Wash | Moncks Corner, SC | 97 | solarprowashcarolina@gmail.com | 18 | Pepper's Pressure Washing (600) | — |
-| 10 | A & L Lawncare | Cottondale, AL | 97 | aandllawncarellc@gmail.com | 20 | Ray of Hope Properties (210) | — |
-| 11 | B Tops Landscaping INC. | Montgomery, AL | 97 | btopslandscaping@yahoo.com | 14 | Martinez Lawn Care (125) | — |
-| 12 | TN Lawnsmiths, LLC | Murfreesboro, TN | 97 | tnlawnsmiths@gmail.com | 16 | Primm's Landscaping (159) | — |
-| 13 | Bros Mow Landscape, LLC | Brentwood, TN | 97 | braden@brosmowlandscape.com | 17 | Pineda Properties (67) | — |
-| 14 | PWS Janitorial | Clearwater, FL | 97 | pinellaswindowsc.0804@gmail.com | 12 | Clearwater Soft Wash Pros (26) | — |
-| 15 | Tolson Lawn Services LLC | Hartsville, SC | 97 | tolsonlawn@gmail.com | 29 | Evergreen Landscapes (42) | — |
-| 16 | D&D Lawn Care of Cane Bay, LLC | Summerville, SC | 97 | ddlawncb@gmail.com | 13 | Greenecoast Lawn Management (59) | — |
-| 17 | Carolina Lawn Services | Rock Hill, SC | 97 | carolinalawnserv@gmail.com | 10 | Hey Jude's Lawn Care (134) | — |
-| 18 | Top Tier Lawn Care & Landscaping | , GA | 97 | toptierlawncare.landscaping@gmail.com | 2 | Lawn To The Max (42) | — |
-| 19 | Thunder Services LLC | Orlando, FL | 97 | thunderservicesfl@gmail.com | 17 | Orlando Handyman (239) | — |
-| 20 | Steve's Scapes | Knoxville, TN | 97 | steveslawnscapes@gmail.com | 5 | Grover Turf Care (48) | — |
-| 21 | AmeriGro Landscape Services | Charleston, SC | 97 | info@amerigrolandscape.com | 8 | Bells Landscaping (75) | — |
-| 22 | Magic City Soft Wash | Birmingham, AL | 97 | brian@magiccitysoftwash.com | 9 | Alabama Pressure Washing (159) | — |
-| 23 | Green Thumbs Landscape Consulting and Services | Prosperity, SC | 97 | greenthumbs1744@gmail.com | 8 | Trifecta Landscaping (150) | — |
-| 24 | Simply SoftWash Exterior Cleaning, LLC | Greenville, SC | 97 | mainoffice@simplysoftwash.org | 9 | Spruce Services & Solutions (291) | — |
-| 25 | Danner Exterior Services | Greenacres, FL | 97 | dannerexteriorservices@gmail.com | 10 | City Pressure Cleaning (126) | — |
+### Hold / verify first (8)
+| Business | City, ST | Score | Email | Reason |
+|---|---|---|---|---|
+| Complete Lawn Care | Nashville, TN | 100 | thecompletelc@gmail.com | Count (5) source is just 'per directory', unnamed. WEAK; re-verify on Maps |
+| Cleaned Pristine Home Services | Tampa, FL | 97 | admin@cleanedpristinesolutions.com | Count (17+) self-reported on their own site |
+| Parra Outdoor Services | Youngsville, NC | 97 | parraoutdoorservices@outlook.com | Conflicting counts: SnowLawn 9 vs Exa 6 |
+| A & L Lawncare | Cottondale, AL | 97 | aandllawncarellc@gmail.com | Conflicting counts: widget/Exa place 12 vs Exa list 20; audit used 20 |
+| B Tops Landscaping INC. | Montgomery, AL | 97 | btopslandscaping@yahoo.com | Conflicting counts: 14 @ 4.2 widget vs 19 @ 4.4 Expertise; 4.2 rating needs careful tone |
+| PWS Janitorial | Clearwater, FL | 97 | pinellaswindowsc.0804@gmail.com | Odd email: pinellaswindowsc.0804@gmail.com doesn't match the business name; confirm the owner |
+| Tolson Lawn Services LLC | Hartsville, SC | 97 | tolsonlawn@gmail.com | Conflicting counts: widget 24 vs SnowLawn 29; audit used 29 |
+| Genesis Lawns LLC | Melbourne, FL | 86 | neil@genesislawns.com | Same Melbourne market as Green Space, so send in a later week; 75 reviews means the gap pitch is weaker |
+
+Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of the queue.
