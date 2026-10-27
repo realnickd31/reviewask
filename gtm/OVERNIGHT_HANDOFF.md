@@ -68,3 +68,8 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Totals: 777 prospects, 257 Hot, 613 with email, 155 audits.
 - Audits AG (+6): Pristine Lawn (Gadsden AL), Lawn Wolf (Sioux Falls), Precision Handyman (Noblesville), Handy Crow (Arlington TX), Pain In The Grass (Huntertown IN), Call The Cavalry (Richmond VA).
 - Flags: Under Pressure (Clermont) and Top to Bottom (Wilmington) were not audited because of conflicting or self-reported counts (both are already ~150–190). Don't send Call The Cavalry and Iggys on the same day (same comps). No site change this round.
+
+## Update 4:02 AM ET
+- Enrichment of the 27 new Jobber Sites leads: 3 are Hot after rescore (Green Thumb 10 reviews/4.9, WayUp 30/5.0, Pristine Lawn, already audited). Shinehaus and Lumen were moved down for conflicting counts, Under Pressure and Top to Bottom for already leading locally. Dunlap (3.9) and Legendary (1.0) are flagged for low ratings. Station 35 has 0 reviews (backlog pitch). Locations fixed: Primary Services is Roswell GA, AB Handyman is Glade Hill VA, Tri City Pool is Riverside CA, RPG is Orlando (conflicts with Winter Springs).
+- Audits AH (+5): Pressure Wash Improvements (Charleston WV), EES (Bush LA), Dogwood (Sherwood AR), Texas Finest (Crosby TX), Green Ranger (Hampton VA).
+- Totals: 777 prospects, 252 Hot, 613 with email, 160 audits. CTA QA passed.

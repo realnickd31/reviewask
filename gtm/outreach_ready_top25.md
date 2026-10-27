@@ -1816,3 +1816,25 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AG. Call The Cavalry Lawn Care (Richmond, VA)
 - Opener: Your 13 Google reviews are all 5 stars. In Richmond, Macias has 19 and Trinity Turf 23, both close enough to pass this season.
 - Gap to top-3 avg 42; leader gap 111; ~47 asks/mo [SPEC]. Notes: Our CSV says 11; Lantern says 13. I used 13. Same comps as the Iggys AF audit, so don't send both on the same day with near-identical openers.
+
+## AH — Hot audits, 2026-10-27 (~4:10 AM ET)
+
+### AH. Pressure Wash Improvements (Charleston, WV)
+- Opener: Your 12 Google reviews are all 5 stars. In Charleston, Charleston Pressure Washing has 57 and Vieplex 79.
+- Gap to top-2 avg 56; leader gap 67; ~67 asks/mo [SPEC]. Notes: Charleston PW shows 57–65 by source; I used 57. Fish Window Cleaning (franchise) is excluded. Only 2 comps.
+
+### AH. EES- Elite Exterior Solutions (Bush, LA)
+- Opener: Your 12 Google reviews are all 5 stars, tied with Covington Pressure Washing. Hydro Flow in Covington is at 40.
+- Gap to top-2 avg 14; leader gap 28; ~20 asks/mo [SPEC]. Notes: Rolling Suds (franchise) and Wild West ('50+', self-reported) are excluded. Only 2 comps.
+
+### AH. Dogwood Outdoor Services (Sherwood, AR)
+- Opener: You're at 13 Google reviews. In Sherwood, ProGreen has 19 and Top Notch 71. A steady ask after every mow closes that this spring.
+- Gap to top-3 avg 103; leader gap 196; ~120 asks/mo [SPEC]. Notes: UltraGreen (North Little Rock) inflates the average; the realistic target is ProGreen (19–21). Its own count comes from the CSV only.
+
+### AH. Texas Finest Lawn Care (Crosby, TX)
+- Opener: Your 7 Google reviews are all 5 stars. In Crosby, PLM has 21 and Crosby Lawn Care 78.
+- Gap to top-3 avg 65; leader gap 110; ~74 asks/mo [SPEC]. Notes: LawnStarter (marketplace) is excluded. Absolute Lawn Care (292, Prosource) is excluded as it isn't clearly local to Crosby.
+
+### AH. Green Ranger Lawn & Landscapes (Hampton, VA)
+- Opener: You're at 7 Google reviews. In Hampton, Best Buck has 26 and Hawks 74. A few asks a week gets you into that group.
+- Gap to top-3 avg 34; leader gap 67; ~40 asks/mo [SPEC]. Notes: VirginiaGreen (481, regional) and LawnFixed (platform) are excluded. Its own count comes from the CSV only. Darnell's full name wasn't given in the source.

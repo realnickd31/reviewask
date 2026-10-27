@@ -3115,3 +3115,106 @@ To close it in 6 months: ~7 new reviews/mo ≈ 47 asks/mo at a 15% response rate
 **Sources:** https://lantern.llc/va/richmond/outdoor-lawn/landscaping | https://exa.ai/library/places?q=c5996a0be53214f3 | https://directory.coldlytics.com/companies/mlc21
 
 **Notes:** Our CSV says 11; Lantern says 13. I used 13. Same comps as the Iggys AF audit, so don't send both on the same day with near-identical openers.
+
+
+## Pressure Wash Improvements (Charleston, WV)
+```
+Google Review Gap — Pressure Wash Improvements (Charleston, "pressure washing Charleston WV")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         12  5.0
+#1 Vieplex, LLC  79  5.0
+#2 Charleston Pressure Washing Services  57  5.0
+
+Gap to top-2 average: 56 reviews (gap to leader: 67)
+To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 12 Google reviews are all 5 stars. In Charleston, Charleston Pressure Washing has 57 and Vieplex 79.
+
+**Sources:** https://exa.ai/library/places?q=f22a3bab97eefc6e | https://wv.charlestontoprated.com/biz/charleston-pressure-washing-services/ | https://wv.charlestontoprated.com/biz/vieplex-llc/
+
+**Notes:** Charleston PW shows 57–65 by source; I used 57. Fish Window Cleaning (franchise) is excluded. Only 2 comps.
+
+
+## EES- Elite Exterior Solutions (Bush, LA)
+```
+Google Review Gap — EES- Elite Exterior Solutions (Bush, "pressure washing Covington Slidell Bush LA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         12  5.0
+#1 Pressure Washing By Hydro Flow  40  5.0
+#2 Covington Pressure Washing  12  5.0
+
+Gap to top-2 average: 14 reviews (gap to leader: 28)
+To close it in 6 months: ~3 new reviews/mo ≈ 20 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 12 Google reviews are all 5 stars, tied with Covington Pressure Washing. Hydro Flow in Covington is at 40.
+
+**Sources:** https://exa.ai/library/place/mdrjtv38djf | https://exa.ai/library/place/z5mlhltgg9g
+
+**Notes:** Rolling Suds (franchise) and Wild West ('50+', self-reported) are excluded. Only 2 comps.
+
+
+## Dogwood Outdoor Services (Sherwood, AR)
+```
+Google Review Gap — Dogwood Outdoor Services (Sherwood, "lawn care Sherwood North Little Rock AR")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         13  n/a
+#1 UltraGreen Lawn Service  209  4.2
+#2 Top Notch Turf and Pest  71  4.5
+#3 Natural State Horticare  69  4.7
+
+Gap to top-3 average: 103 reviews (gap to leader: 196)
+To close it in 6 months: ~18 new reviews/mo ≈ 120 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 13 Google reviews. In Sherwood, ProGreen has 19 and Top Notch 71. A steady ask after every mow closes that this spring.
+
+**Sources:** https://exa.ai/library/places?q=05247ead6f6b4182 | https://exa.ai/library/places?q=8227bb7658a4d5f8 | https://reviews.birdeye.com/top-notch-turf-and-pest-163045356959402
+
+**Notes:** UltraGreen (North Little Rock) inflates the average; the realistic target is ProGreen (19–21). Its own count comes from the CSV only.
+
+
+## Texas Finest Lawn Care (Crosby, TX)
+```
+Google Review Gap — Texas Finest Lawn Care (Crosby, "lawn care Crosby Huffman TX")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         7  5.0
+#1 Texas Turf Tenders - Houston  117  4.9
+#2 Crosby Lawn Care & Landscape, LLC  78  5.0
+#3 PLM Lawn Maintenance  21  5.0
+
+Gap to top-3 average: 65 reviews (gap to leader: 110)
+To close it in 6 months: ~11 new reviews/mo ≈ 74 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 7 Google reviews are all 5 stars. In Crosby, PLM has 21 and Crosby Lawn Care 78.
+
+**Sources:** https://texas.twupro.com/crosby/plm-lawn-maintenance/ | https://texas.twupro.com/atascocita/crosby-lawn-care-landscape-llc/ | https://texas.twupro.com/huffman/texas-turf-tenders-houston/
+
+**Notes:** LawnStarter (marketplace) is excluded. Absolute Lawn Care (292, Prosource) is excluded as it isn't clearly local to Crosby.
+
+
+## Green Ranger Lawn & Landscapes (Hampton, VA)
+```
+Google Review Gap — Green Ranger Lawn & Landscapes (Hampton, "lawn care Hampton VA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         7  n/a
+#1 Hawks Lawn care services & more llc  74  5.0
+#2 Best Buck Lawn Care  26  4.7
+#3 Darnell  23  4.4
+
+Gap to top-3 average: 34 reviews (gap to leader: 67)
+To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 7 Google reviews. In Hampton, Best Buck has 26 and Hawks 74. A few asks a week gets you into that group.
+
+**Sources:** https://www.contractorsranked.com/contractor/hampton-va/hawks-lawn-care-services-and-more-llc-2 | https://www.expertise.com/home-improvement/lawn-service/virginia/hampton | https://exa.ai/library/places?q=b6dca34597486f6b
+
+**Notes:** VirginiaGreen (481, regional) and LawnFixed (platform) are excluded. Its own count comes from the CSV only. Darnell's full name wasn't given in the source.
