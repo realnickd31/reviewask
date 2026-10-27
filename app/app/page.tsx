@@ -97,7 +97,7 @@ export default async function Home() {
 
     <section id="backlog" className="border-t border-slate-200 py-16"><div className="mx-auto max-w-6xl px-6"><div className="flex flex-col gap-6 rounded-xl border border-lime-200 bg-lime-50/60 p-8 sm:flex-row sm:items-center sm:justify-between">
       <div className="max-w-2xl"><p className="eyebrow !text-lime-700">Slower season?</p><h2 className="mt-2 text-2xl font-semibold">Ask last season’s customers this week.</h2>
-        <p className="mt-3 text-slate-700">Plenty of happy customers from the busy months never got asked. Export them from Jobber, Housecall Pro, or a spreadsheet, upload the file, and send every one of them a request with one confirm — plus one follow-up on day 3.</p></div>
+        <p className="mt-3 text-slate-700">Plenty of happy customers from the busy months never got asked. Export them from Jobber, Housecall Pro, or a spreadsheet, paste or upload the list, and email every one of them a review request with one confirm, plus one follow-up on day 3. (SMS is rolling out.) Up to 200 requests a month. <Link href="/templates/review-request" className="font-medium text-navy-900 underline underline-offset-4">See message templates</Link>.</p></div>
       <div className="flex flex-none flex-col gap-2 sm:items-end"><Link href="/signup" className="btn-navy px-5 py-3">Start free trial</Link><a href="#how" className="text-sm font-medium text-navy-900 underline underline-offset-4">See how it works</a></div>
     </div></div></section>
 
