@@ -450,3 +450,73 @@ Review counts from web mirrors (source in CSV), not Maps-audited. Draft only.
 - Reviews: ~70 @ 5.0
 - Opener: Saw 901 cleaning solutions takes requests through Jobber. Quick one: are you asking every customer for a Google review after each job, or only when you remember?
 - ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=901+cleaning+solutions+Lakeland+TN
+
+
+## Newly Hot — Jobber Sites enrichment (11)
+Review counts come from web mirrors, not Google Maps. Re-check Maps before any send.
+
+### J1. Zack Of All Trades — Shelbyville, TN (score 97)
+- Email: zackofalltrades2021@outlook.com · Phone: (931) 446-6705 · Site: https://zackofalltradesllc.jobbersites.com/
+- Reviews: ~17 @ 4.8 (Review count via wanderboat.ai (Google-derived) 4.8 from 17 (not Google Maps; verify))
+- Opener: Saw Zack Of All Trades books through Jobber and has about 17 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Zack+Of+All+Trades+Shelbyville+TN
+
+### J2. Cleaning Services in South Florida — West Palm Beach, FL (score 97)
+- Email: hello@sbrcleaning.com · Phone: (561) 541-6442 · Site: https://sbrcleaning.jobbersites.com/
+- Reviews: ~14 @ 5.0 (Review count via wanderboat.ai (Google-derived) SBR Cleaning & Carpet Care 5.0 from 14 (not Google Maps; verify))
+- Opener: Saw Cleaning Services in South Florida books through Jobber and has about 14 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Cleaning+Services+in+South+Florida+West+Palm+Beach+FL
+
+### J3. Cleaned Pristine Home Services — Tampa, FL (score 97)
+- Email: admin@cleanedpristinesolutions.com · Phone: (813) 995-8875 · Site: https://cleanedpristinehome.jobbersites.com/
+- Reviews: ~17 @ 5.0 (Review count via Their own site: 5.0 Google from 17+ (not Google Maps; verify))
+- Opener: Saw Cleaned Pristine Home Services books through Jobber and has about 17 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Cleaned+Pristine+Home+Services+Tampa+FL
+
+### J4. Boone Landscape Design — Bogart, GA (score 92)
+- Email: info@boonelandscapedesign.com · Phone: (706) 818-4855 · Site: https://boonelandscapedesign.jobbersites.com/
+- Reviews: ~48 @ 4.8 (Review count via allaboutlandscapingservices / gatreeserviceguys: 47–48 Google @ 4.8–4.9 (not Google Maps; verify))
+- Opener: Saw Boone Landscape Design books through Jobber and has about 48 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Boone+Landscape+Design+Bogart+GA
+
+### J5. R&B Sparkly Clean — Sarasota, FL (score 92)
+- Email: rbsparkly@gmail.com · Phone: (941) 356-2955 · Site: https://rbsparklyclean.jobbersites.com/
+- Reviews: ~47 @ 4.7 (Review count via Birdeye 47 @ 4.7 (not Google Maps; verify))
+- Opener: Saw R&B Sparkly Clean books through Jobber and has about 47 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=R%26B+Sparkly+Clean+Sarasota+FL
+
+### J6. Precision Handyman LLC — Noblesville, IN (score 92)
+- Email: precision.handyman.llc.1@gmail.com · Phone: (765) 469-2876 · Site: https://precisionhandymanllc.jobbersites.com/
+- Reviews: ~10 @ 5.0 (Review count via edge-local directory 5.0 from 10 (source platform uncertain) (not Google Maps; verify))
+- Opener: Saw Precision Handyman LLC books through Jobber and has about 10 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Precision+Handyman+LLC+Noblesville+IN
+
+### J7. Perennial Lawn & Landscape — Parker, CO (score 92)
+- Email: contactus@perenniallawnandlandscape.com · Phone: (303) 841-7926 · Site: https://perenniallawnlandscape.jobbersites.com/
+- Reviews: ~3 @ 5.0 (Review count via mawlawn catalog 5.0 from 3 (Google-derived, uncertain) (not Google Maps; verify))
+- Opener: Saw Perennial Lawn & Landscape books through Jobber and has about 3 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Perennial+Lawn+%26+Landscape+Parker+CO
+
+### J8. Beantown Mechanical — Somerville, MA (score 92)
+- Email: marino@beantownmechanical.com · Phone: (617) 415-3994 · Site: https://beantownmechanical.jobbersites.com/
+- Reviews: ~3 @ 2.3 (Review count via camberville.directory: Google 2.3 from 3 (not Google Maps; verify))
+- Opener: Saw Beantown Mechanical books through Jobber and has about 3 Google reviews. Most shops your size could double that just by asking every customer automatically after each job.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Beantown+Mechanical+Somerville+MA
+
+### J9. Green Earth Solutions, Inc. — Jacksonville, FL (score 86)
+- Email: greenearthlawnandpest@yahoo.com · Phone: (904) 880-5842 · Site: https://greenearthsolutions.jobbersites.com/
+- Reviews: ~80 @ 4.2 (Review count via Exa Places/BestProsInTown aggregate ~80 @ 4.2 (uncertain Google vs mixed) (not Google Maps; verify))
+- Opener: Saw Green Earth Solutions, Inc. runs on Jobber and sits around 80 Google reviews. Asking every customer after each job is the cheapest way to pull away from the next shop down.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Green+Earth+Solutions%2C+Inc.+Jacksonville+FL
+
+### J10. Ground Effects Lawn Service — Rock Hill, SC (score 86)
+- Email: groundeffects.services@gmail.com · Phone: (803) 659-9542 · Site: https://groundeffects.jobbersites.com/
+- Reviews: ~50 @ 4.7 (Review count via Turf Install Pros (Google-derived) 4.7 from 50; site shows 4.7 (not Google Maps; verify))
+- Opener: Saw Ground Effects Lawn Service runs on Jobber and sits around 50 Google reviews. Asking every customer after each job is the cheapest way to pull away from the next shop down.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=Ground+Effects+Lawn+Service+Rock+Hill+SC
+
+### J11. GreenLeaf Landscaping — Acworth, GA (score 86)
+- Email: info@greenleaf-landscaping.com · Phone: (770) 851-7454 · Site: https://greenleaflandscaping.jobbersites.com/
+- Reviews: ~50 @ 4.7 (Review count via ProsGrade 4.7 from 50 (Marietta listing) + contractorsranked (not Google Maps; verify))
+- Opener: Saw GreenLeaf Landscaping runs on Jobber and sits around 50 Google reviews. Asking every customer after each job is the cheapest way to pull away from the next shop down.
+- ⚠ Re-check Google Maps before send: https://www.google.com/maps/search/?api=1&query=GreenLeaf+Landscaping+Acworth+GA
