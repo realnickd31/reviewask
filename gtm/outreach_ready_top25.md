@@ -974,3 +974,91 @@ The counts come from web mirrors, not Google Maps. Re-check on Maps before sendi
 - Reviews: 76 (5.0) · https://exa.ai/library/place/tkvz3zwnkwm
 - Maps re-check: https://www.google.com/maps/search/Creative%20Outdoor%20Services%20%20GA
 - Opener: Saw your Jobber site. You're at 76 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+
+## Q. Pass 6 Jobber Sites discovery (2026-10-27): newly Hot with email
+All counts come from the Google widget on each business's own Jobber Sites page. Re-check on Maps before sending.
+
+### Q1. Green Thumbs Landscape Consulting and Services — Prosperity, SC (score 97)
+- Category: Lawn Care / Landscaping
+- Email: greenthumbs1744@gmail.com · Phone: (803) 500-6833
+- Google reviews: 8. Source: site widget, https://greenthumbslandscaping.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Green+Thumbs+Landscape+Consulting+and+Services+Prosperity+SC
+- Opener: Saw your Jobber site. You're at 8 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q2. Simply SoftWash Exterior Cleaning, LLC — Greenville, SC (score 97)
+- Category: Pressure Washing
+- Email: mainoffice@simplysoftwash.org · Phone: (678) 599-9933
+- Google reviews: 9. Source: site widget, https://simplysoftwashexteriorcleaningllc.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Simply+SoftWash+Exterior+Cleaning%2C+LLC+Greenville+SC
+- Opener: Saw your Jobber site. You're at 9 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q3. Danner Exterior Services — Greenacres, FL (score 97)
+- Category: Pressure Washing
+- Email: dannerexteriorservices@gmail.com · Phone: (561) 951-6015
+- Google reviews: 10. Source: site widget, https://dannerexteriorservices.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Danner+Exterior+Services+Greenacres+FL
+- Opener: Saw your Jobber site. You're at 10 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q4. Palm Aire Professional Services — Fort Lauderdale, FL (score 97)
+- Category: Cleaning
+- Email: cleaning@palmaireprofessionalservices.com · Phone: (954) 348-0949
+- Google reviews: 6 (4.2). Source: site widget, https://palmairecleaningservices.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Palm+Aire+Professional+Services+Fort+Lauderdale+FL
+- Opener: Saw your Jobber site. You're at 6 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q5. Still Creek Property Solutions LLC — Pensacola, FL (score 97)
+- Category: Lawn Care / Landscaping
+- Email: stillcreekllc23@gmail.com · Phone: (850) 490-6999
+- Google reviews: 8. Source: site widget, https://stillcreek.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Still+Creek+Property+Solutions+LLC+Pensacola+FL
+- Opener: Saw your Jobber site. You're at 8 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q6. Ez Projects Done Right — Tampa, FL (score 92)
+- Category: Handyman / Cleaning
+- Email: ezprojectsdonerightllc@gmail.com · Phone: (813) 528-0873
+- Google reviews: 41. Source: site widget, https://ezprojectsdoneright.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Ez+Projects+Done+Right+Tampa+FL
+- Opener: Saw your Jobber site. You're at 41 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q7. Ground Xperts — LaFayette, GA (score 92)
+- Category: Lawn Care / Landscaping
+- Email: groundxperts@gmail.com · Phone: (423) 598-8016
+- Google reviews: 42 (4.9). Source: site widget, https://groundxperts.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Ground+Xperts+LaFayette+GA
+- Opener: Saw your Jobber site. You're at 42 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q8. Youngs Pressure Washing Services LLC — Spartanburg, SC (score 92)
+- Category: Pressure Washing
+- Email: ypwservices@gmail.com · Phone: (864) 266-7691
+- Google reviews: 39 (4.9). Source: site widget, https://youngspressurewashingservicesllc.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Youngs+Pressure+Washing+Services+LLC+Spartanburg+SC
+- Opener: Saw your Jobber site. You're at 39 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q9. Coastal Cleaning — Myrtle Beach, SC (score 92)
+- Category: Cleaning
+- Email: ccleaninglinen@gmail.com · Phone: (843) 400-0323
+- Google reviews: 44 (4.7). Source: site widget, https://coastalcleaning.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Coastal+Cleaning+Myrtle+Beach+SC
+- Opener: Saw your Jobber site. You're at 44 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q10. Joe Allen Pressure Washing LLC — Jacksonville, FL (score 86)
+- Category: Pressure Washing
+- Email: japwjax@gmail.com · Phone: (904) 707-4959
+- Google reviews: 96. Source: site widget, https://japwjax.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Joe+Allen+Pressure+Washing+LLC+Jacksonville+FL
+- Opener: Saw your Jobber site. You're at 96 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q11. Green Ranger Lawn & Landscapes — Hampton, VA (score 92)
+- Category: Lawn Care / Landscaping
+- Email: greenrangerllc@gmail.com · Phone: (757) 525-3604
+- Google reviews: 7. Source: site widget, https://greenrangerlawnandlandscapes.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Green+Ranger+Lawn+%26+Landscapes+Hampton+VA
+- Opener: Saw your Jobber site. You're at 7 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### Q12. Epps Landscaping — Linton Hall, VA (score 87)
+- Category: Lawn Care / Landscaping
+- Email: cepperson@elandscaping.net · Phone: (571) 206-8629
+- Google reviews: 40. Source: site widget, https://eppslandscaping.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Epps+Landscaping+Linton+Hall+VA
+- Opener: Saw your Jobber site. You're at 40 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.

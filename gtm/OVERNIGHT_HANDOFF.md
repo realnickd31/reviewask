@@ -1,18 +1,18 @@
-# ReviewAsk morning brief: Tue Oct 27, 2026 (updated ~4:30 AM ET)
+# ReviewAsk morning brief: Tue Oct 27, 2026 (updated ~5:00 AM ET)
 
 **Nothing was emailed, posted, DMed or submitted to any prospect or community overnight.** The review counts below come from web mirror sites and the Google widgets on Jobber Sites pages, not from Google Maps directly. Re-check Maps before every send.
 
 ## Top metrics
 | | Count |
 |---|---|
-| Prospects (`gtm/prospects_overnight.csv`) | **545** (all US, deduped against day 1) |
-| Hot (score 85+) | **172** |
-| Warm (70–84) | **340** |
-| With public email | **400** |
+| Prospects (`gtm/prospects_overnight.csv`) | **613** (all US, deduped against day 1) |
+| Hot (score 85+) | **185** |
+| Warm (70–84) | **394** |
+| With public email | **463** |
 | Review-gap audits (`gtm/audits/`) | **61** |
-| Outreach-ready sections (`gtm/outreach_ready_top25.md`) | Top 25 + sections J–P |
+| Outreach-ready sections (`gtm/outreach_ready_top25.md`) | Top 25 + sections J–Q |
 
-Overnight adds: +94 Jobber Sites rows (passes 4–5), 44 newly Hot with email (sections M–P) and 28 new audits. Product facts used everywhere: $39/mo or $390/yr, 7-day trial with card required, email live, SMS rolling out, works with any Jobber plan (Housecall Pro is in early access).
+Overnight adds: +162 Jobber Sites rows (passes 4–6), 56 newly Hot with email (sections M–Q) and 28 new audits. Product facts used everywhere: $39/mo or $390/yr, 7-day trial with card required, email live, SMS rolling out, works with any Jobber plan (Housecall Pro is in early access).
 
 ## Day-1 approvals still needed
 1. **Sending inbox and domain for cold email.** support@getreviewask.com needs a mailbox; GoDaddy Email Essentials was the option under consideration. A separate sending subdomain or inbox is recommended.

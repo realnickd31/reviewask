@@ -62,3 +62,10 @@
 - Also fixed: a row name (Coastal Earthworks Co), the state for 615 Lawn (TN), and the category for Revolutionary Repair.
 - +7 audits (section O): Harmony Cleaning ATL, AmeriGro, Magic City Soft Wash, Knight and Day, Cape Fear Lawn Masters, Nancy's General Cleaning, Lupinetti's.
 - The stretch goal of +30–50 rows was not done this pass. Jobber Sites search queries are still finding new subdomains, so this channel is not exhausted.
+
+## Update 2026-10-27 ~5:00 AM ET: pass 6 Jobber Sites discovery
+- Added 68 new Jobber-confirmed US rows from 26 site:jobbersites.com searches across the Southeast plus VA, TX, LA and MS. Deduped by subdomain, name, phone and email against the overnight and day-1 lists.
+- 15 rows got Google counts from the widget on their own site. The other 53 are [BLOCKED].
+- 13 are newly Hot. 12 of them have email (section Q). The 13th, Everett Landscaping (AL, 1 review), has a phone number only. Affordable Painting & Power Washing (338 reviews) is disqualified.
+- Totals: 613 rows · 185 Hot · 394 Warm · 463 with email · 61 audits.
+- The stretch goal (audits) was not done this pass. The channel is not exhausted: each search still returns mostly new subdomains.
