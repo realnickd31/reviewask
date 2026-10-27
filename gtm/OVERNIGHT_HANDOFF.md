@@ -57,3 +57,8 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - The footer Guides links were already complete.
 - Audits: 143 total (+7, section AE). These are outside the Southeast because the Southeast Hot leads with clean comps are used up.
 - Flags: the Battle Buddies 1-star review should not be mentioned. Sierra Tree has only 2 comps. TLC Marion was skipped (its only comp is a count the company reports itself).
+
+## Update 3:56 AM ET
+- Homepage CTA (#5) is live: the primary button reads "Connect Jobber — free for 7 days" and the secondary reads "Using Housecall Pro? Start free trial". Both go to /signup. Deploy dep-dbg5hesipgvc73ej6r5g on commit dffa24d.
+- Audits: 149 total (+6, section AF: Visalia, Edmonds, Katy, Smithville OH, Linton Hall VA, Richmond VA). No discovery this round.
+- Flags: JMAS Texas (verify whether JMAS Landscaping is a related listing). Addicott is at 4.5 (pitch rating recovery). For Epps and Iggys, the own counts come from the CSV only. Battle Buddies is held for Nick's OK. Skipped: Cleanadora (1 clean comp), NKY Lawn Pros (conflicting counts), Electric Force (no Google comps), Parsons (own count is from its Jobber site, not Google), Chrispy Clean Bins and Albany Bed Bug (comps are franchise, national or non-Google only).

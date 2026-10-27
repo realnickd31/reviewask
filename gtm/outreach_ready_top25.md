@@ -1764,3 +1764,29 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AE. Sierra Tree Company (Rohnert Park, CA)
 - Opener: You're at 48 Google reviews (4.8). In Rohnert Park, SkyView has 83 and TreePro 156, both at 5.0.
 - Gap to top-2 avg 72; leader gap 108; ~80 asks/mo [SPEC]. Notes: Not in the Southeast. Only 2 clean comps (top-2 average). TreeEx's '520+' claim is unverified and excluded.
+
+## AF — Non-SE Hot audits, 2026-10-27
+
+### AF. MaidMaxx (Visalia, CA)
+- Opener: Your 43 Google reviews are all 5 stars. In Visalia, Maid 2 Clean has 59 and ANG 75. About 3 more reviews a month puts you on top.
+- Gap to top-3 avg 13; leader gap 32; ~20 asks/mo [SPEC]. Notes: ANG shows 125 or 75 by source; I used the lower 75. Maid 2 Clean's count comes from Expertise. Carpet cleaners are excluded.
+
+### AF. Addicott Roofing (Edmonds, WA)
+- Opener: You're at 41 Google reviews (4.5). In Edmonds, Crown has 42 at 4.9 and NGB 160. Steady asks after every roof lift both your count and your rating.
+- Gap to top-3 avg 111; leader gap 214; ~127 asks/mo [SPEC]. Notes: Its 4.5 rating trails comps at 4.9–5.0, so pitch rating recovery. Blue & Blue shows 244–255 by source; I used 255, the newer figure.
+
+### AF. JMAS Texas Lawn Care Corp. (Katy, TX)
+- Opener: You're at 19 Google reviews (4.4). In Katy, Sunrise has 36 and Texas ForeverGreen 44. A few asks a week closes that fast.
+- Gap to top-3 avg 28; leader gap 43; ~34 asks/mo [SPEC]. Notes: FLAG: 'JMAS Landscaping' (62) may be a related business or a duplicate listing, so verify before sending. Emerald Lawns (282) is a franchise and is excluded. Its 4.4 rating is below most comps.
+
+### AF. Kimmell's Premier Landscapes (Smithville, OH)
+- Opener: Your 26 Google reviews (4.9) already beat Keener in Orrville. Only Five Star in Wooster has more, at 39 and a 4.4 rating.
+- Gap to top-3 avg 0; leader gap 13; ~0 asks/mo [SPEC]. Notes: This is a near-leader, so pitch taking the top spot. Keener shows 14–16 by source; I used 14. It's a thin rural market.
+
+### AF. Epps Landscaping (Linton Hall, VA)
+- Opener: You're at about 40 Google reviews. Around Linton Hall, Reliable Lawn Care has 76 and Simply Turf 127.
+- Gap to top-3 avg 30; leader gap 87; ~34 asks/mo [SPEC]. Notes: Its own count comes from our CSV only and there's no rating, so verify on Maps. Justin's count is self-reported. Virginia isn't a target SE state.
+
+### AF. Iggys Landscaping LLC (Richmond, VA)
+- Opener: You're at about 21 Google reviews. Trinity Turf has 23 and Macias 19, while EKG in Midlothian has pulled ahead to 124.
+- Gap to top-3 avg 34; leader gap 103; ~40 asks/mo [SPEC]. Notes: Its own count comes from our CSV only, so verify it. Greener Creations ('258+', self-reported) is excluded. EKG's count comes from Lantern.

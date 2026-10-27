@@ -160,3 +160,4 @@
 - 8 audits: GRANDSCAPE (FL), Rhodes (TN), Gotcha Covered (NC), Warrior Landscaping (NC), Instaclean (SC), Rosebud (FL), Robles Painting (NC), Grissom's (TN). 136 total. Nothing sent.
 
 - 3:53 AM ET: Homepage founder note and setup-help offer (#8) are live. 7 AE audits (Boise, Hudson MA, Indianapolis, Wentzville, Vernon CT, Holbrook MA, Rohnert Park) bring the total to 143.
+- 3:56 AM ET: Homepage CTA is integration-first (#5). 6 AF audits bring the total to 149.

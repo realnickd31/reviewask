@@ -2864,3 +2864,129 @@ To close it in 6 months: ~12 new reviews/mo ≈ 80 asks/mo at a 15% response rat
 **Sources:** CSV (48) | https://exa.ai/library/places?q=8814011f6a6403e3
 
 **Notes:** Not in the Southeast. Only 2 clean comps (top-2 average). TreeEx's '520+' claim is unverified and excluded.
+
+
+## MaidMaxx (Visalia, CA)
+```
+Google Review Gap — MaidMaxx (Visalia, "house cleaning Visalia CA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         43  5.0
+#1 ANG Cleaning Services  75  5.0
+#2 Maid 2 Clean  59  4.7
+#3 Rise & Shine Services  35  4.9
+
+Gap to top-3 average: 13 reviews (gap to leader: 32)
+To close it in 6 months: ~3 new reviews/mo ≈ 20 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 43 Google reviews are all 5 stars. In Visalia, Maid 2 Clean has 59 and ANG 75. About 3 more reviews a month puts you on top.
+
+**Sources:** CSV (43) | https://exa.ai/library/places?q=2b489b27d8738fa2 | https://exa.ai/library/place/xmd631xphms | https://www.expertise.com/home-improvement/house-cleaning/california/visalia
+
+**Notes:** ANG shows 125 or 75 by source; I used the lower 75. Maid 2 Clean's count comes from Expertise. Carpet cleaners are excluded.
+
+
+## Addicott Roofing (Edmonds, WA)
+```
+Google Review Gap — Addicott Roofing (Edmonds, "roofing Edmonds WA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         41  4.5
+#1 Blue & Blue Roofing Inc  255  5.0
+#2 NGB Roofing  160  5.0
+#3 Crown Roofing Inc  42  4.9
+
+Gap to top-3 average: 111 reviews (gap to leader: 214)
+To close it in 6 months: ~19 new reviews/mo ≈ 127 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 41 Google reviews (4.5). In Edmonds, Crown has 42 at 4.9 and NGB 160. Steady asks after every roof lift both your count and your rating.
+
+**Sources:** CSV (41) | https://exa.ai/library/places?q=3fe81fac1ea42dc2 | https://rooferdirectory.co/contractor/blue-blue-roofing-inc/
+
+**Notes:** Its 4.5 rating trails comps at 4.9–5.0, so pitch rating recovery. Blue & Blue shows 244–255 by source; I used 255, the newer figure.
+
+
+## JMAS Texas Lawn Care Corp. (Katy, TX)
+```
+Google Review Gap — JMAS Texas Lawn Care Corp. (Katy, "lawn care Katy TX")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         19  4.4
+#1 JMAS Landscaping  62  4.9
+#2 Texas ForeverGreen Landscaping  44  5.0
+#3 Sunrise Lawn Care  36  4.6
+
+Gap to top-3 average: 28 reviews (gap to leader: 43)
+To close it in 6 months: ~5 new reviews/mo ≈ 34 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 19 Google reviews (4.4). In Katy, Sunrise has 36 and Texas ForeverGreen 44. A few asks a week closes that fast.
+
+**Sources:** CSV (19) | https://exa.ai/library/places?q=bfcee3710fed324f
+
+**Notes:** FLAG: 'JMAS Landscaping' (62) may be a related business or a duplicate listing, so verify before sending. Emerald Lawns (282) is a franchise and is excluded. Its 4.4 rating is below most comps.
+
+
+## Kimmell's Premier Landscapes (Smithville, OH)
+```
+Google Review Gap — Kimmell's Premier Landscapes (Smithville, "landscaping Wooster Orrville OH")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         26  4.9
+#1 Five Star Lawn Care LLC  39  4.4
+#2 Keener Landscaping Inc  14  5.0
+#3 Brad's Lawn Care, llc  11  4.3
+
+Gap to top-3 average: 0 reviews (gap to leader: 13)
+To close it in 6 months: ~0 new reviews/mo ≈ 0 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 26 Google reviews (4.9) already beat Keener in Orrville. Only Five Star in Wooster has more, at 39 and a 4.4 rating.
+
+**Sources:** CSV (26) | https://exa.ai/library/place/tmwtmmwq1jc | https://exa.ai/library/place/wfsnqqjb4ly | https://picklocal.biz/b/brads-lawn-care-llc-orrville
+
+**Notes:** This is a near-leader, so pitch taking the top spot. Keener shows 14–16 by source; I used 14. It's a thin rural market.
+
+
+## Epps Landscaping (Linton Hall, VA)
+```
+Google Review Gap — Epps Landscaping (Linton Hall, "lawn care Gainesville Bristow Linton Hall VA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         40  n/a
+#1 Simply Turf  127  4.8
+#2 Reliable Lawn Care  76  4.8
+#3 Justin's Yard & Garden  8  5.0
+
+Gap to top-3 average: 30 reviews (gap to leader: 87)
+To close it in 6 months: ~5 new reviews/mo ≈ 34 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 40 Google reviews. Around Linton Hall, Reliable Lawn Care has 76 and Simply Turf 127.
+
+**Sources:** CSV (40) | https://snowlawn.net/va/gainesville/SimplyTurf | https://www.contractorsranked.com/contractor/gainesville-va/reliable-lawn-care | https://justinsyardandgarden.com/
+
+**Notes:** Its own count comes from our CSV only and there's no rating, so verify on Maps. Justin's count is self-reported. Virginia isn't a target SE state.
+
+
+## Iggys Landscaping LLC (Richmond, VA)
+```
+Google Review Gap — Iggys Landscaping LLC (Richmond, "lawn care Richmond VA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         21  n/a
+#1 EKG Lawn Services  124  5.0
+#2 Trinity Turf  23  4.7
+#3 Macias Lawn Care  19  4.6
+
+Gap to top-3 average: 34 reviews (gap to leader: 103)
+To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 21 Google reviews. Trinity Turf has 23 and Macias 19, while EKG in Midlothian has pulled ahead to 124.
+
+**Sources:** CSV (21) | https://lantern.llc/va/richmond/outdoor-lawn/landscaping | https://exa.ai/library/places?q=c5996a0be53214f3 | https://directory.coldlytics.com/companies/mlc21
+
+**Notes:** Its own count comes from our CSV only, so verify it. Greener Creations ('258+', self-reported) is excluded. EKG's count comes from Lantern.
