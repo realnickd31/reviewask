@@ -88,3 +88,9 @@
 - Flags: Pressure Wash Improvements (WV) and Travis Thurber have weak sources; Mikes Lawn (KY) has a 4.1 rating; Byrd's has reviews mentioning missed appointments; Nextdoor lists Stan's Lawn Care as closed.
 - +5 audits (section S): True Landscape, Aaron's Lawn, Acosta, Millers Lawn, Hurst.
 - Totals: 671 rows · 219 Hot · 417 Warm · 516 with email · 74 audits.
+
+## Update 2026-10-27 ~7:15 AM ET (pass 8)
+- +58 new Jobber Sites prospects (FL/NC/SC/TN/AL/VA/TX/AR/OK). 16 have counts from the site's own Google widget; the other 42 are [BLOCKED].
+- 15 newly Hot with email → outreach section U. Patriot Edge (AR) is Hot but has no email.
+- Totals: 729 rows / 235 Hot / 459 Warm / 571 with email / 74 audits. Nothing sent.
+- Discovery through site: searches is getting thin. Most results are now repeats.

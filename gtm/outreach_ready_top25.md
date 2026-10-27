@@ -1306,3 +1306,112 @@ Counts come from web mirrors. Re-check on Maps before sending, especially entrie
 - Google reviews: 17 (4.1). Source: https://snowlawn.net/ky/louisville/Mikes. FLAG: 4.1 rating.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Mikes+Lawn+Care+Service+LLC+Louisville+KY
 - Opener: Saw your Jobber site. You're at 17 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+
+## U. Pass 8 Jobber Sites discovery (2026-10-27): newly Hot with email
+All counts come from the Google widget on each business's own Jobber Sites page. Re-check on Maps before sending.
+
+### U1. Signature Pressure Washing LLC — Port St. Lucie, FL (score 97)
+- Category: Pressure Washing
+- Email: signaturepressurewashingllc@gmail.com · Phone: (772) 834-4348
+- Google reviews: 7. Source: site widget, https://signaturepressurewashingllc.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Signature+Pressure+Washing+LLC+Port+St.+Lucie+FL
+- Opener: Saw your Jobber site. You're at 7 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U2. TC Lawn Manicure, LLC — Beaufort, SC (score 97)
+- Category: Lawn Care / Landscaping
+- Email: tony@tclawnmanicure.com · Phone: (910) 833-0476
+- Google reviews: 11 (4.6). Source: site widget, https://tclawnmanicurellc.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=TC+Lawn+Manicure%2C+LLC+Beaufort+SC
+- Opener: Saw your Jobber site. You're at 11 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U3. Galloway Lawn and Landscape — Jacksonville, FL (score 97)
+- Category: Lawn Care / Landscaping
+- Email: gallowaylawnandlandscape@gmail.com · Phone: (904) 228-2660
+- Google reviews: 17. Source: site widget, https://gallowaylawnandlandscape.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Galloway+Lawn+and+Landscape+Jacksonville+FL
+- Opener: Saw your Jobber site. You're at 17 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U4. Grindstone Trees and Landscaping — Boone, NC (score 97)
+- Category: Tree Care
+- Email: grindstonetreesandlandscaping@gmail.com · Phone: (828) 434-6943
+- Google reviews: 20. Source: site widget, https://grindstonetreesandlandscaping.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Grindstone+Trees+and+Landscaping+Boone+NC
+- Opener: Saw your Jobber site. You're at 20 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U5. LeClercq's Landscaping & Pressure Washing — Wake Forest, NC (score 92)
+- Category: Pressure Washing
+- Email: leclercqslandscaping@gmail.com · Phone: (919) 819-2584
+- Google reviews: 25. Source: site widget, https://leclercqslandscapingllc.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=LeClercq%27s+Landscaping+%26+Pressure+Washing+Wake+Forest+NC
+- Opener: Saw your Jobber site. You're at 25 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U6. Compass Painting of SWFL — St. Petersburg, FL (score 92)
+- Category: Painting
+- Email: jp@compasspaintingswfl.com · Phone: (941) 318-0002
+- Google reviews: 45. Source: site widget, https://compasspaintingswfl.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Compass+Painting+of+SWFL+St.+Petersburg+FL
+- Opener: Saw your Jobber site. You're at 45 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U7. Magic Broom Cleaning — Orlando, FL (score 86)
+- Category: Cleaning
+- Email: magicbroomc@gmail.com · Phone: (321) 458-6111
+- Google reviews: 94 (4.7). Source: site widget, https://magicbroomcleaning.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Magic+Broom+Cleaning+Orlando+FL
+- Opener: Saw your Jobber site. You're at 94 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U8. Honey Do Service Inc. of Franklin, TN — Spring Hill, TN (score 86)
+- Category: Handyman
+- Email: franklin@honeydoservice.com · Phone: (615) 265-9656
+- Google reviews: 75 (4.8). Source: site widget, https://honeydoserviceincoffranklintn.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Honey+Do+Service+Inc.+of+Franklin%2C+TN+Spring+Hill+TN
+- Opener: Saw your Jobber site. You're at 75 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U9. Rise n' Shine House Cleaning — Charlotte, NC (score 86)
+- Category: Cleaning
+- Email: risenshinehousecleaningllc@gmail.com · Phone: (980) 219-0152
+- Google reviews: 54. Source: site widget, https://risenshinehousecleaning.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Rise+n%27+Shine+House+Cleaning+Charlotte+NC
+- Opener: Saw your Jobber site. You're at 54 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U10. Hilbun Pest Control — Foley, AL (score 86)
+- Category: Pest Control
+- Email: steve.hilbun@hilbunpc.com · Phone: (251) 206-1245
+- Google reviews: 62. Source: site widget, https://hilbunpestcontrol.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Hilbun+Pest+Control+Foley+AL
+- Opener: Saw your Jobber site. You're at 62 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U11. Call The Cavalry Lawn Care — Richmond, VA (score 92)
+- Category: Lawn Care / Landscaping
+- Email: callthecavalryllc@gmail.com · Phone: (804) 843-8855
+- Google reviews: 11. Source: site widget, https://callthecavalrylawncare.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Call+The+Cavalry+Lawn+Care+Richmond+VA
+- Opener: Saw your Jobber site. You're at 11 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U12. Iggys Landscaping LLC — Richmond, VA (score 92)
+- Category: Lawn Care / Landscaping
+- Email: iggyslandscapingrva@gmail.com · Phone: (804) 997-9417
+- Google reviews: 21. Source: site widget, https://iggyslandscapingrva.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Iggys+Landscaping+LLC+Richmond+VA
+- Opener: Saw your Jobber site. You're at 21 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U13. Forever Green Irrigation Services — Mineral, VA (score 92)
+- Category: Irrigation
+- Email: forevergreenjpa@aol.com · Phone: (804) 556-4337
+- Google reviews: 7. Source: site widget, https://forevergreenirrigationservices.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Forever+Green+Irrigation+Services+Mineral+VA
+- Opener: Saw your Jobber site. You're at 7 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U14. Dogwood Outdoor Services — Sherwood, AR (score 92)
+- Category: Lawn Care / Landscaping
+- Email: info@dogwoodoutdoorservices.com · Phone: (501) 205-2141
+- Google reviews: 13. Source: site widget, https://dogwoodoutdoorservicesllc.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Dogwood+Outdoor+Services+Sherwood+AR
+- Opener: Saw your Jobber site. You're at 13 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### U15. iMow Lawns — Houston, TX (score 87)
+- Category: Lawn Care / Landscaping
+- Email: imowlawnshouston@gmail.com · Phone: (346) 291-7095
+- Google reviews: 32 (4.7). Source: site widget, https://imowlawns.jobbersites.com/
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=iMow+Lawns+Houston+TX
+- Opener: Saw your Jobber site. You're at 32 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
