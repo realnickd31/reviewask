@@ -1734,3 +1734,33 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AD. Grissom's Grounds Services LLC (Elizabethton, TN)
 - Opener: Your 4 Google reviews are all 5 stars. In Elizabethton, TruEdge has 48 and Green Man 54, both reachable with a steady ask.
 - Gap to top-3 avg 136; leader gap 312; ~154 asks/mo [SPEC]. Notes: Atta Boy's count includes its Christmas-light business, which inflates the average; the realistic targets are TruEdge and Green Man.
+
+## AE — Non-SE Hot audits (SE pool with clean comps exhausted), 2026-10-27
+
+### AE. Banana Landscape (Boise, ID)
+- Opener: You're at 20 Google reviews (4.8). In Boise, Mr Chipp has 84 and Green Morning 110. A steady ask after each job closes that gap.
+- Gap to top-3 avg 120; leader gap 147; ~134 asks/mo [SPEC]. Notes: Not in the Southeast (the SE pool is exhausted). Senske (regional chain), Weed Man and Clean Air Lawn Care (franchises) and Far West (garden center) are excluded. Outdoor Solutions shows 131 or 186 depending on the source; I used 131.
+
+### AE. Mitchell Land & Labor, inc. (Hudson, MA)
+- Opener: Your 31 Google reviews are all 5 stars. Around Hudson, V Pitol has 40 and A.J. Antico 133, so you're closer to the top than it looks.
+- Gap to top-3 avg 38; leader gap 102; ~47 asks/mo [SPEC]. Notes: Not in the Southeast. NaturaLawn (franchise) is excluded. Rutland Turf (479) and Dave's (191) are excluded because their counts come from non-Google sources.
+
+### AE. Jessie Clean (Indianapolis, IN)
+- Opener: Your 42 Google reviews are all 5 stars, but you've added only about 2 in the last 6 months. Independent Indy cleaners like The Dust Devils sit at 188.
+- Gap to top-3 avg 171; leader gap 227; ~194 asks/mo [SPEC]. Notes: Not in the Southeast. Cleaning Authority, Molly Maid and Merry Maids (franchises), Zerorez and Indysteamers (carpet cleaning) and DeluxeMaid (multi-market) are excluded. The 6-month velocity comes from Prosource.
+
+### AE. Refresh Outdoor Services (Wentzville, MO)
+- Opener: Your 42 Google reviews are all 5 stars. In Wentzville, Go Pro has 58 and Diamond 79. About 6 more a month gets you to the top.
+- Gap to top-3 avg 27; leader gap 37; ~34 asks/mo [SPEC]. Notes: Not in the Southeast. Best Lawn Care (251) is excluded because its count is a Chamber rating, not Google. This is a close race and a good 'take the lead' pitch.
+
+### AE. Battle Buddies Landscaping & Lawn Care (Vernon, CT)
+- Opener: You're at 42 Google reviews (4.9). In Vernon, Freddie's has 43, and Landworks in Manchester has 87. A few asks a week puts you clearly ahead.
+- Gap to top-3 avg 13; leader gap 45; ~20 asks/mo [SPEC]. Notes: Not in the Southeast. Garden Barn (nursery) and Elliot (handyman) are excluded. A visible 1-star 'ghosted me' review from 2025-08 should not be mentioned in outreach.
+
+### AE. Ohan Painting (Holbrook, MA)
+- Opener: Your 41 Google reviews are all 5 stars, the most of any Holbrook painter. Next door in Braintree, Curran has 67 and Proline 92.
+- Gap to top-3 avg 23; leader gap 51; ~27 asks/mo [SPEC]. Notes: Not in the Southeast. This is a local leader, so the pitch is extending the lead. The comps are in neighboring Braintree.
+
+### AE. Sierra Tree Company (Rohnert Park, CA)
+- Opener: You're at 48 Google reviews (4.8). In Rohnert Park, SkyView has 83 and TreePro 156, both at 5.0.
+- Gap to top-2 avg 72; leader gap 108; ~80 asks/mo [SPEC]. Notes: Not in the Southeast. Only 2 clean comps (top-2 average). TreeEx's '520+' claim is unverified and excluded.

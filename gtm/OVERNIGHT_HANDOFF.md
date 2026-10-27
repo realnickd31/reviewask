@@ -51,3 +51,9 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - **New page live:** https://getreviewask.com/google-review-software-home-services. It's a category page for any home or field-service business: what to look for, an honest dated comparison (Marketing Suite $99, NiceJob $75/$125, Podium and Birdeye quoted) with "best when" for each, how ReviewAsk works (email now, SMS rolling out), and links to the gap tool, link tool, templates, /for-jobber and /for-housecall-pro. It's in the footer and sitemap. Deployed 1e993e8 and checked 200.
 - **QA:** /tools/review-link, /templates/review-request and /for-jobber (backlog box present) all return 200.
 - **8 more audits (136 total):** section AD. Flags: GRANDSCAPE shares the Palm Bay market with Byrd's, so stagger. Most of this batch have very few reviews (1–11), so the backlog upload is the main pitch. Atta Boy's count (Elizabethton) includes its Christmas-light business. Graceful Touch (Wake Forest) comes from a search summary only.
+
+## Update 3:53 AM ET
+- Shipped: a founder note on the homepage (#founder) with a 10-minute setup-help offer by email (support@getreviewask.com). No Calendly link. Deploy dep-dbg5fll9el5s73bvbd50 on commit 008d43c is live.
+- The footer Guides links were already complete.
+- Audits: 143 total (+7, section AE). These are outside the Southeast because the Southeast Hot leads with clean comps are used up.
+- Flags: the Battle Buddies 1-star review should not be mentioned. Sierra Tree has only 2 comps. TLC Marion was skipped (its only comp is a count the company reports itself).

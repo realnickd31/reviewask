@@ -158,3 +158,5 @@
 ## Update 2026-10-27 ~3:49 AM ET
 - Shipped /google-review-software-home-services (category page, dated comparison, internal links), added to footer and sitemap, deployed 1e993e8 and verified 200.
 - 8 audits: GRANDSCAPE (FL), Rhodes (TN), Gotcha Covered (NC), Warrior Landscaping (NC), Instaclean (SC), Rosebud (FL), Robles Painting (NC), Grissom's (TN). 136 total. Nothing sent.
+
+- 3:53 AM ET: Homepage founder note and setup-help offer (#8) are live. 7 AE audits (Boise, Hudson MA, Indianapolis, Wentzville, Vernon CT, Holbrook MA, Rohnert Park) bring the total to 143.

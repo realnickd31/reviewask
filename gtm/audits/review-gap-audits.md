@@ -2718,3 +2718,149 @@ To close it in 6 months: ~23 new reviews/mo ≈ 154 asks/mo at a 15% response ra
 **Sources:** CSV/own Jobber site (4) | https://exa.ai/library/places?q=9a66ad405720cd51 | https://www.contractorsranked.com/contractor/elizabethton-tn/truedge-lawn-and-landscape
 
 **Notes:** Atta Boy's count includes its Christmas-light business, which inflates the average; the realistic targets are TruEdge and Green Man.
+
+
+## Banana Landscape (Boise, ID)
+```
+Google Review Gap — Banana Landscape (Boise, "landscaping Boise ID")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         20  4.8
+#1 TLC Landscape, LLC  167  4.6
+#2 Outdoor Solutions Inc  131  4.9
+#3 Boise Landscape Design  122  5.0
+
+Gap to top-3 average: 120 reviews (gap to leader: 147)
+To close it in 6 months: ~20 new reviews/mo ≈ 134 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 20 Google reviews (4.8). In Boise, Mr Chipp has 84 and Green Morning 110. A steady ask after each job closes that gap.
+
+**Sources:** CSV (20) | https://www.contractorsranked.com/contractor/boise-id/tlc-landscape-llc | https://www.contractorsranked.com/contractor/boise-id/outdoor-solutions-inc | https://exa.ai/library/places?q=70d8e0e5912f6b72
+
+**Notes:** Not in the Southeast (the SE pool is exhausted). Senske (regional chain), Weed Man and Clean Air Lawn Care (franchises) and Far West (garden center) are excluded. Outdoor Solutions shows 131 or 186 depending on the source; I used 131.
+
+
+## Mitchell Land & Labor, inc. (Hudson, MA)
+```
+Google Review Gap — Mitchell Land & Labor, inc. (Hudson, "lawn care Hudson MA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         31  5.0
+#1 A.J. Antico  133  4.7
+#2 V Pitol Landscaping Inc  40  4.7
+#3 Armando and sons Landscaping  34  5.0
+
+Gap to top-3 average: 38 reviews (gap to leader: 102)
+To close it in 6 months: ~7 new reviews/mo ≈ 47 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 31 Google reviews are all 5 stars. Around Hudson, V Pitol has 40 and A.J. Antico 133, so you're closer to the top than it looks.
+
+**Sources:** CSV (31) | https://exa.ai/library/places?q=4af71ce9bc3c6478
+
+**Notes:** Not in the Southeast. NaturaLawn (franchise) is excluded. Rutland Turf (479) and Dave's (191) are excluded because their counts come from non-Google sources.
+
+
+## Jessie Clean (Indianapolis, IN)
+```
+Google Review Gap — Jessie Clean (Indianapolis, "house cleaning Indianapolis")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         42  5.0
+#1 Housekeeping Maid Easy  269  4.9
+#2 The Dust Devils  188  4.8
+#3 Sunshine Clean Indy  181  5.0
+
+Gap to top-3 average: 171 reviews (gap to leader: 227)
+To close it in 6 months: ~29 new reviews/mo ≈ 194 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 42 Google reviews are all 5 stars, but you've added only about 2 in the last 6 months. Independent Indy cleaners like The Dust Devils sit at 188.
+
+**Sources:** CSV (42) | https://prosource.app/best-house-cleaning-indianapolis-in/ | https://exa.ai/library/places?q=d5d9cb13a195298e
+
+**Notes:** Not in the Southeast. Cleaning Authority, Molly Maid and Merry Maids (franchises), Zerorez and Indysteamers (carpet cleaning) and DeluxeMaid (multi-market) are excluded. The 6-month velocity comes from Prosource.
+
+
+## Refresh Outdoor Services (Wentzville, MO)
+```
+Google Review Gap — Refresh Outdoor Services (Wentzville, "lawn care Wentzville MO")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         42  5.0
+#1 Diamond lawn care  79  4.9
+#2 Landesign Plus  71  4.5
+#3 Go Pro Lawn Care  58  4.9
+
+Gap to top-3 average: 27 reviews (gap to leader: 37)
+To close it in 6 months: ~5 new reviews/mo ≈ 34 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 42 Google reviews are all 5 stars. In Wentzville, Go Pro has 58 and Diamond 79. About 6 more a month gets you to the top.
+
+**Sources:** CSV (42) | https://exa.ai/library/places?q=5247dcd47f0f77ca | https://www.contractorsranked.com/contractor/wentzville-mo/go-pro-lawn-care
+
+**Notes:** Not in the Southeast. Best Lawn Care (251) is excluded because its count is a Chamber rating, not Google. This is a close race and a good 'take the lead' pitch.
+
+
+## Battle Buddies Landscaping & Lawn Care (Vernon, CT)
+```
+Google Review Gap — Battle Buddies Landscaping & Lawn Care (Vernon, "landscaping Vernon CT")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         42  4.9
+#1 Landworks Enterprises Inc  87  4.9
+#2 Freddie's landscaping services LLC  43  4.6
+#3 VP Lawn and Landscape, LLC  35  5.0
+
+Gap to top-3 average: 13 reviews (gap to leader: 45)
+To close it in 6 months: ~3 new reviews/mo ≈ 20 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 42 Google reviews (4.9). In Vernon, Freddie's has 43, and Landworks in Manchester has 87. A few asks a week puts you clearly ahead.
+
+**Sources:** CSV (42) | https://exa.ai/library/places?q=febdb748e8567ae1 | https://www.contractorsranked.com/contractor/manchester-ct/landworks-enterprises-inc | https://www.contractorsranked.com/contractor/manchester-ct/vp-lawn-and-landscape-llc
+
+**Notes:** Not in the Southeast. Garden Barn (nursery) and Elliot (handyman) are excluded. A visible 1-star 'ghosted me' review from 2025-08 should not be mentioned in outreach.
+
+
+## Ohan Painting (Holbrook, MA)
+```
+Google Review Gap — Ohan Painting (Holbrook, "painters Holbrook Braintree MA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         41  5.0
+#1 Proline Painting Services Inc  92  4.9
+#2 Curran Painting Services  67  5.0
+#3 Ridge Painting & Restoration  32  5.0
+
+Gap to top-3 average: 23 reviews (gap to leader: 51)
+To close it in 6 months: ~4 new reviews/mo ≈ 27 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 41 Google reviews are all 5 stars, the most of any Holbrook painter. Next door in Braintree, Curran has 67 and Proline 92.
+
+**Sources:** CSV (41) | https://exa.ai/library/places?q=7c8b8ce9e3b165ea | https://www.contractorsranked.com/contractor/braintree-ma/proline-painting-services-inc | https://www.contractorsranked.com/contractor/braintree-ma/curran-painting-services
+
+**Notes:** Not in the Southeast. This is a local leader, so the pitch is extending the lead. The comps are in neighboring Braintree.
+
+
+## Sierra Tree Company (Rohnert Park, CA)
+```
+Google Review Gap — Sierra Tree Company (Rohnert Park, "tree service Rohnert Park CA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         48  4.8
+#1 TreePro Professional Tree Care  156  5.0
+#2 SkyView Tree Experts  83  5.0
+
+Gap to top-2 average: 72 reviews (gap to leader: 108)
+To close it in 6 months: ~12 new reviews/mo ≈ 80 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 48 Google reviews (4.8). In Rohnert Park, SkyView has 83 and TreePro 156, both at 5.0.
+
+**Sources:** CSV (48) | https://exa.ai/library/places?q=8814011f6a6403e3
+
+**Notes:** Not in the Southeast. Only 2 clean comps (top-2 average). TreeEx's '520+' claim is unverified and excluded.
