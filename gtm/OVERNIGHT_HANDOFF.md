@@ -1,4 +1,4 @@
-# ReviewAsk: morning brief (updated ~5:12 AM ET, Tue Oct 27 2026)
+# ReviewAsk: morning brief (updated ~5:18 AM ET, Tue Oct 27 2026)
 
 **Nothing has been emailed, posted, DMed or submitted.** Everything below is a draft waiting for your approval.
 
@@ -10,7 +10,7 @@
 | Touch-1 email drafts | 49 total: `day1_email_drafts.md` #1–24, `day1_email_drafts_batch2.md` #25–43, `day1_email_drafts_batch3.md` #44–49 |
 | Touch-2 drafts (Day 3, same thread) | 49: `day1_email_drafts_touch2.md`, `day1_email_drafts_batch2_touch2.md`, and inline in batch3 |
 | Community posts (`gtm/community_posts_ready.md`) | Refreshed ~4:33 AM ET; you post them yourself |
-| Live SEO/trade pages | /reviews-for-lawn-care, /reviews-for-cleaning, /reviews-for-pressure-washing, /reviews-for-hvac (all 200) |
+| Live SEO/trade pages | /guides index + 6 trade guides: lawn care, cleaning, pressure washing, HVAC, pool service, pest control (all 200) |
 
 ## Approvals needed from Nick (in order)
 1. **Sending inbox**: the domain or mailbox to send from (warm it up; max 30 sends a day).
@@ -19,7 +19,7 @@
 4. **Community posts**: post them yourself, after reading each group's promotion rules.
 
 ## Blockers and flags
-- Discovery is nearly exhausted; recent batches found 3–8 new leads each. More volume needs paid or manual sources.
+- Discovery is nearly exhausted; recent batches found 3–8 new leads each. Options to refill: `gtm/PAID_DISCOVERY_OPTIONS.md` (nothing bought).
 - Counts to verify on Maps: Sweep Techs (own-site 27), Brandon's (27 vs 33), Junk Heist (55), Thayer & Son's (self-reported).
 - Keep flagged/held: Task Tacklers, Stan's, Washburn Bros, 901 cleaning, Mclaughlin's, PoolFix, Honey Do, Battle Buddies, Grow Roots (2-star), JMAS.
 - Render auto-deploy doesn't fire on push. Deploy with the Render API `trigger_deploy` on service srv-dbfbc94s728c73epr4bg.
@@ -128,3 +128,10 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Discovery: skipped (no easy angle).
 - Morning brief header, metrics and approvals refreshed.
 - Totals: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49 touch-1 + 49 touch-2 drafts.
+
+## Batch AQ (~5:18 AM ET)
+- Site: /reviews-for-pool-service, /reviews-for-pest-control and a /guides index (free tools, 6 trade guides, Jobber/HCP and comparison pages). All 6 guides cross-link and link to /guides. The footer now has one 'All guides' link instead of the trade list.
+- Meta: each trade page and /guides now sets its own og:title/description/url and twitter title (they were inheriting the homepage title). Shared OG image unchanged.
+- Commit e24488e, deploy dep-dbg63ql9el5s73c12s6g; all new URLs 200; sitemap has 7 guide URLs.
+- GTM: gtm/PAID_DISCOVERY_OPTIONS.md, 5 sources with effort notes. No purchases, no prices quoted.
+- No audits or discovery. Totals unchanged: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49+49 drafts.

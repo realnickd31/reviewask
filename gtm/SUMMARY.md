@@ -212,3 +212,10 @@
 - Discovery: skipped (no easy angle).
 - Morning brief header, metrics and approvals refreshed.
 - Totals: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49 touch-1 + 49 touch-2 drafts.
+
+## Batch AQ (~5:18 AM ET)
+- Site: /reviews-for-pool-service, /reviews-for-pest-control and a /guides index (free tools, 6 trade guides, Jobber/HCP and comparison pages). All 6 guides cross-link and link to /guides. The footer now has one 'All guides' link instead of the trade list.
+- Meta: each trade page and /guides now sets its own og:title/description/url and twitter title (they were inheriting the homepage title). Shared OG image unchanged.
+- Commit e24488e, deploy dep-dbg63ql9el5s73c12s6g; all new URLs 200; sitemap has 7 guide URLs.
+- GTM: gtm/PAID_DISCOVERY_OPTIONS.md, 5 sources with effort notes. No purchases, no prices quoted.
+- No audits or discovery. Totals unchanged: 819 prospects, 259 Hot, 655 w/ email, 173 audits, 49+49 drafts.
