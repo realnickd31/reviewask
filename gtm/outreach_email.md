@@ -1,71 +1,25 @@
-# Cold Email Variants
+# Cold Email Variants (refreshed Oct 27 2026 — previous version in outreach_email.v1.bak.md)
 
-Rules: plain text, no images or links in the first email (better deliverability). Personalize the first line with their real review count and a competitor's. Send from Nick's name. Footer on every email: physical address + "Reply 'no thanks' and I won't email again."
+What changed: removed 14-day/"free first batch" offers (site offers a **7-day free trial**), removed "$300 Podium" claim (Podium has no public pricing — https://www.podium.com/pricing/), removed "one text" promises (email live, **SMS rolling out**), removed dental/med-spa (HIPAA not ready) and real-estate (not a job-close workflow) as primary targets. Jobber + Housecall Pro + Quick ask is the story.
 
-Merge fields: {{first_name}}, {{business}}, {{city}}, {{their_reviews}}, {{competitor}}, {{competitor_reviews}}
+**Use `outreach-sequences.md` for the full 3-touch sequences.** Below are the standalone first emails.
 
----
+Rules: plain text, no link in touch 1, personalize with real review count; footer with physical address + opt-out. Send from Nick.
 
-## 1. HVAC / Plumbing / Home services
-
-**Subject:** {{business}} reviews
-
+## 1. Jobber shop (any vertical)
+Subject: {{business}} + Jobber reviews
 Hi {{first_name}},
+Saw {{business}} books work through Jobber and has about {{reviews}} Google reviews.
+Jobber's review asks come in the $99/mo Marketing Suite. ReviewAsk does just that part for $39/mo: when a job closes in Jobber, your customer gets a one-tap Google review link, plus one reminder on day 3. No contract.
+Want to try it on your next 20 jobs? 7-day free trial.
+Nick D'Antonio, ReviewAsk
 
-I saw {{business}} on Google Maps. You have {{their_reviews}} reviews, and {{competitor}} has {{competitor_reviews}}. On Maps, that gap usually decides who gets the call.
-
-I built ReviewAsk to fix it. After each job, your customer gets one text with a link to leave you a Google review. No awkward asking, and no $300/mo Podium contract. It's $39/mo.
-
-If you send me last month's customer list, I'll set it up and send the first batch for free so you can see the results.
-
-Worth a try?
-
+## 2. Housecall Pro shop
+Subject: {{business}} reviews
+Hi {{first_name}}, {{business}} has about {{reviews}} Google reviews and {{competitor}} has {{competitor_reviews}}. ReviewAsk connects to Housecall Pro and sends a Google review ask every time a job closes, with one day-3 reminder. $39/mo, cancel anytime, 7-day free trial. Worth a look?
 Nick
-ReviewAsk
 
-*(~95 words)*
-
----
-
-## 2. Dental / Salon / Med spa
-
-**Subject:** quick idea for {{business}}
-
-Hi {{first_name}},
-
-You see a lot of happy clients every week, but {{business}} has {{their_reviews}} Google reviews. Usually that's because nobody at the front desk has time to ask.
-
-ReviewAsk sends each client one short text or email after their appointment with a 1-tap link to your Google review page. Setup takes about 10 minutes, and it's $39/mo with no contract.
-
-Want me to set up a 14-day free trial so you can see how many new reviews come in?
-
+## 3. Any service business (no FSM detected) — Quick ask
+Subject: quick idea for {{business}}
+Hi {{first_name}}, most happy customers would leave a review — they just aren't asked at the right moment. ReviewAsk lets you send a one-tap Google review request from your phone right after a job (or upload your past customers and ask them all once), with one polite reminder. $39/mo, 7-day free trial. Want me to set it up?
 Nick
-ReviewAsk
-
-*(~85 words)*
-
----
-
-## 3. Real estate agents
-
-**Subject:** your past clients
-
-Hi {{first_name}},
-
-Most agents I talk to have dozens of happy past clients and only a handful of Google reviews. Sellers check those reviews before they pick an agent.
-
-ReviewAsk sends your past clients one friendly text or email with a direct link to review you on Google. After that, it asks automatically after every closing. It's $39/mo and you can cancel anytime.
-
-If you send me your past-client list, I'll run the first batch free. Open to a 10-minute call this week, or should I just set up the trial?
-
-Nick
-ReviewAsk
-
-*(~95 words)*
-
----
-
-## Follow-ups (same thread)
-**Day 3:** "Hi {{first_name}}, just bumping this. Happy to run a free batch to your last 20 customers so you can see if it works. — Nick"
-
-**Day 7:** "Last note from me. If reviews aren't a priority right now, no problem. If they ever are, reply 'reviews' and I'll set you up. — Nick"
