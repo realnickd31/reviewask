@@ -29,7 +29,7 @@ const faqs = [
   { q: "Is asking for reviews allowed by Google?", a: "Yes. Google permits businesses to ask customers for reviews. ReviewAsk sends the same request to every customer and never offers incentives or filters out unhappy customers, which Google prohibits." },
   { q: "Is there a contract?", a: "No. Billing is month-to-month (or annual if you prefer). You can cancel from Settings at any time, and you keep access until the end of the billing period." },
   { q: "How many requests can I send?", a: "The Starter plan includes 200 review requests per month for one location." },
-  { q: "Do you support text messages?", a: "Yes. Email works today, and SMS review requests are rolling out now from our verified toll-free number. Customers can reply STOP at any time to opt out." },
+  { q: "Do you support text messages?", a: "Yes. Email works today, and SMS review requests are rolling out now from our verified toll-free number. Customers can reply STOP at any time to opt out.", link: { href: "/sms", label: "How our texts and opt-in work" } },
   { q: "How does the free trial work?", a: "Every plan starts with a 7-day free trial. A card is required at checkout, and you won’t be charged until the trial ends. Cancel before then and you pay nothing." },
 ];
 const features = ["200 review requests per month", "Automatic requests after every job (Jobber, Housecall Pro)", "Quick ask for techs + paste from Excel/Sheets", "Day-3 follow-up reminders", "Status history & monthly proof", "Cancel anytime"];
@@ -114,7 +114,7 @@ export default async function Home() {
         <p className="mt-4 text-sm text-slate-600">Something else? <a href="mailto:support@getreviewask.com" className="font-medium text-navy-900 underline underline-offset-4">Contact support</a>.</p></div>
       <div className="divide-y divide-slate-200 border-y border-slate-200">{faqs.map((f) => <details key={f.q} className="group py-5">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium [&::-webkit-details-marker]:hidden">{f.q}<span className="text-slate-400 transition group-open:rotate-45">+</span></summary>
-        <p className="mt-3 pr-8 text-sm leading-relaxed text-slate-600">{f.a}</p></details>)}</div>
+        <p className="mt-3 pr-8 text-sm leading-relaxed text-slate-600">{f.a}{"link" in f && f.link ? <> <a href={f.link.href} className="underline">{f.link.label}</a>.</> : null}</p></details>)}</div>
     </div></section>
 
     <section className="bg-navy-950 text-white"><div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-16 sm:flex-row sm:items-center">

@@ -1,0 +1,11 @@
+import Legal from "@/components/Legal";
+export const metadata = { title: "SMS messaging & opt-in — ReviewAsk" };
+export default function Page() { return <Legal title="SMS Messaging & Opt-In">
+  <p>ReviewAsk helps home-service businesses (plumbers, cleaners, HVAC, landscapers, and more) ask their customers for a review after a job is done. This page explains how our text messages work.</p>
+  <h2>What we send</h2><p>After a business completes a job, ReviewAsk may send that customer a text on the business&apos;s behalf asking them to leave a review, plus at most one follow-up reminder. Messages identify the business, for example: &ldquo;Acme Plumbing via ReviewAsk: Thanks for choosing us! Mind leaving a quick review? [link] Reply STOP to opt out.&rdquo;</p>
+  <h2>Who gets texts</h2><p>Only customers who gave their mobile number to that business for the job. We never buy, rent, or share phone lists, and we don&apos;t send marketing texts.</p>
+  <h2>How consent is collected</h2><p>The business gets the customer&apos;s permission before ReviewAsk sends anything — either verbally when booking or during the job, or in writing (such as a booking form, estimate, or invoice). Businesses agree to our <a href="https://getreviewask.com/terms">Terms</a>, which require this consent before adding a customer.</p>
+  <h2>Frequency &amp; cost</h2><p>Message frequency varies (typically 1–2 messages per completed job). Message and data rates may apply.</p>
+  <h2>Opting out &amp; help</h2><p>Reply <strong>STOP</strong> at any time to stop texts — you&apos;ll get one confirmation and nothing more. Reply <strong>HELP</strong> for help, or email <a href="mailto:support@getreviewask.com">support@getreviewask.com</a>. Carriers are not liable for delayed or undelivered messages.</p>
+  <h2>Privacy</h2><p>Mobile numbers and opt-in information are never sold or shared with third parties for marketing. See our <a href="https://getreviewask.com/privacy">Privacy Policy</a> and <a href="https://getreviewask.com/terms">Terms of Service</a>.</p>
+</Legal>; }
