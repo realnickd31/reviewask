@@ -191,3 +191,10 @@
 - community_posts_ready.md refreshed: prices unchanged live; added HCP support, free tools URLs, founder note.
 - Data-only, no deploy. QA: 13 URLs 200, /dashboard 307 to login.
 - Totals: 810 prospects, 257 Hot, 646 w/ email, 168 audits, 44 touch-1 + 44 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.
+
+## Batch AN (~4:52 AM ET)
+- Audits AM (3): JHansen Cleaning (Orem UT) 14 @5.0, comps Mountain Window 190 / Good Neighbor 76 / Window Works 68, leader gap 176. Junk Heist (Goodyear AZ) 55 @5.0 confirmed in lpraudit GBP table; independents 972/356/299 so gap inflated, soft pitch with near peers (Desert Junk 66, Junk Departure 85). Sweep Techs (Rochester MN) 27 @4.8 (own-site Google summary), comp Dano's 81; single comp.
+- Drafts #45-47 (touch 1 + 2) in gtm/day1_email_drafts_batch3.md. Greetings Jaron/Edgar/Austin; Edgar is inferred from the email only.
+- Site: new /reviews-for-lawn-care guide (any-trade note, links to free tools), plus sitemap and footer. Commit 550c022, deploy dep-dbg5uh2vcj2c73b98d90 live, 200.
+- Discovery: +6 deduped (Rapha Plumbing Bertram TX 19 @5.0 Hot; Brayden's 63-84 conflict; Ecoscape low rating; A1Repairman unverified; Bob's Garage 379 and Ross HVAC 352-404 already leaders). Below the +15 target; Nextdoor/HCP angle is producing many dupes now.
+- Totals: 816 prospects, 258 Hot, 652 w/ email, 171 audits, 47 touch-1 + 47 touch-2 drafts. Sending still needs Nick's inbox + physical address + per-send OK.
