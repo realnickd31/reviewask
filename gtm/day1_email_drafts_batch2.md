@@ -158,7 +158,7 @@ ReviewAsk · [PHYSICAL ADDRESS] · Reply "no thanks" or unsubscribe: [UNSUBSCRIB
 ```
 Hi there,
 
-Saw Gilileo's Landscaping Service runs on Jobber. You're at 47 Google reviews (4.7), level with the #1-ranked landscaper on ContractorsRanked (Made In The Shade, 45). Franco's has 107, the most among Lakeland's independents.
+Saw Gilileo's Landscaping Service runs on Jobber. You're at 47 Google reviews (4.7), just ahead of Made In The Shade (45). Franco's has 107, the most among Lakeland's independents.
 
 Jobber's automatic review asks come with the $99/mo Marketing Suite. I built ReviewAsk to do only that part for $39/mo: when a job closes in Jobber, your customer gets a one-tap link to your Google review page, with one reminder on day 3. Email today; SMS is rolling out.
 
