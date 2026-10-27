@@ -791,3 +791,139 @@ To close it in 6 months: ~40 new reviews/mo ≈ 267 asks/mo at a 15% response ra
 **Sources:** https://transparentpoolservice.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=c33f304e21eadca6 | https://verifiedpoolpros.com/listing/gulfstream-pool-care-n-ft-myers-fl/
 
 **Notes:** Miromar Pools (about 220) is a pool builder and was left out. Exa shows 26 for Transparent; the widget shows 28.
+
+## Solar Pro Wash (Moncks Corner, SC)
+```
+Google Review Gap — Solar Pro Wash (Moncks Corner, "pressure washing Moncks Corner")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         18  
+#1 Pepper's Pressure Washing  600  5.0
+#2 Jeff's Exterior Washing  498  5.0
+#3 Palmetto Pressure Clean  23  4.8
+
+Gap to top-3 average: 356 reviews (gap to leader: 582)
+To close it in 6 months: ~97 new reviews/mo ≈ 647 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 18 Google reviews. Palmetto Pressure Clean has 23, so you're close to the top in Moncks Corner. But Jeff's and Pepper's both list Moncks Corner as a service area, and they show 498 and 600+.
+
+**Sources:** https://solarprowash.jobbersites.com | https://exa.ai/library/place/zxhhcjp7yn6 | https://jeffsexteriorwashing.com/testimonials/ | https://pepperspressurewashing.com/pressure-washing/moncks-corner
+
+**Notes:** The Jeff's and Pepper's counts come from their own websites. The only Google-listed local is Palmetto (23), so the gap to the local leader alone is small.
+
+## Parra Outdoor Services (Youngsville, NC)
+```
+Google Review Gap — Parra Outdoor Services (Youngsville, "lawn care Youngsville / Wake Forest")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         9  5.0
+#1 RC Lawn Care  68  4.9
+#2 Wake Forest Lawn Service  55  4.9
+#3 Parise Lawncare  38  5.0
+
+Gap to top-3 average: 45 reviews (gap to leader: 59)
+To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 9 Google reviews are all 5 stars. Wake Forest Lawn Service, on Zebulon Rd in Youngsville, has 55, and RC Lawn Care has 68. A season of asking every customer closes most of that.
+
+**Sources:** https://parraoutdoorservices.jobbersites.com | https://exa.ai/library/place/zqj763p6d30 | https://exa.ai/library/place/j54r1j5hgqg | https://exa.ai/library/places?q=e78f0b0be9389aca
+
+## B Tops Landscaping INC. (Montgomery, AL)
+```
+Google Review Gap — B Tops Landscaping INC. (Montgomery, "lawn care / landscaping Montgomery")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         14  4.2
+#1 Martinez Lawn Care  125  4.7
+#2 Red Bird Lawn Care  64  5.0
+#3 Douglas Professional Lawn Care  53  4.6
+
+Gap to top-3 average: 67 reviews (gap to leader: 111)
+To close it in 6 months: ~19 new reviews/mo ≈ 127 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Thirty years in Montgomery, but Google shows 14 to 19 reviews at about 4.3. Martinez has 125, and Red Bird has 64 at 5.0. Asking every happy customer is the quickest way to raise both the count and the average.
+
+**Sources:** https://btopslandscapinginc.jobbersites.com | https://www.expertise.com/home-improvement/landscaping/alabama/montgomery | https://linktoreview.com/local/al/montgomery/lawn-care | https://exa.ai/library/places?q=c30a139def502dc7
+
+**Notes:** Counts differ by source: 14 at 4.2 from the Jobber Sites widget, 19 at 4.4 from Expertise. Lead with the rating, and keep the tone careful.
+
+## PWS Janitorial (Clearwater, FL)
+```
+Google Review Gap — PWS Janitorial (Clearwater, "window cleaning Clearwater")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         12  
+#1 Clearwater Soft Wash Pros  26  5.0
+#2 Custer Window Cleaning  21  4.9
+#3 727 Excellent Exteriors  20  5.0
+
+Gap to top-3 average: 10 reviews (gap to leader: 14)
+To close it in 6 months: ~3 new reviews/mo ≈ 20 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Clearwater window cleaning is wide open. Custer leads with 21 Google reviews, and you have 12. About 10 more puts you at the top of the local results.
+
+**Sources:** https://pwsjanitorial.jobbersites.com | https://exa.ai/library/places?q=a6901140187ce3e7 | https://exa.ai/library/places?q=7b21655867f46267 | https://reviews.birdeye.com/custer-window-cleaning-166433307072685
+
+**Notes:** The gap is small. The pitch is getting to #1, not catching up.
+
+## Spiffy Brothers Pressure Washing (Raleigh, NC)
+```
+Google Review Gap — Spiffy Brothers Pressure Washing (Raleigh, "pressure washing Raleigh")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         49  
+#1 Dan O'Neal Power Washing  437  5.0
+#2 EZ Flow Window Cleaning & Pressure Washing  287  4.8
+#3 Wolf Worx Pressure Washing  168  5.0
+
+Gap to top-3 average: 248 reviews (gap to leader: 388)
+To close it in 6 months: ~65 new reviews/mo ≈ 434 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 49 Google reviews. Dan O'Neal has 437 and Wolf Worx has 168 in Raleigh. Most house-wash customers never get asked. Asking every one is how the leaders got there.
+
+**Sources:** https://spiffybrotherspressurewashing.jobbersites.com | https://exa.ai/library/places?q=96468c509c4fe0b3 | https://pressurewashinghunt.com/raleigh-durham-nc/
+
+**Notes:** pressurewashinghunt shows 415 for Dan O'Neal; Exa shows 437.
+
+## D&D Lawn Care of Cane Bay, LLC (Summerville, SC)
+```
+Google Review Gap — D&D Lawn Care of Cane Bay, LLC (Summerville, "lawn care Summerville")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         13  
+#1 Greenecoast Lawn Management  59  4.8
+#2 Palm & Oak Lawn Care  58  5.0
+#3 Augusta Lawn Care  28  4.7
+
+Gap to top-3 average: 35 reviews (gap to leader: 46)
+To close it in 6 months: ~8 new reviews/mo ≈ 54 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 13 Google reviews. Palm & Oak has 58 and Greenecoast has 59 in Summerville. That's about 45 reviews, which is very doable from a weekly route if every customer is asked.
+
+**Sources:** https://ddlawncareofcb.jobbersites.com | https://exa.ai/library/places?q=798c796eeccf0cef | https://snowlawn.net/sc/summerville/Greenecoa
+
+## Carolina Lawn Services (Rock Hill, SC)
+```
+Google Review Gap — Carolina Lawn Services (Rock Hill, "lawn care Rock Hill")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         10  
+#1 Hey Jude's Lawn Care  134  5.0
+#2 Palmetto Lawn Services  97  4.8
+#3 SarahCare Landscaping  33  5.0
+
+Gap to top-3 average: 78 reviews (gap to leader: 124)
+To close it in 6 months: ~21 new reviews/mo ≈ 140 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 10 Google reviews. Hey Jude's has 134 and Palmetto Lawn has 97 in Rock Hill. Even SarahCare, in third, has 33.
+
+**Sources:** https://carolinalawnservices.jobbersites.com (lead count). Rock Hill competitor counts come from the Ground Effects audit (same day, same sources).
+
+**Notes:** Reuses the Rock Hill comps from the Ground Effects audit.

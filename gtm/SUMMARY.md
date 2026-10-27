@@ -4,7 +4,7 @@
 |---|---|
 | icp-and-scoring.md | ICP, intent signals, disqualifiers, 0–100 rubric |
 | lead-sources-playbook.md | Jobber-user discovery (Coldlytics tech-detect, search operators, Nextdoor, Marketplace, community, Reddit, LinkedIn), review-gap method, displacement; compliance |
-| prospects_overnight.csv | **451 rows** (US only, deduped vs day1). 355 Jobber-confirmed publicly, 45 "maybe" (directory-only). 310 with public email. 149 Southeast. 128 Hot (≥85), 292 Warm (70–84). Rows 165–257 = Coldlytics expansion (+93, Jobber client-hub link on own site). Rows 258+ = Nextdoor pass (+71, Jobber client-hub link on their Nextdoor business page; 24 Southeast; 65 with email, of which 57 come from their Nextdoor listing rather than a website; review counts enriched for 33 via web mirrors → 18 newly Hot; 32 [BLOCKED], 6 not checked (no email)). Rows 329–400 are the Jobber Sites pass: +72 businesses whose website is a *.jobbersites.com site (38 Southeast, 68 with email from their own site). Review counts are unknown, so these score Warm at most (82 maximum) and none are Hot. Aristocrat Detailing was rescored to 81 Warm (141 reviews) and 1 Stop Roofing to 86 (51 reviews). |
+| prospects_overnight.csv | **451 rows** (US only, deduped vs day1). 355 Jobber-confirmed publicly, 45 "maybe" (directory-only). 310 with public email. 149 Southeast. 135 Hot (≥85), 334 Warm (70–84). Rows 165–257 = Coldlytics expansion (+93, Jobber client-hub link on own site). Rows 258+ = Nextdoor pass (+71, Jobber client-hub link on their Nextdoor business page; 24 Southeast; 65 with email, of which 57 come from their Nextdoor listing rather than a website; review counts enriched for 33 via web mirrors → 18 newly Hot; 32 [BLOCKED], 6 not checked (no email)). Rows 329–400 are the Jobber Sites pass: +72 businesses whose website is a *.jobbersites.com site (38 Southeast, 68 with email from their own site). Review counts are unknown, so these score Warm at most (82 maximum) and none are Hot. Aristocrat Detailing was rescored to 81 Warm (141 reviews) and 1 Stop Roofing to 86 (51 reviews). |
 | community_posts_ready.md | 3 value-first posts (Jobber Community, Facebook, Reddit), placeholder claims removed |
 | pitch-vs-jobber-marketing-suite.md | One-pager, short email, DM, LinkedIn note, objections |
 | outreach-sequences.md | 3-touch email (Jobber / review-gap / displacement) + 2-touch DMs |
@@ -34,3 +34,10 @@
 - Review-gap audits: 41 total. New: Daystar Exterior Cleaning, On Target Pressure Washing, Grasshopper Home, A & L Lawncare, TN Lawnsmiths, Bros Mow Landscape, Tolson Lawn Services, Transparent Pool Service. Their openers are updated in outreach_ready_top25.md and the CSV.
 - New page: https://getreviewask.com/tools/review-gap, a review-gap calculator that runs in the browser with no data capture. The 15% rate is labeled as an assumption. Linked from the Footer Guides column and the sitemap.
 - Skipped: Solar Pro Wash, Parra, B Tops, PWS, PV Repair, Spiffy, PoolFix. Not reached this pass.
+
+## Update 2026-10-27 ~3:15 AM ET
+- Totals: 501 rows · 135 Hot · 334 Warm · 359 with email.
+- **+50 new rows** (Jobber Sites pass 4, deduped by name, phone, email and subdomain): 42 Southeast (TN 10, GA 9, FL 7, NC 6, AL 6, SC 4), plus TX 5, VA 2, MD 1. 7 are new Hot with email, listed in outreach_ready_top25.md section M. Most new rows have no Google widget, so the count is [BLOCKED] and they score 82 (Warm). Enriching them from mirrors is the next lever.
+- **Review-gap audits: 48.** New: Solar Pro Wash, Parra Outdoor, B Tops Landscaping, PWS Janitorial, Spiffy Brothers, D&D Lawn Care of Cane Bay, Carolina Lawn Services.
+- Skipped: PoolFix (now about 150 reviews, so it leads Haines City and has no gap pitch) and PV Repair (its email is on a different domain, naplespremierpaversprotection.com; verify first).
+- Site: /tools/review-gap is now linked from the /for-jobber gap callout and the homepage compare section.

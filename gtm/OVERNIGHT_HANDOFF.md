@@ -21,7 +21,7 @@ Latest site commits: `b507d0e` adds a separate Guides column to the footer (depl
   - Rows 258 onward came from Nextdoor (71 rows). 57 of those emails come from the business's own Nextdoor listing, not a website.
   - Review counts for the new rows come from web mirror sites, not Google Maps. Re-check Maps before every send.
 - **`outreach_ready_top25.md`**: the top 25 Hot leads with audited review gaps, plus three appended sections of newly Hot leads that have email (12 + 10 + 8). 10 of them now carry openers from the review-gap audits.
-- **`audits/review-gap-audits.md/.csv`: 41 audits** (15 earlier, then 10 and 8 more on 2026-10-27).
+- **`audits/review-gap-audits.md/.csv`: 48 audits** (15 earlier, then 10 and 8 more on 2026-10-27).
 - **New pages:** https://getreviewask.com/birdeye-alternative (Birdeye shows no list price), a review-gap callout on /for-jobber, and https://getreviewask.com/podium-alternative (Podium pricing is sales-quoted, so the page says that rather than quoting a number).
 - **`community_posts_ready.md`**: three ready-to-paste posts for the Jobber Community, Facebook groups, and Reddit, with no invented claims.
 - Also ready: `pitch-vs-jobber-marketing-suite.md`, `outreach-sequences.md`, `outreach_email.md`, `dm_scripts.md`, `growth-system.md`, `lead-sources-playbook.md`, `icp-and-scoring.md`.
@@ -43,3 +43,10 @@ Latest site commits: `b507d0e` adds a separate Guides column to the footer (depl
 - Review-gap audits: 41 total. New: Daystar Exterior Cleaning, On Target Pressure Washing, Grasshopper Home, A & L Lawncare, TN Lawnsmiths, Bros Mow Landscape, Tolson Lawn Services, Transparent Pool Service. Their openers are updated in outreach_ready_top25.md and the CSV.
 - New page: https://getreviewask.com/tools/review-gap, a review-gap calculator that runs in the browser with no data capture. The 15% rate is labeled as an assumption. Linked from the Footer Guides column and the sitemap.
 - Skipped: Solar Pro Wash, Parra, B Tops, PWS, PV Repair, Spiffy, PoolFix. Not reached this pass.
+
+## Update 2026-10-27 ~3:15 AM ET
+- Totals: 501 rows · 135 Hot · 334 Warm · 359 with email.
+- **+50 new rows** (Jobber Sites pass 4, deduped by name, phone, email and subdomain): 42 Southeast (TN 10, GA 9, FL 7, NC 6, AL 6, SC 4), plus TX 5, VA 2, MD 1. 7 are new Hot with email, listed in outreach_ready_top25.md section M. Most new rows have no Google widget, so the count is [BLOCKED] and they score 82 (Warm). Enriching them from mirrors is the next lever.
+- **Review-gap audits: 48.** New: Solar Pro Wash, Parra Outdoor, B Tops Landscaping, PWS Janitorial, Spiffy Brothers, D&D Lawn Care of Cane Bay, Carolina Lawn Services.
+- Skipped: PoolFix (now about 150 reviews, so it leads Haines City and has no gap pitch) and PV Repair (its email is on a different domain, naplespremierpaversprotection.com; verify first).
+- Site: /tools/review-gap is now linked from the /for-jobber gap callout and the homepage compare section.

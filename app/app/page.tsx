@@ -117,7 +117,7 @@ export default async function Home() {
           <tr><th scope="row" className="p-4 font-medium">Works with Jobber</th><td className="p-4">Yes — connects to your account</td><td className="p-4">Yes — built in</td></tr>
           <tr><th scope="row" className="p-4 font-medium">Contract</th><td className="p-4">None, cancel anytime</td><td className="p-4">Per Jobber’s plan terms</td></tr>
         </tbody></table></div>
-      <p className="mt-4 text-sm text-slate-500">Want more than reviews? The Marketing Suite may be the right fit. <Link href="/compare/jobber-marketing-suite" className="font-medium text-navy-900 underline underline-offset-4">Read the full comparison</Link> or see <Link href="/for-jobber" className="font-medium text-navy-900 underline underline-offset-4">ReviewAsk for Jobber</Link>.</p>
+      <p className="mt-4 text-sm text-slate-500">Want more than reviews? The Marketing Suite may be the right fit. <Link href="/compare/jobber-marketing-suite" className="font-medium text-navy-900 underline underline-offset-4">Read the full comparison</Link> or see <Link href="/for-jobber" className="font-medium text-navy-900 underline underline-offset-4">ReviewAsk for Jobber</Link>. Curious how far behind your competitors you are? <Link href="/tools/review-gap" className="font-medium text-navy-900 underline underline-offset-4">Try the review gap calculator</Link>.</p>
     </div></section>
 
     <Pricing />
