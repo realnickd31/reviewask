@@ -3374,3 +3374,26 @@ To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate
 - Sources: https://exa.ai/library/places?q=21dfbb738b529f95 | https://www.contractorsranked.com/contractor/phoenixville-pa/landscaping-and-moore | https://www.contractorsranked.com/contractor/paoli-pa/naturescapes-landscape-specialists | https://www.contractorsranked.com/contractor/Wayne-PA/suburban-lawn-and-landscaping
 ### Straight Line Seamless Gutter Company (Negaunee, MI): SKIPPED
 - Own count conflicts (Exa 8 vs 11, Birdeye 17). Local gutter comps are tiny (Northwoods 6, ESB 8 at 4.5); Michigan Gutters (294) is not local. Comps too thin to audit honestly.
+
+## AM — 2026-10-27 (~4:45 AM ET)
+### JHansen Cleaning (Orem, UT)
+- Own: 14 Google @5.0.
+- Comps: Mountain Window Cleaning 190; Good Neighbor Exterior Cleaning 76; Window Works LLC 68
+- Gap to top-3 avg 97; leader gap 176; ~17 reviews/mo; ~114 asks/mo [SPEC].
+- Notes: Excluded Leave It Lovely (1,405, general cleaning), Glide (multi-market), MiNT/Squeegee Boys (multi-state brand). Leader gap large; opener uses the near peers.
+- Opener: Your 14 Google reviews are all 5 stars. In Orem, Window Works has 68 and Good Neighbor has 76. Those are the shops you're up against when someone searches window cleaning nearby.
+- Sources: https://exa.ai/library/place/4wfywkbqvwl | https://exa.ai/library/places?q=422dc00f956d7daf | https://exa.ai/library/place/1jkjqc10ctd
+### Junk Heist (Goodyear, AZ)
+- Own: 55 Google @5.0.
+- Comps: Az Junk Removal & Dumpsters 972; Premier Junk Movers 356; Drive Away Junk Removal 299
+- Gap to top-3 avg 487; leader gap 917; ~82 reviews/mo; ~547 asks/mo [SPEC].
+- Notes: Own 55 confirmed in the GBP table. Excluded Junk King (franchise), LoadUp (national), WM. Top independents are very large, so the gap is inflated; pitch time saved and the near peers only.
+- Opener: Your 55 Google reviews are all 5 stars, close behind Desert Junk Removal (66) and Junk Departure (85). Most of the bigger Goodyear haulers got there by asking after every pickup.
+- Sources: https://reports.lpraudit.com/arizona/goodyear/junk-removal/ (Google GBP table) | https://us.nextdoor.com/pages/junk-heist-goodyear-az/
+### Sweep Techs (Rochester, MN)
+- Own: 27 Google @4.8.
+- Comps: Dano's Chimney Sweep 81
+- Gap to top-1 avg 54; leader gap 54; ~9 reviews/mo; ~60 asks/mo [SPEC].
+- Notes: Own 27 from their site's Google summary; confirm on Maps. One clean local comp (Dano's); Thumbtack 19 excluded.
+- Opener: You're at 27 Google reviews after starting Sweep Techs recently. Dano's has 81 in Rochester at the same 4.8, so your rating already matches the established sweep.
+- Sources: https://sweeptechs.com/reviews (own Google summary) | https://exa.ai/library/place/xrhbp65z7v8 | https://nextdoor.com/pages/sweep-techs-rochester-mn/

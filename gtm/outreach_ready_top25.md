@@ -1901,3 +1901,8 @@ Left out: Mikes Lawn (4.1 rating), Call The Cavalry (same comps as Iggys), Trans
 ## AL — Hot audits, 2026-10-27 (~4:32 AM ET)
 - **Landscaping And Moore LLC (Wayne, PA)**, landscapingandmoore24@gmail.com. 36 reviews; leader gap 55; ~27 asks/mo [SPEC]. Opener: You're at 36 Google reviews (5.0), already ahead of Suburban Lawn and Landscaping in Wayne (28). Naturescapes in Paoli has 91, so about 55 more puts you at the top of the Main Line. Touch-1 draft: gtm/day1_email_drafts_batch3.md #44.
 - Straight Line Seamless Gutter (Negaunee, MI): skipped, comps too thin and own count conflicts.
+
+## AM — Hot audits + batch-3 drafts, 2026-10-27 (~4:45 AM ET)
+- **JHansen Cleaning (Orem, UT)**, jhansenwindowcleaning@gmail.com. 14 reviews; leader gap 176; ~114 asks/mo [SPEC]. Draft #45 in day1_email_drafts_batch3.md.
+- **Junk Heist (Goodyear, AZ)**, Edgarcazares981@gmail.com. 55 reviews; leader gap 917; ~547 asks/mo [SPEC] (soft pitch). Draft #46 in day1_email_drafts_batch3.md.
+- **Sweep Techs (Rochester, MN)**, austinsweeptechs@gmail.com. 27 reviews; leader gap 54; ~60 asks/mo [SPEC]. Draft #47 in day1_email_drafts_batch3.md.
