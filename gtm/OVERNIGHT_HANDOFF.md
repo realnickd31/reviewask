@@ -1,8 +1,10 @@
-# ReviewAsk: 60-second morning brief (updated ~4:45 AM ET, Tue Oct 27 2026)
+# ReviewAsk: 60-second morning brief (updated ~5:10 AM ET, Tue Oct 27 2026)
 
 **Nothing has been emailed, posted, DMed, submitted or bought.** Every outreach item is a draft waiting for your OK.
 
 **Overnight wrap status (~5:00 AM ET):** free discovery is used up (paid options in `gtm/PAID_DISCOVERY_OPTIONS.md`). 49 touch-1 + 49 touch-2 drafts are ready and need your OK per send. Jobber demo checklist is ready (`gtm/jobber-listing/DEMO_DAY_CHECKLIST.md`). SMS toll-free verification is still pending, so phone-only asks are Queued.
+
+**Key docs:** `gtm/SEND_DAY_RUNBOOK.md` · `gtm/jobber-listing/DEMO_DAY_CHECKLIST.md` · `gtm/PAID_DISCOVERY_OPTIONS.md` · `gtm/innovation/referral-program-draft.md` · `gtm/innovation/lead-magnet-review-gap-audit.md` · overview: `gtm/OVERNIGHT_DONE.md`
 
 ## Metrics
 | | |
@@ -189,3 +191,7 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - `gtm/SEND_DAY_RUNBOOK.md`: first-morning send checklist (prerequisites, 20–30/day cap, per-send checks, day-3 rule, log columns, file map). Linked from the brief.
 - Needs Nick's input: /terms names no legal entity. Not edited.
 - No code change and no deploy. The only TODO is a Jobber field-name check in `app/lib/jobber.ts`; it's not an overnight-safe change. QA: home, /guides and /sms return 200; unknown URLs return 404 with the friendly page. Nothing sent.
+
+## Batch ~5:10 AM ET (wrap)
+- Metrics re-counted from the files: 819 prospects, 259 Hot, 655 with email, 173 audits, 24+19+6 touch-1 and 24+19+6 touch-2. All match. Added the key-docs line to the brief and wrote `gtm/OVERNIGHT_DONE.md`.
+- Live: /, /guides, /sms and /pricing return 200, and the SMS wording reads "rolling out". Every footer and /guides link returns 200. No code change. Nothing sent.

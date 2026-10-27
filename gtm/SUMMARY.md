@@ -224,3 +224,4 @@
 - ~5:00 AM ET: Jobber demo-day checklist (gtm/jobber-listing/DEMO_DAY_CHECKLIST.md); a11y deploy 171dc83; QA 20/20 return 200. Nothing sent.
 - ~5:00 AM ET: referral ops brief; friendly 404 deployed (c706c41); final QA 28/28 return 200; wrap status line added. Nothing sent.
 - ~5:05 AM ET: SEND_DAY_RUNBOOK.md written and linked from the brief; /terms entity flagged for Nick; no deploy; QA OK. Nothing sent.
+- ~5:10 AM ET: wrap. Metrics verified against the files, brief links the key docs, OVERNIGHT_DONE.md written, live checks OK, no code. Nothing sent.
