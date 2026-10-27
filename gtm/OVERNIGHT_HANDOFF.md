@@ -79,3 +79,9 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Discovery (new angle: business websites whose privacy/terms pages or quote portals mention Jobber, plus Nextdoor Client Hub links): +12 rows, all with email. None scored Hot. Riptide (188), Pearce's (125+) and Giant/Shiny (53–55) are already strong. The rest are unverified.
 - Audits AI (+4): My Service Heroes (Conroe), Perennial Lawn (Parker CO), Tactical Landscape (Virginia Beach), Mikes Lawn Care (Louisville, 4.1 rating flag).
 - Totals: 789 prospects, 252 Hot, 625 with email, 164 audits.
+
+## Batch AJ (~4:09 AM ET)
+- Shipped consent/CAN-SPAM FAQ (commit d581888, deploy dep-dbg5ni4s728c73dfab0g live; key URLs 200). Link/meta/sitemap/robots scan clean; SMS copy already aligned.
+- AJ audits: iMow Lawns (Houston), Grow Roots (Katy), PV Repair & Cleaning (Naples). 167 audits total.
+- No discovery. Totals: 789 prospects, 252 Hot, 625 w/ email.
+- Flags: Grow Roots has a 2-star review (don't mention); iMow gap inflated (big metro); PV own count varies by source. Hot-with-clean-comps pipeline nearly exhausted (45 Hot+email unaudited, mostly flagged/weak comps/<5 reviews).

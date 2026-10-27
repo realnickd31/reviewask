@@ -1856,3 +1856,17 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AI. Mikes Lawn Care Service LLC (Louisville, KY)
 - Opener: You're at 17 Google reviews (4.1). In Louisville, A&D has 20 at 5.0 and David's 22 at 4.8. Asking every happy customer lifts your rating fastest.
 - Gap to top-3 avg 35; leader gap 97; ~40 asks/mo [SPEC]. Notes: FLAG: its 4.1 rating calls for a rating-recovery pitch. Clean Air Lawn Care (franchise) is excluded, as are Turf Pro and Gator (self-reported counts). David's full name wasn't given in the source.
+
+## AJ — Hot audits, 2026-10-27 (~4:20 AM ET)
+
+### AJ. iMow Lawns (Houston, TX)
+- Opener: You're at 32 Google reviews (4.7). Independent Houston crews like Lawn Trim have 42 and Nature Springs 55. Steady asks after every cut get you past both.
+- Gap to top-3 avg 94; leader gap 146; ~107 asks/mo [SPEC]. Notes: TruGreen (national) is excluded. In a huge metro the top 3 inflate the gap; the realistic targets are Lawn Trim (42) and Nature Springs (55). Alief shows 178 Google vs 59 Chamber; I used Google's 178.
+
+### AJ. Grow Roots (Katy, TX)
+- Opener: You're at 24 Google reviews (4.8). In Katy, Sunrise has 36 and Texas ForeverGreen 44. A couple of asks a week puts you on top by spring.
+- Gap to top-2 avg 16; leader gap 20; ~20 asks/mo [SPEC]. Notes: Own count shows 14–24 by snapshot; I used the newest, 24. JMAS Landscaping (62) is excluded pending the JMAS check, and Emerald Lawns (franchise) too. Only 2 comps. A visible 2-star review from 2025-08 should not be mentioned.
+
+### AJ. PV Repair & Cleaning (Naples, FL)
+- Opener: You're at 27 Google reviews (4.9). In Naples, Good Worx has 68 and Solid Pave 79.
+- Gap to top-3 avg 54; leader gap 68; ~60 asks/mo [SPEC]. Notes: Own count shows 19–34 by source; I used its Jobber site's 27. Kingsway (426), Vargas (192), DuraSeal (450+) and N&T (130+) are excluded as self-reported. Pelican Pro is multi-service and also on Jobber.

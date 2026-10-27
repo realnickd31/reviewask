@@ -3302,3 +3302,65 @@ To close it in 6 months: ~6 new reviews/mo ≈ 40 asks/mo at a 15% response rate
 **Sources:** https://exa.ai/library/places?q=3a5531411f1d9392 | https://exa.ai/library/place/9xmbzp0qn1d
 
 **Notes:** FLAG: its 4.1 rating calls for a rating-recovery pitch. Clean Air Lawn Care (franchise) is excluded, as are Turf Pro and Gator (self-reported counts). David's full name wasn't given in the source.
+
+
+## iMow Lawns (Houston, TX)
+```
+Google Review Gap — iMow Lawns (Houston, "lawn care Houston TX")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         32  4.7
+#1 Alief Lawn Care  178  5.0
+#2 Texas Castro Landscaping LLC  109  4.8
+#3 Cervantes Lawn and Landscaping Services  92  4.9
+
+Gap to top-3 average: 94 reviews (gap to leader: 146)
+To close it in 6 months: ~16 new reviews/mo ≈ 107 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 32 Google reviews (4.7). Independent Houston crews like Lawn Trim have 42 and Nature Springs 55. Steady asks after every cut get you past both.
+
+**Sources:** https://exa.ai/library/places?q=8912e0bc6e767bc5 | https://texas.twupro.com/houston/alief-lawn-care/ | https://exa.ai/library/place/2x9f37nry3j
+
+**Notes:** TruGreen (national) is excluded. In a huge metro the top 3 inflate the gap; the realistic targets are Lawn Trim (42) and Nature Springs (55). Alief shows 178 Google vs 59 Chamber; I used Google's 178.
+
+
+## Grow Roots (Katy, TX)
+```
+Google Review Gap — Grow Roots (Katy, "lawn care Katy TX")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         24  4.8
+#1 Texas ForeverGreen Landscaping  44  5.0
+#2 Sunrise Lawn Care  36  4.6
+
+Gap to top-2 average: 16 reviews (gap to leader: 20)
+To close it in 6 months: ~3 new reviews/mo ≈ 20 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 24 Google reviews (4.8). In Katy, Sunrise has 36 and Texas ForeverGreen 44. A couple of asks a week puts you on top by spring.
+
+**Sources:** https://texas.twupro.com/katy/grow-roots/ | https://exa.ai/library/places?q=bfcee3710fed324f
+
+**Notes:** Own count shows 14–24 by snapshot; I used the newest, 24. JMAS Landscaping (62) is excluded pending the JMAS check, and Emerald Lawns (franchise) too. Only 2 comps. A visible 2-star review from 2025-08 should not be mentioned.
+
+
+## PV Repair & Cleaning (Naples, FL)
+```
+Google Review Gap — PV Repair & Cleaning (Naples, "paver sealing pressure washing Naples FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         27  4.9
+#1 Pelican Pro Home Watch and Services  95  4.9
+#2 Solid Pave, LLC.  79  4.9
+#3 Good Worx Pressure Washing  68  4.9
+
+Gap to top-3 average: 54 reviews (gap to leader: 68)
+To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 27 Google reviews (4.9). In Naples, Good Worx has 68 and Solid Pave 79.
+
+**Sources:** https://exa.ai/library/places?q=74ce69881a175247 | https://pvrepaircleaning.jobbersites.com/ | https://exa.ai/library/place/zfpt23f99bn
+
+**Notes:** Own count shows 19–34 by source; I used its Jobber site's 27. Kingsway (426), Vargas (192), DuraSeal (450+) and N&T (130+) are excluded as self-reported. Pelican Pro is multi-service and also on Jobber.

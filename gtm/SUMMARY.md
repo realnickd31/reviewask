@@ -164,3 +164,9 @@
 - 4:00 AM ET: +27 Jobber Sites prospects (8 Hot). 6 AG audits bring the total to 155. CTA QA passed.
 - 4:02 AM ET: Enriched and rescored the new 27 (3 Hot). 5 AH audits bring the total to 160.
 - 4:06 AM ET: Signup/pricing microcopy and homepage free-tools links are live. +12 prospects (0 Hot). 4 AI audits bring the total to 164.
+
+## Batch AJ (~4:09 AM ET)
+- Shipped consent/CAN-SPAM FAQ (commit d581888, deploy dep-dbg5ni4s728c73dfab0g live; key URLs 200). Link/meta/sitemap/robots scan clean; SMS copy already aligned.
+- AJ audits: iMow Lawns (Houston), Grow Roots (Katy), PV Repair & Cleaning (Naples). 167 audits total.
+- No discovery. Totals: 789 prospects, 252 Hot, 625 w/ email.
+- Flags: Grow Roots has a 2-star review (don't mention); iMow gap inflated (big metro); PV own count varies by source. Hot-with-clean-comps pipeline nearly exhausted (45 Hot+email unaudited, mostly flagged/weak comps/<5 reviews).
