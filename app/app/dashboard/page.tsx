@@ -41,6 +41,13 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     {!active && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>
       <Link href="/onboarding?step=pay" className="btn-lime">Start free trial</Link></div>}
+    {active && rows.length === 0 && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
+      <p className="mt-1 text-sm text-slate-500">Requests go out by email today. Text messages are rolling out.</p>
+      <ol className="mt-4 space-y-3 text-sm">
+        <li className="flex gap-3"><span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${u.jobber_connected ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-navy-900 text-white"}`}>{u.jobber_connected ? "✓" : "1"}</span><div><p className="font-medium text-navy-900">Connect Jobber or Housecall Pro</p><p className="text-slate-500">{u.jobber_connected ? "Connected. Every finished job gets asked automatically." : <>Do this once and every finished job gets asked. <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect now</Link></>}</p></div></li>
+        <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first to see what customers get. Use <a href="#send" className="font-medium text-navy-900 underline underline-offset-4">Send one request</a> below or <Link href="/quick" className="font-medium text-navy-900 underline underline-offset-4">Quick ask</Link>.</p></div></li>
+        <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Paste recent customers from a spreadsheet to ask them too. <a href="#bulk" className="font-medium text-navy-900 underline underline-offset-4">Paste a spreadsheet</a></p></div></li>
+      </ol></section>}
     <section className="grid gap-3 sm:grid-cols-3">
       <Link href="/quick" className="rounded-lg border border-navy-900 bg-navy-900 p-5 text-white hover:opacity-95"><p className="text-lg font-semibold">Quick ask →</p><p className="mt-1 text-sm text-slate-200">Name + phone, tap Send. Built for techs on the phone.</p></Link>
       <a href="#bulk" className="rounded-lg border border-slate-200 bg-white p-5 hover:border-navy-900"><p className="text-lg font-semibold text-navy-900">Paste a spreadsheet</p><p className="mt-1 text-sm text-slate-500">Copy rows from Excel or Sheets, paste, send.</p></a>
@@ -53,7 +60,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     </section>
     <div className="h-1.5 rounded-full bg-slate-100"><div className="h-1.5 rounded-full bg-navy-900" style={{ width: `${pct}%` }} /></div>
     <div className="grid gap-6 md:grid-cols-2">
-      <section className="card"><h1 className="text-lg font-semibold">Send one request</h1>
+      <section className="card" id="send"><h1 className="text-lg font-semibold">Send one request</h1>
         <p className="mb-5 mt-1 text-sm text-slate-500">From <b>{u.business_name}</b> · day-3 follow-up included</p>
         <SendForm disabled={!active || used >= MONTHLY_QUOTA} /></section>
       <section className="card" id="bulk"><h2 className="text-lg font-semibold">Paste a spreadsheet</h2>

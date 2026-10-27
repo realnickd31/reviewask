@@ -1870,3 +1870,30 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AJ. PV Repair & Cleaning (Naples, FL)
 - Opener: You're at 27 Google reviews (4.9). In Naples, Good Worx has 68 and Solid Pave 79.
 - Gap to top-3 avg 54; leader gap 68; ~60 asks/mo [SPEC]. Notes: Own count shows 19–34 by source; I used its Jobber site's 27. Kingsway (426), Vargas (192), DuraSeal (450+) and N&T (130+) are excluded as self-reported. Pelican Pro is multi-service and also on Jobber.
+
+## AK — Day-1 expansion (drafts in gtm/day1_email_drafts_batch2.md), 2026-10-27 (~4:25 AM ET)
+DRAFT ONLY. Audited Hot leads with public email that weren't in the Day-1 queue. SE first, then national.
+
+| # | Business | City | Reviews | Gap to leader | Body | Week |
+|---|---|---|---|---|---|---|
+| 25 | Aaron’s Lawn Company | Canton, GA | 17 | 73 | audit figures | week 1 |
+| 26 | Lawn Barber | Foley, AL | 17 | 56 | audit figures | week 1 |
+| 27 | Johnson's Tree Service, LLC. | Bay Minette, AL | 14 | 90 | soft | week 1 |
+| 28 | Revolutionary Repair LLC | Huntsville, AL | 9 | 92 | audit figures | week 1 |
+| 29 | Willow Creek Landscape Maintenance LLC | Murfreesboro, TN | 22 | 137 | audit figures | week 2 (TN Lawnsmiths, Murfreesboro, is in week 1) |
+| 30 | Galloway Lawn and Landscape | Jacksonville, FL | 17 | 223 | soft | week 1 |
+| 31 | Lupinetti’s Lawn Care | Augusta, GA | 45 | 75 | audit figures | week 1 |
+| 32 | Gilileo's Landscaping Service | Lakeland, FL | 47 | 60 | audit figures | week 1 |
+| 33 | Millers Lawn LLC | Columbus, GA | 47 | 198 | audit figures | week 1 |
+| 34 | Youngs Pressure Washing Services LLC | Spartanburg, SC | 39 | 91 | audit figures | week 1 |
+| 35 | Iggys Landscaping LLC | Richmond, VA | 21 | 103 | soft | week 1 |
+| 36 | Los Hernandez Landscaping | North Fort Myers, FL | 30 | 103 | audit figures | week 1 |
+| 37 | Sarasota Lawn Care Services | Sarasota, FL | 29 | 146 | audit figures | week 1 |
+| 38 | Hurst Landscapes, Inc. | Raleigh, NC | 31 | 152 | audit figures | week 1 |
+| 39 | Epps Landscaping | Linton Hall, VA | 40 | 87 | soft | week 1 |
+| 40 | Pressure Wash Improvements | Charleston, WV | 12 | 67 | audit figures | week 1 |
+| 41 | Smith Brothers Landscaping | Walla Walla, WA | 7 | 78 | audit figures | week 1 |
+| 42 | Precision Handyman LLC | Noblesville, IN | 10 | 71 | audit figures | week 1 |
+| 43 | Pain In The Grass Lawn & Landscaping LLC | Huntertown, IN | 12 | 36 | audit figures | week 1 |
+
+Left out: Mikes Lawn (4.1 rating), Call The Cavalry (same comps as Iggys), Transparent Pool (same city as Los Hernandez), Roof Ninja (same city as Aaron's), the Warner Robins pair, leads with gaps over 300 or that already lead locally, and all skip-list leads.
