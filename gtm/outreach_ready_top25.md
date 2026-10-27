@@ -724,3 +724,73 @@ These counts come from each site's Google widget where one exists. Where there's
 - Site: https://millymilestrucking.jobbersites.com/
 - Reviews: 32 
 - Opener: Saw your Jobber site. You're at 32 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job.
+
+
+## N. Jobber Sites pass 4 enrichment (2026-10-27): newly Hot with email
+The counts come from web mirrors, not Google Maps directly. Re-check each one on Maps before sending.
+
+### N1. Top Tier Lawn Care & Landscaping — GA (score 97)
+- Email: toptierlawncare.landscaping@gmail.com · Phone: (678) 523-6326
+- Reviews: 2 (5.0) · source https://reviews.birdeye.com/top-tier-lawn-care-170476037256231
+- Maps re-check: https://www.google.com/maps/search/Top%20Tier%20Lawn%20Care%20%26%20Landscaping%20%20GA
+- Opener: Saw your Jobber site. You're at 2 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N2. J & K's Precision Lawn Care — Warner Robins, GA (score 97)
+- Email: precisionlawncarega@gmail.com · Phone: (478) 542-1887
+- Reviews: 22 (4.6) · source https://exa.ai/library/place/3wn12l44tdd · Weak source: the Exa listing is 'Precision Lawn Care' in Byron/Warner Robins. Another listing shows 3.0 from 2, so check on Maps.
+- Maps re-check: https://www.google.com/maps/search/J%20%26%20K%27s%20Precision%20Lawn%20Care%20Warner%20Robins%20GA
+- Opener: Saw your Jobber site. You're at 22 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N3. Thunder Services LLC — Orlando, FL (score 97)
+- Email: thunderservicesfl@gmail.com · Phone: (321) 215-5391
+- Reviews: 17 (5.0) · source https://exa.ai/library/place/jf21xzhpmzy
+- Maps re-check: https://www.google.com/maps/search/Thunder%20Services%20LLC%20Orlando%20FL
+- Opener: Saw your Jobber site. You're at 17 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N4. Coastal Handymen — Savannah, GA (score 97)
+- Email: carlos@stayheresav.org · Phone: (912) 650-3343
+- Reviews: 6 (5.0) · source https://contractorlink.pro/coastal-handymen
+- Maps re-check: https://www.google.com/maps/search/Coastal%20Handymen%20Savannah%20GA
+- Opener: Saw your Jobber site. You're at 6 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N5. Steve's Scapes — Knoxville, TN (score 97)
+- Email: steveslawnscapes@gmail.com · Phone: (865) 309-5359
+- Reviews: 5 (5.0) · source https://exa.ai/library/place/mcdtk94q19k
+- Maps re-check: https://www.google.com/maps/search/Steve%27s%20Scapes%20Knoxville%20TN
+- Opener: Saw your Jobber site. You're at 5 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N6. Maid for America — NC (score 92)
+- Email: contact@maidforamerica.com · Phone: (704) 904-8759
+- Reviews: 37 (4.9) · source https://maidforamerica.com/testimonials/
+- Maps re-check: https://www.google.com/maps/search/Maid%20for%20America%20%20NC
+- Opener: Saw your Jobber site. You're at 37 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N7. A Plus Exteriors — Lexington, SC (score 92)
+- Email: aplusexteriors107@gmail.com · Phone: (803) 563-7745
+- Reviews: 40 (5.0) · source https://aplusexteriorssc.com/
+- Maps re-check: https://www.google.com/maps/search/A%20Plus%20Exteriors%20Lexington%20SC
+- Opener: Saw your Jobber site. You're at 40 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N8. Texas Finest Lawn Care — Crosby, TX (score 92)
+- Email: jaimeseddy10@yahoo.com · Phone: (832) 367-2763
+- Reviews: 7 (5.0) · source https://www.contractorsranked.com/contractor/Dayton-TX/texas-finest-lawn-care
+- Maps re-check: https://www.google.com/maps/search/Texas%20Finest%20Lawn%20Care%20Crosby%20TX
+- Opener: Saw your Jobber site. You're at 7 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N9. Tactical Landscape Care — Virginia Beach, VA (score 92)
+- Email: tacticallandscape757@gmail.com · Phone: (757) 281-7993
+- Reviews: 6 (4.5) · source https://adolfolandscaping.com/business/tactical-landscape-care-va-235301/ · Weak source: a directory shows 4.5 from 6.
+- Maps re-check: https://www.google.com/maps/search/Tactical%20Landscape%20Care%20Virginia%20Beach%20VA
+- Opener: Saw your Jobber site. You're at 6 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N10. Georgia Softwash — Newnan, GA (score 86)
+- Email: teamgasw@georgiasoftwash.com · Phone: (678) 221-4412
+- Reviews: 66 (4.9) · source https://pressurewashingdir.com/georgia/chattahoochee/georgia-softwash · Weak source: a directory that says 'verified reviews'. Same phone number.
+- Maps re-check: https://www.google.com/maps/search/Georgia%20Softwash%20Newnan%20GA
+- Opener: Saw your Jobber site. You're at 66 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### N11. GreenLove Outdoor — Chattanooga, TN (score 86)
+- Email: greenloveoutdoor@gmail.com · Phone: (423) 800-4090
+- Reviews: 58 (5.0) · source https://snowlawn.net/tn/chattanooga/GreenLove
+- Maps re-check: https://www.google.com/maps/search/GreenLove%20Outdoor%20Chattanooga%20TN
+- Opener: Saw your Jobber site. You're at 58 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.

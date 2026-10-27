@@ -45,8 +45,15 @@ Latest site commits: `b507d0e` adds a separate Guides column to the footer (depl
 - Skipped: Solar Pro Wash, Parra, B Tops, PWS, PV Repair, Spiffy, PoolFix. Not reached this pass.
 
 ## Update 2026-10-27 ~3:15 AM ET
-- Totals: 501 rows · 135 Hot · 334 Warm · 359 with email.
+- Totals: 501 rows · 146 Hot · 322 Warm · 359 with email.
 - **+50 new rows** (Jobber Sites pass 4, deduped by name, phone, email and subdomain): 42 Southeast (TN 10, GA 9, FL 7, NC 6, AL 6, SC 4), plus TX 5, VA 2, MD 1. 7 are new Hot with email, listed in outreach_ready_top25.md section M. Most new rows have no Google widget, so the count is [BLOCKED] and they score 82 (Warm). Enriching them from mirrors is the next lever.
 - **Review-gap audits: 48.** New: Solar Pro Wash, Parra Outdoor, B Tops Landscaping, PWS Janitorial, Spiffy Brothers, D&D Lawn Care of Cane Bay, Carolina Lawn Services.
 - Skipped: PoolFix (now about 150 reviews, so it leads Haines City and has no gap pitch) and PV Repair (its email is on a different domain, naplespremierpaversprotection.com; verify first).
 - Site: /tools/review-gap is now linked from the /for-jobber gap callout and the homepage compare section.
+
+## Update 2026-10-27 ~3:45 AM ET: pass 4 enrichment
+- Totals: 501 rows · 146 Hot · 322 Warm · 359 with email · 48 audits.
+- Searched all 37 rows in the newest batch that had no review count. Found a Google count for 13. **11 are newly Hot with email** (outreach_ready_top25.md section N, with Maps re-check links): Steve's Scapes, Coastal Handymen, Thunder Services, J&K's Precision (weak source), Top Tier Lawn Care, Maid for America, A Plus Exteriors, Texas Finest, Tactical Landscape (weak source), Georgia Softwash (weak source), GreenLove Outdoor.
+- Flags: Pressure Wash Carolina has 634 reviews, so it is disqualified (score capped at 49). Taylor Made Lawncare (TX) has 121 reviews and stays Warm. Coastal Handymen's email is on a different domain (stayheresav.org).
+- 24 rows are still [BLOCKED]. They were searched, but only Yelp, Thumbtack or HomeAdvisor counts were found, or no listing at all. None were counted as Google reviews. They stay Warm at 82.
+- Stretch audits were not done this pass.
