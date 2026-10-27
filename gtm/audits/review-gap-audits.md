@@ -1788,3 +1788,106 @@ To close it in 6 months: ~18 new reviews/mo ≈ 120 asks/mo at a 15% response ra
 **Sources:** https://verovine.com/business-directory/coastal-pro-painting-llc/ (3 Google) | https://exa.ai/library/places?q=ceaad2eef921c659 | https://www.contractorsranked.com/contractor/vero-beach-fl/painted-frog
 
 **Notes:** floridapros shows 2 for Coastal Pro and verovine shows 3. Very low volume, so verify on Maps.
+
+
+## Happy Cleans It (Oldsmar, FL)
+```
+Google Review Gap — Happy Cleans It (Oldsmar, "pressure washing Oldsmar FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         83  4.9
+#1 Rolling Suds of Tampa Bay  247  4.9
+#2 Smith Surface Cleaning  16  4.8
+
+Gap to top-2 average: 49 reviews (gap to leader: 164)
+To close it in 6 months: ~9 new reviews/mo ≈ 60 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 83 Google reviews (4.9), the top independent washer in Oldsmar. The only one ahead is the Rolling Suds franchise at 247. A review ask after every Jobber job is how a local shop out-reviews a franchise.
+
+**Sources:** https://happypressurewashing.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=aa9e7010bc8a4f56 | https://picklocal.biz/b/rolling-suds-of-tampa-bay-oldsmar
+
+**Notes:** Rolling Suds is a franchise; picklocal shows 199 and Exa shows 247, so the higher figure is used. Nighthawk (3) is closed. Sola Pavers (79) is a paver installer and was left out.
+
+
+## Greener Concepts Landscaping LLC (Raleigh, NC)
+```
+Google Review Gap — Greener Concepts Landscaping LLC (Raleigh, "lawn care Raleigh NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         5  5.0
+#1 Triangle Lawn Care  429  4.9
+#2 Wake Pro Lawn Care  250  4.9
+#3 Ramirez General Landscaping  123  4.8
+
+Gap to top-3 average: 263 reviews (gap to leader: 424)
+To close it in 6 months: ~44 new reviews/mo ≈ 294 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 5 Google reviews (5.0). Raleigh's leaders have 120-430. Neighbor Lawn Care is at 31, the realistic first target, and asking after every mow gets you there in a few months.
+
+**Sources:** https://greenerconceptsnc.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=58487f37347263f6 | https://www.ratexyz.com/top/google/landscaping-lawn-care/in/united-states/raleigh
+
+**Notes:** Fairway Green (1,219+, lawn treatment) was left out. Triangle Lawn Care shows 342–429 depending on the mirror. This is a very competitive metro. Neighbor Lawn Care's 31 is from Exa.
+
+
+## Washburn Bros. Landscaping LLC (Oakland Park, FL)
+```
+Google Review Gap — Washburn Bros. Landscaping LLC (Oakland Park, "landscaping Oakland Park FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         15  5.0
+#1 Fort Lauderdale Landscaping Company  171  4.8
+#2 Liquid Lawn  98  4.8
+#3 Ponderosa Landscaping  92  4.7
+
+Gap to top-3 average: 106 reviews (gap to leader: 156)
+To close it in 6 months: ~18 new reviews/mo ≈ 120 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 15 Google reviews (5.0). Liquid Lawn (98) and Ponderosa (92) are the next tier around Oakland Park, and both rate lower than you. Asking after every Jobber visit closes the count gap.
+
+**Sources:** https://washburnbroslandscapingllc.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=48af90b30a7f9e8b | https://miamibusinesses.org/listing/ponderosa-landscaping
+
+**Notes:** The CSV category says Pressure Washing, but the name and comps are landscaping, so confirm the main service. Fort Lauderdale Landscaping shows 168–171.
+
+
+## Total Maintenance (GoodBird Landscaping) (Lake Worth Beach, FL)
+```
+Google Review Gap — Total Maintenance (GoodBird Landscaping) (Lake Worth Beach, "landscaping Lake Worth Beach FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         13  5.0
+#1 Hero's Pavers  22  5.0
+#2 Artscapes Outdoors  9  5.0
+#3 Mario Tree Services and Landscaping  7  4.9
+
+Gap to top-3 average: 0 reviews (gap to leader: 9)
+To close it in 6 months: ~0 new reviews/mo ≈ 0 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 13 Google reviews (5.0), already near the top in Lake Worth Beach, where most landscapers have under 10. A steady ask after every job makes you the clear #1.
+
+**Sources:** https://goodbird.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=c54f7bc4e058d1e2 | https://exa.ai/library/places?q=e8527d3d06c22ed6
+
+**Notes:** They're above the top-3 average, so the pitch is extending the lead. Hero's Pavers is hardscape. Outfront Landscaping (Lake Worth, count not shown) may be a bigger rival, so check Maps.
+
+
+## Los Hernandez Landscaping (North Fort Myers, FL)
+```
+Google Review Gap — Los Hernandez Landscaping (North Fort Myers, "landscaping tree service North Fort Myers FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         30  5.0
+#1 Advanced Landscaping Solutions LLC  133  5.0
+#2 Hudson's Tree Services  36  4.9
+
+Gap to top-2 average: 55 reviews (gap to leader: 103)
+To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at about 30 Google reviews (5.0), #2 in North Fort Myers. Advanced Landscaping Solutions has 133. Hurricane-season cleanups are the best time to ask, while customers are most grateful.
+
+**Sources:** https://snowlawn.net/fl/north-fort-myers/Los (30 Google) | https://north-fort-myers-fl.treeopsusa.com/tree-service | https://loshernandezlandscapingllc.com/
+
+**Notes:** WEAK/CONFLICTING own count (23–30). Competitor counts are from TreeOps (Google-ranked).

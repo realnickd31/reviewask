@@ -1242,7 +1242,7 @@ Counts come from web mirrors. Re-check on Maps before sending, especially entrie
 - Email: greenernc@outlook.com · Phone: (919) 235-5328
 - Google reviews: 5 (5.0). Source: https://exa.ai/library/place/815p22x93sj. 
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Greener+Concepts+Landscaping+LLC+Raleigh+NC
-- Opener: Saw your Jobber site. You're at 5 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 5 Google reviews (5.0). Raleigh's leaders have 120-430. Neighbor Lawn Care is at 31, the realistic first target, and asking after every mow gets you there in a few months.
 
 ### T2. Travis T Thurber — Pittsboro, NC (score 97)
 - Category: Lawn Care / Landscaping
@@ -1263,14 +1263,14 @@ Counts come from web mirrors. Re-check on Maps before sending, especially entrie
 - Email: washburnbroslandscaping95@gmail.com · Phone: (561) 232-9734
 - Google reviews: 15 (5.0). Source: https://floridapros.org/pro/north-lauderdale/washburn-bros-landscaping-llc/. 
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Washburn+Bros.+Landscaping+LLC+Oakland+Park+FL
-- Opener: Saw your Jobber site. You're at 15 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 15 Google reviews (5.0). Liquid Lawn (98) and Ponderosa (92) are the next tier around Oakland Park, and both rate lower than you. Asking after every Jobber visit closes the count gap.
 
 ### T5. Total Maintenance (GoodBird Landscaping) — Lake Worth Beach, FL (score 97)
 - Category: Lawn Care / Landscaping
 - Email: hello@goodbird.com · Phone: (561) 921-0064
 - Google reviews: 13 (5.0). Source: https://snowlawn.net/fl/delray-beach/GoodBird. 
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Total+Maintenance+%28GoodBird+Landscaping%29+Lake+Worth+Beach+FL
-- Opener: Saw your Jobber site. You're at 13 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 13 Google reviews (5.0), already near the top in Lake Worth Beach, where most landscapers have under 10. A steady ask after every job makes you the clear #1.
 
 ### T6. GRANDSCAPE OUTDOOR MANAGEMENT LLC — Palm Bay, FL (score 97)
 - Category: Lawn Care / Landscaping
@@ -1284,7 +1284,7 @@ Counts come from web mirrors. Re-check on Maps before sending, especially entrie
 - Email: michael@happyexteriorservices.com · Phone: (813) 528-2119
 - Google reviews: 83 (4.9). Source: https://www.trustindex.io/reviews/www.happycleansit.com. Thumbtack 20 was not counted.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Happy+Cleans+It+Oldsmar+FL
-- Opener: Saw your Jobber site. You're at 83 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 83 Google reviews (4.9), the top independent washer in Oldsmar. The only one ahead is the Rolling Suds franchise at 247. A review ask after every Jobber job is how a local shop out-reviews a franchise.
 
 ### T8. Byrd's Lawn and Landscape — Palm Bay, FL (score 86)
 - Category: Lawn Care / Landscaping
@@ -1508,7 +1508,7 @@ Counts come from Google mirrors, and the source is recorded for each one. WEAK m
 - Google reviews: 30 (5.0). Source: SnowLawn 30; TreeOps 23; us-info 25. WEAK/CONFLICTING, so verify on Maps.
 - Jobber: Client Hub link on their FB-mirror listing (glonstruct)
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Los+Hernandez+Landscaping+North+Fort+Myers+FL
-- Opener: Saw you take requests through Jobber. You're at about 30 Google reviews (5.0). I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at about 30 Google reviews (5.0), #2 in North Fort Myers. Advanced Landscaping Solutions has 133. Hurricane-season cleanups are the best time to ask, while customers are most grateful.
 
 Also newly Hot but **no email**: Brown Dog Landscaping, LLC (Moncks Corner SC, 32 Google per leadsmartinc; phone (843) 607-5448).
 

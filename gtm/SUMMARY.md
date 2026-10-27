@@ -124,3 +124,8 @@
 - **Site:** added a "Not ready yet? See how many Google reviews you are behind…" link to /tools/review-gap under the CTA on /birdeye-alternative, /podium-alternative, /nicejob-alternative, /compare/jobber-marketing-suite, /jobber-google-reviews and /housecall-pro-google-reviews. Deployed via the Render API (deploy dep-dbg523d9fdbs73cq4qkg) because auto-deploy did not fire. All 6 pages return 200 with the new link.
 - The Day-1 queue is unchanged (no hard disqualifiers found).
 - Totals: 750 rows / 249 Hot / 465 Warm / 586 with email / 91 audits. Nothing sent.
+
+## Update 2026-10-27 ~3:26 AM ET (Day-1 email drafts + 5 audits)
+- **`gtm/day1_email_drafts.md`:** 24 personalized drafts, one for each "Ready after Maps check" lead. Each has To, 2 subjects, a Touch-1 body (Sequence A, personalized with the lead's audit opener), [PHYSICAL ADDRESS] and [UNSUBSCRIBE LINK] placeholders, and notes (Maps link, flags, week, sources). The file is marked **DRAFT ONLY**: nothing goes out until Nick supplies a sending inbox and a physical address and OKs each send. No mailbox drafts were created.
+- **5 new audits:** Happy Cleans It (Oldsmar FL), Greener Concepts (Raleigh NC), Washburn Bros (Oakland Park FL), GoodBird/Total Maintenance (Lake Worth Beach FL, already ahead of the top-3 average) and Los Hernandez (North Fort Myers FL). 96 audits total.
+- Totals: 750 rows / 249 Hot / 465 Warm / 586 with email / 96 audits. Nothing sent.
