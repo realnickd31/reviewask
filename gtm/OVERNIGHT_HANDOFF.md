@@ -14,15 +14,15 @@ Every URL below returned HTTP 200 at ~2:05 AM ET:
 Latest site commits: `b507d0e` adds a separate Guides column to the footer (deployed via the Render API, live at 1:45 AM ET); `a56aaa5` is the homepage backlog section; `5bbd75c` added /nicejob-alternative, the HCP guide, and the sticky mobile CTA.
 
 ## 2. Marketing assets and prospects (all in `gtm/`)
-- **`prospects_overnight.csv`: 400 rows**, all US, with duplicates against day 1 removed.
+- **`prospects_overnight.csv`: 451 rows**, all US, with duplicates against day 1 removed.
   - 283 show Jobber publicly; 45 are "maybe", meaning only a tech-detection directory says they use Jobber.
-  - **261 have a public email.** 149 are in the Southeast. Rows 329–400 are Jobber Sites businesses. All 72 have been searched. 34 have review counts from mirrors, which made 15 Hot (14 with email, in sections J and K). 38 are [BLOCKED] with a reason given.
-  - **104 are Hot (score 85+) and 265 are Warm (70–84).** Aristocrat Detailing was rescored to Warm.
+  - **310 have a public email.** 149 are in the Southeast. Rows 329–400 are Jobber Sites businesses. All 72 have been searched. 34 have review counts from mirrors, which made 15 Hot (14 with email, in sections J and K). 38 are [BLOCKED] with a reason given.
+  - **104 are Hot (score 85+) and 316 are Warm (70–84).** Rows 401–451 are 51 new Jobber Sites businesses with review counts unknown, so they are Warm ([BLOCKED]). Aristocrat Detailing was rescored to Warm.
   - Rows 258 onward came from Nextdoor (71 rows). 57 of those emails come from the business's own Nextdoor listing, not a website.
   - Review counts for the new rows come from web mirror sites, not Google Maps. Re-check Maps before every send.
 - **`outreach_ready_top25.md`**: the top 25 Hot leads with audited review gaps, plus three appended sections of newly Hot leads that have email (12 + 10 + 8). 10 of them now carry openers from the review-gap audits.
 - **`audits/review-gap-audits.md/.csv`: 33 audits** (15 earlier, then 10 and 8 more on 2026-10-27).
-- **New page:** https://getreviewask.com/podium-alternative (Podium pricing is sales-quoted, so the page says that rather than quoting a number).
+- **New pages:** https://getreviewask.com/birdeye-alternative (Birdeye shows no list price), a review-gap callout on /for-jobber, and https://getreviewask.com/podium-alternative (Podium pricing is sales-quoted, so the page says that rather than quoting a number).
 - **`community_posts_ready.md`**: three ready-to-paste posts for the Jobber Community, Facebook groups, and Reddit, with no invented claims.
 - Also ready: `pitch-vs-jobber-marketing-suite.md`, `outreach-sequences.md`, `outreach_email.md`, `dm_scripts.md`, `growth-system.md`, `lead-sources-playbook.md`, `icp-and-scoring.md`.
 
