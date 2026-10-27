@@ -2,6 +2,8 @@
 
 **Nothing has been emailed, posted, DMed, submitted or bought.** Every outreach item is a draft waiting for your OK.
 
+**Overnight wrap status (~5:00 AM ET):** free discovery is used up (paid options in `gtm/PAID_DISCOVERY_OPTIONS.md`). 49 touch-1 + 49 touch-2 drafts are ready and need your OK per send. Jobber demo checklist is ready (`gtm/jobber-listing/DEMO_DAY_CHECKLIST.md`). SMS toll-free verification is still pending, so phone-only asks are Queued.
+
 ## Metrics
 | | |
 |---|---|
@@ -177,3 +179,8 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - Docs: `gtm/jobber-listing/DEMO_DAY_CHECKLIST.md`, the plan for the morning Jobber emails (prep, 10-min script, what works, what to say about SMS, limits, likely questions). No secrets in it. Nothing submitted, and Jobber not contacted.
 - Site (171dc83, dep-dbg6b129lscs73960fk0, live): added a "Skip to content" link and `id="main"` landmarks on every page. The 7 review-gap calculator inputs now have labels tied to them. Review-link input already labeled. No `<img>` tags to lazy-load. The trust lines on /pricing and /signup already name Jobber + HCP.
 - QA: 20 of 20 URLs return 200. Nothing sent.
+
+## Batch ~5:00 AM ET (2)
+- Referral: `gtm/innovation/referral-program-draft.md` is now an ops brief (offer, eligibility, manual Stripe-credit steps, abuse notes, DRAFT copy, 5 OKs needed). No code and no Stripe coupons or credits.
+- Site (c706c41, dep-dbg6cpom7kps73bi1kq0, live): a friendly 404 with links to home, pricing, /guides and the review-gap tool, plus noindex. Sitemap already lists all 25 public pages. Login and signup trial/SMS wording already matches.
+- QA: 28 of 28 return 200 on two clean rounds. There were brief 502s on 10 URLs right as the deploy switched over; they cleared within ~1 min. /dashboard, /quick and /settings redirect 307 to login. Nothing sent.

@@ -222,3 +222,4 @@
 - ~4:45 AM ET: SMS-honesty fix deployed (c7f20df); morning brief rewritten; QA 19/19 return 200. Nothing sent.
 - ~4:50 AM ET: compare-page drift fixes plus /guides links, Queued helper deployed (ee3559f); 5-min audit template in gtm/innovation/lead-magnet-review-gap-audit.md; QA 15/15 return 200. Nothing sent.
 - ~5:00 AM ET: Jobber demo-day checklist (gtm/jobber-listing/DEMO_DAY_CHECKLIST.md); a11y deploy 171dc83; QA 20/20 return 200. Nothing sent.
+- ~5:00 AM ET: referral ops brief; friendly 404 deployed (c706c41); final QA 28/28 return 200; wrap status line added. Nothing sent.
