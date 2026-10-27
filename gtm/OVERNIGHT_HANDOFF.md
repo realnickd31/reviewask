@@ -1,4 +1,4 @@
-# ReviewAsk: morning brief (updated ~3:42 AM ET, Tue Oct 27 2026)
+# ReviewAsk: morning brief (updated ~3:46 AM ET, Tue Oct 27 2026)
 
 **Nothing has been emailed, posted, DMed or submitted.** Everything below is a draft waiting for your approval.
 
@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | Prospects (`gtm/prospects_overnight.csv`) | 750 (249 Hot / 465 Warm / 586 with email) |
-| Review-gap audits (`gtm/audits/`) | 121 |
+| Review-gap audits (`gtm/audits/`) | 128 |
 | Day-1 queue (`gtm/outreach_ready_top25.md`, "Day-1 send queue") | 24 ready, 8 on hold |
 | Day-1 email drafts (`gtm/day1_email_drafts.md`) | 24 touch-1, DRAFT ONLY |
 | Day-1 touch-2 drafts (`gtm/day1_email_drafts_touch2.md`) | 24, DRAFT ONLY (Day 3, same thread) |
@@ -40,3 +40,9 @@ https://getreviewask.com: `/`, `/pricing`, `/for-jobber`, `/for-housecall-pro`, 
 - **New page live:** https://getreviewask.com/templates/review-request has 10 copy-paste text and email review-request templates for any field-service business, Google policy rules, a soft trial CTA and a link to the review gap calculator. It's in the footer Guides and the sitemap. Deployed (00a790c) and checked 200.
 - **QA:** /pricing still shows the price table. /housecall-pro-google-reviews and /jobber-google-reviews return 200.
 - **8 more audits (121 total):** section AB in outreach_ready_top25.md. Flags: J & K's and THE ART OF LAWN CARE share a market and comparison set, so stagger the sends. Sunrise Air's gap is very large (Lakeland HVAC), so pitch saving time. Applewood has only one comparable competitor.
+
+## ~3:46 AM ET updates
+- **Backlog callout (experiment #9):** a new "Ask last season's Jobber customers" box on /for-jobber. It covers exporting from Jobber, pasting or uploading the list, email asks with a day-3 follow-up, SMS rolling out, and the 200-a-month limit. It links to the trial and the templates page. The homepage backlog box (already live) now says "email" and "up to 200 a month" and links the templates. Deployed (b3d0a50).
+- **New tool live:** https://getreviewask.com/tools/review-link. It turns a Place ID into a direct Google review link in the browser, with no signup, and has a soft CTA. It's in the footer Guides and the sitemap.
+- **QA:** /tools/review-link, /for-jobber, /templates/review-request, /, /pricing and /housecall-pro-google-reviews all return 200. Both backlog boxes and the "See message templates" link show on the live pages.
+- **7 more audits (128 total):** section AC. Flags: Duplechain HVAC (huge Huntsville gap, pitch saving time), Tri-Star (4.4 rating), Johnson's Tree (own count 14 vs 17). I skipped Little Pickle HVAC because I only found weak competitor sources.

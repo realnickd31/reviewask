@@ -1668,3 +1668,34 @@ Palm Aire (4.2 rating, FLAG) and Youngs PW (WEAK comps) were also left out of th
 ### AB. Ez Projects Done Right (Tampa, FL)
 - Opener: You're at 41 Google reviews in Tampa. Phil's Handy Service has 164 and Tampa Works Handyman 230, both local independents.
 - Gap to top-2 average 156; leader gap 189; ~174 asks/mo [SPEC]. Notes: I excluded Mr. Handyman, Ace Handyman and The Handyman Company (franchises). Counts vary by source (Tampa Works 230–236, Phil's 164–185); I used the lower. Category is handyman/cleaning. Rating not captured.
+
+
+## AC. Audited 2026-10-27 ~3:44 AM ET (7 SE Hot)
+
+### AC. All Season Lawncare (Chattanooga, TN)
+- Opener: You're at 10 Google reviews (4.9) in Chattanooga. Local shops like Galloway's (114) and Gartman Earthworx (204) built theirs one job at a time.
+- Gap to top-3 avg 140; leader gap 194; ~160 asks/mo [SPEC]. Notes: I excluded LawnStarter, TruGreen and Lawn Doctor. Galloway's shows 114 (RatingsNearMe) vs 135 (Exa); I used 114. Nearer targets: Midtown Lawn Care (38) and Sweaty's (43).
+
+### AC. Coastal Handymen (Savannah, GA)
+- Opener: Your 6 Google reviews are all 5 stars. In Savannah, Matthew's Handyman has 27 and Georgia Handyman Experts 43, both within reach with a steady ask.
+- Gap to top-3 avg 59; leader gap 118; ~67 asks/mo [SPEC]. Notes: I excluded Ace Handyman and Mr. Handyman (franchises). Georgia Handyman Experts shows 43–52; I used 43.
+
+### AC. Revolutionary Repair LLC (Huntsville, AL)
+- Opener: Your 9 Google reviews are all 5 stars. Bama Handyman Solutions, also local and also 5.0, has 101 in Huntsville.
+- Gap to top-3 avg 71; leader gap 92; ~80 asks/mo [SPEC]. Notes: I excluded Mr. Handyman and Guthrie's Ace Handyman (franchises).
+
+### AC. Duplechain Heating and Air (Huntsville, AL)
+- Opener: You're at 10 Google reviews in Huntsville. Talent Heating and Air has 210 at 5.0, and Dynamic Air 655. Huntsville HVAC customers compare review counts.
+- Gap to top-3 avg 482; leader gap 645; ~540 asks/mo [SPEC]. Notes: Very large gap; pitch saving time rather than catching up. I excluded Aire Serv and One Hour (franchises) and Blake Brothers / Conditioned Air (multi-thousand). Rating not captured. Same city as Revolutionary Repair, but a different trade.
+
+### AC. Johnson's Tree Service, LLC. (Bay Minette, AL)
+- Opener: Your Google reviews are all 5 stars (14–17, depending on the listing). In Bay Minette, Womack's has 36 and R&K has 104.
+- Gap to top-2 avg 56; leader gap 90; ~67 asks/mo [SPEC]. Notes: Their own count varies slightly (14 vs 17); I used the lower in the math. Reviews mention the owner, Clint Johnson.
+
+### AC. Supreme Greens of SWFL (Naples, FL)
+- Opener: You're at 8 Google reviews in Naples. Bella Lawn Maintenance has 53 and Blue Collar Q 162.
+- Gap to top-2 avg 100; leader gap 154; ~114 asks/mo [SPEC]. Notes: I excluded Massey (national), Stahlman-England (irrigation, Birdeye) and Driftwood (garden center). Blue Collar Q's count comes from its own site. Rating not captured.
+
+### AC. Tri-Star Landscaping (Arrington, TN)
+- Opener: You're at 7 Google reviews in the Franklin/Arrington area. Creative Stone has 46, and Conley Lawn has 125 at 5.0. A steady ask after every job also lifts a rating fast.
+- Gap to top-3 avg 90; leader gap 118; ~100 asks/mo [SPEC]. Notes: LOW RATING (4.4) on few reviews. I excluded Moon Valley and Hewitt (nurseries/garden centers). Creative Stone shows 46–50; I used 46.

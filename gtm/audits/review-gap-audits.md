@@ -2405,3 +2405,148 @@ To close it in 6 months: ~26 new reviews/mo ≈ 174 asks/mo at a 15% response ra
 **Sources:** CSV/own Jobber site (41) | https://prosource.app/best-handyman-tampa-fl/ | https://www.expertise.com/home-improvement/handyman/florida/tampa
 
 **Notes:** I excluded Mr. Handyman, Ace Handyman and The Handyman Company (franchises). Counts vary by source (Tampa Works 230–236, Phil's 164–185); I used the lower. Category is handyman/cleaning. Rating not captured.
+
+
+## All Season Lawncare (Chattanooga, TN)
+```
+Google Review Gap — All Season Lawncare (Chattanooga, "lawn care Chattanooga TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         10  4.9
+#1 Gartman Earthworx LLC  204  5.0
+#2 Green Grounds Solutions  131  4.9
+#3 Galloway's Lawn Service  114  4.9
+
+Gap to top-3 average: 140 reviews (gap to leader: 194)
+To close it in 6 months: ~24 new reviews/mo ≈ 160 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 10 Google reviews (4.9) in Chattanooga. Local shops like Galloway's (114) and Gartman Earthworx (204) built theirs one job at a time.
+
+**Sources:** CSV/own Jobber site (10) | https://ratingsnearme.com/chattanooga-tn/landscaper-near-me | https://exa.ai/library/places?q=7a51f2d942c72478
+
+**Notes:** I excluded LawnStarter, TruGreen and Lawn Doctor. Galloway's shows 114 (RatingsNearMe) vs 135 (Exa); I used 114. Nearer targets: Midtown Lawn Care (38) and Sweaty's (43).
+
+
+## Coastal Handymen (Savannah, GA)
+```
+Google Review Gap — Coastal Handymen (Savannah, "handyman Savannah GA")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         6  5.0
+#1 Stud'd Mounts llc  124  4.9
+#2 Georgia Handyman Experts  43  4.9
+#3 Matthew's Handyman Services LLC  27  5.0
+
+Gap to top-3 average: 59 reviews (gap to leader: 118)
+To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 6 Google reviews are all 5 stars. In Savannah, Matthew's Handyman has 27 and Georgia Handyman Experts 43, both within reach with a steady ask.
+
+**Sources:** CSV/own Jobber site (6) | https://savannahtoprated.com/biz/stud-d-mounts-llc | https://profindr.com/top/handyman-savannah-ga
+
+**Notes:** I excluded Ace Handyman and Mr. Handyman (franchises). Georgia Handyman Experts shows 43–52; I used 43.
+
+
+## Revolutionary Repair LLC (Huntsville, AL)
+```
+Google Review Gap — Revolutionary Repair LLC (Huntsville, "handyman Huntsville AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         9  5.0
+#1 Bama Handyman Solutions LLC  101  5.0
+#2 By Faith Masonry and Home Repair  79  4.6
+#3 Handy Man Hunter LLC  58  4.6
+
+Gap to top-3 average: 71 reviews (gap to leader: 92)
+To close it in 6 months: ~12 new reviews/mo ≈ 80 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your 9 Google reviews are all 5 stars. Bama Handyman Solutions, also local and also 5.0, has 101 in Huntsville.
+
+**Sources:** CSV/own Jobber site (9; LPRAudit also shows 9) | https://reports.lpraudit.com/alabama/huntsville/handyman/
+
+**Notes:** I excluded Mr. Handyman and Guthrie's Ace Handyman (franchises).
+
+
+## Duplechain Heating and Air (Huntsville, AL)
+```
+Google Review Gap — Duplechain Heating and Air (Huntsville, "HVAC Huntsville AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         10  n/a
+#1 Dynamic Air Climate Solutions, LLC  655  5.0
+#2 Garrison & Garrison  611  4.9
+#3 Talent Heating and Air Conditioning  210  5.0
+
+Gap to top-3 average: 482 reviews (gap to leader: 645)
+To close it in 6 months: ~81 new reviews/mo ≈ 540 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 10 Google reviews in Huntsville. Talent Heating and Air has 210 at 5.0, and Dynamic Air 655. Huntsville HVAC customers compare review counts.
+
+**Sources:** CSV/own Jobber site (10) | https://serviceagent.ai/directory/alabama/huntsville/hvac/ | https://homeownerhenry.com/hvac/alabama/huntsville-al
+
+**Notes:** Very large gap; pitch saving time rather than catching up. I excluded Aire Serv and One Hour (franchises) and Blake Brothers / Conditioned Air (multi-thousand). Rating not captured. Same city as Revolutionary Repair, but a different trade.
+
+
+## Johnson's Tree Service, LLC. (Bay Minette, AL)
+```
+Google Review Gap — Johnson's Tree Service, LLC. (Bay Minette, "tree service Bay Minette AL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         14  5.0
+#1 R&K Tree Service and Landscaping  104  5.0
+#2 Womack's Tree Service  36  4.8
+
+Gap to top-2 average: 56 reviews (gap to leader: 90)
+To close it in 6 months: ~10 new reviews/mo ≈ 67 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Your Google reviews are all 5 stars (14–17, depending on the listing). In Bay Minette, Womack's has 36 and R&K has 104.
+
+**Sources:** CSV/own Jobber site (14) | https://exa.ai/library/places?q=1702ad8193cc4800 (17) | https://exa.ai/library/place/pgps985967y | https://exa.ai/library/place/97v92s2qmb4
+
+**Notes:** Their own count varies slightly (14 vs 17); I used the lower in the math. Reviews mention the owner, Clint Johnson.
+
+
+## Supreme Greens of SWFL (Naples, FL)
+```
+Google Review Gap — Supreme Greens of SWFL (Naples, "lawn care Naples FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         8  n/a
+#1 Blue Collar Q  162  4.8
+#2 Bella Lawn Maintenance  53  4.6
+
+Gap to top-2 average: 100 reviews (gap to leader: 154)
+To close it in 6 months: ~17 new reviews/mo ≈ 114 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 8 Google reviews in Naples. Bella Lawn Maintenance has 53 and Blue Collar Q 162.
+
+**Sources:** CSV/own Jobber site (8) | https://bluecollarq.net/locations/naples | https://operator.fyi/landscaping/naples/
+
+**Notes:** I excluded Massey (national), Stahlman-England (irrigation, Birdeye) and Driftwood (garden center). Blue Collar Q's count comes from its own site. Rating not captured.
+
+
+## Tri-Star Landscaping (Arrington, TN)
+```
+Google Review Gap — Tri-Star Landscaping (Arrington, "lawn care landscaping Franklin TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         7  4.4
+#1 Conley Lawn and Landscape  125  5.0
+#2 LawnValue  119  4.9
+#3 Creative Stone Landscaping LLC  46  4.8
+
+Gap to top-3 average: 90 reviews (gap to leader: 118)
+To close it in 6 months: ~15 new reviews/mo ≈ 100 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 7 Google reviews in the Franklin/Arrington area. Creative Stone has 46, and Conley Lawn has 125 at 5.0. A steady ask after every job also lifts a rating fast.
+
+**Sources:** CSV/own Jobber site (7, 4.4) | https://exa.ai/library/places?q=8fde330883a50bd8 | https://www.contractorsranked.com/contractor/franklin-tn/creative-stone-landscaping-llc
+
+**Notes:** LOW RATING (4.4) on few reviews. I excluded Moon Valley and Hewitt (nurseries/garden centers). Creative Stone shows 46–50; I used 46.

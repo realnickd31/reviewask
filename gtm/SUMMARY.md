@@ -150,3 +150,7 @@
 ## Update 2026-10-27 ~3:42 AM ET
 - Shipped /templates/review-request (10 SMS/email templates, no email gate), added to footer and sitemap, deployed and verified 200.
 - 8 audits: Willow Creek (TN), J & K's (GA), THE ART OF LAWN CARE (GA), Lawn Barber (AL), Southeast Mobile Wash (AL), Sunrise Air (FL), Applewood (SC), Ez Projects (FL). 121 total. Nothing sent.
+
+## Update 2026-10-27 ~3:46 AM ET
+- /for-jobber backlog callout plus homepage backlog copy accuracy (email, SMS rolling out, 200 a month). Shipped the /tools/review-link generator (footer and sitemap). Deployed b3d0a50; new URLs verified 200.
+- 7 audits: All Season Lawncare (TN), Coastal Handymen (GA), Revolutionary Repair (AL), Duplechain HVAC (AL), Johnson's Tree (AL), Supreme Greens (FL), Tri-Star (TN). 128 total. Nothing sent.
