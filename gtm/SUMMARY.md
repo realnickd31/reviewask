@@ -89,8 +89,15 @@
 - +5 audits (section S): True Landscape, Aaron's Lawn, Acosta, Millers Lawn, Hurst.
 - Totals: 671 rows · 219 Hot · 417 Warm · 516 with email · 74 audits.
 
-## Update 2026-10-27 ~7:15 AM ET (pass 8)
+## Update 2026-10-27 ~2:50 AM ET (pass 8)
 - +58 new Jobber Sites prospects (FL/NC/SC/TN/AL/VA/TX/AR/OK). 16 have counts from the site's own Google widget; the other 42 are [BLOCKED].
 - 15 newly Hot with email → outreach section U. Patriot Edge (AR) is Hot but has no email.
 - Totals: 729 rows / 235 Hot / 459 Warm / 571 with email / 74 audits. Nothing sent.
 - Discovery through site: searches is getting thin. Most results are now repeats.
+
+## Update 2026-10-27 ~3:10 AM ET (pass 8 enrichment + audits)
+- Searched all 42 [BLOCKED] pass-8 rows for a Google count. Found 14 counts (the source and any WEAK flag are recorded in why_fit). The other 28 are still [BLOCKED]: they have no Google listing, or only Yelp/HomeAdvisor/Thumbtack/Nextdoor, which don't count. Each row notes what the search found.
+- 10 newly Hot with email → outreach section V.
+- Flags: JADE Landscape is 1.0 from 2 reviews (score capped at 60). Water Works (AL) is rated ~3.7–3.9. Danny's Landscaping (TX) has Yelp complaints about paid work left unfinished. Pure Paint Florida has a Networx complaint.
+- Audited the 4 leftover section S Hot leads (Green Space, Genesis Lawns, C&R Rubbish, A&C Fencing) and updated their openers.
+- Totals: 729 rows / 245 Hot / 448 Warm / 571 with email / 78 audits. Nothing sent. Task C (more discovery) was skipped this pass.

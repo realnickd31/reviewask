@@ -1435,3 +1435,86 @@ To close it in 6 months: ~26 new reviews/mo ≈ 174 asks/mo at a 15% response ra
 **Sources:** https://hurstlandscapesinc.jobbersites.com (own Google widget) | https://www.trianglelandscapers.com/landscapers-in/raleigh-nc/dreamscapes-raleigh-nc | https://exa.ai/library/places?q=8cb3878a1ba8dfbc
 
 **Notes:** Left out: Southern Turf (artificial grass) and GreenVista (312+, a self-reported count).
+
+
+## Green Space Landscaping & Lawn Care LLC (Melbourne, FL)
+```
+Google Review Gap — Green Space Landscaping & Lawn Care LLC (Melbourne, "lawn care Melbourne FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         32  —
+#1 Evergreen Lawn & Pest Control  207  4.8
+#2 Ecor Lawn Spray & Pest Control  112  4.6
+#3 Tropic Greenery  91  4.8
+
+Gap to top-3 average: 105 reviews (gap to leader: 175)
+To close it in 6 months: ~18 new reviews/mo ≈ 120 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 32 Google reviews. Evergreen has 207 in Melbourne and Tropic Greenery has 91. Asking after every Jobber visit closes that gap without extra work.
+
+**Sources:** https://greenspace.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=e72940fd8085b33f
+
+**Notes:** TruGreen (877, a franchise) was left out.
+
+
+## Genesis Lawns LLC (Melbourne, FL)
+```
+Google Review Gap — Genesis Lawns LLC (Melbourne, "lawn care Melbourne FL")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         75  4.7
+#1 Evergreen Lawn & Pest Control  207  4.8
+#2 Ecor Lawn Spray & Pest Control  112  4.6
+#3 Tropic Greenery  91  4.8
+
+Gap to top-3 average: 62 reviews (gap to leader: 132)
+To close it in 6 months: ~11 new reviews/mo ≈ 74 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 75 Google reviews (4.7). Tropic Greenery has 91 and Ecor has 112. About 11 more reviews a month and you pass both by spring.
+
+**Sources:** https://genesislawnsllc.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=e72940fd8085b33f
+
+**Notes:** TruGreen (877, a franchise) was left out. Same market as Green Space (S8), so don't pitch both the same week.
+
+
+## C&R Rubbish and Junk Removal LLC (Winston-Salem, NC)
+```
+Google Review Gap — C&R Rubbish and Junk Removal LLC (Winston-Salem, "junk removal Winston-Salem NC")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         30  —
+#1 Junk King  523  4.8
+#2 LoadUp  413  4.9
+#3 Piedmont Disposal  80  4.9
+
+Gap to top-3 average: 309 reviews (gap to leader: 493)
+To close it in 6 months: ~52 new reviews/mo ≈ 347 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** You're at 30 Google reviews. The national junk franchises in Winston-Salem have 400-500+ each. Local Piedmont Disposal is at 80, which is the realistic first target.
+
+**Sources:** https://crrubbishandjunkremoval.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=ea21bac77129dd89
+
+**Notes:** Junk King and LoadUp are national franchises. Bin There Dump That (305) and redbox+ (175) are dumpster rental and were left out. This is a competitive market.
+
+
+## A&C Fencing of TN LLC (Cookeville, TN)
+```
+Google Review Gap — A&C Fencing of TN LLC (Cookeville, "fence company Cookeville TN")
+Checked 2026-10-27. Counts change, so verify on Maps.
+
+            Reviews  Rating
+You         4  —
+#1 Putnam County Fencing  25  4.1
+#2 Security Fence, Inc.  24  4.0
+
+Gap to top-2 average: 21 reviews (gap to leader: 21)
+To close it in 6 months: ~4 new reviews/mo ≈ 27 asks/mo at a 15% response rate [SPEC]
+```
+**Opener:** Cookeville's fence companies are all under 30 Google reviews, and the leaders sit at about 4.0. A few reviews a month would make you the top-rated, most-reviewed fence company in town.
+
+**Sources:** https://ancfencingoftnllc.jobbersites.com (own Google widget) | https://exa.ai/library/places?q=eed1f1b19801f38f | https://www.contractorsranked.com/contractor/Cookeville-TN/putnam-county-fencing
+
+**Notes:** The site widget shows 4, but fenceanddeckguide shows 15 (5.0) and Growcycle shows 11 (4.7), so re-check on Maps. Competitor counts also vary across directories (Putnam 12–25, Security 14–24).

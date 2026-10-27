@@ -1182,7 +1182,7 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: ancfencing@yahoo.com · Phone: (931) 239-8028
 - Google reviews: 4. Source: site widget, https://ancfencingoftnllc.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=A%26C+Fencing+of+TN+LLC+Cookeville+TN
-- Opener: Saw your Jobber site. You're at 4 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: Cookeville's fence companies are all under 30 Google reviews, and the leaders sit at about 4.0. A few reviews a month would make you the top-rated, most-reviewed fence company in town.
 
 ### S5. Acosta Property Maintenance LLC — Florence, SC (score 97)
 - Category: Lawn Care / Landscaping
@@ -1203,14 +1203,14 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: crjunkandrubbish@gmail.com · Phone: (336) 257-4473
 - Google reviews: 30. Source: site widget, https://crrubbishandjunkremoval.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=C%26R+Rubbish+and+Junk+Removal+LLC+Winston-Salem+NC
-- Opener: Saw your Jobber site. You're at 30 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 30 Google reviews. The national junk franchises in Winston-Salem have 400-500+ each. Local Piedmont Disposal is at 80, which is the realistic first target.
 
 ### S8. Green Space Landscaping & Lawn Care LLC — Melbourne, FL (score 92)
 - Category: Lawn Care / Landscaping
 - Email: aidan.greenspace@gmail.com · Phone: (321) 252-9574
 - Google reviews: 32. Source: site widget, https://greenspace.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Green+Space+Landscaping+%26+Lawn+Care+LLC+Melbourne+FL
-- Opener: Saw your Jobber site. You're at 32 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 32 Google reviews. Evergreen has 207 in Melbourne and Tropic Greenery has 91. Asking after every Jobber visit closes that gap without extra work.
 
 ### S9. Hurst Landscapes, Inc. — Raleigh, NC (score 92)
 - Category: Lawn Care / Landscaping
@@ -1224,7 +1224,7 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Email: neil@genesislawns.com · Phone: (321) 414-9666
 - Google reviews: 75 (4.7). Source: site widget, https://genesislawnsllc.jobbersites.com/.
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=Genesis+Lawns+LLC+Melbourne+FL
-- Opener: Saw your Jobber site. You're at 75 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+- Opener: You're at 75 Google reviews (4.7). Tropic Greenery has 91 and Ecor has 112. About 11 more reviews a month and you pass both by spring.
 
 ### S11. COOLTECH Refrigeration Heating and Cooling LLC — Auburn, WA (score 92)
 - Category: HVAC
@@ -1415,3 +1415,77 @@ All counts come from the Google widget on each business's own Jobber Sites page.
 - Google reviews: 32 (4.7). Source: site widget, https://imowlawns.jobbersites.com/
 - Maps re-check: https://www.google.com/maps/search/?api=1&query=iMow+Lawns+Houston+TX
 - Opener: Saw your Jobber site. You're at 32 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+
+## V. Pass 8 enrichment (2026-10-27): newly Hot with email
+Counts come from Google mirrors, and the source is recorded for each one. WEAK means the count is from an aggregator; re-check on Maps before sending.
+
+### V1. Sunrise Air Services — Lakeland, FL (score 97)
+- Category: HVAC
+- Email: sunriseair863@gmail.com · Phone: (863) 430-2202
+- Google reviews: 18 (5.0). Source: hvacservice
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Sunrise+Air+Services+Lakeland+FL
+- Opener: Saw your Jobber site. You're at 18 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V2. Coastal Pro Painting LLC — Vero Beach, FL (score 97)
+- Category: Painting
+- Email: coastalpropaint@outlook.com · Phone: (772) 321-6590
+- Google reviews: 3 (5.0). Source: verovine
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Coastal+Pro+Painting+LLC+Vero+Beach+FL
+- Opener: Saw your Jobber site. You're at 3 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V3. Robles Flooring & Painting Inc. — Wake Forest, NC (score 97)
+- Category: Painting
+- Email: roblesflooringpainting@gmail.com · Phone: (919) 594-9192
+- Google reviews: 6 (5.0). Source: Birdeye + Exa place listing, 6 reviews (5
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Robles+Flooring+%26+Painting+Inc.+Wake+Forest+NC
+- Opener: Saw your Jobber site. You're at 6 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V4. FOUNDATION X WORKS / BACKYARD BOYS CUSTOM CONSTRUCTION — Franklin, TN (score 97)
+- Category: Handyman / Construction
+- Email: jasonbackyardboys@gmail.com · Phone: (615) 970-2226
+- Google reviews: 6 (5.0). Source: business's own site (backyardboysconstruction
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=FOUNDATION+X+WORKS+%2F+BACKYARD+BOYS+CUSTOM+CONSTRUCTION+Franklin+TN
+- Opener: Saw your Jobber site. You're at 6 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V5. Rosebud Landscape & Design — Riverview, FL (score 97)
+- Category: Lawn Care / Landscaping
+- Email: rosebudlandscapeanddesign@gmail.com · Phone: (813) 455-5271
+- Google reviews: 4 (5.0). Source: one directory aggregator shows 4 reviews (5
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Rosebud+Landscape+%26+Design+Riverview+FL
+- Opener: Saw your Jobber site. You're at 4 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V6. Johnson's Tree Service, LLC. — Bay Minette, AL (score 97)
+- Category: Tree Care
+- Email: johnsonstreesvcllc@gmail.com · Phone: (251) 424-5226
+- Google reviews: 14 (5.0). Source: Exa place listing (Google-derived): 14 reviews (5
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Johnson%27s+Tree+Service%2C+LLC.+Bay+Minette+AL
+- Opener: Saw your Jobber site. You're at 14 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V7. Little Pickle Heating and Air — Tobaccoville, NC (score 97)
+- Category: HVAC
+- Email: picklehvac@gmail.com · Phone: 336-287-2921 336-575-3108
+- Google reviews: 19 (5.0). Source: hvac-usa
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Little+Pickle+Heating+and+Air+Tobaccoville+NC
+- Opener: Saw your Jobber site. You're at 19 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V8. 1st Sergeant F.R.O.G.G.Y. Handyman Service — Hoover, AL (score 92)
+- Category: Handyman
+- Email: derrick@1stsergeantfroggyhandymanservice.com · Phone: (205) 931-5617
+- Google reviews: 41 (5.0). Source: contractorsranked
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=1st+Sergeant+F.R.O.G.G.Y.+Handyman+Service+Hoover+AL
+- Opener: Saw your Jobber site. You're at 41 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V9. Pure Paint Florida — Brooksville, FL (score 86)
+- Category: Painting
+- Email: info@purepaintflorida.com · Phone: (352) 933-5905
+- Google reviews: 51 (4.6). Source: verygoodpainters
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Pure+Paint+Florida+Brooksville+FL
+- Opener: Saw your Jobber site. You're at 51 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
+
+### V10. Knock on Wood LLC — Etowah, NC (score 86)
+- Category: Tree Care
+- Email: nknockonwoodwnc@gmail.com · Phone: 
+- Google reviews: 68 (5.0). Source: contractorsranked
+- Maps re-check: https://www.google.com/maps/search/?api=1&query=Knock+on+Wood+LLC+Etowah+NC
+- Opener: Saw your Jobber site. You're at 68 Google reviews. I built a $39/mo tool that asks every customer for a review automatically after each Jobber job, so the count keeps growing without anyone remembering to ask.
