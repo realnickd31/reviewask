@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import { db, isSuppressed, unsubscribeUrl, getUser, isActive, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
-import { buildReviewEmail, buildReminderEmail, sendEmail, sendSms } from "./email";
+import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms, sendEmail, sendSms } from "./email";
 
 export type SendInput = { name?: unknown; email?: unknown; phone?: unknown };
 export type SendResult =
@@ -40,7 +40,7 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
   const suppressed = !!i.email && isSuppressed(i.email);
   try {
     if (i.email && !suppressed) { const r = await sendEmail(i.email, buildReviewEmail(biz, i.name, url, unsubscribeUrl(token!))); providerId = r.id; mode = r.mode; channels.push("email"); }
-    if (i.phone) { const r = await sendSms(i.phone, `Hi ${i.name.split(" ")[0]}, thanks for choosing ${biz}! Mind leaving a quick review? ${url}`); smsMode = r.mode; mode ||= r.mode; channels.push("sms"); }
+    if (i.phone) { const r = await sendSms(i.phone, buildReviewSms(biz, i.name, url)); smsMode = r.mode; mode ||= r.mode; channels.push("sms"); }
   } catch (e) { status = "failed"; console.error("send failed", e); }
   // Texting is rolling out. In production without an SMS provider, a phone-only ask isn't delivered, so mark it queued instead of sent.
   if (status === "sent" && smsMode === "outbox" && !channels.includes("email") && process.env.RESEND_API_KEY) { status = "queued"; mode = "sms_pending"; }
@@ -75,7 +75,7 @@ export async function processDueReminders(userId?: number, limit = 200) {
         if (!tok) { tok = crypto.randomBytes(24).toString("base64url"); db.prepare("UPDATE review_requests SET unsubscribe_token=? WHERE id=?").run(tok, r.id); }
         await sendEmail(r.customer_email, buildReminderEmail(u.business_name, r.customer_name, u.review_url, unsubscribeUrl(tok)));
       }
-      if (r.customer_phone) await sendSms(r.customer_phone, `Hi ${r.customer_name.split(" ")[0]}, a quick reminder from ${u.business_name}: if you have a moment, we'd love a short review. ${u.review_url}`);
+      if (r.customer_phone) await sendSms(r.customer_phone, buildReminderSms(u.business_name, r.customer_name, u.review_url));
       sent++;
     } catch (e) {
       console.error("reminder failed", e);
