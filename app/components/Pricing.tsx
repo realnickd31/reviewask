@@ -12,7 +12,7 @@ export default function Pricing() {
   return <section id="pricing" className="scroll-mt-4 border-t border-slate-200 bg-white py-24"><div className="mx-auto max-w-3xl px-6 text-center">
     <p className="eyebrow">Pricing</p>
     <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">One plan. No setup fees.</h2>
-    <p className="mt-4 text-slate-600">Everything included, with a 7-day free trial on either billing option.</p>
+    <p className="mt-4 text-slate-600">Everything included. Try it free for 7 days — card required, not charged until the trial ends, cancel anytime.</p>
     <div role="group" aria-label="Billing period" className="mt-8 inline-flex rounded-lg bg-slate-100 p-1">
       <button type="button" aria-pressed={!annual} onClick={() => setAnnual(false)} className={tab(!annual)}>Monthly</button>
       <button type="button" aria-pressed={annual} onClick={() => setAnnual(true)} className={tab(annual)}>Annual <span className="ml-1 rounded-full bg-lime-50 px-2 py-0.5 text-xs text-lime-700 ring-1 ring-lime-100">Save $78</span></button>

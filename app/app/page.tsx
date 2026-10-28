@@ -9,8 +9,8 @@ export const dynamic = "force-dynamic";
 export const metadata = { alternates: { canonical: "/" } };
 
 const steps = [
-  { n: "01", t: "Add your Google review link", d: "Paste your Google review link and your business name. That’s the only setup you need — connecting Jobber or Housecall Pro is optional." },
-  { n: "02", t: "Your customers get a short email", d: "After the work is done, each customer gets a short note from your business with a one-tap link to leave a Google review. Send it from your phone, upload a spreadsheet, or let it go out automatically." },
+  { n: "01", t: "Add your Google review link", d: "Paste your Google review link and your business name. That’s all the setup you need." },
+  { n: "02", t: "Your customers get a short email", d: "After the work is done, each customer gets a short thank-you from your business with a one-tap Google review link. Send from your phone, upload a spreadsheet, or let a connected tool trigger it." },
   { n: "03", t: "Follow-up and proof, handled", d: "Anyone who hasn’t been reminded gets one polite follow-up on day 3. Your dashboard shows every request, reminder, and status." },
 ];
 const pillars = [
@@ -19,7 +19,13 @@ const pillars = [
   { t: "Day-3 follow-up", d: "One polite reminder with the same link. Most people mean to leave a review and simply forget." },
   { t: "Proof it’s working", d: "Monthly totals, follow-ups sent, and a status for every request — sent, reminded, or failed." },
 ];
-const audiences = ["Any local business that wants more Google reviews", "Teams with a customer list in a spreadsheet", "Owner-operators and growing teams", "Jobber and Housecall Pro users (optional)"];
+const audiences = ["Any business that wants more Google reviews", "Shops, studios, clinics, and service pros", "Teams with a customer list in a spreadsheet", "Owner-operators and growing teams"];
+const connectors = ["Jobber", "Housecall Pro", "Square", "Stripe", "QuickBooks", "Zapier"];
+const proof = [
+  { t: "See every request", d: "Your dashboard shows each request as sent, reminded, or failed — no guessing." },
+  { t: "One follow-up on day 3", d: "Customers who haven’t been reminded get one polite nudge with the same link. Then it stops." },
+  { t: "Same ask to every customer", d: "No filtering out unhappy customers, no incentives — in line with Google’s review policies." },
+];
 const principles = [
   { t: "Every customer gets the same ask", d: "No review gating or filtering. Requests follow Google’s review policies." },
   { t: "Sent from your business name", d: "Customers see your name and a clear link — no third-party branding in the way." },
@@ -57,20 +63,24 @@ export default async function Home() {
         <div className="max-w-3xl">
           <p className="eyebrow !text-lime-400">More Google reviews, without chasing customers · $39/mo</p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every finished job gets a Google review request — automatically.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">When a job is done, ReviewAsk emails your customer a short note from your business with one tap to leave a Google review. One polite follow-up on day 3. Upload a spreadsheet of past customers anytime — or send a quick request from your phone. Your dashboard shows exactly what went out.</p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start free for 7 days</Link>}{!user && <a href="#how" className="btn-ghost px-5 py-3">See how it works</a>}</div>
-          <div className="mt-6 flex flex-wrap gap-2 text-xs text-white/80"><Link href="/#how" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Jobber</Link><Link href="/#how" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Housecall Pro</Link><Link href="/#how" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Square</Link><Link href="/#how" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Stripe</Link><Link href="/#how" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with QuickBooks</Link><Link href="/#how" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Zapier</Link><span className="rounded-full px-3 py-1 ring-1 ring-white/20">Quick ask from any phone</span></div>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">When the job is done or the customer pays, ReviewAsk sends them a short thank-you note from your business with a one-tap Google review link — plus one friendly follow-up on day 3.</p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start free for 7 days</Link>}{!user && <a href="#how" className="px-2 py-3 text-sm font-medium text-white/70 underline-offset-4 hover:text-white hover:underline">See how it works →</a>}</div>
+          {!user && <p className="mt-3 text-sm text-white/70">Add your Google review link. Send your first request in minutes.</p>}
+          <p className="mt-8 text-xs text-white/60">Works with the tools you already use — or a spreadsheet:</p>
+          <div className="mt-2 flex flex-wrap gap-2 text-xs text-white/80">{connectors.map((c) => <a key={c} href="#connect" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">{c}</a>)}</div>
           <p className="mt-5 text-sm text-white/60"><strong className="font-semibold text-white">$39/month</strong> after the 7-day trial · No contract · Cancel anytime</p>
+          <p className="mt-1 text-xs text-white/50">Card required to start · you won’t be charged until the trial ends.</p>
         </div>
-      </div>
         <div aria-label="Example review request" className="hidden lg:block"><div className="mx-auto w-full max-w-sm rounded-2xl bg-white p-5 text-navy-900 shadow-2xl ring-1 ring-white/10">
           <p className="text-xs font-medium uppercase tracking-wider text-slate-400">Example request</p>
-          <p className="mt-3 text-sm font-semibold">From: Your Business Name</p>
-          <p className="mt-2 text-sm leading-relaxed text-slate-700">Hi Sam — thanks for choosing us today! Would you mind leaving a quick Google review? It really helps a small business like ours.</p>
-          <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a review ★★★★★</span>
-          <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent automatically after the job</span><span className="text-lime-700">Day-3 reminder queued</span></div>
+          <p className="mt-3 text-xs text-slate-500">From: <span className="font-medium text-navy-900">Your Business</span></p>
+          <p className="mt-1 text-sm font-semibold">Sam, thanks again from Your Business</p>
+          <p className="mt-3 text-sm leading-relaxed text-slate-700">Thanks again for choosing Your Business. If you’re happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.</p>
+          <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a Google review</span>
+          <p className="mt-2 break-all text-xs text-slate-400">g.page/r/your-business/review</p>
+          <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent when the job is done</span><span className="text-lime-700">Day-3 reminder queued</span></div>
         </div></div>
-      
+      </div>
     </header>
 
     <section className="border-b border-slate-200 bg-slate-50"><div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center">
@@ -83,8 +93,15 @@ export default async function Home() {
       <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-3">{steps.map((s) => <div key={s.n} className="bg-white p-8">
         <span className="font-mono text-xs text-slate-400">{s.n}</span>
         <h3 className="mt-4 text-base font-semibold">{s.t}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{s.d}</p></div>)}</div>
-      <figure className="mt-12"><Image src="/screens/customer-email.png" alt="What your customer sees: a short email from your business with a Leave a review button" width={1600} height={1000} className="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 shadow-sm" /><figcaption className="mt-3 text-center text-sm text-slate-500">What your customer gets: one short note from your business and one tap to your Google review form.</figcaption></figure>
+      <figure className="mt-12"><Image src="/screens/customer-email.png" alt="What your customer sees: a short email from your business with a Leave a Google review button" width={1600} height={1000} className="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 shadow-sm" /><figcaption className="mt-3 text-center text-sm text-slate-500">What your customer gets: a short thank-you from your business and a “Leave a Google review” button that opens your Google review form.</figcaption></figure>
+      <div id="connect" className="mt-16 scroll-mt-4 rounded-xl border border-slate-200 bg-slate-50 p-8">
+        <h3 className="text-lg font-semibold">Optional: let your tools send it for you</h3>
+        <p className="mt-2 text-sm text-slate-600">Connect Jobber, Housecall Pro, Square, Stripe, QuickBooks, or Zapier — or skip it and use a spreadsheet or your phone.</p>
+        <ol className="mt-5 grid gap-3 text-sm sm:grid-cols-3">{["Connect your tool in Settings", "A job is marked complete or an invoice is paid", "Your customer gets the review request"].map((t, i) => <li key={t} className="flex gap-3 rounded-lg bg-white p-4 ring-1 ring-slate-200"><span className="font-mono text-xs text-slate-400">{i + 1}</span><span className="text-navy-900">{t}</span></li>)}</ol>
+      </div>
     </div></section>
+
+    <section aria-label="What you can count on" className="border-t border-slate-200 bg-navy-950 py-14 text-white"><div className="mx-auto grid max-w-6xl gap-8 px-6 sm:grid-cols-3">{proof.map((p) => <div key={p.t}><p className="font-semibold text-lime-400">{p.t}</p><p className="mt-2 text-sm leading-relaxed text-white/75">{p.d}</p></div>)}</div></section>
 
     <section className="border-t border-slate-200 py-24"><div className="mx-auto max-w-6xl px-6">
       <div className="max-w-2xl"><p className="eyebrow">What you get</p><h2 className="mt-3 text-3xl font-semibold sm:text-4xl">More than a saved text message.</h2>
