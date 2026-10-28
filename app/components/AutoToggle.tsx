@@ -1,12 +1,14 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import ConnectWizard from "@/components/ConnectWizard";
 
 type Props = { enabled: boolean; provider: string | null; jobberConnected: boolean; jobberReady: boolean;
   housecallConnected?: boolean; housecallReady?: boolean; housecallStarted?: boolean;
   squareConnected?: boolean; squareReady?: boolean; squareFlash?: string;
   stripeConnected?: boolean; stripeReady?: boolean; stripeFlash?: string;
   qboConnected?: boolean; qboReady?: boolean; qboFlash?: string;
+  zapierToken?: string | null; zapierUrl?: string; business?: string;
   setupEmail: string | null; setupRequested: boolean; quickUrl: string; flash?: string };
 
 export default function AutoToggle(p: Props) {
@@ -15,6 +17,7 @@ export default function AutoToggle(p: Props) {
   const [sq, setSq] = useState(!!p.squareConnected);
   const [st, setSt] = useState(!!p.stripeConnected);
   const [qb, setQb] = useState(!!p.qboConnected);
+  const [zap, setZap] = useState(!!p.zapierToken); const [zapOpen, setZapOpen] = useState(false);
   // Setup requests are tracked per service, so Jobber and Housecall Pro never hide each other.
   const [reqFor, setReqFor] = useState<string | null>(p.setupRequested ? p.provider : null);
   const [open, setOpen] = useState<string | null>(p.flash === "setup" ? (p.provider === "jobber" ? "jobber" : "housecall") : p.squareFlash === "setup" ? "square" : p.stripeFlash === "setup" ? "stripe" : p.qboFlash === "setup" ? "quickbooks" : null);
@@ -137,6 +140,23 @@ export default function AutoToggle(p: Props) {
     : open === "stripe" ? requestPanel("stripe", "Stripe")
     : <button type="button" className="btn-navy" onClick={() => { setOpen("stripe"); setErr(""); }}>Connect Stripe</button>;
 
+  const zapDisconnect = async () => {
+    if (!confirm("Disconnect Zapier? Your Zap will stop working until you connect again.")) return;
+    await fetch("/api/token", { method: "DELETE" }); setZap(false); setZapOpen(false);
+  };
+  const zapWizard = <div className="mt-3"><ConnectWizard initial={zap ? p.zapierToken ?? null : null} url={p.zapierUrl || ""} business={p.business || "my business"} onConnected={() => { setZap(true); setOn(true); }} /></div>;
+  const zapierCard = <div id="zapier" className="space-y-2">
+    <p className="text-sm text-navy-900">Use any other app (invoicing, payments, booking, CRM). Zapier or Make tells us when a customer pays or a job is completed, and we ask that customer for a Google review.</p>
+    {zap
+      ? <div className="flex flex-wrap items-center justify-between gap-3">
+          <p className="font-semibold text-green-800">● Connected · Asking when Zapier tells us a customer paid</p>
+          <div className="flex gap-2"><button type="button" className="btn-ghost" onClick={() => setZapOpen(!zapOpen)}>{zapOpen ? "Hide setup" : "Manage"}</button>
+            <button type="button" className="btn-ghost" onClick={zapDisconnect}>Disconnect</button></div>
+        </div>
+      : !zapOpen && <button type="button" className="btn-navy" onClick={() => setZapOpen(true)}>Connect Zapier</button>}
+    {zapOpen && zapWizard}
+  </div>;
+
   return <div className="space-y-5">
     <div className="flex items-start justify-between gap-4">
       <p className="text-base text-navy-900">Automatically ask customers for a Google review when a job is finished.</p>
@@ -159,6 +179,7 @@ export default function AutoToggle(p: Props) {
         {card("Square", square)}
         {card("Stripe", stripeCard)}
         {card("QuickBooks", qboCard)}
+        {card("Zapier (any other app)", zapierCard)}
         {card("Quick ask (no job software)", <div className="space-y-3">
           <p className="text-sm text-navy-900">Send an ask from your phone after any job — name, phone, tap Send.</p>
           <div className="flex flex-wrap gap-2"><Link href="/quick" className="btn-outline">Open Quick ask</Link>

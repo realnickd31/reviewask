@@ -8,7 +8,7 @@ function BigCopy({ label, text }: { label: string; text: string }) {
   return <button type="button" className="btn-navy w-full py-4 text-base" onClick={async () => { await navigator.clipboard.writeText(text); setDone(true); setTimeout(() => setDone(false), 1800); }}>{done ? "Copied ✓" : label}</button>;
 }
 
-export default function ConnectWizard({ initial, url, business }: { initial: string | null; url: string; business: string }) {
+export default function ConnectWizard({ initial, url, business, onConnected }: { initial: string | null; url: string; business: string; onConnected?: () => void }) {
   const [token, setToken] = useState(initial);
   const [step, setStep] = useState(initial ? 2 : 1);
   const [busy, setBusy] = useState(false);
@@ -20,7 +20,7 @@ export default function ConnectWizard({ initial, url, business }: { initial: str
     if (token && !confirm("Make a new secret key? Your existing Zap will stop working until you paste the new key into it.")) return;
     setBusy(true);
     const r = await fetch("/api/token", { method: "POST" }); const j = await r.json(); setBusy(false);
-    if (r.ok) { setToken(j.token); setStep(2); }
+    if (r.ok) { setToken(j.token); setStep(2); onConnected?.(); }
   }
   async function sendTest() {
     setBusy(true); setTest(null);
@@ -41,8 +41,8 @@ export default function ConnectWizard({ initial, url, business }: { initial: str
     return () => { stop = true; clearInterval(id); };
   }, [step]);
 
-  const help = `mailto:?subject=${encodeURIComponent(`Help connecting Jobber to ReviewAsk for ${business}`)}&body=${encodeURIComponent(
-    `Hi,\n\nCould you help me connect Jobber (or Housecall Pro) to ReviewAsk so customers get a review request when a job is closed? It takes about 10 minutes in Zapier.\n\nConnection link: ${url}\nSecret key: (I'll send this separately)\n\nIn Zapier: Create Zap → Jobber "Job Closed" → Webhooks by Zapier → POST → paste the link → add header Authorization: Bearer <secret key> → map customer name, email, phone.\n\nThanks!`)}`;
+  const help = `mailto:?subject=${encodeURIComponent(`Help connecting Zapier to ReviewAsk for ${business}`)}&body=${encodeURIComponent(
+    `Hi,\n\nCould you help me connect our software to ReviewAsk through Zapier, so customers get a Google review request when they pay or a job is completed? It takes about 10 minutes in Zapier.\n\nConnection link: ${url}\nSecret key: (I'll send this separately)\n\nIn Zapier: Create Zap → trigger from our app (e.g. "Invoice paid", "Payment received" or "Job completed") → Webhooks by Zapier → POST → paste the link → add header Authorization: Bearer <secret key> → map customer name, email, phone.\n\nThanks!`)}`;
 
   const steps = ["Create key", "Open Zapier", "Copy & paste", "Test"];
   return <div className="space-y-5">
@@ -52,7 +52,7 @@ export default function ConnectWizard({ initial, url, business }: { initial: str
 
     <div className="rounded-md border border-slate-200 p-5">
       {step === 1 && <div className="space-y-3"><p className="text-lg font-semibold">Create your secret key</p>
-        <p className="text-sm text-slate-600">This is like a password that lets Jobber talk to ReviewAsk.</p>
+        <p className="text-sm text-slate-600">This is like a password that lets Zapier talk to ReviewAsk.</p>
         <button type="button" className="btn-navy w-full py-4 text-base" onClick={regen} disabled={busy}>{busy ? "Working…" : token ? "Make a new secret key" : "Create secret key"}</button>
         {token && <button type="button" className="text-sm underline" onClick={() => setStep(2)}>Keep my current key → next</button>}</div>}
 
@@ -64,13 +64,13 @@ export default function ConnectWizard({ initial, url, business }: { initial: str
       {step === 3 && <div className="space-y-3"><p className="text-lg font-semibold">Copy these into Zapier</p>
         <BigCopy label="Copy connection link" text={url} />
         {token && <BigCopy label="Copy secret key" text={token} />}
-        <p className="text-xs text-slate-500">In Zapier: create a Zap → Jobber <b>Job Closed</b> (or Housecall Pro <b>Job Completed</b>) → <b>Webhooks by Zapier</b> → <b>POST</b> → paste link → paste secret → map name, email, phone.</p>
+        <p className="text-xs text-slate-500">In Zapier: create a Zap → pick the app you use and a trigger like <b>Invoice paid</b>, <b>Payment received</b> or <b>Job completed</b> → action <b>Webhooks by Zapier</b> → <b>POST</b> → paste link → add header <code>Authorization</code> = <code>Bearer &lt;secret key&gt;</code> → map customer name, email, phone.</p>
         <button type="button" className="text-sm underline" onClick={() => setStep(4)}>Done → test it</button></div>}
 
       {step === 4 && <div className="space-y-3"><p className="text-lg font-semibold">Test the connection</p>
-        <p className="text-sm text-slate-600">Mark a test job done in Jobber, or click <b>Send a test request</b> below.</p>
-        {last ? <p className="rounded-md bg-lime-50 p-3 text-sm font-medium text-lime-800">Connected — we just got “{last.customer_name}” from your job software. You&apos;re done.</p>
-          : <p className="text-sm text-slate-500">Waiting for your first job from Zapier… (checks every 5 seconds)</p>}
+        <p className="text-sm text-slate-600">Mark a test invoice paid (or job completed) in your app, or click <b>Send a test request</b> below.</p>
+        {last ? <p className="rounded-md bg-lime-50 p-3 text-sm font-medium text-lime-800">Connected — we just got “{last.customer_name}” through Zapier. You&apos;re done.</p>
+          : <p className="text-sm text-slate-500">Waiting for your first customer from Zapier… (checks every 5 seconds)</p>}
         <button type="button" className="btn-navy w-full py-4 text-base" onClick={sendTest} disabled={busy}>{busy ? "Sending…" : "Send a test request"}</button>
         {test && <p className={`text-sm ${test.t === "ok" ? "text-green-700" : "text-red-600"}`}>{test.m}</p>}
         <p className="text-xs text-slate-500">The test counts as one request this month.</p></div>}

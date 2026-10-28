@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
   if (!u) return NextResponse.json({ error: "Please log in." }, { status: 401 });
   const b = await req.json().catch(() => ({}));
   if (typeof b.enabled === "boolean") db.prepare("UPDATE users SET auto_enabled=? WHERE id=?").run(b.enabled ? 1 : 0, u.id);
-  if (["jobber", "housecall", "square", "stripe", "quickbooks", "none"].includes(b.provider)) {
+  if (["jobber", "housecall", "square", "stripe", "quickbooks", "zapier", "none"].includes(b.provider)) {
     db.prepare("UPDATE users SET auto_provider=? WHERE id=?").run(b.provider, u.id);
     if (b.clearSetup) db.prepare("UPDATE users SET auto_setup_email=NULL, auto_setup_requested_at=NULL WHERE id=?").run(u.id);
   }

@@ -41,6 +41,7 @@ API: `POST /api/requests` `{name,email?,phone?}` · `POST /api/stripe/checkout` 
 - **Follow-ups:** each sent request gets `remind_at = +3 days`. Due reminders are sent by `POST /api/cron/reminders` (also GET) with `Authorization: Bearer $CRON_SECRET` or `?secret=$CRON_SECRET`, and best-effort for the signed-in account on each dashboard load.
   Set `CRON_SECRET` (e.g. `openssl rand -hex 32`) and schedule hourly (Railway cron / Vercel cron / any uptime pinger).
 - **Webhook:** `POST /api/hooks/job-complete` with `Authorization: Bearer <token>` (or `X-Api-Token`, `?token=`). JSON or form body: `customer_name`/`name`/`customerName`/`first_name`+`last_name`, `email`, `phone`. Generate the token in Settings → Automatic sending.
+- **Zapier:** Settings → Ask after every job → **Connect Zapier**. Trigger on any paid/completed event (Invoice paid, Payment received, Job completed) → Webhooks by Zapier POST (JSON) to `https://YOUR_DOMAIN/api/zapier/webhook` (alias of `/api/hooks/job-complete`) with header `Authorization: Bearer <secret key>`; fields `customer_name`, `email`, `phone`. Creating the key sets `auto_provider='zapier'`; Disconnect clears it (`DELETE /api/token`).
 - Optional `APP_URL` sets the base URL shown in Settings.
 
 ## Deploy
