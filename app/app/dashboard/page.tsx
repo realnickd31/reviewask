@@ -52,19 +52,20 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first to see what customers get. Use <Link href="/quick" className="font-medium text-navy-900 underline underline-offset-4">Quick ask</Link>.</p></div></li>
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Paste recent customers from a spreadsheet to ask them too. <a href="#bulk" className="font-medium text-navy-900 underline underline-offset-4">Paste a spreadsheet</a></p></div></li>
       </ol></section>}
-    <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLabel}: {autoSub}</Link></div>
-      <p className="mb-4 mt-1 text-sm text-slate-500">Name + email (or phone), tap Send.</p>
-      <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} /></section>
-    <section className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
+    <section aria-label="This month" className="space-y-2">
+      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
       {[["Requests this month", used, `${pct.toFixed(0)}% of plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} scheduled`], ["Sent automatically", stats.auto ?? 0, "from your connected tools"], ["Requests left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
         <div key={String(l)} className="bg-white p-4 sm:p-5"><p className="text-[11px] font-medium uppercase leading-snug tracking-wider text-slate-500 sm:text-xs">{l}</p>
           <p className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-navy-900">{v}</p><p className="mt-1 text-xs text-slate-500">{sub}</p></div>)}
+      </div>
+      <div className="h-1.5 rounded-full bg-slate-100"><div className="h-1.5 rounded-full bg-navy-900" style={{ width: `${pct}%` }} /></div>
     </section>
-    <div className="h-1.5 rounded-full bg-slate-100"><div className="h-1.5 rounded-full bg-navy-900" style={{ width: `${pct}%` }} /></div>
+    <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLabel}: {autoSub}</Link></div>
+      <p className="mb-4 mt-1 text-sm text-slate-500">Name + email (or phone), tap Send.</p>
+      <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} /></section>
       <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-slate-600">Have a list? Send to many customers at once</summary>
         <p className="mb-5 mt-1 text-sm text-slate-500">Copy customer rows from Excel or Google Sheets and paste — no exporting. <a href="/sample-customers.csv" download className="font-medium text-navy-900 underline underline-offset-4">Download sample spreadsheet</a></p>
         <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} /></details>
-    <p className="text-sm text-slate-500">Tired of typing customers in? <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Turn on automatic asks</Link> once, and every customer gets asked automatically.</p>
     <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
       <p className="mb-4 mt-1 text-sm text-slate-500">Automatic asks from your connected tools wait {SEND_DELAY_HOURS} hours before sending, so you can stop one if something went wrong. Asks you type in or paste send right away. Every customer still gets asked unless you stop it.</p>
       {scheduled.length === 0 ? <p className="text-sm text-slate-500">Nothing waiting to send.</p> :
