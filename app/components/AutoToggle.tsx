@@ -56,7 +56,7 @@ export default function AutoToggle(p: Props) {
     setHcBusy(false);
     if (r.ok) { setHc(next); if (next !== "none") setOn(true); } else setHcErr((await r.json().catch(() => ({}))).error || "Something went wrong.");
   };
-  const disconnect = async () => { if (await disc("/api/jobber/disconnect", "Jobber")) setConnected(false); };
+  const disconnect = async () => { if (!confirm("Disconnect Jobber? We’ll stop asking for reviews from Jobber until you connect again.")) return; if (await disc("/api/jobber/disconnect", "Jobber")) setConnected(false); };
 
   const requestPanel = (svc: string, name: string) => <div className="mt-3 space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
     <p className="text-sm font-semibold text-navy-900">We’ll connect it for you</p>
@@ -66,13 +66,17 @@ export default function AutoToggle(p: Props) {
     <button type="button" className="btn-navy" disabled={busy} onClick={() => request(svc)}>{busy ? "Sending…" : "Request connect"}</button>
   </div>;
   const requestedNote = (name: string) => <p className="text-sm font-medium text-amber-700">● Setup requested — we’ll email you when {name} is on.</p>;
-  const card = (title: string, body: React.ReactNode) => <div className="rounded-lg border border-slate-200 bg-white p-4">
-    <p className="mb-2 text-base font-semibold text-navy-900">{title}</p>{body}</div>;
+  const card = (title: string, body: React.ReactNode, status?: boolean) => <div className={`rounded-lg border bg-white p-4 ${status ? "border-green-300" : "border-slate-200"}`}>
+    <div className="mb-2 flex items-center justify-between gap-2"><p className="text-base font-semibold text-navy-900">{title}</p>
+      {status !== undefined && (status
+        ? <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-800">{on ? "● Connected" : "● Connected · paused"}</span>
+        : <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold text-slate-600">○ Not connected</span>)}</div>{body}</div>;
+  const offBtn = "rounded-md border border-red-300 bg-white px-4 py-2 text-sm font-semibold text-red-700 hover:bg-red-50";
 
   const jobber = connected
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking automatically</p>
-        <button type="button" className="btn-ghost" onClick={disconnect}>Disconnect</button>
+        <button type="button" className={offBtn} onClick={disconnect}>Turn off &amp; disconnect</button>
       </div>
     : p.jobberReady ? <a href="/api/jobber/connect" className="btn-navy inline-block">Connect Jobber</a>
     : reqFor === "jobber" ? requestedNote("Jobber")
@@ -103,11 +107,11 @@ export default function AutoToggle(p: Props) {
       {hcErr && <p className="text-sm text-red-700">{hcErr}</p>}
       <button type="button" className="btn-navy" disabled={hcBusy} onClick={() => hcPost("/api/housecall/secret", { webhookSecret: ((document.getElementById("hc-secret") as HTMLInputElement | null)?.value ?? hcSecret).trim() }, "done")}>{hcBusy ? "Saving…" : "Finish"}</button>
     </div>;
-  const hcDisconnect = async () => { if (!(await disc("/api/housecall/disconnect", "Housecall Pro"))) return; setHc("none"); setHcKey(""); setHcSecret(""); };
+  const hcDisconnect = async () => { if (!confirm("Disconnect Housecall Pro? We’ll stop asking for reviews from Housecall Pro until you connect again.")) return; if (!(await disc("/api/housecall/disconnect", "Housecall Pro"))) return; setHc("none"); setHcKey(""); setHcSecret(""); };
   const housecall = hc === "done"
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking automatically</p>
-        <button type="button" className="btn-ghost" onClick={hcDisconnect}>Disconnect</button>
+        <button type="button" className={offBtn} onClick={hcDisconnect}>Turn off &amp; disconnect</button>
       </div>
     : hc !== "none" ? <div>{hcSteps}<div className="mt-2 flex gap-4">{hc === "link" && <button type="button" className="btn-ghost" onClick={hcDisconnect}>Start over</button>}</div></div>
     : <div className="space-y-2">
@@ -116,33 +120,33 @@ export default function AutoToggle(p: Props) {
         {reqFor === "housecall" ? requestedNote("Housecall Pro") : open === "housecall" ? requestPanel("housecall", "Housecall Pro") : help}
       </div>;
 
-  const sqDisconnect = async () => { if (await disc("/api/square/disconnect", "Square")) setSq(false); };
+  const sqDisconnect = async () => { if (!confirm("Disconnect Square? We’ll stop asking for reviews from Square until you connect again.")) return; if (await disc("/api/square/disconnect", "Square")) setSq(false); };
   const square = sq
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking after each completed payment</p>
-        <button type="button" className="btn-ghost" onClick={sqDisconnect}>Disconnect</button>
+        <button type="button" className={offBtn} onClick={sqDisconnect}>Turn off &amp; disconnect</button>
       </div>
     : p.squareReady ? <a href="/api/square/connect" className="btn-navy inline-block">Connect Square</a>
     : reqFor === "square" ? requestedNote("Square")
     : open === "square" ? requestPanel("square", "Square")
     : <button type="button" className="btn-navy" onClick={() => { setOpen("square"); setErr(""); }}>Connect Square</button>;
 
-  const qbDisconnect = async () => { if (await disc("/api/quickbooks/disconnect", "QuickBooks")) setQb(false); };
+  const qbDisconnect = async () => { if (!confirm("Disconnect QuickBooks? We’ll stop asking for reviews from QuickBooks until you connect again.")) return; if (await disc("/api/quickbooks/disconnect", "QuickBooks")) setQb(false); };
   const qboCard = qb
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking when an invoice is paid</p>
-        <button type="button" className="btn-ghost" onClick={qbDisconnect}>Disconnect</button>
+        <button type="button" className={offBtn} onClick={qbDisconnect}>Turn off &amp; disconnect</button>
       </div>
     : p.qboReady ? <a href="/api/quickbooks/connect" className="btn-navy inline-block">Connect QuickBooks</a>
     : reqFor === "quickbooks" ? requestedNote("QuickBooks")
     : open === "quickbooks" ? requestPanel("quickbooks", "QuickBooks")
     : <button type="button" className="btn-navy" onClick={() => { setOpen("quickbooks"); setErr(""); }}>Connect QuickBooks</button>;
 
-  const stDisconnect = async () => { if (await disc("/api/stripe-connect/disconnect", "Stripe")) setSt(false); };
+  const stDisconnect = async () => { if (!confirm("Disconnect Stripe? We’ll stop asking for reviews from Stripe until you connect again.")) return; if (await disc("/api/stripe-connect/disconnect", "Stripe")) setSt(false); };
   const stripeCard = st
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking after each successful payment</p>
-        <button type="button" className="btn-ghost" onClick={stDisconnect}>Disconnect</button>
+        <button type="button" className={offBtn} onClick={stDisconnect}>Turn off &amp; disconnect</button>
       </div>
     : p.stripeReady ? <a href="/api/stripe-connect/connect" className="btn-navy inline-block">Connect Stripe</a>
     : reqFor === "stripe" ? requestedNote("Stripe")
@@ -160,7 +164,7 @@ export default function AutoToggle(p: Props) {
       ? <div className="flex flex-wrap items-center justify-between gap-3">
           <p className="font-semibold text-green-800">● Connected · Asking when Zapier tells us a customer paid</p>
           <div className="flex gap-2"><button type="button" className="btn-ghost" onClick={() => setZapOpen(!zapOpen)}>{zapOpen ? "Hide setup" : "Manage"}</button>
-            <button type="button" className="btn-ghost" onClick={zapDisconnect}>Disconnect</button></div>
+            <button type="button" className={offBtn} onClick={zapDisconnect}>Turn off &amp; disconnect</button></div>
         </div>
       : !zapOpen && <button type="button" className="btn-navy" onClick={() => setZapOpen(true)}>Connect Zapier</button>}
     {zapOpen && zapWizard}
@@ -176,26 +180,26 @@ export default function AutoToggle(p: Props) {
       </button>
     </div>
     {discErr && <p role="alert" className="text-sm text-red-700">{discErr}</p>}
-    {!on && <p className="text-sm text-slate-500">Turn this on, then connect your job software once.</p>}
-    {on && <>
+    {!on && <p className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">Automatic asks are <b>off</b>. Nothing will be sent. Your connections below are saved — turn the switch back on to resume, or disconnect any you don’t want.</p>}
+    <>
       {p.flash === "error" && <p className="text-sm text-red-700">Jobber didn’t finish connecting. Please try again.</p>}
       {p.squareFlash === "error" && <p className="text-sm text-red-700">Square didn’t finish connecting. Please try again.</p>}
       {p.qboFlash === "error" && <p className="text-sm text-red-700">QuickBooks didn’t finish connecting. Please try again.</p>}
       {p.stripeFlash === "error" && <p className="text-sm text-red-700">Stripe didn’t finish connecting. Please try again.</p>}
       <p className="text-sm font-medium text-slate-600">Connect any job software you use — you can connect more than one.</p>
       <div className="space-y-3">
-        {card("Jobber", jobber)}
-        {card("Housecall Pro", housecall)}
-        {card("Square", square)}
-        {card("Stripe", stripeCard)}
-        {card("QuickBooks", qboCard)}
-        {card("Zapier (any other app)", zapierCard)}
+        {card("Jobber", jobber, connected)}
+        {card("Housecall Pro", housecall, hc === "done")}
+        {card("Square", square, sq)}
+        {card("Stripe", stripeCard, st)}
+        {card("QuickBooks", qboCard, qb)}
+        {card("Zapier (any other app)", zapierCard, zap)}
         {card("Quick ask (no job software)", <div className="space-y-3">
           <p className="text-sm text-navy-900">Send an ask from your phone after any job — name, phone, tap Send.</p>
           <div className="flex flex-wrap gap-2"><Link href="/quick" className="btn-outline">Open Quick ask</Link>
             <button type="button" className="btn-ghost" onClick={() => { navigator.clipboard?.writeText(p.quickUrl); setCopied(true); }}>{copied ? "Copied!" : "Copy link for your techs"}</button></div>
         </div>)}
       </div>
-    </>}
+    </>
   </div>;
 }
