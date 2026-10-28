@@ -18,7 +18,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   if (!u.business_name || !u.review_url) redirect("/onboarding");
   const provName = u.auto_provider === "housecall" ? "Housecall Pro" : "Jobber";
   const autoLabel = !u.auto_enabled ? "Turn on automatic asks" : u.jobber_connected ? (u.auto_provider === "housecall" && u.auto_setup_requested_at ? "On · Jobber (Housecall Pro requested)" : "On · Jobber") : u.auto_setup_requested_at ? "Setup requested" : "Finish connecting";
-  const autoSub = !u.auto_enabled ? "One switch. Every customer gets asked." : u.jobber_connected ? "Asking every customer automatically." : u.auto_setup_requested_at ? `We’re connecting ${provName} for you.` : "Connect your job software in Settings.";
+  const autoSub = !u.auto_enabled ? "One switch. Every customer gets asked." : u.jobber_connected ? "Asking every customer automatically." : u.auto_setup_requested_at ? `We’re connecting ${provName} for you.` : "Connect the tools you already use in Settings.";
   // Sync right after Checkout so it works even before the webhook arrives.
   if (searchParams.session_id && stripe && !isActive(u)) {
     try {
@@ -56,7 +56,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       <p className="mb-4 mt-1 text-sm text-slate-500">Name + email (or phone), tap Send.</p>
       <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} /></section>
     <section className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
-      {[["Requests this month", used, `${pct.toFixed(0)}% of plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} scheduled`], ["Sent automatically", stats.auto ?? 0, "from your job software"], ["Requests left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
+      {[["Requests this month", used, `${pct.toFixed(0)}% of plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} scheduled`], ["Sent automatically", stats.auto ?? 0, "from your connected tools"], ["Requests left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
         <div key={String(l)} className="bg-white p-4 sm:p-5"><p className="text-[11px] font-medium uppercase leading-snug tracking-wider text-slate-500 sm:text-xs">{l}</p>
           <p className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-navy-900">{v}</p><p className="mt-1 text-xs text-slate-500">{sub}</p></div>)}
     </section>
@@ -66,7 +66,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} /></details>
     <p className="text-sm text-slate-500">Tired of typing customers in? <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Turn on automatic asks</Link> once, and every customer gets asked automatically.</p>
     <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
-      <p className="mb-4 mt-1 text-sm text-slate-500">Automatic asks from your job software wait {SEND_DELAY_HOURS} hours before sending, so you can stop one if something went wrong. Asks you type in or paste send right away. Every customer still gets asked unless you stop it.</p>
+      <p className="mb-4 mt-1 text-sm text-slate-500">Automatic asks from your connected tools wait {SEND_DELAY_HOURS} hours before sending, so you can stop one if something went wrong. Asks you type in or paste send right away. Every customer still gets asked unless you stop it.</p>
       {scheduled.length === 0 ? <p className="text-sm text-slate-500">Nothing waiting to send.</p> :
       <ul className="divide-y divide-slate-100">{scheduled.map((r) => <li key={r.id} className="flex flex-col gap-3 py-3.5 text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <div className="min-w-0"><p className="font-semibold text-navy-900">{r.customer_name}</p><p className="truncate text-slate-500">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")}</p><p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-800 ring-1 ring-amber-100">Sends {fmt(r.send_at!)}</p></div>
@@ -74,7 +74,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     </section>
     <section className="flex flex-wrap items-center gap-2 text-sm"><span className="text-slate-500">Billing:</span><form action="/api/stripe/portal?view=invoices&from=dashboard" method="post"><button className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Invoices</button></form><form action="/api/stripe/portal?view=payment_methods&from=dashboard" method="post"><button className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Payment methods</button></form></section>
     <LiveRefresh /><section className="card px-4 sm:px-6" id="history"><div className="mb-4 flex items-baseline justify-between gap-3"><h2 className="text-lg font-semibold">History</h2><div className="flex items-baseline gap-3">{rows.length > 0 && <p className="text-xs text-slate-500">{rows.length} most recent</p>}<a href="/api/requests/export" download className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Download CSV</a></div></div>
-      {rows.length === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Ask a customer above, or connect your job software. Every request and follow-up will show here with its status.</p></div> : <>
+      {rows.length === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Ask a customer above, or connect the tools you already use. Every request and follow-up will show here with its status.</p></div> : <>
       <ul className="-mx-1 space-y-2.5 md:hidden">{rows.map((r) => { const ch = chip(r); const fu = followUp(r); return <li key={r.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="flex items-start justify-between gap-3"><div className="min-w-0"><p className="truncate text-[15px] font-semibold text-navy-900">{r.customer_name}</p>
           {r.customer_email && <p className="mt-0.5 truncate text-sm text-slate-500">{r.customer_email}</p>}{r.customer_phone && <p className="text-sm text-slate-500">{r.customer_phone}</p>}</div>
@@ -95,7 +95,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
 
 const fmt = (t: string, prefix = "") => <LocalTime t={t} prefix={prefix} />;
 function channel(r: ReviewRequest) { return ({ email: "Email", sms: "Text", "email+sms": "Email + text" } as Record<string, string>)[r.channel] || r.channel.replace("+", " + "); }
-function source(r: ReviewRequest) { return ({ manual: "Typed in", bulk: "Spreadsheet", webhook: "Job software", test: "Test" } as Record<string, string>)[r.source || "manual"] || "Typed in"; }
+function source(r: ReviewRequest) { return ({ manual: "Typed in", bulk: "Spreadsheet", webhook: "Automatic", test: "Test" } as Record<string, string>)[r.source || "manual"] || "Typed in"; }
 function canCancel(r: ReviewRequest) { return !!r.remind_at && !r.reminded_at && r.status === "sent"; }
 function CancelFU({ id }: { id: number }) { return <form action={cancelFollowUp} className="mt-1"><input type="hidden" name="id" value={id} /><button className="rounded-md border border-slate-300 px-2.5 py-1 text-xs font-semibold text-slate-700 hover:bg-slate-50">Cancel follow-up</button></form>; }
 function followUp(r: ReviewRequest) { return r.followup_cancelled_at ? "Cancelled" : r.reminded_at ? fmt(r.reminded_at) : r.remind_at && r.status === "sent" ? fmt(r.remind_at, "Due ") : "—"; }

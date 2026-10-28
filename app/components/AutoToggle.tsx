@@ -186,7 +186,7 @@ export default function AutoToggle(p: Props) {
       {p.squareFlash === "error" && <p className="text-sm text-red-700">Square didn’t finish connecting. Please try again.</p>}
       {p.qboFlash === "error" && <p className="text-sm text-red-700">QuickBooks didn’t finish connecting. Please try again.</p>}
       {p.stripeFlash === "error" && <p className="text-sm text-red-700">Stripe didn’t finish connecting. Please try again.</p>}
-      <p className="text-sm font-medium text-slate-600">Connect any job software you use — you can connect more than one.</p>
+      <p className="text-sm font-medium text-slate-600">Connect any tools you already use — you can connect more than one.</p>
       <div className="space-y-3">
         {card("Jobber", jobber, connected)}
         {card("Housecall Pro", housecall, hc === "done")}
@@ -194,7 +194,7 @@ export default function AutoToggle(p: Props) {
         {card("Stripe", stripeCard, st)}
         {card("QuickBooks", qboCard, qb)}
         {card("Zapier (any other app)", zapierCard, zap)}
-        {card("Quick ask (no job software)", <div className="space-y-3">
+        {card("Quick ask (no connection needed)", <div className="space-y-3">
           <p className="text-sm text-navy-900">Send an ask from your phone after any job — name, phone, tap Send.</p>
           <div className="flex flex-wrap gap-2"><Link href="/quick" className="btn-outline">Open Quick ask</Link>
             <button type="button" className="btn-ghost" onClick={() => { navigator.clipboard?.writeText(p.quickUrl); setCopied(true); }}>{copied ? "Copied!" : "Copy link for your team"}</button></div>

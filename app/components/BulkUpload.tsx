@@ -47,6 +47,8 @@ export default function BulkUpload({ disabled, remaining }: { disabled: boolean;
   const [msg, setMsg] = useState<{ t: "ok" | "err"; m: string } | null>(null);
   const router = useRouter();
   const taRef = useRef<HTMLTextAreaElement>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+  function clearFile() { setFile(""); setRows(null); setMsg(null); if (fileRef.current) fileRef.current.value = ""; }
   const good = rows?.filter(valid) ?? [];
   const bad = (rows?.length ?? 0) - good.length;
   const willSend = Math.min(good.length, remaining);
@@ -56,7 +58,7 @@ export default function BulkUpload({ disabled, remaining }: { disabled: boolean;
     setFile(f.name); setPaste(""); setRows(toRows(parseCsv(await f.text())));
   }
   function onPaste(v: string) {
-    setMsg(null); setPaste(v); setFile("");
+    setMsg(null); setPaste(v); setFile(""); if (fileRef.current) fileRef.current.value = "";
     setRows(v.trim() ? toRows(parseCsv(v)) : null);
   }
   async function send() {
@@ -80,7 +82,7 @@ export default function BulkUpload({ disabled, remaining }: { disabled: boolean;
     if (j.failed) parts.push(`${j.failed} failed`);
     if (b) parts.push(`${b} rows skipped before upload`);
     setMsg({ t: j.failed ? "err" : "ok", m: parts.join(" · ") + "." });
-    setRows(null); setFile(""); setPaste(""); router.refresh();
+    setRows(null); setFile(""); setPaste(""); if (fileRef.current) fileRef.current.value = ""; router.refresh();
   }
 
   return <div className="space-y-4">
@@ -89,9 +91,10 @@ export default function BulkUpload({ disabled, remaining }: { disabled: boolean;
       <textarea id="bulk-paste" ref={taRef} name="paste" className="input h-40 font-mono text-xs" value={paste} onChange={(e) => onPaste(e.target.value)} disabled={disabled}
         placeholder={"Jamie Rivera\tjamie@example.com\t(555) 123-4567\nSam Lee\t\t(555) 987-6543"} /></div>
     <label className={`inline-flex cursor-pointer items-center gap-2 text-sm text-slate-600 ${disabled ? "pointer-events-none opacity-50" : ""}`}>
-      <input type="file" accept=".csv,.tsv,.txt,text/csv" className="sr-only" onChange={onFile} disabled={disabled} />
+      <input ref={fileRef} type="file" accept=".csv,.tsv,.txt,text/csv" className="sr-only" onChange={onFile} disabled={disabled} />
       <span className="underline underline-offset-4 hover:text-navy-900">{file ? `File: ${file}` : "or choose a file (CSV)"}</span>
     </label>
+    {file && <button type="button" onClick={clearFile} disabled={busy} className="ml-3 text-sm text-red-600 underline underline-offset-4 hover:text-red-800" aria-label={`Remove ${file}`}>Remove file</button>}
     {rows && <div className="rounded-md bg-slate-50 p-4 text-sm">
       <p><b>{good.length}</b> ready to send{bad > 0 && <> · <span className="text-amber-700">{bad} skipped (missing name or contact)</span></>}</p>
       {good.length > remaining && <p className="mt-1 text-amber-700">Only {remaining} left this month — the rest will be skipped.</p>}
