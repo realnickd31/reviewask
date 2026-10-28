@@ -4,14 +4,16 @@ import Link from "next/link";
 
 type Props = { enabled: boolean; provider: string | null; jobberConnected: boolean; jobberReady: boolean;
   housecallConnected?: boolean; housecallReady?: boolean; housecallStarted?: boolean;
+  squareConnected?: boolean; squareReady?: boolean; squareFlash?: string;
   setupEmail: string | null; setupRequested: boolean; quickUrl: string; flash?: string };
 
 export default function AutoToggle(p: Props) {
   const [on, setOn] = useState(p.enabled);
   const [connected, setConnected] = useState(p.jobberConnected);
+  const [sq, setSq] = useState(!!p.squareConnected);
   // Setup requests are tracked per service, so Jobber and Housecall Pro never hide each other.
   const [reqFor, setReqFor] = useState<string | null>(p.setupRequested ? p.provider : null);
-  const [open, setOpen] = useState<string | null>(p.flash === "setup" ? (p.provider === "jobber" ? "jobber" : "housecall") : null);
+  const [open, setOpen] = useState<string | null>(p.flash === "setup" ? (p.provider === "jobber" ? "jobber" : "housecall") : p.squareFlash === "setup" ? "square" : null);
   const [email, setEmail] = useState(p.setupEmail || "");
   const [err, setErr] = useState(""); const [busy, setBusy] = useState(false); const [copied, setCopied] = useState(false);
   const post = (b: object) => fetch("/api/auto", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(b) });
@@ -98,6 +100,17 @@ export default function AutoToggle(p: Props) {
         {reqFor === "housecall" ? requestedNote("Housecall Pro") : open === "housecall" ? requestPanel("housecall", "Housecall Pro") : help}
       </div>;
 
+  const sqDisconnect = async () => { await fetch("/api/square/disconnect", { method: "POST" }); setSq(false); };
+  const square = sq
+    ? <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="font-semibold text-green-800">● Connected · Asking after each completed payment</p>
+        <button type="button" className="btn-ghost" onClick={sqDisconnect}>Disconnect</button>
+      </div>
+    : p.squareReady ? <a href="/api/square/connect" className="btn-navy inline-block">Connect Square</a>
+    : reqFor === "square" ? requestedNote("Square")
+    : open === "square" ? requestPanel("square", "Square")
+    : <button type="button" className="btn-navy" onClick={() => { setOpen("square"); setErr(""); }}>Connect Square</button>;
+
   return <div className="space-y-5">
     <div className="flex items-start justify-between gap-4">
       <p className="text-base text-navy-900">Automatically ask customers for a Google review when a job is finished.</p>
@@ -110,10 +123,12 @@ export default function AutoToggle(p: Props) {
     {!on && <p className="text-sm text-slate-500">Turn this on, then connect your job software once.</p>}
     {on && <>
       {p.flash === "error" && <p className="text-sm text-red-700">Jobber didn’t finish connecting. Please try again.</p>}
+      {p.squareFlash === "error" && <p className="text-sm text-red-700">Square didn’t finish connecting. Please try again.</p>}
       <p className="text-sm font-medium text-slate-600">Connect any job software you use — you can connect more than one.</p>
       <div className="space-y-3">
         {card("Jobber", jobber)}
         {card("Housecall Pro", housecall)}
+        {card("Square", square)}
         {card("Quick ask (no job software)", <div className="space-y-3">
           <p className="text-sm text-navy-900">Send an ask from your phone after any job — name, phone, tap Send.</p>
           <div className="flex flex-wrap gap-2"><Link href="/quick" className="btn-outline">Open Quick ask</Link>
