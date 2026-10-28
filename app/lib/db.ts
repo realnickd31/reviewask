@@ -61,6 +61,9 @@ if (!g._db) {
   addCol("users", "square_refresh_token TEXT");
   addCol("users", "square_token_expires_at TEXT");
   addCol("users", "square_merchant_id TEXT");
+  addCol("users", "stripe_connect_connected INTEGER NOT NULL DEFAULT 0");
+  addCol("users", "stripe_connect_account_id TEXT");
+  db.exec("CREATE TABLE IF NOT EXISTS stripe_connect_events (object_id TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE TABLE IF NOT EXISTS square_events (payment_id TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_rr_unsub ON review_requests(unsubscribe_token)");
   db.exec(`CREATE TABLE IF NOT EXISTS suppressions (
@@ -88,6 +91,7 @@ export type User = {
   housecall_connected: number; housecall_api_key: string | null; housecall_company_id: string | null; housecall_webhook_secret: string | null;
   square_connected: number; square_access_token: string | null; square_refresh_token: string | null;
   square_token_expires_at: string | null; square_merchant_id: string | null;
+  stripe_connect_connected: number; stripe_connect_account_id: string | null;
 };
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;
