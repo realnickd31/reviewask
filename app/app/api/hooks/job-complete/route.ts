@@ -13,6 +13,8 @@ export async function POST(req: NextRequest) {
   const token = (auth.startsWith("Bearer ") ? auth.slice(7) : req.headers.get("x-api-token") || req.nextUrl.searchParams.get("token") || "").trim();
   const u = token ? getUserByToken(token) : undefined;
   if (!u) return NextResponse.json({ error: "Invalid or missing API token." }, { status: 401 });
+  // Master "Ask after every job" switch is off: accept but don't send.
+  if (!u.auto_enabled) return NextResponse.json({ ok: true, skipped: "Automatic asks are turned off." });
   const ct = req.headers.get("content-type") || "";
   let b: Record<string, unknown> = {};
   if (ct.includes("application/json")) b = await req.json().catch(() => ({}));

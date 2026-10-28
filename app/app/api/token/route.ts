@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import crypto from "crypto";
 import { db } from "@/lib/db";
 import { currentUser } from "@/lib/session";
+import { disconnectZapier } from "@/lib/zapier";
 
 export async function POST() {
   const u = await currentUser();
@@ -11,10 +12,10 @@ export async function POST() {
   return NextResponse.json({ ok: true, token });
 }
 
-// Disconnect Zapier: clear the secret key so old Zaps stop working.
+// Back-compat: prefer POST /api/zapier/disconnect. Clear the secret key so old Zaps stop working.
 export async function DELETE() {
   const u = await currentUser();
   if (!u) return NextResponse.json({ error: "Please log in." }, { status: 401 });
-  db.prepare("UPDATE users SET api_token=NULL, auto_provider=CASE WHEN auto_provider='zapier' THEN NULL ELSE auto_provider END WHERE id=?").run(u.id);
+  disconnectZapier(u.id);
   return NextResponse.json({ ok: true });
 }

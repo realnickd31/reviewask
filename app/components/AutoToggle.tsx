@@ -23,6 +23,15 @@ export default function AutoToggle(p: Props) {
   const [open, setOpen] = useState<string | null>(p.flash === "setup" ? (p.provider === "jobber" ? "jobber" : "housecall") : p.squareFlash === "setup" ? "square" : p.stripeFlash === "setup" ? "stripe" : p.qboFlash === "setup" ? "quickbooks" : null);
   const [email, setEmail] = useState(p.setupEmail || "");
   const [err, setErr] = useState(""); const [busy, setBusy] = useState(false); const [copied, setCopied] = useState(false);
+  const [discErr, setDiscErr] = useState("");
+  // Shared disconnect: only flips the UI to disconnected when the server confirms.
+  const disc = async (url: string, name: string): Promise<boolean> => {
+    setDiscErr("");
+    try { const r = await fetch(url, { method: "POST" }); if (r.ok) return true;
+      setDiscErr((await r.json().catch(() => ({}))).error || `Couldn’t disconnect ${name}. Please try again.`); }
+    catch { setDiscErr(`Network error disconnecting ${name}. Please try again.`); }
+    return false;
+  };
   const post = (b: object) => fetch("/api/auto", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(b) });
 
   const toggle = async () => { const v = !on; setOn(v); await post({ enabled: v }); };
@@ -47,7 +56,7 @@ export default function AutoToggle(p: Props) {
     setHcBusy(false);
     if (r.ok) { setHc(next); if (next !== "none") setOn(true); } else setHcErr((await r.json().catch(() => ({}))).error || "Something went wrong.");
   };
-  const disconnect = async () => { await fetch("/api/jobber/disconnect", { method: "POST" }); setConnected(false); };
+  const disconnect = async () => { if (await disc("/api/jobber/disconnect", "Jobber")) setConnected(false); };
 
   const requestPanel = (svc: string, name: string) => <div className="mt-3 space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
     <p className="text-sm font-semibold text-navy-900">We’ll connect it for you</p>
@@ -94,7 +103,7 @@ export default function AutoToggle(p: Props) {
       {hcErr && <p className="text-sm text-red-700">{hcErr}</p>}
       <button type="button" className="btn-navy" disabled={hcBusy} onClick={() => hcPost("/api/housecall/secret", { webhookSecret: ((document.getElementById("hc-secret") as HTMLInputElement | null)?.value ?? hcSecret).trim() }, "done")}>{hcBusy ? "Saving…" : "Finish"}</button>
     </div>;
-  const hcDisconnect = async () => { await fetch("/api/housecall/disconnect", { method: "POST" }); setHc("none"); setHcKey(""); setHcSecret(""); };
+  const hcDisconnect = async () => { if (!(await disc("/api/housecall/disconnect", "Housecall Pro"))) return; setHc("none"); setHcKey(""); setHcSecret(""); };
   const housecall = hc === "done"
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking automatically</p>
@@ -107,7 +116,7 @@ export default function AutoToggle(p: Props) {
         {reqFor === "housecall" ? requestedNote("Housecall Pro") : open === "housecall" ? requestPanel("housecall", "Housecall Pro") : help}
       </div>;
 
-  const sqDisconnect = async () => { await fetch("/api/square/disconnect", { method: "POST" }); setSq(false); };
+  const sqDisconnect = async () => { if (await disc("/api/square/disconnect", "Square")) setSq(false); };
   const square = sq
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking after each completed payment</p>
@@ -118,7 +127,7 @@ export default function AutoToggle(p: Props) {
     : open === "square" ? requestPanel("square", "Square")
     : <button type="button" className="btn-navy" onClick={() => { setOpen("square"); setErr(""); }}>Connect Square</button>;
 
-  const qbDisconnect = async () => { await fetch("/api/quickbooks/disconnect", { method: "POST" }); setQb(false); };
+  const qbDisconnect = async () => { if (await disc("/api/quickbooks/disconnect", "QuickBooks")) setQb(false); };
   const qboCard = qb
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking when an invoice is paid</p>
@@ -129,7 +138,7 @@ export default function AutoToggle(p: Props) {
     : open === "quickbooks" ? requestPanel("quickbooks", "QuickBooks")
     : <button type="button" className="btn-navy" onClick={() => { setOpen("quickbooks"); setErr(""); }}>Connect QuickBooks</button>;
 
-  const stDisconnect = async () => { await fetch("/api/stripe-connect/disconnect", { method: "POST" }); setSt(false); };
+  const stDisconnect = async () => { if (await disc("/api/stripe-connect/disconnect", "Stripe")) setSt(false); };
   const stripeCard = st
     ? <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-semibold text-green-800">● Connected · Asking after each successful payment</p>
@@ -142,7 +151,7 @@ export default function AutoToggle(p: Props) {
 
   const zapDisconnect = async () => {
     if (!confirm("Disconnect Zapier? Your Zap will stop working until you connect again.")) return;
-    await fetch("/api/token", { method: "DELETE" }); setZap(false); setZapOpen(false);
+    if (await disc("/api/zapier/disconnect", "Zapier")) { setZap(false); setZapOpen(false); }
   };
   const zapWizard = <div className="mt-3"><ConnectWizard initial={zap ? p.zapierToken ?? null : null} url={p.zapierUrl || ""} business={p.business || "my business"} onConnected={() => { setZap(true); setOn(true); }} /></div>;
   const zapierCard = <div id="zapier" className="space-y-2">
@@ -166,6 +175,7 @@ export default function AutoToggle(p: Props) {
         <span className="sr-only">{on ? "On" : "Off"}</span>
       </button>
     </div>
+    {discErr && <p role="alert" className="text-sm text-red-700">{discErr}</p>}
     {!on && <p className="text-sm text-slate-500">Turn this on, then connect your job software once.</p>}
     {on && <>
       {p.flash === "error" && <p className="text-sm text-red-700">Jobber didn’t finish connecting. Please try again.</p>}
