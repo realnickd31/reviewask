@@ -19,7 +19,7 @@ export default function Page() { return <Legal title="How to get more Google rev
   </ul>
   <h2>What to say</h2>
   <p className="rounded-md border border-slate-200 bg-slate-50 p-4 text-sm">{"Hi {first name}, thanks for having us out today! If you're happy with the service, would you leave us a quick Google review? It really helps a local business. {review link} \u2013 {your name}"}</p>
-  <p>Use the direct link to your Google review form so customers don&apos;t have to search for you. Build one free with the <Link href="/tools/review-link">review link generator</Link>, and find more wording in our <Link href="/templates/review-request">review request templates</Link>.</p>
+  <p>Use the direct link to your Google review form so customers don&apos;t have to search for you. Build one free with the <Link href="/tools/review-link">review link generator</Link>.</p>
   <h2>Catch up on past customers</h2>
   <p>A slow month is a good time to ask everyone you served this year who hasn&apos;t reviewed you yet. Export or paste your customer list and send the same short message once.</p>
   <h2>Keep it policy-safe</h2>

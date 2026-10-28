@@ -6,7 +6,7 @@ export const metadata = { title: { absolute: title }, description, alternates: {
 export default function Page() { return <Legal title="Guides and free tools">
   <p>Everything here is free to read and use. The trade guides use one trade as an example, but the routine works for any Jobber, Housecall Pro or field-service business.</p>
   <h2>Free tools</h2>
-  <ul className="list-disc space-y-1 pl-5"><li><Link href="/tools/review-link">Google review link generator</Link></li><li><Link href="/templates/review-request">Review request templates</Link></li></ul>
+  <ul className="list-disc space-y-1 pl-5"><li><Link href="/tools/review-link">Google review link generator</Link></li></ul>
   <h2>Review guides by trade</h2>
   <ul className="list-disc space-y-1 pl-5"><li><Link href="/reviews-for-lawn-care">Lawn care</Link></li><li><Link href="/reviews-for-cleaning">Cleaning</Link></li><li><Link href="/reviews-for-pressure-washing">Pressure washing</Link></li><li><Link href="/reviews-for-hvac">HVAC</Link></li><li><Link href="/reviews-for-pool-service">Pool service</Link></li><li><Link href="/reviews-for-pest-control">Pest control</Link></li></ul>
   <h2>For your job software</h2>
