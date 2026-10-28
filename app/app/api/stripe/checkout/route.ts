@@ -17,6 +17,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Stripe is not configured" }, { status: 500 });
   }
   let customer = u.stripe_customer_id;
+  if (customer) {
+    // Drop stale ids (e.g. test-mode customer against live key) instead of 500ing.
+    const ok = await stripe.customers.retrieve(customer).then((c) => !(c as any).deleted, (e: any) => { if (e?.code === "resource_missing") return false; throw e; });
+    if (!ok) customer = null;
+  }
   if (!customer) {
     customer = (await stripe.customers.create({ email: u.email, name: u.business_name ?? undefined, metadata: { userId: String(u.id) } })).id;
     db.prepare("UPDATE users SET stripe_customer_id=? WHERE id=?").run(customer, u.id);
