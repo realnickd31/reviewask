@@ -31,7 +31,6 @@ const faqs = [
   { q: "Do my customers need an account?", a: "No. The email contains one link that opens your Google review form directly." },
   { q: "Is asking for reviews allowed by Google?", a: "Yes. Google permits businesses to ask customers for reviews. ReviewAsk sends the same request to every customer and never offers incentives or filters out unhappy customers, which Google prohibits." },
   { q: "Is there a contract?", a: "No. Billing is month-to-month (or annual if you prefer). You can cancel from Settings at any time, and you keep access until the end of the billing period." },
-  { q: "How is this different from Jobber’s Marketing Suite?", a: "Jobber’s Marketing Suite is a $99/month add-on that bundles reviews with other marketing tools. If what you want is review requests after every job, ReviewAsk does that one thing for $39/month and connects to Jobber directly.", link: { href: "/compare/jobber-marketing-suite", label: "See the side-by-side" } },
   { q: "How many requests can I send?", a: "The Starter plan includes 200 review requests per month for one location." },
   { q: "Who should I send review requests to?", a: "Only customers you actually did work for, who gave you their contact details. Every ReviewAsk email includes a one-click unsubscribe link, and anyone who opts out is never contacted again from your account. Texts honor STOP replies. ReviewAsk sends one request and one follow-up, never marketing. This isn't legal advice, so check the rules where you operate if you're unsure." },
   { q: "Do you support text messages?", a: "Yes. Email works today, and text-message requests are rolling out gradually as carrier verification completes. Customers can reply STOP at any time to opt out.", link: { href: "/sms", label: "How our texts and opt-in work" } },
@@ -106,20 +105,6 @@ export default async function Home() {
       <div><p className="eyebrow">Trust & compliance</p><h2 className="mt-3 text-3xl font-semibold">Review requests done the right way.</h2>
         <p className="mt-4 text-slate-600">Reviews only help if they’re genuine. ReviewAsk is built around the practices Google expects.</p></div>
       <dl className="space-y-8">{principles.map((p) => <div key={p.t} className="flex gap-4"><Check /><div><dt className="font-semibold">{p.t}</dt><dd className="mt-1 text-sm leading-relaxed text-slate-600">{p.d}</dd></div></div>)}</dl>
-    </div></section>
-
-    <section id="compare" className="border-t border-slate-200 py-24"><div className="mx-auto max-w-5xl px-6">
-      <div className="max-w-2xl"><p className="eyebrow">For Jobber users</p><h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Jobber review asks without the $99 Marketing Suite.</h2>
-        <p className="mt-4 text-slate-600">Jobber’s Marketing Suite is a $99/month add-on that includes reviews alongside other marketing tools. If you just want every finished job to turn into a review request, ReviewAsk does exactly that for $39/month.</p></div>
-      <div className="mt-10 overflow-x-auto rounded-lg border border-slate-200"><table className="w-full min-w-[480px] text-left text-sm">
-        <thead className="bg-slate-50 text-slate-600"><tr><th scope="col" className="p-4 font-medium"></th><th scope="col" className="p-4 font-semibold text-navy-900">ReviewAsk</th><th scope="col" className="p-4 font-medium">Jobber Marketing Suite</th></tr></thead>
-        <tbody className="divide-y divide-slate-200">
-          <tr><th scope="row" className="p-4 font-medium">Price</th><td className="p-4 font-semibold">$39/month</td><td className="p-4">$99/month add-on</td></tr>
-          <tr><th scope="row" className="p-4 font-medium">Focus</th><td className="p-4">Google review requests after every job</td><td className="p-4">Reviews plus a broader marketing bundle</td></tr>
-          <tr><th scope="row" className="p-4 font-medium">Works with Jobber</th><td className="p-4">Yes — connects to your account</td><td className="p-4">Yes — built in</td></tr>
-          <tr><th scope="row" className="p-4 font-medium">Contract</th><td className="p-4">None, cancel anytime</td><td className="p-4">Per Jobber’s plan terms</td></tr>
-        </tbody></table></div>
-      <p className="mt-4 text-sm text-slate-500">Want more than reviews? The Marketing Suite may be the right fit. <Link href="/compare/jobber-marketing-suite" className="font-medium text-navy-900 underline underline-offset-4">Read the full comparison</Link> or see <Link href="/for-jobber" className="font-medium text-navy-900 underline underline-offset-4">ReviewAsk for Jobber</Link>. Curious how far behind your competitors you are? <Link href="/tools/review-gap" className="font-medium text-navy-900 underline underline-offset-4">Try the review gap calculator</Link>.</p>
     </div></section>
 
     <Pricing />

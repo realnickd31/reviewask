@@ -3,15 +3,14 @@ import Legal from "@/components/Legal";
 import Image from "next/image";
 export const metadata = {
   title: { absolute: "Jobber Google reviews: how to automate review requests after every job" },
-  description: "How Jobber businesses get more Google reviews: ask after every completed job, follow up once, and send everyone to Google. Options compared, setup steps, and a message template.",
+  description: "How Jobber businesses get more Google reviews: ask after every completed job, follow up once, and send everyone to Google. Setup steps, and a message template.",
   alternates: { canonical: "/jobber-google-reviews" },
 };
 export default function Page() { return <Legal title="Jobber Google reviews: automate the ask after every job">
   <p>Most happy customers will leave a Google review — if someone asks at the right moment and makes it one tap. The hard part isn&apos;t the message; it&apos;s remembering to send it after every single job. Here&apos;s how Jobber businesses can handle it.</p>
-  <h2>Your three options</h2>
+  <h2>Your two options</h2>
   <p><strong>1. Ask by hand.</strong> Text or email each customer yourself after the job. Free, personal, and easy to forget on a busy week.</p>
-  <p><strong>2. Jobber&apos;s Marketing Suite.</strong> Jobber offers review requests as part of its Marketing Suite, a $99/month add-on that also includes other marketing tools. A good fit if you want that whole bundle.</p>
-  <p><strong>3. A focused review tool.</strong> <Link href="/for-jobber">ReviewAsk</Link> connects to Jobber and sends a Google review request whenever a job is completed, with one follow-up on day 3, for $39/month. <Link href="/compare/jobber-marketing-suite">Compare the two side by side</Link>.</p>
+  <p><strong>2. A focused review tool.</strong> <Link href="/for-jobber">ReviewAsk</Link> connects to Jobber and sends a Google review request whenever a job is completed, with one follow-up on day 3, for $39/month.</p>
   <h2>What a good review request looks like</h2>
   <ul className="list-disc space-y-1 pl-5"><li>Sent soon after the job is finished, while it&apos;s fresh.</li><li>From your business name, short and personal.</li><li>One link that opens your Google review form directly.</li><li>At most one polite reminder — no endless drip.</li><li>Sent to every customer. Google&apos;s policies prohibit offering incentives for reviews or selectively asking only happy customers.</li></ul>
   <h2>A template you can use</h2>
@@ -24,5 +23,5 @@ export default function Page() { return <Legal title="Jobber Google reviews: aut
   <p>From then on, each completed job triggers a request, and your dashboard shows what was sent, reminded, or failed.</p>
   <p className="pt-4"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
   <p className="text-sm text-slate-600">Not ready yet? <Link href="/tools/review-gap" className="font-medium text-navy-900 underline underline-offset-4">See how many Google reviews you are behind your top local competitors</Link>, free and with no signup.</p>
-  <p className="text-sm text-slate-500">$39/month or $390/year after the trial · No contract · Cancel anytime. Marketing Suite pricing as listed by Jobber and may change. ReviewAsk is not affiliated with Jobber or Google.</p>
+  <p className="text-sm text-slate-500">$39/month or $390/year after the trial · No contract · Cancel anytime. ReviewAsk is not affiliated with Jobber or Google.</p>
 </Legal>; }
