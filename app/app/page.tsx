@@ -14,7 +14,7 @@ const steps = [
   { n: "03", t: "Follow-up and proof, handled", d: "Anyone who hasn’t been reminded gets one polite follow-up on day 3. Your dashboard shows every request, reminder, and status." },
 ];
 const pillars = [
-  { t: "Three ways to send", d: "Tap send from your phone after a visit, upload a spreadsheet of customers, or — if you use Jobber or Housecall Pro — have requests go out automatically when a job is marked done." },
+  { t: "Three ways to send", d: "Tap send from your phone after a visit, upload a spreadsheet of customers, or connect a tool you already use so requests go out automatically when a job is done or an invoice is paid." },
   { t: "Bulk upload", d: "Upload a spreadsheet (Excel/CSV) of past customers (name, email, phone) and ask them all with one confirm." },
   { t: "Day-3 follow-up", d: "One polite reminder with the same link. Most people mean to leave a review and simply forget." },
   { t: "Proof it’s working", d: "Monthly totals, follow-ups sent, and a status for every request — sent, reminded, or failed." },
@@ -73,11 +73,11 @@ export default async function Home() {
         </div>
         <div aria-label="Example review request" className="hidden lg:block"><div className="mx-auto w-full max-w-sm rounded-2xl bg-white p-5 text-navy-900 shadow-2xl ring-1 ring-white/10">
           <p className="text-xs font-medium uppercase tracking-wider text-slate-400">Example request</p>
-          <p className="mt-3 text-xs text-slate-500">From: <span className="font-medium text-navy-900">Your Business</span></p>
-          <p className="mt-1 text-sm font-semibold">Sam, thanks again from Your Business</p>
-          <p className="mt-3 text-sm leading-relaxed text-slate-700">Thanks again for choosing Your Business. If you’re happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.</p>
+          <p className="mt-3 text-xs text-slate-500">From: <span className="font-medium text-navy-900">Bright Harbor Co.</span></p>
+          <p className="mt-1 text-sm font-semibold">Sam, thanks again from Bright Harbor Co.</p>
+          <p className="mt-3 text-sm leading-relaxed text-slate-700">Thanks again for choosing Bright Harbor Co. If you’re happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.</p>
           <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a Google review</span>
-          <p className="mt-2 break-all text-xs text-slate-400">g.page/r/your-business/review</p>
+          <p className="mt-2 break-all text-xs text-slate-400">g.page/r/bright-harbor/review</p>
           <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent when the job is done</span><span className="text-lime-700">Day-3 reminder queued</span></div>
         </div></div>
       </div>
@@ -96,7 +96,7 @@ export default async function Home() {
       <figure className="mt-12"><Image src="/screens/customer-email.png" alt="What your customer sees: a short email from your business with a Leave a Google review button" width={1600} height={1000} className="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 shadow-sm" /><figcaption className="mt-3 text-center text-sm text-slate-500">What your customer gets: a short thank-you from your business and a “Leave a Google review” button that opens your Google review form.</figcaption></figure>
       <div id="connect" className="mt-16 scroll-mt-4 rounded-xl border border-slate-200 bg-slate-50 p-8">
         <h3 className="text-lg font-semibold">Optional: let your tools send it for you</h3>
-        <p className="mt-2 text-sm text-slate-600">Connect Jobber, Housecall Pro, Square, Stripe, QuickBooks, or Zapier — or skip it and use a spreadsheet or your phone.</p>
+        <p className="mt-2 text-sm text-slate-600">Connect a tool you already use (listed above) — or skip it and use a spreadsheet or your phone.</p>
         <ol className="mt-5 grid gap-3 text-sm sm:grid-cols-3">{["Connect your tool in Settings", "A job is marked complete or an invoice is paid", "Your customer gets the review request"].map((t, i) => <li key={t} className="flex gap-3 rounded-lg bg-white p-4 ring-1 ring-slate-200"><span className="font-mono text-xs text-slate-400">{i + 1}</span><span className="text-navy-900">{t}</span></li>)}</ol>
       </div>
     </div></section>
@@ -111,7 +111,7 @@ export default async function Home() {
 
     <section id="backlog" className="border-t border-slate-200 py-16"><div className="mx-auto max-w-6xl px-6"><div className="flex flex-col gap-6 rounded-xl border border-lime-200 bg-lime-50/60 p-8 sm:flex-row sm:items-center sm:justify-between">
       <div className="max-w-2xl"><p className="eyebrow !text-lime-700">Slower season?</p><h2 className="mt-2 text-2xl font-semibold">Ask last season’s customers this week.</h2>
-        <p className="mt-3 text-slate-700">Plenty of happy customers from the busy months never got asked. Export them from Jobber, Housecall Pro, or a spreadsheet, paste or upload the list, and email every one of them a review request with one confirm, plus one follow-up on day 3. (SMS is rolling out.) Up to 200 requests a month.</p></div>
+        <p className="mt-3 text-slate-700">Plenty of happy customers from the busy months never got asked. Export them from your software or a spreadsheet, paste or upload the list, and email every one of them a review request with one confirm, plus one follow-up on day 3. (SMS is rolling out.) Up to 200 requests a month.</p></div>
       <div className="flex flex-none flex-col gap-2 sm:items-end"><Link href="/signup" className="btn-navy px-5 py-3">Start free trial</Link><a href="#how" className="text-sm font-medium text-navy-900 underline underline-offset-4">See how it works</a></div>
     </div></div></section>
 
@@ -123,11 +123,10 @@ export default async function Home() {
 
     <Pricing />
 
-    <section id="founder" className="border-t border-slate-200 py-16"><div className="mx-auto max-w-3xl px-6"><div className="rounded-xl border border-slate-200 bg-white p-8">
-      <p className="eyebrow">A note from the founder</p>
-      <p className="mt-3 text-slate-700">I built ReviewAsk because the shops doing the best work often have the fewest reviews. Nobody has time to ask after every job. ReviewAsk does that one thing, for a flat $39 a month.</p>
-      <p className="mt-3 text-slate-700">Want help getting set up? Email <a href="mailto:support@getreviewask.com?subject=Setup%20help" className="font-medium text-navy-900 underline underline-offset-4">support@getreviewask.com</a> and I&apos;ll walk you through connecting Jobber or Housecall Pro and adding your review link. It usually takes about 10 minutes.</p>
-      <p className="mt-4 text-sm font-medium text-navy-900">Nick D&apos;Antonio, founder of ReviewAsk</p>
+    <section id="about" className="border-t border-slate-200 py-16"><div className="mx-auto max-w-3xl px-6"><div className="rounded-xl border border-slate-200 bg-white p-8">
+      <p className="eyebrow">Why ReviewAsk</p>
+      <p className="mt-3 text-slate-700">The businesses doing the best work often have the fewest reviews — not because customers are unhappy, but because nobody has time to ask after every job. ReviewAsk does that one thing, for a flat $39 a month.</p>
+      <p className="mt-3 text-slate-700">Want help getting set up? Email <a href="mailto:support@getreviewask.com?subject=Setup%20help" className="font-medium text-navy-900 underline underline-offset-4">support@getreviewask.com</a> and we&apos;ll walk you through adding your review link and connecting a tool if you want. It usually takes about 10 minutes.</p>
     </div></div></section>
     <section id="faq" className="border-t border-slate-200 py-24"><div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1fr_1.8fr]">
       <div><p className="eyebrow">FAQ</p><h2 className="mt-3 text-3xl font-semibold">Common questions</h2>
@@ -140,7 +139,7 @@ export default async function Home() {
     <section className="bg-navy-950 text-white"><div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-16 sm:flex-row sm:items-center">
       <div><h2 className="text-2xl font-semibold">Start asking for reviews this week.</h2><p className="mt-2 text-white/70">7-day free trial · $39/month after · Cancel anytime · Questions? support@getreviewask.com</p></div>
       <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start your free trial</Link></div></section>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", name: "ReviewAsk", url: "https://getreviewask.com", applicationCategory: "BusinessApplication", operatingSystem: "Web", description: "ReviewAsk emails your customers a short message with a one-tap link to leave a Google review after work is done, from a spreadsheet, or with one tap — plus one follow-up. For any business that wants more Google reviews. Optional Jobber and Housecall Pro integrations.", offers: [{ "@type": "Offer", price: "39", priceCurrency: "USD", name: "Starter (monthly)" }, { "@type": "Offer", price: "390", priceCurrency: "USD", name: "Starter (annual)" }] }) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", name: "ReviewAsk", url: "https://getreviewask.com", applicationCategory: "BusinessApplication", operatingSystem: "Web", description: "ReviewAsk emails your customers a short message with a one-tap link to leave a Google review after work is done, from a spreadsheet, or with one tap — plus one follow-up. For any business that wants more Google reviews. Optional connections to tools you already use.", offers: [{ "@type": "Offer", price: "39", priceCurrency: "USD", name: "Starter (monthly)" }, { "@type": "Offer", price: "390", priceCurrency: "USD", name: "Starter (annual)" }] }) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
     {!user && <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 p-3 backdrop-blur sm:hidden"><Link href="/signup" className="btn-navy w-full py-3">Start 7-day free trial · $39/mo after</Link></div>}
     <div className="pb-20 sm:pb-0"><Footer /></div>
