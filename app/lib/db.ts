@@ -88,6 +88,24 @@ if (!g._db) {
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_users_api_token ON users(api_token)");
   db.exec("CREATE INDEX IF NOT EXISTS idx_rr_remind ON review_requests(remind_at, reminded_at)");
   db.exec("CREATE INDEX IF NOT EXISTS idx_rr_send ON review_requests(status, send_at)");
+  db.exec(`CREATE TABLE IF NOT EXISTS analytics_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    event TEXT NOT NULL,
+    path TEXT,
+    referrer TEXT,
+    utm_source TEXT,
+    utm_medium TEXT,
+    utm_campaign TEXT,
+    utm_content TEXT,
+    utm_term TEXT,
+    visitor_id TEXT,
+    user_id INTEGER,
+    meta TEXT,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )`);
+  db.exec("CREATE INDEX IF NOT EXISTS idx_ae_event_created ON analytics_events(event, created_at)");
+  db.exec("CREATE INDEX IF NOT EXISTS idx_ae_visitor_created ON analytics_events(visitor_id, created_at)");
+  db.exec("CREATE INDEX IF NOT EXISTS idx_ae_path_created ON analytics_events(path, created_at)");
   g._db = db;
 }
 

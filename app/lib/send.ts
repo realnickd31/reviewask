@@ -1,6 +1,7 @@
 import crypto from "crypto";
 import { db, isSuppressed, unsubscribeUrl, getUser, isActive, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
 import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms, sendEmail, sendSms } from "./email";
+import { trackFirstAskIfNeeded } from "./analytics";
 
 export type SendInput = { name?: unknown; email?: unknown; phone?: unknown };
 export type SendResult =
@@ -42,11 +43,14 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
     const r = db.prepare(`INSERT INTO review_requests (user_id, customer_name, customer_email, customer_phone, channel, status, source, send_at, unsubscribe_token)
       VALUES (?,?,?,?,?,'scheduled',?, datetime('now', ?), ?)`)
       .run(u.id, i.name, i.email || null, i.phone || null, [i.email && "email", i.phone && "sms"].filter(Boolean).join("+"), source, `+${SEND_DELAY_HOURS} hours`, token);
-    return { ok: true, id: Number(r.lastInsertRowid), mode: "scheduled", used: usedThisMonth(u.id) };
+    const sid = Number(r.lastInsertRowid);
+    trackFirstAskIfNeeded(u.id, sid);
+    return { ok: true, id: sid, mode: "scheduled", used: usedThisMonth(u.id) };
   }
   const r = db.prepare(`INSERT INTO review_requests (user_id, customer_name, customer_email, customer_phone, channel, status, source, unsubscribe_token)
     VALUES (?,?,?,?,?,'sending',?,?)`).run(u.id, i.name, i.email || null, i.phone || null, "email", source, token);
   const id = Number(r.lastInsertRowid);
+  trackFirstAskIfNeeded(u.id, id);
   const d = await deliver(u, id, i, token);
   if (d.status === "failed") return { ok: false, error: "Email provider rejected the send. Check RESEND settings.", code: 502, id };
   return { ok: true, id, mode: d.mode, used: usedThisMonth(u.id) };

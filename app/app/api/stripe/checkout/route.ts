@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { currentUser } from "@/lib/session";
 import { stripe, baseUrl } from "@/lib/stripe";
+import { trackServer } from "@/lib/analytics";
 
 export async function POST(req: NextRequest) {
   const u = await currentUser();
@@ -31,5 +32,6 @@ export async function POST(req: NextRequest) {
     subscription_data: { trial_period_days: 7, metadata: { userId: String(u.id) } }, allow_promotion_codes: true,
     success_url: baseUrl(req.nextUrl.origin) + "/dashboard?session_id={CHECKOUT_SESSION_ID}", cancel_url: baseUrl(req.nextUrl.origin) + "/onboarding?step=pay&canceled=1",
   });
+  trackServer({ event: "checkout_started", user_id: u.id, path: "/onboarding", meta: { plan: String(plan || "monthly") } });
   return NextResponse.redirect(session.url!, 303);
 }
