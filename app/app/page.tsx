@@ -26,7 +26,6 @@ const principles = [
   { t: "Your data stays yours", d: "We never sell customer contact details. Export or delete anytime." },
 ];
 const faqs = [
-  { q: "Does it work with Jobber or Housecall Pro?", a: "Yes. Flip on “Ask after every job” in Settings, pick Jobber or Housecall Pro, and connect it once — we’ll help finish the setup for you. Not on either? Use Quick ask on your phone after each job." },
   { q: "How many reminders do customers get?", a: "One. A single polite follow-up three days after the first request, with the same link. No endless drip." },
   { q: "Do my customers need an account?", a: "No. The email contains one link that opens your Google review form directly." },
   { q: "Is asking for reviews allowed by Google?", a: "Yes. Google permits businesses to ask customers for reviews. ReviewAsk sends the same request to every customer and never offers incentives or filters out unhappy customers, which Google prohibits." },
