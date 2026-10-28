@@ -10,7 +10,7 @@ export default function Page() { return <Legal title="Jobber Google reviews: aut
   <p>Most happy customers will leave a Google review — if someone asks at the right moment and makes it one tap. The hard part isn&apos;t the message; it&apos;s remembering to send it after every single job. Here&apos;s how Jobber businesses can handle it.</p>
   <h2>Your two options</h2>
   <p><strong>1. Ask by hand.</strong> Text or email each customer yourself after the job. Free, personal, and easy to forget on a busy week.</p>
-  <p><strong>2. A focused review tool.</strong> <Link href="/for-jobber">ReviewAsk</Link> connects to Jobber and sends a Google review request whenever a job is completed, with one follow-up on day 3, for $39/month.</p>
+  <p><strong>2. A focused review tool.</strong> ReviewAsk connects to Jobber and sends a Google review request whenever a job is completed, with one follow-up on day 3, for $39/month.</p>
   <h2>What a good review request looks like</h2>
   <ul className="list-disc space-y-1 pl-5"><li>Sent soon after the job is finished, while it&apos;s fresh.</li><li>From your business name, short and personal.</li><li>One link that opens your Google review form directly.</li><li>At most one polite reminder — no endless drip.</li><li>Sent to every customer. Google&apos;s policies prohibit offering incentives for reviews or selectively asking only happy customers.</li></ul>
   <h2>A template you can use</h2>
