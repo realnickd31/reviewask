@@ -2,6 +2,7 @@ import Link from "next/link";
 import LocalTime from "@/components/LocalTime";
 import { redirect } from "next/navigation";
 import AppNav from "@/components/AppNav";
+import QuickAsk from "@/components/QuickAsk";
 import BulkUpload from "@/components/BulkUpload";
 import { processDueReminders, processDueScheduledAsks, SEND_DELAY_HOURS } from "@/lib/send";
 import { dontAsk, cancelFollowUp } from "@/app/actions";
@@ -51,20 +52,18 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first to see what customers get. Use <Link href="/quick" className="font-medium text-navy-900 underline underline-offset-4">Quick ask</Link>.</p></div></li>
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Paste recent customers from a spreadsheet to ask them too. <a href="#bulk" className="font-medium text-navy-900 underline underline-offset-4">Paste a spreadsheet</a></p></div></li>
       </ol></section>}
-    <section className="grid gap-3 sm:grid-cols-3">
-      <Link href="/quick" className="rounded-lg border border-slate-200 bg-white p-5 hover:border-navy-900"><p className="text-lg font-semibold text-navy-900">Quick ask</p><p className="mt-1 text-sm text-slate-500">Name + email (or phone), tap Send. Send one in seconds from any device.</p></Link>
-      <a href="#bulk" className="rounded-lg border border-slate-200 bg-white p-5 hover:border-navy-900"><p className="text-lg font-semibold text-navy-900">Paste a spreadsheet</p><p className="mt-1 text-sm text-slate-500">Copy rows from Excel or Sheets, paste, send.</p></a>
-      <Link href="/settings#automatic" className="rounded-lg border border-slate-200 bg-white p-5 hover:border-navy-900"><p className="text-lg font-semibold text-navy-900">{autoLabel}</p><p className="mt-1 text-sm text-slate-500">{autoSub}</p></Link>
-    </section>
+    <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLabel}: {autoSub}</Link></div>
+      <p className="mb-4 mt-1 text-sm text-slate-500">Name + email (or phone), tap Send.</p>
+      <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} /></section>
     <section className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
       {[["Requests this month", used, `${pct.toFixed(0)}% of plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} scheduled`], ["Sent automatically", stats.auto ?? 0, "from your job software"], ["Requests left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
         <div key={String(l)} className="bg-white p-4 sm:p-5"><p className="text-[11px] font-medium uppercase leading-snug tracking-wider text-slate-500 sm:text-xs">{l}</p>
           <p className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-navy-900">{v}</p><p className="mt-1 text-xs text-slate-500">{sub}</p></div>)}
     </section>
     <div className="h-1.5 rounded-full bg-slate-100"><div className="h-1.5 rounded-full bg-navy-900" style={{ width: `${pct}%` }} /></div>
-      <section className="card" id="bulk"><h2 className="text-lg font-semibold">Paste a spreadsheet</h2>
+      <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-slate-600">Have a list? Send to many customers at once</summary>
         <p className="mb-5 mt-1 text-sm text-slate-500">Copy customer rows from Excel or Google Sheets and paste — no exporting. <a href="/sample-customers.csv" download className="font-medium text-navy-900 underline underline-offset-4">Download sample spreadsheet</a></p>
-        <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} /></section>
+        <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} /></details>
     <p className="text-sm text-slate-500">Tired of typing customers in? <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Turn on automatic asks</Link> once, and every customer gets asked automatically.</p>
     <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
       <p className="mb-4 mt-1 text-sm text-slate-500">Automatic asks from your job software wait {SEND_DELAY_HOURS} hours before sending, so you can stop one if something went wrong. Asks you type in or paste send right away. Every customer still gets asked unless you stop it.</p>
@@ -75,7 +74,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     </section>
     <section className="flex flex-wrap items-center gap-2 text-sm"><span className="text-slate-500">Billing:</span><form action="/api/stripe/portal?view=invoices&from=dashboard" method="post"><button className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Invoices</button></form><form action="/api/stripe/portal?view=payment_methods&from=dashboard" method="post"><button className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Payment methods</button></form></section>
     <LiveRefresh /><section className="card px-4 sm:px-6" id="history"><div className="mb-4 flex items-baseline justify-between gap-3"><h2 className="text-lg font-semibold">History</h2><div className="flex items-baseline gap-3">{rows.length > 0 && <p className="text-xs text-slate-500">{rows.length} most recent</p>}<a href="/api/requests/export" download className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Download CSV</a></div></div>
-      {rows.length === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Use Quick ask, paste a spreadsheet, or connect your job software. Every request and follow-up will show here with its status.</p></div> : <>
+      {rows.length === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Ask a customer above, or connect your job software. Every request and follow-up will show here with its status.</p></div> : <>
       <ul className="-mx-1 space-y-2.5 md:hidden">{rows.map((r) => { const ch = chip(r); const fu = followUp(r); return <li key={r.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="flex items-start justify-between gap-3"><div className="min-w-0"><p className="truncate text-[15px] font-semibold text-navy-900">{r.customer_name}</p>
           {r.customer_email && <p className="mt-0.5 truncate text-sm text-slate-500">{r.customer_email}</p>}{r.customer_phone && <p className="text-sm text-slate-500">{r.customer_phone}</p>}</div>
