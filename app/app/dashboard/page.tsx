@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LocalTime from "@/components/LocalTime";
 import { redirect } from "next/navigation";
 import AppNav from "@/components/AppNav";
 import SendForm from "@/components/SendForm";
@@ -97,10 +98,10 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   </main></div>;
 }
 
-function fmt(t: string) { return new Date(t.replace(" ", "T") + "Z").toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); }
+const fmt = (t: string, prefix = "") => <LocalTime t={t} prefix={prefix} />;
 function channel(r: ReviewRequest) { return ({ email: "Email", sms: "Text", "email+sms": "Email + text" } as Record<string, string>)[r.channel] || r.channel.replace("+", " + "); }
 function source(r: ReviewRequest) { return ({ manual: "Typed in", bulk: "Spreadsheet", webhook: "Job software", test: "Test" } as Record<string, string>)[r.source || "manual"] || "Typed in"; }
-function followUp(r: ReviewRequest) { return r.reminded_at ? fmt(r.reminded_at) : r.remind_at && r.status === "sent" ? `Due ${fmt(r.remind_at)}` : "—"; }
+function followUp(r: ReviewRequest) { return r.reminded_at ? fmt(r.reminded_at) : r.remind_at && r.status === "sent" ? fmt(r.remind_at, "Due ") : "—"; }
 function queuedTip(r: ReviewRequest) { return r.status === "queued" ? "Saved, not sent yet. Text messages are rolling out; add an email to send now." : undefined; }
 function chip(r: ReviewRequest) {
   if (r.status === "failed") return { label: "Failed", cls: "bg-red-50 text-red-700 ring-1 ring-red-100" };
