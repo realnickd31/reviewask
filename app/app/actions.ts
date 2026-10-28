@@ -53,3 +53,11 @@ export async function saveSettings(_: FormState, fd: FormData): Promise<FormStat
   db.prepare("UPDATE users SET business_name=?, review_url=? WHERE id=?").run(b.name, b.url, u.id);
   return { ok: "Saved." };
 }
+
+export async function dontAsk(fd: FormData) {
+  const u = await requireUser();
+  const { cancelScheduledAsk } = await import("@/lib/send");
+  cancelScheduledAsk(u.id, Number(fd.get("id")));
+  const { revalidatePath } = await import("next/cache");
+  revalidatePath("/dashboard");
+}

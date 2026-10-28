@@ -3,7 +3,8 @@ import { redirect } from "next/navigation";
 import AppNav from "@/components/AppNav";
 import SendForm from "@/components/SendForm";
 import BulkUpload from "@/components/BulkUpload";
-import { processDueReminders } from "@/lib/send";
+import { processDueReminders, processDueScheduledAsks, SEND_DELAY_HOURS } from "@/lib/send";
+import { dontAsk } from "@/app/actions";
 import { requireUser } from "@/lib/session";
 import { db, isActive, usedThisMonth, MONTHLY_QUOTA, getUser, type ReviewRequest } from "@/lib/db";
 import { stripe } from "@/lib/stripe";
@@ -25,7 +26,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   }
   const active = isActive(u);
   // Best-effort: send this account's due follow-ups so it works without an external cron.
-  if (active) { try { await processDueReminders(u.id, 50); } catch (e) { console.error("reminders", e); } }
+  if (active) { try { await processDueScheduledAsks(u.id, 50); await processDueReminders(u.id, 50); } catch (e) { console.error("reminders", e); } }
   const used = usedThisMonth(u.id);
   const stats = db.prepare(`SELECT
     SUM(CASE WHEN reminded_at IS NOT NULL THEN 1 ELSE 0 END) reminded,
@@ -34,7 +35,8 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     SUM(CASE WHEN remind_at IS NOT NULL AND reminded_at IS NULL AND status='sent' THEN 1 ELSE 0 END) pending
     FROM review_requests WHERE user_id=? AND created_at >= datetime('now','start of month')`).get(u.id) as Record<string, number | null>;
   const remaining = Math.max(0, MONTHLY_QUOTA - used);
-  const rows = db.prepare("SELECT * FROM review_requests WHERE user_id=? ORDER BY id DESC LIMIT 100").all(u.id) as ReviewRequest[];
+  const rows = db.prepare("SELECT * FROM review_requests WHERE user_id=? AND status != 'scheduled' ORDER BY id DESC LIMIT 100").all(u.id) as ReviewRequest[];
+  const scheduled = db.prepare("SELECT * FROM review_requests WHERE user_id=? AND status='scheduled' ORDER BY send_at").all(u.id) as ReviewRequest[];
   const pct = Math.min(100, (used / MONTHLY_QUOTA) * 100);
   return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-6 px-4 py-8">
     {searchParams.dev_unlocked && <p className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">Dev mode: Stripe isn&apos;t configured, so your account was unlocked as a trial.</p>}
@@ -68,6 +70,13 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} /></section>
     </div>
     <p className="text-sm text-slate-500">Tired of typing customers in? <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Turn on automatic asks</Link> once, and every finished job gets asked automatically.</p>
+    <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
+      <p className="mb-4 mt-1 text-sm text-slate-500">Automatic asks from your job software wait {SEND_DELAY_HOURS} hours before sending, so you can stop one after a job that went wrong. Asks you type in or paste send right away. Every customer still gets asked unless you stop it.</p>
+      {scheduled.length === 0 ? <p className="text-sm text-slate-500">Nothing waiting to send.</p> :
+      <ul className="divide-y">{scheduled.map((r) => <li key={r.id} className="flex items-center justify-between gap-4 py-3 text-sm">
+        <div><p className="font-medium">{r.customer_name}</p><p className="text-slate-500">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")} · sends {fmt(r.send_at!)}</p></div>
+        <form action={dontAsk}><input type="hidden" name="id" value={r.id} /><button className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium hover:bg-slate-50">Don&apos;t ask</button></form></li>)}</ul>}
+    </section>
     <section className="card overflow-x-auto"><h2 className="mb-4 text-lg font-semibold">History</h2>
       {rows.length === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Send one above, upload a spreadsheet, or connect your job software. Every request and follow-up will show here with its status.</p></div> :
       <table className="w-full min-w-[720px] text-left text-sm"><thead className="text-xs uppercase tracking-wider text-slate-500"><tr><th className="py-2">Customer</th><th>Contact</th><th>Channel</th><th>Source</th><th>Status</th><th>Sent</th><th>Follow-up</th></tr></thead>
@@ -85,6 +94,9 @@ export default async function Page({ searchParams }: { searchParams: { session_i
 function fmt(t: string) { return new Date(t.replace(" ", "T") + "Z").toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); }
 function chip(r: ReviewRequest) {
   if (r.status === "failed") return { label: "Failed", cls: "bg-red-50 text-red-700 ring-1 ring-red-100" };
+  if (r.status === "cancelled") return { label: "Not asked", cls: "bg-slate-100 text-slate-500" };
+  if (r.status === "sending") return { label: "Sending", cls: "bg-slate-100 text-slate-600" };
+  if (r.status === "suppressed") return { label: "Unsubscribed", cls: "bg-slate-100 text-slate-500" };
   if (r.status === "queued") return { label: "Queued", cls: "bg-slate-100 text-slate-600" };
   if (r.reminded_at) return { label: "Reminded", cls: "bg-navy-900 text-white" };
   return { label: "Sent", cls: "bg-lime-50 text-lime-700 ring-1 ring-lime-100" };
