@@ -9,17 +9,17 @@ export const dynamic = "force-dynamic";
 export const metadata = { alternates: { canonical: "/" } };
 
 const steps = [
-  { n: "01", t: "Connect once", d: "Add your Google review link, then turn on automatic asks and connect Jobber once — or use Quick ask on your phone after each job." },
-  { n: "02", t: "Requests go out after every job", d: "When a job closes, the customer gets a short request from your business. Have a backlog? Upload a spreadsheet of recent customers." },
+  { n: "01", t: "Add your Google review link", d: "Paste your Google review link and your business name. That’s the only setup you need — connecting Jobber or Housecall Pro is optional." },
+  { n: "02", t: "Your customers get a short email", d: "After the work is done, each customer gets a short note from your business with a one-tap link to leave a Google review. Send it from your phone, upload a spreadsheet, or let it go out automatically." },
   { n: "03", t: "Follow-up and proof, handled", d: "Anyone who hasn’t been reminded gets one polite follow-up on day 3. Your dashboard shows every request, reminder, and status." },
 ];
 const pillars = [
-  { t: "Automatic after each job", d: "When a job is marked done in Jobber or Housecall Pro, the ask goes out on its own — no one has to remember." },
+  { t: "Three ways to send", d: "Tap send from your phone after a visit, upload a spreadsheet of customers, or — if you use Jobber or Housecall Pro — have requests go out automatically when a job is marked done." },
   { t: "Bulk upload", d: "Upload a spreadsheet (Excel/CSV) of past customers (name, email, phone) and ask them all with one confirm." },
   { t: "Day-3 follow-up", d: "One polite reminder with the same link. Most people mean to leave a review and simply forget." },
   { t: "Proof it’s working", d: "Monthly totals, follow-ups sent, and a status for every request — sent, reminded, or failed." },
 ];
-const audiences = ["Any business that runs jobs in Jobber", "Housecall Pro shops", "Owner-operators and growing crews", "Anyone who finishes a job and wants the review"];
+const audiences = ["Any local business that wants more Google reviews", "Teams with a customer list in a spreadsheet", "Owner-operators and growing teams", "Jobber and Housecall Pro users (optional)"];
 const principles = [
   { t: "Every customer gets the same ask", d: "No review gating or filtering. Requests follow Google’s review policies." },
   { t: "Sent from your business name", d: "Customers see your name and a clear link — no third-party branding in the way." },
@@ -58,10 +58,10 @@ export default async function Home() {
               <div className="absolute right-0 z-20 mt-2 w-56 rounded-lg bg-white p-2 text-navy-900 shadow-xl">{[["/#how", "How it works"], ["/pricing", "Pricing"], ["/for-jobber", "For Jobber users"], ["/for-housecall-pro", "For Housecall Pro users"], ["/#faq", "FAQ"], ["/login", "Log in"]].map(([h, l]) => <a key={h} href={h} className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">{l}</a>)}</div></details></>}</nav></div>
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-28 pt-20 sm:pt-28 lg:grid-cols-[1.4fr_1fr]">
         <div className="max-w-3xl">
-          <p className="eyebrow !text-lime-400">For Jobber &amp; Housecall Pro businesses · $39/mo</p>
+          <p className="eyebrow !text-lime-400">More Google reviews, without chasing customers · $39/mo</p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every finished job gets a Google review request — automatically.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">ReviewAsk sends the ask when a job closes in Jobber or Housecall Pro, follows up once on day 3, and shows you exactly what went out. No chasing customers by hand — and no $99/month add-on.</p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Connect Jobber — free for 7 days</Link>}{!user && <Link href="/signup" className="btn-ghost px-5 py-3">Using Housecall Pro? Start free trial</Link>}</div>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">When a job is done, ReviewAsk emails your customer a short note from your business with one tap to leave a Google review. One polite follow-up on day 3. Upload a spreadsheet of past customers anytime — or send a quick request from your phone. Your dashboard shows exactly what went out.</p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start free for 7 days</Link>}{!user && <a href="#how" className="btn-ghost px-5 py-3">See how it works</a>}</div>
           <p className="mt-4 text-sm text-white/70">Not sure you need it? <Link href="/tools/review-gap" className="font-medium text-white underline underline-offset-4 hover:text-lime-400">See how far behind your competitors you are</Link> — free, no signup. More free tools: <Link href="/tools/review-link" className="font-medium text-white underline underline-offset-4 hover:text-lime-400">review link generator</Link> · <Link href="/templates/review-request" className="font-medium text-white underline underline-offset-4 hover:text-lime-400">message templates</Link>.</p>
           <div className="mt-6 flex flex-wrap gap-2 text-xs text-white/80"><Link href="/for-jobber" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Jobber</Link><Link href="/for-housecall-pro" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">Works with Housecall Pro</Link><span className="rounded-full px-3 py-1 ring-1 ring-white/20">Quick ask from any phone</span></div>
           <p className="mt-5 text-sm text-white/60"><strong className="font-semibold text-white">$39/month</strong> after the 7-day trial · No contract · Cancel anytime</p>
@@ -72,7 +72,7 @@ export default async function Home() {
           <p className="mt-3 text-sm font-semibold">From: Your Business Name</p>
           <p className="mt-2 text-sm leading-relaxed text-slate-700">Hi Sam — thanks for choosing us today! Would you mind leaving a quick Google review? It really helps a small business like ours.</p>
           <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a review ★★★★★</span>
-          <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Job closed in Jobber → sent automatically</span><span className="text-lime-700">Day-3 reminder queued</span></div>
+          <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent automatically after the job</span><span className="text-lime-700">Day-3 reminder queued</span></div>
         </div></div>
       
     </header>
@@ -83,7 +83,7 @@ export default async function Home() {
     </div></section>
 
     <section id="how" className="py-24"><div className="mx-auto max-w-6xl px-6">
-      <div className="max-w-2xl"><p className="eyebrow">How it works</p><h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Set it up once. It keeps asking.</h2></div>
+      <div className="max-w-2xl"><p className="eyebrow">How it works</p><h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Set it up once. Every customer gets asked.</h2></div>
       <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-3">{steps.map((s) => <div key={s.n} className="bg-white p-8">
         <span className="font-mono text-xs text-slate-400">{s.n}</span>
         <h3 className="mt-4 text-base font-semibold">{s.t}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{s.d}</p></div>)}</div>
@@ -141,7 +141,7 @@ export default async function Home() {
     <section className="bg-navy-950 text-white"><div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-16 sm:flex-row sm:items-center">
       <div><h2 className="text-2xl font-semibold">Start asking for reviews this week.</h2><p className="mt-2 text-white/70">7-day free trial · $39/month after · Cancel anytime · Questions? support@getreviewask.com</p></div>
       <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start your free trial</Link></div></section>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", name: "ReviewAsk", url: "https://getreviewask.com", applicationCategory: "BusinessApplication", operatingSystem: "Web", description: "Automatic Google review requests after every job for Jobber and Housecall Pro businesses.", offers: [{ "@type": "Offer", price: "39", priceCurrency: "USD", name: "Starter (monthly)" }, { "@type": "Offer", price: "390", priceCurrency: "USD", name: "Starter (annual)" }] }) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", name: "ReviewAsk", url: "https://getreviewask.com", applicationCategory: "BusinessApplication", operatingSystem: "Web", description: "ReviewAsk emails your customers a short message with a one-tap link to leave a Google review after work is done, from a spreadsheet, or with one tap — plus one follow-up. For any business that wants more Google reviews. Optional Jobber and Housecall Pro integrations.", offers: [{ "@type": "Offer", price: "39", priceCurrency: "USD", name: "Starter (monthly)" }, { "@type": "Offer", price: "390", priceCurrency: "USD", name: "Starter (annual)" }] }) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
     {!user && <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 p-3 backdrop-blur sm:hidden"><Link href="/signup" className="btn-navy w-full py-3">Start 7-day free trial · $39/mo after</Link></div>}
     <div className="pb-20 sm:pb-0"><Footer /></div>
