@@ -13,7 +13,7 @@ export default function Page() { return <Legal title="Google review software for
   <ol className="list-decimal space-y-1 pl-5"><li>Paste your Google review link (or build one with the <Link href="/tools/review-link">review link generator</Link>).</li><li>Connect <Link href="/for-jobber">Jobber</Link> or <Link href="/for-housecall-pro">Housecall Pro</Link> once.</li><li>Each completed job sends the customer an email request, with one follow-up on day 3. SMS is rolling out.</li><li>Optional: paste or upload last season&apos;s customers to catch up on your backlog.</li></ol>
   <p>Not on either platform? You can still send asks from the dashboard or your phone. Need wording? Use our <Link href="/templates/review-request">review request templates</Link>.</p>
   <h2>How many reviews do you need?</h2>
-  <p>Compare your count with the top three local competitors, then work out how many asks a month closes the gap. The <Link href="/tools/review-gap">review gap calculator</Link> does the math for free.</p>
+  <p>More than you get by asking when you remember. Volume comes from asking every customer after every job. <Link href="/tools/review-link">Get your Google review link</Link> free, then <Link href="/signup">start asking automatically</Link>.</p>
   <p className="pt-2"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
   <p className="text-sm text-slate-500">$39/month or $390/year after the trial · No contract · Cancel anytime from Settings.</p>
 </Legal>; }

@@ -23,7 +23,7 @@ export default function Page() { return <Legal title="How to get more Google rev
   <h2>Keep it policy-safe</h2>
   <p>Ask every customer the same way. Don&apos;t offer discounts for reviews, and don&apos;t only ask the customers you expect to be happy. Reply to every review, good or bad.</p>
   <h2>How many reviews do you need?</h2>
-  <p>Compare your count with the top local competitors and work out how many asks a month closes the gap. The <Link href="/tools/review-gap">review gap calculator</Link> does the math for free.</p>
+  <p>More than you get by asking when you remember. Volume comes from asking every customer after every job. <Link href="/tools/review-link">Get your Google review link</Link> free, then <Link href="/signup">start asking automatically</Link>.</p>
   <h2>Doing it automatically</h2>
   <p>ReviewAsk connects to <Link href="/for-jobber">Jobber</Link> or <Link href="/for-housecall-pro">Housecall Pro</Link> and emails each customer a one-tap Google review link when a job closes, with one reminder on day 3. SMS is rolling out. You can also paste past customers from a spreadsheet. It works the same way for cleaning, pressure washing, pest control, HVAC, handyman and any other field-service business.</p>
   <p className="text-sm">More guides: <Link href="/reviews-for-cleaning">Cleaning</Link> · <Link href="/reviews-for-pressure-washing">Pressure washing</Link> · <Link href="/reviews-for-hvac">HVAC</Link> · <Link href="/reviews-for-pool-service">Pool service</Link> · <Link href="/reviews-for-pest-control">Pest control</Link> · <Link href="/guides">All guides</Link></p>

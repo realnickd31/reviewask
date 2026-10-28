@@ -27,6 +27,6 @@ export default function Page() { return <Legal title="Google review request temp
   <h2>Send it automatically instead</h2>
   <p>The template is the easy part; remembering to send it after every job is the hard part. <Link href="/">ReviewAsk</Link> emails your customer a one-tap Google review request when a job closes in Jobber or Housecall Pro, follows up once on day 3, and lets you upload a spreadsheet of past customers. SMS is rolling out.</p>
   <p className="pt-2"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
-  <p className="text-sm text-slate-600">Want to know how many reviews you need? <Link href="/tools/review-gap" className="font-medium text-navy-900 underline underline-offset-4">Try the free review gap calculator</Link>. No signup needed.</p>
+  <p className="text-sm text-slate-600">Need the link to put in these messages? <Link href="/tools/review-link" className="font-medium text-navy-900 underline underline-offset-4">Get your Google review link free</Link>. No signup needed.</p>
   <p className="text-sm text-slate-500">$39/month or $390/year after the trial · Cancel anytime. ReviewAsk is not affiliated with Google, Jobber or Housecall Pro.</p>
 </Legal>; }

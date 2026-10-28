@@ -12,7 +12,6 @@ export default function NotFound() {
         <li><Link href="/" className={l}>Home</Link>: automatic Google review asks after every job</li>
         <li><Link href="/pricing" className={l}>Pricing</Link>: $39/month, 7-day free trial</li>
         <li><Link href="/guides" className={l}>Guides</Link>: getting reviews in your trade</li>
-        <li><Link href="/tools/review-gap" className={l}>Free review-gap calculator</Link>: no signup</li>
       </ul>
       <p className="text-sm text-slate-500">Still stuck? <a href="mailto:support@getreviewask.com" className="underline">support@getreviewask.com</a></p>
     </main><Footer /></div>;
