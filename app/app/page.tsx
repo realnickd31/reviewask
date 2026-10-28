@@ -4,6 +4,7 @@ import Logo from "@/components/Logo";
 import Footer from "@/components/Footer";
 import Pricing, { Check } from "@/components/Pricing";
 import { currentUser } from "@/lib/session";
+import HowItWorksDemo from "@/components/HowItWorksDemo";
 
 export const dynamic = "force-dynamic";
 export const metadata = { alternates: { canonical: "/" } };
@@ -64,7 +65,7 @@ export default async function Home() {
           <p className="eyebrow !text-lime-400">More Google reviews, without chasing customers · $39/mo</p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every finished job gets a Google review request — automatically.</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">When the job is done or the customer pays, ReviewAsk sends them a short thank-you note from your business with a one-tap Google review link — plus one friendly follow-up on day 3.</p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start free for 7 days</Link>}{!user && <a href="#how" className="px-2 py-3 text-sm font-medium text-white/70 underline-offset-4 hover:text-white hover:underline">See how it works →</a>}</div>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start free for 7 days</Link>}{!user && <a href="#demo" className="px-2 py-3 text-sm font-medium text-white/70 underline-offset-4 hover:text-white hover:underline">See how it works →</a>}</div>
           {!user && <p className="mt-3 text-sm text-white/70">Add your Google review link. Send your first request in minutes.</p>}
           <p className="mt-8 text-xs text-white/60">Works with the tools you already use — or a spreadsheet:</p>
           <div className="mt-2 flex flex-wrap gap-2 text-xs text-white/80">{connectors.map((c) => <a key={c} href="#connect" className="rounded-full px-3 py-1 ring-1 ring-white/20 hover:bg-white/5">{c}</a>)}</div>
@@ -94,6 +95,9 @@ export default async function Home() {
         <span className="font-mono text-xs text-slate-400">{s.n}</span>
         <h3 className="mt-4 text-base font-semibold">{s.t}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{s.d}</p></div>)}</div>
       <figure className="mt-12"><Image src="/screens/customer-email.png" alt="What your customer sees: a short email from your business with a Leave a Google review button" width={1600} height={1000} className="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 shadow-sm" /><figcaption className="mt-3 text-center text-sm text-slate-500">What your customer gets: a short thank-you from your business and a “Leave a Google review” button that opens your Google review form.</figcaption></figure>
+      <div id="demo" className="mt-20 scroll-mt-4"><div className="mx-auto max-w-2xl text-center"><p className="eyebrow">See how it works</p><h2 className="mt-3 text-3xl font-semibold sm:text-4xl">From finished job to Google review</h2><p className="mt-3 text-slate-600">About a minute, start to finish. Works for any business that serves customers.</p></div>
+        <div className="mt-10"><HowItWorksDemo /></div>
+        <div className="mt-8 text-center"><Link href="/signup" className="inline-block rounded-md bg-navy-900 px-5 py-3 text-sm font-medium text-white hover:bg-navy-800">Start free for 7 days</Link></div></div>
       <div id="connect" className="mt-16 scroll-mt-4 rounded-xl border border-slate-200 bg-slate-50 p-8">
         <h3 className="text-lg font-semibold">Optional: let your tools send it for you</h3>
         <p className="mt-2 text-sm text-slate-600">Connect a tool you already use (listed above) — or skip it and use a spreadsheet or your phone.</p>
