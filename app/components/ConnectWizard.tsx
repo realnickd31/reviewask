@@ -77,11 +77,11 @@ export default function ConnectWizard({ initial, url, business, onConnected }: {
     </div>
 
     <div className="flex flex-col gap-2 rounded-md bg-slate-50 p-4 text-sm sm:flex-row sm:items-center sm:justify-between">
-      <p className="text-slate-600"><b className="text-navy-900">Want someone to connect it for you?</b> Send the details to your bookkeeper or tech person.</p>
+      <p className="text-slate-600"><b className="text-navy-900">Want someone to connect it for you?</b> Send the details to your bookkeeper or whoever manages your software.</p>
       <a href={help} className="btn-outline whitespace-nowrap px-3 py-2 text-center">Email instructions</a>
     </div>
 
-    <details className="text-sm text-slate-600"><summary className="cursor-pointer font-medium text-navy-900">For your tech person</summary>
+    <details className="text-sm text-slate-600"><summary className="cursor-pointer font-medium text-navy-900">Setup details</summary>
       <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
         <li>Webhooks by Zapier → POST, payload type JSON, to <code className="break-all">{url}</code>.</li>
         <li>Fields: <code>customer_name</code>, <code>email</code>, <code>phone</code> (first/last name also accepted).</li>

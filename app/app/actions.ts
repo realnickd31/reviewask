@@ -61,3 +61,11 @@ export async function dontAsk(fd: FormData) {
   const { revalidatePath } = await import("next/cache");
   revalidatePath("/dashboard");
 }
+
+export async function cancelFollowUp(fd: FormData) {
+  const u = await requireUser();
+  const { db } = await import("@/lib/db");
+  db.prepare("UPDATE review_requests SET remind_at = NULL, followup_cancelled_at = datetime('now') WHERE id=? AND user_id=? AND reminded_at IS NULL").run(Number(fd.get("id")), u.id);
+  const { revalidatePath } = await import("next/cache");
+  revalidatePath("/dashboard");
+}

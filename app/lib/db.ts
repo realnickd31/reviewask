@@ -56,7 +56,8 @@ if (!g._db) {
   addCol("users", "housecall_company_id TEXT");
   addCol("users", "housecall_webhook_secret TEXT");
   addCol("review_requests", "unsubscribe_token TEXT");
-  addCol("review_requests", "send_at TEXT"); // set only for status='scheduled' (automatic asks wait SEND_DELAY_HOURS so owners can cancel)
+  addCol("review_requests", "send_at TEXT");
+  addCol("review_requests", "followup_cancelled_at TEXT"); // set only for status='scheduled' (automatic asks wait SEND_DELAY_HOURS so owners can cancel)
   addCol("users", "square_connected INTEGER NOT NULL DEFAULT 0");
   addCol("users", "square_access_token TEXT");
   addCol("users", "square_refresh_token TEXT");
@@ -106,7 +107,7 @@ export type User = {
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;
   channel: string; status: string; provider_id: string | null; created_at: string;
-  remind_at: string | null; reminded_at: string | null; send_at: string | null; source: string; unsubscribe_token: string | null;
+  remind_at: string | null; reminded_at: string | null; send_at: string | null; followup_cancelled_at?: string | null; source: string; unsubscribe_token: string | null;
 };
 
 export const MONTHLY_QUOTA = 200;

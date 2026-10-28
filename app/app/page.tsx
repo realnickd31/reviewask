@@ -15,7 +15,7 @@ const steps = [
   { n: "03", t: "Follow-up and proof, handled", d: "Anyone who hasn’t been reminded gets one polite follow-up on day 3. Your dashboard shows every request, reminder, and status." },
 ];
 const pillars = [
-  { t: "Three ways to send", d: "Tap send from your phone after a visit, upload a spreadsheet of customers, or connect a tool you already use so requests go out automatically when a job is done or an invoice is paid." },
+  { t: "Three ways to send", d: "Tap send from your phone after a sale or appointment, upload a spreadsheet of customers, or connect a tool you already use so requests go out automatically when a sale is completed or an invoice is paid." },
   { t: "Bulk upload", d: "Upload a spreadsheet (Excel/CSV) of past customers (name, email, phone) and ask them all with one confirm." },
   { t: "Day-3 follow-up", d: "One polite reminder with the same link. Most people mean to leave a review and simply forget." },
   { t: "Proof it’s working", d: "Monthly totals, follow-ups sent, and a status for every request — sent, reminded, or failed." },
@@ -63,8 +63,8 @@ export default async function Home() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-28 pt-20 sm:pt-28 lg:grid-cols-[1.4fr_1fr]">
         <div className="max-w-3xl">
           <p className="eyebrow !text-lime-400">More Google reviews, without chasing customers · $39/mo</p>
-          <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every finished job gets a Google review request — automatically.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">When the job is done or the customer pays, ReviewAsk sends them a short thank-you note from your business with a one-tap Google review link — plus one friendly follow-up on day 3.</p>
+          <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every customer gets a Google review request — automatically.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">When you finish working with a customer or they pay, ReviewAsk sends them a short thank-you note from your business with a one-tap Google review link — plus one friendly follow-up on day 3.</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start free for 7 days</Link>}{!user && <a href="#demo" className="px-2 py-3 text-sm font-medium text-white/70 underline-offset-4 hover:text-white hover:underline">See how it works →</a>}</div>
           {!user && <p className="mt-3 text-sm text-white/70">Add your Google review link. Send your first request in minutes.</p>}
           <p className="mt-8 text-xs text-white/60">Works with the tools you already use — or a spreadsheet:</p>
@@ -79,7 +79,7 @@ export default async function Home() {
           <p className="mt-3 text-sm leading-relaxed text-slate-700">Thanks again for choosing Bright Harbor Co. If you’re happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.</p>
           <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a Google review</span>
           <p className="mt-2 break-all text-xs text-slate-400">g.page/r/bright-harbor/review</p>
-          <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent when the job is done</span><span className="text-lime-700">Day-3 reminder queued</span></div>
+          <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent after the visit</span><span className="text-lime-700">Day-3 reminder queued</span></div>
         </div></div>
       </div>
     </header>
@@ -95,13 +95,13 @@ export default async function Home() {
         <span className="font-mono text-xs text-slate-400">{s.n}</span>
         <h3 className="mt-4 text-base font-semibold">{s.t}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{s.d}</p></div>)}</div>
       <figure className="mt-12"><Image src="/screens/customer-email.png" alt="What your customer sees: a short email from your business with a Leave a Google review button" width={1600} height={1000} className="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 shadow-sm" /><figcaption className="mt-3 text-center text-sm text-slate-500">What your customer gets: a short thank-you from your business and a “Leave a Google review” button that opens your Google review form.</figcaption></figure>
-      <div id="demo" className="mt-20 scroll-mt-4"><div className="mx-auto max-w-2xl text-center"><p className="eyebrow">See how it works</p><h2 className="mt-3 text-3xl font-semibold sm:text-4xl">From finished job to Google review</h2><p className="mt-3 text-slate-600">About a minute, start to finish. Works for any business that serves customers.</p></div>
+      <div id="demo" className="mt-20 scroll-mt-4"><div className="mx-auto max-w-2xl text-center"><p className="eyebrow">See how it works</p><h2 className="mt-3 text-3xl font-semibold sm:text-4xl">From happy customer to Google review</h2><p className="mt-3 text-slate-600">About a minute, start to finish. Works for any business that serves customers.</p></div>
         <div className="mt-10"><HowItWorksDemo /></div>
         <div className="mt-8 text-center"><Link href="/signup" className="inline-block rounded-md bg-navy-900 px-5 py-3 text-sm font-medium text-white hover:bg-navy-800">Start free for 7 days</Link></div></div>
       <div id="connect" className="mt-16 scroll-mt-4 rounded-xl border border-slate-200 bg-slate-50 p-8">
         <h3 className="text-lg font-semibold">Optional: let your tools send it for you</h3>
         <p className="mt-2 text-sm text-slate-600">Connect a tool you already use (listed above) — or skip it and use a spreadsheet or your phone.</p>
-        <ol className="mt-5 grid gap-3 text-sm sm:grid-cols-3">{["Connect your tool in Settings", "A job is marked complete or an invoice is paid", "Your customer gets the review request"].map((t, i) => <li key={t} className="flex gap-3 rounded-lg bg-white p-4 ring-1 ring-slate-200"><span className="font-mono text-xs text-slate-400">{i + 1}</span><span className="text-navy-900">{t}</span></li>)}</ol>
+        <ol className="mt-5 grid gap-3 text-sm sm:grid-cols-3">{["Connect your tool in Settings", "An appointment, order, or invoice is marked done", "Your customer gets the review request"].map((t, i) => <li key={t} className="flex gap-3 rounded-lg bg-white p-4 ring-1 ring-slate-200"><span className="font-mono text-xs text-slate-400">{i + 1}</span><span className="text-navy-900">{t}</span></li>)}</ol>
       </div>
     </div></section>
 
@@ -129,7 +129,7 @@ export default async function Home() {
 
     <section id="about" className="border-t border-slate-200 py-16"><div className="mx-auto max-w-3xl px-6"><div className="rounded-xl border border-slate-200 bg-white p-8">
       <p className="eyebrow">Why ReviewAsk</p>
-      <p className="mt-3 text-slate-700">The businesses doing the best work often have the fewest reviews — not because customers are unhappy, but because nobody has time to ask after every job. ReviewAsk does that one thing, for a flat $39 a month.</p>
+      <p className="mt-3 text-slate-700">The businesses doing the best work often have the fewest reviews — not because customers are unhappy, but because nobody has time to ask every customer. ReviewAsk does that one thing, for a flat $39 a month.</p>
       <p className="mt-3 text-slate-700">Want help getting set up? Email <a href="mailto:support@getreviewask.com?subject=Setup%20help" className="font-medium text-navy-900 underline underline-offset-4">support@getreviewask.com</a> and we&apos;ll walk you through adding your review link and connecting a tool if you want. It usually takes about 10 minutes.</p>
     </div></div></section>
     <section id="faq" className="border-t border-slate-200 py-24"><div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1fr_1.8fr]">

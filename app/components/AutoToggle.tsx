@@ -197,7 +197,7 @@ export default function AutoToggle(p: Props) {
         {card("Quick ask (no job software)", <div className="space-y-3">
           <p className="text-sm text-navy-900">Send an ask from your phone after any job — name, phone, tap Send.</p>
           <div className="flex flex-wrap gap-2"><Link href="/quick" className="btn-outline">Open Quick ask</Link>
-            <button type="button" className="btn-ghost" onClick={() => { navigator.clipboard?.writeText(p.quickUrl); setCopied(true); }}>{copied ? "Copied!" : "Copy link for your techs"}</button></div>
+            <button type="button" className="btn-ghost" onClick={() => { navigator.clipboard?.writeText(p.quickUrl); setCopied(true); }}>{copied ? "Copied!" : "Copy link for your team"}</button></div>
         </div>)}
       </div>
     </>

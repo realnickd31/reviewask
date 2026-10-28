@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const features = ["200 review requests per month", "Automatic requests after every finished job (or upload a list)", "Quick ask for your team + paste from Excel/Sheets", "Day-3 follow-up reminders", "Status history & monthly proof", "Cancel anytime"];
+const features = ["200 review requests per month", "Automatic requests after every customer (or upload a list)", "Quick ask for your team + paste from Excel/Sheets", "Day-3 follow-up reminders", "Status history & monthly proof", "Cancel anytime"];
 
 export function Check() { return <svg viewBox="0 0 16 16" className="mt-0.5 h-4 w-4 flex-none fill-lime-600" aria-hidden><path d="M6.2 11.3L2.9 8l1-1 2.3 2.3 5.9-5.9 1 1z" /></svg>; }
 

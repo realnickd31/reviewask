@@ -16,7 +16,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
   const hookUrl = `${base.replace(/\/$/, "")}/api/zapier/webhook`;
   return <div><AppNav /><main id="main" className="mx-auto max-w-2xl space-y-6 px-4 py-8">
     <section className="card"><h1 className="mb-5 text-xl font-bold">Business</h1><BizForm action={saveSettings} label="Save changes" name={u.business_name} url={u.review_url} /></section>
-    <section className="card" id="automatic"><h2 className="mb-4 text-xl font-bold">Ask after every job</h2>
+    <section className="card" id="automatic"><h2 className="mb-4 text-xl font-bold">Ask every customer automatically</h2>
       <AutoToggle enabled={!!u.auto_enabled} provider={u.auto_provider} jobberConnected={!!u.jobber_connected} jobberReady={jobberConfigured()}
         housecallConnected={!!u.housecall_connected} housecallReady={!!u.housecall_connected && !!u.housecall_webhook_secret} housecallStarted={!!u.housecall_api_key}
         setupEmail={u.auto_setup_email} setupRequested={!!u.auto_setup_requested_at} quickUrl={`${base.replace(/\/$/, "")}/quick`} flash={searchParams.jobber}
@@ -28,7 +28,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
       {searchParams.portal && <p className="mt-3 text-sm text-amber-700">Billing portal is available after you subscribe through Stripe.</p>}
       <form action="/api/stripe/portal" method="post" className="mt-4"><button className="btn-navy">Manage billing</button></form></section>
     <section className="card"><div className="min-w-0"><h2 className="font-bold">Account</h2><p className="break-all text-sm text-slate-600">{u.email}</p></div></section>
-    <details className="card"><summary className="cursor-pointer text-sm font-semibold text-slate-600">Advanced (for a tech person)</summary>
-      <p className="mt-3 text-sm text-slate-600">Webhook setup now lives on the <a href="#zapier" className="underline">Zapier card</a> under “Ask after every job.” Zapier, Make, or any tool can POST to <code className="break-all">{hookUrl}</code>.</p></details>
+    <details className="card"><summary className="cursor-pointer text-sm font-semibold text-slate-600">Advanced setup</summary>
+      <p className="mt-3 text-sm text-slate-600">Webhook setup now lives on the <a href="#zapier" className="underline">Zapier card</a> under “Ask every customer automatically.” Zapier, Make, or any tool can POST to <code className="break-all">{hookUrl}</code>.</p></details>
   </main></div>;
 }
