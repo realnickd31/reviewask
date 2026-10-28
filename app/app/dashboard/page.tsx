@@ -17,8 +17,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   let u = await requireUser();
   if (!u.business_name || !u.review_url) redirect("/onboarding");
   const provName = u.auto_provider === "housecall" ? "Housecall Pro" : "Jobber";
-  const autoLabel = !u.auto_enabled ? "Turn on automatic asks" : u.jobber_connected ? (u.auto_provider === "housecall" && u.auto_setup_requested_at ? "On · Jobber (Housecall Pro requested)" : "On · Jobber") : u.auto_setup_requested_at ? "Setup requested" : "Finish connecting";
-  const autoSub = !u.auto_enabled ? "One switch. Every customer gets asked." : u.jobber_connected ? "Asking every customer automatically." : u.auto_setup_requested_at ? `We’re connecting ${provName} for you.` : "Connect the tools you already use in Settings.";
+  const autoLink = !u.auto_enabled ? "Turn on automatic asks: One switch. Every customer gets asked." : u.jobber_connected ? (u.auto_provider === "housecall" && u.auto_setup_requested_at ? "On · Jobber (Housecall Pro requested): Asking every customer automatically." : "On · Jobber: Asking every customer automatically.") : u.auto_setup_requested_at ? `Setup requested: We’re connecting ${provName} for you.` : "Connect the tools you already use in Settings.";
   // Sync right after Checkout so it works even before the webhook arrives.
   if (searchParams.session_id && stripe && !isActive(u)) {
     try {
@@ -60,7 +59,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       </div>
       <div className="h-1.5 rounded-full bg-slate-100"><div className="h-1.5 rounded-full bg-navy-900" style={{ width: `${pct}%` }} /></div>
     </section>
-    <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLabel}: {autoSub}</Link></div>
+    <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLink}</Link></div>
       <p className="mb-4 mt-1 text-sm text-slate-500">Name + email (or phone), tap Send.</p>
       <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} /></section>
       <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-slate-600">Have a list? Send to many customers at once</summary>
