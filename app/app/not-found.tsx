@@ -9,9 +9,8 @@ export default function NotFound() {
       <h1 className="text-3xl font-semibold text-navy-900">We couldn&apos;t find that page</h1>
       <p>The link may be old or mistyped. These can help:</p>
       <ul className="list-disc space-y-1 pl-5">
-        <li><Link href="/" className={l}>Home</Link>: automatic Google review asks after every job</li>
+        <li><Link href="/" className={l}>Home</Link>: automatic Google review requests for any business</li>
         <li><Link href="/pricing" className={l}>Pricing</Link>: $39/month, 7-day free trial</li>
-        <li><Link href="/guides" className={l}>Guides</Link>: getting reviews in your trade</li>
       </ul>
       <p className="text-sm text-slate-500">Still stuck? <a href="mailto:support@getreviewask.com" className="underline">support@getreviewask.com</a></p>
     </main><Footer /></div>;
