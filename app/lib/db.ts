@@ -64,6 +64,12 @@ if (!g._db) {
   addCol("users", "stripe_connect_connected INTEGER NOT NULL DEFAULT 0");
   addCol("users", "stripe_connect_account_id TEXT");
   db.exec("CREATE TABLE IF NOT EXISTS stripe_connect_events (object_id TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
+  addCol("users", "qbo_connected INTEGER NOT NULL DEFAULT 0");
+  addCol("users", "qbo_access_token TEXT");
+  addCol("users", "qbo_refresh_token TEXT");
+  addCol("users", "qbo_token_expires_at TEXT");
+  addCol("users", "qbo_realm_id TEXT");
+  db.exec("CREATE TABLE IF NOT EXISTS qbo_events (event_key TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE TABLE IF NOT EXISTS square_events (payment_id TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_rr_unsub ON review_requests(unsubscribe_token)");
   db.exec(`CREATE TABLE IF NOT EXISTS suppressions (
@@ -92,6 +98,8 @@ export type User = {
   square_connected: number; square_access_token: string | null; square_refresh_token: string | null;
   square_token_expires_at: string | null; square_merchant_id: string | null;
   stripe_connect_connected: number; stripe_connect_account_id: string | null;
+  qbo_connected: number; qbo_access_token: string | null; qbo_refresh_token: string | null;
+  qbo_token_expires_at: string | null; qbo_realm_id: string | null;
 };
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;

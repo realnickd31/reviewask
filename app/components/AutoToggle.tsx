@@ -6,6 +6,7 @@ type Props = { enabled: boolean; provider: string | null; jobberConnected: boole
   housecallConnected?: boolean; housecallReady?: boolean; housecallStarted?: boolean;
   squareConnected?: boolean; squareReady?: boolean; squareFlash?: string;
   stripeConnected?: boolean; stripeReady?: boolean; stripeFlash?: string;
+  qboConnected?: boolean; qboReady?: boolean; qboFlash?: string;
   setupEmail: string | null; setupRequested: boolean; quickUrl: string; flash?: string };
 
 export default function AutoToggle(p: Props) {
@@ -13,9 +14,10 @@ export default function AutoToggle(p: Props) {
   const [connected, setConnected] = useState(p.jobberConnected);
   const [sq, setSq] = useState(!!p.squareConnected);
   const [st, setSt] = useState(!!p.stripeConnected);
+  const [qb, setQb] = useState(!!p.qboConnected);
   // Setup requests are tracked per service, so Jobber and Housecall Pro never hide each other.
   const [reqFor, setReqFor] = useState<string | null>(p.setupRequested ? p.provider : null);
-  const [open, setOpen] = useState<string | null>(p.flash === "setup" ? (p.provider === "jobber" ? "jobber" : "housecall") : p.squareFlash === "setup" ? "square" : p.stripeFlash === "setup" ? "stripe" : null);
+  const [open, setOpen] = useState<string | null>(p.flash === "setup" ? (p.provider === "jobber" ? "jobber" : "housecall") : p.squareFlash === "setup" ? "square" : p.stripeFlash === "setup" ? "stripe" : p.qboFlash === "setup" ? "quickbooks" : null);
   const [email, setEmail] = useState(p.setupEmail || "");
   const [err, setErr] = useState(""); const [busy, setBusy] = useState(false); const [copied, setCopied] = useState(false);
   const post = (b: object) => fetch("/api/auto", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(b) });
@@ -113,6 +115,17 @@ export default function AutoToggle(p: Props) {
     : open === "square" ? requestPanel("square", "Square")
     : <button type="button" className="btn-navy" onClick={() => { setOpen("square"); setErr(""); }}>Connect Square</button>;
 
+  const qbDisconnect = async () => { await fetch("/api/quickbooks/disconnect", { method: "POST" }); setQb(false); };
+  const qboCard = qb
+    ? <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="font-semibold text-green-800">● Connected · Asking when an invoice is paid</p>
+        <button type="button" className="btn-ghost" onClick={qbDisconnect}>Disconnect</button>
+      </div>
+    : p.qboReady ? <a href="/api/quickbooks/connect" className="btn-navy inline-block">Connect QuickBooks</a>
+    : reqFor === "quickbooks" ? requestedNote("QuickBooks")
+    : open === "quickbooks" ? requestPanel("quickbooks", "QuickBooks")
+    : <button type="button" className="btn-navy" onClick={() => { setOpen("quickbooks"); setErr(""); }}>Connect QuickBooks</button>;
+
   const stDisconnect = async () => { await fetch("/api/stripe-connect/disconnect", { method: "POST" }); setSt(false); };
   const stripeCard = st
     ? <div className="flex flex-wrap items-center justify-between gap-3">
@@ -137,6 +150,7 @@ export default function AutoToggle(p: Props) {
     {on && <>
       {p.flash === "error" && <p className="text-sm text-red-700">Jobber didn’t finish connecting. Please try again.</p>}
       {p.squareFlash === "error" && <p className="text-sm text-red-700">Square didn’t finish connecting. Please try again.</p>}
+      {p.qboFlash === "error" && <p className="text-sm text-red-700">QuickBooks didn’t finish connecting. Please try again.</p>}
       {p.stripeFlash === "error" && <p className="text-sm text-red-700">Stripe didn’t finish connecting. Please try again.</p>}
       <p className="text-sm font-medium text-slate-600">Connect any job software you use — you can connect more than one.</p>
       <div className="space-y-3">
@@ -144,6 +158,7 @@ export default function AutoToggle(p: Props) {
         {card("Housecall Pro", housecall)}
         {card("Square", square)}
         {card("Stripe", stripeCard)}
+        {card("QuickBooks", qboCard)}
         {card("Quick ask (no job software)", <div className="space-y-3">
           <p className="text-sm text-navy-900">Send an ask from your phone after any job — name, phone, tap Send.</p>
           <div className="flex flex-wrap gap-2"><Link href="/quick" className="btn-outline">Open Quick ask</Link>
