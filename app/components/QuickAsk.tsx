@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 export default function QuickAsk({ disabled }: { disabled: boolean }) {
+  const router = useRouter();
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<{ t: "ok" | "err"; m: string } | null>(null);
   async function send(e: React.FormEvent<HTMLFormElement>) {
@@ -12,7 +14,7 @@ export default function QuickAsk({ disabled }: { disabled: boolean }) {
       const res = await fetch("/api/requests", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ name, email: isEmail ? c : "", phone: isEmail ? "" : c }) });
       const j = await res.json().catch(() => ({}));
       if (!res.ok) { setMsg({ t: "err", m: j.error || "Didn't send. Try again." }); return; }
-      form.reset();
+      form.reset(); router.refresh();
       setMsg({ t: "ok", m: j.mode === "sms_pending" ? `Saved for ${name}. Text messages are still rolling out, so this ask is queued. Use an email address to send it now.` : j.mode === "outbox" ? `Logged for ${name} (dev mode). Next customer.` : `✓ Sent to ${name}. Next customer.` });
     } catch { setMsg({ t: "err", m: "Network error. Try again." }); }
     finally { setBusy(false); }
