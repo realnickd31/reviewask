@@ -27,7 +27,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
     <section className="card"><h2 className="text-xl font-bold">Billing</h2><p className="mt-1 text-sm text-slate-600">Status: <b>{u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Free trial" : "Not active"}</b>. Update your card, switch plans, or cancel.</p>
       {searchParams.portal && <p className="mt-3 text-sm text-amber-700">Billing portal is available after you subscribe through Stripe.</p>}
       <form action="/api/stripe/portal" method="post" className="mt-4"><button className="btn-navy">Manage billing</button></form></section>
-    <section className="card flex items-center justify-between"><div><h2 className="font-bold">Account</h2><p className="text-sm text-slate-600">{u.email}</p></div></section>
+    <section className="card"><div className="min-w-0"><h2 className="font-bold">Account</h2><p className="break-all text-sm text-slate-600">{u.email}</p></div></section>
     <details className="card"><summary className="cursor-pointer text-sm font-semibold text-slate-600">Advanced (for a tech person)</summary>
       <p className="mt-3 text-sm text-slate-600">Webhook setup now lives on the <a href="#zapier" className="underline">Zapier card</a> under “Ask after every job.” Zapier, Make, or any tool can POST to <code className="break-all">{hookUrl}</code>.</p></details>
   </main></div>;

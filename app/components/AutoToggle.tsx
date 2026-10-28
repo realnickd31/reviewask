@@ -69,8 +69,8 @@ export default function AutoToggle(p: Props) {
   const card = (title: string, body: React.ReactNode, status?: boolean) => <div className={`rounded-lg border bg-white p-4 ${status ? "border-green-300" : "border-slate-200"}`}>
     <div className="mb-2 flex items-center justify-between gap-2"><p className="text-base font-semibold text-navy-900">{title}</p>
       {status !== undefined && (status
-        ? <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-800">{on ? "● Connected" : "● Connected · paused"}</span>
-        : <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold text-slate-600">○ Not connected</span>)}</div>{body}</div>;
+        ? <span className="shrink-0 whitespace-nowrap rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-800">{on ? "● Connected" : "● Connected · paused"}</span>
+        : <span className="shrink-0 whitespace-nowrap rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold text-slate-600">○ Not connected</span>)}</div>{body}</div>;
   const offBtn = "rounded-md border border-red-300 bg-white px-4 py-2 text-sm font-semibold text-red-700 hover:bg-red-50";
 
   const jobber = connected
