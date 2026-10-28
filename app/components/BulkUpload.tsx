@@ -85,7 +85,7 @@ export default function BulkUpload({ disabled, remaining }: { disabled: boolean;
 
   return <div className="space-y-4">
     <div><label className="label text-base" htmlFor="bulk-paste">Paste from Excel or Google Sheets</label>
-      <p className="mb-2 text-xs text-slate-500">Select your customer rows (name, email, phone) in the spreadsheet, copy, and paste here. Headers are optional.</p>
+      <p className="mb-2 text-xs text-slate-500">Select your customer rows (name, email, phone) in the spreadsheet, copy, and paste here. No header row? We assume the columns are in this order: <b>name, email, phone</b>. With a header row, any order works.</p>
       <textarea id="bulk-paste" ref={taRef} name="paste" className="input h-40 font-mono text-xs" value={paste} onChange={(e) => onPaste(e.target.value)} disabled={disabled}
         placeholder={"Jamie Rivera\tjamie@example.com\t(555) 123-4567\nSam Lee\t\t(555) 987-6543"} /></div>
     <label className={`inline-flex cursor-pointer items-center gap-2 text-sm text-slate-600 ${disabled ? "pointer-events-none opacity-50" : ""}`}>
