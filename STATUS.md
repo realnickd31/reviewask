@@ -20,3 +20,4 @@
 2. Wire Resend + cron secret in prod
 3. Automated cold outreach stack (still needs emails + sequencer)
 4. 10 paying subscribers
+
