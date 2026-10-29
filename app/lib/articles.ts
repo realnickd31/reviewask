@@ -24,7 +24,7 @@ export const articles: Article[] = [
     sections: [
       { h: "When to ask", p: ["Ask right after the moment of value: the job is finished, the appointment is over, the order arrived. Same day is best. If you ask in person, follow it with a message that contains the link, since people forget."] },
       { h: "Email template", p: ["Subject: Thanks from [Business]. Quick favor?", "Hi [First name], thanks for choosing [Business] for [the job]. If you have a minute, a Google review helps other people find us: [review link]. It takes about 30 seconds. Thank you! [Your name]"] },
-      { h: "Text message template", p: ["Hi [First name], it's [Your name] from [Business]. Thanks again for today! Would you leave us a quick Google review? [review link]"] },
+      { h: "Text message template", p: ["Hi [First name], it's [Your name] from [Business]. Thanks again for today! Would you leave us a quick Google review? [review link]", "Need the [review link]? Get it from our free Google review link generator."] },
       { h: "Follow-up template (send once, about 3 days later)", p: ["Hi [First name], just a quick reminder in case it got buried. A short review would mean a lot: [review link]. Thanks either way!"] },
       { h: "In-person script", p: ["\"We're a small business and reviews really help people find us. I'll text you a link. If you have 30 seconds later, we'd really appreciate it.\""] },
       { h: "What to avoid", list: ["Asking only customers you think are happy (review gating)", "Offering anything in return for a review", "Long messages with several links or a survey before the review", "Repeated reminders"] },
@@ -54,7 +54,7 @@ export const articles: Article[] = [
       { h: "Replying to positive reviews", p: ["Thank them by name, mention something specific, and keep it to two or three sentences. Example: \"Thanks, Maria! Glad the new water heater is keeping up with the cold mornings. We appreciate you choosing us.\""] },
       { h: "Replying to negative reviews", list: ["Reply within a day or two, after you've cooled off", "Thank them for the feedback and acknowledge the issue without arguing", "Don't share private details about the customer or the job", "Offer to make it right offline (a phone number or email for your business)", "Keep it short. Long defenses look worse than the original review"], p: ["Example: \"Hi James, I'm sorry the appointment ran late and nobody called ahead. That's not the experience we want. Please reach us at our office line so we can make it right.\""] },
       { h: "Reviews that break the rules", p: ["If a review is spam, off-topic, hateful, or from someone who was never a customer, you can report it from your Business Profile. Google removes reviews that violate its policies, not reviews that are simply negative."] },
-      { h: "The best fix for a bad review", p: ["A steady flow of new reviews from your real customers. One bad review stands out among ten; it barely registers among two hundred. That's why asking every customer matters."] },
+      { h: "The best fix for a bad review", p: ["A steady flow of new reviews from your real customers. Start by grabbing a direct link from our free Google review link generator. One bad review stands out among ten; it barely registers among two hundred. That's why asking every customer matters."] },
     ],
     faqs: [
       { q: "Should I respond to every Google review?", a: "Ideally yes, or at least every negative review and as many positive ones as you can. It signals to customers that you're engaged." },
@@ -69,7 +69,7 @@ export const articles: Article[] = [
       { h: "Not allowed: incentives", p: ["Don't offer discounts, gifts, contest entries, or payment for reviews, even if you don't require a positive review. Thank customers, but don't reward the review."] },
       { h: "Not allowed: fake or conflicted reviews", list: ["Reviews you or your staff write about your own business", "Reviews from family members posing as customers", "Buying reviews or using review exchange groups", "Reviewing a competitor"] },
       { h: "The FTC rule (U.S.)", p: ["Since October 2024, the FTC's rule on consumer reviews bans fake reviews, buying reviews, and conditioning incentives on a review's sentiment, with civil penalties for violations. Asking honestly, with no strings attached, is fine."] },
-      { h: "How ReviewAsk keeps you compliant", p: ["ReviewAsk sends the same honest request to every customer, with a direct link and one follow-up. No gating, no incentives."] },
+      { h: "How ReviewAsk keeps you compliant", p: ["ReviewAsk sends the same honest request to every customer, with a direct link and one follow-up. No gating, no incentives. You can start a free trial and send your first requests in a few minutes."] },
     ],
     faqs: [
       { q: "Is review gating illegal?", a: "It violates Google's policies and can draw FTC scrutiny in the U.S. if it suppresses negative reviews. Ask every customer the same way." },
@@ -111,6 +111,42 @@ export const articles: Article[] = [
     faqs: [
       { q: "How much does NiceJob cost?", a: "As of October 2026, NiceJob's pricing page lists Starter at $75/month and Pro at $125/month, with a 14-day free trial." },
       { q: "Is ReviewAsk cheaper than NiceJob?", a: "Yes. ReviewAsk is $39/month (or $390/year) compared with NiceJob Starter at $75/month as of October 2026." },
+    ] }),
+  v({ slug: "reviewask-vs-gatherup", title: "ReviewAsk vs GatherUp: Pricing & Features Compared", h1: "ReviewAsk vs GatherUp", description: "Compare ReviewAsk ($39/mo) and GatherUp (from $99/mo billed annually) for Google review requests: features, pricing, and fit.",
+    intro: "GatherUp is a reputation management platform: feedback and review requests, NPS surveys, review monitoring across 100+ sites, AI replies, and optional listings management and Review Defense. ReviewAsk does one job: ask every customer for a Google review automatically.",
+    sections: [
+      { h: "At a glance", table: [["", "ReviewAsk", "GatherUp"], ["Focus", "Google review requests", "Review requests, NPS/surveys, monitoring, reporting"], ["Price", "$39/month or $390/year", "Local Businesses from $99/month billed annually, 1 location (per GatherUp's pricing page, Oct 2026)"], ["Free trial", "7 days", "14 days, no card required"], ["Contract", "Month-to-month", "Month-to-month or discounted annual"], ["Add-ons", "None needed", "Listings Management and Review Defense priced separately"]] },
+      { h: "When GatherUp makes sense", p: ["If you want NPS surveys, review monitoring across many sites, detailed reporting, review widgets, or listings management, and you're comfortable at around $99/month or more, GatherUp covers a lot of ground. Agencies can also white-label it."] },
+      { h: "When ReviewAsk makes sense", p: ["If you run a home-service or local business and the goal is simply more Google reviews, ReviewAsk sends each customer a short request with a direct link and one follow-up, for less than half GatherUp's starting price. Send from a spreadsheet, your phone, or automatically from Jobber or Housecall Pro."] },
+      { h: "Bottom line", p: ["GatherUp is a full reputation suite; ReviewAsk is a focused, lower-cost review-request tool. Prices change, so check GatherUp's pricing page for current figures."] },
+    ],
+    faqs: [
+      { q: "How much does GatherUp cost?", a: "As of October 2026, GatherUp's pricing page lists Local Businesses at $99/month billed annually for one location, and Multiple Locations at $60/month per location billed annually. Month-to-month billing is also offered." },
+      { q: "Is ReviewAsk a GatherUp alternative?", a: "For Google review requests, yes. ReviewAsk doesn't do NPS surveys, multi-site review monitoring, or listings management." },
+    ] }),
+  v({ slug: "reviewask-vs-broadly", title: "ReviewAsk vs Broadly: $39 Review Requests vs $799 AI Suite", h1: "ReviewAsk vs Broadly", description: "Compare ReviewAsk ($39/mo) and Broadly ($799/mo AI Workforce Package) for getting Google reviews as a local service business.",
+    intro: "Broadly sells an all-in-one AI package for local service businesses: an AI receptionist, website, CRM, scheduling, social, and review tools in one bundle. ReviewAsk is a single tool that asks every customer for a Google review.",
+    sections: [
+      { h: "At a glance", table: [["", "ReviewAsk", "Broadly"], ["Focus", "Google review requests", "AI receptionist, website, CRM, reviews, social"], ["Price", "$39/month or $390/year", "AI Workforce Package $799/month (per Broadly's pricing page, Oct 2026)"], ["Signup", "Self-serve, 7-day free trial", "Through Broadly"], ["Contract", "Month-to-month", "Cancel anytime with prorated refund, per Broadly's FAQ"], ["Best for", "Businesses that want more reviews", "Businesses replacing several tools and a receptionist"]] },
+      { h: "When Broadly makes sense", p: ["If missed calls are costing you jobs and you also want a new website, CRM, and social posting from one vendor, Broadly's bundle may replace several separate tools."] },
+      { h: "When ReviewAsk makes sense", p: ["If you already have a phone, website, and job software (like Jobber or Housecall Pro) and just want more Google reviews, paying for a full AI suite is overkill. ReviewAsk sends each customer a direct review link with one follow-up for $39/month."] },
+      { h: "Bottom line", p: ["Broadly is a broad AI operations bundle; ReviewAsk is a focused review-request tool at about 5% of the price. Check Broadly's pricing page for current figures."] },
+    ],
+    faqs: [
+      { q: "How much does Broadly cost?", a: "As of October 2026, Broadly's pricing page lists its AI Workforce Package at $799 per month." },
+      { q: "Is ReviewAsk a Broadly alternative?", a: "For review requests, yes. ReviewAsk doesn't include an AI receptionist, website, or CRM." },
+    ] }),
+  v({ slug: "reviewask-vs-jobber-reviews", title: "ReviewAsk vs Jobber Reviews: Which Should Jobber Users Pick?", h1: "ReviewAsk vs Jobber Reviews", description: "Jobber Reviews vs ReviewAsk for getting Google reviews after each job: how they work, what they include, and which fits your business.",
+    intro: "Jobber Reviews is Jobber's built-in review request feature: it asks customers for a Google review after a job or paid invoice and shows a reviews dashboard with AI replies. ReviewAsk is a standalone review-request tool that also connects to Jobber. Here's how to choose.",
+    sections: [
+      { h: "At a glance", table: [["", "ReviewAsk", "Jobber Reviews"], ["What it is", "Standalone Google review requests", "Review feature inside Jobber"], ["Price", "$39/month or $390/year", "Tied to your Jobber plan / Marketing Suite; check Jobber's pricing page"], ["Works without Jobber", "Yes: spreadsheet, phone, other tools", "No, requires Jobber"], ["Trigger", "After each job, from Jobber or manually", "After a completed job or paid invoice"], ["Follow-up", "One reminder, then stops", "Automatic requests"]] },
+      { h: "When Jobber Reviews makes sense", p: ["If you already run everything in Jobber and your plan includes Reviews, turning it on is the simplest path. Its dashboard and AI replies keep reviews alongside your jobs."] },
+      { h: "When ReviewAsk makes sense", p: ["If Reviews isn't part of your Jobber plan, you want review requests outside Jobber too (walk-ins, a spreadsheet, a second business), or you want a simple flat price, ReviewAsk connects to Jobber and sends each customer a direct review link with one follow-up."] },
+      { h: "Bottom line", p: ["Already paying for Jobber Reviews? Use it. Otherwise, ReviewAsk is a low-cost way to automate Google review requests for Jobber users and non-users alike."] },
+    ],
+    faqs: [
+      { q: "Does ReviewAsk work with Jobber?", a: "Yes. ReviewAsk has an optional Jobber connection that sends a review request after jobs are completed." },
+      { q: "How much does Jobber Reviews cost?", a: "Jobber doesn't list a standalone Reviews price on its Reviews page; availability depends on your Jobber plan and Marketing Suite. Check Jobber's pricing page for current details." },
     ] }),
 ];
 export const getArticle = (kind: string, slug: string) => articles.find((a) => a.kind === kind && a.slug === slug);

@@ -8,8 +8,9 @@ export function articleMeta(a: Article): Metadata {
     openGraph: { type: "article", siteName: "ReviewAsk", url, title: a.title, description: a.description },
     twitter: { card: "summary_large_image", title: a.title, description: a.description } };
 }
-const linkify = (t: string) => t.includes("free Google review link generator")
-  ? <>{t.split("free Google review link generator")[0]}<Link href="/tools/review-link">free Google review link generator</Link>{t.split("free Google review link generator")[1]}</> : t;
+const LINKS: [string, string][] = [["free Google review link generator", "/tools/review-link"], ["start a free trial", "/signup"]];
+const linkify = (t: string) => { const m = LINKS.find(([k]) => t.includes(k)); if (!m) return t; const [k, href] = m; const [a, ...b] = t.split(k);
+  return <>{a}<Link href={href}>{k}</Link>{b.join(k)}</>; };
 export default function ArticlePage({ a }: { a: Article }) {
   const ld = [{ "@context": "https://schema.org", "@type": "Article", headline: a.h1, description: a.description, dateModified: "2026-10-29", author: { "@type": "Organization", name: "ReviewAsk" }, mainEntityOfPage: `https://getreviewask.com/${a.kind}/${a.slug}` },
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: a.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }];
@@ -23,6 +24,6 @@ export default function ArticlePage({ a }: { a: Article }) {
     <div className="mt-8 rounded-xl bg-slate-50 p-6"><p className="font-semibold text-navy-900">Ask every customer, without remembering to</p><p className="mt-1 text-sm">ReviewAsk emails each customer a one-tap Google review link with one follow-up. $39/month, 7-day free trial, no contract.</p><div className="mt-4 flex flex-wrap gap-3"><Link href="/signup" className="btn-navy px-5 py-2.5 !text-white no-underline">Start free trial</Link><Link href="/tools/review-link" className="px-2 py-2.5 text-sm underline underline-offset-4">Get your review link free</Link></div></div>
     <h2>FAQ</h2>
     {a.faqs.map((f) => <div key={f.q}><h3 className="font-semibold text-navy-900">{f.q}</h3><p>{f.a}</p></div>)}
-    {a.kind === "vs" && <p className="text-xs text-slate-500">Competitor details are from their public websites as of October 2026 and may change. Podium, Birdeye, and NiceJob are trademarks of their owners; ReviewAsk is not affiliated with them or with Google.</p>}
+    {a.kind === "vs" && <p className="text-xs text-slate-500">Competitor details are from their public websites as of October 2026 and may change. Product names are trademarks of their owners; ReviewAsk is not affiliated with them or with Google.</p>}
   </Legal>;
 }
