@@ -29,3 +29,13 @@ export function isMetricsExemptEmail(email: string | null | undefined) {
   if (!email) return false;
   return metricsExcludeEmails().includes(email.trim().toLowerCase());
 }
+
+// Persistent marker for founder/test browsers; collect route drops all events carrying it.
+export const INTERNAL_COOKIE = "ra_internal";
+export const INTERNAL_COOKIE_OPTS = {
+  path: "/",
+  httpOnly: true,
+  sameSite: "lax" as const,
+  secure: process.env.NODE_ENV === "production",
+  maxAge: 60 * 60 * 24 * 365 * 5,
+};

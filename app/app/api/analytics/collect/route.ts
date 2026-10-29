@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { randomUUID } from "crypto";
 import { trackServer, deviceFromUa, isBotUa, isAdminPath } from "@/lib/analytics";
 import { currentUser } from "@/lib/session";
-import { isMetricsExemptEmail } from "@/lib/admin-emails";
+import { isMetricsExemptEmail, INTERNAL_COOKIE, INTERNAL_COOKIE_OPTS } from "@/lib/admin-emails";
 
 export const dynamic = "force-dynamic";
 
@@ -30,16 +30,29 @@ export async function POST(req: NextRequest) {
   if (!ALLOWED.has(event)) return NextResponse.json({ error: "event" }, { status: 400 });
 
   const path = String(body.path || "/").slice(0, 500);
+  const jar = cookies();
+
+  // Internal traffic exclusion: a browser that has ever been signed in as a metrics-exempt
+  // account gets a persistent ra_internal=1 cookie (set at login and here), and every later
+  // event from it is dropped -- even anonymous visits to / or /login after logout.
+  if (jar.get(INTERNAL_COOKIE)?.value === "1") return NextResponse.json({ ok: true, skipped: "internal" });
+  const u = await currentUser().catch(() => undefined);
+  if (u && isMetricsExemptEmail(u.email)) {
+    const r = NextResponse.json({ ok: true, skipped: "internal" });
+    r.cookies.set(INTERNAL_COOKIE, "1", INTERNAL_COOKIE_OPTS);
+    return r;
+  }
+  // /login?next=/admin is only ever hit by us.
+  if (/^\/login\?(.*&)?next=%2Fadmin|^\/login\?(.*&)?next=\/admin/i.test(path)) {
+    return NextResponse.json({ ok: true, skipped: "internal" });
+  }
+
   if (event === "pageview" && shouldSkipPath(path)) {
     return NextResponse.json({ ok: true, skipped: "path" });
   }
-
-  // Never record admin pages or signed-in admin sessions (any event type).
+  // Never record admin pages (any event type).
   if (isAdminPath(path)) return NextResponse.json({ ok: true, skipped: "admin" });
-  const u = await currentUser().catch(() => undefined);
-  if (u && isMetricsExemptEmail(u.email)) return NextResponse.json({ ok: true, skipped: "admin" });
 
-  const jar = cookies();
   let vid = jar.get("ra_vid")?.value;
   const res = NextResponse.json({ ok: true });
   if (!vid || vid.length < 8) {

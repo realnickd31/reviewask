@@ -107,6 +107,15 @@ if (!g._db) {
   db.exec("CREATE INDEX IF NOT EXISTS idx_ae_event_created ON analytics_events(event, created_at)");
   db.exec("CREATE INDEX IF NOT EXISTS idx_ae_visitor_created ON analytics_events(visitor_id, created_at)");
   db.exec("CREATE INDEX IF NOT EXISTS idx_ae_path_created ON analytics_events(path, created_at)");
+  // One-time analytics reset (2026-10-29): history was polluted by founder/test browsing before
+  // internal-traffic exclusion shipped. Wipes ONLY analytics_events; users/asks/billing untouched.
+  db.exec("CREATE TABLE IF NOT EXISTS app_migrations (name TEXT PRIMARY KEY, ran_at TEXT NOT NULL DEFAULT (datetime('now')))");
+  if (!db.prepare("SELECT 1 FROM app_migrations WHERE name='analytics_reset_2026_10_29'").get()) {
+    db.transaction(() => {
+      db.exec("DELETE FROM analytics_events");
+      db.prepare("INSERT INTO app_migrations (name) VALUES ('analytics_reset_2026_10_29')").run();
+    })();
+  }
   g._db = db;
 }
 
