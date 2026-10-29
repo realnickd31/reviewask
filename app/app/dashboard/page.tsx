@@ -14,6 +14,7 @@ import { stripe } from "@/lib/stripe";
 import LiveRefresh from "@/components/LiveRefresh";
 import { applySubscription } from "@/lib/billing";
 import { isAdminUser } from "@/lib/admin";
+import { reviewProgress, snapshotUser, placesConfigured } from "@/lib/reviewStats";
 export const dynamic = "force-dynamic";
 
 export default async function Page({ searchParams }: { searchParams: { session_id?: string; dev_unlocked?: string } }) {
@@ -32,6 +33,10 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   const active = isActive(u);
   // Best-effort: send this account's due follow-ups so it works without an external cron.
   if (active) { try { await processDueScheduledAsks(u.id, 50); await processDueReminders(u.id, 50); } catch (e) { console.error("reminders", e); } }
+  // First visit after this ships (or key added): take a baseline so progress starts counting.
+  if (placesConfigured() && !reviewProgress(u.id)) { try { await snapshotUser(u.id, "link_saved"); } catch (e) { console.error("snapshot", e); } }
+  const progress = reviewProgress(u.id);
+  const sinceAsks = progress ? db.prepare("SELECT SUM(CASE WHEN status='sent' THEN 1 ELSE 0 END) sent, SUM(CASE WHEN status='sent' AND clicked_at IS NOT NULL THEN 1 ELSE 0 END) clicked FROM review_requests WHERE user_id=? AND created_at >= ?").get(u.id, progress.first.created_at) as { sent: number | null; clicked: number | null } : null;
   const used = usedThisMonth(u.id);
   const stats = db.prepare(`SELECT
     SUM(CASE WHEN reminded_at IS NOT NULL THEN 1 ELSE 0 END) reminded,
@@ -50,6 +55,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     {!active && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>
       <Link href="/onboarding?step=pay" className="btn-lime">Start free trial</Link></div>}
+    {progress && <ReviewGrowth p={progress} sent={sinceAsks?.sent || 0} clicked={sinceAsks?.clicked || 0} />}
     {active && rows.length === 0 && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
       <p className="mt-1 text-sm text-slate-500">Requests go out by text or email.</p>
       <ol className="mt-4 space-y-3 text-sm">
@@ -99,6 +105,21 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       {rows.some((r) => r.status === "queued") && <p className="mt-3 text-xs text-slate-500"><strong>Queued</strong> means saved but not sent yet, for example a text that couldn&apos;t be delivered. Add the customer&apos;s email to send now.</p>}
     </section>
   </main></div>;
+}
+
+function ReviewGrowth({ p, sent, clicked }: { p: NonNullable<ReturnType<typeof reviewProgress>>; sent: number; clicked: number }) {
+  const gained = (p.latest.review_count ?? 0) - (p.first.review_count ?? 0);
+  const same = p.history.length < 2;
+  const r = (x: number | null) => x == null ? "—" : x.toFixed(1);
+  return <section className="card" id="google-reviews"><div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div><h2 className="text-lg font-semibold">Your Google reviews</h2>
+      {same ? <p className="mt-1 text-sm text-slate-500">Starting point saved {fmt(p.first.created_at)}: <strong className="text-navy-900">{p.first.review_count ?? 0} reviews</strong>, rated {r(p.first.rating)}★. We check daily so you can watch it grow.</p>
+      : <p className="mt-1 text-sm text-slate-500">Since you started with ReviewAsk ({fmt(p.first.created_at)}): <strong className="text-navy-900">{gained >= 0 ? "+" : ""}{gained} review{Math.abs(gained) === 1 ? "" : "s"}</strong>, rating {r(p.first.rating)}★ → {r(p.latest.rating)}★.</p>}</div>
+    <dl className="grid shrink-0 grid-cols-3 gap-4 text-center text-sm">
+      <div><dt className="text-xs text-slate-400">Reviews now</dt><dd className="text-2xl font-bold text-navy-900">{p.latest.review_count ?? 0}</dd></div>
+      <div><dt className="text-xs text-slate-400">Asks sent</dt><dd className="text-2xl font-bold text-navy-900">{sent}</dd></div>
+      <div><dt className="text-xs text-slate-400">Link clicks</dt><dd className="text-2xl font-bold text-navy-900">{clicked}</dd></div></dl></div>
+    <p className="mt-3 text-xs text-slate-400">Counts come from Google and update about once a day. This shows your total review growth over time — Google doesn&apos;t tell us which customer left which review, so new reviews aren&apos;t matched to individual asks. Last checked {fmt(p.latest.created_at)}.</p></section>;
 }
 
 function Clicked({ r }: { r: ReviewRequest }) {

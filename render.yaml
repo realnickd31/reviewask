@@ -24,6 +24,8 @@ services:
         generateValue: true
       - key: CRON_SECRET
         generateValue: true
+      - key: GOOGLE_PLACES_API_KEY # optional: Google review-count tracker (Places API New)
+        sync: false
       - key: APP_URL
         sync: false
       - key: NEXTAUTH_URL

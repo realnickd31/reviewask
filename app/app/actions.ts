@@ -1,4 +1,5 @@
 "use server";
+import { snapshotUser } from "@/lib/reviewStats";
 import bcrypt from "bcryptjs";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
@@ -50,6 +51,7 @@ export async function saveOnboarding(_: FormState, fd: FormData): Promise<FormSt
   const u = await requireUser(); const b = readBiz(fd);
   if ("error" in b) return b;
   db.prepare("UPDATE users SET business_name=?, review_url=? WHERE id=?").run(b.name, b.url, u.id);
+  if (b.url !== u.review_url) await snapshotUser(u.id, "link_saved").catch((e) => console.error("snapshot", e));
   trackServer({ event: "onboarding_completed", user_id: u.id, path: "/onboarding" });
   redirect(u.subscription_status === "active" || u.subscription_status === "trialing" ? "/dashboard" : "/onboarding?step=pay");
 }
@@ -58,6 +60,7 @@ export async function saveSettings(_: FormState, fd: FormData): Promise<FormStat
   const u = await requireUser(); const b = readBiz(fd);
   if ("error" in b) return b;
   db.prepare("UPDATE users SET business_name=?, review_url=? WHERE id=?").run(b.name, b.url, u.id);
+  if (b.url !== u.review_url) await snapshotUser(u.id, "link_saved").catch((e) => console.error("snapshot", e));
   return { ok: "Saved." };
 }
 
