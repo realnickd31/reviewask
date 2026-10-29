@@ -4,22 +4,22 @@ import ReviewLinkTool from "@/components/ReviewLinkTool";
 const faqs = [
   { q: "What is a Google review link?", a: "A direct URL that opens your business's Google review form, so customers can leave a review in one tap instead of searching for you on Maps." },
   { q: "Is this review link generator free?", a: "Yes. It runs in your browser, needs no signup, and the link never expires as long as your Google Business Profile exists." },
-  { q: "Where do I find my Google Place ID?", a: "Use Google's Place ID Finder, search your business name, and copy the ID shown (it usually starts with ChIJ)." },
+  { q: "Do I need my Google Place ID?", a: "No. Paste the link you get from Google Maps (Share, then Copy link) and the tool finds the Place ID for you. If you already have a Place ID, you can paste that instead." },
   { q: "Can I share the link by text, email, or QR code?", a: "Yes. The link works anywhere: text messages, emails, invoices, receipts, your website, or a QR code." },
 ];
 export const metadata = {
-  title: { absolute: "Free Google Review Link Generator (No Signup) | ReviewAsk" },
-  description: "Create a direct Google review link from your Place ID in seconds. Free, no signup. Customers land straight on your review form.",
+  title: { absolute: "Free Google Review Link Generator: Paste Your Google Maps Link | ReviewAsk" },
+  description: "Paste your Google Maps link and get a direct Google review link in seconds. No Place ID needed. Free, no signup. Customers land straight on your review form.",
   alternates: { canonical: "/tools/review-link" },
   openGraph: { title: "Free Google Review Link Generator", description: "Make a one-tap Google review link for your business. Free, no signup.", url: "https://getreviewask.com/tools/review-link" },
 };
 export default function Page() { return <Legal title="Free Google review link generator">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{ "@context": "https://schema.org", "@type": "WebApplication", name: "Google Review Link Generator", url: "https://getreviewask.com/tools/review-link", applicationCategory: "BusinessApplication", operatingSystem: "Web", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } }, { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }]) }} />
-  <p>A direct review link opens your Google review form in one tap, so customers don&apos;t have to search for you on Maps. Paste your Place ID below to build one. It runs in your browser, with no signup.</p>
+  <p>A direct review link opens your Google review form in one tap, so customers don&apos;t have to search for you on Maps. Paste your Google Maps link below and we&apos;ll build it. No Place ID hunting, no signup.</p>
   <ReviewLinkTool />
-  <h2>How to find your Google Place ID</h2>
-  <ol className="list-decimal space-y-1 pl-5"><li>Open Google&apos;s <a href="https://developers.google.com/maps/documentation/places/web-service/place-id" target="_blank" rel="noopener noreferrer">Place ID Finder</a>.</li><li>Type your business name and pick it on the map.</li><li>Copy the ID (it usually starts with &ldquo;ChIJ&rdquo;) and paste it above.</li></ol>
-  <p className="text-sm text-slate-600">Alternative: in your Google Business Profile, click &ldquo;Ask for reviews&rdquo; (or &ldquo;Get more reviews&rdquo;) and copy the short link Google gives you. Either link works.</p>
+  <h2>How to get your Google Maps link</h2>
+  <ol className="list-decimal space-y-1 pl-5"><li>Open Google Maps on your phone or computer.</li><li>Search your business name and tap it so your business profile opens.</li><li>Tap <strong>Share</strong>, then <strong>Copy link</strong>.</li><li>Paste it in the box above. That&apos;s it.</li></ol>
+  <p className="text-sm text-slate-600">On a computer, copying the address bar while your business is open on Google Maps works too. Have a Place ID already (starts with &ldquo;ChIJ&rdquo;)? Paste that instead.</p>
   <h2>Where to use your review link</h2>
   <ul className="list-disc space-y-1 pl-5"><li>A text or email right after the job or visit</li><li>Invoices, receipts, and email signatures</li><li>A QR code on the counter, a business card, or a leave-behind</li><li>Your website&apos;s contact or thank-you page</li></ul>
   <h2>Send it after every customer, automatically</h2>
