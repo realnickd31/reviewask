@@ -2,6 +2,7 @@ import crypto from "crypto";
 import { db, isSuppressed, unsubscribeUrl, getUser, isActive, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
 import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms, sendEmail, sendSms } from "./email";
 import { trackFirstAskIfNeeded } from "./analytics";
+import { clampDelay } from "./delay";
 
 export type SendInput = { name?: unknown; email?: unknown; phone?: unknown };
 export type SendResult =
@@ -28,21 +29,23 @@ export function canSend(u: User): { error: string; code: number } | null {
   return null;
 }
 
-/** Automatic asks (job software / webhooks) wait this long so the owner can hit "Don't ask" after a bad job. Typed-in and spreadsheet asks send immediately. */
-export const SEND_DELAY_HOURS = 2;
+/** Account's wait for automatic asks (job software / webhooks), so the owner can hit "Don't ask" after a bad job. */
+export const accountDelayHours = (u: User) => clampDelay(u.send_delay_hours);
 
 /** Single shared send path used by the UI, bulk upload and the webhooks. */
-export async function sendReviewRequest(u: User, raw: SendInput, source = "manual"): Promise<SendResult> {
+/** Webhooks use the account default delay. Typed-in and spreadsheet asks pass the owner's pick (default: instant). */
+export async function sendReviewRequest(u: User, raw: SendInput, source = "manual", opts: { delayHours?: number } = {}): Promise<SendResult> {
   const blocked = canSend(u);
   if (blocked) return { ok: false, ...blocked };
   const i = normalize(raw);
   const err = validate(i);
   if (err) return { ok: false, error: err, code: 400 };
   const token = i.email ? crypto.randomBytes(24).toString("base64url") : null;
-  if (source === "webhook" && SEND_DELAY_HOURS > 0) {
+  const delay = opts.delayHours !== undefined ? clampDelay(opts.delayHours, 0) : source === "webhook" ? accountDelayHours(u) : 0;
+  if (delay > 0) {
     const r = db.prepare(`INSERT INTO review_requests (user_id, customer_name, customer_email, customer_phone, channel, status, source, send_at, unsubscribe_token)
       VALUES (?,?,?,?,?,'scheduled',?, datetime('now', ?), ?)`)
-      .run(u.id, i.name, i.email || null, i.phone || null, [i.email && "email", i.phone && "sms"].filter(Boolean).join("+"), source, `+${SEND_DELAY_HOURS} hours`, token);
+      .run(u.id, i.name, i.email || null, i.phone || null, [i.email && "email", i.phone && "sms"].filter(Boolean).join("+"), source, `+${delay} hours`, token);
     const sid = Number(r.lastInsertRowid);
     trackFirstAskIfNeeded(u.id, sid);
     return { ok: true, id: sid, mode: "scheduled", used: usedThisMonth(u.id) };

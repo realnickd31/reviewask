@@ -57,7 +57,8 @@ if (!g._db) {
   addCol("users", "housecall_webhook_secret TEXT");
   addCol("review_requests", "unsubscribe_token TEXT");
   addCol("review_requests", "send_at TEXT");
-  addCol("review_requests", "followup_cancelled_at TEXT"); // set only for status='scheduled' (automatic asks wait SEND_DELAY_HOURS so owners can cancel)
+  addCol("review_requests", "followup_cancelled_at TEXT"); // set only for status='scheduled' (delayed asks wait so owners can cancel)
+  addCol("users", "send_delay_hours INTEGER NOT NULL DEFAULT 2"); // per-account wait for automatic asks (0 = instant)
   addCol("users", "square_connected INTEGER NOT NULL DEFAULT 0");
   addCol("users", "square_access_token TEXT");
   addCol("users", "square_refresh_token TEXT");
@@ -121,6 +122,7 @@ export type User = {
   stripe_connect_connected: number; stripe_connect_account_id: string | null;
   qbo_connected: number; qbo_access_token: string | null; qbo_refresh_token: string | null;
   qbo_token_expires_at: string | null; qbo_realm_id: string | null;
+  send_delay_hours: number;
 };
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;

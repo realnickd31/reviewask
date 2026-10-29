@@ -4,7 +4,8 @@ import { redirect } from "next/navigation";
 import AppNav from "@/components/AppNav";
 import QuickAsk from "@/components/QuickAsk";
 import BulkUpload from "@/components/BulkUpload";
-import { processDueReminders, processDueScheduledAsks, SEND_DELAY_HOURS } from "@/lib/send";
+import { processDueReminders, processDueScheduledAsks, accountDelayHours } from "@/lib/send";
+import { delayLabel } from "@/lib/delay";
 import { dontAsk, cancelFollowUp } from "@/app/actions";
 import { requireUser } from "@/lib/session";
 import { db, isActive, usedThisMonth, MONTHLY_QUOTA, getUser, type ReviewRequest } from "@/lib/db";
@@ -63,12 +64,12 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     </section>
     <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLink}</Link></div>
       <p className="mb-4 mt-1 text-sm text-slate-500">Name + email (or phone), tap Send.</p>
-      <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} /></section>
+      <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} accountDelay={accountDelayHours(u)} /></section>
       <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-slate-600">Have a list? Send to many customers at once</summary>
         <p className="mb-5 mt-1 text-sm text-slate-500">Copy customer rows from Excel or Google Sheets and paste — no exporting. <a href="/sample-customers.csv" download className="font-medium text-navy-900 underline underline-offset-4">Download sample spreadsheet</a></p>
-        <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} /></details>
+        <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} accountDelay={accountDelayHours(u)} /></details>
     <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
-      <p className="mb-4 mt-1 text-sm text-slate-500">Automatic asks from your connected tools wait {SEND_DELAY_HOURS} hours before sending, so you can stop one if something went wrong. Asks you type in or paste send right away. Every customer still gets asked unless you stop it.</p>
+      <p className="mb-4 mt-1 text-sm text-slate-500">{accountDelayHours(u) > 0 ? <>Automatic asks from your connected tools wait {delayLabel(accountDelayHours(u))} before sending, so you can stop one if something went wrong.</> : <>Automatic asks from your connected tools send right away.</>} Typed-in and spreadsheet asks you schedule show here too. Every customer still gets asked unless you stop it. <Link href="/settings#timing" className="underline underline-offset-4">Change timing</Link></p>
       {scheduled.length === 0 ? <p className="text-sm text-slate-500">Nothing waiting to send.</p> :
       <ul className="divide-y divide-slate-100">{scheduled.map((r) => <li key={r.id} className="flex flex-col gap-3 py-3.5 text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <div className="min-w-0"><p className="font-semibold text-navy-900">{r.customer_name}</p><p className="truncate text-slate-500">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")}</p><p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-800 ring-1 ring-amber-100">Sends {fmt(r.send_at!)}</p></div>

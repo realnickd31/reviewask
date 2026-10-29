@@ -59,6 +59,17 @@ export async function saveSettings(_: FormState, fd: FormData): Promise<FormStat
   return { ok: "Saved." };
 }
 
+export async function saveSendDelay(hours: number): Promise<{ ok?: string; error?: string }> {
+  const u = await requireUser();
+  const { clampDelay } = await import("@/lib/delay");
+  const h = clampDelay(hours, -1);
+  if (h < 0) return { error: "Pick a delay." };
+  db.prepare("UPDATE users SET send_delay_hours=? WHERE id=?").run(h, u.id);
+  const { revalidatePath } = await import("next/cache");
+  revalidatePath("/dashboard"); revalidatePath("/settings");
+  return { ok: "Saved." };
+}
+
 export async function dontAsk(fd: FormData) {
   const u = await requireUser();
   const { cancelScheduledAsk } = await import("@/lib/send");

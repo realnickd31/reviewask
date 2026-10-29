@@ -7,7 +7,9 @@ import { squareConfigured } from "@/lib/square";
 import { qboConfigured } from "@/lib/quickbooks";
 import { stripeConnectConfigured } from "@/lib/stripe-connect";
 import { requireUser } from "@/lib/session";
-import { saveSettings } from "../actions";
+import { saveSettings, saveSendDelay } from "../actions";
+import SendDelaySetting from "@/components/SendDelaySetting";
+import { clampDelay } from "@/lib/delay";
 export const dynamic = "force-dynamic";
 export default async function Page({ searchParams }: { searchParams: { portal?: string; jobber?: string; square?: string; stripe?: string; quickbooks?: string } }) {
   const u = await requireUser();
@@ -24,6 +26,9 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
         stripeConnected={!!u.stripe_connect_connected} stripeReady={stripeConnectConfigured()} stripeFlash={searchParams.stripe}
         qboConnected={!!u.qbo_connected} qboReady={qboConfigured()} qboFlash={searchParams.quickbooks}
         zapierToken={u.api_token} zapierUrl={hookUrl} business={u.business_name || "my business"} /></section>
+    <section className="card" id="timing"><h2 className="text-xl font-bold">Send timing</h2>
+      <p className="mb-4 mt-1 text-sm text-slate-600">How long automatic asks from your connected tools wait before going out. Quick asks and spreadsheet sends let you choose each time.</p>
+      <SendDelaySetting initial={clampDelay(u.send_delay_hours)} save={saveSendDelay} /></section>
     <section className="card"><h2 className="text-xl font-bold">Billing</h2><p className="mt-1 text-sm text-slate-600">Status: <b>{u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Free trial" : "Not active"}</b>. Update your card, switch plans, or cancel.</p>
       {searchParams.portal && <p className="mt-3 text-sm text-amber-700">Billing portal is available after you subscribe through Stripe.</p>}
       <div className="mt-4 flex flex-wrap items-center gap-2"><form action="/api/stripe/portal" method="post"><button className="btn-navy">Manage billing</button></form><form action="/api/stripe/portal?view=invoices&from=settings" method="post"><button className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Invoices</button></form><form action="/api/stripe/portal?view=payment_methods&from=settings" method="post"><button className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Payment methods</button></form></div></section>

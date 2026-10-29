@@ -1,6 +1,8 @@
 "use client";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import DelayPicker from "./DelayPicker";
+import { delayLabel } from "@/lib/delay";
 
 type Row = { name: string; email: string; phone: string };
 
@@ -39,7 +41,8 @@ function toRows(grid: string[][]): Row[] {
 }
 const valid = (r: Row) => !!r.name && (!!r.phone || /^\S+@\S+\.\S+$/.test(r.email)) && (!r.email || /^\S+@\S+\.\S+$/.test(r.email));
 
-export default function BulkUpload({ disabled, remaining }: { disabled: boolean; remaining: number }) {
+export default function BulkUpload({ disabled, remaining, accountDelay }: { disabled: boolean; remaining: number; accountDelay?: number }) {
+  const [delay, setDelay] = useState(0);
   const [rows, setRows] = useState<Row[] | null>(null);
   const [file, setFile] = useState("");
   const [paste, setPaste] = useState("");
@@ -69,14 +72,16 @@ export default function BulkUpload({ disabled, remaining }: { disabled: boolean;
     const g = cur?.filter(valid) ?? []; const b = (cur?.length ?? 0) - g.length; const n = Math.min(g.length, remaining);
     if (!g.length) { setMsg({ t: "err", m: cur ? "No valid rows — each needs a name and an email or phone." : "Paste rows or choose a CSV file first." }); return; }
     if (n === 0) { setMsg({ t: "err", m: "Monthly limit reached." }); return; }
-    if (!confirm(`Send ${n} review request${n === 1 ? "" : "s"} now?`)) return;
+    if (!confirm(delay ? `Schedule ${n} review request${n === 1 ? "" : "s"} to send in ${delayLabel(delay)}?` : `Send ${n} review request${n === 1 ? "" : "s"} now?`)) return;
     setBusy(true); setMsg(null);
     let res: Response; let j: any = {};
-    try { res = await fetch("/api/requests/bulk", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ rows: g }) }); j = await res.json().catch(() => ({})); }
+    try { res = await fetch("/api/requests/bulk", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ rows: g, delayHours: delay }) }); j = await res.json().catch(() => ({})); }
     catch { setBusy(false); setMsg({ t: "err", m: "Network error. Try again." }); return; }
     setBusy(false);
     if (!res.ok) { setMsg({ t: "err", m: j.error || "Bulk send failed." }); return; }
-    const parts = [`${j.sent} sent`];
+    const parts: string[] = [];
+    if (j.sent || !j.scheduled) parts.push(`${j.sent} sent`);
+    if (j.scheduled) parts.push(`${j.scheduled} scheduled for ${delayLabel(j.delayHours)} from now`);
     if (j.quotaSkipped) parts.push(`${j.quotaSkipped} skipped (monthly limit reached)`);
     if (j.invalid) parts.push(`${j.invalid} invalid`);
     if (j.failed) parts.push(`${j.failed} failed`);
@@ -100,8 +105,10 @@ export default function BulkUpload({ disabled, remaining }: { disabled: boolean;
       {good.length > remaining && <p className="mt-1 text-amber-700">Only {remaining} left this month — the rest will be skipped.</p>}
       {good.length > 0 && <ul className="mt-3 space-y-1 text-slate-600">{good.slice(0, 5).map((r, i) => <li key={i}>{r.name} · {r.email || r.phone}</li>)}{good.length > 5 && <li className="text-slate-400">…and {good.length - 5} more</li>}</ul>}
     </div>}
+    <div><DelayPicker value={delay} onChange={setDelay} accountDefault={accountDelay} disabled={busy || disabled} />
+      <p className="mt-1.5 text-sm text-slate-500">{delay === 0 ? "Everyone gets asked right away." : `Every ask waits ${delayLabel(delay)}. Stop any of them from Scheduled asks before then.`}</p></div>
     <div className="flex flex-wrap items-center gap-3">
-      <button className="btn-navy" onClick={send} disabled={busy || disabled}>{busy ? "Sending…" : rows ? `Send ${willSend} requests` : "Send all"}</button>
+      <button className="btn-navy" onClick={send} disabled={busy || disabled}>{busy ? "Sending…" : rows ? (delay ? `Schedule ${willSend} requests` : `Send ${willSend} requests`) : delay ? "Schedule all" : "Send all"}</button>
       {msg && <p className={`text-sm ${msg.t === "ok" ? "text-green-700" : "text-red-600"}`}>{msg.m}</p>}
     </div>
   </div>;
