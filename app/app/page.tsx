@@ -82,7 +82,6 @@ export default async function Home() {
           <p className="mt-1 text-sm font-semibold">Sam, thanks again from Bright Harbor Co.</p>
           <p className="mt-3 text-sm leading-relaxed text-slate-700">Thanks again for choosing Bright Harbor Co. If you’re happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.</p>
           <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a Google review</span>
-          <p className="mt-2 break-all text-xs text-slate-400">g.page/r/bright-harbor/review</p>
           <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent after the visit</span><span className="text-lime-700">Day-3 reminder queued</span></div>
         </div></div>
       </div>
