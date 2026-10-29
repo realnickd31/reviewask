@@ -8,7 +8,8 @@ import { processDueReminders, processDueScheduledAsks, accountDelayHours } from 
 import { delayLabel } from "@/lib/delay";
 import { dontAsk, cancelFollowUp } from "@/app/actions";
 import { requireUser } from "@/lib/session";
-import { db, isActive, usedThisMonth, MONTHLY_QUOTA, getUser, type ReviewRequest } from "@/lib/db";
+import { db, isActive, usedThisMonth, MONTHLY_QUOTA, getUser, trackedReviewUrl, unsubscribeUrl, clickTrackingSince, type ReviewRequest, type User } from "@/lib/db";
+import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms } from "@/lib/email";
 import { stripe } from "@/lib/stripe";
 import LiveRefresh from "@/components/LiveRefresh";
 import { applySubscription } from "@/lib/billing";
@@ -36,6 +37,8 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     SUM(CASE WHEN reminded_at IS NOT NULL THEN 1 ELSE 0 END) reminded,
     SUM(CASE WHEN status='failed' THEN 1 ELSE 0 END) failed,
     SUM(CASE WHEN source='webhook' THEN 1 ELSE 0 END) auto,
+    SUM(CASE WHEN status='sent' THEN 1 ELSE 0 END) delivered,
+    SUM(CASE WHEN status='sent' AND clicked_at IS NOT NULL THEN 1 ELSE 0 END) clicked,
     SUM(CASE WHEN remind_at IS NOT NULL AND reminded_at IS NULL AND status='sent' THEN 1 ELSE 0 END) pending
     FROM review_requests WHERE user_id=? AND created_at >= datetime('now','start of month')`).get(u.id) as Record<string, number | null>;
   const remaining = Math.max(0, MONTHLY_QUOTA - used);
@@ -55,6 +58,9 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Paste recent customers from a spreadsheet to ask them too. <a href="#bulk" className="font-medium text-navy-900 underline underline-offset-4">Paste a spreadsheet</a></p></div></li>
       </ol></section>}
     <section aria-label="This month" className="space-y-2">
+      <div className="rounded-lg border border-slate-200 bg-white p-4 sm:p-5" id="clicks"><p className="text-[11px] font-medium uppercase tracking-wider text-slate-500 sm:text-xs">Clicked through to Google this month</p>
+        <p className="mt-2 text-2xl font-semibold tracking-tight text-navy-900 sm:text-3xl">{stats.clicked ?? 0} <span className="text-base font-normal text-slate-500">of {stats.delivered ?? 0} customers asked</span></p>
+        <p className="mt-1 text-xs text-slate-500">Counted when a customer taps the review button in your email or text. Google doesn&apos;t tell us whether they finished posting.</p></div>
       <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
       {[["Requests this month", used, `${pct.toFixed(0)}% of plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} scheduled`], ["Sent automatically", stats.auto ?? 0, "from your connected tools"], ["Requests left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
         <div key={String(l)} className="bg-white p-4 sm:p-5"><p className="text-[11px] font-medium uppercase leading-snug tracking-wider text-slate-500 sm:text-xs">{l}</p>
@@ -80,19 +86,40 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       <ul className="-mx-1 space-y-2.5 md:hidden">{rows.map((r) => { const ch = chip(r); const fu = followUp(r); return <li key={r.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="flex items-start justify-between gap-3"><div className="min-w-0"><p className="truncate text-[15px] font-semibold text-navy-900">{r.customer_name}</p>
           {r.customer_email && <p className="mt-0.5 truncate text-sm text-slate-500">{r.customer_email}</p>}{r.customer_phone && <p className="text-sm text-slate-500">{r.customer_phone}</p>}</div>
-          <span title={queuedTip(r)} className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold ${ch.cls}`}>{ch.label}</span></div>
+          <span className="flex shrink-0 flex-col items-end gap-1"><span title={queuedTip(r)} className={`rounded-full px-2.5 py-1 text-xs font-semibold ${ch.cls}`}>{ch.label}</span><Clicked r={r} /></span></div>
         <div className="mt-3 flex flex-wrap gap-1.5 text-xs"><span className="rounded-md bg-slate-50 px-2 py-1 font-medium text-slate-600 ring-1 ring-slate-100">{channel(r)}</span><span className="rounded-md bg-slate-50 px-2 py-1 font-medium text-slate-600 ring-1 ring-slate-100">{source(r)}</span></div>
         <dl className="mt-3 grid grid-cols-2 gap-3 border-t border-slate-100 pt-3 text-xs"><div><dt className="text-slate-400">Sent</dt><dd className="mt-0.5 font-medium text-slate-700">{fmt(r.created_at)}</dd></div>
-          <div><dt className="text-slate-400">Follow-up</dt><dd className="mt-0.5 font-medium text-slate-700">{fu}</dd>{canCancel(r) && <CancelFU id={r.id} />}</div></dl></li>; })}</ul>
+          <div><dt className="text-slate-400">Follow-up</dt><dd className="mt-0.5 font-medium text-slate-700">{fu}</dd>{canCancel(r) && <CancelFU id={r.id} />}</div></dl><WhatTheyGot r={r} u={u} /></li>; })}</ul>
       <div className="hidden md:block"><table className="w-full text-left text-sm"><thead className="text-xs uppercase tracking-wider text-slate-500"><tr><th className="py-2 pr-3 font-medium">Customer</th><th className="pr-3 font-medium">Channel</th><th className="pr-3 font-medium">Source</th><th className="pr-3 font-medium">Status</th><th className="pr-3 font-medium">Sent</th><th className="font-medium">Follow-up</th></tr></thead>
-        <tbody>{rows.map((r) => { const ch = chip(r); return <tr key={r.id} className="border-t border-slate-100 align-top"><td className="py-3 pr-3"><p className="font-medium text-navy-900">{r.customer_name}</p><p className="max-w-[16rem] truncate text-xs text-slate-500 lg:max-w-xs">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")}</p></td>
+        <tbody>{rows.map((r) => { const ch = chip(r); return <tr key={r.id} className="border-t border-slate-100 align-top"><td className="py-3 pr-3"><p className="font-medium text-navy-900">{r.customer_name}</p><p className="max-w-[16rem] truncate text-xs text-slate-500 lg:max-w-xs">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")}</p><WhatTheyGot r={r} u={u} /></td>
           <td className="py-3 pr-3 text-slate-600">{channel(r)}</td><td className="py-3 pr-3 text-slate-500">{source(r)}</td>
-          <td className="py-3 pr-3"><span title={queuedTip(r)} className={`whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-semibold ${ch.cls}`}>{ch.label}</span></td>
+          <td className="py-3 pr-3"><span title={queuedTip(r)} className={`whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-semibold ${ch.cls}`}>{ch.label}</span> <Clicked r={r} /></td>
           <td className="whitespace-nowrap py-3 pr-3 text-slate-500">{fmt(r.created_at)}</td>
           <td className="whitespace-nowrap py-3 text-slate-500">{followUp(r)}{canCancel(r) && <CancelFU id={r.id} />}</td></tr>; })}</tbody></table></div></>}
       {rows.some((r) => r.status === "queued") && <p className="mt-3 text-xs text-slate-500"><strong>Queued</strong> means saved but not sent yet, for example a text that couldn&apos;t be delivered. Add the customer&apos;s email to send now.</p>}
     </section>
   </main></div>;
+}
+
+function Clicked({ r }: { r: ReviewRequest }) {
+  if (!r.clicked_at) return null;
+  return <span className="whitespace-nowrap rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-100">Clicked {fmt(r.clicked_at)}</span>;
+}
+/** The exact message content this customer was sent, rebuilt from the same templates the sender uses. */
+function WhatTheyGot({ r, u }: { r: ReviewRequest; u: User }) {
+  if (!u.business_name || !u.review_url || !["sent", "queued", "suppressed"].includes(r.status)) return null;
+  const since = clickTrackingSince();
+  const link = since && r.created_at >= since ? trackedReviewUrl(r.unsubscribe_token, u.review_url) : u.review_url;
+  const parts: { title: string; body: string }[] = [];
+  if (r.channel.includes("email")) { const m = buildReviewEmail(u.business_name, r.customer_name, link, unsubscribeUrl(r.unsubscribe_token || "")); parts.push({ title: `Email · Subject: ${m.subject}`, body: m.text }); }
+  if (r.channel.includes("sms")) parts.push({ title: "Text message", body: `${buildReviewSms(u.business_name, r.customer_name, link)}\nReply STOP to opt out.` });
+  if (r.reminded_at) {
+    if (r.channel.includes("email")) { const m = buildReminderEmail(u.business_name, r.customer_name, link, unsubscribeUrl(r.unsubscribe_token || "")); parts.push({ title: `Follow-up email · Subject: ${m.subject}`, body: m.text }); }
+    if (r.channel.includes("sms")) parts.push({ title: "Follow-up text", body: `${buildReminderSms(u.business_name, r.customer_name, link)}\nReply STOP to opt out.` });
+  }
+  if (!parts.length) return null;
+  return <details className="mt-2 text-xs"><summary className="cursor-pointer font-semibold text-slate-600 underline underline-offset-4">What they got</summary>
+    <div className="mt-2 space-y-2">{parts.map((p) => <div key={p.title} className="rounded-md border border-slate-200 bg-slate-50 p-3"><p className="mb-1 font-semibold text-slate-700">{p.title}</p><pre className="whitespace-pre-wrap break-words font-sans text-slate-600">{p.body}</pre></div>)}</div></details>;
 }
 
 const fmt = (t: string, prefix = "") => <LocalTime t={t} prefix={prefix} />;

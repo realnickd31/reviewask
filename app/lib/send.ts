@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { db, isSuppressed, unsubscribeUrl, getUser, isActive, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
+import { db, isSuppressed, unsubscribeUrl, trackedReviewUrl, getUser, isActive, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
 import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms, sendEmail, sendSms } from "./email";
 import { trackFirstAskIfNeeded } from "./analytics";
 import { clampDelay } from "./delay";
@@ -40,7 +40,8 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
   const i = normalize(raw);
   const err = validate(i);
   if (err) return { ok: false, error: err, code: 400 };
-  const token = i.email ? crypto.randomBytes(24).toString("base64url") : null;
+  // Every ask gets a token: it powers the tracked review link (/r/) for email and SMS, and email unsubscribe (/u/).
+  const token = crypto.randomBytes(24).toString("base64url");
   const delay = opts.delayHours !== undefined ? clampDelay(opts.delayHours, 0) : source === "webhook" ? accountDelayHours(u) : 0;
   if (delay > 0) {
     const r = db.prepare(`INSERT INTO review_requests (user_id, customer_name, customer_email, customer_phone, channel, status, source, send_at, unsubscribe_token)
@@ -61,11 +62,13 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
 
 /** Deliver the first ask for an existing row and record the outcome. */
 async function deliver(u: User, id: number, i: { name: string; email: string; phone: string }, token: string | null) {
-  const biz = u.business_name!, url = u.review_url!;
+  const biz = u.business_name!;
+  if (!token) { token = crypto.randomBytes(24).toString("base64url"); db.prepare("UPDATE review_requests SET unsubscribe_token=? WHERE id=?").run(token, id); }
+  const url = trackedReviewUrl(token, u.review_url!);
   const channels: string[] = []; let status = "sent"; let providerId: string | null = null; let mode = ""; let smsMode = "";
   const suppressed = !!i.email && isSuppressed(i.email);
   try {
-    if (i.email && !suppressed) { const r = await sendEmail(i.email, buildReviewEmail(biz, i.name, url, unsubscribeUrl(token!))); providerId = r.id; mode = r.mode; channels.push("email"); }
+    if (i.email && !suppressed) { const r = await sendEmail(i.email, buildReviewEmail(biz, i.name, url, unsubscribeUrl(token))); providerId = r.id; mode = r.mode; channels.push("email"); }
     if (i.phone) { const r = await sendSms(i.phone, buildReviewSms(biz, i.name, url)); smsMode = r.mode; mode ||= r.mode; channels.push("sms"); }
   } catch (e) { status = "failed"; console.error("send failed", e); }
   // Fallback: if the SMS provider is unavailable in production, a phone-only ask isn't delivered, so mark it queued instead of sent.
@@ -118,12 +121,11 @@ export async function processDueReminders(userId?: number, limit = 200) {
     const claim = db.prepare("UPDATE review_requests SET reminded_at = datetime('now') WHERE id=? AND reminded_at IS NULL").run(r.id);
     if (claim.changes === 0) { skipped++; continue; }
     try {
-      if (r.customer_email && !isSuppressed(r.customer_email)) {
-        let tok = r.unsubscribe_token;
-        if (!tok) { tok = crypto.randomBytes(24).toString("base64url"); db.prepare("UPDATE review_requests SET unsubscribe_token=? WHERE id=?").run(tok, r.id); }
-        await sendEmail(r.customer_email, buildReminderEmail(u.business_name, r.customer_name, u.review_url, unsubscribeUrl(tok)));
-      }
-      if (r.customer_phone) await sendSms(r.customer_phone, buildReminderSms(u.business_name, r.customer_name, u.review_url));
+      let tok = r.unsubscribe_token;
+      if (!tok) { tok = crypto.randomBytes(24).toString("base64url"); db.prepare("UPDATE review_requests SET unsubscribe_token=? WHERE id=?").run(tok, r.id); }
+      const link = trackedReviewUrl(tok, u.review_url);
+      if (r.customer_email && !isSuppressed(r.customer_email)) await sendEmail(r.customer_email, buildReminderEmail(u.business_name, r.customer_name, link, unsubscribeUrl(tok)));
+      if (r.customer_phone) await sendSms(r.customer_phone, buildReminderSms(u.business_name, r.customer_name, link));
       sent++;
     } catch (e) {
       console.error("reminder failed", e);

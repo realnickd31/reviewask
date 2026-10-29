@@ -57,6 +57,8 @@ if (!g._db) {
   addCol("users", "housecall_webhook_secret TEXT");
   addCol("review_requests", "unsubscribe_token TEXT");
   addCol("review_requests", "send_at TEXT");
+  addCol("review_requests", "clicked_at TEXT"); // first click on the tracked /r/<token> review link
+  addCol("review_requests", "click_count INTEGER NOT NULL DEFAULT 0");
   addCol("review_requests", "followup_cancelled_at TEXT"); // set only for status='scheduled' (delayed asks wait so owners can cancel)
   addCol("users", "send_delay_hours INTEGER NOT NULL DEFAULT 2"); // per-account wait for automatic asks (0 = instant)
   addCol("users", "square_connected INTEGER NOT NULL DEFAULT 0");
@@ -123,6 +125,8 @@ if (!g._db) {
       db.prepare("INSERT OR IGNORE INTO app_migrations (name) VALUES ('analytics_reset_2026_10_29')").run();
     })();
   }
+  // Marks when tracked review links went live; asks sent earlier linked straight to Google (used by the "What they got" preview).
+  db.prepare("INSERT OR IGNORE INTO app_migrations (name) VALUES ('review_click_tracking')").run();
   g._db = db;
 }
 
@@ -144,6 +148,7 @@ export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;
   channel: string; status: string; provider_id: string | null; created_at: string;
   remind_at: string | null; reminded_at: string | null; send_at: string | null; followup_cancelled_at?: string | null; source: string; unsubscribe_token: string | null;
+  clicked_at?: string | null; click_count?: number;
 };
 
 export const MONTHLY_QUOTA = 200;
@@ -168,3 +173,17 @@ export function suppressByToken(token: string): { email: string } | null {
 }
 export const appUrl = () => (process.env.APP_URL || "https://getreviewask.com").replace(/\/$/, "");
 export const unsubscribeUrl = (token: string) => `${appUrl()}/u/${token}`;
+/** Tracked review link sent to customers; /r/<token> records the click then redirects to the owner's Google review URL. */
+export const trackedReviewUrl = (token: string | null | undefined, fallback: string) => token ? `${appUrl()}/r/${token}` : fallback;
+/** Record a click (first click sets clicked_at; later clicks only bump the count). Returns the owner's review URL, or null if unknown. */
+export function recordReviewClick(token: string): string | null {
+  const r = db.prepare("SELECT rr.id, u.review_url FROM review_requests rr JOIN users u ON u.id = rr.user_id WHERE rr.unsubscribe_token=?").get(token) as { id: number; review_url: string | null } | undefined;
+  if (!r?.review_url) return null;
+  db.prepare("UPDATE review_requests SET clicked_at = COALESCE(clicked_at, datetime('now')), click_count = click_count + 1 WHERE id=?").run(r.id);
+  return r.review_url;
+}
+
+/** When tracked /r/ links started (UTC, sqlite datetime). Asks created before this were sent the raw review URL. */
+export function clickTrackingSince(): string | null {
+  return (db.prepare("SELECT ran_at FROM app_migrations WHERE name='review_click_tracking'").get() as { ran_at: string } | undefined)?.ran_at ?? null;
+}
