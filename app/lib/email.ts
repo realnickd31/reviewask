@@ -9,44 +9,48 @@ function ctaBlock(url: string) {
 }
 
 export function buildReviewEmail(business: string, customer: string, url: string, unsubscribeUrl: string) {
+  const dot = business.trim().endsWith(".") ? "" : ".";
   const subject = `${customer.split(" ")[0]}, thanks again from ${business}`;
   const first = customer.split(" ")[0];
-  const dot = business.trim().endsWith(".") ? "" : ".";
   const html = `<div style="font-family:system-ui,Arial,sans-serif;max-width:520px;margin:0 auto;padding:24px;color:#0b1631">
 <p>Hi ${esc(first)},</p>
-<p>Thanks again for choosing <b>${esc(business)}</b>${dot} If you're happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.</p>
+<p>Thanks again for choosing <b>${esc(business)}</b>${dot} We really appreciate you.</p>
+<p>If you're happy with how things went, we'd be so grateful if you'd share a quick Google review — about 30 seconds, and it helps neighbors find a business they can trust.</p>
 ${ctaBlock(url)}
 <p>Grateful for your business,<br/>— ${esc(business)}</p>
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"/>
 <p style="font-size:12px;color:#6b7280">Don't want these emails? <a href="${esc(unsubscribeUrl)}">Unsubscribe</a>.</p></div>`;
-  const text = `Hi ${first},\n\nThanks again for choosing ${business}${dot} If you're happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.\n\n${url}\n\nGrateful for your business,\n— ${business}\n\nUnsubscribe: ${unsubscribeUrl}`;
+  const text = `Hi ${first},\n\nThanks again for choosing ${business}${dot} We really appreciate you.\n\nIf you're happy with how things went, we'd be so grateful if you'd share a quick Google review — about 30 seconds, and it helps neighbors find a business they can trust.\n\n${url}\n\nGrateful for your business,\n— ${business}\n\nUnsubscribe: ${unsubscribeUrl}`;
   return { subject, html, text, unsubscribeUrl };
 }
 
 export function buildReminderEmail(business: string, customer: string, url: string, unsubscribeUrl: string) {
-  const subject = `Quick follow-up from ${business}`;
+  const dot = business.trim().endsWith(".") ? "" : ".";
+  const subject = `One more thank-you from ${business}`;
   const first = customer.split(" ")[0];
   const html = `<div style="font-family:system-ui,Arial,sans-serif;max-width:520px;margin:0 auto;padding:24px;color:#0b1631">
 <p>Hi ${esc(first)},</p>
-<p>Just following up from <b>${esc(business)}</b>. If you have a minute, we'd really appreciate a Google review.</p>
+<p>Just a gentle follow-up from <b>${esc(business)}</b>${dot} If you haven't had a chance yet and you're happy with how things went, a quick Google review would mean a lot to us.</p>
 ${ctaBlock(url)}
 <p>Thank you,<br/>— ${esc(business)}</p>
 <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0"/>
 <p style="font-size:12px;color:#6b7280">This is the only reminder we'll send. <a href="${esc(unsubscribeUrl)}">Unsubscribe</a>.</p></div>`;
-  const text = `Hi ${first},\n\nJust following up from ${business}. If you have a minute, we'd really appreciate a Google review.\n\n${url}\n\nThank you,\n— ${business}\n\nUnsubscribe: ${unsubscribeUrl}`;
+  const text = `Hi ${first},\n\nJust a gentle follow-up from ${business}${dot} If you haven't had a chance yet and you're happy with how things went, a quick Google review would mean a lot to us.\n\n${url}\n\nThank you,\n— ${business}\n\nUnsubscribe: ${unsubscribeUrl}`;
   return { subject, html, text, unsubscribeUrl };
 }
 
 /** First-ask SMS body (STOP line is appended by sendSms). */
 export function buildReviewSms(business: string, customer: string, url: string) {
   const first = customer.split(" ")[0];
-  return `Hi ${first}, thanks for choosing ${business}. Mind leaving a quick Google review? ${url}`;
+  const dot = business.trim().endsWith(".") ? "" : ".";
+  return `Hi ${first} — thanks again for choosing ${business}${dot} If you're happy with the work, a quick Google review would mean a lot: ${url}`;
 }
 
 /** Day-3 reminder SMS body (STOP line is appended by sendSms). */
 export function buildReminderSms(business: string, customer: string, url: string) {
   const first = customer.split(" ")[0];
-  return `Hi ${first}, quick follow-up from ${business} — if you have a minute, we'd appreciate a Google review: ${url}`;
+  const dot = business.trim().endsWith(".") ? "" : ".";
+  return `Hi ${first} — still grateful for your business with ${business}${dot} If you have a minute and you're happy, a Google review would mean a lot: ${url}`;
 }
 
 function appendOutbox(entry: object) {

@@ -80,13 +80,13 @@ export default async function Home() {
           <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Example request · Email</p>
           <p className="mt-3 text-xs text-slate-500">From: <span className="font-medium text-navy-900">Bright Harbor Co.</span></p>
           <p className="mt-1 text-sm font-semibold">Sam, thanks again from Bright Harbor Co.</p>
-          <p className="mt-3 text-sm leading-relaxed text-slate-700">Thanks again for choosing Bright Harbor Co. If you’re happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.</p>
+          <p className="mt-3 text-sm leading-relaxed text-slate-700">Thanks again for choosing Bright Harbor Co. We really appreciate you.</p><p className="mt-2 text-sm leading-relaxed text-slate-700">If you’re happy with how things went, we’d be so grateful if you’d share a quick Google review — about 30 seconds, and it helps neighbors find a business they can trust.</p>
           <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a Google review</span>
           <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent after the visit</span><span className="text-lime-700">Day-3 reminder queued</span></div>
         </div>
         <div aria-label="Example text message" className="mx-auto mt-4 w-full max-w-sm rounded-2xl bg-white p-4 text-navy-900 shadow-2xl ring-1 ring-white/10 lg:-ml-6 lg:max-w-[19rem]">
           <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Or by text · SMS</p>
-          <div className="mt-2 rounded-2xl rounded-bl-sm bg-slate-100 px-3.5 py-2.5 text-sm leading-relaxed text-navy-900">Hi Sam, thanks for choosing Bright Harbor Co.! Would you leave us a quick Google review? <span className="font-medium text-blue-700 underline">g.page/r/brightharbor</span><br /><span className="text-xs text-slate-500">Reply STOP to opt out.</span></div>
+          <div className="mt-2 rounded-2xl rounded-bl-sm bg-slate-100 px-3.5 py-2.5 text-sm leading-relaxed text-navy-900">Hi Sam — thanks again for choosing Bright Harbor Co. If you’re happy with the work, a quick Google review would mean a lot: <span className="font-medium text-blue-700 underline">g.page/r/brightharbor</span><br /><span className="text-xs text-slate-500">Reply STOP to opt out.</span></div>
           <p className="mt-2 text-right text-[11px] text-slate-500">Delivered · from Bright Harbor Co.</p>
         </div></div>
       </div>
