@@ -23,7 +23,7 @@ export default function Page() { return <Legal title="Free Google review link ge
   <h2>Where to use your review link</h2>
   <ul className="list-disc space-y-1 pl-5"><li>A text or email right after the job or visit</li><li>Invoices, receipts, and email signatures</li><li>A QR code on the counter, a business card, or a leave-behind</li><li>Your website&apos;s contact or thank-you page</li></ul>
   <h2>Send it after every customer, automatically</h2>
-  <p>Having the link is step one; remembering to send it is the hard part. <Link href="/">ReviewAsk</Link> emails it to each customer for you, from a spreadsheet, with one tap from your phone, or (optionally) when a job closes in a tool you already use. One polite follow-up on day 3, then it stops.</p>
+  <p>Having the link is step one; remembering to send it is the hard part. <Link href="/">ReviewAsk</Link> emails it to each customer for you, from a spreadsheet, with one tap from your phone, or (optionally) when a job closes in a tool you already use. One polite follow-up on day 3, then it stops. Comparing tools? See ReviewAsk vs <Link href="/vs/reviewask-vs-nicejob">NiceJob</Link>, <Link href="/vs/reviewask-vs-gatherup">GatherUp</Link>, or <Link href="/vs/reviewask-vs-jobber-reviews">Jobber Reviews</Link>.</p>
   <p className="pt-2"><Link href="/signup" className="btn-navy px-5 py-3 !text-white no-underline">Start your 7-day free trial</Link></p>
   <p className="text-sm text-slate-500">$39/month after the trial, cancel anytime. ReviewAsk is not affiliated with Google.</p>
   <h2>FAQ</h2>

@@ -9,7 +9,8 @@ export function articleMeta(a: Article): Metadata {
     twitter: { card: "summary_large_image", title: a.title, description: a.description } };
 }
 const LINKS: [string, string][] = [["free Google review link generator", "/tools/review-link"], ["start a free trial", "/signup"]];
-const linkify = (t: string) => { const m = LINKS.find(([k]) => t.includes(k)); if (!m) return t; const [k, href] = m; const [a, ...b] = t.split(k);
+const md = (t: string) => t.split(/(\[[^\]]+\]\(\/[^)]+\))/).map((s, i) => { const m = s.match(/^\[([^\]]+)\]\((\/[^)]+)\)$/); return m ? <Link key={i} href={m[2]}>{m[1]}</Link> : s; });
+const linkify = (t: string) => { if (/\]\(\//.test(t)) return <>{md(t)}</>; const m = LINKS.find(([k]) => t.includes(k)); if (!m) return t; const [k, href] = m; const [a, ...b] = t.split(k);
   return <>{a}<Link href={href}>{k}</Link>{b.join(k)}</>; };
 export default function ArticlePage({ a }: { a: Article }) {
   const ld = [{ "@context": "https://schema.org", "@type": "Article", headline: a.h1, description: a.description, dateModified: "2026-10-29", author: { "@type": "Organization", name: "ReviewAsk" }, mainEntityOfPage: `https://getreviewask.com/${a.kind}/${a.slug}` },
