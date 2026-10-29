@@ -42,8 +42,6 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     SUM(CASE WHEN reminded_at IS NOT NULL THEN 1 ELSE 0 END) reminded,
     SUM(CASE WHEN status='failed' THEN 1 ELSE 0 END) failed,
     SUM(CASE WHEN source='webhook' THEN 1 ELSE 0 END) auto,
-    SUM(CASE WHEN status='sent' THEN 1 ELSE 0 END) delivered,
-    SUM(CASE WHEN status='sent' AND clicked_at IS NOT NULL THEN 1 ELSE 0 END) clicked,
     SUM(CASE WHEN remind_at IS NOT NULL AND reminded_at IS NULL AND status='sent' THEN 1 ELSE 0 END) pending
     FROM review_requests WHERE user_id=? AND created_at >= datetime('now','start of month')`).get(u.id) as Record<string, number | null>;
   const remaining = Math.max(0, MONTHLY_QUOTA - used);
@@ -64,9 +62,6 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Paste recent customers from a spreadsheet to ask them too. <a href="#bulk" className="font-medium text-navy-900 underline underline-offset-4">Paste a spreadsheet</a></p></div></li>
       </ol></section>}
     <section aria-label="This month" className="space-y-2">
-      <div className="rounded-lg border border-slate-200 bg-white p-4 sm:p-5" id="clicks"><p className="text-[11px] font-medium uppercase tracking-wider text-slate-500 sm:text-xs">Clicked through to Google this month</p>
-        <p className="mt-2 text-2xl font-semibold tracking-tight text-navy-900 sm:text-3xl">{stats.clicked ?? 0} <span className="text-base font-normal text-slate-500">of {stats.delivered ?? 0} customers asked</span></p>
-        <p className="mt-1 text-xs text-slate-500">Counted when a customer taps the review button in your email or text. Google doesn&apos;t tell us whether they finished posting.</p></div>
       <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
       {[["Requests this month", used, `${pct.toFixed(0)}% of plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} scheduled`], ["Sent automatically", stats.auto ?? 0, "from your connected tools"], ["Requests left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
         <div key={String(l)} className="bg-white p-4 sm:p-5"><p className="text-[11px] font-medium uppercase leading-snug tracking-wider text-slate-500 sm:text-xs">{l}</p>
