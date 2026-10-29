@@ -1,0 +1,28 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import Legal from "./Legal";
+import type { Article } from "@/lib/articles";
+export function articleMeta(a: Article): Metadata {
+  const url = `/${a.kind}/${a.slug}`;
+  return { title: { absolute: `${a.title} | ReviewAsk` }, description: a.description, alternates: { canonical: url },
+    openGraph: { type: "article", siteName: "ReviewAsk", url, title: a.title, description: a.description },
+    twitter: { card: "summary_large_image", title: a.title, description: a.description } };
+}
+const linkify = (t: string) => t.includes("free Google review link generator")
+  ? <>{t.split("free Google review link generator")[0]}<Link href="/tools/review-link">free Google review link generator</Link>{t.split("free Google review link generator")[1]}</> : t;
+export default function ArticlePage({ a }: { a: Article }) {
+  const ld = [{ "@context": "https://schema.org", "@type": "Article", headline: a.h1, description: a.description, dateModified: "2026-10-29", author: { "@type": "Organization", name: "ReviewAsk" }, mainEntityOfPage: `https://getreviewask.com/${a.kind}/${a.slug}` },
+    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: a.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }];
+  return <Legal title={a.h1}>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
+    <p className="text-lg">{a.intro}</p>
+    {a.sections.map((s) => <section key={s.h} className="space-y-3"><h2>{s.h}</h2>
+      {s.table && <div className="overflow-x-auto"><table className="w-full border-collapse text-sm"><tbody>{s.table.map((r, i) => <tr key={i} className="border-b border-slate-200">{r.map((c, j) => i === 0 ? <th key={j} className="p-2 text-left font-semibold text-navy-900">{c}</th> : <td key={j} className={`p-2 align-top ${j === 0 ? "font-medium" : ""}`}>{c}</td>)}</tr>)}</tbody></table></div>}
+      {s.p?.map((t) => <p key={t}>{linkify(t)}</p>)}
+      {s.list && <ul className="list-disc space-y-1 pl-5">{s.list.map((t) => <li key={t}>{t}</li>)}</ul>}</section>)}
+    <div className="mt-8 rounded-xl bg-slate-50 p-6"><p className="font-semibold text-navy-900">Ask every customer, without remembering to</p><p className="mt-1 text-sm">ReviewAsk emails each customer a one-tap Google review link with one follow-up. $39/month, 7-day free trial, no contract.</p><div className="mt-4 flex flex-wrap gap-3"><Link href="/signup" className="btn-navy px-5 py-2.5 !text-white no-underline">Start free trial</Link><Link href="/tools/review-link" className="px-2 py-2.5 text-sm underline underline-offset-4">Get your review link free</Link></div></div>
+    <h2>FAQ</h2>
+    {a.faqs.map((f) => <div key={f.q}><h3 className="font-semibold text-navy-900">{f.q}</h3><p>{f.a}</p></div>)}
+    {a.kind === "vs" && <p className="text-xs text-slate-500">Competitor details are from their public websites as of October 2026 and may change. Podium, Birdeye, and NiceJob are trademarks of their owners; ReviewAsk is not affiliated with them or with Google.</p>}
+  </Legal>;
+}
