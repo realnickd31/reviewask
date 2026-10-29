@@ -14,19 +14,22 @@ function readUtms(search: URLSearchParams) {
       found = true;
     }
   }
-  if (typeof sessionStorage !== "undefined") {
+  // Storage access can THROW (SecurityError when storage is blocked, quota errors in private mode,
+  // some crawler renderers). This runs on every page from the root layout, so never let it crash.
+  try {
     if (found) sessionStorage.setItem("ra_utm", JSON.stringify(out));
-    try {
-      const saved = JSON.parse(sessionStorage.getItem("ra_utm") || "{}") as Record<string, string>;
-      return { ...saved, ...out };
-    } catch {
-      return out;
-    }
+    const saved = JSON.parse(sessionStorage.getItem("ra_utm") || "{}") as Record<string, string>;
+    return { ...saved, ...out };
+  } catch {
+    return out;
   }
   return out;
 }
 
 function send(payload: Record<string, unknown>) {
+  try { sendUnsafe(payload); } catch { /* analytics must never break the page */ }
+}
+function sendUnsafe(payload: Record<string, unknown>) {
   const body = JSON.stringify(payload);
   if (typeof navigator !== "undefined" && navigator.sendBeacon) {
     navigator.sendBeacon("/api/analytics/collect", new Blob([body], { type: "application/json" }));
@@ -46,10 +49,11 @@ function BeaconInner() {
   const lastPath = useRef("");
 
   useEffect(() => {
-    const utms = readUtms(searchParams);
+    let utms: Record<string, string> = {};
+    try { utms = readUtms(new URLSearchParams(searchParams?.toString() || "")); } catch { /* ignore */ }
     if (pathname && pathname !== lastPath.current) {
       lastPath.current = pathname;
-      const qs = searchParams.toString();
+      const qs = searchParams?.toString() || "";
       send({
         event: "pageview",
         path: pathname + (qs ? `?${qs}` : ""),
