@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/db";
+import { db, isActive } from "@/lib/db";
 import { currentUser } from "@/lib/session";
 import { sendEmail } from "@/lib/email";
 
@@ -16,8 +16,9 @@ export async function POST(req: NextRequest) {
   const tool = clip(b.tool, 100), website = clip(b.website, 300), notes = clip(b.notes, 2000);
   if (!tool) return NextResponse.json({ error: "Tell us which tool you use." }, { status: 400 });
   const u = await currentUser().catch(() => undefined);
-  const email = u?.email || clip(b.email, 200);
-  if (!u && email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return NextResponse.json({ error: "That email doesn't look right." }, { status: 400 });
+  if (!u) return NextResponse.json({ error: "Sign in to request a connector." }, { status: 401 });
+  if (!isActive(u)) return NextResponse.json({ error: "Connector requests are available on an active trial or subscription." }, { status: 403 });
+  const email = u.email;
   const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
   // Light rate limit: max 5 per IP (or user) per hour.
   const recent = db.prepare("SELECT COUNT(*) c FROM connector_requests WHERE (ip = ? OR (user_id IS NOT NULL AND user_id = ?)) AND created_at > datetime('now','-1 hour')").get(ip, u?.id ?? -1) as { c: number };

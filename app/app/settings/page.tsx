@@ -7,6 +7,7 @@ import { squareConfigured } from "@/lib/square";
 import { qboConfigured } from "@/lib/quickbooks";
 import { stripeConnectConfigured } from "@/lib/stripe-connect";
 import { requireUser } from "@/lib/session";
+import { isActive } from "@/lib/db";
 import { saveSettings, saveSendDelay } from "../actions";
 import ConnectorRequest from "@/components/ConnectorRequest";
 import SendDelaySetting from "@/components/SendDelaySetting";
@@ -27,7 +28,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
         stripeConnected={!!u.stripe_connect_connected} stripeReady={stripeConnectConfigured()} stripeFlash={searchParams.stripe}
         qboConnected={!!u.qbo_connected} qboReady={qboConfigured()} qboFlash={searchParams.quickbooks}
         zapierToken={u.api_token} zapierUrl={hookUrl} business={u.business_name || "my business"} />
-      <ConnectorRequest signedIn /></section>
+      {isActive(u) && <ConnectorRequest />}</section>
     <section className="card" id="timing"><h2 className="text-xl font-bold">Send timing</h2>
       <p className="mb-4 mt-1 text-sm text-slate-600">How long automatic asks from your connected tools wait before going out. Quick asks and spreadsheet sends let you choose each time.</p>
       <SendDelaySetting initial={clampDelay(u.send_delay_hours)} save={saveSendDelay} /></section>

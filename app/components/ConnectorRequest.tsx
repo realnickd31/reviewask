@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function ConnectorRequest({ signedIn }: { signedIn: boolean }) {
+export default function ConnectorRequest() {
   const [open, setOpen] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "done">("idle");
   const [err, setErr] = useState("");
@@ -21,7 +21,6 @@ export default function ConnectorRequest({ signedIn }: { signedIn: boolean }) {
       <input name="tool" required maxLength={100} placeholder="Tool name (e.g. ServiceTitan)" className="w-full rounded-md border px-3 py-2" />
       <input name="website" maxLength={300} placeholder="Website (optional)" className="w-full rounded-md border px-3 py-2" />
       <textarea name="notes" maxLength={2000} rows={2} placeholder="Anything we should know? (optional)" className="w-full rounded-md border px-3 py-2" />
-      {!signedIn && <input name="email" type="email" maxLength={200} placeholder="Your email (optional, so we can follow up)" className="w-full rounded-md border px-3 py-2" />}
       <input name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
       {err && <p className="text-red-600">{err}</p>}
       <div className="flex gap-3"><button disabled={state === "sending"} className="btn-lime">{state === "sending" ? "Sending…" : "Send request"}</button>
