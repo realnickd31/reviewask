@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import AppNav from "@/components/AppNav";
 import { excludeAdminSql, excludeExemptUsersSql, excludeExemptUserIdSql } from "@/lib/analytics";
 import { MetricSection, MetricTable, type Col, type Row } from "@/components/admin/MetricSection";
+import { FunnelChart, TrendChart } from "@/components/admin/AdminCharts";
 
 export const dynamic = "force-dynamic";
 
@@ -210,20 +211,19 @@ export default async function AdminPage({
 
         {/* 1. Funnel */}
         <Group n={1} title="Acquisition funnel">
-          <MetricSection title="Funnel" hint={`Visit → signup ${pct(signups, uniqueVisitors)} · Signup → checkout ${pct(checkoutStarted, signups)} · ${ctaClicks.toLocaleString()} CTA clicks`} csvName={`funnel-${rk}`} csv={{ columns: kpiCols, rows: funnelRows }}>
-            <div className="grid grid-cols-2 divide-slate-100 sm:grid-cols-3 lg:grid-cols-6 lg:divide-x">
-              {funnel.map((step, i) => (
-                <div key={step.label} className="px-4 py-4">
-                  <p className="truncate text-[11px] font-medium uppercase tracking-wide text-slate-500">{step.label}</p>
-                  <p className="mt-1 text-2xl font-semibold tabular-nums text-navy-900">{step.value.toLocaleString()}</p>
-                  <p className="mt-0.5 h-4 text-xs text-slate-500">{i > 0 ? `${pct(step.value, funnel[i - 1].value)} of prev` : ""}</p>
-                </div>
-              ))}
-            </div>
-          </MetricSection>
+          <MetricTable
+            id={`funnel-${rk}`}
+            title="Funnel"
+            hint={`Visit → signup ${pct(signups, uniqueVisitors)} · Signup → checkout ${pct(checkoutStarted, signups)} · ${ctaClicks.toLocaleString()} CTA clicks · % = conversion from previous step`}
+            lead={<FunnelChart steps={funnel} />}
+            columns={kpiCols}
+            rows={funnelRows}
+          />
           <MetricTable
             id={`daily-trend-${rk}`}
             title="Daily trend"
+            hint="Traffic on left axis, conversions on right. ▲▼ = second half of range vs first half."
+            lead={<TrendChart daily={daily} />}
             className="mt-4"
             empty="No events in this range yet."
             columns={[
@@ -242,12 +242,12 @@ export default async function AdminPage({
         {/* 2. Traffic */}
         <Group n={2} title="Traffic">
           <div className="grid gap-4 lg:grid-cols-2">
-            <MetricTable id={`top-pages-${rk}`} title="Top pages" columns={two("Page")} rows={topPages.map((r) => ({ s: r.p || "/", c: r.c }))} empty="No pageviews yet." />
-            <MetricTable id={`top-referrers-${rk}`} title="Top referrers" columns={two("Referrer")} rows={topRefs.map((r) => ({ s: hostOf(r.r), c: r.c }))} empty="No referrers yet." />
-            <MetricTable id={`utm-sources-${rk}`} title="UTM sources" columns={two("Source")} rows={utmSources.map((r) => ({ s: r.s, c: r.c }))} empty="Add ?utm_source=… to campaign links." />
-            <MetricTable id={`utm-campaigns-${rk}`} title="UTM campaigns" columns={two("Campaign")} rows={utmCampaigns.map((r) => ({ s: r.s, c: r.c }))} empty="No campaign tags yet." />
-            <MetricTable id={`top-ctas-${rk}`} title="Top CTAs clicked" columns={two("CTA")} rows={topCtas.map((r) => ({ s: r.l, c: r.c }))} empty="No CTA clicks yet." />
-            <MetricTable id={`devices-${rk}`} title="Devices" columns={two("Device")} rows={devices.map((d) => ({ s: d.d, c: d.c }))} empty="No device data yet." />
+            <MetricTable id={`top-pages-${rk}`} chart="bar" title="Top pages" columns={two("Page")} rows={topPages.map((r) => ({ s: r.p || "/", c: r.c }))} empty="No pageviews yet." />
+            <MetricTable id={`top-referrers-${rk}`} chart="bar" title="Top referrers" columns={two("Referrer")} rows={topRefs.map((r) => ({ s: hostOf(r.r), c: r.c }))} empty="No referrers yet." />
+            <MetricTable id={`utm-sources-${rk}`} chart="bar" title="UTM sources" columns={two("Source")} rows={utmSources.map((r) => ({ s: r.s, c: r.c }))} empty="Add ?utm_source=… to campaign links." />
+            <MetricTable id={`utm-campaigns-${rk}`} chart="bar" title="UTM campaigns" columns={two("Campaign")} rows={utmCampaigns.map((r) => ({ s: r.s, c: r.c }))} empty="No campaign tags yet." />
+            <MetricTable id={`top-ctas-${rk}`} chart="bar" title="Top CTAs clicked" columns={two("CTA")} rows={topCtas.map((r) => ({ s: r.l, c: r.c }))} empty="No CTA clicks yet." />
+            <MetricTable id={`devices-${rk}`} chart="donut" title="Devices" columns={two("Device")} rows={devices.map((d) => ({ s: d.d, c: d.c }))} empty="No device data yet." />
           </div>
         </Group>
 
@@ -264,10 +264,10 @@ export default async function AdminPage({
             </div>
           </MetricSection>
           <div className="mt-4 grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
-            <MetricTable id={`asks-status-${rk}`} title="Asks by status" columns={two("Status")} rows={askStatus.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
-            <MetricTable id={`asks-channel-${rk}`} title="Asks by channel" columns={two("Channel")} rows={askChannel.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
-            <MetricTable id={`asks-source-${rk}`} title="Asks by source" columns={two("Source")} rows={askSource.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
-            <MetricTable id="connectors" title="Connectors" hint="All accounts" columns={two("Connector")} rows={connectorRows} empty="None" />
+            <MetricTable id={`asks-status-${rk}`} chart="donut" title="Asks by status" columns={two("Status")} rows={askStatus.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
+            <MetricTable id={`asks-channel-${rk}`} chart="donut" title="Asks by channel" columns={two("Channel")} rows={askChannel.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
+            <MetricTable id={`asks-source-${rk}`} chart="donut" title="Asks by source" columns={two("Source")} rows={askSource.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
+            <MetricTable id="connectors" chart="bar" title="Connectors" hint="All accounts" columns={two("Connector")} rows={connectorRows} empty="None" />
           </div>
         </Group>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Donut, RankBar } from "./AdminCharts";
 
 export type Col = { key: string; label: string; align?: "left" | "right"; width?: number; mono?: boolean };
 export type Row = Record<string, string | number | null | undefined>;
@@ -62,8 +63,13 @@ const MIN_W = 64;
 
 /** Table with drag-to-resize columns (persisted per table) + CSV export. */
 export function MetricTable({
-  id, title, hint, columns, rows, empty = "No data yet.", className = "",
-}: { id: string; title: string; hint?: string; columns: Col[]; rows: Row[]; empty?: string; className?: string }) {
+  id, title, hint, columns, rows, empty = "No data yet.", className = "", chart, lead,
+}: { id: string; title: string; hint?: string; columns: Col[]; rows: Row[]; empty?: string; className?: string;
+  /** Render a chart above the table from columns[0] (label) / columns[1] (value). */
+  chart?: "bar" | "donut";
+  /** Custom visual to lead the card (table becomes collapsible detail). */
+  lead?: React.ReactNode }) {
+  const [showTable, setShowTable] = useState(!chart && !lead);
   const storeKey = `ra-admin-cols:${id}`;
   const [widths, setWidths] = useState<(number | undefined)[]>(() => columns.map((c) => c.width));
   const tableRef = useRef<HTMLTableElement>(null);
@@ -119,7 +125,18 @@ export function MetricTable({
 
   return (
     <MetricSection title={title} hint={hint} csvName={id} csv={{ columns, rows }} className={className}>
-      <div className="overflow-x-auto">
+      {lead}
+      {chart && (() => {
+        const pairs = rows.map((r) => ({ name: String(r[columns[0].key] ?? "—"), value: Number(r[columns[1].key]) || 0 }));
+        return chart === "donut" ? <Donut data={pairs} /> : <RankBar data={pairs} />;
+      })()}
+      {(chart || lead) && (
+        <button type="button" onClick={() => setShowTable((v) => !v)} aria-expanded={showTable}
+          className="flex w-full items-center justify-center gap-1 border-t border-slate-100 py-1.5 text-[11px] font-medium text-slate-500 hover:bg-slate-50 hover:text-navy-900">
+          {showTable ? "Hide table" : `Show table (${rows.length} rows)`} <span aria-hidden>{showTable ? "▴" : "▾"}</span>
+        </button>
+      )}
+      <div className="overflow-x-auto" hidden={!showTable}>
         <table ref={tableRef} className="w-full text-sm" style={{ tableLayout: sized ? "fixed" : "auto" }}>
           <colgroup>{columns.map((c, i) => <col key={c.key} style={widths[i] != null ? { width: widths[i] } : undefined} />)}</colgroup>
           <thead className="bg-slate-50/70 text-[11px] font-medium uppercase tracking-wide text-slate-500">
