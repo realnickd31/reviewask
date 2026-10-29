@@ -4,6 +4,7 @@ import Logo from "@/components/Logo";
 import Footer from "@/components/Footer";
 import Pricing, { Check } from "@/components/Pricing";
 import { currentUser } from "@/lib/session";
+import ConnectorRequest from "@/components/ConnectorRequest";
 import HowItWorksDemo from "@/components/HowItWorksDemo";
 
 export const dynamic = "force-dynamic";
@@ -104,6 +105,7 @@ export default async function Home() {
         <h3 className="text-lg font-semibold">Optional: let your tools send it for you</h3>
         <p className="mt-2 text-sm text-slate-600">Connect a tool you already use (listed above) — or skip it and use a spreadsheet or your phone.</p>
         <ol className="mt-5 grid gap-3 text-sm sm:grid-cols-3">{["Connect your tool in Settings", "An appointment, order, or invoice is marked done", "Your customer gets the review request"].map((t, i) => <li key={t} className="flex gap-3 rounded-lg bg-white p-4 ring-1 ring-slate-200"><span className="font-mono text-xs text-slate-400">{i + 1}</span><span className="text-navy-900">{t}</span></li>)}</ol>
+        <ConnectorRequest signedIn={!!user} />
       </div>
     </div></section>
 

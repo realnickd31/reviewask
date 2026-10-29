@@ -75,6 +75,12 @@ if (!g._db) {
   db.exec("CREATE TABLE IF NOT EXISTS qbo_events (event_key TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE TABLE IF NOT EXISTS square_events (payment_id TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_rr_unsub ON review_requests(unsubscribe_token)");
+  db.exec(`CREATE TABLE IF NOT EXISTS connector_requests (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tool TEXT NOT NULL, website TEXT, notes TEXT, email TEXT, user_id INTEGER NULL, ip TEXT,
+    emailed INTEGER NOT NULL DEFAULT 0,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  )`);
   db.exec(`CREATE TABLE IF NOT EXISTS suppressions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT NOT NULL,
