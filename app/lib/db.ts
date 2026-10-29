@@ -72,6 +72,7 @@ if (!g._db) {
   addCol("users", "qbo_refresh_token TEXT");
   addCol("users", "qbo_token_expires_at TEXT");
   addCol("users", "qbo_realm_id TEXT");
+  addCol("users", "trial_end TEXT");
   db.exec("CREATE TABLE IF NOT EXISTS qbo_events (event_key TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE TABLE IF NOT EXISTS square_events (payment_id TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_rr_unsub ON review_requests(unsubscribe_token)");
@@ -132,7 +133,7 @@ if (!g._db) {
 
 export type User = {
   id: number; email: string; password_hash: string; business_name: string | null; review_url: string | null;
-  stripe_customer_id: string | null; stripe_subscription_id: string | null; subscription_status: string; created_at: string; api_token: string | null;
+  stripe_customer_id: string | null; stripe_subscription_id: string | null; subscription_status: string; trial_end?: string | null; created_at: string; api_token: string | null;
   auto_enabled: number; auto_provider: string | null; auto_setup_email: string | null; auto_setup_requested_at: string | null;
   jobber_connected: number; jobber_access_token: string | null; jobber_refresh_token: string | null;
   jobber_token_expires_at: string | null; jobber_account_id: string | null;

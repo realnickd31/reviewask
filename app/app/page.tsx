@@ -13,7 +13,7 @@ export const metadata = { alternates: { canonical: "/" } };
 
 const steps = [
   { n: "01", t: "Add your Google review link", d: "Paste your Google review link and your business name. That’s all the setup you need." },
-  { n: "02", t: "Your customers get a short email", d: "After the work is done, each customer gets a short thank-you from your business with a one-tap Google review link. Send from your phone, upload a spreadsheet, or let a connected tool trigger it." },
+  { n: "02", t: "Your customers get a short text or email", d: "After the work is done, each customer gets a short thank-you by text or email from your business with a one-tap Google review link. Send from your phone, upload a spreadsheet, or let a connected tool trigger it." },
   { n: "03", t: "Follow-up and proof, handled", d: "Anyone who hasn’t been reminded gets one polite follow-up on day 3. Your dashboard shows every request, reminder, and status." },
 ];
 const pillars = [
@@ -68,7 +68,7 @@ export default async function Home() {
         <div className="max-w-3xl">
           <p className="eyebrow !text-lime-400">More Google reviews, without chasing customers · $39/mo</p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] sm:text-[56px]">Every customer gets a Google review request — automatically.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">When you finish working with a customer or they pay, ReviewAsk sends them a short thank-you note from your business with a one-tap Google review link — plus one friendly follow-up on day 3.</p>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">When you finish working with a customer or they pay, ReviewAsk texts or emails them a short thank-you from your business with a one-tap Google review link — plus one friendly follow-up on day 3.</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">{user ? <Link href="/dashboard" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Open dashboard</Link> : <Link href="/signup" className="btn bg-white px-5 py-3 text-navy-950 hover:bg-slate-100">Start free for 7 days</Link>}{!user && <a href="#demo" className="px-2 py-3 text-sm font-medium text-white/70 underline-offset-4 hover:text-white hover:underline">See how it works →</a>}</div>
           {!user && <p className="mt-3 text-sm text-white/70">Add your Google review link. Send your first request in minutes.</p>}
           <p className="mt-8 text-xs text-white/60">Works with the tools you already use — or a spreadsheet:</p>
@@ -77,12 +77,17 @@ export default async function Home() {
           <p className="mt-1 text-xs text-white/50">Card required to start · you won’t be charged until the trial ends.</p>
         </div>
         <div aria-label="Example review request" className="hidden lg:block"><div className="mx-auto w-full max-w-sm rounded-2xl bg-white p-5 text-navy-900 shadow-2xl ring-1 ring-white/10">
-          <p className="text-xs font-medium uppercase tracking-wider text-slate-400">Example request</p>
+          <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Example request · Email</p>
           <p className="mt-3 text-xs text-slate-500">From: <span className="font-medium text-navy-900">Bright Harbor Co.</span></p>
           <p className="mt-1 text-sm font-semibold">Sam, thanks again from Bright Harbor Co.</p>
           <p className="mt-3 text-sm leading-relaxed text-slate-700">Thanks again for choosing Bright Harbor Co. If you’re happy with how things went, would you leave us a quick Google review? It takes about 30 seconds and helps other people find us.</p>
           <span className="mt-4 inline-flex rounded-md bg-navy-900 px-4 py-2 text-sm font-medium text-white">Leave a Google review</span>
           <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500"><span>Sent after the visit</span><span className="text-lime-700">Day-3 reminder queued</span></div>
+        </div>
+        <div aria-label="Example text message" className="mx-auto mt-4 w-full max-w-sm rounded-2xl bg-white p-4 text-navy-900 shadow-2xl ring-1 ring-white/10 lg:-ml-6 lg:max-w-[19rem]">
+          <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Or by text · SMS</p>
+          <div className="mt-2 rounded-2xl rounded-bl-sm bg-slate-100 px-3.5 py-2.5 text-sm leading-relaxed text-navy-900">Hi Sam, thanks for choosing Bright Harbor Co.! Would you leave us a quick Google review? <span className="font-medium text-blue-700 underline">g.page/r/brightharbor</span><br /><span className="text-xs text-slate-500">Reply STOP to opt out.</span></div>
+          <p className="mt-2 text-right text-[11px] text-slate-500">Delivered · from Bright Harbor Co.</p>
         </div></div>
       </div>
     </header>
@@ -97,7 +102,7 @@ export default async function Home() {
       <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-3">{steps.map((s) => <div key={s.n} className="bg-white p-8">
         <span className="font-mono text-xs text-slate-400">{s.n}</span>
         <h3 className="mt-4 text-base font-semibold">{s.t}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{s.d}</p></div>)}</div>
-      <figure className="mt-12"><Image src="/screens/customer-email.png" alt="What your customer sees: a short email from your business with a Leave a Google review button" width={1600} height={1000} className="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 shadow-sm" /><figcaption className="mt-3 text-center text-sm text-slate-500">What your customer gets: a short thank-you from your business and a “Leave a Google review” button that opens your Google review form.</figcaption></figure>
+      <figure className="mt-12"><Image src="/screens/customer-email.png" alt="What your customer sees by email: a short email from your business with a Leave a Google review button" width={1600} height={1000} className="mx-auto w-full max-w-3xl rounded-lg border border-slate-200 shadow-sm" /><figcaption className="mt-3 text-center text-sm text-slate-500">What your customer gets by email (or a short text with the same link): a thank-you from your business and a “Leave a Google review” button that opens your Google review form.</figcaption></figure>
       <div id="demo" className="mt-20 scroll-mt-4"><div className="mx-auto max-w-2xl text-center"><p className="eyebrow">See how it works</p><h2 className="mt-3 text-3xl font-semibold sm:text-4xl">From happy customer to Google review</h2><p className="mt-3 text-slate-600">About a minute, start to finish. Works for any business that serves customers.</p></div>
         <div className="mt-10"><HowItWorksDemo /></div>
         <div className="mt-8 text-center"><Link href="/signup" className="inline-block rounded-md bg-navy-900 px-5 py-3 text-sm font-medium text-white hover:bg-navy-800">Start free for 7 days</Link></div></div>

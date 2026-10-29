@@ -63,21 +63,21 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       <p className="mt-1 text-sm text-slate-500">Requests go out by text or email.</p>
       <ol className="mt-4 space-y-3 text-sm">
         <li className="flex gap-3"><span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${u.jobber_connected ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-navy-900 text-white"}`}>{u.jobber_connected ? "✓" : "1"}</span><div><p className="font-medium text-navy-900">Connect Jobber or Housecall Pro</p><p className="text-slate-500">{u.jobber_connected ? "Connected. Every customer gets asked automatically." : <>Do this once and every customer gets asked. <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect now</Link></>}</p></div></li>
-        <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first to see what customers get. Use <Link href="/quick" className="font-medium text-navy-900 underline underline-offset-4">Quick ask</Link>.</p></div></li>
-        <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Paste recent customers from a spreadsheet to ask them too. <a href="#bulk" className="font-medium text-navy-900 underline underline-offset-4">Paste a spreadsheet</a></p></div></li>
+        <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first using the form below to see what customers get.</p></div></li>
+        <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Have a list? Open “Send to many customers at once” below.</p></div></li>
       </ol></section>}
     <section aria-label="This month" className="space-y-2">
       <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
       {[["Asked this week", stats.week ?? 0, "last 7 days"], ["Asked this month", used, `${pct.toFixed(0)}% of your monthly plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} more scheduled`], ["Asks left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
-        <div key={String(l)} className="bg-white p-4 sm:p-5"><p className="text-[11px] font-medium uppercase leading-snug tracking-wider text-slate-500 sm:text-xs">{l}</p>
-          <p className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-navy-900">{v}</p><p className="mt-1 text-xs text-slate-500">{sub}</p></div>)}
+        <div key={String(l)} className="bg-white p-4 sm:p-5"><p className="text-[11px] font-semibold uppercase leading-snug tracking-wider text-slate-600 sm:text-xs">{l}</p>
+          <p className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-navy-900">{v}</p><p className="mt-1 text-xs text-slate-600">{sub}</p></div>)}
       </div>
       <div className="h-1.5 rounded-full bg-slate-100"><div className="h-1.5 rounded-full bg-navy-900" style={{ width: `${pct}%` }} /></div>
     </section>
     <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLink}</Link></div>
-      <p className="mb-4 mt-1 text-sm text-slate-500">Name + email (or phone), tap Send.</p>
+      <p className="mb-4 mt-1 text-sm text-slate-600">Name + phone (text) or email, tap Send.</p>
       <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} accountDelay={accountDelayHours(u)} /></section>
-      <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-slate-600">Have a list? Send to many customers at once</summary>
+      <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-navy-900">Have a list? Send to many customers at once</summary>
         <p className="mb-5 mt-1 text-sm text-slate-500">Copy customer rows from Excel or Google Sheets and paste — no exporting. <a href="/sample-customers.csv" download className="font-medium text-navy-900 underline underline-offset-4">Download sample spreadsheet</a></p>
         <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} accountDelay={accountDelayHours(u)} /></details>
     <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
@@ -113,15 +113,15 @@ function ReviewGrowth({ p, sent }: { p: ReturnType<typeof reviewProgress>; sent:
   const r = (x: number | null) => x == null ? "—" : x.toFixed(1);
   return <section className="card" aria-label="Your Google reviews">
     <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-      <div><h2 className="text-lg font-semibold">Your Google reviews</h2><p className="mt-1 text-sm text-slate-500">Since you started with ReviewAsk on {fmt(p.first.created_at)}</p></div>
+      <div><h2 className="text-lg font-semibold">Your Google reviews</h2><p className="mt-1 text-sm text-slate-600">Since you started with ReviewAsk on {fmt(p.first.created_at)}</p></div>
       <div className="flex items-center gap-4 sm:gap-6">
-        <div className="text-center"><p className="text-xs font-medium uppercase tracking-wider text-slate-400">When you started</p><p className="mt-1 text-3xl font-semibold text-slate-500">{before}</p><p className="text-xs text-slate-400">{r(p.first.rating)}★</p></div>
+        <div className="text-center"><p className="text-xs font-medium uppercase tracking-wider text-slate-500">When you started</p><p className="mt-1 text-3xl font-semibold text-slate-500">{before}</p><p className="text-xs text-slate-400">{r(p.first.rating)}★</p></div>
         <span className="text-2xl text-slate-300" aria-hidden>→</span>
-        <div className="text-center"><p className="text-xs font-medium uppercase tracking-wider text-slate-400">Now</p><p className="mt-1 text-3xl font-semibold text-navy-900">{now}</p><p className="text-xs text-slate-500">{r(p.latest.rating)}★</p></div>
+        <div className="text-center"><p className="text-xs font-medium uppercase tracking-wider text-slate-500">Now</p><p className="mt-1 text-3xl font-semibold text-navy-900">{now}</p><p className="text-xs text-slate-500">{r(p.latest.rating)}★</p></div>
         <span className={`rounded-full px-3 py-1 text-sm font-semibold ${gained > 0 ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-slate-100 text-slate-500"}`}>{gained > 0 ? "+" : ""}{gained} new</span>
       </div></div>
     <ReviewLine points={p.history.map((h) => ({ t: h.created_at, n: h.review_count ?? 0 }))} />
-    <p className="mt-4 border-t border-slate-100 pt-3 text-xs text-slate-400">{sent} ask{sent === 1 ? "" : "s"} sent since you started. Counts come from Google and update about once a day (last checked {fmt(p.latest.created_at)}). Google doesn&apos;t say which customer left which review, so we show total growth.</p></section>;
+    <p className="mt-4 border-t border-slate-100 pt-3 text-xs text-slate-500">{sent} ask{sent === 1 ? "" : "s"} sent since you started. Counts come from Google and update about once a day (last checked {fmt(p.latest.created_at)}). Google doesn&apos;t say which customer left which review, so we show total growth.</p></section>;
 }
 
 function NextAction({ u, rows, remaining }: { u: User; rows: ReviewRequest[]; remaining: number }) {

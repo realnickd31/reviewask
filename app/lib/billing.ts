@@ -8,6 +8,9 @@ export function applySubscription(sub: Stripe.Subscription, userId?: number) {
   const prev = uid ? getUser(uid)?.subscription_status : undefined;
   if (uid) db.prepare("UPDATE users SET stripe_customer_id=?, stripe_subscription_id=?, subscription_status=? WHERE id=?").run(cust, sub.id, sub.status, uid);
   else db.prepare("UPDATE users SET stripe_subscription_id=?, subscription_status=? WHERE stripe_customer_id=?").run(sub.id, sub.status, cust);
+  const te = sub.trial_end ? new Date(sub.trial_end * 1000).toISOString() : null;
+  if (uid) db.prepare("UPDATE users SET trial_end=? WHERE id=?").run(te, uid);
+  else db.prepare("UPDATE users SET trial_end=? WHERE stripe_customer_id=?").run(te, cust);
   if (!uid || prev === sub.status) return;
   if (sub.status === "trialing") {
     trackServer({ event: "checkout_completed", user_id: uid, meta: { status: sub.status } });
