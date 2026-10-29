@@ -59,10 +59,11 @@ function appendOutbox(entry: object) {
   fs.writeFileSync(f, JSON.stringify(arr, null, 2));
 }
 
-export async function sendEmail(to: string, m: { subject: string; html: string; text: string; unsubscribeUrl?: string }) {
+export async function sendEmail(to: string, m: { subject: string; html: string; text: string; unsubscribeUrl?: string; bcc?: string[] }) {
   if (process.env.RESEND_API_KEY) {
     const r = new Resend(process.env.RESEND_API_KEY);
     const { data, error } = await r.emails.send({ from: process.env.RESEND_FROM || "ReviewAsk <onboarding@resend.dev>", to, subject: m.subject, html: m.html, text: m.text,
+      ...(m.bcc?.length ? { bcc: m.bcc } : {}),
       ...(m.unsubscribeUrl ? { headers: { "List-Unsubscribe": `<${m.unsubscribeUrl}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } } : {}) });
     if (error) throw new Error(error.message);
     return { id: data?.id ?? null, mode: "resend" as const };

