@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { randomUUID } from "crypto";
 import { trackServer, deviceFromUa, isBotUa, isAdminPath } from "@/lib/analytics";
 import { currentUser } from "@/lib/session";
-import { isAdminUser } from "@/lib/admin";
+import { isMetricsExemptEmail } from "@/lib/admin-emails";
 
 export const dynamic = "force-dynamic";
 
@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
   // Never record admin pages or signed-in admin sessions (any event type).
   if (isAdminPath(path)) return NextResponse.json({ ok: true, skipped: "admin" });
   const u = await currentUser().catch(() => undefined);
-  if (isAdminUser(u)) return NextResponse.json({ ok: true, skipped: "admin" });
+  if (u && isMetricsExemptEmail(u.email)) return NextResponse.json({ ok: true, skipped: "admin" });
 
   const jar = cookies();
   let vid = jar.get("ra_vid")?.value;

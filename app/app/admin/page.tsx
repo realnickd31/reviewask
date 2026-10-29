@@ -2,7 +2,8 @@ import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
 import { db } from "@/lib/db";
 import AppNav from "@/components/AppNav";
-import { excludeAdminSql } from "@/lib/analytics";
+import { excludeAdminSql, excludeExemptUsersSql, excludeExemptUserIdSql } from "@/lib/analytics";
+import { MetricSection, MetricTable, type Col, type Row } from "@/components/admin/MetricSection";
 
 export const dynamic = "force-dynamic";
 
@@ -40,8 +41,11 @@ export default async function AdminPage({
     : "30") as Range;
   const ae0 = rangeClause(range);
   const ae = { ...ae0, sql: `${ae0.sql} AND ${excludeAdminSql()}` };
-  const ur = rangeClause(range);
-  const rr = rangeClause(range);
+  const ur0 = rangeClause(range);
+  const rr0 = rangeClause(range);
+  const UX = excludeExemptUsersSql();
+  const ur = { ...ur0, sql: `${ur0.sql} AND ${UX}` };
+  const rr = { ...rr0, sql: `${rr0.sql} AND ${excludeExemptUserIdSql()}` };
 
   const countEvent = (event: string) =>
     (db.prepare(`SELECT COUNT(*) c FROM analytics_events WHERE event=? AND ${ae.sql}`).get(event, ...ae.params) as { c: number }).c;
@@ -67,7 +71,7 @@ export default async function AdminPage({
   const signups = Math.max(signupEvents, usersCreated);
 
   const statusCounts = db.prepare(
-    `SELECT subscription_status s, COUNT(*) c FROM users GROUP BY subscription_status`
+    `SELECT subscription_status s, COUNT(*) c FROM users WHERE ${UX} GROUP BY subscription_status`
   ).all() as { s: string; c: number }[];
   const statusMap = Object.fromEntries(statusCounts.map((r) => [r.s, r.c]));
   const trialing = statusMap["trialing"] || 0;
@@ -150,10 +154,10 @@ export default async function AdminPage({
     SUM(stripe_connect_connected) stripe_connect,
     SUM(qbo_connected) qbo,
     SUM(CASE WHEN api_token IS NOT NULL AND length(api_token)>0 THEN 1 ELSE 0 END) zapier
-    FROM users`).get() as Record<string, number>;
+    FROM users WHERE ${UX}`).get() as Record<string, number>;
 
   const recentUsers = db.prepare(
-    `SELECT email, business_name, subscription_status, created_at FROM users ORDER BY created_at DESC LIMIT 20`
+    `SELECT email, business_name, subscription_status, created_at FROM users WHERE ${UX} ORDER BY created_at DESC LIMIT 20`
   ).all() as { email: string; business_name: string | null; subscription_status: string; created_at: string }[];
 
   const recentEvents = db.prepare(
@@ -166,23 +170,36 @@ export default async function AdminPage({
     { id: "all", label: "All time" },
   ];
 
+  const kpiCols: Col[] = [{ key: "metric", label: "Metric" }, { key: "value", label: "Value", align: "right" }, { key: "rate", label: "Step conversion", align: "right" }];
+  const funnelRows: Row[] = funnel.map((f, i) => ({ metric: f.label, value: f.value, rate: i > 0 ? pct(f.value, funnel[i - 1].value) : "" }));
+  const healthRows: Row[] = [
+    { metric: "Total accounts", value: totalUsers },
+    { metric: "Trialing", value: trialing },
+    { metric: "Paid active", value: active },
+    { metric: "Activated (sent an ask)", value: activatedUsers },
+    { metric: "Don't-ask cancels in range", value: cancelled },
+  ];
+  const connectorRows: Row[] = Object.entries(connectors || {}).map(([k, v]) => ({ s: k, c: Number(v) || 0 }));
+  const two = (label: string): Col[] => [{ key: "s", label }, { key: "c", label: "Count", align: "right", width: 96 }];
+  const rk = range === "all" ? "all" : `${range}d`;
+
   return (
     <div className="min-h-screen bg-slate-50">
       <AppNav />
-      <main id="main" className="mx-auto max-w-5xl px-3 py-8 sm:px-4">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      <main id="main" className="mx-auto max-w-6xl px-3 py-8 sm:px-6">
+        <div className="flex flex-col gap-4 border-b border-slate-200 pb-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="eyebrow">Founder</p>
             <h1 className="mt-1 text-2xl font-semibold text-navy-900">Admin analytics</h1>
-            <p className="mt-1 text-sm text-slate-600">Shopify-style funnel plus traffic and product health. Only you can open this page.</p>
+            <p className="mt-1 text-sm text-slate-600">Funnel, traffic, product health and recent activity. Internal &amp; test accounts are excluded.</p>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="inline-flex rounded-lg border border-slate-200 bg-white p-0.5 shadow-sm">
             {ranges.map((r) => (
               <Link
                 key={r.id}
                 href={`/admin?range=${r.id}`}
-                className={`rounded-md px-3 py-1.5 text-sm font-medium ${
-                  range === r.id ? "bg-navy-900 text-white" : "border border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+                className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${
+                  range === r.id ? "bg-navy-900 text-white" : "text-slate-600 hover:bg-slate-50 hover:text-navy-900"
                 }`}
               >
                 {r.label}
@@ -191,263 +208,115 @@ export default async function AdminPage({
           </div>
         </div>
 
-        <section className="mt-8">
-          <h2 className="text-sm font-semibold text-navy-900">Acquisition funnel</h2>
-          <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {funnel.map((step, i) => {
-              const prev = i > 0 ? funnel[i - 1].value : 0;
-              return (
-                <div key={step.label} className="card !p-4">
-                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{step.label}</p>
-                  <p className="mt-1 text-2xl font-semibold text-navy-900">{step.value.toLocaleString()}</p>
-                  {i > 0 && (
-                    <p className="mt-1 text-xs text-slate-500">
-                      {pct(step.value, prev)} of previous step
-                    </p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-          <div className="card mt-3 !p-4 text-sm text-slate-600">
-            Visit → signup conversion: <span className="font-semibold text-navy-900">{pct(signups, uniqueVisitors)}</span>
-            {" · "}
-            Signup → checkout: <span className="font-semibold text-navy-900">{pct(checkoutStarted, signups)}</span>
-            {" · "}
-            CTA clicks: <span className="font-semibold text-navy-900">{ctaClicks.toLocaleString()}</span>
-          </div>
-        </section>
-
-        <section className="mt-10 grid gap-6 lg:grid-cols-2">
-          <div>
-            <h2 className="text-sm font-semibold text-navy-900">Top pages</h2>
-            <div className="card mt-3 !p-0 overflow-hidden">
-              <table className="w-full text-sm">
-                <tbody>
-                  {topPages.map((r) => (
-                    <tr key={r.p} className="border-b border-slate-100 last:border-0">
-                      <td className="px-4 py-2.5 text-slate-700 truncate max-w-[14rem]">{r.p || "/"}</td>
-                      <td className="px-4 py-2.5 text-right font-medium text-navy-900">{r.c}</td>
-                    </tr>
-                  ))}
-                  {!topPages.length && <tr><td className="px-4 py-6 text-slate-500">No pageviews yet — open the homepage after deploy.</td></tr>}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-sm font-semibold text-navy-900">Top referrers</h2>
-            <div className="card mt-3 !p-0 overflow-hidden">
-              <table className="w-full text-sm">
-                <tbody>
-                  {topRefs.map((r, i) => (
-                    <tr key={i} className="border-b border-slate-100 last:border-0">
-                      <td className="px-4 py-2.5 text-slate-700 truncate max-w-[14rem]">{hostOf(r.r)}</td>
-                      <td className="px-4 py-2.5 text-right font-medium text-navy-900">{r.c}</td>
-                    </tr>
-                  ))}
-                  {!topRefs.length && <tr><td className="px-4 py-6 text-slate-500">No referrers yet.</td></tr>}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-sm font-semibold text-navy-900">UTM sources</h2>
-            <div className="card mt-3 !p-0 overflow-hidden">
-              <table className="w-full text-sm">
-                <tbody>
-                  {utmSources.map((r) => (
-                    <tr key={r.s} className="border-b border-slate-100 last:border-0">
-                      <td className="px-4 py-2.5 text-slate-700">{r.s}</td>
-                      <td className="px-4 py-2.5 text-right font-medium text-navy-900">{r.c}</td>
-                    </tr>
-                  ))}
-                  {!utmSources.length && <tr><td className="px-4 py-6 text-slate-500">Add ?utm_source=… to campaign links.</td></tr>}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-sm font-semibold text-navy-900">UTM campaigns</h2>
-            <div className="card mt-3 !p-0 overflow-hidden">
-              <table className="w-full text-sm">
-                <tbody>
-                  {utmCampaigns.map((r) => (
-                    <tr key={r.s} className="border-b border-slate-100 last:border-0">
-                      <td className="px-4 py-2.5 text-slate-700">{r.s}</td>
-                      <td className="px-4 py-2.5 text-right font-medium text-navy-900">{r.c}</td>
-                    </tr>
-                  ))}
-                  {!utmCampaigns.length && <tr><td className="px-4 py-6 text-slate-500">No campaign tags yet.</td></tr>}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <section className="mt-10 grid gap-6 lg:grid-cols-2">
-          <div>
-            <h2 className="text-sm font-semibold text-navy-900">Devices</h2>
-            <div className="card mt-3 !p-4 flex flex-wrap gap-3">
-              {devices.map((d) => (
-                <div key={d.d} className="rounded-md bg-slate-50 px-3 py-2 text-sm">
-                  <span className="text-slate-500">{d.d}</span>{" "}
-                  <span className="font-semibold text-navy-900">{d.c}</span>
+        {/* 1. Funnel */}
+        <Group n={1} title="Acquisition funnel">
+          <MetricSection title="Funnel" hint={`Visit → signup ${pct(signups, uniqueVisitors)} · Signup → checkout ${pct(checkoutStarted, signups)} · ${ctaClicks.toLocaleString()} CTA clicks`} csvName={`funnel-${rk}`} csv={{ columns: kpiCols, rows: funnelRows }}>
+            <div className="grid grid-cols-2 divide-slate-100 sm:grid-cols-3 lg:grid-cols-6 lg:divide-x">
+              {funnel.map((step, i) => (
+                <div key={step.label} className="px-4 py-4">
+                  <p className="truncate text-[11px] font-medium uppercase tracking-wide text-slate-500">{step.label}</p>
+                  <p className="mt-1 text-2xl font-semibold tabular-nums text-navy-900">{step.value.toLocaleString()}</p>
+                  <p className="mt-0.5 h-4 text-xs text-slate-500">{i > 0 ? `${pct(step.value, funnel[i - 1].value)} of prev` : ""}</p>
                 </div>
               ))}
-              {!devices.length && <p className="text-sm text-slate-500">No device data yet.</p>}
             </div>
-          </div>
-          <div>
-            <h2 className="text-sm font-semibold text-navy-900">Top CTAs clicked</h2>
-            <div className="card mt-3 !p-0 overflow-hidden">
-              <table className="w-full text-sm">
-                <tbody>
-                  {topCtas.map((r) => (
-                    <tr key={r.l} className="border-b border-slate-100 last:border-0">
-                      <td className="px-4 py-2.5 text-slate-700 truncate max-w-[14rem]">{r.l}</td>
-                      <td className="px-4 py-2.5 text-right font-medium text-navy-900">{r.c}</td>
-                    </tr>
-                  ))}
-                  {!topCtas.length && <tr><td className="px-4 py-6 text-slate-500">No CTA clicks yet.</td></tr>}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+          </MetricSection>
+          <MetricTable
+            id={`daily-trend-${rk}`}
+            title="Daily trend"
+            className="mt-4"
+            empty="No events in this range yet."
+            columns={[
+              { key: "d", label: "Day", width: 128 },
+              { key: "visitors", label: "Visitors", align: "right" },
+              { key: "pageviews", label: "Views", align: "right" },
+              { key: "ctas", label: "CTAs", align: "right" },
+              { key: "signups", label: "Signups", align: "right" },
+              { key: "checkouts", label: "Checkouts", align: "right" },
+              { key: "trials", label: "Trials", align: "right" },
+            ]}
+            rows={daily as unknown as Row[]}
+          />
+        </Group>
 
-        <section className="mt-10">
-          <h2 className="text-sm font-semibold text-navy-900">Daily trend</h2>
-          <div className="card mt-3 !p-0 overflow-x-auto">
-            <table className="w-full min-w-[36rem] text-sm">
-              <thead className="bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-500">
-                <tr>
-                  <th className="px-4 py-2.5">Day</th>
-                  <th className="px-4 py-2.5 text-right">Visitors</th>
-                  <th className="px-4 py-2.5 text-right">Views</th>
-                  <th className="px-4 py-2.5 text-right">CTAs</th>
-                  <th className="px-4 py-2.5 text-right">Signups</th>
-                  <th className="px-4 py-2.5 text-right">Checkouts</th>
-                  <th className="px-4 py-2.5 text-right">Trials</th>
-                </tr>
-              </thead>
-              <tbody>
-                {daily.map((r) => (
-                  <tr key={r.d} className="border-t border-slate-100">
-                    <td className="px-4 py-2.5 text-slate-700">{r.d}</td>
-                    <td className="px-4 py-2.5 text-right font-medium">{r.visitors}</td>
-                    <td className="px-4 py-2.5 text-right">{r.pageviews}</td>
-                    <td className="px-4 py-2.5 text-right">{r.ctas}</td>
-                    <td className="px-4 py-2.5 text-right">{r.signups}</td>
-                    <td className="px-4 py-2.5 text-right">{r.checkouts}</td>
-                    <td className="px-4 py-2.5 text-right">{r.trials}</td>
-                  </tr>
-                ))}
-                {!daily.length && (
-                  <tr><td colSpan={7} className="px-4 py-6 text-slate-500">No events in this range yet.</td></tr>
-                )}
-              </tbody>
-            </table>
+        {/* 2. Traffic */}
+        <Group n={2} title="Traffic">
+          <div className="grid gap-4 lg:grid-cols-2">
+            <MetricTable id={`top-pages-${rk}`} title="Top pages" columns={two("Page")} rows={topPages.map((r) => ({ s: r.p || "/", c: r.c }))} empty="No pageviews yet." />
+            <MetricTable id={`top-referrers-${rk}`} title="Top referrers" columns={two("Referrer")} rows={topRefs.map((r) => ({ s: hostOf(r.r), c: r.c }))} empty="No referrers yet." />
+            <MetricTable id={`utm-sources-${rk}`} title="UTM sources" columns={two("Source")} rows={utmSources.map((r) => ({ s: r.s, c: r.c }))} empty="Add ?utm_source=… to campaign links." />
+            <MetricTable id={`utm-campaigns-${rk}`} title="UTM campaigns" columns={two("Campaign")} rows={utmCampaigns.map((r) => ({ s: r.s, c: r.c }))} empty="No campaign tags yet." />
+            <MetricTable id={`top-ctas-${rk}`} title="Top CTAs clicked" columns={two("CTA")} rows={topCtas.map((r) => ({ s: r.l, c: r.c }))} empty="No CTA clicks yet." />
+            <MetricTable id={`devices-${rk}`} title="Devices" columns={two("Device")} rows={devices.map((d) => ({ s: d.d, c: d.c }))} empty="No device data yet." />
           </div>
-        </section>
+        </Group>
 
-        <section className="mt-10">
-          <h2 className="text-sm font-semibold text-navy-900">Product health</h2>
-          <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="card !p-4"><p className="text-xs text-slate-500">Total accounts</p><p className="mt-1 text-2xl font-semibold">{totalUsers}</p></div>
-            <div className="card !p-4"><p className="text-xs text-slate-500">Trialing</p><p className="mt-1 text-2xl font-semibold">{trialing}</p></div>
-            <div className="card !p-4"><p className="text-xs text-slate-500">Paid active</p><p className="mt-1 text-2xl font-semibold">{active}</p></div>
-            <div className="card !p-4"><p className="text-xs text-slate-500">Activated (sent an ask)</p><p className="mt-1 text-2xl font-semibold">{activatedUsers}</p></div>
-          </div>
-          <div className="mt-3 grid gap-6 lg:grid-cols-3">
-            <div>
-              <p className="mt-2 text-xs font-semibold uppercase text-slate-500">Asks by status</p>
-              <div className="card mt-2 !p-0 overflow-hidden">
-                <table className="w-full text-sm"><tbody>
-                  {askStatus.map((r) => (<tr key={r.s} className="border-b border-slate-100 last:border-0"><td className="px-4 py-2">{r.s}</td><td className="px-4 py-2 text-right font-medium">{r.c}</td></tr>))}
-                  {!askStatus.length && <tr><td className="px-4 py-4 text-slate-500">None</td></tr>}
-                </tbody></table>
-              </div>
-              <p className="mt-2 text-xs text-slate-500">Don&apos;t ask cancels in range: <span className="font-medium text-navy-900">{cancelled}</span></p>
-            </div>
-            <div>
-              <p className="mt-2 text-xs font-semibold uppercase text-slate-500">Asks by channel</p>
-              <div className="card mt-2 !p-0 overflow-hidden">
-                <table className="w-full text-sm"><tbody>
-                  {askChannel.map((r) => (<tr key={r.s} className="border-b border-slate-100 last:border-0"><td className="px-4 py-2">{r.s}</td><td className="px-4 py-2 text-right font-medium">{r.c}</td></tr>))}
-                  {!askChannel.length && <tr><td className="px-4 py-4 text-slate-500">None</td></tr>}
-                </tbody></table>
-              </div>
-            </div>
-            <div>
-              <p className="mt-2 text-xs font-semibold uppercase text-slate-500">Asks by source</p>
-              <div className="card mt-2 !p-0 overflow-hidden">
-                <table className="w-full text-sm"><tbody>
-                  {askSource.map((r) => (<tr key={r.s} className="border-b border-slate-100 last:border-0"><td className="px-4 py-2">{r.s}</td><td className="px-4 py-2 text-right font-medium">{r.c}</td></tr>))}
-                  {!askSource.length && <tr><td className="px-4 py-4 text-slate-500">None</td></tr>}
-                </tbody></table>
-              </div>
-            </div>
-          </div>
-          <div className="card mt-3 !p-4">
-            <p className="text-xs font-semibold uppercase text-slate-500">Connectors connected (all accounts)</p>
-            <div className="mt-3 flex flex-wrap gap-3 text-sm">
-              {Object.entries(connectors || {}).map(([k, v]) => (
-                <div key={k} className="rounded-md bg-slate-50 px-3 py-2"><span className="text-slate-500">{k}</span>{" "}<span className="font-semibold text-navy-900">{v || 0}</span></div>
+        {/* 3. Product health */}
+        <Group n={3} title="Product health">
+          <MetricSection title="Accounts" hint="All time, excluding internal & test accounts where tracked" csvName={`product-health-${rk}`} csv={{ columns: kpiCols.slice(0, 2), rows: healthRows }}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 lg:divide-x divide-slate-100">
+              {healthRows.map((r) => (
+                <div key={String(r.metric)} className="px-4 py-4">
+                  <p className="truncate text-[11px] font-medium uppercase tracking-wide text-slate-500">{r.metric}</p>
+                  <p className="mt-1 text-2xl font-semibold tabular-nums text-navy-900">{Number(r.value).toLocaleString()}</p>
+                </div>
               ))}
             </div>
+          </MetricSection>
+          <div className="mt-4 grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
+            <MetricTable id={`asks-status-${rk}`} title="Asks by status" columns={two("Status")} rows={askStatus.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
+            <MetricTable id={`asks-channel-${rk}`} title="Asks by channel" columns={two("Channel")} rows={askChannel.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
+            <MetricTable id={`asks-source-${rk}`} title="Asks by source" columns={two("Source")} rows={askSource.map((r) => ({ s: r.s, c: r.c }))} empty="None" />
+            <MetricTable id="connectors" title="Connectors" hint="All accounts" columns={two("Connector")} rows={connectorRows} empty="None" />
           </div>
-        </section>
+        </Group>
 
-        <section className="mt-10 grid gap-6 lg:grid-cols-2">
-          <div>
-            <h2 className="text-sm font-semibold text-navy-900">Recent signups</h2>
-            <div className="card mt-3 !p-0 overflow-hidden">
-              <table className="w-full text-sm">
-                <thead className="bg-slate-50 text-left text-xs uppercase text-slate-500">
-                  <tr><th className="px-4 py-2">Email</th><th className="px-4 py-2">Status</th><th className="px-4 py-2">When</th></tr>
-                </thead>
-                <tbody>
-                  {recentUsers.map((u) => (
-                    <tr key={u.email} className="border-t border-slate-100">
-                      <td className="px-4 py-2.5">
-                        <div className="font-medium text-navy-900 truncate max-w-[12rem]">{u.email}</div>
-                        <div className="text-xs text-slate-500 truncate">{u.business_name || "—"}</div>
-                      </td>
-                      <td className="px-4 py-2.5 text-slate-600">{u.subscription_status}</td>
-                      <td className="px-4 py-2.5 text-slate-500 whitespace-nowrap">{u.created_at}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+        {/* 4. Recent activity */}
+        <Group n={4} title="Recent activity">
+          <div className="grid gap-4 lg:grid-cols-2">
+            <MetricTable
+              id="recent-signups"
+              title="Recent signups"
+              columns={[
+                { key: "email", label: "Email" },
+                { key: "business_name", label: "Business" },
+                { key: "subscription_status", label: "Status", width: 104 },
+                { key: "created_at", label: "When", width: 156, mono: true },
+              ]}
+              rows={recentUsers as unknown as Row[]}
+              empty="No signups yet."
+            />
+            <MetricTable
+              id="recent-events"
+              title="Recent events"
+              columns={[
+                { key: "event", label: "Event", width: 140 },
+                { key: "path", label: "Path" },
+                { key: "utm_source", label: "UTM", width: 96 },
+                { key: "created_at", label: "When", width: 156, mono: true },
+              ]}
+              rows={recentEvents as unknown as Row[]}
+              empty="Waiting for traffic."
+            />
           </div>
-          <div>
-            <h2 className="text-sm font-semibold text-navy-900">Recent events</h2>
-            <div className="card mt-3 !p-0 overflow-hidden">
-              <table className="w-full text-sm">
-                <thead className="bg-slate-50 text-left text-xs uppercase text-slate-500">
-                  <tr><th className="px-4 py-2">Event</th><th className="px-4 py-2">Path / UTM</th><th className="px-4 py-2">When</th></tr>
-                </thead>
-                <tbody>
-                  {recentEvents.map((e, i) => (
-                    <tr key={i} className="border-t border-slate-100">
-                      <td className="px-4 py-2.5 font-medium text-navy-900">{e.event}</td>
-                      <td className="px-4 py-2.5 text-slate-600 truncate max-w-[12rem]">{e.path || "—"}{e.utm_source ? ` · ${e.utm_source}` : ""}</td>
-                      <td className="px-4 py-2.5 text-slate-500 whitespace-nowrap">{e.created_at}</td>
-                    </tr>
-                  ))}
-                  {!recentEvents.length && <tr><td colSpan={3} className="px-4 py-6 text-slate-500">Waiting for traffic.</td></tr>}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+        </Group>
 
-        <p className="mt-10 text-xs text-slate-500">
-          Tip: tag outreach links like <code className="rounded bg-slate-100 px-1">https://getreviewask.com/?utm_source=email&amp;utm_campaign=top15</code> so sources show up here.
+        <p className="mt-12 border-t border-slate-200 pt-4 text-xs text-slate-500">
+          Tip: tag outreach links like <code className="rounded bg-slate-100 px-1">https://getreviewask.com/?utm_source=email&amp;utm_campaign=top15</code> so sources show up here. Drag column edges to resize (double-click to reset).
         </p>
       </main>
     </div>
+  );
+}
+
+function Group({ n, title, children }: { n: number; title: string; children: React.ReactNode }) {
+  return (
+    <section className="mt-10">
+      <h2 className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-navy-900 text-[10px] text-white">{n}</span>
+        {title}
+      </h2>
+      {children}
+    </section>
   );
 }

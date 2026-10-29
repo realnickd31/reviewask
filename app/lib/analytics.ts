@@ -1,5 +1,5 @@
 import { db } from "./db";
-import { adminEmails } from "./admin-emails";
+import { metricsExcludeEmails } from "./admin-emails";
 
 // Admin/founder usage never counts toward product metrics: skip at ingest.
 export function isAdminPath(path: string | null | undefined) {
@@ -7,9 +7,21 @@ export function isAdminPath(path: string | null | undefined) {
   return p === "/admin" || p.startsWith("/admin/") || p === "/api/admin" || p.startsWith("/api/admin/");
 }
 export function adminUserIds(): number[] {
-  const em = adminEmails();
+  const em = metricsExcludeEmails();
   if (!em.length) return [];
   return (db.prepare(`SELECT id FROM users WHERE lower(email) IN (${em.map(() => "?").join(",")})`).all(...em) as { id: number }[]).map((r) => r.id);
+}
+// adminUserIds = all metrics-exempt users (admins + test accounts), not admin access.
+// SQL fragments excluding metrics-exempt accounts from users / review_requests queries.
+function exemptList() {
+  const em = metricsExcludeEmails();
+  return em.length ? em.map((e) => `'${e.replace(/'/g, "''")}'`).join(",") : "''";
+}
+export function excludeExemptUsersSql(col = "email") {
+  return `(${col} IS NULL OR lower(${col}) NOT IN (${exemptList()}))`;
+}
+export function excludeExemptUserIdSql(col = "user_id") {
+  return `(${col} IS NULL OR ${col} NOT IN (SELECT id FROM users WHERE lower(email) IN (${exemptList()})))`;
 }
 // Secondary read-time guard for queries over analytics_events.
 export function excludeAdminSql() {
