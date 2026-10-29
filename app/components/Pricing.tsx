@@ -7,7 +7,7 @@ const features = ["200 review requests per month", "Automatic requests after eve
 export function Check() { return <svg viewBox="0 0 16 16" className="mt-0.5 h-4 w-4 flex-none fill-lime-600" aria-hidden><path d="M6.2 11.3L2.9 8l1-1 2.3 2.3 5.9-5.9 1 1z" /></svg>; }
 
 export default function Pricing() {
-  const [annual, setAnnual] = useState(true);
+  const [annual, setAnnual] = useState(false);
   const tab = (on: boolean) => `min-h-[44px] rounded-md px-4 text-sm font-medium transition ${on ? "bg-white text-navy-900 shadow-sm" : "text-slate-600 hover:text-navy-900"}`;
   return <section id="pricing" className="scroll-mt-4 border-t border-slate-200 bg-white py-24"><div className="mx-auto max-w-3xl px-6 text-center">
     <p className="eyebrow">Pricing</p>
