@@ -7,6 +7,7 @@ const jobberResume = () => cookies().get("jb_mkt_code") ? "/api/jobber/callback?
 import { db, getUserByEmail } from "@/lib/db";
 import { getSession, requireUser } from "@/lib/session";
 import { trackServer } from "@/lib/analytics";
+import { isAdminEmail } from "@/lib/admin";
 
 export type FormState = { error?: string; ok?: string } | undefined;
 const validUrl = (s: string) => { try { const u = new URL(s); return u.protocol === "https:" || u.protocol === "http:"; } catch { return false; } };
@@ -28,7 +29,7 @@ export async function login(_: FormState, fd: FormData): Promise<FormState> {
   const u = getUserByEmail(String(fd.get("email") || "").trim());
   if (!u || !(await bcrypt.compare(String(fd.get("password") || ""), u.password_hash))) return { error: "Wrong email or password." };
   const s = await getSession(); s.userId = u.id; await s.save();
-  redirect(jobberResume() || (u.business_name ? "/dashboard" : "/onboarding"));
+  redirect(jobberResume() || (isAdminEmail(u.email) ? "/admin" : u.business_name ? "/dashboard" : "/onboarding"));
 }
 
 export async function logout() {

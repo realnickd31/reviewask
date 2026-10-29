@@ -2,6 +2,7 @@ import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
 import { db } from "@/lib/db";
 import AppNav from "@/components/AppNav";
+import { excludeAdminSql } from "@/lib/analytics";
 
 export const dynamic = "force-dynamic";
 
@@ -37,7 +38,8 @@ export default async function AdminPage({
   const range = (["7", "30", "all"].includes(searchParams.range || "")
     ? searchParams.range
     : "30") as Range;
-  const ae = rangeClause(range);
+  const ae0 = rangeClause(range);
+  const ae = { ...ae0, sql: `${ae0.sql} AND ${excludeAdminSql()}` };
   const ur = rangeClause(range);
   const rr = rangeClause(range);
 
@@ -155,7 +157,7 @@ export default async function AdminPage({
   ).all() as { email: string; business_name: string | null; subscription_status: string; created_at: string }[];
 
   const recentEvents = db.prepare(
-    `SELECT event, path, utm_source, created_at FROM analytics_events ORDER BY id DESC LIMIT 20`
+    `SELECT event, path, utm_source, created_at FROM analytics_events WHERE ${excludeAdminSql()} ORDER BY id DESC LIMIT 20`
   ).all() as { event: string; path: string | null; utm_source: string | null; created_at: string }[];
 
   const ranges: { id: Range; label: string }[] = [

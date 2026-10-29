@@ -4,9 +4,11 @@ import { requireUser } from "@/lib/session";
 import { isActive } from "@/lib/db";
 import { redirect } from "next/navigation";
 import { saveOnboarding } from "../actions";
+import { isAdminUser } from "@/lib/admin";
 export const dynamic = "force-dynamic";
 export default async function Page({ searchParams }: { searchParams: { step?: string; canceled?: string } }) {
   const u = await requireUser();
+  if (isAdminUser(u)) redirect("/admin");
   const pay = searchParams.step === "pay" && u.business_name;
   if (pay && isActive(u)) redirect("/dashboard");
   return <main id="main" className="min-h-screen bg-slate-50 px-4 py-12"><div className="mx-auto max-w-lg">

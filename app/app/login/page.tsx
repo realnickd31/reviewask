@@ -4,11 +4,12 @@ import { currentUser } from "@/lib/session";
 import Logo from "@/components/Logo";
 import AuthForm from "@/components/AuthForm";
 import { login } from "../actions";
+import { isAdminUser } from "@/lib/admin";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Log in", alternates: { canonical: "/login" } };
 export default async function Page() {
   const u = await currentUser();
-  if (u) redirect(u.business_name && u.review_url ? "/dashboard" : "/onboarding");
+  if (u) redirect(isAdminUser(u) ? "/admin" : u.business_name && u.review_url ? "/dashboard" : "/onboarding");
   return <main id="main" className="flex min-h-screen flex-col items-center justify-center bg-slate-50 px-4 py-12"><div className="w-full max-w-sm">
     <div className="mb-8 flex justify-center"><Logo dark /></div>
     <div className="card p-8"><h1 className="text-xl font-semibold">Log in to ReviewAsk</h1><p className="mb-6 mt-1.5 text-sm text-slate-500">Enter your email and password.</p>

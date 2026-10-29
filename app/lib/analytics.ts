@@ -1,4 +1,21 @@
 import { db } from "./db";
+import { adminEmails } from "./admin-emails";
+
+// Admin/founder usage never counts toward product metrics: skip at ingest.
+export function isAdminPath(path: string | null | undefined) {
+  const p = (path || "").split("?")[0];
+  return p === "/admin" || p.startsWith("/admin/") || p === "/api/admin" || p.startsWith("/api/admin/");
+}
+export function adminUserIds(): number[] {
+  const em = adminEmails();
+  if (!em.length) return [];
+  return (db.prepare(`SELECT id FROM users WHERE lower(email) IN (${em.map(() => "?").join(",")})`).all(...em) as { id: number }[]).map((r) => r.id);
+}
+// Secondary read-time guard for queries over analytics_events.
+export function excludeAdminSql() {
+  const ids = adminUserIds();
+  return `(path IS NULL OR (path NOT LIKE '/admin%' AND path NOT LIKE '/api/admin%'))` + (ids.length ? ` AND (user_id IS NULL OR user_id NOT IN (${ids.join(",")}))` : "");
+}
 
 export type AnalyticsEventName =
   | "pageview"
@@ -33,6 +50,8 @@ const insert = db.prepare(`INSERT INTO analytics_events
 
 export function trackServer(input: TrackInput) {
   try {
+    if (isAdminPath(input.path)) return;
+    if (input.user_id != null && adminUserIds().includes(Number(input.user_id))) return;
     const meta =
       input.meta == null
         ? null
