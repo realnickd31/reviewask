@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { db, isSuppressed, unsubscribeUrl, trackedReviewUrl, getUser, isActive, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
+import { db, isSuppressed, unsubscribeUrl, getUser, isActive, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
 import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms, sendEmail, sendSms } from "./email";
 import { trackFirstAskIfNeeded } from "./analytics";
 import { clampDelay } from "./delay";
@@ -40,7 +40,7 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
   const i = normalize(raw);
   const err = validate(i);
   if (err) return { ok: false, error: err, code: 400 };
-  // Every ask gets a token: it powers the tracked review link (/r/) for email and SMS, and email unsubscribe (/u/).
+  // Every ask gets a token for email unsubscribe (/u/). Review links go straight to Google (no /r/ hop).
   const token = crypto.randomBytes(24).toString("base64url");
   const delay = opts.delayHours !== undefined ? clampDelay(opts.delayHours, 0) : source === "webhook" ? accountDelayHours(u) : 0;
   if (delay > 0) {
@@ -64,7 +64,7 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
 async function deliver(u: User, id: number, i: { name: string; email: string; phone: string }, token: string | null) {
   const biz = u.business_name!;
   if (!token) { token = crypto.randomBytes(24).toString("base64url"); db.prepare("UPDATE review_requests SET unsubscribe_token=? WHERE id=?").run(token, id); }
-  const url = trackedReviewUrl(token, u.review_url!);
+  const url = u.review_url!;
   const channels: string[] = []; let status = "sent"; let providerId: string | null = null; let mode = ""; let smsMode = "";
   const suppressed = !!i.email && isSuppressed(i.email);
   try {
@@ -123,7 +123,7 @@ export async function processDueReminders(userId?: number, limit = 200) {
     try {
       let tok = r.unsubscribe_token;
       if (!tok) { tok = crypto.randomBytes(24).toString("base64url"); db.prepare("UPDATE review_requests SET unsubscribe_token=? WHERE id=?").run(tok, r.id); }
-      const link = trackedReviewUrl(tok, u.review_url);
+      const link = u.review_url;
       if (r.customer_email && !isSuppressed(r.customer_email)) await sendEmail(r.customer_email, buildReminderEmail(u.business_name, r.customer_name, link, unsubscribeUrl(tok)));
       if (r.customer_phone) await sendSms(r.customer_phone, buildReminderSms(u.business_name, r.customer_name, link));
       sent++;
