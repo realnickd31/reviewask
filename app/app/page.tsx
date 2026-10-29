@@ -88,9 +88,9 @@ export default async function Home() {
       </div>
     </header>
 
-    <section className="border-b border-slate-200 bg-slate-50"><div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center">
-      <p className="flex-none text-sm font-medium text-slate-500">Built for</p>
-      <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-700">{audiences.map((a) => <li key={a}>{a}</li>)}</ul>
+    <section className="border-b border-slate-200 bg-slate-50"><div className="mx-auto max-w-6xl px-6 py-12">
+      <p className="eyebrow">Built for</p>
+      <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{audiences.map((a) => <li key={a} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-4 text-sm font-medium leading-snug text-navy-900 shadow-sm"><svg aria-hidden="true" viewBox="0 0 20 20" className="mt-0.5 h-4 w-4 flex-none text-lime-600" fill="currentColor"><path fillRule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clipRule="evenodd" /></svg><span>{a}</span></li>)}</ul>
     </div></section>
 
     <section id="how" className="py-24"><div className="mx-auto max-w-6xl px-6">
