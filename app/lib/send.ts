@@ -68,7 +68,7 @@ async function deliver(u: User, id: number, i: { name: string; email: string; ph
     if (i.email && !suppressed) { const r = await sendEmail(i.email, buildReviewEmail(biz, i.name, url, unsubscribeUrl(token!))); providerId = r.id; mode = r.mode; channels.push("email"); }
     if (i.phone) { const r = await sendSms(i.phone, buildReviewSms(biz, i.name, url)); smsMode = r.mode; mode ||= r.mode; channels.push("sms"); }
   } catch (e) { status = "failed"; console.error("send failed", e); }
-  // Texting is rolling out. In production without an SMS provider, a phone-only ask isn't delivered, so mark it queued instead of sent.
+  // Fallback: if the SMS provider is unavailable in production, a phone-only ask isn't delivered, so mark it queued instead of sent.
   if (status === "sent" && smsMode === "outbox" && !channels.includes("email") && process.env.RESEND_API_KEY) { status = "queued"; mode = "sms_pending"; }
   if (suppressed && !i.phone && status === "sent") status = "suppressed";
   db.prepare(`UPDATE review_requests SET status=?, provider_id=?, channel=?, created_at=datetime('now'),

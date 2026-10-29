@@ -6,7 +6,7 @@ import AnalyticsBeacon from "@/components/AnalyticsBeacon";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 const title = "ReviewAsk — Automatic Google review requests for any business";
-const description = "Automatic Google review requests by email, with one follow-up. For any business. $39/month, 7-day free trial, no contract.";
+const description = "Automatic Google review requests by text or email, with one follow-up. For any business. $39/month, 7-day free trial, no contract.";
 export const metadata: Metadata = {
   metadataBase: new URL("https://getreviewask.com"),
   title: { default: title, template: "%s — ReviewAsk" },

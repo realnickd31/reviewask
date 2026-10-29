@@ -31,7 +31,7 @@ export const articles: Article[] = [
       { h: "What to avoid", list: ["Asking only customers you think are happy (review gating)", "Offering anything in return for a review", "Long messages with several links or a survey before the review", "Repeated reminders"] },
     ],
     faqs: [
-      { q: "Should I ask for a review by text or email?", a: "Both work. Text tends to get read faster; email is easier to send at scale and needs no special consent setup. Use whatever your customers respond to." },
+      { q: "Should I ask for a review by text or email?", a: "Both work. Text tends to get read faster; email is easier to send at scale and needs no special consent setup. Use whatever your customers respond to. ReviewAsk sends either one." },
       { q: "Is it okay to ask for a 5-star review?", a: "Ask for an honest review instead. Asking specifically for 5 stars can come across as pressure and conflicts with the spirit of Google's policies." },
       { q: "What should I include in a review request?", a: "The customer's name, your business name, a thank-you, one line on why reviews help, and a direct link to your Google review form." },
     ] }),

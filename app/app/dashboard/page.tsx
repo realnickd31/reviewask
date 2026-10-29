@@ -48,7 +48,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>
       <Link href="/onboarding?step=pay" className="btn-lime">Start free trial</Link></div>}
     {active && rows.length === 0 && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
-      <p className="mt-1 text-sm text-slate-500">Requests go out by email today. Text messages are rolling out.</p>
+      <p className="mt-1 text-sm text-slate-500">Requests go out by text or email.</p>
       <ol className="mt-4 space-y-3 text-sm">
         <li className="flex gap-3"><span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${u.jobber_connected ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-navy-900 text-white"}`}>{u.jobber_connected ? "✓" : "1"}</span><div><p className="font-medium text-navy-900">Connect Jobber or Housecall Pro</p><p className="text-slate-500">{u.jobber_connected ? "Connected. Every customer gets asked automatically." : <>Do this once and every customer gets asked. <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect now</Link></>}</p></div></li>
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first to see what customers get. Use <Link href="/quick" className="font-medium text-navy-900 underline underline-offset-4">Quick ask</Link>.</p></div></li>
@@ -90,7 +90,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
           <td className="py-3 pr-3"><span title={queuedTip(r)} className={`whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-semibold ${ch.cls}`}>{ch.label}</span></td>
           <td className="whitespace-nowrap py-3 pr-3 text-slate-500">{fmt(r.created_at)}</td>
           <td className="whitespace-nowrap py-3 text-slate-500">{followUp(r)}{canCancel(r) && <CancelFU id={r.id} />}</td></tr>; })}</tbody></table></div></>}
-      {rows.some((r) => r.status === "queued") && <p className="mt-3 text-xs text-slate-500"><strong>Queued</strong> means saved but not sent yet. Text messages are still rolling out, so phone-only asks wait here. Add the customer&apos;s email to send now.</p>}
+      {rows.some((r) => r.status === "queued") && <p className="mt-3 text-xs text-slate-500"><strong>Queued</strong> means saved but not sent yet, for example a text that couldn&apos;t be delivered. Add the customer&apos;s email to send now.</p>}
     </section>
   </main></div>;
 }
@@ -101,7 +101,7 @@ function source(r: ReviewRequest) { return ({ manual: "Typed in", bulk: "Spreads
 function canCancel(r: ReviewRequest) { return !!r.remind_at && !r.reminded_at && r.status === "sent"; }
 function CancelFU({ id }: { id: number }) { return <form action={cancelFollowUp} className="mt-1"><input type="hidden" name="id" value={id} /><button className="rounded-md border border-slate-300 px-2.5 py-1 text-xs font-semibold text-slate-700 hover:bg-slate-50">Cancel follow-up</button></form>; }
 function followUp(r: ReviewRequest) { return r.followup_cancelled_at ? "Cancelled" : r.reminded_at ? fmt(r.reminded_at) : r.remind_at && r.status === "sent" ? fmt(r.remind_at, "Due ") : "—"; }
-function queuedTip(r: ReviewRequest) { return r.status === "queued" ? "Saved, not sent yet. Text messages are rolling out; add an email to send now." : undefined; }
+function queuedTip(r: ReviewRequest) { return r.status === "queued" ? "Saved, not sent yet. Add an email to send now." : undefined; }
 function chip(r: ReviewRequest) {
   if (r.status === "failed") return { label: "Failed", cls: "bg-red-50 text-red-700 ring-1 ring-red-100" };
   if (r.status === "cancelled") return { label: "Not asked", cls: "bg-slate-100 text-slate-500" };

@@ -12,7 +12,7 @@ export default function SendForm({ disabled }: { disabled: boolean }) {
     try { res = await fetch("/api/requests", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(Object.fromEntries(fd)) }); j = await res.json().catch(() => ({})); }
     catch { setBusy(false); setMsg({ t: "err", m: "Network error — nothing was sent. Try again." }); return; }
     setBusy(false);
-    if (res.ok) { form.reset(); setMsg({ t: "ok", m: j.mode === "sms_pending" ? "Saved. Text messages are still rolling out, so this ask is queued. Add an email to send it now." : j.mode === "outbox" ? "Sent (dev mode: logged to data/outbox.json)." : "Review request sent!" }); router.refresh(); }
+    if (res.ok) { form.reset(); setMsg({ t: "ok", m: j.mode === "sms_pending" ? "Saved and queued. We couldn't text this number yet. Add an email to send it now." : j.mode === "outbox" ? "Sent (dev mode: logged to data/outbox.json)." : "Review request sent!" }); router.refresh(); }
     else setMsg({ t: "err", m: j.error || `Didn't send (error ${res.status}). Try again.` });
   }
   return <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2">

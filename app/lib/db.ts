@@ -110,10 +110,11 @@ if (!g._db) {
   // One-time analytics reset (2026-10-29): history was polluted by founder/test browsing before
   // internal-traffic exclusion shipped. Wipes ONLY analytics_events; users/asks/billing untouched.
   db.exec("CREATE TABLE IF NOT EXISTS app_migrations (name TEXT PRIMARY KEY, ran_at TEXT NOT NULL DEFAULT (datetime('now')))");
+  // INSERT OR IGNORE: next build can init DB from multiple routes in parallel.
   if (!db.prepare("SELECT 1 FROM app_migrations WHERE name='analytics_reset_2026_10_29'").get()) {
     db.transaction(() => {
       db.exec("DELETE FROM analytics_events");
-      db.prepare("INSERT INTO app_migrations (name) VALUES ('analytics_reset_2026_10_29')").run();
+      db.prepare("INSERT OR IGNORE INTO app_migrations (name) VALUES ('analytics_reset_2026_10_29')").run();
     })();
   }
   g._db = db;
