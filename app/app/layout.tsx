@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { OG_IMAGES } from "@/lib/og";
 import AnalyticsBeacon from "@/components/AnalyticsBeacon";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://getreviewask.com"),
   title: { default: title, template: "%s — ReviewAsk" },
   description,
-  openGraph: { type: "website", siteName: "ReviewAsk", url: "https://getreviewask.com", title, description },
+  openGraph: { type: "website", siteName: "ReviewAsk", url: "https://getreviewask.com", title, description, images: OG_IMAGES },
   twitter: { card: "summary_large_image", title, description },
 };
 export const viewport = { themeColor: "#0a1224", width: "device-width", initialScale: 1 };

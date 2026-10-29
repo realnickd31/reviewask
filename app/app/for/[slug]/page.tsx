@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Logo from "@/components/Logo";
 import Footer from "@/components/Footer";
 import { verticals, getVertical } from "@/lib/verticals";
+import { OG_IMAGES } from "@/lib/og";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return verticals.map((v) => ({ slug: v.slug })); }
@@ -11,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const v = getVertical((await params).slug); if (!v) return {};
   const url = `/for/${v.slug}`;
   return { title: v.title, description: v.description, alternates: { canonical: url },
-    openGraph: { type: "website", siteName: "ReviewAsk", url, title: `${v.title} — ReviewAsk`, description: v.description },
+    openGraph: { type: "website", siteName: "ReviewAsk", url, title: `${v.title} — ReviewAsk`, description: v.description, images: OG_IMAGES },
     twitter: { card: "summary_large_image", title: `${v.title} — ReviewAsk`, description: v.description } };
 }
 const how = [

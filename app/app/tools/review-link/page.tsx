@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Legal from "@/components/Legal";
 import ReviewLinkTool from "@/components/ReviewLinkTool";
+import { OG_IMAGES } from "@/lib/og";
 const faqs = [
   { q: "What is a Google review link?", a: "A direct URL that opens your business's Google review form, so customers can leave a review in one tap instead of searching for you on Maps." },
   { q: "Is this review link generator free?", a: "Yes. It runs in your browser, needs no signup, and the link never expires as long as your Google Business Profile exists." },
@@ -11,7 +12,7 @@ export const metadata = {
   title: { absolute: "Free Google Review Link Generator: Paste Your Google Maps Link | ReviewAsk" },
   description: "Paste your Google Maps link and get a direct Google review link in seconds. No Place ID needed. Free, no signup. Customers land straight on your review form.",
   alternates: { canonical: "/tools/review-link" },
-  openGraph: { title: "Free Google Review Link Generator", description: "Make a one-tap Google review link for your business. Free, no signup.", url: "https://getreviewask.com/tools/review-link" },
+  openGraph: { title: "Free Google Review Link Generator", description: "Make a one-tap Google review link for your business. Free, no signup.", url: "https://getreviewask.com/tools/review-link", images: OG_IMAGES },
 };
 export default function Page() { return <Legal title="Free Google review link generator">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{ "@context": "https://schema.org", "@type": "WebApplication", name: "Google Review Link Generator", url: "https://getreviewask.com/tools/review-link", applicationCategory: "BusinessApplication", operatingSystem: "Web", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } }, { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }]) }} />

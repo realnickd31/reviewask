@@ -2,11 +2,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Legal from "./Legal";
 import type { Article } from "@/lib/articles";
+import { OG_IMAGES } from "@/lib/og";
 export function articleMeta(a: Article): Metadata {
   const url = `/${a.kind}/${a.slug}`;
   return { title: { absolute: `${a.title} | ReviewAsk` }, description: a.description, alternates: { canonical: url },
-    openGraph: { type: "article", siteName: "ReviewAsk", url, title: a.title, description: a.description },
-    twitter: { card: "summary_large_image", title: a.title, description: a.description } };
+    openGraph: { type: "article", siteName: "ReviewAsk", url, title: a.title, description: a.description, images: OG_IMAGES },
+    twitter: { card: "summary_large_image", title: a.title, description: a.description, images: OG_IMAGES.map((i) => i.url) } };
 }
 const LINKS: [string, string][] = [["free Google review link generator", "/tools/review-link"], ["start a free trial", "/signup"]];
 const md = (t: string) => t.split(/(\[[^\]]+\]\(\/[^)]+\))/).map((s, i) => { const m = s.match(/^\[([^\]]+)\]\((\/[^)]+)\)$/); return m ? <Link key={i} href={m[2]}>{m[1]}</Link> : s; });
