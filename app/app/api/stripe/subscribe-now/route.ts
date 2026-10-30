@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { db } from "@/lib/db";
 import { currentUser } from "@/lib/session";
 import { stripe, baseUrl } from "@/lib/stripe";
 import { applySubscription } from "@/lib/billing";
@@ -17,6 +18,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.redirect(origin + back + "?subscribed=1", 303);
   } catch (e: any) {
     console.error("[stripe/subscribe-now] failed", { userId: u.id, code: e?.code, message: e?.message });
+    if (e?.code === "resource_missing") {
+      // Stored subscription/customer ids belong to another Stripe account/mode (e.g. test mode) — live Stripe can't charge them.
+      // Clear them and send the user to a no-trial checkout with honest copy instead of a fake "card declined" error.
+      db.prepare("UPDATE users SET stripe_subscription_id=NULL, stripe_customer_id=NULL WHERE id=?").run(u.id);
+      return NextResponse.redirect(origin + "/onboarding?step=pay&billing=reconnect&intent=subscribe", 303);
+    }
     // Card declined / needs action: send them to update the card in the Stripe portal.
     return NextResponse.redirect(origin + back + "?subscribed=failed", 303);
   }

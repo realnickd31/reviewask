@@ -7,7 +7,9 @@ import { trackServer } from "@/lib/analytics";
 export async function POST(req: NextRequest) {
   const u = await currentUser();
   if (!u) return NextResponse.redirect(baseUrl(req.nextUrl.origin) + "/signup", 303);
-  const plan = (await req.formData().catch(() => null))?.get("plan");
+  const form = await req.formData().catch(() => null);
+  const plan = form?.get("plan");
+  const reconnect = form?.get("reconnect") === "1";
   const price = plan === "annual" && process.env.STRIPE_PRICE_ID_ANNUAL ? process.env.STRIPE_PRICE_ID_ANNUAL : process.env.STRIPE_PRICE_ID;
   if (!stripe || !price) {
     // Dev fallback so the app is usable without Stripe keys. Disabled in production.
@@ -29,8 +31,8 @@ export async function POST(req: NextRequest) {
   }
   const session = await stripe.checkout.sessions.create({
     mode: "subscription", customer, line_items: [{ price, quantity: 1 }], client_reference_id: String(u.id),
-    subscription_data: { trial_period_days: 7, metadata: { userId: String(u.id) } }, allow_promotion_codes: true,
-    success_url: baseUrl(req.nextUrl.origin) + "/dashboard?session_id={CHECKOUT_SESSION_ID}", cancel_url: baseUrl(req.nextUrl.origin) + "/onboarding?step=pay&canceled=1",
+    subscription_data: { ...(reconnect ? {} : { trial_period_days: 7 }), metadata: { userId: String(u.id) } }, allow_promotion_codes: true,
+    success_url: baseUrl(req.nextUrl.origin) + "/dashboard?session_id={CHECKOUT_SESSION_ID}", cancel_url: baseUrl(req.nextUrl.origin) + (reconnect ? "/onboarding?step=pay&billing=reconnect&canceled=1" : "/onboarding?step=pay&canceled=1"),
   });
   trackServer({ event: "checkout_started", user_id: u.id, path: "/onboarding", meta: { plan: String(plan || "monthly") } });
   return NextResponse.redirect(session.url!, 303);

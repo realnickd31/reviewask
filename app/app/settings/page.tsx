@@ -18,7 +18,7 @@ import { clampDelay } from "@/lib/delay";
 import { stripe } from "@/lib/stripe";
 import { db, ensureApiToken } from "@/lib/db";
 export const dynamic = "force-dynamic";
-export default async function Page({ searchParams }: { searchParams: { portal?: string; jobber?: string; square?: string; stripe?: string; quickbooks?: string; subscribed?: string } }) {
+export default async function Page({ searchParams }: { searchParams: { portal?: string; jobber?: string; square?: string; stripe?: string; quickbooks?: string; subscribed?: string; billing?: string } }) {
   const u = await requireUser();
   u.api_token = ensureApiToken(u.id); // every account always has a key
   const h = headers();
@@ -32,7 +32,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
   const plan = planBadge(u.subscription_status, trialEnd);
   const trial = u.subscription_status === "trialing" || !isActive(u);
   const connected = !!(u.jobber_connected || u.housecall_connected || u.square_connected || u.stripe_connect_connected || u.qbo_connected);
-  const initialTab = searchParams.portal || searchParams.subscribed ? "billing" : (searchParams.jobber || searchParams.square || searchParams.stripe || searchParams.quickbooks) ? "integrations" : "account";
+  const initialTab = searchParams.portal || searchParams.subscribed || searchParams.billing ? "billing" : (searchParams.jobber || searchParams.square || searchParams.stripe || searchParams.quickbooks) ? "integrations" : "account";
   return <div className="min-h-screen bg-slate-50/60"><AppNav /><main id="main" className="mx-auto max-w-4xl px-4 py-8 text-[15px] sm:py-10">
     <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div><h1 className="text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">Settings</h1><p className="mt-1 text-sm text-slate-600">Your business, the tools you connect, and your plan.</p></div>
@@ -79,6 +79,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
       {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="settings" trialEnd={trialEnd} status={searchParams.subscribed} />}
       <section className="card"><div className="flex flex-wrap items-center gap-3"><span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${plan.cls}`}>{plan.label}</span><span className="text-sm text-slate-700">Starter · $39/month · 200 requests/month</span></div>
         <p className="mt-3 text-sm text-slate-700">{plan.note} Update your card, switch plans, or cancel below.</p>
+        {searchParams.billing === "card_saved" && <p className="mt-3 text-sm text-lime-700">Card saved. Your billing is reconnected — no new trial was started.</p>}
         {searchParams.portal && <p className="mt-3 text-sm text-amber-700">We couldn’t open the billing portal. If you haven’t started your trial yet, start it first; otherwise try again or contact support.</p>}
         <div className="mt-4 flex flex-wrap items-center gap-2">{!isActive(u) ? <a href="/onboarding?step=pay" className="btn-lime">Start free trial</a> : <form action="/api/stripe/portal" method="post"><button className="btn-navy">Manage billing</button></form>}<form action="/api/stripe/portal?view=invoices&from=settings" method="post"><button className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Invoices</button></form><form action="/api/stripe/portal?view=payment_methods&from=settings" method="post"><button className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Payment methods</button></form></div></section>
     </Group>
