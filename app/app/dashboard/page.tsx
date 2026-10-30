@@ -152,8 +152,7 @@ function ReviewGrowth({ p, sent }: { p: ReturnType<typeof reviewProgress>; sent:
         <div className="text-center"><p className="text-xs font-medium uppercase tracking-wider text-slate-500">Now</p><p className="mt-1 text-5xl font-bold tracking-tight text-navy-900">{now}</p><p className="text-xs text-slate-500">{r(p.latest.rating)}★</p></div>
         <span className={`rounded-full px-3 py-1 text-sm font-semibold ${gained > 0 ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-slate-100 text-slate-500"}`}>{gained > 0 ? "+" : ""}{gained} new</span>
       </div></div>
-    <ReviewLine points={p.history.map((h) => ({ t: h.created_at, n: h.review_count ?? 0 }))} />
-    <p className="mt-4 border-t border-slate-100 pt-3 text-xs text-slate-500">{sent} ask{sent === 1 ? "" : "s"} sent since you started. Counts come from Google and update about once a day (last checked {fmt(p.latest.created_at)}). Google doesn&apos;t say which customer left which review, so we show total growth.</p></section>;
+    <ReviewLine points={p.history.map((h) => ({ t: h.created_at, n: h.review_count ?? 0 }))} /></section>;
 }
 
 // True when any integration that can trigger asks is connected (Housecall counts once its webhook secret is set, matching Settings).
