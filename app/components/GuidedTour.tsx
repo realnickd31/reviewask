@@ -6,17 +6,12 @@ import { markWalkthroughDone } from "@/app/actions";
 // First-login guided tour: spotlights real dashboard UI. Marked done ONLY on Skip tour, Done (last step), or Esc. Next/Back only change the step index (marking done mid-tour revalidates the dashboard and unmounts the tour).
 type Step = { target: string[]; title: string; body: React.ReactNode; extra?: React.ReactNode };
 
-export default function GuidedTour({ reviewUrl, hasReviewData }: { reviewUrl?: string | null; hasReviewData: boolean }) {
-  const hasLink = !!reviewUrl?.trim();
-  const linkStep: Step = hasLink ? { target: ["tour-review-link"], title: "1. Your Google review link (required)",
-      body: <>Every review request sends customers straight to this link. It&apos;s required: nothing sends without it (typed in, automatic, API, or spreadsheet). Yours is set to <span className="break-all font-medium">{shortUrl(reviewUrl!)}</span>. Change it anytime in Settings → Account.</>,
-      extra: <Link href="/settings#account" className="text-sm font-medium text-navy-900 underline underline-offset-4">Open Settings → Account</Link> }
-    : { target: ["tour-review-link"], title: "1. Add your Google review link first",
-      body: <>Every review request sends customers straight to your Google review link, so nothing can send until it&apos;s added. Paste it in Settings → Account, save, and come back here to continue the tour.</>,
-      extra: <Link href="/settings#account" className="btn-navy inline-flex min-h-[40px] items-center text-sm">Add my review link in Settings → Account</Link> };
-  // Without a link, only step 1 exists: later steps stay hidden until the link is saved (prop updates on return and unlocks Next).
-  const steps: Step[] = !hasLink ? [linkStep] : [
-    linkStep,
+export default function GuidedTour({ reviewUrl, hasReviewData }: { reviewUrl: string; hasReviewData: boolean }) {
+  // Dashboard redirects to /onboarding without a review link, so reviewUrl is always set here.
+  const steps: Step[] = [
+    { target: ["tour-review-link"], title: "1. Your Google review link (required)",
+      body: <>Every review request sends customers straight to this link. It&apos;s required: nothing sends without it (typed in, automatic, API, or spreadsheet). Yours is set to <span className="break-all font-medium">{shortUrl(reviewUrl)}</span>. Change it anytime in Settings → Account.</>,
+      extra: <Link href="/settings#account" className="text-sm font-medium text-navy-900 underline underline-offset-4">Open Settings → Account</Link> },
     { target: ["quick"], title: "2. Send yourself a test review request",
       body: <>Put your own name and phone or email here and tap Send now. You&apos;ll see exactly what your customers get. This is all you need to start getting reviews.</> },
     { target: ["tour-connect", "tour-connect-link"], title: "3. Optional: go automatic",
@@ -78,18 +73,15 @@ export default function GuidedTour({ reviewUrl, hasReviewData }: { reviewUrl?: s
       style={{ ...hole, boxShadow: "0 0 0 9999px rgba(16,27,51,0.6)" }} />
       : <div className="fixed inset-0 bg-[rgba(16,27,51,0.6)]" />}
     <div className="fixed left-1/2 w-[min(92vw,26rem)] -translate-x-1/2 rounded-xl bg-white p-5 shadow-2xl" style={{ top: popTop }}>
-      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">{hasLink ? <>Quick tour · {i + 1} of {steps.length}</> : "Quick tour · Step 1"}</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Quick tour · {i + 1} of {steps.length}</p>
       <h2 id="tour-title" className="mt-1 text-lg font-semibold text-navy-900">{step.title}</h2>
       <p className="mt-2 text-sm text-slate-700">{step.body}</p>
       {step.extra && <div className="mt-3">{step.extra}</div>}
-      {!hasLink && <p className="mt-3 text-xs text-slate-500">Next unlocks once your review link is saved.</p>}
       <div className="mt-5 flex flex-wrap items-center justify-between gap-2">
         <button type="button" onClick={close} className="text-sm text-slate-500 underline underline-offset-4">Skip tour</button>
         <div className="flex gap-2">
           {i > 0 && <button type="button" onClick={() => go(i - 1)} className="min-h-[40px] rounded-md border border-slate-300 px-3 text-sm font-semibold text-navy-900">Back</button>}
-          {hasLink
-            ? <button type="button" autoFocus onClick={() => last ? close() : go(i + 1)} className="btn-navy min-h-[40px]">{last ? "Done" : isConnect ? "Skip for now" : "Next"}</button>
-            : <button type="button" disabled aria-disabled="true" title="Add your Google review link to continue" className="btn-navy min-h-[40px] cursor-not-allowed opacity-50">Next</button>}
+          <button type="button" autoFocus onClick={() => last ? close() : go(i + 1)} className="btn-navy min-h-[40px]">{last ? "Done" : isConnect ? "Skip for now" : "Next"}</button>
         </div>
       </div>
     </div>
