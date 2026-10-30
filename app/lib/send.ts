@@ -23,9 +23,12 @@ export function validate(i: ReturnType<typeof normalize>): string | null {
   if (i.email && !/^\S+@\S+\.\S+$/.test(i.email)) return "That email looks wrong.";
   return null;
 }
+/** Every ask (Quick ask, automatic/webhooks, API, CSV) is blocked until the Google review link is saved. */
+export const REVIEW_LINK_REQUIRED = "Add your Google review link in Settings → Account before sending asks. Every ask links customers there, so nothing can send without it.";
 export function canSend(u: User): { error: string; code: number } | null {
   if (!isActive(u)) return { error: needsPayment(u) ? "Your last payment didn’t go through. Update your card to resume sending." : u.subscription_status === "canceled" ? "Your plan is canceled. Resubscribe to resume sending." : "Start your free trial to send requests.", code: 402 };
-  if (!u.business_name || !u.review_url) return { error: "Finish onboarding first.", code: 400 };
+  if (!u.review_url || !u.review_url.trim()) return { error: REVIEW_LINK_REQUIRED, code: 400 };
+  if (!u.business_name) return { error: "Add your business name in Settings → Account before sending asks.", code: 400 };
   if (usedThisMonth(u.id) >= MONTHLY_QUOTA) return { error: `Monthly limit of ${MONTHLY_QUOTA} reached.`, code: 429 };
   return null;
 }

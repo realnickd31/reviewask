@@ -15,6 +15,7 @@ import { stripe } from "@/lib/stripe";
 import { AsksBars, ReviewLine } from "@/components/DashCharts";
 import LiveRefresh from "@/components/LiveRefresh";
 import TrialSubscribe from "@/components/TrialSubscribe";
+import GuidedTour from "@/components/GuidedTour";
 import { applySubscription, ensureTrialEnd } from "@/lib/billing";
 import { isAdminUser } from "@/lib/admin";
 import { reviewProgress, snapshotUser, placesConfigured } from "@/lib/reviewStats";
@@ -73,7 +74,8 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         </nav>;
   return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-5 px-4 py-6 sm:py-8">
     {searchParams.dev_unlocked && <p className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">Dev mode: Stripe isn&apos;t configured, so your account was unlocked as a trial.</p>}
-    {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="dashboard" trialEnd={trialEnd} status={searchParams.subscribed} />}
+    {active && !u.walkthrough_done_at && <GuidedTour reviewUrl={u.review_url!} hasReviewData={!!progress} />}
+    {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <div id="tour-trial"><TrialSubscribe from="dashboard" trialEnd={trialEnd} status={searchParams.subscribed} /></div>}
     {!active && needsPayment(u) && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-red-200 bg-red-50 p-5 sm:flex-row sm:items-center">
       <div><p className="font-semibold text-red-800">Your last payment didn&apos;t go through.</p><p className="text-sm text-red-700">Sending is paused. Update your card to resume — no new trial, nothing lost.</p></div>
       <form action="/api/stripe/portal?view=payment_methods&from=dashboard" method="post" className="w-full sm:w-auto"><button className="btn-navy w-full sm:w-auto">Update payment method</button></form></div>}
@@ -86,11 +88,11 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     {active && !hasActivity && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
       <p className="mt-1 text-sm text-slate-500">Requests go out by text or email.</p>
       <ol className="mt-4 space-y-3 text-sm">
-        <li className="flex gap-3"><span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${anyToolConnected ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-navy-900 text-white"}`}>{anyToolConnected ? "✓" : "1"}</span><div><p className="font-medium text-navy-900">Connect your tool</p><p className="text-slate-500">{anyToolConnected ? "Connected. Every customer gets asked automatically." : <>Do this once and every customer gets asked. <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect now</Link></>}</p></div></li>
+        <li id="tour-connect" className="flex gap-3"><span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${anyToolConnected ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-navy-900 text-white"}`}>{anyToolConnected ? "✓" : "1"}</span><div><p className="font-medium text-navy-900">Optional: connect your tool</p><p className="text-slate-500">{anyToolConnected ? "Connected. Every customer gets a review request automatically." : <>Do this once and every customer gets a review request. <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect now</Link></>}</p></div></li>
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first using the form below to see what customers get.</p></div></li>
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Have a list? Open “Send to many customers at once” below.</p></div></li>
       </ol></section>}
-    <ReviewGrowth p={progress} sent={sinceAsks?.sent || 0} />
+    <div id="tour-reviews"><ReviewGrowth p={progress} sent={sinceAsks?.sent || 0} /></div>
     {active && hasActivity && <NextAction u={u} recentWeek={Number(stats.week ?? 0)} remaining={remaining} />}
     {hasActivity && <AsksBars days={days} />}
     <section aria-label="This month" className="space-y-2">
@@ -101,8 +103,9 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       </div>
       <div className="h-1.5 rounded-full bg-slate-100"><div className="h-1.5 rounded-full bg-navy-900" style={{ width: `${pct}%` }} /></div>
     </section>
-    <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLink}</Link></div>
+    <section className="card" id="quick"><div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Ask a customer for a review</h2><Link id="tour-connect-link" href="/settings#automatic" className="text-sm text-slate-500 underline underline-offset-4">{autoLink}</Link></div>
       <p className="mb-4 mt-1 text-sm text-slate-600">Name + phone (text) or email, tap Send.</p>
+      <p id="tour-review-link" className="mb-4 inline-flex max-w-full items-center gap-1.5 rounded-md bg-slate-50 px-2.5 py-1 text-xs text-slate-600 ring-1 ring-slate-100"><span className="shrink-0">Review requests link to your Google review page:</span><span className="truncate font-medium text-navy-900">{u.review_url!.replace(/^https?:\/\//, "")}</span><Link href="/settings#account" className="shrink-0 underline underline-offset-2">Change</Link></p>
       <QuickAsk disabled={!active || used >= MONTHLY_QUOTA} accountDelay={accountDelayHours(u)} /></section>
       <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-navy-900">Have a list? Send to many customers at once</summary>
         <p className="mb-5 mt-1 text-sm text-slate-500">Copy customer rows from Excel or Google Sheets and paste — no exporting. <a href="/sample-customers.csv" download className="font-medium text-navy-900 underline underline-offset-4">Download sample spreadsheet</a></p>

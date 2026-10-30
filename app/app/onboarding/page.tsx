@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 export default async function Page({ searchParams }: { searchParams: { step?: string; canceled?: string; billing?: string; intent?: string } }) {
   const u = await requireUser();
   if (isAdminUser(u)) redirect("/admin");
-  const pay = searchParams.step === "pay" && u.business_name;
+  const pay = searchParams.step === "pay" && u.business_name && u.review_url;
   if (pay && isActive(u) && searchParams.billing !== "reconnect") redirect("/dashboard");
   const reconnect = !!pay && searchParams.billing === "reconnect";
   const active = isActive(u);
@@ -17,6 +17,7 @@ export default async function Page({ searchParams }: { searchParams: { step?: st
     <div className="mb-8 flex justify-center"><Logo dark /></div>
     {!reconnect && <p className="mb-3 text-center text-sm text-slate-500">Step {pay ? 2 : 1} of 2</p>}
     {!pay ? <div className="card"><h1 className="text-xl font-semibold">Tell us about your business</h1><p className="mb-6 mt-1 text-sm text-slate-600">This is what customers will see in the email.</p>
+      {!u.review_url && <p className="mb-5 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800"><b>Your Google review link is required.</b> Every ask sends customers straight to it, so no asks (typed, automatic, API, or spreadsheet) can go out until it&apos;s saved.</p>}
       <BizForm action={saveOnboarding} label="Continue" name={u.business_name} url={u.review_url} /></div>
     : reconnect && active && searchParams.intent !== "subscribe" ? <div className="card"><h1 className="text-xl font-semibold">Update your payment method</h1>
       <p className="mt-1 text-sm text-slate-600">Your {u.subscription_status === "trialing" ? "trial" : "subscription"} for <b>{u.business_name}</b> is unchanged. Add a card to reconnect billing for this account. This doesn&apos;t start a new trial or charge you today.</p>

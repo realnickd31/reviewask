@@ -80,6 +80,7 @@ if (!g._db) {
   addCol("users", "trial_end TEXT");
   addCol("users", "callback_url TEXT"); // outbound HTTPS callbacks (API v1)
   addCol("users", "callback_secret TEXT");
+  addCol("users", "walkthrough_done_at TEXT"); // first-login guided tour seen/skipped (shown once after first post-checkout dashboard)
   db.exec("CREATE TABLE IF NOT EXISTS qbo_events (event_key TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE TABLE IF NOT EXISTS square_events (payment_id TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_rr_unsub ON review_requests(unsubscribe_token)");
@@ -131,6 +132,13 @@ if (!g._db) {
       db.prepare("INSERT OR IGNORE INTO app_migrations (name) VALUES ('analytics_reset_2026_10_29')").run();
     })();
   }
+  // Accounts that already got past checkout before the guided tour shipped never see it.
+  if (!db.prepare("SELECT 1 FROM app_migrations WHERE name='walkthrough_backfill_2026_10_30'").get()) {
+    db.transaction(() => {
+      db.exec("UPDATE users SET walkthrough_done_at=datetime('now') WHERE walkthrough_done_at IS NULL AND subscription_status != 'none'");
+      db.prepare("INSERT OR IGNORE INTO app_migrations (name) VALUES ('walkthrough_backfill_2026_10_30')").run();
+    })();
+  }
   // Marks when tracked review links went live; asks sent earlier linked straight to Google (used by the "What they got" preview).
   db.prepare("INSERT OR IGNORE INTO app_migrations (name) VALUES ('review_click_tracking')").run();
   // Marks when the /r/ hop was removed; asks created after this link straight to Google again.
@@ -152,6 +160,7 @@ export type User = {
   qbo_token_expires_at: string | null; qbo_realm_id: string | null;
   send_delay_hours: number;
   callback_url?: string | null; callback_secret?: string | null;
+  walkthrough_done_at?: string | null;
 };
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;

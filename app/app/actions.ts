@@ -44,6 +44,7 @@ function readBiz(fd: FormData) {
   const name = String(fd.get("business_name") || "").trim();
   const url = String(fd.get("review_url") || "").trim();
   if (!name) return { error: "Business name is required." };
+  if (!url) return { error: "Your Google review link is required. Every ask sends customers there, so asks can't go out without it." };
   if (!validUrl(url)) return { error: "Enter a full review link starting with https://" };
   return { name, url };
 }
@@ -95,4 +96,10 @@ export async function cancelFollowUp(fd: FormData) {
   }
   const { revalidatePath } = await import("next/cache");
   revalidatePath("/dashboard");
+}
+
+/** Guided tour: mark seen (called only on Skip tour / Done / Esc). */
+export async function markWalkthroughDone(): Promise<void> {
+  const u = await requireUser();
+  db.prepare("UPDATE users SET walkthrough_done_at=datetime('now') WHERE id=? AND walkthrough_done_at IS NULL").run(u.id);
 }
