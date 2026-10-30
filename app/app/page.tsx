@@ -55,11 +55,11 @@ export default async function Home() {
           <a href="#pricing" className="hidden hover:text-white sm:inline">Pricing</a>
           <a href="#faq" className="hidden hover:text-white sm:inline">FAQ</a>
           {user ? <>
-            <Link href="/quick" className="hidden whitespace-nowrap hover:text-white sm:inline">Quick ask</Link>
+            <Link href="/quick" className="hidden whitespace-nowrap hover:text-white sm:inline">Quick send</Link>
             <Link href="/dashboard" className="btn whitespace-nowrap bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Dashboard</Link>
             <form action="/api/auth/logout" method="post" className="hidden sm:block"><button type="submit" className="whitespace-nowrap hover:text-white">Log out</button></form>
             <details data-menu className="relative sm:hidden"><summary aria-label="Open menu" className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-md ring-1 ring-white/20 [&::-webkit-details-marker]:hidden"><svg viewBox="0 0 20 20" className="h-5 w-5 fill-white" aria-hidden><path d="M3 5h14v2H3zm0 4h14v2H3zm0 4h14v2H3z" /></svg></summary>
-              <div className="absolute right-0 z-20 mt-2 w-56 rounded-lg bg-white p-2 text-navy-900 shadow-xl"><Link href="/quick" className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">Quick ask</Link><Link href="/settings" className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">Settings</Link><form action="/api/auth/logout" method="post"><button type="submit" className="block w-full rounded-md px-3 py-3 text-left text-sm hover:bg-slate-50">Log out</button></form></div></details>
+              <div className="absolute right-0 z-20 mt-2 w-56 rounded-lg bg-white p-2 text-navy-900 shadow-xl"><Link href="/quick" className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">Quick send</Link><Link href="/settings" className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">Settings</Link><form action="/api/auth/logout" method="post"><button type="submit" className="block w-full rounded-md px-3 py-3 text-left text-sm hover:bg-slate-50">Log out</button></form></div></details>
           </> : <>
             <Link href="/login" className="hidden hover:text-white sm:inline">Log in</Link>
             <Link href="/signup" className="btn bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Start free trial</Link>

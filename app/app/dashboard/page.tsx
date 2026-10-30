@@ -97,7 +97,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     {hasActivity && <AsksBars days={days} />}
     <section aria-label="This month" className="space-y-2">
       <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
-      {[["Asked this week", stats.week ?? 0, "last 7 days"], ["Asked this month", used, `${pct.toFixed(0)}% of your monthly plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} more scheduled`], ["Asks left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
+      {[["Sent this week", stats.week ?? 0, "last 7 days"], ["Sent this month", used, `${pct.toFixed(0)}% of your monthly plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} more scheduled`], ["Left this month", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
         <div key={String(l)} className="bg-white p-4 sm:p-5"><p className="text-[11px] font-semibold uppercase leading-snug tracking-wider text-slate-600 sm:text-xs">{l}</p>
           <p className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-navy-900">{v}</p><p className="mt-1 text-xs text-slate-600">{sub}</p></div>)}
       </div>
@@ -162,7 +162,7 @@ function hasConnectedTool(u: User) {
 }
 
 function NextAction({ u, recentWeek, remaining }: { u: User; recentWeek: number; remaining: number }) {
-  const a = remaining === 0 ? { t: "You've used this month's asks", d: "Your plan resets at the start of next month.", href: "/settings", cta: "See plan" }
+  const a = remaining === 0 ? { t: "You've hit this month's limit", d: "Your plan resets at the start of next month.", href: "/settings", cta: "See plan" }
     : !hasConnectedTool(u) && !u.auto_setup_requested_at ? { t: "Ask every customer without lifting a finger", d: "Connect your tool once and each finished job gets a review ask automatically.", href: "/settings#automatic", cta: "Connect your tool" }
     : recentWeek === 0 ? { t: "No one asked this week", d: "Paste last month's customers from a spreadsheet — it takes a minute.", href: "#bulk", cta: "Import customers" }
     : { t: "Keep it going", d: "Just finished a job? Ask that customer while it's fresh.", href: "#quick", cta: "Ask a customer" };

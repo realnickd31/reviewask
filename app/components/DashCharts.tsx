@@ -3,10 +3,10 @@ export function AsksBars({ days }: { days: { label: string; n: number }[] }) {
   const max = Math.max(1, ...days.map((d) => d.n));
   const thisWeek = days.slice(-7).reduce((a, d) => a + d.n, 0), lastWeek = days.slice(0, 7).reduce((a, d) => a + d.n, 0);
   const diff = thisWeek - lastWeek;
-  return <section className="card" aria-label="Asks sent, last 14 days">
-    <div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Asks sent</h2>
+  return <section className="card" aria-label="Sent, last 14 days">
+    <div className="flex flex-wrap items-baseline justify-between gap-2"><h2 className="text-lg font-semibold">Sent</h2>
       <p className="text-sm text-slate-500"><strong className="text-navy-900">{thisWeek}</strong> this week · {lastWeek} last week{lastWeek || thisWeek ? <span className={`ml-2 rounded-full px-2 py-0.5 text-xs font-semibold ${diff >= 0 ? "bg-lime-50 text-lime-700" : "bg-slate-100 text-slate-500"}`}>{diff >= 0 ? "+" : ""}{diff}</span> : null}</p></div>
-    <div className="mt-4 flex h-32 items-end gap-1 sm:gap-1.5" role="img" aria-label={`Daily asks over the last 14 days. ${thisWeek} this week, ${lastWeek} last week.`}>
+    <div className="mt-4 flex h-32 items-end gap-1 sm:gap-1.5" role="img" aria-label={`Daily sends over the last 14 days. ${thisWeek} this week, ${lastWeek} last week.`}>
       {days.map((d, i) => <div key={i} className="flex h-full min-w-0 flex-1 flex-col items-center justify-end gap-1" title={`${d.label}: ${d.n}`}>
         {d.n > 0 && <span className="text-[10px] text-slate-500">{d.n}</span>}
         <div className={`w-full rounded-t ${i >= 7 ? "bg-navy-900" : "bg-slate-300"}`} style={{ height: `${d.n ? Math.max(4, (d.n / max) * 100) : 2}%` }} /></div>)}
