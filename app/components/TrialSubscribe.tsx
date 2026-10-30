@@ -14,7 +14,7 @@ export default function TrialSubscribe({ trialEnd, from, status }: { trialEnd?: 
       <div>
         <span className="inline-flex items-center gap-1.5 rounded-full bg-lime-400/20 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-lime-300 ring-1 ring-lime-300/30">Free trial{days != null ? ` · ${days} day${days === 1 ? "" : "s"} left` : ""}</span>
         <p className="mt-2 text-lg font-semibold">More Google reviews mean more customers. Stay on ReviewAsk for $39/mo.</p>
-        <p className="mt-0.5 text-sm text-slate-300">{end ? `Trial ends ${end} · cancel anytime.` : "Cancel anytime."}</p>
+        <p className="mt-0.5 text-sm text-slate-300">{end ? `Trial ends ${end} · ${days === 0 ? "ends today" : `${days} day${days === 1 ? "" : "s"} left`} · cancel anytime.` : "Cancel anytime."}</p>
         {status === "failed" && <p className="mt-2 text-sm font-medium text-amber-300">We couldn’t charge your card. Update your payment method and try again.</p>}
       </div>
       <div className="flex shrink-0 flex-col items-stretch gap-2 sm:items-end">
