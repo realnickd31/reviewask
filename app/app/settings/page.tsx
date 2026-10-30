@@ -11,6 +11,7 @@ import { isActive } from "@/lib/db";
 import { saveSettings, saveSendDelay } from "../actions";
 import ConnectorRequest from "@/components/ConnectorRequest";
 import SendDelaySetting from "@/components/SendDelaySetting";
+import ApiAccessCard from "@/components/ApiAccessCard";
 import { clampDelay } from "@/lib/delay";
 import { stripe } from "@/lib/stripe";
 import { db } from "@/lib/db";
@@ -20,6 +21,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
   const h = headers();
   const base = process.env.APP_URL || `${h.get("x-forwarded-proto") || "http"}://${h.get("host")}`;
   const hookUrl = `${base.replace(/\/$/, "")}/api/zapier/webhook`;
+  const apiBase = `${base.replace(/\/$/, "")}/api/v1`;
   let trialEnd = u.trial_end || null;
   if (u.subscription_status === "trialing" && !trialEnd && stripe && u.stripe_subscription_id) {
     try { const s = await stripe.subscriptions.retrieve(u.stripe_subscription_id); if (s.trial_end) { trialEnd = new Date(s.trial_end * 1000).toISOString(); db.prepare("UPDATE users SET trial_end=? WHERE id=?").run(trialEnd, u.id); } } catch (e) { console.error("trial_end", e); }
@@ -39,6 +41,9 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
     <section className="card" id="timing"><h2 className="text-xl font-bold text-navy-900">Send timing</h2>
       <p className="mb-4 mt-1 text-sm text-slate-700">How long automatic asks from your connected tools wait before going out. Quick asks and spreadsheet sends let you choose each time.</p>
       <SendDelaySetting initial={clampDelay(u.send_delay_hours)} save={saveSendDelay} /></section>
+    <section className="card" id="api"><h2 className="mb-4 text-xl font-bold text-navy-900">API &amp; callbacks</h2>
+      <p className="mb-4 text-sm text-slate-600">Base URL <code className="break-all text-xs">{apiBase}</code></p>
+      <ApiAccessCard initialToken={u.api_token} callbackUrl={(u as { callback_url?: string | null }).callback_url || null} secretSet={!!(u as { callback_secret?: string | null }).callback_secret} /></section>
     <section className="card"><h2 className="text-xl font-bold text-navy-900">Billing</h2><div className="mt-3 flex flex-wrap items-center gap-3"><span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${plan.cls}`}>{plan.label}</span><span className="text-sm text-slate-700">Starter · $39/month · 200 requests/month</span></div>
       <p className="mt-3 text-sm text-slate-700">{plan.note} Update your card, switch plans, or cancel below.</p>
       {searchParams.portal && <p className="mt-3 text-sm text-amber-700">Billing portal is available after you subscribe through Stripe.</p>}

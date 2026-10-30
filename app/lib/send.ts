@@ -3,6 +3,7 @@ import { db, isSuppressed, unsubscribeUrl, getUser, isActive, usedThisMonth, MON
 import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms, sendEmail, sendSms } from "./email";
 import { trackFirstAskIfNeeded } from "./analytics";
 import { clampDelay } from "./delay";
+import { emitRequestEvent } from "./notifyOutbox";
 
 export type SendInput = { name?: unknown; email?: unknown; phone?: unknown };
 export type SendResult =
@@ -49,6 +50,7 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
       .run(u.id, i.name, i.email || null, i.phone || null, [i.email && "email", i.phone && "sms"].filter(Boolean).join("+"), source, `+${delay} hours`, token);
     const sid = Number(r.lastInsertRowid);
     trackFirstAskIfNeeded(u.id, sid);
+    emitRequestEvent(u, "request.created", sid);
     return { ok: true, id: sid, mode: "scheduled", used: usedThisMonth(u.id) };
   }
   const r = db.prepare(`INSERT INTO review_requests (user_id, customer_name, customer_email, customer_phone, channel, status, source, unsubscribe_token)
@@ -57,6 +59,7 @@ export async function sendReviewRequest(u: User, raw: SendInput, source = "manua
   trackFirstAskIfNeeded(u.id, id);
   const d = await deliver(u, id, i, token);
   if (d.status === "failed") return { ok: false, error: "Email provider rejected the send. Check RESEND settings.", code: 502, id };
+  emitRequestEvent(u, "request.sent", id);
   return { ok: true, id, mode: d.mode, used: usedThisMonth(u.id) };
 }
 
@@ -94,14 +97,16 @@ export async function processDueScheduledAsks(userId?: number, limit = 200) {
     const claim = db.prepare("UPDATE review_requests SET status='sending' WHERE id=? AND status='scheduled'").run(r.id);
     if (claim.changes === 0) { skipped++; continue; }
     const d = await deliver(u, r.id, { name: r.customer_name, email: r.customer_email || "", phone: r.customer_phone || "" }, r.unsubscribe_token);
-    if (d.status !== "failed") sent++;
+    if (d.status !== "failed") { emitRequestEvent(u, "request.sent", r.id); sent++; }
   }
   return { due: rows.length, sent, skipped };
 }
 
 /** Owner's "Don't ask": cancel a scheduled ask before it sends. */
 export function cancelScheduledAsk(userId: number, id: number) {
-  return db.prepare("UPDATE review_requests SET status='cancelled', send_at=NULL WHERE id=? AND user_id=? AND status='scheduled'").run(id, userId).changes > 0;
+  const ok = db.prepare("UPDATE review_requests SET status='cancelled', send_at=NULL WHERE id=? AND user_id=? AND status='scheduled'").run(id, userId).changes > 0;
+  if (ok) emitRequestEvent(userId, "request.cancelled", id);
+  return ok;
 }
 
 type DueRow = { id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null; unsubscribe_token: string | null };
@@ -126,6 +131,7 @@ export async function processDueReminders(userId?: number, limit = 200) {
       const link = u.review_url;
       if (r.customer_email && !isSuppressed(r.customer_email)) await sendEmail(r.customer_email, buildReminderEmail(u.business_name, r.customer_name, link, unsubscribeUrl(tok)));
       if (r.customer_phone) await sendSms(r.customer_phone, buildReminderSms(u.business_name, r.customer_name, link));
+      emitRequestEvent(u, "request.reminded", r.id);
       sent++;
     } catch (e) {
       console.error("reminder failed", e);

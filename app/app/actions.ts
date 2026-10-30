@@ -86,7 +86,12 @@ export async function dontAsk(fd: FormData) {
 export async function cancelFollowUp(fd: FormData) {
   const u = await requireUser();
   const { db } = await import("@/lib/db");
-  db.prepare("UPDATE review_requests SET remind_at = NULL, followup_cancelled_at = datetime('now') WHERE id=? AND user_id=? AND reminded_at IS NULL").run(Number(fd.get("id")), u.id);
+  const id = Number(fd.get("id"));
+  const ch = db.prepare("UPDATE review_requests SET remind_at = NULL, followup_cancelled_at = datetime('now') WHERE id=? AND user_id=? AND reminded_at IS NULL").run(id, u.id);
+  if (ch.changes > 0) {
+    const { emitRequestEvent } = await import("@/lib/notifyOutbox");
+    emitRequestEvent(u.id, "followup.cancelled", id);
+  }
   const { revalidatePath } = await import("next/cache");
   revalidatePath("/dashboard");
 }

@@ -73,6 +73,8 @@ if (!g._db) {
   addCol("users", "qbo_token_expires_at TEXT");
   addCol("users", "qbo_realm_id TEXT");
   addCol("users", "trial_end TEXT");
+  addCol("users", "callback_url TEXT"); // outbound HTTPS callbacks (API v1)
+  addCol("users", "callback_secret TEXT");
   db.exec("CREATE TABLE IF NOT EXISTS qbo_events (event_key TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE TABLE IF NOT EXISTS square_events (payment_id TEXT PRIMARY KEY, user_id INTEGER, created_at TEXT NOT NULL DEFAULT (datetime('now')))");
   db.exec("CREATE UNIQUE INDEX IF NOT EXISTS idx_rr_unsub ON review_requests(unsubscribe_token)");
@@ -144,6 +146,7 @@ export type User = {
   qbo_connected: number; qbo_access_token: string | null; qbo_refresh_token: string | null;
   qbo_token_expires_at: string | null; qbo_realm_id: string | null;
   send_delay_hours: number;
+  callback_url?: string | null; callback_secret?: string | null;
 };
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;
