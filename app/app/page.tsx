@@ -87,7 +87,7 @@ export default async function Home() {
         </div>
         <div aria-label="Example text message" className="mx-auto mt-4 w-full max-w-sm rounded-2xl bg-white p-4 text-navy-900 shadow-2xl ring-1 ring-white/10 lg:-ml-6 lg:max-w-[19rem]">
           <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Or by text · SMS</p>
-          <div className="mt-2 rounded-2xl rounded-bl-sm bg-slate-100 px-3.5 py-2.5 text-sm leading-relaxed text-navy-900">Hi Sam - thanks again for choosing Bright Harbor Co. If we did a good job, a quick Google review would mean a lot: <span className="font-medium text-blue-700 underline">g.page/r/brightharbor</span><br /><span className="text-xs text-slate-500">Reply STOP to opt out.</span></div>
+          <div className="mt-2 rounded-2xl rounded-bl-sm bg-slate-100 px-3.5 py-2.5 text-sm leading-relaxed text-navy-900">Hi Sam - thanks again for choosing Bright Harbor Co. If you’re happy with how things went, a quick Google review would mean a lot: <span className="font-medium text-blue-700 underline">g.page/r/brightharbor</span><br /><span className="text-xs text-slate-500">Reply STOP to opt out.</span></div>
           <p className="mt-2 text-right text-[11px] text-slate-500">Delivered · from Bright Harbor Co.</p>
         </div></div>
       </div>
