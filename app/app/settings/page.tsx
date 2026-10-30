@@ -15,7 +15,7 @@ import SendDelaySetting from "@/components/SendDelaySetting";
 import SettingsTabs from "@/components/SettingsTabs";
 import ApiAccessCard from "@/components/ApiAccessCard";
 import { clampDelay } from "@/lib/delay";
-import { stripe } from "@/lib/stripe";
+import { ensureTrialEnd } from "@/lib/billing";
 import { db, ensureApiToken } from "@/lib/db";
 export const dynamic = "force-dynamic";
 export default async function Page({ searchParams }: { searchParams: { portal?: string; jobber?: string; square?: string; stripe?: string; quickbooks?: string; subscribed?: string; billing?: string } }) {
@@ -25,10 +25,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
   const base = process.env.APP_URL || `${h.get("x-forwarded-proto") || "http"}://${h.get("host")}`;
   const hookUrl = `${base.replace(/\/$/, "")}/api/zapier/webhook`;
   const apiBase = `${base.replace(/\/$/, "")}/api/v1`;
-  let trialEnd = u.trial_end || null;
-  if (u.subscription_status === "trialing" && !trialEnd && stripe && u.stripe_subscription_id) {
-    try { const s = await stripe.subscriptions.retrieve(u.stripe_subscription_id); if (s.trial_end) { trialEnd = new Date(s.trial_end * 1000).toISOString(); db.prepare("UPDATE users SET trial_end=? WHERE id=?").run(trialEnd, u.id); } } catch (e) { console.error("trial_end", e); }
-  }
+  const trialEnd = await ensureTrialEnd(u);
   const plan = planBadge(u.subscription_status, trialEnd);
   const trial = u.subscription_status === "trialing" || !isActive(u);
   const connected = !!(u.jobber_connected || u.housecall_connected || u.square_connected || u.stripe_connect_connected || u.qbo_connected);

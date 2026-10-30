@@ -15,7 +15,7 @@ import { stripe } from "@/lib/stripe";
 import { AsksBars, ReviewLine } from "@/components/DashCharts";
 import LiveRefresh from "@/components/LiveRefresh";
 import TrialSubscribe from "@/components/TrialSubscribe";
-import { applySubscription } from "@/lib/billing";
+import { applySubscription, ensureTrialEnd } from "@/lib/billing";
 import { isAdminUser } from "@/lib/admin";
 import { reviewProgress, snapshotUser, placesConfigured } from "@/lib/reviewStats";
 export const dynamic = "force-dynamic";
@@ -34,6 +34,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       if (s.client_reference_id === String(u.id) && s.subscription && typeof s.subscription !== "string") { applySubscription(s.subscription, u.id); u = getUser(u.id)!; }
     } catch (e) { console.error(e); }
   }
+  const trialEnd = await ensureTrialEnd(u);
   const active = isActive(u);
   // Best-effort: send this account's due follow-ups so it works without an external cron.
   if (active) { try { await processDueScheduledAsks(u.id, 50); await processDueReminders(u.id, 50); } catch (e) { console.error("reminders", e); } }
@@ -73,7 +74,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         </nav>;
   return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-5 px-4 py-6 sm:py-8">
     {searchParams.dev_unlocked && <p className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">Dev mode: Stripe isn&apos;t configured, so your account was unlocked as a trial.</p>}
-    {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="dashboard" trialEnd={u.trial_end} status={searchParams.subscribed} />}
+    {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="dashboard" trialEnd={trialEnd} status={searchParams.subscribed} />}
     {!active && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>
       <Link href="/onboarding?step=pay" className="btn-lime">Start free trial</Link></div>}
