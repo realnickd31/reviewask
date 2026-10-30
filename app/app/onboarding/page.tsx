@@ -6,11 +6,11 @@ import { redirect } from "next/navigation";
 import { saveOnboarding } from "../actions";
 import { isAdminUser } from "@/lib/admin";
 export const dynamic = "force-dynamic";
-export default async function Page({ searchParams }: { searchParams: { step?: string; canceled?: string } }) {
+export default async function Page({ searchParams }: { searchParams: { step?: string; canceled?: string; billing?: string } }) {
   const u = await requireUser();
   if (isAdminUser(u)) redirect("/admin");
   const pay = searchParams.step === "pay" && u.business_name;
-  if (pay && isActive(u)) redirect("/dashboard");
+  if (pay && isActive(u) && searchParams.billing !== "reconnect") redirect("/dashboard");
   return <main id="main" className="min-h-screen bg-slate-50 px-4 py-12"><div className="mx-auto max-w-lg">
     <div className="mb-8 flex justify-center"><Logo dark /></div>
     <p className="mb-3 text-center text-sm text-slate-500">Step {pay ? 2 : 1} of 2</p>

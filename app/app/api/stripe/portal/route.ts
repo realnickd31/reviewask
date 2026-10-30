@@ -29,10 +29,30 @@ export async function POST(req: NextRequest) {
   const origin = baseUrl(req.nextUrl.origin);
   const u = await currentUser();
   if (!u) return NextResponse.redirect(origin + "/login", 303);
-  if (!stripe || !u.stripe_customer_id) return NextResponse.redirect(origin + "/settings?portal=unavailable", 303);
+  if (!stripe) return NextResponse.redirect(origin + "/settings?portal=unavailable", 303);
+  // Resolve a customer that actually exists in the Stripe account/mode behind the current key.
+  // Accounts started against a different key (e.g. test mode) have ids the live account can't see.
+  let customer = u.stripe_customer_id;
+  if (customer) {
+    const ok = await stripe.customers.retrieve(customer).then((c) => !(c as any).deleted, (e: any) => (e?.code === "resource_missing" ? false : true));
+    if (!ok) { console.error("[stripe/portal] stale customer", { userId: u.id, customer }); customer = null; }
+  }
+  if (!customer) {
+    try {
+      const found = await stripe.customers.list({ email: u.email, limit: 10 });
+      const mine = found.data.find((c) => c.metadata?.userId === String(u.id)) ?? found.data[0];
+      if (mine) customer = mine.id;
+    } catch (e: any) { console.error("[stripe/portal] lookup", e?.message); }
+    db.prepare("UPDATE users SET stripe_customer_id=? WHERE id=?").run(customer, u.id);
+  }
+  if (!customer) {
+    // No billing record in this Stripe account: send them through checkout to add a card (recreates the customer).
+    console.error("[stripe/portal] no customer, routing to checkout", { userId: u.id });
+    return NextResponse.redirect(origin + "/onboarding?step=pay&billing=reconnect", 303);
+  }
   const view = req.nextUrl.searchParams.get("view"); // "payment_methods" | "invoices" | null
   const back = req.nextUrl.searchParams.get("from") === "dashboard" ? "/dashboard" : "/settings";
-  const params: any = { customer: u.stripe_customer_id, return_url: origin + back };
+  const params: any = { customer, return_url: origin + back };
   // Stripe only supports flow_data for payment_method_update (no invoice flow); invoice history lives on the portal home.
   if (view === "payment_methods") params.flow_data = { type: "payment_method_update", after_completion: { type: "redirect", redirect: { return_url: origin + back } } };
   try {
@@ -42,7 +62,7 @@ export async function POST(req: NextRequest) {
     catch (e: any) { if (!params.flow_data || e?.param === "customer") throw e; delete params.flow_data; s = await stripe.billingPortal.sessions.create(params); }
     return NextResponse.redirect(s.url, 303);
   } catch (e: any) {
-    console.error("[stripe/portal] failed", { userId: u.id, customer: u.stripe_customer_id, code: e?.code, message: e?.message });
+    console.error("[stripe/portal] failed", { userId: u.id, customer, code: e?.code, message: e?.message });
     if (e?.code === "resource_missing" && e?.param === "customer") {
       // Stored customer id doesn't exist in this Stripe account/mode (stale or test-mode id). Clear it so checkout recreates one.
       db.prepare("UPDATE users SET stripe_customer_id=NULL WHERE id=?").run(u.id);

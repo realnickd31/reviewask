@@ -4,7 +4,7 @@ import ReviewLinkTool from "@/components/ReviewLinkTool";
 import { OG_IMAGES } from "@/lib/og";
 const faqs = [
   { q: "What is a Google review link?", a: "A direct URL that opens your business's Google review form, so customers can leave a review in one tap instead of searching for you on Maps." },
-  { q: "Is this review link generator free?", a: "Yes. It runs in your browser, needs no signup, and the link never expires as long as your Google Business Profile exists." },
+  { q: "Is this review link generator free?", a: "Yes. It runs in your browser, needs no signup, and the link never expires as long as your business is listed on Google Maps." },
   { q: "Do I need my Google Place ID?", a: "No. Paste the link you get from Google Maps (Share, then Copy link) and the tool finds the Place ID for you. If you already have a Place ID, you can paste that instead." },
   { q: "Can I share the link by text, email, or QR code?", a: "Yes. The link works anywhere: text messages, emails, invoices, receipts, your website, or a QR code." },
 ];
