@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { channelLabel, sourceLabel, statusLabel } from "@/lib/activityLabels";
 import LocalTime from "@/components/LocalTime";
 import { redirect } from "next/navigation";
 import AppNav from "@/components/AppNav";
@@ -56,6 +57,18 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   const dayRows = db.prepare("SELECT date(created_at) d, COUNT(*) n FROM review_requests WHERE user_id=? AND status IN ('sent','queued') AND created_at >= date('now','-13 days') GROUP BY d").all(u.id) as { d: string; n: number }[];
   const days = Array.from({ length: 14 }, (_, i) => { const t = new Date(Date.now() - (13 - i) * 864e5); const k = t.toISOString().slice(0, 10); return { label: t.toLocaleDateString("en-US", { month: "numeric", day: "numeric", timeZone: "UTC" }), n: dayRows.find((x) => x.d === k)?.n ?? 0 }; });
   const pct = Math.min(100, (used / MONTHLY_QUOTA) * 100);
+  const pager = (cls: string) =><nav className={`flex flex-wrap items-center justify-between gap-3 ${cls}`} aria-label="Activity pages">
+          <p className="text-xs text-slate-500">Showing {(page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, activityTotal)} of {activityTotal}</p>
+          <div className="flex flex-wrap gap-1.5">
+            {pageArrow("«", 1, page > 1, "First page")}{pageArrow("‹", page - 1, page > 1, "Previous page")}
+            {pageNums(page, pageCount).map((n, k) => n === 0
+              ? <span key={`gap${k}`} className="px-1.5 py-1.5 text-sm text-slate-400">…</span>
+              : n === page
+                ? <span key={n} aria-current="page" className="min-w-[2.25rem] rounded-md bg-navy-900 px-3 py-1.5 text-center text-sm font-semibold text-white">{n}</span>
+                : <Link key={n} href={`/dashboard?page=${n}#history`} aria-label={`Page ${n}`} className="min-w-[2.25rem] rounded-md border border-slate-300 px-3 py-1.5 text-center text-sm font-semibold text-navy-900 hover:bg-slate-50">{n}</Link>)}
+            {pageArrow("›", page + 1, page < pageCount, "Next page")}{pageArrow("»", pageCount, page < pageCount, "Last page")}
+          </div>
+        </nav>;
   return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-5 px-4 py-6 sm:py-8">
     {searchParams.dev_unlocked && <p className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">Dev mode: Stripe isn&apos;t configured, so your account was unlocked as a trial.</p>}
     {!active && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
@@ -94,6 +107,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     </section>}
     <LiveRefresh /><section className="card px-4 sm:px-6" id="history"><div className="mb-4 flex flex-wrap items-baseline justify-between gap-3"><div><h2 className="text-lg font-semibold">Recent activity</h2><p className="mt-0.5 text-sm text-slate-500">Everyone you&apos;ve asked, how, and when. Tap “What they got” to see the exact message.</p></div><div className="flex items-baseline gap-3">{activityTotal > 0 && <p className="text-xs text-slate-500">{activityTotal} total · page {page} of {pageCount}</p>}<a href="/api/requests/export" download className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Download CSV</a></div></div>
       {activityTotal === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Ask a customer above, or connect the tools you already use. Every request and follow-up will show here with its status.</p></div> : <>
+      {pageCount > 1 && pager("mb-4 border-b border-slate-100 pb-4")}
       <ul className="-mx-1 space-y-2.5 md:hidden">{rows.map((r) => { const ch = chip(r); const fu = followUp(r); return <li key={r.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="flex items-start justify-between gap-3"><div className="min-w-0"><p className="truncate text-[15px] font-semibold text-navy-900">{r.customer_name}</p>
           {r.customer_email && <p className="mt-0.5 truncate text-sm text-slate-500">{r.customer_email}</p>}{r.customer_phone && <p className="text-sm text-slate-500">{r.customer_phone}</p>}</div>
@@ -107,13 +121,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
           <td className="py-3 pr-3"><span title={queuedTip(r)} className={`whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-semibold ${ch.cls}`}>{ch.label}</span></td>
           <td className="whitespace-nowrap py-3 pr-3 text-slate-500">{fmt(r.created_at)}</td>
           <td className="whitespace-nowrap py-3 text-slate-500">{followUp(r)}{canCancel(r) && <CancelFU id={r.id} />}</td></tr>; })}</tbody></table></div></>}
-      {pageCount > 1 && <nav className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4" aria-label="Activity pages">
-        <p className="text-xs text-slate-500">Showing {(page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, activityTotal)} of {activityTotal}</p>
-        <div className="flex gap-2">
-          {page > 1 ? <Link href={`/dashboard?page=${page - 1}#history`} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Previous</Link> : <span className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-400">Previous</span>}
-          {page < pageCount ? <Link href={`/dashboard?page=${page + 1}#history`} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Next</Link> : <span className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-400">Next</span>}
-        </div>
-      </nav>}
+      {pageCount > 1 && pager("mt-4 border-t border-slate-100 pt-4")}
       {rows.some((r) => r.status === "queued") && <p className="mt-3 text-xs text-slate-500"><strong>Queued</strong> means saved but not sent yet, for example a text that couldn&apos;t be delivered. Add the customer&apos;s email to send now.</p>}
     </section>
   </main></div>;
@@ -166,18 +174,32 @@ function WhatTheyGot({ r, u }: { r: ReviewRequest; u: User }) {
 }
 
 const fmt = (t: string, prefix = "") => <LocalTime t={t} prefix={prefix} />;
-function channel(r: ReviewRequest) { return ({ email: "Email", sms: "Text", "email+sms": "Email + text" } as Record<string, string>)[r.channel] || r.channel.replace("+", " + "); }
-function source(r: ReviewRequest) { return ({ manual: "Typed in", bulk: "Spreadsheet", webhook: "Automatic", test: "Test" } as Record<string, string>)[r.source || "manual"] || "Typed in"; }
+function channel(r: ReviewRequest) { return channelLabel(r); }
+function source(r: ReviewRequest) { return sourceLabel(r); }
 function canCancel(r: ReviewRequest) { return !!r.remind_at && !r.reminded_at && r.status === "sent"; }
 function CancelFU({ id }: { id: number }) { return <form action={cancelFollowUp} className="mt-1"><input type="hidden" name="id" value={id} /><button className="rounded-md border border-slate-300 px-2.5 py-1 text-xs font-semibold text-slate-700 hover:bg-slate-50">Cancel follow-up</button></form>; }
 function followUp(r: ReviewRequest) { return r.followup_cancelled_at ? "Cancelled" : r.reminded_at ? fmt(r.reminded_at) : r.remind_at && r.status === "sent" ? fmt(r.remind_at, "Due ") : "—"; }
 function queuedTip(r: ReviewRequest) { return r.status === "queued" ? "Saved, not sent yet. Add an email to send now." : undefined; }
 function chip(r: ReviewRequest) {
-  if (r.status === "failed") return { label: "Failed", cls: "bg-red-50 text-red-700 ring-1 ring-red-100" };
-  if (r.status === "cancelled") return { label: "Not asked", cls: "bg-slate-100 text-slate-500" };
-  if (r.status === "sending") return { label: "Sending", cls: "bg-slate-100 text-slate-600" };
-  if (r.status === "suppressed") return { label: "Unsubscribed", cls: "bg-slate-100 text-slate-500" };
-  if (r.status === "queued") return { label: "Queued", cls: "bg-slate-100 text-slate-600" };
-  if (r.reminded_at) return { label: "Reminded", cls: "bg-navy-900 text-white" };
-  return { label: "Sent", cls: "bg-lime-50 text-lime-700 ring-1 ring-lime-100" };
+  if (r.status === "failed") return { label: statusLabel(r), cls: "bg-red-50 text-red-700 ring-1 ring-red-100" };
+  if (r.status === "cancelled") return { label: statusLabel(r), cls: "bg-slate-100 text-slate-500" };
+  if (r.status === "sending") return { label: statusLabel(r), cls: "bg-slate-100 text-slate-600" };
+  if (r.status === "suppressed") return { label: statusLabel(r), cls: "bg-slate-100 text-slate-500" };
+  if (r.status === "queued") return { label: statusLabel(r), cls: "bg-slate-100 text-slate-600" };
+  if (r.reminded_at) return { label: statusLabel(r), cls: "bg-navy-900 text-white" };
+  return { label: statusLabel(r), cls: "bg-lime-50 text-lime-700 ring-1 ring-lime-100" };
+}
+
+/** Page numbers with gaps (0 = ellipsis): first, last, and current ±1. */
+function pageNums(page: number, count: number): number[] {
+  const keep = new Set([1, count, page - 1, page, page + 1].filter((n) => n >= 1 && n <= count));
+  const out: number[] = []; let prev = 0;
+  for (const n of Array.from(keep).sort((a, b) => a - b)) { if (n - prev > 1) out.push(0); out.push(n); prev = n; }
+  return out;
+}
+
+function pageArrow(label: string, n: number, enabled: boolean, aria: string) {
+  return enabled
+    ? <Link key={aria} href={`/dashboard?page=${n}#history`} aria-label={aria} className="min-w-[2.25rem] rounded-md border border-slate-300 px-2.5 py-1.5 text-center text-sm font-semibold text-navy-900 hover:bg-slate-50">{label}</Link>
+    : <span key={aria} aria-hidden="true" className="min-w-[2.25rem] rounded-md border border-slate-200 px-2.5 py-1.5 text-center text-sm text-slate-300">{label}</span>;
 }
