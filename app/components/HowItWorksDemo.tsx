@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const scenes = [
   { k: "paid", cap: "A job wraps up. You mark it done, or your invoice gets paid." },
-  { k: "wait", cap: "ReviewAsk waits about 2 hours so the ask lands at a good moment. Changed your mind? Tap Don’t ask." },
+  { k: "wait", cap: "ReviewAsk waits about 2 hours so the request lands at a good moment. Changed your mind? Tap Don’t ask." },
   { k: "email", cap: "Your customer gets a short thank-you from your business, by email or text." },
   { k: "google", cap: "One tap opens your Google review form. No app, no login." },
   { k: "remind", cap: "No review yet? One polite follow-up goes out on day 3. Then it stops." },

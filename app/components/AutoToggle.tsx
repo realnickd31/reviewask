@@ -136,7 +136,7 @@ export default function AutoToggle(p: Props) {
   const qbDisconnect = async () => { if (!confirm("Disconnect QuickBooks? We’ll stop asking for reviews from QuickBooks until you connect again.")) return; if (await disc("/api/quickbooks/disconnect", "QuickBooks")) setQb(false); };
   const qboCard = qb
     ? <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="font-semibold text-green-800">● Connected · Sends a review ask when an invoice is paid</p>
+        <p className="font-semibold text-green-800">● Connected · Sends a review request when an invoice is paid</p>
         <button type="button" className={offBtn} onClick={qbDisconnect}>Turn off &amp; disconnect</button>
       </div>
     : p.qboReady ? <a href="/api/quickbooks/connect" className="btn-navy inline-block">Connect QuickBooks</a>
@@ -180,7 +180,7 @@ export default function AutoToggle(p: Props) {
 
   return <div className="space-y-5">
     <div className="flex items-start justify-between gap-4">
-      <p className="text-base text-navy-900">Automatically ask customers for a Google review when a job is finished.</p>
+      <p className="text-base text-navy-900">Automatically ask every customer for a Google review once you're done or they pay.</p>
       <button type="button" role="switch" aria-checked={on} onClick={toggle}
         className={`relative h-9 w-16 shrink-0 rounded-full transition ${on ? "bg-navy-900" : "bg-slate-300"}`}>
         <span className={`absolute top-1 h-7 w-7 rounded-full bg-white shadow transition-all ${on ? "left-8" : "left-1"}`} />
@@ -188,7 +188,7 @@ export default function AutoToggle(p: Props) {
       </button>
     </div>
     {discErr && <p role="alert" className="text-sm text-red-700">{discErr}</p>}
-    {!on && <p className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">Automatic asks are <b>off</b>. Nothing will be sent. Your connections below are saved — turn the switch back on to resume, or disconnect any you don’t want.</p>}
+    {!on && <p className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">Automatic review requests are <b>off</b>. Nothing will be sent. Your connections below are saved — turn the switch back on to resume, or disconnect any you don’t want.</p>}
     <>
       {p.flash === "error" && <p className="text-sm text-red-700">Jobber didn’t finish connecting. Please try again.</p>}
       {p.squareFlash === "error" && <p className="text-sm text-red-700">Square didn’t finish connecting. Please try again.</p>}
@@ -203,7 +203,7 @@ export default function AutoToggle(p: Props) {
         {card("QuickBooks", qboCard, qb)}
         {card("Zapier (any other app)", zapierCard, zap)}
         {card("Quick send (no connection needed)", <div className="space-y-3">
-          <p className="text-sm text-navy-900">Send an ask from your phone after any job — name, phone, tap Send.</p>
+          <p className="text-sm text-navy-900">Ask for a review from your phone anytime: name, phone, tap Send.</p>
           <div className="flex flex-wrap gap-2"><Link href="/quick" className="btn-outline">Open Quick send</Link>
             <button type="button" className="btn-ghost" onClick={() => { navigator.clipboard?.writeText(p.quickUrl); setCopied(true); }}>{copied ? "Copied!" : "Copy link for your team"}</button></div>
         </div>)}

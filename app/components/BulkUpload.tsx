@@ -106,7 +106,7 @@ export default function BulkUpload({ disabled, remaining, accountDelay }: { disa
       {good.length > 0 && <ul className="mt-3 space-y-1 text-slate-600">{good.slice(0, 5).map((r, i) => <li key={i}>{r.name} · {r.email || r.phone}</li>)}{good.length > 5 && <li className="text-slate-400">…and {good.length - 5} more</li>}</ul>}
     </div>}
     <div><DelayPicker value={delay} onChange={setDelay} accountDefault={accountDelay} disabled={busy || disabled} />
-      <p className="mt-1.5 text-sm text-slate-500">{delay === 0 ? "Everyone gets asked right away." : `Every ask waits ${delayLabel(delay)}. Stop any of them from Scheduled asks before then.`}</p></div>
+      <p className="mt-1.5 text-sm text-slate-500">{delay === 0 ? "Everyone gets asked right away." : `Every request waits ${delayLabel(delay)}. Stop any of them from Scheduled review requests before then.`}</p></div>
     <div className="flex flex-wrap items-center gap-3">
       <button className="btn-navy" onClick={send} disabled={busy || disabled}>{busy ? "Sending…" : rows ? (delay ? `Schedule ${willSend} requests` : `Send ${willSend} requests`) : delay ? "Schedule all" : "Send all"}</button>
       {msg && <p className={`text-sm ${msg.t === "ok" ? "text-green-700" : "text-red-600"}`}>{msg.m}</p>}

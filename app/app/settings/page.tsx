@@ -49,7 +49,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
 
       </> },
       { id: "integrations", label: "Integrations", node: <>
-    <Group id="integrations" title="Integrations" sub="Connect the tool you already use and every finished job gets a review ask. No copying names around.">
+    <Group id="integrations" title="Integrations" sub="Connect the tool you already use and every customer gets a review request. No copying names around.">
       <section className="card" id="automatic"><h3 className="mb-4 text-base font-semibold text-navy-900">Ask every customer automatically</h3><AutoToggle enabled={!!u.auto_enabled} provider={u.auto_provider} jobberConnected={!!u.jobber_connected} jobberReady={jobberConfigured()}
         housecallConnected={!!u.housecall_connected} housecallReady={!!u.housecall_connected && !!u.housecall_webhook_secret} housecallStarted={!!u.housecall_api_key}
         setupEmail={u.auto_setup_email} setupRequested={!!u.auto_setup_requested_at} quickUrl={`${base.replace(/\/$/, "")}/quick`} flash={searchParams.jobber}
@@ -58,7 +58,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
         qboConnected={!!u.qbo_connected} qboReady={qboConfigured()} qboFlash={searchParams.quickbooks}
         zapierConnected={!!u.zapier_connected_at} zapierPending={!u.zapier_connected_at && !!u.zapier_setup_at} zapierToken={u.api_token} zapierUrl={hookUrl} business={u.business_name || "my business"} /></section>
       <section className="card" id="timing"><h3 className="text-base font-semibold text-navy-900">Send timing</h3>
-        <p className="mb-4 mt-1 text-sm text-slate-600">How long automatic asks wait before going out, so you can stop one if needed.</p>
+        <p className="mb-4 mt-1 text-sm text-slate-600">How long automatic review requests wait before going out, so you can stop one if needed.</p>
         <SendDelaySetting initial={clampDelay(u.send_delay_hours)} save={saveSendDelay} /></section>
       {isActive(u) && <section className="card"><ConnectorRequest /></section>}
     </Group>

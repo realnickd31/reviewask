@@ -66,7 +66,7 @@ export default function ApiAccessCard({
   }
 
   const ASK_TEXT = {
-    key: "The old key stops working right away. If you use Zapier or any other app with this key, paste the new one there. Your automatic asks settings won’t change.",
+    key: "The old key stops working right away. If you use Zapier or any other app with this key, paste the new one there. Your automatic review request settings won’t change.",
     clearKey: "Anything using this key (Zapier, other apps) stops working. A new key is created the next time you open Settings.",
     clear: "This removes your callback URL and signing secret.",
   } as const;
@@ -92,7 +92,7 @@ export default function ApiAccessCard({
       <div>
         <h3 className="font-semibold text-navy-900">API key</h3>
         <p className="mt-1 text-slate-600">
-          Your account has one private key. It lets other apps — Zapier, or anything a developer builds — send review asks for you. Keep it secret, like a password.
+          Your account has one private key. It lets other apps — Zapier, or anything a developer builds — send review requests for you. Keep it secret, like a password.
         </p>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-600">
           <li>The same key works for the API and for Zapier. You don’t need Zapier to have one.</li>

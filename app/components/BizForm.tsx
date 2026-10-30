@@ -7,7 +7,7 @@ export default function BizForm({ action, label, name, url }: { action: (s: Form
   return <form action={act} className="space-y-4">
     <div><label className="label">Business name <span className="font-normal text-red-600">(required)</span></label><input className="input" name="business_name" defaultValue={name ?? ""} placeholder="Acme Co." required /></div>
     <div><label className="label">Google review link <span className="font-normal text-red-600">(required)</span></label><input className="input" name="review_url" type="url" defaultValue={url ?? ""} placeholder="https://g.page/r/XXXX/review" required />
-      <p className="mt-1 text-xs text-slate-500">Open your business on Google Maps, tap <b>Share</b>, and paste the link here. Required: no asks can send until it&apos;s saved. <a href="/tools/review-link" target="_blank" className="underline underline-offset-2">Find my link</a></p></div>
+      <p className="mt-1 text-xs text-slate-500">Open your business on Google Maps, tap <b>Share</b>, and paste the link here. Required: no review requests can send until it&apos;s saved. <a href="/tools/review-link" target="_blank" className="underline underline-offset-2">Find my link</a></p></div>
     {state?.error && <p className="text-sm text-red-600">{state.error}</p>}
     {state?.ok && <p className="text-sm text-green-700">{state.ok}</p>}
     <Submit label={label} />

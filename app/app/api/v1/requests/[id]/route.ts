@@ -19,7 +19,7 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
   const u = requireApiUser(req); if (u instanceof NextResponse) return u;
   const id = Number(params.id); if (!id) return jsonError("Not found.", 404);
   const row = getRequest(u.id, id); if (!row) return jsonError("Not found.", 404);
-  if (row.status !== "scheduled") return jsonError("Only scheduled asks can be edited.", 409);
+  if (row.status !== "scheduled") return jsonError("Only scheduled requests can be edited.", 409);
   const b = await readJson(req);
   const merged = normalize({
     name: b.name ?? row.customer_name,

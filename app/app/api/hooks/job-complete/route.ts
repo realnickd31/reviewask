@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   if (u.zapier_disconnected_at) return NextResponse.json({ error: "Zapier is disconnected in ReviewAsk Settings. Reconnect it there to resume." }, { status: 403 });
   if (markZapierConnected(u.id).changes) u = getUserByToken(token)!; // first real hook turns Zapier on
   // Master "Ask after every job" switch is off: accept but don't send.
-  if (!u.auto_enabled) return NextResponse.json({ ok: true, skipped: "Automatic asks are turned off." });
+  if (!u.auto_enabled) return NextResponse.json({ ok: true, skipped: "Automatic review requests are turned off." });
   const ct = req.headers.get("content-type") || "";
   let b: Record<string, unknown> = {};
   if (ct.includes("application/json")) b = await req.json().catch(() => ({}));

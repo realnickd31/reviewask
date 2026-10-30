@@ -28,10 +28,10 @@ const connectors = ["Jobber", "Housecall Pro", "Square", "Stripe", "QuickBooks",
 const proof = [
   { t: "See every request", d: "Your dashboard shows each request as sent, reminded, or failed — no guessing." },
   { t: "One follow-up on day 3", d: "Customers who haven’t been reminded get one polite nudge with the same link. Then it stops." },
-  { t: "Same ask to every customer", d: "No filtering out unhappy customers, no incentives — in line with Google’s review policies." },
+  { t: "Same request to every customer", d: "No filtering out unhappy customers, no incentives — in line with Google’s review policies." },
 ];
 const principles = [
-  { t: "Every customer gets the same ask", d: "No review gating or filtering. Requests follow Google’s review policies." },
+  { t: "Every customer gets the same request", d: "No review gating or filtering. Requests follow Google’s review policies." },
   { t: "Sent from your business name", d: "Customers see your name and a clear link — no third-party branding in the way." },
   { t: "Your data stays yours", d: "We never sell customer contact details. Export or delete anytime." },
 ];

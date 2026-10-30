@@ -44,7 +44,7 @@ function readBiz(fd: FormData) {
   const name = String(fd.get("business_name") || "").trim();
   const url = String(fd.get("review_url") || "").trim();
   if (!name) return { error: "Business name is required." };
-  if (!url) return { error: "Your Google review link is required. Every ask sends customers there, so asks can't go out without it." };
+  if (!url) return { error: "Your Google review link is required. Every review request sends customers there, so nothing can go out without it." };
   if (!validUrl(url)) return { error: "Enter a full review link starting with https://" };
   return { name, url };
 }

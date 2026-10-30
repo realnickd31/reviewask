@@ -10,9 +10,9 @@ export default function SendDelaySetting({ initial, save }: { initial: number; s
     start(async () => { const r = await save(h); if (r.error) { setV(saved); setMsg(r.error); } else { setSaved(h); setMsg("Saved"); } });
   }
   return <div className="space-y-2">
-    <DelayPicker value={v} onChange={pick} disabled={pending} label="Wait before sending automatic asks" />
+    <DelayPicker value={v} onChange={pick} disabled={pending} label="Wait before sending automatic review requests" />
     <p className="text-sm text-slate-500" aria-live="polite">
-      {v === 0 ? "Asks go out the moment a job is marked complete." : <>Asks wait <b>{delayLabel(v)}</b> after a job is completed. Spot a bad job? Hit <b>Don&apos;t ask</b> on your dashboard before it sends.</>}
+      {v === 0 ? "Review requests go out the moment your tool marks a customer done." : <>Review requests wait <b>{delayLabel(v)}</b> after your tool marks a customer done. Something went wrong? Hit <b>Don&apos;t ask</b> on your dashboard before it sends.</>}
       {msg && <span className={`ml-2 font-medium ${msg === "Saved" ? "text-lime-700" : "text-red-600"}`}>{pending ? "Saving…" : msg === "Saved" ? "✓ Saved" : msg}</span>}
     </p>
   </div>;
