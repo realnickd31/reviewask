@@ -43,14 +43,14 @@ ${ctaBlock(url)}
 export function buildReviewSms(business: string, customer: string, url: string) {
   const first = customer.split(" ")[0];
   const dot = business.trim().endsWith(".") ? "" : ".";
-  return `Hi ${first} — thanks again for choosing ${business}${dot} If you're happy with the work, a quick Google review would mean a lot: ${url}`;
+  return `Hi ${first} - thanks again for choosing ${business}${dot} If we did a good job, a quick Google review would mean a lot: ${url}`;
 }
 
 /** Day-3 reminder SMS body (STOP line is appended by sendSms). */
 export function buildReminderSms(business: string, customer: string, url: string) {
   const first = customer.split(" ")[0];
   const dot = business.trim().endsWith(".") ? "" : ".";
-  return `Hi ${first} — still grateful for your business with ${business}${dot} If you have a minute and you're happy, a Google review would mean a lot: ${url}`;
+  return `Hi ${first} - still grateful for your business with ${business}${dot} If we did a good job and you have a minute, a Google review would mean a lot: ${url}`;
 }
 
 function appendOutbox(entry: object) {
