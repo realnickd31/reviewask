@@ -15,6 +15,7 @@ export default function ApiAccessCard({
   initialToken, callbackUrl, secretSet,
 }: { initialToken: string | null; callbackUrl: string | null; secretSet: boolean }) {
   const [token, setToken] = useState(initialToken);
+  const [reveal, setReveal] = useState(false);
   const [url, setUrl] = useState(callbackUrl || "");
   const [savedUrl, setSavedUrl] = useState(callbackUrl);
   const [secret, setSecret] = useState<string | null>(null);
@@ -101,7 +102,8 @@ export default function ApiAccessCard({
         <p className="mt-2 text-xs text-slate-500">For developers: send it as <code>Authorization: Bearer ra_…</code> or <code>X-Api-Token</code>.</p>
         {token ? (
           <div className="mt-3 flex gap-2">
-            <code className="input flex-1 overflow-x-auto whitespace-nowrap font-mono text-xs">{token}</code>
+            <code className="input flex-1 overflow-x-auto whitespace-nowrap font-mono text-xs">{reveal ? token : `${token.slice(0, 6)}${"•".repeat(20)}${token.slice(-4)}`}</code>
+            <button type="button" className="btn-outline min-h-[40px]" onClick={() => setReveal(!reveal)}>{reveal ? "Hide" : "Reveal"}</button>
             <Copy text={token} />
           </div>
         ) : (

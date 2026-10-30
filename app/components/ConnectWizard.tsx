@@ -55,7 +55,9 @@ export default function ConnectWizard({ initial, url, business, onConnected, onF
 
   const steps = ["Copy key", "Open Zapier", "Copy & paste", "Test"];
   return <div className="space-y-5">
-    <ol className="grid grid-cols-4 gap-2 text-xs">{steps.map((s, i) =>
+    <div className="flex items-center justify-between gap-3 sm:hidden"><p className="text-sm font-semibold text-navy-900">Step {step} of 4 · {steps[step - 1]}</p>
+      <div className="flex gap-1" aria-hidden="true">{steps.map((s, i) => <span key={s} className={`h-2 w-6 rounded-full ${step >= i + 1 ? "bg-navy-900" : "bg-slate-200"}`} />)}</div></div>
+    <ol className="hidden grid-cols-4 gap-2 text-xs sm:grid">{steps.map((s, i) =>
       <li key={s}><button type="button" onClick={() => (i === 0 || token) && setStep(i + 1)} className={`w-full rounded-md border px-2 py-2 text-left ${step === i + 1 ? "border-navy-900 bg-navy-900 text-white" : step > i + 1 ? "border-slate-200 bg-slate-50 text-navy-900" : "border-slate-200 text-slate-500"}`}>
         <span className="block font-semibold">Step {i + 1}</span>{s}</button></li>)}</ol>
 

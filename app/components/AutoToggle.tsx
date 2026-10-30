@@ -66,11 +66,14 @@ export default function AutoToggle(p: Props) {
     <button type="button" className="btn-navy" disabled={busy} onClick={() => request(svc)}>{busy ? "Sending…" : "Request connect"}</button>
   </div>;
   const requestedNote = (name: string) => <p className="text-sm font-medium text-amber-700">● Setup requested — we’ll email you when {name} is on.</p>;
-  const card = (title: string, body: React.ReactNode, status?: boolean) => <div className={`rounded-lg border bg-white p-4 ${status ? "border-green-300" : "border-slate-200"}`}>
+  const card = (title: string, body: React.ReactNode, status?: boolean) => status === false
+    ? <details className="group rounded-lg border border-slate-200 bg-white">
+        <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-2 px-4 py-3"><span className="text-base font-semibold text-navy-900">{title}</span>
+          <span className="flex shrink-0 items-center gap-2 text-xs font-semibold text-slate-600"><span className="rounded-full bg-slate-100 px-2.5 py-0.5">○ Not connected</span><span aria-hidden="true" className="transition group-open:rotate-180">▾</span></span></summary>
+        <div className="border-t border-slate-100 p-4">{body}</div></details>
+    : <div className={`rounded-lg border bg-white p-4 ${status ? "border-green-300" : "border-slate-200"}`}>
     <div className="mb-2 flex items-center justify-between gap-2"><p className="text-base font-semibold text-navy-900">{title}</p>
-      {status !== undefined && (status
-        ? <span className="shrink-0 whitespace-nowrap rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-800">{on ? "● Connected" : "● Connected · paused"}</span>
-        : <span className="shrink-0 whitespace-nowrap rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold text-slate-600">○ Not connected</span>)}</div>{body}</div>;
+      {status && <span className="shrink-0 whitespace-nowrap rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-800">{on ? "● Connected" : "● Connected · paused"}</span>}</div>{body}</div>;
   const offBtn = "rounded-md border border-red-300 bg-white px-4 py-2 text-sm font-semibold text-red-700 hover:bg-red-50";
 
   const jobber = connected
@@ -84,6 +87,7 @@ export default function AutoToggle(p: Props) {
     : <button type="button" className="btn-navy" onClick={() => { setOpen("jobber"); setErr(""); }}>Connect Jobber</button>;
   const hcSteps = hc === "key" ? <div className="mt-3 space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
       <p className="text-sm font-semibold text-navy-900">Step 1 of 2 — Your connection key</p>
+      <p className="text-xs text-slate-600">Housecall Pro only offers API keys on its MAX plan.</p>
       <ol className="list-decimal space-y-1 pl-5 text-sm text-navy-900">
         <li>In Housecall Pro, open <b>My Apps</b> → <b>App Store</b> → <b>API Key Management</b>.</li>
         <li>Tap <b>Generate</b> (Read-only is fine) and copy the key.</li>
@@ -115,7 +119,6 @@ export default function AutoToggle(p: Props) {
     : hc !== "none" ? <div>{hcSteps}<div className="mt-2 flex gap-4">{hc === "link" && <button type="button" className="btn-ghost" onClick={hcDisconnect}>Start over</button>}</div></div>
     : <div className="space-y-2">
         <button type="button" className="btn-navy" onClick={() => { setHc("key"); setHcErr(""); }}>Connect Housecall Pro</button>
-        <p className="text-xs text-slate-500">Needs the Housecall Pro MAX plan.</p>
         {reqFor === "housecall" ? requestedNote("Housecall Pro") : open === "housecall" ? requestPanel("housecall", "Housecall Pro") : null}
       </div>;
 
@@ -133,7 +136,7 @@ export default function AutoToggle(p: Props) {
   const qbDisconnect = async () => { if (!confirm("Disconnect QuickBooks? We’ll stop asking for reviews from QuickBooks until you connect again.")) return; if (await disc("/api/quickbooks/disconnect", "QuickBooks")) setQb(false); };
   const qboCard = qb
     ? <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="font-semibold text-green-800">● Connected · Asking when an invoice is paid</p>
+        <p className="font-semibold text-green-800">● Connected · Sends a review ask when an invoice is paid</p>
         <button type="button" className={offBtn} onClick={qbDisconnect}>Turn off &amp; disconnect</button>
       </div>
     : p.qboReady ? <a href="/api/quickbooks/connect" className="btn-navy inline-block">Connect QuickBooks</a>
@@ -191,7 +194,7 @@ export default function AutoToggle(p: Props) {
       {p.squareFlash === "error" && <p className="text-sm text-red-700">Square didn’t finish connecting. Please try again.</p>}
       {p.qboFlash === "error" && <p className="text-sm text-red-700">QuickBooks didn’t finish connecting. Please try again.</p>}
       {p.stripeFlash === "error" && <p className="text-sm text-red-700">Stripe didn’t finish connecting. Please try again.</p>}
-      <p className="text-sm font-medium text-slate-600">Connect any tools you already use — you can connect more than one.</p>
+      <p className="text-sm font-medium text-slate-600">Connect any tools you already use — you can connect more than one. Tap a tool to set it up.</p>
       <div className="space-y-3">
         {card("Jobber", jobber, connected)}
         {card("Housecall Pro", housecall, hc === "done")}

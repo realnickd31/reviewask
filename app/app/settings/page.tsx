@@ -44,6 +44,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
       <section className="card"><h3 className="mb-4 text-base font-semibold text-navy-900">Business</h3><BizForm action={saveSettings} label="Save changes" name={u.business_name} url={u.review_url} /></section>
       <section className="card flex flex-wrap items-center justify-between gap-3"><div className="min-w-0"><h3 className="text-base font-semibold text-navy-900">Login email</h3><p className="break-all text-sm text-slate-600">{u.email}</p></div>
         <a href="#billing" className="text-sm font-medium text-navy-900 underline underline-offset-4">{plan.label}</a></section>
+      <form action="/api/auth/logout" method="post" className="sm:hidden"><button type="submit" className="btn-outline min-h-[44px] w-full">Log out</button></form>
     </Group>
 
       </> },
@@ -67,18 +68,18 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
     <Group id="api" title="API & webhooks" sub="Optional. For a developer or tools like Zapier and Make. You can skip this if a connector above covers you.">
       <section className="card"><p className="mb-4 text-sm text-slate-600">Base URL <code className="break-all rounded bg-slate-100 px-1.5 py-0.5 text-xs">{apiBase}</code></p>
         <ApiAccessCard initialToken={u.api_token} callbackUrl={(u as { callback_url?: string | null }).callback_url || null} secretSet={!!(u as { callback_secret?: string | null }).callback_secret} />
-        <p className="mt-5 border-t border-slate-100 pt-4 text-xs text-slate-500">Incoming webhook: Zapier, Make, or any tool can POST to <code className="break-all">{hookUrl}</code>.</p></section>
+        <p className="mt-5 border-t border-slate-100 pt-4 text-sm text-slate-600">Incoming webhook: Zapier, Make, or any tool can POST to <code className="break-all">{hookUrl}</code>.</p></section>
     </Group>
 
       </> },
       { id: "billing", label: "Billing", node: <>
-    <Group id="billing" title="Billing" sub="Your plan, card, and invoices.">
+    <Group id="billing" title="Billing" sub="Your plan and card.">
       {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="settings" trialEnd={trialEnd} status={searchParams.subscribed} />}
       <section className="card"><div className="flex flex-wrap items-center gap-3"><span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${plan.cls}`}>{plan.label}</span><span className="text-sm text-slate-700">Starter · $39/month · 200 requests/month</span></div>
         <p className="mt-3 text-sm text-slate-700">{plan.note}{isActive(u) ? " Update your card, switch plans, or cancel below." : ""}</p>
         {searchParams.billing === "card_saved" && <p className="mt-3 text-sm text-lime-700">Card saved. Your billing is reconnected — no new trial was started.</p>}
         {searchParams.portal && <p className="mt-3 text-sm text-amber-700">We couldn’t open the billing portal. If you haven’t started your trial yet, start it first; otherwise try again or contact support.</p>}
-        <div className="mt-4 flex flex-wrap items-center gap-2">{needsPayment(u) ? <><form action="/api/stripe/portal?view=payment_methods&from=settings" method="post" className="w-full sm:w-auto"><button className="btn-navy w-full sm:w-auto">Update payment method</button></form><form action="/api/stripe/portal" method="post"><button className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Manage billing</button></form></> : u.subscription_status === "canceled" ? <a href="/onboarding?step=pay&billing=reconnect" className="btn-navy">Resubscribe</a> : !isActive(u) ? <a href="/onboarding?step=pay" className="btn-lime">Start free trial</a> : <><form action="/api/stripe/portal" method="post"><button className="btn-navy">Manage billing</button></form><form action="/api/stripe/portal?view=payment_methods&from=settings" method="post"><button className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Payment methods</button></form></>}</div></section>
+        <div className="mt-4 flex flex-wrap items-center gap-2">{needsPayment(u) ? <><form action="/api/stripe/portal?view=payment_methods&from=settings" method="post" className="w-full sm:w-auto"><button className="btn-navy w-full sm:w-auto">Update payment method</button></form><form action="/api/stripe/portal" method="post"><button className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Manage billing</button></form></> : u.subscription_status === "canceled" ? <a href="/onboarding?step=pay&billing=reconnect" className="btn-navy">Resubscribe</a> : !isActive(u) ? <a href="/onboarding?step=pay" className="btn-lime">Start free trial</a> : <><form action="/api/stripe/portal" method="post"><button className="btn-navy">Manage billing</button></form><form action="/api/stripe/portal?view=payment_methods&from=settings" method="post"><button className="min-h-[40px] rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Payment methods</button></form></>}</div></section>
     </Group>
       </> },
     ]} />
@@ -87,7 +88,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
 
 function Group({ id, title, sub, children }: { id: string; title: string; sub: string; children: React.ReactNode }) {
   return <section id={id} className="scroll-mt-16 pt-8" aria-labelledby={`${id}-h`}>
-    <div className="mb-4"><h2 id={`${id}-h`} className="text-lg font-bold tracking-tight text-navy-900">{title}</h2><p className="mt-0.5 text-sm text-slate-600">{sub}</p></div>
+    <div className="mb-4"><h2 id={`${id}-h`} className="text-lg font-bold tracking-tight text-navy-900">{title}</h2><p className="mt-0.5 text-sm text-slate-700">{sub}</p></div>
     <div className="space-y-4">{children}</div></section>;
 }
 

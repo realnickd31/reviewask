@@ -40,6 +40,7 @@ if (!g._db) {
   // Safe additive migrations for existing databases.
   const addCol = (t: string, c: string) => { try { db.exec(`ALTER TABLE ${t} ADD COLUMN ${c}`); } catch { /* exists */ } };
   addCol("review_requests", "remind_at TEXT");
+  addCol("review_requests", "fail_reason TEXT");
   addCol("review_requests", "reminded_at TEXT");
   addCol("review_requests", "source TEXT NOT NULL DEFAULT 'manual'");
   addCol("users", "api_token TEXT");
@@ -155,7 +156,7 @@ export type User = {
 export type ReviewRequest = {
   id: number; user_id: number; customer_name: string; customer_email: string | null; customer_phone: string | null;
   channel: string; status: string; provider_id: string | null; created_at: string;
-  remind_at: string | null; reminded_at: string | null; send_at: string | null; followup_cancelled_at?: string | null; source: string; unsubscribe_token: string | null;
+  remind_at: string | null; reminded_at: string | null; send_at: string | null; followup_cancelled_at?: string | null; fail_reason?: string | null; source: string; unsubscribe_token: string | null;
 };
 
 export const MONTHLY_QUOTA = 200;

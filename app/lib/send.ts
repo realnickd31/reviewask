@@ -68,18 +68,18 @@ async function deliver(u: User, id: number, i: { name: string; email: string; ph
   const biz = u.business_name!;
   if (!token) { token = crypto.randomBytes(24).toString("base64url"); db.prepare("UPDATE review_requests SET unsubscribe_token=? WHERE id=?").run(token, id); }
   const url = u.review_url!;
-  const channels: string[] = []; let status = "sent"; let providerId: string | null = null; let mode = ""; let smsMode = "";
+  const channels: string[] = []; let status = "sent"; let providerId: string | null = null; let mode = ""; let smsMode = ""; let reason: string | null = null;
   const suppressed = !!i.email && isSuppressed(i.email);
   try {
     if (i.email && !suppressed) { const r = await sendEmail(i.email, buildReviewEmail(biz, i.name, url, unsubscribeUrl(token))); providerId = r.id; mode = r.mode; channels.push("email"); }
     if (i.phone) { const r = await sendSms(i.phone, buildReviewSms(biz, i.name, url)); smsMode = r.mode; mode ||= r.mode; channels.push("sms"); }
-  } catch (e) { status = "failed"; console.error("send failed", e); }
+  } catch (e) { status = "failed"; reason = failReason(e, i); console.error("send failed", e); }
   // Fallback: if the SMS provider is unavailable in production, a phone-only ask isn't delivered, so mark it queued instead of sent.
   if (status === "sent" && smsMode === "outbox" && !channels.includes("email") && process.env.RESEND_API_KEY) { status = "queued"; mode = "sms_pending"; }
   if (suppressed && !i.phone && status === "sent") status = "suppressed";
   db.prepare(`UPDATE review_requests SET status=?, provider_id=?, channel=?, created_at=datetime('now'),
-    remind_at=${status === "sent" ? "datetime('now','+3 days')" : "NULL"} WHERE id=?`)
-    .run(status, providerId, channels.join("+") || (i.email ? "email" : "sms"), id);
+    fail_reason=?, remind_at=${status === "sent" ? "datetime('now','+3 days')" : "NULL"} WHERE id=?`)
+    .run(status, providerId, channels.join("+") || (i.email ? "email" : "sms"), reason, id);
   return { status, mode };
 }
 
@@ -135,9 +135,19 @@ export async function processDueReminders(userId?: number, limit = 200) {
       sent++;
     } catch (e) {
       console.error("reminder failed", e);
-      db.prepare("UPDATE review_requests SET reminded_at = NULL, remind_at = NULL, status = 'failed' WHERE id=?").run(r.id);
+      db.prepare("UPDATE review_requests SET reminded_at = NULL, remind_at = NULL, status = 'failed', fail_reason = ? WHERE id=?").run("Follow-up didn’t send: " + failReason(e, { email: r.customer_email || "", phone: r.customer_phone || "" }), r.id);
       failed++;
     }
   }
   return { due: rows.length, sent, failed, skipped };
+}
+
+/** Short, customer-safe reason for a failed send, shown on the activity row. */
+export function failReason(e: unknown, i: { email?: string; phone?: string }) {
+  const m = String((e as { message?: string })?.message || e || "").toLowerCase();
+  if (/unsubscrib|opt.?out|stop|21610/.test(m)) return "Opted out of texts";
+  if (/invalid.*(phone|number|to)|not a valid|21211|21614|landline|unreachable/.test(m)) return "Phone number can’t receive texts";
+  if (/invalid.*email|bounce|recipient|mailbox/.test(m)) return "Email address rejected";
+  if (!i.email && !i.phone) return "No email or phone number";
+  return i.phone && !i.email ? "Text didn’t go through" : "Email didn’t go through";
 }

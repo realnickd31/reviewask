@@ -19,7 +19,7 @@ export default function TrialSubscribe({ trialEnd, from, status }: { trialEnd?: 
       </div>
       <div className="flex shrink-0 flex-col items-stretch gap-2 sm:items-end">
         <SubscribeConfirm from={from} end={end} />
-        <form action={`/api/stripe/portal?view=payment_methods&from=${from}`} method="post"><button className="text-xs text-slate-300 underline underline-offset-4 hover:text-white">Use a different card</button></form>
+        <form action={`/api/stripe/portal?view=payment_methods&from=${from}`} method="post"><button className="inline-flex min-h-[40px] items-center px-1 text-sm text-white underline underline-offset-4 hover:text-lime-200">Use a different card</button></form>
       </div>
     </div>
   </div>;

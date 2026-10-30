@@ -25,8 +25,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   if (isAdminUser(u)) redirect("/admin");
   if (!u.business_name || !u.review_url) redirect("/onboarding");
   const anyToolConnected = hasConnectedTool(u);
-  const provName = u.auto_provider === "housecall" ? "Housecall Pro" : "Jobber";
-  const autoLink = !u.auto_enabled ? "Turn on automatic asks: One switch. Every customer gets asked." : u.jobber_connected ? (u.auto_provider === "housecall" && u.auto_setup_requested_at ? "On · Jobber (Housecall Pro requested): Asking every customer automatically." : "On · Jobber: Asking every customer automatically.") : u.auto_setup_requested_at ? `Setup requested: We’re connecting ${provName} for you.` : "Automate this in Settings";
+  const autoLink = anyToolConnected ? "Automatic asks: On" : u.auto_setup_requested_at ? "Automatic asks: Setup requested" : !u.auto_enabled ? "Turn on automatic asks: One switch. Every customer gets asked." : "Automate this in Settings";
   // Sync right after Checkout so it works even before the webhook arrives.
   if (searchParams.session_id && stripe && !isActive(u)) {
     try {
@@ -115,7 +114,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <div className="min-w-0"><p className="font-semibold text-navy-900">{r.customer_name}</p><p className="truncate text-slate-500">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")}</p><p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-800 ring-1 ring-amber-100">Sends {fmt(r.send_at!)}</p></div>
         <form action={dontAsk} className="shrink-0"><input type="hidden" name="id" value={r.id} /><button className="min-h-[44px] w-full rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 sm:w-auto">Don&apos;t ask</button></form></li>)}</ul>}
     </section>}
-    <LiveRefresh /><section className="card px-4 sm:px-6" id="history"><div className="mb-4 flex flex-wrap items-baseline justify-between gap-3"><div><h2 className="text-lg font-semibold">Recent activity</h2><p className="mt-0.5 text-sm text-slate-500">Everyone you&apos;ve asked, how, and when. Tap “What they got” to see the exact message.</p></div><div className="flex items-baseline gap-3">{activityTotal > 0 && <p className="text-xs text-slate-500">{activityTotal} total · page {page} of {pageCount}</p>}<a href="/api/requests/export" download className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Download CSV</a></div></div>
+    <LiveRefresh /><section className="card px-4 sm:px-6" id="history"><div className="mb-4 flex flex-wrap items-baseline justify-between gap-3"><div><h2 className="text-lg font-semibold">Recent activity</h2><p className="mt-0.5 text-sm text-slate-500">Everyone you&apos;ve asked, how, and when. Tap “What they got” to see the exact message.</p></div><div className="flex items-baseline gap-3">{activityTotal > 0 && <p className="text-xs text-slate-500">{activityTotal} total · page {page} of {pageCount}</p>}<a href="/api/requests/export" download className="inline-flex min-h-[40px] items-center rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Download CSV</a></div></div>
       {activityTotal === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Ask a customer above, or connect the tools you already use. Every request and follow-up will show here with its status.</p></div> : <>
       {pageCount > 1 && pager("mb-4 border-b border-slate-100 pb-4")}
       <ul className="-mx-1 space-y-2.5 md:hidden">{rows.map((r) => { const ch = chip(r); const fu = followUp(r); return <li key={r.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -192,7 +191,7 @@ const fmt = (t: string, prefix = "") => <LocalTime t={t} prefix={prefix} />;
 function channel(r: ReviewRequest) { return channelLabel(r); }
 function source(r: ReviewRequest) { return sourceLabel(r); }
 function canCancel(r: ReviewRequest) { return !!r.remind_at && !r.reminded_at && r.status === "sent"; }
-function CancelFU({ id }: { id: number }) { return <form action={cancelFollowUp} className="mt-1"><input type="hidden" name="id" value={id} /><button className="rounded-md border border-slate-300 px-2.5 py-1 text-xs font-semibold text-slate-700 hover:bg-slate-50">Cancel follow-up</button></form>; }
+function CancelFU({ id }: { id: number }) { return <form action={cancelFollowUp} className="mt-1"><input type="hidden" name="id" value={id} /><button className="min-h-[40px] rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50">Cancel follow-up</button></form>; }
 function followUp(r: ReviewRequest) { return r.followup_cancelled_at ? "Cancelled" : r.reminded_at ? fmt(r.reminded_at) : r.remind_at && r.status === "sent" ? fmt(r.remind_at, "Due ") : "—"; }
 function queuedTip(r: ReviewRequest) { return r.status === "queued" ? "Saved, not sent yet. Add an email to send now." : undefined; }
 function chip(r: ReviewRequest) {
