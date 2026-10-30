@@ -16,8 +16,9 @@ export default function ConnectWizard({ initial, url, business, onConnected, onF
   const [last, setLast] = useState<Last>(null);
   const baseline = useRef<string | null | undefined>(undefined);
 
+  const [ask, setAsk] = useState(false);
   async function regen() {
-    if (!confirm("Make a new API key? The old key stops working right away — anywhere using it (an existing Zap, other apps) needs the new one.")) return;
+    setAsk(false);
     setBusy(true);
     const r = await fetch("/api/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rotate: true }) }); const j = await r.json(); setBusy(false);
     if (r.ok) { setToken(j.token); setStep(2); onConnected?.(); }
@@ -62,7 +63,9 @@ export default function ConnectWizard({ initial, url, business, onConnected, onF
       {step === 1 && <div className="space-y-3"><p className="text-lg font-semibold">Copy your API key</p>
         <p className="text-sm text-slate-600">This is like a password that lets Zapier talk to ReviewAsk. It&apos;s the same key shown under API in Settings.</p>
         <button type="button" className="btn-navy w-full py-4 text-base" onClick={copyKey} disabled={busy}>{busy ? "Working…" : copied ? "Copied ✓ — next" : "Copy my API key"}</button>
-        <button type="button" className="text-sm text-slate-500 underline" onClick={regen} disabled={busy}>Make a new key instead</button></div>}
+        <button type="button" className="text-sm text-slate-500 underline" onClick={() => setAsk(true)} disabled={busy}>Make a new key instead</button>
+          {ask && <div className="mt-3 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-left text-sm text-amber-900"><p>The old key stops working right away — anywhere using it (an existing Zap, other apps) needs the new one.</p>
+            <div className="mt-2 flex gap-2"><button type="button" className="btn-navy px-3 py-1.5 text-xs" onClick={regen}>Yes, make a new key</button><button type="button" className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-xs font-semibold text-navy-900 hover:bg-slate-50" onClick={() => setAsk(false)}>Cancel</button></div></div>}</div>}
 
       {step === 2 && <div className="space-y-3"><p className="text-lg font-semibold">Open Zapier</p>
         <p className="text-sm text-slate-600">You&apos;ll sign in or make a free account. Keep this page open.</p>
@@ -76,7 +79,7 @@ export default function ConnectWizard({ initial, url, business, onConnected, onF
       {step === 4 && <div className="space-y-3"><p className="text-lg font-semibold">Test the connection</p>
         <p className="text-sm text-slate-600">Mark a test invoice paid (or job completed) in your app, or use <b>Test step</b> in Zapier. We show “Connected” only when that real request reaches ReviewAsk.</p>
         {last ? <p className="rounded-md bg-lime-50 p-3 text-sm font-medium text-lime-800">Connected — we just got “{last.customer_name}” through Zapier. You&apos;re done.</p>
-          : <p className="text-sm text-slate-500">Waiting for your first customer from Zapier… (checks every 5 seconds)</p>}
+          : <p className="text-sm text-slate-500">Waiting for your first customer from Zapier…</p>}
         <button type="button" className="btn-navy w-full py-4 text-base" onClick={sendTest} disabled={busy}>{busy ? "Sending…" : "Email me a preview of the message"}</button>
         {test && <p className={`text-sm ${test.t === "ok" ? "text-green-700" : "text-red-600"}`}>{test.m}</p>}
         <p className="text-xs text-slate-500">The preview goes to your login email and counts as one request this month.</p></div>}
