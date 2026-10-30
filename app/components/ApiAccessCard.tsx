@@ -25,8 +25,8 @@ export default function ApiAccessCard({
 
   async function rotateKey() {
     const warn = token
-      ? "Make a new API key? This is the same key Zapier uses — your Zap will stop until you paste the new key. This does not change automatic asks."
-      : "Create an API key? This is the same key Zapier uses. This does not turn on automatic asks.";
+      ? "Make a new API key? The old key stops working right away. If you use Zapier or any other app with this key, paste the new one there. Your automatic asks settings won’t change."
+      : "Create your API key? Your automatic asks settings won’t change.";
     if (!confirm(warn)) return;
     setBusy("key"); setErr(null); setMsg(null);
     const r = await fetch("/api/v1/keys", { method: "POST" });
@@ -38,7 +38,7 @@ export default function ApiAccessCard({
   }
 
   async function clearKey() {
-    if (!confirm("Remove your API key? Zapier and any API clients will stop working until you create a new one.")) return;
+    if (!confirm("Remove your API key? Anything using it (Zapier, other apps) stops working. A new key is created the next time you open Settings.")) return;
     setBusy("clearKey"); setErr(null); setMsg(null);
     const r = await fetch("/api/v1/keys", { method: "DELETE" });
     setBusy(null);
@@ -80,10 +80,15 @@ export default function ApiAccessCard({
 
       <div>
         <h3 className="font-semibold text-navy-900">API key</h3>
-        <p className="mt-1 text-slate-600">Send as <code className="text-xs">Authorization: Bearer ra_…</code> or <code className="text-xs">X-Api-Token</code>.</p>
-        <p className="mt-2 rounded-md bg-amber-50 px-3 py-2 text-amber-900 ring-1 ring-amber-100">
-          Same key as Zapier. Rotating it breaks an existing Zap until you update it. Disconnecting Zapier clears this key too. Creating a key here does <b>not</b> turn on automatic asks.
+        <p className="mt-1 text-slate-600">
+          Your account has one private key. It lets other apps — Zapier, or anything a developer builds — send review asks for you. Keep it secret, like a password.
         </p>
+        <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-600">
+          <li>The same key works for the API and for Zapier. You don’t need Zapier to have one.</li>
+          <li>Make a new key any time. The old one stops working right away, so paste the new key anywhere you used the old one.</li>
+          <li>Disconnecting Zapier does <b>not</b> change or remove this key.</li>
+        </ul>
+        <p className="mt-2 text-xs text-slate-500">For developers: send it as <code>Authorization: Bearer ra_…</code> or <code>X-Api-Token</code>.</p>
         {token ? (
           <div className="mt-3 flex gap-2">
             <code className="input flex-1 overflow-x-auto whitespace-nowrap font-mono text-xs">{token}</code>

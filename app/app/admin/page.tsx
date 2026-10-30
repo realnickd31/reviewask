@@ -154,7 +154,7 @@ export default async function AdminPage({
     SUM(square_connected) square,
     SUM(stripe_connect_connected) stripe_connect,
     SUM(qbo_connected) qbo,
-    SUM(CASE WHEN api_token IS NOT NULL AND length(api_token)>0 THEN 1 ELSE 0 END) zapier
+    SUM(CASE WHEN auto_provider='zapier' THEN 1 ELSE 0 END) zapier
     FROM users WHERE ${UX}`).get() as Record<string, number>;
 
   const recentUsers = db.prepare(

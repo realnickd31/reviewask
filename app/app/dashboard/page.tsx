@@ -56,14 +56,11 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   const dayRows = db.prepare("SELECT date(created_at) d, COUNT(*) n FROM review_requests WHERE user_id=? AND status IN ('sent','queued') AND created_at >= date('now','-13 days') GROUP BY d").all(u.id) as { d: string; n: number }[];
   const days = Array.from({ length: 14 }, (_, i) => { const t = new Date(Date.now() - (13 - i) * 864e5); const k = t.toISOString().slice(0, 10); return { label: t.toLocaleDateString("en-US", { month: "numeric", day: "numeric", timeZone: "UTC" }), n: dayRows.find((x) => x.d === k)?.n ?? 0 }; });
   const pct = Math.min(100, (used / MONTHLY_QUOTA) * 100);
-  return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-6 px-4 py-6 sm:py-8">
+  return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-5 px-4 py-6 sm:py-8">
     {searchParams.dev_unlocked && <p className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">Dev mode: Stripe isn&apos;t configured, so your account was unlocked as a trial.</p>}
     {!active && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>
       <Link href="/onboarding?step=pay" className="btn-lime">Start free trial</Link></div>}
-    <ReviewGrowth p={progress} sent={sinceAsks?.sent || 0} />
-    {hasActivity && <AsksBars days={days} />}
-    {active && hasActivity && <NextAction u={u} recentWeek={Number(stats.week ?? 0)} remaining={remaining} />}
     {active && !hasActivity && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
       <p className="mt-1 text-sm text-slate-500">Requests go out by text or email.</p>
       <ol className="mt-4 space-y-3 text-sm">
@@ -71,6 +68,9 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first using the form below to see what customers get.</p></div></li>
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Have a list? Open “Send to many customers at once” below.</p></div></li>
       </ol></section>}
+    <ReviewGrowth p={progress} sent={sinceAsks?.sent || 0} />
+    {active && hasActivity && <NextAction u={u} recentWeek={Number(stats.week ?? 0)} remaining={remaining} />}
+    {hasActivity && <AsksBars days={days} />}
     <section aria-label="This month" className="space-y-2">
       <div className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-4">
       {[["Asked this week", stats.week ?? 0, "last 7 days"], ["Asked this month", used, `${pct.toFixed(0)}% of your monthly plan`], ["Follow-ups sent", stats.reminded ?? 0, `${stats.pending ?? 0} more scheduled`], ["Asks left", remaining, `of ${MONTHLY_QUOTA} this month · ${u.subscription_status === "active" ? "Active" : u.subscription_status === "trialing" ? "Trial" : "Not active"}`]].map(([l, v, sub]) =>
@@ -85,13 +85,13 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-navy-900">Have a list? Send to many customers at once</summary>
         <p className="mb-5 mt-1 text-sm text-slate-500">Copy customer rows from Excel or Google Sheets and paste — no exporting. <a href="/sample-customers.csv" download className="font-medium text-navy-900 underline underline-offset-4">Download sample spreadsheet</a></p>
         <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} accountDelay={accountDelayHours(u)} /></details>
-    <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
+    {scheduled.length === 0 ? <p id="scheduled" className="px-1 text-sm text-slate-500">No asks waiting to send.</p> : <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
       <p className="mb-4 mt-1 text-sm text-slate-500">{accountDelayHours(u) > 0 ? <>Automatic asks from your connected tools wait {delayLabel(accountDelayHours(u))} before sending, so you can stop one if something went wrong.</> : <>Automatic asks from your connected tools send right away.</>} Typed-in and spreadsheet asks you schedule show here too. Every customer still gets asked unless you stop it. <Link href="/settings#timing" className="underline underline-offset-4">Change timing</Link></p>
       {scheduled.length === 0 ? <p className="text-sm text-slate-500">Nothing waiting to send.</p> :
       <ul className="divide-y divide-slate-100">{scheduled.map((r) => <li key={r.id} className="flex flex-col gap-3 py-3.5 text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <div className="min-w-0"><p className="font-semibold text-navy-900">{r.customer_name}</p><p className="truncate text-slate-500">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")}</p><p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-800 ring-1 ring-amber-100">Sends {fmt(r.send_at!)}</p></div>
         <form action={dontAsk} className="shrink-0"><input type="hidden" name="id" value={r.id} /><button className="min-h-[44px] w-full rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 sm:w-auto">Don&apos;t ask</button></form></li>)}</ul>}
-    </section>
+    </section>}
     <LiveRefresh /><section className="card px-4 sm:px-6" id="history"><div className="mb-4 flex flex-wrap items-baseline justify-between gap-3"><div><h2 className="text-lg font-semibold">Recent activity</h2><p className="mt-0.5 text-sm text-slate-500">Everyone you&apos;ve asked, how, and when. Tap “What they got” to see the exact message.</p></div><div className="flex items-baseline gap-3">{activityTotal > 0 && <p className="text-xs text-slate-500">{activityTotal} total · page {page} of {pageCount}</p>}<a href="/api/requests/export" download className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Download CSV</a></div></div>
       {activityTotal === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Ask a customer above, or connect the tools you already use. Every request and follow-up will show here with its status.</p></div> : <>
       <ul className="-mx-1 space-y-2.5 md:hidden">{rows.map((r) => { const ch = chip(r); const fu = followUp(r); return <li key={r.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -129,7 +129,7 @@ function ReviewGrowth({ p, sent }: { p: ReturnType<typeof reviewProgress>; sent:
       <div className="flex items-center gap-4 sm:gap-6">
         <div className="text-center"><p className="text-xs font-medium uppercase tracking-wider text-slate-500">When you started</p><p className="mt-1 text-3xl font-semibold text-slate-500">{before}</p><p className="text-xs text-slate-400">{r(p.first.rating)}★</p></div>
         <span className="text-2xl text-slate-300" aria-hidden>→</span>
-        <div className="text-center"><p className="text-xs font-medium uppercase tracking-wider text-slate-500">Now</p><p className="mt-1 text-3xl font-semibold text-navy-900">{now}</p><p className="text-xs text-slate-500">{r(p.latest.rating)}★</p></div>
+        <div className="text-center"><p className="text-xs font-medium uppercase tracking-wider text-slate-500">Now</p><p className="mt-1 text-5xl font-bold tracking-tight text-navy-900">{now}</p><p className="text-xs text-slate-500">{r(p.latest.rating)}★</p></div>
         <span className={`rounded-full px-3 py-1 text-sm font-semibold ${gained > 0 ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-slate-100 text-slate-500"}`}>{gained > 0 ? "+" : ""}{gained} new</span>
       </div></div>
     <ReviewLine points={p.history.map((h) => ({ t: h.created_at, n: h.review_count ?? 0 }))} />
@@ -138,10 +138,10 @@ function ReviewGrowth({ p, sent }: { p: ReturnType<typeof reviewProgress>; sent:
 
 function NextAction({ u, recentWeek, remaining }: { u: User; recentWeek: number; remaining: number }) {
   const a = remaining === 0 ? { t: "You've used this month's asks", d: "Your plan resets at the start of next month.", href: "/settings", cta: "See plan" }
-    : !u.jobber_connected && !u.auto_setup_requested_at ? { t: "Ask every customer without lifting a finger", d: "Connect Jobber or Housecall Pro once and each finished job gets a review ask automatically.", href: "/settings#automatic", cta: "Connect Jobber" }
+    : !u.jobber_connected && !u.auto_setup_requested_at ? { t: "Ask every customer without lifting a finger", d: "Connect Jobber or Housecall Pro once and each finished job gets a review ask automatically.", href: "/settings#automatic", cta: "Connect your tool" }
     : recentWeek === 0 ? { t: "No one asked this week", d: "Paste last month's customers from a spreadsheet — it takes a minute.", href: "#bulk", cta: "Import customers" }
     : { t: "Keep it going", d: "Just finished a job? Ask that customer while it's fresh.", href: "#quick", cta: "Ask a customer" };
-  return <section className="flex flex-col items-start justify-between gap-3 rounded-lg border border-lime-100 bg-lime-50/60 p-5 sm:flex-row sm:items-center">
+  return <section className="flex flex-col items-start justify-between gap-3 rounded-xl border border-lime-200 bg-lime-50 p-5 shadow-sm sm:flex-row sm:items-center">
     <div><p className="text-xs font-semibold uppercase tracking-wider text-lime-700">Next step</p><p className="mt-1 font-semibold text-navy-900">{a.t}</p><p className="text-sm text-slate-600">{a.d}</p></div>
     <Link href={a.href} className="btn-lime shrink-0">{a.cta}</Link></section>;
 }

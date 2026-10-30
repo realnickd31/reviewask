@@ -12,7 +12,7 @@ export default function ApiToken({ initial, url }: { initial: string | null; url
   async function regen() {
     if (token && !confirm("Make a new secret key? Connections using the old key will stop working until you paste the new one into Zapier.")) return;
     setBusy(true);
-    const r = await fetch("/api/token", { method: "POST" }); const j = await r.json(); setBusy(false);
+    const r = await fetch("/api/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rotate: !!token }) }); const j = await r.json(); setBusy(false);
     if (r.ok) setToken(j.token);
   }
   return <div className="space-y-4 text-sm">

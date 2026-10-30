@@ -8,7 +8,7 @@ type Props = { enabled: boolean; provider: string | null; jobberConnected: boole
   squareConnected?: boolean; squareReady?: boolean; squareFlash?: string;
   stripeConnected?: boolean; stripeReady?: boolean; stripeFlash?: string;
   qboConnected?: boolean; qboReady?: boolean; qboFlash?: string;
-  zapierToken?: string | null; zapierUrl?: string; business?: string;
+  zapierConnected?: boolean; zapierToken?: string | null; zapierUrl?: string; business?: string;
   setupEmail: string | null; setupRequested: boolean; quickUrl: string; flash?: string };
 
 export default function AutoToggle(p: Props) {
@@ -17,7 +17,7 @@ export default function AutoToggle(p: Props) {
   const [sq, setSq] = useState(!!p.squareConnected);
   const [st, setSt] = useState(!!p.stripeConnected);
   const [qb, setQb] = useState(!!p.qboConnected);
-  const [zap, setZap] = useState(!!p.zapierToken); const [zapOpen, setZapOpen] = useState(false);
+  const [zap, setZap] = useState(!!p.zapierConnected); const [zapOpen, setZapOpen] = useState(false);
   // Setup requests are tracked per service, so Jobber and Housecall Pro never hide each other.
   const [reqFor, setReqFor] = useState<string | null>(p.setupRequested ? p.provider : null);
   const [open, setOpen] = useState<string | null>(p.flash === "setup" ? (p.provider === "jobber" ? "jobber" : "housecall") : p.squareFlash === "setup" ? "square" : p.stripeFlash === "setup" ? "stripe" : p.qboFlash === "setup" ? "quickbooks" : null);
@@ -154,7 +154,7 @@ export default function AutoToggle(p: Props) {
     : <button type="button" className="btn-navy" onClick={() => { setOpen("stripe"); setErr(""); }}>Connect Stripe</button>;
 
   const zapDisconnect = async () => {
-    if (!confirm("Disconnect Zapier? Your Zap will stop working until you connect again.")) return;
+    if (!confirm("Disconnect Zapier? We’ll stop treating Zapier as your automatic source. Your API key stays the same — to fully cut off an old Zap, make a new key under API.")) return;
     if (await disc("/api/zapier/disconnect", "Zapier")) { setZap(false); setZapOpen(false); }
   };
   const zapWizard = <div className="mt-3"><ConnectWizard initial={zap ? p.zapierToken ?? null : null} url={p.zapierUrl || ""} business={p.business || "my business"} onConnected={() => { setZap(true); setOn(true); }} /></div>;

@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 // A pending Jobber Marketplace connect (parked by /api/jobber/callback) resumes right after login/signup.
 const jobberResume = () => cookies().get("jb_mkt_code") ? "/api/jobber/callback?resume=1" : null;
-import { db, getUserByEmail } from "@/lib/db";
+import { db, getUserByEmail, ensureApiToken } from "@/lib/db";
 import { getSession, requireUser } from "@/lib/session";
 import { trackServer } from "@/lib/analytics";
 import { isAdminEmail } from "@/lib/admin";
@@ -22,6 +22,7 @@ export async function signup(_: FormState, fd: FormData): Promise<FormState> {
   if (getUserByEmail(email)) return { error: "An account with that email already exists. Log in instead." };
   const r = db.prepare("INSERT INTO users (email, password_hash) VALUES (?, ?)").run(email, await bcrypt.hash(password, 10));
   const userId = Number(r.lastInsertRowid);
+  ensureApiToken(userId);
   const s = await getSession(); s.userId = userId; await s.save();
   trackServer({ event: "signup", user_id: userId, path: "/signup" });
   redirect(jobberResume() || "/onboarding");

@@ -19,7 +19,7 @@ export default function ConnectWizard({ initial, url, business, onConnected }: {
   async function regen() {
     if (token && !confirm("Make a new secret key? Your existing Zap will stop working until you paste the new key into it.")) return;
     setBusy(true);
-    const r = await fetch("/api/token", { method: "POST" }); const j = await r.json(); setBusy(false);
+    const r = await fetch("/api/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rotate: !!token }) }); const j = await r.json(); setBusy(false);
     if (r.ok) { setToken(j.token); setStep(2); onConnected?.(); }
   }
   async function sendTest() {

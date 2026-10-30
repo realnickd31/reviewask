@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import Database from "better-sqlite3";
 import fs from "fs";
 import path from "path";
@@ -161,6 +162,15 @@ export const isActive = (u: User) => u.subscription_status === "active" || u.sub
 export function usedThisMonth(userId: number) {
   const r = db.prepare("SELECT COUNT(*) c FROM review_requests WHERE user_id=? AND status != 'cancelled' AND created_at >= datetime('now','start of month')").get(userId) as { c: number };
   return r.c;
+}
+export const newApiToken = () => "ra_" + crypto.randomBytes(24).toString("hex");
+/** Every account has an API key. Mints one only if missing; never replaces an existing key. */
+export function ensureApiToken(userId: number): string {
+  const row = db.prepare("SELECT api_token FROM users WHERE id=?").get(userId) as { api_token: string | null } | undefined;
+  if (row?.api_token) return row.api_token;
+  const t = newApiToken();
+  db.prepare("UPDATE users SET api_token=? WHERE id=? AND (api_token IS NULL OR api_token='')").run(t, userId);
+  return (db.prepare("SELECT api_token FROM users WHERE id=?").get(userId) as { api_token: string }).api_token;
 }
 export const getUserByToken = (t: string) => db.prepare("SELECT * FROM users WHERE api_token=?").get(t) as User | undefined;
 
