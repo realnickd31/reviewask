@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
   }
   const session = await stripe.checkout.sessions.create({
     mode: "subscription", customer, line_items: [{ price, quantity: 1 }], client_reference_id: String(u.id),
-    subscription_data: { ...(reconnect ? {} : { trial_period_days: 7 }), metadata: { userId: String(u.id) } }, allow_promotion_codes: true,
+    subscription_data: { ...(reconnect || u.stripe_subscription_id || (u.subscription_status && u.subscription_status !== "none") ? {} : { trial_period_days: 7 }), metadata: { userId: String(u.id) } }, allow_promotion_codes: true,
     success_url: baseUrl(req.nextUrl.origin) + "/dashboard?session_id={CHECKOUT_SESSION_ID}", cancel_url: baseUrl(req.nextUrl.origin) + (reconnect ? "/onboarding?step=pay&billing=reconnect&canceled=1" : "/onboarding?step=pay&canceled=1"),
   });
   trackServer({ event: "checkout_started", user_id: u.id, path: "/onboarding", meta: { plan: String(plan || "monthly") } });

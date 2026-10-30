@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getUserByToken, isActive, type User } from "./db";
+import { getUserByToken, isActive, needsPayment, type User } from "./db";
 import { currentUser } from "./session";
 
 export function jsonError(error: string, status: number) {
@@ -16,7 +16,7 @@ export function requireApiUser(req: NextRequest): User | NextResponse {
   const token = readApiToken(req);
   const u = token ? getUserByToken(token) : undefined;
   if (!u) return jsonError("Invalid or missing API token.", 401);
-  if (!isActive(u)) return jsonError("Start your subscription to use the API.", 402);
+  if (!isActive(u)) return jsonError(inactiveMsg(u), 402);
   return u;
 }
 
@@ -25,7 +25,7 @@ export async function requireApiOrSession(req: NextRequest): Promise<User | Next
   if (token) return requireApiUser(req);
   const u = await currentUser();
   if (!u) return jsonError("Please log in or provide an API token.", 401);
-  if (!isActive(u)) return jsonError("Start your subscription to use the API.", 402);
+  if (!isActive(u)) return jsonError(inactiveMsg(u), 402);
   return u;
 }
 
@@ -50,3 +50,5 @@ export function requireSameOrigin(req: NextRequest): NextResponse | null {
   }
   return null;
 }
+
+function inactiveMsg(u: User) { return needsPayment(u) ? "Your last payment didn’t go through. Update your card in Settings → Billing to resume API access." : u.subscription_status === "canceled" ? "Your plan is canceled. Resubscribe in Settings → Billing to use the API." : "Start your free trial to use the API."; }

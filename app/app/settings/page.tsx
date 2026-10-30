@@ -8,7 +8,7 @@ import { squareConfigured } from "@/lib/square";
 import { qboConfigured } from "@/lib/quickbooks";
 import { stripeConnectConfigured } from "@/lib/stripe-connect";
 import { requireUser } from "@/lib/session";
-import { isActive } from "@/lib/db";
+import { isActive, needsPayment } from "@/lib/db";
 import { saveSettings, saveSendDelay } from "../actions";
 import ConnectorRequest from "@/components/ConnectorRequest";
 import SendDelaySetting from "@/components/SendDelaySetting";
@@ -27,7 +27,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
   const apiBase = `${base.replace(/\/$/, "")}/api/v1`;
   const trialEnd = await ensureTrialEnd(u);
   const plan = planBadge(u.subscription_status, trialEnd);
-  const trial = u.subscription_status === "trialing" || !isActive(u);
+  const trial = u.subscription_status === "trialing";
   const connected = !!(u.jobber_connected || u.housecall_connected || u.square_connected || u.stripe_connect_connected || u.qbo_connected);
   const initialTab = searchParams.portal || searchParams.subscribed || searchParams.billing ? "billing" : (searchParams.jobber || searchParams.square || searchParams.stripe || searchParams.quickbooks) ? "integrations" : "account";
   return <div className="min-h-screen bg-slate-50/60"><AppNav /><main id="main" className="mx-auto max-w-4xl px-4 py-8 text-[15px] sm:py-10">
@@ -75,10 +75,10 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
     <Group id="billing" title="Billing" sub="Your plan, card, and invoices.">
       {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="settings" trialEnd={trialEnd} status={searchParams.subscribed} />}
       <section className="card"><div className="flex flex-wrap items-center gap-3"><span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${plan.cls}`}>{plan.label}</span><span className="text-sm text-slate-700">Starter · $39/month · 200 requests/month</span></div>
-        <p className="mt-3 text-sm text-slate-700">{plan.note} Update your card, switch plans, or cancel below.</p>
+        <p className="mt-3 text-sm text-slate-700">{plan.note}{isActive(u) ? " Update your card, switch plans, or cancel below." : ""}</p>
         {searchParams.billing === "card_saved" && <p className="mt-3 text-sm text-lime-700">Card saved. Your billing is reconnected — no new trial was started.</p>}
         {searchParams.portal && <p className="mt-3 text-sm text-amber-700">We couldn’t open the billing portal. If you haven’t started your trial yet, start it first; otherwise try again or contact support.</p>}
-        <div className="mt-4 flex flex-wrap items-center gap-2">{!isActive(u) ? <a href="/onboarding?step=pay" className="btn-lime">Start free trial</a> : <form action="/api/stripe/portal" method="post"><button className="btn-navy">Manage billing</button></form>}<form action="/api/stripe/portal?view=payment_methods&from=settings" method="post"><button className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Payment methods</button></form></div></section>
+        <div className="mt-4 flex flex-wrap items-center gap-2">{needsPayment(u) ? <><form action="/api/stripe/portal?view=payment_methods&from=settings" method="post" className="w-full sm:w-auto"><button className="btn-navy w-full sm:w-auto">Update payment method</button></form><form action="/api/stripe/portal" method="post"><button className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Manage billing</button></form></> : u.subscription_status === "canceled" ? <a href="/onboarding?step=pay&billing=reconnect" className="btn-navy">Resubscribe</a> : !isActive(u) ? <a href="/onboarding?step=pay" className="btn-lime">Start free trial</a> : <><form action="/api/stripe/portal" method="post"><button className="btn-navy">Manage billing</button></form><form action="/api/stripe/portal?view=payment_methods&from=settings" method="post"><button className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Payment methods</button></form></>}</div></section>
     </Group>
       </> },
     ]} />
@@ -98,7 +98,7 @@ function planBadge(status: string, trialEnd: string | null) {
     return { label: days == null ? "Free trial" : `Trial — ${days} day${days === 1 ? "" : "s"} left`, cls: "bg-lime-100 text-lime-800 ring-1 ring-lime-200", note: end ? `Your trial ends ${end}; billing starts then unless you cancel.` : "You won’t be charged until the trial ends." };
   }
   if (status === "active") return { label: "Active", cls: "bg-navy-900 text-white", note: "Your plan is active." };
-  if (status === "past_due" || status === "unpaid") return { label: "Payment issue", cls: "bg-red-50 text-red-700 ring-1 ring-red-200", note: "Your last payment didn’t go through. Update your card to keep sending." };
-  if (status === "canceled") return { label: "Canceled", cls: "bg-slate-200 text-slate-800", note: "Your plan is canceled. Start again any time." };
+  if (status === "past_due" || status === "unpaid") return { label: "Payment issue", cls: "bg-red-50 text-red-700 ring-1 ring-red-200", note: "Your last payment didn’t go through. Sending is paused — update your card to resume. No new trial, nothing lost." };
+  if (status === "canceled") return { label: "Canceled", cls: "bg-slate-200 text-slate-800", note: "Your plan is canceled. Resubscribe any time — your history and settings are kept." };
   return { label: "No plan yet", cls: "bg-amber-50 text-amber-800 ring-1 ring-amber-200", note: "Start your 7-day free trial to send review requests." };
 }

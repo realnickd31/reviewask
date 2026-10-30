@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { db, isSuppressed, unsubscribeUrl, getUser, isActive, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
+import { db, isSuppressed, unsubscribeUrl, getUser, isActive, needsPayment, usedThisMonth, MONTHLY_QUOTA, type User } from "./db";
 import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms, sendEmail, sendSms } from "./email";
 import { trackFirstAskIfNeeded } from "./analytics";
 import { clampDelay } from "./delay";
@@ -24,7 +24,7 @@ export function validate(i: ReturnType<typeof normalize>): string | null {
   return null;
 }
 export function canSend(u: User): { error: string; code: number } | null {
-  if (!isActive(u)) return { error: "Start your subscription to send requests.", code: 402 };
+  if (!isActive(u)) return { error: needsPayment(u) ? "Your last payment didn’t go through. Update your card to resume sending." : u.subscription_status === "canceled" ? "Your plan is canceled. Resubscribe to resume sending." : "Start your free trial to send requests.", code: 402 };
   if (!u.business_name || !u.review_url) return { error: "Finish onboarding first.", code: 400 };
   if (usedThisMonth(u.id) >= MONTHLY_QUOTA) return { error: `Monthly limit of ${MONTHLY_QUOTA} reached.`, code: 429 };
   return null;

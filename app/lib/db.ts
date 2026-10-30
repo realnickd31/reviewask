@@ -161,6 +161,7 @@ export type ReviewRequest = {
 export const MONTHLY_QUOTA = 200;
 export const getUser = (id: number) => db.prepare("SELECT * FROM users WHERE id=?").get(id) as User | undefined;
 export const getUserByEmail = (e: string) => db.prepare("SELECT * FROM users WHERE email=?").get(e.toLowerCase()) as User | undefined;
+export const needsPayment = (u: User) => u.subscription_status === "past_due" || u.subscription_status === "unpaid";
 export const isActive = (u: User) => u.subscription_status === "active" || u.subscription_status === "trialing";
 export function usedThisMonth(userId: number) {
   const r = db.prepare("SELECT COUNT(*) c FROM review_requests WHERE user_id=? AND status != 'cancelled' AND created_at >= datetime('now','start of month')").get(userId) as { c: number };

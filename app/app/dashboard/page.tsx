@@ -9,7 +9,7 @@ import { processDueReminders, processDueScheduledAsks, accountDelayHours } from 
 import { delayLabel } from "@/lib/delay";
 import { dontAsk, cancelFollowUp } from "@/app/actions";
 import { requireUser } from "@/lib/session";
-import { db, isActive, usedThisMonth, MONTHLY_QUOTA, getUser, unsubscribeUrl, appUrl, legacyTrackedWindow, type ReviewRequest, type User } from "@/lib/db";
+import { db, isActive, needsPayment, usedThisMonth, MONTHLY_QUOTA, getUser, unsubscribeUrl, appUrl, legacyTrackedWindow, type ReviewRequest, type User } from "@/lib/db";
 import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms } from "@/lib/email";
 import { stripe } from "@/lib/stripe";
 import { AsksBars, ReviewLine } from "@/components/DashCharts";
@@ -75,7 +75,13 @@ export default async function Page({ searchParams }: { searchParams: { session_i
   return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-5 px-4 py-6 sm:py-8">
     {searchParams.dev_unlocked && <p className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">Dev mode: Stripe isn&apos;t configured, so your account was unlocked as a trial.</p>}
     {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="dashboard" trialEnd={trialEnd} status={searchParams.subscribed} />}
-    {!active && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
+    {!active && needsPayment(u) && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-red-200 bg-red-50 p-5 sm:flex-row sm:items-center">
+      <div><p className="font-semibold text-red-800">Your last payment didn&apos;t go through.</p><p className="text-sm text-red-700">Sending is paused. Update your card to resume — no new trial, nothing lost.</p></div>
+      <form action="/api/stripe/portal?view=payment_methods&from=dashboard" method="post" className="w-full sm:w-auto"><button className="btn-navy w-full sm:w-auto">Update payment method</button></form></div>}
+    {!active && u.subscription_status === "canceled" && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
+      <div><p className="font-semibold">Your plan is canceled.</p><p className="text-sm text-slate-500">Resubscribe to resume sending — your history and settings are still here.</p></div>
+      <Link href="/onboarding?step=pay&billing=reconnect" className="btn-navy w-full text-center sm:w-auto">Resubscribe</Link></div>}
+    {!active && !needsPayment(u) && u.subscription_status !== "canceled" && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>
       <Link href="/onboarding?step=pay" className="btn-lime">Start free trial</Link></div>}
     {active && !hasActivity && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
