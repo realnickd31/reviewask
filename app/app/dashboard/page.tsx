@@ -18,7 +18,7 @@ import { isAdminUser } from "@/lib/admin";
 import { reviewProgress, snapshotUser, placesConfigured } from "@/lib/reviewStats";
 export const dynamic = "force-dynamic";
 
-export default async function Page({ searchParams }: { searchParams: { session_id?: string; dev_unlocked?: string } }) {
+export default async function Page({ searchParams }: { searchParams: { session_id?: string; dev_unlocked?: string; page?: string } }) {
   let u = await requireUser();
   if (isAdminUser(u)) redirect("/admin");
   if (!u.business_name || !u.review_url) redirect("/onboarding");
@@ -46,7 +46,12 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     SUM(CASE WHEN remind_at IS NOT NULL AND reminded_at IS NULL AND status='sent' THEN 1 ELSE 0 END) pending
     FROM review_requests WHERE user_id=? AND created_at >= datetime('now','start of month')`).get(u.id) as Record<string, number | null>;
   const remaining = Math.max(0, MONTHLY_QUOTA - used);
-  const rows = db.prepare("SELECT * FROM review_requests WHERE user_id=? AND status != 'scheduled' ORDER BY id DESC LIMIT 100").all(u.id) as ReviewRequest[];
+  const activityTotal = (db.prepare("SELECT COUNT(*) AS n FROM review_requests WHERE user_id=? AND status != 'scheduled'").get(u.id) as { n: number }).n;
+  const PAGE_SIZE = 20;
+  const pageCount = Math.max(1, Math.ceil(activityTotal / PAGE_SIZE));
+  const page = Math.min(pageCount, Math.max(1, Number(searchParams.page) || 1));
+  const rows = db.prepare("SELECT * FROM review_requests WHERE user_id=? AND status != 'scheduled' ORDER BY id DESC LIMIT ? OFFSET ?").all(u.id, PAGE_SIZE, (page - 1) * PAGE_SIZE) as ReviewRequest[];
+  const hasActivity = activityTotal > 0;
   const scheduled = db.prepare("SELECT * FROM review_requests WHERE user_id=? AND status='scheduled' ORDER BY send_at").all(u.id) as ReviewRequest[];
   const dayRows = db.prepare("SELECT date(created_at) d, COUNT(*) n FROM review_requests WHERE user_id=? AND status IN ('sent','queued') AND created_at >= date('now','-13 days') GROUP BY d").all(u.id) as { d: string; n: number }[];
   const days = Array.from({ length: 14 }, (_, i) => { const t = new Date(Date.now() - (13 - i) * 864e5); const k = t.toISOString().slice(0, 10); return { label: t.toLocaleDateString("en-US", { month: "numeric", day: "numeric", timeZone: "UTC" }), n: dayRows.find((x) => x.d === k)?.n ?? 0 }; });
@@ -57,9 +62,9 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>
       <Link href="/onboarding?step=pay" className="btn-lime">Start free trial</Link></div>}
     <ReviewGrowth p={progress} sent={sinceAsks?.sent || 0} />
-    {rows.length > 0 && <AsksBars days={days} />}
-    {active && rows.length > 0 && <NextAction u={u} rows={rows} remaining={remaining} />}
-    {active && rows.length === 0 && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
+    {hasActivity && <AsksBars days={days} />}
+    {active && hasActivity && <NextAction u={u} recentWeek={Number(stats.week ?? 0)} remaining={remaining} />}
+    {active && !hasActivity && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
       <p className="mt-1 text-sm text-slate-500">Requests go out by text or email.</p>
       <ol className="mt-4 space-y-3 text-sm">
         <li className="flex gap-3"><span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${u.jobber_connected ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-navy-900 text-white"}`}>{u.jobber_connected ? "✓" : "1"}</span><div><p className="font-medium text-navy-900">Connect Jobber or Housecall Pro</p><p className="text-slate-500">{u.jobber_connected ? "Connected. Every customer gets asked automatically." : <>Do this once and every customer gets asked. <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect now</Link></>}</p></div></li>
@@ -87,8 +92,8 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         <div className="min-w-0"><p className="font-semibold text-navy-900">{r.customer_name}</p><p className="truncate text-slate-500">{[r.customer_email, r.customer_phone].filter(Boolean).join(" · ")}</p><p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-800 ring-1 ring-amber-100">Sends {fmt(r.send_at!)}</p></div>
         <form action={dontAsk} className="shrink-0"><input type="hidden" name="id" value={r.id} /><button className="min-h-[44px] w-full rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 sm:w-auto">Don&apos;t ask</button></form></li>)}</ul>}
     </section>
-    <LiveRefresh /><section className="card px-4 sm:px-6" id="history"><div className="mb-4 flex items-baseline justify-between gap-3"><div><h2 className="text-lg font-semibold">Recent activity</h2><p className="mt-0.5 text-sm text-slate-500">Everyone you&apos;ve asked, how, and when. Tap “What they got” to see the exact message.</p></div><div className="flex items-baseline gap-3">{rows.length > 0 && <p className="text-xs text-slate-500">{rows.length} most recent</p>}<a href="/api/requests/export" download className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Download CSV</a></div></div>
-      {rows.length === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Ask a customer above, or connect the tools you already use. Every request and follow-up will show here with its status.</p></div> : <>
+    <LiveRefresh /><section className="card px-4 sm:px-6" id="history"><div className="mb-4 flex flex-wrap items-baseline justify-between gap-3"><div><h2 className="text-lg font-semibold">Recent activity</h2><p className="mt-0.5 text-sm text-slate-500">Everyone you&apos;ve asked, how, and when. Tap “What they got” to see the exact message.</p></div><div className="flex items-baseline gap-3">{activityTotal > 0 && <p className="text-xs text-slate-500">{activityTotal} total · page {page} of {pageCount}</p>}<a href="/api/requests/export" download className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Download CSV</a></div></div>
+      {activityTotal === 0 ? <div className="rounded-md border border-dashed border-slate-300 px-6 py-10 text-center"><p className="text-sm font-medium text-navy-900">No review requests yet</p><p className="mt-1 text-sm text-slate-500">Ask a customer above, or connect the tools you already use. Every request and follow-up will show here with its status.</p></div> : <>
       <ul className="-mx-1 space-y-2.5 md:hidden">{rows.map((r) => { const ch = chip(r); const fu = followUp(r); return <li key={r.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="flex items-start justify-between gap-3"><div className="min-w-0"><p className="truncate text-[15px] font-semibold text-navy-900">{r.customer_name}</p>
           {r.customer_email && <p className="mt-0.5 truncate text-sm text-slate-500">{r.customer_email}</p>}{r.customer_phone && <p className="text-sm text-slate-500">{r.customer_phone}</p>}</div>
@@ -102,6 +107,13 @@ export default async function Page({ searchParams }: { searchParams: { session_i
           <td className="py-3 pr-3"><span title={queuedTip(r)} className={`whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-semibold ${ch.cls}`}>{ch.label}</span></td>
           <td className="whitespace-nowrap py-3 pr-3 text-slate-500">{fmt(r.created_at)}</td>
           <td className="whitespace-nowrap py-3 text-slate-500">{followUp(r)}{canCancel(r) && <CancelFU id={r.id} />}</td></tr>; })}</tbody></table></div></>}
+      {pageCount > 1 && <nav className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4" aria-label="Activity pages">
+        <p className="text-xs text-slate-500">Showing {(page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, activityTotal)} of {activityTotal}</p>
+        <div className="flex gap-2">
+          {page > 1 ? <Link href={`/dashboard?page=${page - 1}#history`} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Newer</Link> : <span className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-400">Newer</span>}
+          {page < pageCount ? <Link href={`/dashboard?page=${page + 1}#history`} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Older</Link> : <span className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-400">Older</span>}
+        </div>
+      </nav>}
       {rows.some((r) => r.status === "queued") && <p className="mt-3 text-xs text-slate-500"><strong>Queued</strong> means saved but not sent yet, for example a text that couldn&apos;t be delivered. Add the customer&apos;s email to send now.</p>}
     </section>
   </main></div>;
@@ -124,12 +136,10 @@ function ReviewGrowth({ p, sent }: { p: ReturnType<typeof reviewProgress>; sent:
     <p className="mt-4 border-t border-slate-100 pt-3 text-xs text-slate-500">{sent} ask{sent === 1 ? "" : "s"} sent since you started. Counts come from Google and update about once a day (last checked {fmt(p.latest.created_at)}). Google doesn&apos;t say which customer left which review, so we show total growth.</p></section>;
 }
 
-function NextAction({ u, rows, remaining }: { u: User; rows: ReviewRequest[]; remaining: number }) {
-  const weekAgo = Date.now() - 7 * 864e5;
-  const recent = rows.filter((r) => new Date(r.created_at.replace(" ", "T") + (r.created_at.includes("Z") ? "" : "Z")).getTime() >= weekAgo).length;
+function NextAction({ u, recentWeek, remaining }: { u: User; recentWeek: number; remaining: number }) {
   const a = remaining === 0 ? { t: "You've used this month's asks", d: "Your plan resets at the start of next month.", href: "/settings", cta: "See plan" }
     : !u.jobber_connected && !u.auto_setup_requested_at ? { t: "Ask every customer without lifting a finger", d: "Connect Jobber or Housecall Pro once and each finished job gets a review ask automatically.", href: "/settings#automatic", cta: "Connect Jobber" }
-    : recent === 0 ? { t: "No one asked this week", d: "Paste last month's customers from a spreadsheet — it takes a minute.", href: "#bulk", cta: "Import customers" }
+    : recentWeek === 0 ? { t: "No one asked this week", d: "Paste last month's customers from a spreadsheet — it takes a minute.", href: "#bulk", cta: "Import customers" }
     : { t: "Keep it going", d: "Just finished a job? Ask that customer while it's fresh.", href: "#quick", cta: "Ask a customer" };
   return <section className="flex flex-col items-start justify-between gap-3 rounded-lg border border-lime-100 bg-lime-50/60 p-5 sm:flex-row sm:items-center">
     <div><p className="text-xs font-semibold uppercase tracking-wider text-lime-700">Next step</p><p className="mt-1 font-semibold text-navy-900">{a.t}</p><p className="text-sm text-slate-600">{a.d}</p></div>
