@@ -71,8 +71,7 @@ export default function ConnectWizard({ initial, url, business, onConnected, onF
       {step === 3 && <div className="space-y-3"><p className="text-lg font-semibold">Copy these into Zapier</p>
         <BigCopy label="Copy connection link" text={url} />
         {token && <BigCopy label="Copy secret key" text={token} />}
-        <p className="text-xs text-slate-500">In Zapier: create a Zap → pick the app you use and a trigger like <b>Invoice paid</b>, <b>Payment received</b> or <b>Job completed</b> → action <b>Webhooks by Zapier</b> → <b>POST</b> → paste link → add header <code>Authorization</code> = <code>Bearer &lt;secret key&gt;</code> → map customer name, email, phone.</p>
-        <button type="button" className="text-sm underline" onClick={() => setStep(4)}>Done → test it</button></div>}
+        <p className="text-xs text-slate-500">In Zapier: create a Zap → pick the app you use and a trigger like <b>Invoice paid</b>, <b>Payment received</b> or <b>Job completed</b> → action <b>Webhooks by Zapier</b> → <b>POST</b> → paste link → add header <code>Authorization</code> = <code>Bearer &lt;secret key&gt;</code> → map customer name, email, phone.</p></div>}
 
       {step === 4 && <div className="space-y-3"><p className="text-lg font-semibold">Test the connection</p>
         <p className="text-sm text-slate-600">Mark a test invoice paid (or job completed) in your app, or use <b>Test step</b> in Zapier. We show “Connected” only when that real request reaches ReviewAsk.</p>
