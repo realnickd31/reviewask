@@ -2,7 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { COMPANY } from "@/lib/company";
 export default function Footer() {
-  const col = "space-y-2.5 text-sm";
+  const col = "space-y-0.5 text-sm [&_a]:inline-flex [&_a]:min-h-[40px] [&_a]:items-center";
   return <footer className="border-t border-slate-200 bg-white text-slate-600"><div className="mx-auto max-w-6xl px-6 py-14">
     <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div className="sm:col-span-2 lg:col-span-2"><Logo dark /><p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">Automatic Google review requests for any business that wants more reviews. Simple, policy-safe, month-to-month.</p><p className="mt-3 text-sm text-slate-500">Questions? <a href={`mailto:${COMPANY.supportEmail}`} className="font-medium text-navy-900 hover:underline">{COMPANY.supportEmail}</a></p></div>
@@ -11,6 +11,6 @@ export default function Footer() {
     </div>
     <div className="mt-12 flex flex-col justify-between gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row">
       <p>© {new Date().getFullYear()} {COMPANY.legalName ?? COMPANY.brand}. All rights reserved.{COMPANY.mailingAddress && <> · {COMPANY.mailingAddress}</>}</p>
-      <p>Payments processed securely by Stripe. ReviewAsk is not affiliated with or endorsed by Google LLC or Jobber.</p>
+      <p>Payments processed securely by Stripe. ReviewAsk is not affiliated with or endorsed by Google or any listed integration.</p>
     </div></div></footer>;
 }

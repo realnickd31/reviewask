@@ -73,12 +73,12 @@ export default function ApiDocsPage() {
     ["Webhooks", [["webhooks", "Events & payload"], ["signatures", "Verifying signatures"]]],
     ["More", [["zapier", "Zapier / Make"], ["openapi", "OpenAPI spec"]]],
   ];
-  return <div className="min-h-screen bg-white text-[15px] text-slate-700">
+  return <div className="min-h-screen overflow-x-clip bg-white text-[15px] text-slate-700">
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4">
         <Logo dark /><span className="hidden rounded-md bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600 sm:inline">API Reference</span>
         <span className="hidden rounded-full bg-emerald-50 px-2 py-0.5 font-mono text-[11px] font-semibold text-emerald-700 ring-1 ring-emerald-200 sm:inline">v1</span>
-        <nav className="ml-auto flex items-center gap-4 text-sm"><a href="/openapi.json" className="hidden text-slate-600 hover:text-navy-900 sm:inline">openapi.json</a><Link href="/settings#api" className="text-slate-600 hover:text-navy-900">Get your API key</Link><Link href="/dashboard" className="btn-navy px-3 py-1.5">Dashboard</Link></nav>
+        <nav className="ml-auto flex items-center gap-3 whitespace-nowrap text-sm sm:gap-4"><a href="/openapi.json" className="hidden text-slate-600 hover:text-navy-900 sm:inline">openapi.json</a><Link href="/settings#api" className="text-slate-600 hover:text-navy-900"><span className="sm:hidden">API key</span><span className="hidden sm:inline">Get your API key</span></Link><Link href="/dashboard" className="btn-navy px-3 py-1.5">Dashboard</Link></nav>
       </div>
     </header>
     <div className="mx-auto flex max-w-7xl">
@@ -86,7 +86,7 @@ export default function ApiDocsPage() {
         {nav.map(([g, items]) => <div key={g} className="mb-5"><p className="mb-1.5 px-2 text-[11px] font-semibold uppercase tracking-wider text-slate-500">{g}</p>
           <ul>{items.map(([id, t, m]) => <li key={id}><a href={`#${id}`} className="flex items-center gap-2 rounded-md px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-navy-900">{m && <span className={`w-11 font-mono text-[10px] font-bold ${M[m].split(" ")[1]}`}>{m}</span>}{t}</a></li>)}</ul></div>)}
       </aside>
-      <main id="main" className="min-w-0 flex-1 px-5 py-10 sm:px-10">
+      <main id="main" className="min-w-0 flex-1 break-words px-5 py-10 sm:px-10 [&_pre]:max-w-full [&_section>*]:min-w-0">
         <section id="introduction" className="scroll-mt-20 grid gap-8 border-b border-slate-200 pb-12 xl:grid-cols-2">
           <div><p className="text-sm font-semibold text-lime-700">ReviewAsk API</p><h1 className="mt-1 text-4xl font-bold tracking-tight text-navy-900">API Reference</h1>
             <p className="mt-4 text-lg leading-relaxed">Create, schedule, edit, and cancel Google review asks from your own software — and get signed callbacks when they go out. JSON over HTTPS, predictable resource URLs, standard HTTP status codes.</p>

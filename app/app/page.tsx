@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Pricing, { Check } from "@/components/Pricing";
 import { currentUser } from "@/lib/session";
 import { isActive } from "@/lib/db";
+import MenuCloser from "@/components/MenuCloser";
 import ConnectorRequest from "@/components/ConnectorRequest";
 import HowItWorksDemo from "@/components/HowItWorksDemo";
 
@@ -57,13 +58,13 @@ export default async function Home() {
             <Link href="/quick" className="hidden whitespace-nowrap hover:text-white sm:inline">Quick ask</Link>
             <Link href="/dashboard" className="btn whitespace-nowrap bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Dashboard</Link>
             <form action="/api/auth/logout" method="post" className="hidden sm:block"><button type="submit" className="whitespace-nowrap hover:text-white">Log out</button></form>
-            <details className="relative sm:hidden"><summary aria-label="Open menu" className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-md ring-1 ring-white/20 [&::-webkit-details-marker]:hidden"><svg viewBox="0 0 20 20" className="h-5 w-5 fill-white" aria-hidden><path d="M3 5h14v2H3zm0 4h14v2H3zm0 4h14v2H3z" /></svg></summary>
+            <details data-menu className="relative sm:hidden"><summary aria-label="Open menu" className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-md ring-1 ring-white/20 [&::-webkit-details-marker]:hidden"><svg viewBox="0 0 20 20" className="h-5 w-5 fill-white" aria-hidden><path d="M3 5h14v2H3zm0 4h14v2H3zm0 4h14v2H3z" /></svg></summary>
               <div className="absolute right-0 z-20 mt-2 w-56 rounded-lg bg-white p-2 text-navy-900 shadow-xl"><Link href="/quick" className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">Quick ask</Link><Link href="/settings" className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">Settings</Link><form action="/api/auth/logout" method="post"><button type="submit" className="block w-full rounded-md px-3 py-3 text-left text-sm hover:bg-slate-50">Log out</button></form></div></details>
           </> : <>
             <Link href="/login" className="hidden hover:text-white sm:inline">Log in</Link>
             <Link href="/signup" className="btn bg-white px-3.5 py-2 text-navy-950 hover:bg-slate-100">Start free trial</Link>
-            <details className="relative sm:hidden"><summary aria-label="Open menu" className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-md ring-1 ring-white/20 [&::-webkit-details-marker]:hidden"><svg viewBox="0 0 20 20" className="h-5 w-5 fill-white" aria-hidden><path d="M3 5h14v2H3zm0 4h14v2H3zm0 4h14v2H3z" /></svg></summary>
-              <div className="absolute right-0 z-20 mt-2 w-56 rounded-lg bg-white p-2 text-navy-900 shadow-xl">{[["/#how", "How it works"], ["/pricing", "Pricing"], ["/#faq", "FAQ"], ["/login", "Log in"]].map(([h, l]) => <a key={h} href={h} className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">{l}</a>)}</div></details></>}</nav></div>
+            <details data-menu className="relative sm:hidden"><summary aria-label="Open menu" className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-md ring-1 ring-white/20 [&::-webkit-details-marker]:hidden"><svg viewBox="0 0 20 20" className="h-5 w-5 fill-white" aria-hidden><path d="M3 5h14v2H3zm0 4h14v2H3zm0 4h14v2H3z" /></svg></summary>
+              <div className="absolute right-0 z-20 mt-2 w-56 rounded-lg bg-white p-2 text-navy-900 shadow-xl">{[["/#how", "How it works"], ["/pricing", "Pricing"], ["/#faq", "FAQ"], ["/login", "Log in"]].map(([h, l]) => <a key={h} href={h} className="block rounded-md px-3 py-3 text-sm hover:bg-slate-50">{l}</a>)}</div></details></>}</nav><MenuCloser /></div>
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-28 pt-20 sm:pt-28 lg:grid-cols-[1.4fr_1fr]">
         <div className="max-w-3xl">
           <p className="eyebrow !text-lime-400">More Google reviews, without chasing customers · $39/mo</p>
