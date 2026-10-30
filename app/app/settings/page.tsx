@@ -1,3 +1,4 @@
+import TrialSubscribe from "@/components/TrialSubscribe";
 import { headers } from "next/headers";
 import AppNav from "@/components/AppNav";
 import BizForm from "@/components/BizForm";
@@ -17,7 +18,7 @@ import { clampDelay } from "@/lib/delay";
 import { stripe } from "@/lib/stripe";
 import { db, ensureApiToken } from "@/lib/db";
 export const dynamic = "force-dynamic";
-export default async function Page({ searchParams }: { searchParams: { portal?: string; jobber?: string; square?: string; stripe?: string; quickbooks?: string } }) {
+export default async function Page({ searchParams }: { searchParams: { portal?: string; jobber?: string; square?: string; stripe?: string; quickbooks?: string; subscribed?: string } }) {
   const u = await requireUser();
   u.api_token = ensureApiToken(u.id); // every account always has a key
   const h = headers();
@@ -31,11 +32,11 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
   const plan = planBadge(u.subscription_status, trialEnd);
   const trial = u.subscription_status === "trialing" || !isActive(u);
   const connected = !!(u.jobber_connected || u.housecall_connected || u.square_connected || u.stripe_connect_connected || u.qbo_connected);
-  const initialTab = searchParams.portal ? "billing" : (searchParams.jobber || searchParams.square || searchParams.stripe || searchParams.quickbooks) ? "integrations" : "account";
+  const initialTab = searchParams.portal || searchParams.subscribed ? "billing" : (searchParams.jobber || searchParams.square || searchParams.stripe || searchParams.quickbooks) ? "integrations" : "account";
   return <div className="min-h-screen bg-slate-50/60"><AppNav /><main id="main" className="mx-auto max-w-4xl px-4 py-8 text-[15px] sm:py-10">
     <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div><h1 className="text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">Settings</h1><p className="mt-1 text-sm text-slate-600">Your business, the tools you connect, and your plan.</p></div>
-      <span className={`inline-flex w-fit items-center rounded-full px-3 py-1 text-sm font-semibold ${plan.cls}`}>{plan.label}</span></header>
+      <div className="flex items-center gap-2"><span className={`inline-flex w-fit items-center rounded-full px-3 py-1 text-sm font-semibold ${plan.cls}`}>{plan.label}</span></div></header>
     {trial && !connected && <div className="mt-6 flex flex-col items-start justify-between gap-3 rounded-xl border border-lime-200 bg-lime-50 p-4 sm:flex-row sm:items-center">
       <div><p className="text-xs font-semibold uppercase tracking-wider text-lime-700">Finish setup</p><p className="mt-0.5 font-semibold text-navy-900">Connect your job tool so every customer gets asked automatically</p></div>
       <a href="#automatic" className="btn-lime shrink-0">Connect a tool</a></div>}
@@ -75,6 +76,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
       </> },
       { id: "billing", label: "Billing", node: <>
     <Group id="billing" title="Billing" sub="Your plan, card, and invoices.">
+      {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="settings" trialEnd={trialEnd} status={searchParams.subscribed} />}
       <section className="card"><div className="flex flex-wrap items-center gap-3"><span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${plan.cls}`}>{plan.label}</span><span className="text-sm text-slate-700">Starter · $39/month · 200 requests/month</span></div>
         <p className="mt-3 text-sm text-slate-700">{plan.note} Update your card, switch plans, or cancel below.</p>
         {searchParams.portal && <p className="mt-3 text-sm text-amber-700">Billing portal is available after you subscribe through Stripe.</p>}

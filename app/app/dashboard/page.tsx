@@ -14,15 +14,17 @@ import { buildReviewEmail, buildReminderEmail, buildReviewSms, buildReminderSms 
 import { stripe } from "@/lib/stripe";
 import { AsksBars, ReviewLine } from "@/components/DashCharts";
 import LiveRefresh from "@/components/LiveRefresh";
+import TrialSubscribe from "@/components/TrialSubscribe";
 import { applySubscription } from "@/lib/billing";
 import { isAdminUser } from "@/lib/admin";
 import { reviewProgress, snapshotUser, placesConfigured } from "@/lib/reviewStats";
 export const dynamic = "force-dynamic";
 
-export default async function Page({ searchParams }: { searchParams: { session_id?: string; dev_unlocked?: string; page?: string } }) {
+export default async function Page({ searchParams }: { searchParams: { session_id?: string; dev_unlocked?: string; page?: string; subscribed?: string } }) {
   let u = await requireUser();
   if (isAdminUser(u)) redirect("/admin");
   if (!u.business_name || !u.review_url) redirect("/onboarding");
+  const anyToolConnected = hasConnectedTool(u);
   const provName = u.auto_provider === "housecall" ? "Housecall Pro" : "Jobber";
   const autoLink = !u.auto_enabled ? "Turn on automatic asks: One switch. Every customer gets asked." : u.jobber_connected ? (u.auto_provider === "housecall" && u.auto_setup_requested_at ? "On · Jobber (Housecall Pro requested): Asking every customer automatically." : "On · Jobber: Asking every customer automatically.") : u.auto_setup_requested_at ? `Setup requested: We’re connecting ${provName} for you.` : "Automate this in Settings";
   // Sync right after Checkout so it works even before the webhook arrives.
@@ -71,13 +73,14 @@ export default async function Page({ searchParams }: { searchParams: { session_i
         </nav>;
   return <div><AppNav /><main id="main" className="mx-auto max-w-5xl space-y-5 px-4 py-6 sm:py-8">
     {searchParams.dev_unlocked && <p className="rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">Dev mode: Stripe isn&apos;t configured, so your account was unlocked as a trial.</p>}
+    {(u.subscription_status === "trialing" || searchParams.subscribed === "1") && <TrialSubscribe from="dashboard" trialEnd={u.trial_end} status={searchParams.subscribed} />}
     {!active && <div className="flex flex-col items-start justify-between gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
       <div><p className="font-semibold">Your account isn&apos;t active yet.</p><p className="text-sm text-slate-500">Start your 7-day free trial to send review requests.</p></div>
       <Link href="/onboarding?step=pay" className="btn-lime">Start free trial</Link></div>}
     {active && !hasActivity && <section className="card" id="get-started"><h2 className="text-lg font-semibold">Get started in 3 steps</h2>
       <p className="mt-1 text-sm text-slate-500">Requests go out by text or email.</p>
       <ol className="mt-4 space-y-3 text-sm">
-        <li className="flex gap-3"><span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${u.jobber_connected ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-navy-900 text-white"}`}>{u.jobber_connected ? "✓" : "1"}</span><div><p className="font-medium text-navy-900">Connect Jobber or Housecall Pro</p><p className="text-slate-500">{u.jobber_connected ? "Connected. Every customer gets asked automatically." : <>Do this once and every customer gets asked. <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect now</Link></>}</p></div></li>
+        <li className="flex gap-3"><span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${anyToolConnected ? "bg-lime-50 text-lime-700 ring-1 ring-lime-100" : "bg-navy-900 text-white"}`}>{anyToolConnected ? "✓" : "1"}</span><div><p className="font-medium text-navy-900">Connect your tool</p><p className="text-slate-500">{anyToolConnected ? "Connected. Every customer gets asked automatically." : <>Do this once and every customer gets asked. <Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect now</Link></>}</p></div></li>
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">2</span><div><p className="font-medium text-navy-900">Send your first ask</p><p className="text-slate-500">Send one to yourself first using the form below to see what customers get.</p></div></li>
         <li className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">3</span><div><p className="font-medium text-navy-900">Optional: ask past customers</p><p className="text-slate-500">Have a list? Open “Send to many customers at once” below.</p></div></li>
       </ol></section>}
@@ -144,9 +147,14 @@ function ReviewGrowth({ p, sent }: { p: ReturnType<typeof reviewProgress>; sent:
     <p className="mt-4 border-t border-slate-100 pt-3 text-xs text-slate-500">{sent} ask{sent === 1 ? "" : "s"} sent since you started. Counts come from Google and update about once a day (last checked {fmt(p.latest.created_at)}). Google doesn&apos;t say which customer left which review, so we show total growth.</p></section>;
 }
 
+// True when any integration that can trigger asks is connected (Housecall counts once its webhook secret is set, matching Settings).
+function hasConnectedTool(u: User) {
+  return !!(u.jobber_connected || (u.housecall_connected && u.housecall_webhook_secret) || u.square_connected || u.stripe_connect_connected || u.qbo_connected || u.zapier_connected_at);
+}
+
 function NextAction({ u, recentWeek, remaining }: { u: User; recentWeek: number; remaining: number }) {
   const a = remaining === 0 ? { t: "You've used this month's asks", d: "Your plan resets at the start of next month.", href: "/settings", cta: "See plan" }
-    : !u.jobber_connected && !u.auto_setup_requested_at ? { t: "Ask every customer without lifting a finger", d: "Connect Jobber or Housecall Pro once and each finished job gets a review ask automatically.", href: "/settings#automatic", cta: "Connect your tool" }
+    : !hasConnectedTool(u) && !u.auto_setup_requested_at ? { t: "Ask every customer without lifting a finger", d: "Connect your tool once and each finished job gets a review ask automatically.", href: "/settings#automatic", cta: "Connect your tool" }
     : recentWeek === 0 ? { t: "No one asked this week", d: "Paste last month's customers from a spreadsheet — it takes a minute.", href: "#bulk", cta: "Import customers" }
     : { t: "Keep it going", d: "Just finished a job? Ask that customer while it's fresh.", href: "#quick", cta: "Ask a customer" };
   return <section className="flex flex-col items-start justify-between gap-3 rounded-xl border border-lime-200 bg-lime-50 p-5 shadow-sm sm:flex-row sm:items-center">
