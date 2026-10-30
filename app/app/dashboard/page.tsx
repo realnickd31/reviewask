@@ -110,8 +110,8 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       {pageCount > 1 && <nav className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4" aria-label="Activity pages">
         <p className="text-xs text-slate-500">Showing {(page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, activityTotal)} of {activityTotal}</p>
         <div className="flex gap-2">
-          {page > 1 ? <Link href={`/dashboard?page=${page - 1}#history`} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Newer</Link> : <span className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-400">Newer</span>}
-          {page < pageCount ? <Link href={`/dashboard?page=${page + 1}#history`} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Older</Link> : <span className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-400">Older</span>}
+          {page > 1 ? <Link href={`/dashboard?page=${page - 1}#history`} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Previous</Link> : <span className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-400">Previous</span>}
+          {page < pageCount ? <Link href={`/dashboard?page=${page + 1}#history`} className="rounded-md border border-slate-300 px-3 py-1.5 text-sm font-semibold text-navy-900 hover:bg-slate-50">Next</Link> : <span className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-400">Next</span>}
         </div>
       </nav>}
       {rows.some((r) => r.status === "queued") && <p className="mt-3 text-xs text-slate-500"><strong>Queued</strong> means saved but not sent yet, for example a text that couldn&apos;t be delivered. Add the customer&apos;s email to send now.</p>}
