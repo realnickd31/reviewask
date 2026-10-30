@@ -17,10 +17,20 @@ export default function ConnectWizard({ initial, url, business, onConnected, onF
   const baseline = useRef<string | null | undefined>(undefined);
 
   async function regen() {
-    if (token && !confirm("Make a new secret key? Your existing Zap will stop working until you paste the new key into it.")) return;
+    if (!confirm("Make a new API key? The old key stops working right away — anywhere using it (an existing Zap, other apps) needs the new one.")) return;
     setBusy(true);
-    const r = await fetch("/api/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rotate: !!token }) }); const j = await r.json(); setBusy(false);
+    const r = await fetch("/api/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rotate: true }) }); const j = await r.json(); setBusy(false);
     if (r.ok) { setToken(j.token); setStep(2); onConnected?.(); }
+  }
+  const [copied, setCopied] = useState(false);
+  async function copyKey() {
+    setBusy(true);
+    const r = await fetch("/api/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rotate: false }) });
+    const j = await r.json().catch(() => ({})); setBusy(false);
+    if (!r.ok || !j.token) return;
+    setToken(j.token); onConnected?.();
+    try { await navigator.clipboard.writeText(j.token); setCopied(true); } catch { /* still shown in step 3 */ }
+    setTimeout(() => setStep(2), 700);
   }
   async function sendTest() {
     setBusy(true); setTest(null);
@@ -42,22 +52,21 @@ export default function ConnectWizard({ initial, url, business, onConnected, onF
   }, [step]);
 
 
-  const steps = ["Create key", "Open Zapier", "Copy & paste", "Test"];
+  const steps = ["Copy key", "Open Zapier", "Copy & paste", "Test"];
   return <div className="space-y-5">
     <ol className="grid grid-cols-4 gap-2 text-xs">{steps.map((s, i) =>
       <li key={s}><button type="button" onClick={() => (i === 0 || token) && setStep(i + 1)} className={`w-full rounded-md border px-2 py-2 text-left ${step === i + 1 ? "border-navy-900 bg-navy-900 text-white" : step > i + 1 ? "border-slate-200 bg-slate-50 text-navy-900" : "border-slate-200 text-slate-500"}`}>
         <span className="block font-semibold">Step {i + 1}</span>{s}</button></li>)}</ol>
 
     <div className="rounded-md border border-slate-200 p-5">
-      {step === 1 && <div className="space-y-3"><p className="text-lg font-semibold">Create your secret key</p>
-        <p className="text-sm text-slate-600">This is like a password that lets Zapier talk to ReviewAsk.</p>
-        <button type="button" className="btn-navy w-full py-4 text-base" onClick={regen} disabled={busy}>{busy ? "Working…" : token ? "Make a new secret key" : "Create secret key"}</button>
-        {token && <button type="button" className="text-sm underline" onClick={async () => { await fetch("/api/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rotate: false }) }); onConnected?.(); setStep(2); }}>Keep my current key → next</button>}</div>}
+      {step === 1 && <div className="space-y-3"><p className="text-lg font-semibold">Copy your API key</p>
+        <p className="text-sm text-slate-600">This is like a password that lets Zapier talk to ReviewAsk. It&apos;s the same key shown under API in Settings.</p>
+        <button type="button" className="btn-navy w-full py-4 text-base" onClick={copyKey} disabled={busy}>{busy ? "Working…" : copied ? "Copied ✓ — next" : "Copy my API key"}</button>
+        <button type="button" className="text-sm text-slate-500 underline" onClick={regen} disabled={busy}>Make a new key instead</button></div>}
 
       {step === 2 && <div className="space-y-3"><p className="text-lg font-semibold">Open Zapier</p>
         <p className="text-sm text-slate-600">You&apos;ll sign in or make a free account. Keep this page open.</p>
-        <a href="https://zapier.com/app/zaps" target="_blank" rel="noopener noreferrer" onClick={() => setStep(3)} className="btn-navy block w-full py-4 text-center text-base">Open Zapier ↗</a>
-        <button type="button" className="text-sm underline" onClick={() => setStep(3)}>Already open → next</button></div>}
+        <a href="https://zapier.com/app/zaps" target="_blank" rel="noopener noreferrer" onClick={() => setStep(3)} className="btn-navy block w-full py-4 text-center text-base">Open Zapier ↗</a></div>}
 
       {step === 3 && <div className="space-y-3"><p className="text-lg font-semibold">Copy these into Zapier</p>
         <BigCopy label="Copy connection link" text={url} />
