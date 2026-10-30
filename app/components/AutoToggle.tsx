@@ -8,7 +8,7 @@ type Props = { enabled: boolean; provider: string | null; jobberConnected: boole
   squareConnected?: boolean; squareReady?: boolean; squareFlash?: string;
   stripeConnected?: boolean; stripeReady?: boolean; stripeFlash?: string;
   qboConnected?: boolean; qboReady?: boolean; qboFlash?: string;
-  zapierConnected?: boolean; zapierToken?: string | null; zapierUrl?: string; business?: string;
+  zapierConnected?: boolean; zapierPending?: boolean; zapierToken?: string | null; zapierUrl?: string; business?: string;
   setupEmail: string | null; setupRequested: boolean; quickUrl: string; flash?: string };
 
 export default function AutoToggle(p: Props) {
@@ -17,7 +17,7 @@ export default function AutoToggle(p: Props) {
   const [sq, setSq] = useState(!!p.squareConnected);
   const [st, setSt] = useState(!!p.stripeConnected);
   const [qb, setQb] = useState(!!p.qboConnected);
-  const [zap, setZap] = useState(!!p.zapierConnected); const [zapOpen, setZapOpen] = useState(false);
+  const [zap, setZap] = useState(!!p.zapierConnected); const [zapWait, setZapWait] = useState(!!p.zapierPending); const [zapOpen, setZapOpen] = useState(false);
   // Setup requests are tracked per service, so Jobber and Housecall Pro never hide each other.
   const [reqFor, setReqFor] = useState<string | null>(p.setupRequested ? p.provider : null);
   const [open, setOpen] = useState<string | null>(p.flash === "setup" ? (p.provider === "jobber" ? "jobber" : "housecall") : p.squareFlash === "setup" ? "square" : p.stripeFlash === "setup" ? "stripe" : p.qboFlash === "setup" ? "quickbooks" : null);
@@ -59,7 +59,7 @@ export default function AutoToggle(p: Props) {
   const disconnect = async () => { if (!confirm("Disconnect Jobber? We’ll stop asking for reviews from Jobber until you connect again.")) return; if (await disc("/api/jobber/disconnect", "Jobber")) setConnected(false); };
 
   const requestPanel = (svc: string, name: string) => <div className="mt-3 space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
-    <p className="text-sm font-semibold text-navy-900">We’ll connect it for you</p>
+    <p className="text-sm font-semibold text-navy-900">Connect {name}</p>
     <label className="label" htmlFor={`setup-email-${svc}`}>{name} login email</label>
     <input id={`setup-email-${svc}`} className="input" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@yourshop.com" />
     {err && <p className="text-sm text-red-700">{err}</p>}
@@ -82,7 +82,6 @@ export default function AutoToggle(p: Props) {
     : reqFor === "jobber" ? requestedNote("Jobber")
     : open === "jobber" ? requestPanel("jobber", "Jobber")
     : <button type="button" className="btn-navy" onClick={() => { setOpen("jobber"); setErr(""); }}>Connect Jobber</button>;
-  const help = <button type="button" className="text-sm text-slate-500 underline" onClick={() => { setOpen("housecall"); setErr(""); }}>Need help? We’ll connect it for you</button>;
   const hcSteps = hc === "key" ? <div className="mt-3 space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
       <p className="text-sm font-semibold text-navy-900">Step 1 of 2 — Your connection key</p>
       <ol className="list-decimal space-y-1 pl-5 text-sm text-navy-900">
@@ -117,7 +116,7 @@ export default function AutoToggle(p: Props) {
     : <div className="space-y-2">
         <button type="button" className="btn-navy" onClick={() => { setHc("key"); setHcErr(""); }}>Connect Housecall Pro</button>
         <p className="text-xs text-slate-500">Needs the Housecall Pro MAX plan.</p>
-        {reqFor === "housecall" ? requestedNote("Housecall Pro") : open === "housecall" ? requestPanel("housecall", "Housecall Pro") : help}
+        {reqFor === "housecall" ? requestedNote("Housecall Pro") : open === "housecall" ? requestPanel("housecall", "Housecall Pro") : null}
       </div>;
 
   const sqDisconnect = async () => { if (!confirm("Disconnect Square? We’ll stop asking for reviews from Square until you connect again.")) return; if (await disc("/api/square/disconnect", "Square")) setSq(false); };
@@ -154,10 +153,10 @@ export default function AutoToggle(p: Props) {
     : <button type="button" className="btn-navy" onClick={() => { setOpen("stripe"); setErr(""); }}>Connect Stripe</button>;
 
   const zapDisconnect = async () => {
-    if (!confirm("Disconnect Zapier? We’ll stop treating Zapier as your automatic source. Your API key stays the same — to fully cut off an old Zap, make a new key under API.")) return;
-    if (await disc("/api/zapier/disconnect", "Zapier")) { setZap(false); setZapOpen(false); }
+    if (!confirm("Disconnect Zapier? We’ll ignore anything your Zap sends until you connect again. Your API key stays the same.")) return;
+    if (await disc("/api/zapier/disconnect", "Zapier")) { setZap(false); setZapWait(false); setZapOpen(false); }
   };
-  const zapWizard = <div className="mt-3"><ConnectWizard initial={zap ? p.zapierToken ?? null : null} url={p.zapierUrl || ""} business={p.business || "my business"} onConnected={() => { setZap(true); setOn(true); }} /></div>;
+  const zapWizard = <div className="mt-3"><ConnectWizard initial={zap || zapWait ? p.zapierToken ?? null : null} url={p.zapierUrl || ""} business={p.business || "my business"} onConnected={() => setZapWait(true)} onFirstRequest={() => { setZap(true); setZapWait(false); setOn(true); }} /></div>;
   const zapierCard = <div id="zapier" className="space-y-2">
     <p className="text-sm text-navy-900">Use any other app (invoicing, payments, booking, CRM). Zapier or Make tells us when a customer pays or a job is completed, and we ask that customer for a Google review.</p>
     {zap
@@ -165,6 +164,12 @@ export default function AutoToggle(p: Props) {
           <p className="font-semibold text-green-800">● Connected · Asking when Zapier tells us a customer paid</p>
           <div className="flex gap-2"><button type="button" className="btn-ghost" onClick={() => setZapOpen(!zapOpen)}>{zapOpen ? "Hide setup" : "Manage"}</button>
             <button type="button" className={offBtn} onClick={zapDisconnect}>Turn off &amp; disconnect</button></div>
+        </div>
+      : zapWait
+      ? <div className="flex flex-wrap items-center justify-between gap-3">
+          <p className="font-semibold text-amber-700">● Waiting for first request from Zapier</p>
+          <div className="flex gap-2"><button type="button" className="btn-ghost" onClick={() => setZapOpen(!zapOpen)}>{zapOpen ? "Hide setup" : "Finish setup"}</button>
+            <button type="button" className={offBtn} onClick={zapDisconnect}>Cancel</button></div>
         </div>
       : !zapOpen && <button type="button" className="btn-navy" onClick={() => setZapOpen(true)}>Connect Zapier</button>}
     {zapOpen && zapWizard}

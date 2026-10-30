@@ -8,7 +8,7 @@ function BigCopy({ label, text }: { label: string; text: string }) {
   return <button type="button" className="btn-navy w-full py-4 text-base" onClick={async () => { await navigator.clipboard.writeText(text); setDone(true); setTimeout(() => setDone(false), 1800); }}>{done ? "Copied ✓" : label}</button>;
 }
 
-export default function ConnectWizard({ initial, url, business, onConnected }: { initial: string | null; url: string; business: string; onConnected?: () => void }) {
+export default function ConnectWizard({ initial, url, business, onConnected, onFirstRequest }: { initial: string | null; url: string; business: string; onConnected?: () => void; onFirstRequest?: () => void }) {
   const [token, setToken] = useState(initial);
   const [step, setStep] = useState(initial ? 2 : 1);
   const [busy, setBusy] = useState(false);
@@ -25,7 +25,7 @@ export default function ConnectWizard({ initial, url, business, onConnected }: {
   async function sendTest() {
     setBusy(true); setTest(null);
     const r = await fetch("/api/hooks/test", { method: "POST" }); const j = await r.json().catch(() => ({})); setBusy(false);
-    setTest(r.ok ? { t: "ok", m: "It worked — check History on your Dashboard (a test email went to your account address)." } : { t: "err", m: j.error || "Test failed." });
+    setTest(r.ok ? { t: "ok", m: "Preview sent to your email. This checks your message only — it does not test Zapier. Your Zap is connected once a real customer shows up above." } : { t: "err", m: j.error || "Test failed." });
   }
   // Step 4: poll for a real request from Zapier.
   useEffect(() => {
@@ -35,14 +35,12 @@ export default function ConnectWizard({ initial, url, business, onConnected }: {
       const r = await fetch("/api/hooks/test").catch(() => null); if (!r?.ok || stop) return;
       const j = await r.json(); const key = j.last ? j.last.created_at + j.last.customer_name : null;
       if (baseline.current === undefined) baseline.current = key;
-      else if (key !== baseline.current && j.last?.source === "webhook") setLast(j.last);
+      else if (key !== baseline.current && j.last?.source === "webhook") { setLast(j.last); onFirstRequest?.(); }
     };
     tick(); const id = setInterval(tick, 5000);
     return () => { stop = true; clearInterval(id); };
   }, [step]);
 
-  const help = `mailto:?subject=${encodeURIComponent(`Help connecting Zapier to ReviewAsk for ${business}`)}&body=${encodeURIComponent(
-    `Hi,\n\nCould you help me connect our software to ReviewAsk through Zapier, so customers get a Google review request when they pay or a job is completed? It takes about 10 minutes in Zapier.\n\nConnection link: ${url}\nSecret key: (I'll send this separately)\n\nIn Zapier: Create Zap → trigger from our app (e.g. "Invoice paid", "Payment received" or "Job completed") → Webhooks by Zapier → POST → paste the link → add header Authorization: Bearer <secret key> → map customer name, email, phone.\n\nThanks!`)}`;
 
   const steps = ["Create key", "Open Zapier", "Copy & paste", "Test"];
   return <div className="space-y-5">
@@ -54,7 +52,7 @@ export default function ConnectWizard({ initial, url, business, onConnected }: {
       {step === 1 && <div className="space-y-3"><p className="text-lg font-semibold">Create your secret key</p>
         <p className="text-sm text-slate-600">This is like a password that lets Zapier talk to ReviewAsk.</p>
         <button type="button" className="btn-navy w-full py-4 text-base" onClick={regen} disabled={busy}>{busy ? "Working…" : token ? "Make a new secret key" : "Create secret key"}</button>
-        {token && <button type="button" className="text-sm underline" onClick={() => setStep(2)}>Keep my current key → next</button>}</div>}
+        {token && <button type="button" className="text-sm underline" onClick={async () => { await fetch("/api/token", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rotate: false }) }); onConnected?.(); setStep(2); }}>Keep my current key → next</button>}</div>}
 
       {step === 2 && <div className="space-y-3"><p className="text-lg font-semibold">Open Zapier</p>
         <p className="text-sm text-slate-600">You&apos;ll sign in or make a free account. Keep this page open.</p>
@@ -68,17 +66,12 @@ export default function ConnectWizard({ initial, url, business, onConnected }: {
         <button type="button" className="text-sm underline" onClick={() => setStep(4)}>Done → test it</button></div>}
 
       {step === 4 && <div className="space-y-3"><p className="text-lg font-semibold">Test the connection</p>
-        <p className="text-sm text-slate-600">Mark a test invoice paid (or job completed) in your app, or click <b>Send a test request</b> below.</p>
+        <p className="text-sm text-slate-600">Mark a test invoice paid (or job completed) in your app, or use <b>Test step</b> in Zapier. We show “Connected” only when that real request reaches ReviewAsk.</p>
         {last ? <p className="rounded-md bg-lime-50 p-3 text-sm font-medium text-lime-800">Connected — we just got “{last.customer_name}” through Zapier. You&apos;re done.</p>
           : <p className="text-sm text-slate-500">Waiting for your first customer from Zapier… (checks every 5 seconds)</p>}
-        <button type="button" className="btn-navy w-full py-4 text-base" onClick={sendTest} disabled={busy}>{busy ? "Sending…" : "Send a test request"}</button>
+        <button type="button" className="btn-navy w-full py-4 text-base" onClick={sendTest} disabled={busy}>{busy ? "Sending…" : "Email me a preview of the message"}</button>
         {test && <p className={`text-sm ${test.t === "ok" ? "text-green-700" : "text-red-600"}`}>{test.m}</p>}
-        <p className="text-xs text-slate-500">The test counts as one request this month.</p></div>}
-    </div>
-
-    <div className="flex flex-col gap-2 rounded-md bg-slate-50 p-4 text-sm sm:flex-row sm:items-center sm:justify-between">
-      <p className="text-slate-600"><b className="text-navy-900">Want someone to connect it for you?</b> Send the details to your bookkeeper or whoever manages your software.</p>
-      <a href={help} className="btn-outline whitespace-nowrap px-3 py-2 text-center">Email instructions</a>
+        <p className="text-xs text-slate-500">The preview goes to your login email and counts as one request this month.</p></div>}
     </div>
 
     <details className="text-sm text-slate-600"><summary className="cursor-pointer font-medium text-navy-900">Setup details</summary>

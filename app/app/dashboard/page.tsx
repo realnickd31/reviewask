@@ -47,7 +47,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
     FROM review_requests WHERE user_id=? AND created_at >= datetime('now','start of month')`).get(u.id) as Record<string, number | null>;
   const remaining = Math.max(0, MONTHLY_QUOTA - used);
   const activityTotal = (db.prepare("SELECT COUNT(*) AS n FROM review_requests WHERE user_id=? AND status != 'scheduled'").get(u.id) as { n: number }).n;
-  const PAGE_SIZE = 20;
+  const PAGE_SIZE = 10;
   const pageCount = Math.max(1, Math.ceil(activityTotal / PAGE_SIZE));
   const page = Math.min(pageCount, Math.max(1, Number(searchParams.page) || 1));
   const rows = db.prepare("SELECT * FROM review_requests WHERE user_id=? AND status != 'scheduled' ORDER BY id DESC LIMIT ? OFFSET ?").all(u.id, PAGE_SIZE, (page - 1) * PAGE_SIZE) as ReviewRequest[];
@@ -85,7 +85,7 @@ export default async function Page({ searchParams }: { searchParams: { session_i
       <details className="card" id="bulk"><summary className="cursor-pointer text-sm font-semibold text-navy-900">Have a list? Send to many customers at once</summary>
         <p className="mb-5 mt-1 text-sm text-slate-500">Copy customer rows from Excel or Google Sheets and paste — no exporting. <a href="/sample-customers.csv" download className="font-medium text-navy-900 underline underline-offset-4">Download sample spreadsheet</a></p>
         <BulkUpload disabled={!active || used >= MONTHLY_QUOTA} remaining={remaining} accountDelay={accountDelayHours(u)} /></details>
-    {scheduled.length === 0 ? <p id="scheduled" className="px-1 text-sm text-slate-500">No asks waiting to send.</p> : <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
+    {scheduled.length === 0 ? <section id="scheduled" className="card"><h2 className="text-lg font-semibold">Scheduled asks</h2><p className="mt-1 text-sm text-slate-600">Nothing scheduled yet. When you pick a later send time below, or a connected tool finishes a job, the review ask waits here until it goes out — so you can still stop it if needed.</p><p className="mt-3 text-sm"><a href="#quick" className="font-medium text-navy-900 underline underline-offset-4">Send your first ask</a><span className="text-slate-400"> · </span><Link href="/settings#automatic" className="font-medium text-navy-900 underline underline-offset-4">Connect a tool</Link></p></section> : <section className="card" id="scheduled"><h2 className="text-lg font-semibold">Scheduled asks</h2>
       <p className="mb-4 mt-1 text-sm text-slate-500">{accountDelayHours(u) > 0 ? <>Automatic asks from your connected tools wait {delayLabel(accountDelayHours(u))} before sending, so you can stop one if something went wrong.</> : <>Automatic asks from your connected tools send right away.</>} Typed-in and spreadsheet asks you schedule show here too. Every customer still gets asked unless you stop it. <Link href="/settings#timing" className="underline underline-offset-4">Change timing</Link></p>
       {scheduled.length === 0 ? <p className="text-sm text-slate-500">Nothing waiting to send.</p> :
       <ul className="divide-y divide-slate-100">{scheduled.map((r) => <li key={r.id} className="flex flex-col gap-3 py-3.5 text-sm sm:flex-row sm:items-center sm:justify-between sm:gap-4">

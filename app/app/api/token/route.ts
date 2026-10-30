@@ -3,7 +3,7 @@ import { db, ensureApiToken, newApiToken } from "@/lib/db";
 import { currentUser } from "@/lib/session";
 import { disconnectZapier } from "@/lib/zapier";
 
-/** Zapier connect. Marks Zapier as the auto-ask provider and returns the account's existing API key.
+/** Zapier setup. Does NOT mark Zapier connected (first inbound webhook does). Returns the account's existing API key.
  *  Only rotates the key when the owner explicitly asks ({ rotate: true }). */
 export async function POST(req: NextRequest) {
   const u = await currentUser();
@@ -12,7 +12,8 @@ export async function POST(req: NextRequest) {
   let token: string;
   if (body?.rotate === true) { token = newApiToken(); db.prepare("UPDATE users SET api_token=? WHERE id=?").run(token, u.id); }
   else token = ensureApiToken(u.id);
-  db.prepare("UPDATE users SET auto_enabled=1, auto_provider='zapier' WHERE id=?").run(u.id);
+  // Starting/continuing setup only lifts a prior Disconnect. "Connected" is set by the first real webhook.
+  db.prepare("UPDATE users SET zapier_disconnected_at=NULL, zapier_setup_at=COALESCE(zapier_setup_at, datetime('now')) WHERE id=?").run(u.id);
   return NextResponse.json({ ok: true, token });
 }
 

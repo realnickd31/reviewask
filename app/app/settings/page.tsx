@@ -57,7 +57,7 @@ export default async function Page({ searchParams }: { searchParams: { portal?: 
         squareConnected={!!u.square_connected} squareReady={squareConfigured()} squareFlash={searchParams.square}
         stripeConnected={!!u.stripe_connect_connected} stripeReady={stripeConnectConfigured()} stripeFlash={searchParams.stripe}
         qboConnected={!!u.qbo_connected} qboReady={qboConfigured()} qboFlash={searchParams.quickbooks}
-        zapierConnected={u.auto_provider === "zapier"} zapierToken={u.api_token} zapierUrl={hookUrl} business={u.business_name || "my business"} /></section>
+        zapierConnected={!!u.zapier_connected_at} zapierPending={!u.zapier_connected_at && !!u.zapier_setup_at} zapierToken={u.api_token} zapierUrl={hookUrl} business={u.business_name || "my business"} /></section>
       <section className="card" id="timing"><h3 className="text-base font-semibold text-navy-900">Send timing</h3>
         <p className="mb-4 mt-1 text-sm text-slate-600">How long automatic asks wait before going out, so you can stop one if needed.</p>
         <SendDelaySetting initial={clampDelay(u.send_delay_hours)} save={saveSendDelay} /></section>

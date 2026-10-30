@@ -46,6 +46,9 @@ if (!g._db) {
   addCol("users", "auto_enabled INTEGER NOT NULL DEFAULT 0");
   addCol("users", "auto_provider TEXT");
   addCol("users", "auto_setup_email TEXT");
+  addCol("users", "zapier_setup_at TEXT"); // owner started Zapier setup (waiting for first hook)
+  addCol("users", "zapier_connected_at TEXT"); // set by first real inbound webhook
+  addCol("users", "zapier_disconnected_at TEXT"); // owner hit Disconnect; inbound hooks ignored until they reconnect
   addCol("users", "auto_setup_requested_at TEXT");
   addCol("users", "jobber_connected INTEGER NOT NULL DEFAULT 0");
   addCol("users", "jobber_access_token TEXT");
@@ -137,7 +140,7 @@ if (!g._db) {
 export type User = {
   id: number; email: string; password_hash: string; business_name: string | null; review_url: string | null;
   stripe_customer_id: string | null; stripe_subscription_id: string | null; subscription_status: string; trial_end?: string | null; created_at: string; api_token: string | null;
-  auto_enabled: number; auto_provider: string | null; auto_setup_email: string | null; auto_setup_requested_at: string | null;
+  auto_enabled: number; auto_provider: string | null; zapier_setup_at?: string | null; zapier_connected_at?: string | null; zapier_disconnected_at?: string | null; auto_setup_email: string | null; auto_setup_requested_at: string | null;
   jobber_connected: number; jobber_access_token: string | null; jobber_refresh_token: string | null;
   jobber_token_expires_at: string | null; jobber_account_id: string | null;
   housecall_connected: number; housecall_api_key: string | null; housecall_company_id: string | null; housecall_webhook_secret: string | null;

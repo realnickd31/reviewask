@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getUserByToken } from "@/lib/db";
 import { sendReviewRequest } from "@/lib/send";
+import { markZapierConnected } from "@/lib/zapier";
 
 const pick = (o: Record<string, unknown>, keys: string[]) => {
   const lower = Object.fromEntries(Object.entries(o).map(([k, v]) => [k.toLowerCase().replace(/[^a-z]/g, ""), v]));
@@ -11,8 +12,10 @@ const pick = (o: Record<string, unknown>, keys: string[]) => {
 export async function POST(req: NextRequest) {
   const auth = req.headers.get("authorization") || "";
   const token = (auth.startsWith("Bearer ") ? auth.slice(7) : req.headers.get("x-api-token") || req.nextUrl.searchParams.get("token") || "").trim();
-  const u = token ? getUserByToken(token) : undefined;
+  let u = token ? getUserByToken(token) : undefined;
   if (!u) return NextResponse.json({ error: "Invalid or missing API token." }, { status: 401 });
+  if (u.zapier_disconnected_at) return NextResponse.json({ error: "Zapier is disconnected in ReviewAsk Settings. Reconnect it there to resume." }, { status: 403 });
+  if (markZapierConnected(u.id).changes) u = getUserByToken(token)!; // first real hook turns Zapier on
   // Master "Ask after every job" switch is off: accept but don't send.
   if (!u.auto_enabled) return NextResponse.json({ ok: true, skipped: "Automatic asks are turned off." });
   const ct = req.headers.get("content-type") || "";
